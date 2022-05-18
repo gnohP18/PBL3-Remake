@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmGUILogin\frmDataBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +57,12 @@
     </Compile>
     <Compile Include="GUI\frmGUILogin\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmGUIManager\frmMainManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmGUIManager\frmMainManager.Designer.cs">
+      <DependentUpon>frmMainManager.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmGUISeller\frmMainSeller.cs">
       <SubType>Form</SubType>
@@ -141,14 +141,29 @@
     <EmbeddedResource Include="GUI\frmGUILogin\frmDataBase.resx">
       <DependentUpon>frmDataBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmGUILogin\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\AddNewManufacturer.resx">
+      <DependentUpon>AddNewManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\DetailEmployee.resx">
+      <DependentUpon>DetailEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -158,9 +173,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\frmGUIManager\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Webp.net-resizeimage %281%29.jpg" />
   </ItemGroup>
@@ -169,6 +182,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-database-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3_Remake
+namespace PBL3_Remake.GUI.frmGUIManager
 {
-    public partial class Form1 : Form
+    public partial class frmMainManager : Form
     {
-        public Form1()
+        public frmMainManager()
         {
             InitializeComponent();
         }

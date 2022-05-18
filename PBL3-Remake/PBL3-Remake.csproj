@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\CustomItem\DateTimePickerCustom.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GUI\frmGUILogin\frmDataBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +166,12 @@
     <EmbeddedResource Include="GUI\GUIUserControl\HelpUC.resx">
       <DependentUpon>HelpUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\InfoFood.resx">
+      <DependentUpon>InfoFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\OverViewUC.resx">
+      <DependentUpon>OverViewUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIUserControl\StatisticUC.resx">
       <DependentUpon>StatisticUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plastic-bottle-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkCalendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightCalendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

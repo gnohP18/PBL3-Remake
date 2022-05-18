@@ -39,6 +39,7 @@ namespace PBL3_Remake.GUI.frmGUIManager
             SetupUC(backupUC);
             SetupUC(employeesUC);
             SetupUC(statisticUC);
+            SetupUC(wareHouseUC);
         }
 
         private void btnOverView_Click(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace PBL3_Remake.GUI.frmGUIManager
         private void btnWareHouse_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //wareHouseUC.BringToFront();
+            wareHouseUC.BringToFront();
         }
 
         private void btnStatictis_Click(object sender, EventArgs e)

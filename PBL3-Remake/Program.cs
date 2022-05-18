@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-
-namespace PBL3_Remake
+using GUI.frmGUIManager;
+namespace GUI
 {
     internal static class Program
     {
@@ -13,7 +13,7 @@ namespace PBL3_Remake
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.frmGUIManager.frmMainManager());
+            Application.Run(new Form1());
         }
     }
 }

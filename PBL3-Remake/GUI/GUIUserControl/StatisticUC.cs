@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL3_Remake.GUI.frmGUIUserControl
 {
-    public partial class StatistisUC : UserControl
+    public partial class StatisticUC : UserControl
     {
-        public StatistisUC()
+        public StatisticUC()
         {
             InitializeComponent();
         }

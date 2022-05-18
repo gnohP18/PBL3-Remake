@@ -38,6 +38,7 @@ namespace PBL3_Remake.GUI.frmGUIManager
         {
             SetupUC(backupUC);
             SetupUC(employeesUC);
+            SetupUC(statisticUC);
         }
 
         private void btnOverView_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace PBL3_Remake.GUI.frmGUIManager
         private void btnStatictis_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //statisticUC.BringToFront();
+            statisticUC.BringToFront();
         }
 
         private void btnBackup_Click(object sender, EventArgs e)

@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnUC = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnBackup = new System.Windows.Forms.Button();
@@ -38,8 +37,10 @@
             this.btnWareHouse = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnOverView = new System.Windows.Forms.Button();
-            this.backupUC = new PBL3_Remake.GUI.frmGUIUserControl.BackupUC();
+            this.pnUC = new System.Windows.Forms.Panel();
             this.employeesUC = new PBL3_Remake.GUI.frmGUIUserControl.EmployeesUC();
+            this.backupUC = new PBL3_Remake.GUI.frmGUIUserControl.BackupUC();
+            this.statisticUC = new PBL3_Remake.GUI.frmGUIUserControl.StatisticUC();
             this.panel2.SuspendLayout();
             this.pnUC.SuspendLayout();
             this.SuspendLayout();
@@ -68,16 +69,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 700);
             this.panel2.TabIndex = 1;
-            // 
-            // pnUC
-            // 
-            this.pnUC.Controls.Add(this.employeesUC);
-            this.pnUC.Controls.Add(this.backupUC);
-            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnUC.Location = new System.Drawing.Point(200, 100);
-            this.pnUC.Name = "pnUC";
-            this.pnUC.Size = new System.Drawing.Size(1200, 700);
-            this.pnUC.TabIndex = 2;
             // 
             // btnExit
             // 
@@ -205,13 +196,16 @@
             this.btnOverView.UseVisualStyleBackColor = true;
             this.btnOverView.Click += new System.EventHandler(this.btnOverView_Click);
             // 
-            // backupUC
+            // pnUC
             // 
-            this.backupUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.backupUC.Location = new System.Drawing.Point(120, 91);
-            this.backupUC.Name = "backupUC";
-            this.backupUC.Size = new System.Drawing.Size(161, 102);
-            this.backupUC.TabIndex = 0;
+            this.pnUC.Controls.Add(this.statisticUC);
+            this.pnUC.Controls.Add(this.employeesUC);
+            this.pnUC.Controls.Add(this.backupUC);
+            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnUC.Location = new System.Drawing.Point(200, 100);
+            this.pnUC.Name = "pnUC";
+            this.pnUC.Size = new System.Drawing.Size(1200, 700);
+            this.pnUC.TabIndex = 2;
             // 
             // employeesUC
             // 
@@ -220,6 +214,22 @@
             this.employeesUC.Name = "employeesUC";
             this.employeesUC.Size = new System.Drawing.Size(173, 121);
             this.employeesUC.TabIndex = 1;
+            // 
+            // backupUC
+            // 
+            this.backupUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.backupUC.Location = new System.Drawing.Point(120, 91);
+            this.backupUC.Name = "backupUC";
+            this.backupUC.Size = new System.Drawing.Size(161, 102);
+            this.backupUC.TabIndex = 0;
+            // 
+            // statisticUC
+            // 
+            this.statisticUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.statisticUC.Location = new System.Drawing.Point(92, 255);
+            this.statisticUC.Name = "statisticUC";
+            this.statisticUC.Size = new System.Drawing.Size(240, 126);
+            this.statisticUC.TabIndex = 2;
             // 
             // frmMainManager
             // 
@@ -254,5 +264,6 @@
         private System.Windows.Forms.Panel pnUC;
         private frmGUIUserControl.EmployeesUC employeesUC;
         private frmGUIUserControl.BackupUC backupUC;
+        private frmGUIUserControl.StatisticUC statisticUC;
     }
 }

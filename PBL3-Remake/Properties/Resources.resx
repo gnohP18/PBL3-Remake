@@ -127,8 +127,11 @@
   <data name="key-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cloud-service-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud-service-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vegetables-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vegetables-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cloud-database-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud-database-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +142,20 @@
   <data name="chart-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shutdown-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdown-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Webp.net-resizeimage (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Webp.net-resizeimage (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Addperson-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Addperson-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LoginImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ordered-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ordered-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,22 +163,31 @@
   <data name="shutdown-321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdown-321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Employee-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Employee-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bread-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bread-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clouds-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clouds-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Addperson-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Addperson-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chicken-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chicken-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warehouse-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shutdown-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdown-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Employee-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Employee-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Removeperson-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Removeperson-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloud-service-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud-service-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plastic-bottle-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plastic-bottle-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

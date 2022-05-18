@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -124,11 +125,11 @@
     <Compile Include="GUI\GUIUserControl\OverViewUC.Designer.cs">
       <DependentUpon>OverViewUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUIUserControl\StatistisUC.cs">
+    <Compile Include="GUI\GUIUserControl\StatisticUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\GUIUserControl\StatistisUC.Designer.cs">
-      <DependentUpon>StatistisUC.cs</DependentUpon>
+    <Compile Include="GUI\GUIUserControl\StatisticUC.Designer.cs">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUIUserControl\WareHouseUC.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\HelpUC.resx">
+      <DependentUpon>HelpUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\StatisticUC.resx">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\WareHouseUC.resx">
+      <DependentUpon>WareHouseUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -232,6 +242,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Removeperson-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ordered-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bread-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chicken-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vegetables-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plastic-bottle-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

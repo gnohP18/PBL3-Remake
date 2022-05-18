@@ -13,7 +13,7 @@ namespace PBL3_Remake
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.frmGUILogin.frmLogin());
+            Application.Run(new GUI.frmGUIManager.frmMainManager());
         }
     }
 }

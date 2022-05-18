@@ -144,11 +144,20 @@
     <EmbeddedResource Include="GUI\frmGUILogin\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmGUIManager\frmMainManager.resx">
+      <DependentUpon>frmMainManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\BackupUC.resx">
+      <DependentUpon>BackupUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUIUserControl\DetailEmployee.resx">
       <DependentUpon>DetailEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIUserControl\EmployeesUC.resx">
+      <DependentUpon>EmployeesUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,7 +182,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Overview-48.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Webp.net-resizeimage %281%29.jpg" />
   </ItemGroup>
@@ -197,6 +208,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\key-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clouds-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\askquestion-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Addperson-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Removeperson-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

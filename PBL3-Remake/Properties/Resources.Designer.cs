@@ -63,6 +63,36 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Addperson_48 {
+            get {
+                object obj = ResourceManager.GetObject("Addperson-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap askquestion_48 {
+            get {
+                object obj = ResourceManager.GetObject("askquestion-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chart_48 {
+            get {
+                object obj = ResourceManager.GetObject("chart-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cloud_database_32 {
             get {
                 object obj = ResourceManager.GetObject("cloud-database-32", resourceCulture);
@@ -76,6 +106,26 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap cloud_service_32 {
             get {
                 object obj = ResourceManager.GetObject("cloud-service-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clouds_48 {
+            get {
+                object obj = ResourceManager.GetObject("clouds-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Employee_48 {
+            get {
+                object obj = ResourceManager.GetObject("Employee-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +163,26 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Overview_48 {
+            get {
+                object obj = ResourceManager.GetObject("Overview-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Removeperson_48 {
+            get {
+                object obj = ResourceManager.GetObject("Removeperson-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shutdown_32 {
             get {
                 object obj = ResourceManager.GetObject("shutdown-32", resourceCulture);
@@ -126,6 +196,26 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap shutdown_321 {
             get {
                 object obj = ResourceManager.GetObject("shutdown-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shutdown_48 {
+            get {
+                object obj = ResourceManager.GetObject("shutdown-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warehouse_48 {
+            get {
+                object obj = ResourceManager.GetObject("warehouse-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

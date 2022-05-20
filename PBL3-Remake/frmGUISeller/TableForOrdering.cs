@@ -12,6 +12,7 @@ namespace GUI.frmGUISeller
             InitializeComponent();
         }
         public int IDTable { get; set; }
+        public string NameTable { get; set; }
         public int Floor { get; set; }
         public bool statusTable { get; set; }
         Bitmap pGreen = Resources.checkedGreen;
@@ -19,6 +20,7 @@ namespace GUI.frmGUISeller
         public void GUITable()
         {
             lblFloorNumber.Text = Floor.ToString();
+            lblNameTable.Text = NameTable.ToString();
             lblIDTable.Text = IDTable.ToString();
             if (statusTable)
             {

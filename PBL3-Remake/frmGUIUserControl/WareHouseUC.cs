@@ -1,6 +1,6 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Windows.Forms;
-using BLL;
 namespace GUI.frmGUIUserControl
 {
 
@@ -15,7 +15,7 @@ namespace GUI.frmGUIUserControl
         public void SetCBBKingOfFood()
         {
             cbbKindOfFood.Items.Clear();
-            cbbKindOfFood.Items.AddRange(BLLQLNH.Instance.GetKindOfFood().ToArray());
+            cbbKindOfFood.Items.AddRange(BLLNVNH.Instance.GetKindOfFood().ToArray());
         }
         private void btnMoreInfor_Click(object sender, EventArgs e)
         {
@@ -58,7 +58,7 @@ namespace GUI.frmGUIUserControl
         {
             int count = Convert.ToInt32(dgvNguyenLieuKho.SelectedRows[0].Cells["ID_NguyenLieu"].Value.ToString());
             txtNameFood.Text = dgvNguyenLieuKho.SelectedRows[0].Cells["TenNguyenLieu"].Value.ToString();
-            txtAmountFood.Text = Convert.ToString(BLLQLNH.Instance.GetSoLuongNguyenLieuByIDNguyenLieu(count));
+            txtAmountFood.Text = Convert.ToString(BLLNVNH.Instance.GetSoLuongNguyenLieuByIDNguyenLieu(count));
         }
 
     }

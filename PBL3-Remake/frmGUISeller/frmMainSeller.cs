@@ -18,6 +18,8 @@ namespace GUI.frmGUISeller
             this.Width = 1300;
             this.Height = 700;
             this.StartPosition = FormStartPosition.CenterScreen;
+            pnTable.AutoScroll = true;
+            LoadAllBanWithTang(1);
 
         }
         void SetCbb()
@@ -38,15 +40,17 @@ namespace GUI.frmGUISeller
             tb.statusTable = st;
             tb.GUITable();
         }
-        void LoadAllTableWithFloor(int fl)
+        void LoadAllBanWithTang(int fl)
         {
             int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(true, fl) + BLLNVNH.Instance.NumberOfStatusAndFloor(false, fl);
+            Console.WriteLine("Soban " + soban);
             TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
             foreach (Ban i in BLLNVNH.Instance.GetAllBanByTang(fl))
             {
                 tb[dem1] = new TableForOrdering();
                 tb[dem1].IDTable = i.ID_Ban;
+                tb[dem1].NameTable = i.TenBan;
                 tb[dem1].Floor = i.Tang;
                 int ttb = i.TinhTrangBan;
                 if (ttb == 0)
@@ -81,15 +85,19 @@ namespace GUI.frmGUISeller
                 }
             }
         }
-        void LoadAllTableWithFloor(bool st, int fl)
+        void LoadBanWithTinhTrangBanVaTang(bool st, int fl)
         {
-            int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(true, fl) + BLLNVNH.Instance.NumberOfStatusAndFloor(false, fl);
-            TableForOrdering[] tb = new TableForOrdering[BLLNVNH.Instance.NumberOfStatusAndFloor(st, fl)];
+            int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(st, fl);
+            Console.WriteLine("soban=" + soban);
+            TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
-            foreach (Ban i in BLLNVNH.Instance.GetAllBanByTang(fl))
+            Console.WriteLine("dem1=" + dem1);
+            foreach (Ban i in BLLNVNH.Instance.GetAllBanByTinhTrangBanVaTang(st, fl))
             {
                 tb[dem1] = new TableForOrdering();
+                Console.WriteLine(dem1);
                 tb[dem1].IDTable = i.ID_Ban;
+                tb[dem1].NameTable = i.TenBan;
                 tb[dem1].Floor = i.Tang;
                 int ttb = i.TinhTrangBan;
                 if (ttb == 0)
@@ -132,15 +140,14 @@ namespace GUI.frmGUISeller
         {
             Floor = 1;
             RemoveTable();
-
-            BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+            LoadBanWithTinhTrangBanVaTang(statustb, Floor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             Floor = 2;
             RemoveTable();
-            BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+            LoadBanWithTinhTrangBanVaTang(statustb, Floor);
         }
 
 
@@ -151,18 +158,18 @@ namespace GUI.frmGUISeller
             {
                 statustb = true;
                 RemoveTable();
-                BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+                LoadBanWithTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatus.SelectedIndex == 2)
             {
                 statustb = false;
                 RemoveTable();
-                BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+                LoadBanWithTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatus.SelectedIndex == 0)
             {
                 RemoveTable();
-                LoadAllTableWithFloor(Floor);
+                LoadAllBanWithTang(Floor);
             }
         }
 

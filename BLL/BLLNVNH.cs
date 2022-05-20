@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Entity;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Entity;
 namespace BLL
 {
     public class BLLNVNH
@@ -26,11 +23,10 @@ namespace BLL
         public int NumberOfStatusAndFloor(bool st, int fl)
         {
             int dem = 0;
-            foreach (Ban i in GetAllBan())
-            {
-                if (i.TinhTrangBan.Equals(st) && i.Tang.Equals(fl))
-                    dem++;
-            }
+            if (st)
+                dem = dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).Count();
+            else
+                dem = dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).Count();
             return dem;
         }
 
@@ -38,7 +34,14 @@ namespace BLL
         {
             return dALQLNH.Bans.Where(p => p.Tang == fl).ToList();
         }
-
+        public List<Ban> GetAllBanByTinhTrangBanVaTang(bool st, int fl)
+        {
+            int ttb = 0;
+            if (st)
+                return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).ToList();
+            else
+                return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).ToList();
+        }
         public Ban GetAllBanByID_Ban(int id)
         {
             Ban table = null;
@@ -68,13 +71,7 @@ namespace BLL
             }
             return list;
         }
-        public List<Ban> LoadBanWithTinhTrangBanVaTang(bool st, int fl)
-        {
-            if (st == true)
-                return dALQLNH.Bans.Where(p => p.TinhTrangBan == 0 && p.Tang == fl).ToList();
-            else
-                return dALQLNH.Bans.Where(p => p.TinhTrangBan != 0 && p.Tang == fl).ToList();
-        }
+
         public float GetSoLuongNguyenLieuByIDNguyenLieu(int id)
         {
             float count = 0;

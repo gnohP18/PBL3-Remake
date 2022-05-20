@@ -29,9 +29,9 @@ namespace GUI.frmGUIUserControl
             frmGUIUserControl.AddNewManufacturer frm = new frmGUIUserControl.AddNewManufacturer();
             frm.Show();
         }
-        public void Show(int idNguyenLieu)
+        public void Show(int IDNguyenLieu)
         {
-            dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuByIdLoaiNguyenLieu(idNguyenLieu);
+           dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(IDNguyenLieu);
         }
         private void btnDriedFood_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,15 @@ namespace GUI.frmGUIUserControl
             txtAmountFood.Text = Convert.ToString(BLLNVNH.Instance.GetSoLuongNguyenLieuByIDNguyenLieu(count));
         }
 
+        private void btnMoreInfor_Click_1(object sender, EventArgs e)
+        {
+            if(dgvNguyenLieuKho.SelectedRows.Count == 1)
+            {
+                int ID_NguyenLieu =Convert.ToInt32(dgvNguyenLieuKho.SelectedRows[0].Cells["ID_NguyenLieu"].Value);
+                frmGUIUserControl.MaterialInfo frm = new MaterialInfo(ID_NguyenLieu);
+                frm.Show();
+            }
+        }
     }
 }
 

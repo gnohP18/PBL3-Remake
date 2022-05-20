@@ -151,6 +151,12 @@
     <Compile Include="frmGUIUserControl\InfoFood.Designer.cs">
       <DependentUpon>InfoFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\MaterialInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\MaterialInfo.Designer.cs">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\OverViewUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\InfoFood.resx">
       <DependentUpon>InfoFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\MaterialInfo.resx">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\OverViewUC.resx">
       <DependentUpon>OverViewUC.cs</DependentUpon>

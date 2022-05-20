@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("E:\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -219,9 +219,14 @@ namespace Entity
             });
             context.Khoes.AddRange(new Kho[]
             {
-                new Kho{ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2020,06,13),NgayHetHan = new DateTime(2020,07,13),LuongNhapVao = 20,LuongTonKho = 20},
-                new Kho{ID_NguyenLieu = 2,ID_NhaCungCap = 1,NgayNhap = new DateTime(2020,06,13),NgayHetHan = new DateTime(2020,07,13),LuongNhapVao = 30,LuongTonKho = 30},
-                new Kho{ID_NguyenLieu = 1,ID_NhaCungCap = 2,NgayNhap = new DateTime(2020,06,13),NgayHetHan = new DateTime(2020,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=1,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,19),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=2,ID_NguyenLieu = 2,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=3,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,17),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=4,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=5,ID_NguyenLieu = 3,ID_NhaCungCap = 2,NgayNhap = new DateTime(2022,05,19),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=6,ID_NguyenLieu = 10,ID_NhaCungCap = 9,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=7,ID_NguyenLieu = 9,ID_NhaCungCap = 8,NgayNhap = new DateTime(2022,05,17),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=8,ID_NguyenLieu = 10,ID_NhaCungCap = 9,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
             });
         }
     }

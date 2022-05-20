@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using BLL;
 namespace GUI.frmGUISeller
 {
     public partial class frmMainSeller : Form
@@ -38,15 +38,15 @@ namespace GUI.frmGUISeller
         }
         void LoadAllTableWithFloor(int fl)
         {
-            int soban = BLL.BLLQLNH.Instance.NumberOfStatusAndFloor(true, fl) + BLL.BLLQLNH.Instance.NumberOfStatusAndFloor(false, fl);
+            int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(true, fl) + BLLNVNH.Instance.NumberOfStatusAndFloor(false, fl);
             TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
-            foreach (string i in BLL.BLLQLNH.Instance.GetAllBanByTang(fl))
+            foreach (string i in BLLNVNH.Instance.GetAllBanByTang(fl))
             {
                 tb[dem1] = new TableForOrdering();
-                tb[dem1].IDTable = BLL.BLLQLNH.Instance.GetAllBanByID_Ban(Convert.ToInt32(i.ToString())).ID_Ban;
-                tb[dem1].Floor = BLL.BLLQLNH.Instance.GetAllBanByID_Ban(Convert.ToInt32(i.ToString())).Tang;
-                int ttb = BLL.BLLQLNH.Instance.GetAllBanByID_Ban(Convert.ToInt32(i.ToString())).TinhTrangBan;
+                tb[dem1].IDTable = BLLNVNH.Instance.GetAllBanByID_Ban(Convert.ToInt32(i.ToString())).ID_Ban;
+                tb[dem1].Floor = BLLNVNH.Instance.GetAllBanByID_Ban(Convert.ToInt32(i.ToString())).Tang;
+                int ttb = BLLNVNH.Instance.GetAllBanByID_Ban(Convert.ToInt32(i.ToString())).TinhTrangBan;
                 if (ttb == 0)
                     tb[dem1].statusTable = false;
                 else tb[dem1].statusTable = true;
@@ -87,14 +87,14 @@ namespace GUI.frmGUISeller
         {
             Floor = 1;
             RemoveTable();
-            BLL.BLLQLNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+            BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             Floor = 2;
             RemoveTable();
-            BLL.BLLQLNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+            BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
         }
 
 
@@ -105,13 +105,13 @@ namespace GUI.frmGUISeller
             {
                 statustb = true;
                 RemoveTable();
-                BLL.BLLQLNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+                BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatus.SelectedIndex == 2)
             {
                 statustb = false;
                 RemoveTable();
-                BLL.BLLQLNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+                BLLNVNH.Instance.LoadBanWithTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatus.SelectedIndex == 0)
             {

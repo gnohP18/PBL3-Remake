@@ -34,15 +34,9 @@ namespace BLL
             return dem;
         }
 
-        public List<string> GetAllBanByTang(int fl)
+        public List<Ban> GetAllBanByTang(int fl)
         {
-            List<string> data = new List<string>();
-            foreach (Ban i in GetAllBan())
-            {
-                if (i.Tang.Equals(fl))
-                    data.Add(i.ID_Ban.ToString());
-            }
-            return data;
+            return dALQLNH.Bans.Where(p => p.Tang == fl).ToList();
         }
 
         public Ban GetAllBanByID_Ban(int id)
@@ -74,15 +68,12 @@ namespace BLL
             }
             return list;
         }
-        public List<string> LoadBanWithTinhTrangBanVaTang(bool st, int fl)
+        public List<Ban> LoadBanWithTinhTrangBanVaTang(bool st, int fl)
         {
-            List<string> data = new List<string>();
-            foreach (Ban i in GetAllBan())
-            {
-                if (i.TinhTrangBan.Equals(st) && i.Tang.Equals(fl))
-                    data.Add(i.ID_Ban.ToString());
-            }
-            return data;
+            if (st == true)
+                return dALQLNH.Bans.Where(p => p.TinhTrangBan == 0 && p.Tang == fl).ToList();
+            else
+                return dALQLNH.Bans.Where(p => p.TinhTrangBan != 0 && p.Tang == fl).ToList();
         }
         public float GetSoLuongNguyenLieuByIDNguyenLieu(int id)
         {

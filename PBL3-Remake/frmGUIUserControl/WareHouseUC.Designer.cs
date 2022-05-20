@@ -46,9 +46,7 @@
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnVegetable = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnDriedFood = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNameFood = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -56,8 +54,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtInputFoodName = new System.Windows.Forms.TextBox();
-            this.btnFreshFood = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnVegetable = new System.Windows.Forms.Button();
+            this.btnDriedFood = new System.Windows.Forms.Button();
+            this.btnFreshFood = new System.Windows.Forms.Button();
             this.btnDrinking = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieuKho)).BeginInit();
@@ -159,9 +159,9 @@
             this.label13.Location = new System.Drawing.Point(71, 5);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(189, 27);
+            this.label13.Size = new System.Drawing.Size(224, 27);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Food Information";
+            this.label13.Text = "Material Information";
             // 
             // panel5
             // 
@@ -176,10 +176,12 @@
             // 
             // dgvNguyenLieuKho
             // 
+            this.dgvNguyenLieuKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNguyenLieuKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNguyenLieuKho.Location = new System.Drawing.Point(-1, -1);
             this.dgvNguyenLieuKho.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNguyenLieuKho.Name = "dgvNguyenLieuKho";
+            this.dgvNguyenLieuKho.ReadOnly = true;
             this.dgvNguyenLieuKho.RowHeadersWidth = 51;
             this.dgvNguyenLieuKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNguyenLieuKho.Size = new System.Drawing.Size(841, 460);
@@ -241,25 +243,6 @@
             this.label15.TabIndex = 18;
             this.label15.Text = "Amount";
             // 
-            // btnVegetable
-            // 
-            this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnVegetable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnVegetable.FlatAppearance.BorderSize = 2;
-            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVegetable.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVegetable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.btnVegetable.Image = ((System.Drawing.Image)(resources.GetObject("btnVegetable.Image")));
-            this.btnVegetable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVegetable.Location = new System.Drawing.Point(344, 47);
-            this.btnVegetable.Name = "btnVegetable";
-            this.btnVegetable.Size = new System.Drawing.Size(170, 125);
-            this.btnVegetable.TabIndex = 27;
-            this.btnVegetable.Text = "Vegetable";
-            this.btnVegetable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVegetable.UseVisualStyleBackColor = false;
-            this.btnVegetable.Click += new System.EventHandler(this.btnVegetable_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -271,25 +254,6 @@
             this.label9.Size = new System.Drawing.Size(77, 23);
             this.label9.TabIndex = 8;
             this.label9.Text = "Number";
-            // 
-            // btnDriedFood
-            // 
-            this.btnDriedFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnDriedFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnDriedFood.FlatAppearance.BorderSize = 2;
-            this.btnDriedFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDriedFood.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDriedFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
-            this.btnDriedFood.Image = ((System.Drawing.Image)(resources.GetObject("btnDriedFood.Image")));
-            this.btnDriedFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDriedFood.Location = new System.Drawing.Point(4, 47);
-            this.btnDriedFood.Name = "btnDriedFood";
-            this.btnDriedFood.Size = new System.Drawing.Size(170, 125);
-            this.btnDriedFood.TabIndex = 25;
-            this.btnDriedFood.Text = "Dried Food";
-            this.btnDriedFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDriedFood.UseVisualStyleBackColor = false;
-            this.btnDriedFood.Click += new System.EventHandler(this.btnDriedFood_Click);
             // 
             // label7
             // 
@@ -342,6 +306,7 @@
             this.btnMoreInfor.TabIndex = 20;
             this.btnMoreInfor.Text = "More";
             this.btnMoreInfor.UseVisualStyleBackColor = false;
+            this.btnMoreInfor.Click += new System.EventHandler(this.btnMoreInfor_Click_1);
             // 
             // label6
             // 
@@ -375,25 +340,6 @@
             this.txtInputFoodName.Size = new System.Drawing.Size(209, 22);
             this.txtInputFoodName.TabIndex = 1;
             // 
-            // btnFreshFood
-            // 
-            this.btnFreshFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnFreshFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnFreshFood.FlatAppearance.BorderSize = 2;
-            this.btnFreshFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFreshFood.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFreshFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(82)))), ((int)(((byte)(0)))));
-            this.btnFreshFood.Image = ((System.Drawing.Image)(resources.GetObject("btnFreshFood.Image")));
-            this.btnFreshFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFreshFood.Location = new System.Drawing.Point(174, 47);
-            this.btnFreshFood.Name = "btnFreshFood";
-            this.btnFreshFood.Size = new System.Drawing.Size(170, 125);
-            this.btnFreshFood.TabIndex = 26;
-            this.btnFreshFood.Text = "Fresh Food";
-            this.btnFreshFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFreshFood.UseVisualStyleBackColor = false;
-            this.btnFreshFood.Click += new System.EventHandler(this.btnFreshFood_Click);
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -419,6 +365,63 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(327, 460);
             this.panel7.TabIndex = 24;
+            // 
+            // btnVegetable
+            // 
+            this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnVegetable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnVegetable.FlatAppearance.BorderSize = 2;
+            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVegetable.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVegetable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btnVegetable.Image = ((System.Drawing.Image)(resources.GetObject("btnVegetable.Image")));
+            this.btnVegetable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVegetable.Location = new System.Drawing.Point(344, 47);
+            this.btnVegetable.Name = "btnVegetable";
+            this.btnVegetable.Size = new System.Drawing.Size(170, 125);
+            this.btnVegetable.TabIndex = 27;
+            this.btnVegetable.Text = "Vegetable";
+            this.btnVegetable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVegetable.UseVisualStyleBackColor = false;
+            this.btnVegetable.Click += new System.EventHandler(this.btnVegetable_Click);
+            // 
+            // btnDriedFood
+            // 
+            this.btnDriedFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnDriedFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnDriedFood.FlatAppearance.BorderSize = 2;
+            this.btnDriedFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriedFood.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDriedFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
+            this.btnDriedFood.Image = ((System.Drawing.Image)(resources.GetObject("btnDriedFood.Image")));
+            this.btnDriedFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDriedFood.Location = new System.Drawing.Point(4, 47);
+            this.btnDriedFood.Name = "btnDriedFood";
+            this.btnDriedFood.Size = new System.Drawing.Size(170, 125);
+            this.btnDriedFood.TabIndex = 25;
+            this.btnDriedFood.Text = "Dried Food";
+            this.btnDriedFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDriedFood.UseVisualStyleBackColor = false;
+            this.btnDriedFood.Click += new System.EventHandler(this.btnDriedFood_Click);
+            // 
+            // btnFreshFood
+            // 
+            this.btnFreshFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnFreshFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnFreshFood.FlatAppearance.BorderSize = 2;
+            this.btnFreshFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFreshFood.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFreshFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(82)))), ((int)(((byte)(0)))));
+            this.btnFreshFood.Image = ((System.Drawing.Image)(resources.GetObject("btnFreshFood.Image")));
+            this.btnFreshFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFreshFood.Location = new System.Drawing.Point(174, 47);
+            this.btnFreshFood.Name = "btnFreshFood";
+            this.btnFreshFood.Size = new System.Drawing.Size(170, 125);
+            this.btnFreshFood.TabIndex = 26;
+            this.btnFreshFood.Text = "Fresh Food";
+            this.btnFreshFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFreshFood.UseVisualStyleBackColor = false;
+            this.btnFreshFood.Click += new System.EventHandler(this.btnFreshFood_Click);
             // 
             // btnDrinking
             // 

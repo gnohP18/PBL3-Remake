@@ -23,5 +23,68 @@ namespace BLL
         {
             dALQLNH = new DALQLNH();
         }
+        public List<NguyenLieu> GetAllNguyenLieu()
+        {
+            DALQLNH dALQLNH = new DALQLNH();
+            List<NguyenLieu> list = new List<NguyenLieu>();
+            foreach (NguyenLieu i in dALQLNH.NguyenLieus)
+            {
+                list.Add(i);
+            }
+            return list;
+        }
+
+        public List<NguyenLieu> GetListNguyenLieuByIdLoaiNguyenLieu(int id)
+        {
+            List<NguyenLieu> list = new List<NguyenLieu>();
+            foreach (NguyenLieu i in GetAllNguyenLieu())
+            {
+                if (i.ID_LoaiNguyenLieu == id)
+                {
+                    list.Add(i);
+                }
+            }
+            return list;
+        }
+
+        public List<string> GetKindOfFood()
+        {
+            DALQLNH dALQLNH = new DALQLNH();
+            List<string> list = new List<string>();
+            foreach (LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
+            {
+                list.Add(i.TenLoaiNguyenLieu);
+            }
+            return list;
+        }
+
+        public float GetSoLuongNguyenLieuByIDNguyenLieu(int id)
+        {
+            float count = 0;
+            DALQLNH dALQLNH = new DALQLNH();
+            foreach (Kho i in dALQLNH.Khoes)
+            {
+                if (i.ID_NguyenLieu == id)
+                {
+                    count = i.LuongTonKho;
+                }
+            }
+            return count;
+
+        }
+        public List<ChiTietNhaCungCap> GetTT(int id)
+        {
+            List<ChiTietNhaCungCap> list = new List<ChiTietNhaCungCap>();
+            DALQLNH dALQLNH = new DALQLNH();
+            foreach (ChiTietNhaCungCap i in dALQLNH.ChiTietNhaCungCaps)
+            {
+                if (i.ID_NguyenLieu == id)
+                {
+                    list.Add(i);
+                }
+            }
+            return list;
+        }
     }
 }
+

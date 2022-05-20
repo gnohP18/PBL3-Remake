@@ -7,27 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace GUI.frmGUIUserControl
 {
     public partial class InfoFood : Form
     {
-        public InfoFood()
+        public int IDNL { get; set; }
+        public InfoFood(int ID)
         {
+            IDNL = ID;
             InitializeComponent();
+            GUI();
         }
         void GUI()
         {
             this.StartPosition = FormStartPosition.CenterParent;
-            dgvInforInputFood.Columns.Add("STT", "STT");
-            dgvInforInputFood.Columns.Add("MaNguyenLieu", "Mã Nguyên Liệu");
-            dgvInforInputFood.Columns.Add("MaNhaCungCap", "Mã nhà cung cấp");
-            dgvInforInputFood.Columns.Add("NgayNhap", "Ngày nhập");
-            dgvInforInputFood.Columns.Add("DinhLuong", "Định lượng");
-            dgvInforInputFood.Rows.Add("1", "101", "NCC102", "20/4/2022", "9kg");
-            dgvInforInputFood.Rows.Add("2", "101", "NCC103", "20/4/2022", "7kg");
+            //dgvInforInputFood.Columns.Add("STT", "STT");
+            //dgvInforInputFood.Columns.Add("MaNguyenLieu", "Mã Nguyên Liệu");
+            //dgvInforInputFood.Columns.Add("MaNhaCungCap", "Mã nhà cung cấp");
+            //dgvInforInputFood.Columns.Add("NgayNhap", "Ngày nhập");
+            //dgvInforInputFood.Columns.Add("DinhLuong", "Định lượng");
+            //dgvInforInputFood.Rows.Add("1", "101", "NCC102", "20/4/2022", "9kg");
+            //dgvInforInputFood.Rows.Add("2", "101", "NCC103", "20/4/2022", "7kg");
+            txtFoodID.Text = Convert.ToString(IDNL);
+            dgvInforInputFood.ReadOnly = true;
+            dgvInforInputFood.DataSource = BLLQLNH.Instance.GetTT(IDNL);
+        }
+
+        public void GetDataToDGV(int id)
+        {
+
         }
         private Button CurrentButton;
+
         private void SetUIForButton(object button)
         {
 
@@ -58,6 +71,11 @@ namespace GUI.frmGUIUserControl
             txtInputDay.Enabled = true;
             txtTenNhaCungCap.Enabled = true;
             txtMaNhaCungCap.Enabled = true;
+        }
+
+        private void InfoFood_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -85,6 +85,12 @@ namespace BLL
             }
             return list;
         }
+        public bool checkLoginManager(string username, string password)
+        {
+            User user = (User)(dALQLNH.Users.Where(p => (p.ID_ChucVu == 1 && p.Username == username && p.Password == password)).FirstOrDefault());
+            if (user == null) return false;
+            else return true;
+        }
     }
 }
 

@@ -38,7 +38,7 @@ namespace GUI.frmGUILogin
                     MessageBox.Show("Login information is not correct!!");
                     return;
                 }
-                this.Visible = false;
+                //this.Visible = false;
                 frmMainManager frm = new frmMainManager();
                 frm.Show();
 

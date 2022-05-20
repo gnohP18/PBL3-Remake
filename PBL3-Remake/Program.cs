@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using GUI.frmGUIManager;
-using GUI.frmGUILogin;
 namespace GUI
 {
     internal static class Program
@@ -14,7 +12,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmGUILogin.frmLogin());
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using BLL;
 using GUI.frmGUIManager;
 using GUI.frmGUISeller;
-using BLL;
+using System;
+using System.Windows.Forms;
 namespace GUI.frmGUILogin
 {
     public partial class frmLogin : Form
@@ -29,7 +29,7 @@ namespace GUI.frmGUILogin
             {
                 frmMainSeller frm = new frmMainSeller();
                 frm.Show();
-                this.Close();
+                //this.Close();
             }
             else if (radManager.Checked)
             {

@@ -62,6 +62,7 @@
     <Compile Include="DALQLNH.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="Kho.cs" />
+    <Compile Include="LoaiMonAn.cs" />
     <Compile Include="LoaiNguyenLieu.cs" />
     <Compile Include="MonAn.cs" />
     <Compile Include="NguyenLieu.cs" />

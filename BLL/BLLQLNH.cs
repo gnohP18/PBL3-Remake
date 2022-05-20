@@ -1,9 +1,7 @@
-﻿using System;
+﻿using Entity;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Entity;
 namespace BLL
 {
     public class BLLQLNH
@@ -25,7 +23,6 @@ namespace BLL
         }
         public List<NguyenLieu> GetAllNguyenLieu()
         {
-            DALQLNH dALQLNH = new DALQLNH();
             List<NguyenLieu> list = new List<NguyenLieu>();
             foreach (NguyenLieu i in dALQLNH.NguyenLieus)
             {
@@ -47,6 +44,47 @@ namespace BLL
             return list;
         }
 
+        public int NumberOfStatusAndFloor(bool st, int fl)
+        {
+            int dem = 0;
+            foreach (Ban i in GetAllBan())
+            {
+                if (i.TinhTrangBan.Equals(st) && i.Tang.Equals(fl))
+                    dem++;
+            }
+            return dem;
+        }
+
+        public List<string> GetAllBanByTang(int fl)
+        {
+            List<string> data = new List<string>();
+            foreach (Ban i in GetAllBan())
+            {
+                if (i.Tang.Equals(fl))
+                    data.Add(i.ID_Ban.ToString());
+            }
+            return data;
+        }
+
+        public Ban GetAllBanByID_Ban(int id)
+        {
+            Ban table = null;
+            foreach (Ban i in GetAllBan())
+            {
+                if (i.ID_Ban == id)
+                {
+                    table = i;
+                    break;
+                }
+            }
+            return table;
+        }
+
+        private List<Ban> GetAllBan()
+        {
+            return dALQLNH.Bans.ToList();
+        }
+
         public List<string> GetKindOfFood()
         {
             DALQLNH dALQLNH = new DALQLNH();
@@ -57,7 +95,16 @@ namespace BLL
             }
             return list;
         }
-
+        public List<string> LoadBanWithTinhTrangBanVaTang(bool st, int fl)
+        {
+            List<string> data = new List<string>();
+            foreach (Ban i in GetAllBan())
+            {
+                if (i.TinhTrangBan.Equals(st) && i.Tang.Equals(fl))
+                    data.Add(i.ID_Ban.ToString());
+            }
+            return data;
+        }
         public float GetSoLuongNguyenLieuByIDNguyenLieu(int id)
         {
             float count = 0;

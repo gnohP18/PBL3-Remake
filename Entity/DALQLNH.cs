@@ -29,17 +29,17 @@ namespace Entity
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<BangChamCong> BangChamCongs { get; set; }
         public virtual DbSet<ChiTietBan> ChiTietBans { get; set; }
-        public void addChucVu(ChucVu cv)
-        {
-            ChucVus.Add(cv);
-
-        }
+        public virtual DbSet<LoaiMonAn> LoaiMonAns { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BangChamCong>()
                 .HasRequired<User>(s => s.User)
                 .WithMany(g => g.BangChamCongs)
                 .HasForeignKey<int>(s => s.ID_User);
+            modelBuilder.Entity<MonAn>()
+                .HasRequired<LoaiMonAn>(s => s.LoaiMonAn)
+                .WithMany(g => g.MonAns)
+                .HasForeignKey<int>(s => s.ID_LoaiMonAn);
             modelBuilder.Entity<CaLam>()
                 .HasMany<User>(s => s.Users)
                 .WithMany(c => c.CaLams)

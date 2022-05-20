@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("E:\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -58,24 +58,31 @@ namespace Entity
                 new BangChamCong{ID_BangChamCong = 11,ID_User=11,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
                 new BangChamCong{ID_BangChamCong = 12,ID_User=12,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
             });
+            context.LoaiMonAns.AddRange(new LoaiMonAn[]
+            {
+                new LoaiMonAn{ID_LoaiMonAnh = 1,TenLoaiMonAn = "Khai vi"},
+                new LoaiMonAn{ID_LoaiMonAnh = 2,TenLoaiMonAn = "Mon chinh"},
+                new LoaiMonAn{ID_LoaiMonAnh = 3,TenLoaiMonAn = "Trang mieng"},
+                new LoaiMonAn{ID_LoaiMonAnh = 4,TenLoaiMonAn = "Do uong"},
+            });
             context.MonAns.AddRange(new MonAn[]
             {
-                new MonAn{ID_MonAn = 1,TenMonAn = "Ech xao",ThanhTien =100000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 2,TenMonAn = "Bo xao",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 3,TenMonAn = "Long xao nghe",ThanhTien =70000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 4,TenMonAn = "Lau nam",ThanhTien =150000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 5,TenMonAn = "Ga nuong",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 6,TenMonAn = "Bo nuong la lot",ThanhTien =130000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 7,TenMonAn = "Trung cut lon xao me",ThanhTien =80000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 8,TenMonAn = "Banh trang tron",ThanhTien =12000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 9,TenMonAn = "Ga xe",ThanhTien =110000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 10,TenMonAn = "Ga um cu chuoi",ThanhTien =135000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 11,TenMonAn = "Bo um mang",ThanhTien =100000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 12,TenMonAn = "ca loc um chuoi",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 13,TenMonAn = "Lau ca loc",ThanhTien =150000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 14,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 15,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 16,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 1,ID_LoaiMonAn =2,TenMonAn = "Ech xao",ThanhTien =100000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 2,ID_LoaiMonAn =2,TenMonAn = "Bo xao",ThanhTien =120000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 3,ID_LoaiMonAn =2,TenMonAn = "Long xao nghe",ThanhTien =70000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 4,ID_LoaiMonAn =2,TenMonAn = "Lau nam",ThanhTien =150000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 5,ID_LoaiMonAn =2,TenMonAn = "Ga nuong",ThanhTien =120000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 6,ID_LoaiMonAn =2,TenMonAn = "Bo nuong la lot",ThanhTien =130000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 7,ID_LoaiMonAn =2,TenMonAn = "Trung cut lon xao me",ThanhTien =80000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 8,ID_LoaiMonAn =2,TenMonAn = "Banh trang tron",ThanhTien =12000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 9,ID_LoaiMonAn =2,TenMonAn = "Ga xe",ThanhTien =110000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 10,ID_LoaiMonAn =2,TenMonAn = "Ga um cu chuoi",ThanhTien =135000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 11,ID_LoaiMonAn =2,TenMonAn = "Bo um mang",ThanhTien =100000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 12,ID_LoaiMonAn =2,TenMonAn = "ca loc um chuoi",ThanhTien =120000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 13,ID_LoaiMonAn =2,TenMonAn = "Lau ca loc",ThanhTien =150000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 14,ID_LoaiMonAn =2,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 15,ID_LoaiMonAn =4,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 16,ID_LoaiMonAn =4,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte},
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {

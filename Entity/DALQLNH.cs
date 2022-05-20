@@ -1,6 +1,4 @@
-using System;
 using System.Data.Entity;
-using System.Linq;
 
 namespace Entity
 {
@@ -15,7 +13,7 @@ namespace Entity
         public DALQLNH()
             : base("name=DALQLNH")
         {
-            Database.SetInitializer<DALQLNH>(new CreateDB());
+            //Database.SetInitializer<DALQLNH>(new CreateDB());
         }
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaLam> CaLams { get; set; }
@@ -112,8 +110,8 @@ namespace Entity
     // public virtual DbSet<MyEntity> MyEntities { get; set; }
 }
 
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
+//public class MyEntity
+//{
+//    public int Id { get; set; }
+//    public string Name { get; set; }
+//}

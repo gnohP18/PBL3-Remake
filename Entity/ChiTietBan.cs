@@ -12,6 +12,7 @@ namespace Entity
     public class ChiTietBan
     {
         [Key][Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_ChiTietBan { get; set; }
         [Required]
         public int ID_Ban { get; set; }

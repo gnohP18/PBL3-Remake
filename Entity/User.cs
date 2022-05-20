@@ -17,6 +17,7 @@ namespace Entity
             this.CaLams = new HashSet<CaLam>();
         }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_User { get; set; }
         [Required]

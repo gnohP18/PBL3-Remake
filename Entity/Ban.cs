@@ -16,6 +16,7 @@ namespace Entity
             this.ChiTietBans = new HashSet<ChiTietBan>();
         }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_Ban { get; set; }
         public string TenBan { get; set; }

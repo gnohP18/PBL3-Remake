@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
 using System.IO;
-
 namespace Entity
 {
     public class CreateDB : DropCreateDatabaseAlways<DALQLNH>
@@ -10,58 +9,54 @@ namespace Entity
         {
             context.ChucVus.AddRange(new ChucVu[]
             {
-                new ChucVu{ID_ChucVu = 1,TenChucVu ="Nhan vien",MoTa = "Phuc vu, ban hang va nhap kho",HeSoLuong = 100000},
-                new ChucVu{ID_ChucVu = 2,TenChucVu ="Quan ly", MoTa = "Quan ly , toan quyen su dung phan mem",HeSoLuong = 0},
-                new ChucVu{ID_ChucVu = 3,TenChucVu ="Admin",MoTa = "Quyen han toi thuong",HeSoLuong = 100000},
+                new ChucVu{ID_ChucVu = 1,TenChucVu ="Admin",MoTa = "Quyen han toi thuong",HeSoLuong = 0},
+                new ChucVu{ID_ChucVu = 2,TenChucVu ="Quan ly", MoTa = "Quan ly doanh thu, nhap xuat nha hang",HeSoLuong = 0},
+                new ChucVu{ID_ChucVu = 3,TenChucVu ="Nhan vien",MoTa = "Phuc vu, ban hang va nhap kho",HeSoLuong = 100000},
             });
             context.CaLams.AddRange(new CaLam[]
             {
-                new CaLam{ID_CaLam = 1,LichCaLam = "10001000100000"},
-                new CaLam{ID_CaLam = 2,LichCaLam = "01000100010000"},
-                new CaLam{ID_CaLam = 3,LichCaLam = "00100010001000"},
-                new CaLam{ID_CaLam = 4,LichCaLam = "00010001000100"},
-                new CaLam{ID_CaLam = 5,LichCaLam = "00000000000011"},
+                new CaLam{ID_CaLam = 1,LichCaLam = "00100010001000"},
+                new CaLam{ID_CaLam = 2,LichCaLam = "00010001000100"},
+                new CaLam{ID_CaLam = 3,LichCaLam = "00001000100010"},
+                new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
+                new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("E:\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
             context.Users.AddRange(new User[]
             {
-                new User{ID_User = 1,ID_ChucVu = 1,TenUser = "Dinh Quang Hiep",NgaySinh = new DateTime(2002,09,21),AnhUser =imgbyte,DiaChi ="DaNa",CMND_CCCD="201869370",Username="nhanvien",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 2,ID_ChucVu = 2,TenUser = "Nhi",NgaySinh = new DateTime(2002,06,13),AnhUser =imgbyte,DiaChi ="DaNa",CMND_CCCD="201869370",Username="admin",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 3,ID_ChucVu = 3,TenUser = "Nguyen Hoang Phong",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="206337515",Username="admin",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 4,ID_ChucVu = 1,TenUser = "Nguyen Hoang Vu",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 5,ID_ChucVu = 1,TenUser = "Nguyen Xuan Hung",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="Hue",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 6,ID_ChucVu = 1,TenUser = "Nguyen Van Vien",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 7,ID_ChucVu = 1,TenUser = "Pham Van Tien Truong",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="NiBih",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 8,ID_ChucVu = 1,TenUser = "Tran Van Hai",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 9,ID_ChucVu = 1,TenUser = "Pham Cong Huy",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="HaNoi",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 10,ID_ChucVu = 1,TenUser = "Truong Tuan Kiet",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="HCM",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 11,ID_ChucVu = 1,TenUser = "Nguyen Dac Duc",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="NgheAn",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 12,ID_ChucVu = 1,TenUser = "Tran Kim Quy",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 13,ID_ChucVu = 1,TenUser = "Ho Thuy Tien",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="DaNa",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 14,ID_ChucVu = 1,TenUser = "Do Thi Nho",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNgai",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 15,ID_ChucVu = 1,TenUser = "Ho Dac Nguyen Minh",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="Hue",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-                new User{ID_User = 16,ID_ChucVu = 1,TenUser = "Nguyen Thi Minh Nguyet",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="Dac Lac",CMND_CCCD="22345678",Username="user",Password="123",NgayBatDauLam=new DateTime(2020,09,21)},
-
-
-
+                new User{ID_User = 1,ID_ChucVu = 2,TenUser = "Dinh Quang Hiep",NgaySinh = new DateTime(2002,09,21),AnhUser =imgbyte,DiaChi ="DaNa",CMND_CCCD="201869370",Username="quanly",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 2,ID_ChucVu = 1,TenUser = "Nhi",NgaySinh = new DateTime(2002,06,13),AnhUser =imgbyte,DiaChi ="DaNa",CMND_CCCD="201869370",Username="admin",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 3,ID_ChucVu = 3,TenUser = "Nguyen Hoang Phong",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="206337515",Username="admin",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 4,ID_ChucVu = 3,TenUser = "Nguyen Hoang Vu",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user1",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 5,ID_ChucVu = 3,TenUser = "Nguyen Xuan Hung",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="Hue",CMND_CCCD="22345678",Username="user2",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 6,ID_ChucVu = 3,TenUser = "Nguyen Van Vien",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user3",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 7,ID_ChucVu = 3,TenUser = "Pham Van Tien Truong",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="NiBih",CMND_CCCD="22345678",Username="user4",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 8,ID_ChucVu = 3,TenUser = "Tran Van Hai",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user5",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 9,ID_ChucVu = 3,TenUser = "Pham Cong Huy",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="HaNoi",CMND_CCCD="22345678",Username="user6",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 10,ID_ChucVu = 3,TenUser = "Truong Tuan Kiet",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="HCM",CMND_CCCD="22345678",Username="user7",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 11,ID_ChucVu = 3,TenUser = "Nguyen Dac Duc",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="NgheAn",CMND_CCCD="22345678",Username="user8",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 12,ID_ChucVu = 3,TenUser = "Tran Kim Quy",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNa",CMND_CCCD="22345678",Username="user9",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 13,ID_ChucVu = 3,TenUser = "Ho Thuy Tien",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="DaNa",CMND_CCCD="22345678",Username="user10",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 14,ID_ChucVu = 3,TenUser = "Do Thi Nho",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="QNgai",CMND_CCCD="22345678",Username="user11",Password="123",NgayBatDauLam=new DateTime(2020,05,02)},
+                new User{ID_User = 15,ID_ChucVu = 3,TenUser = "Ho Dac Nguyen Minh",NgaySinh = new DateTime(2002,04,18),AnhUser =imgbyte,DiaChi ="Hue",CMND_CCCD="22345678",Username="user12",Password="123",NgayBatDauLam=new DateTime(2020,05,02)}
             });
             context.BangChamCongs.AddRange(new BangChamCong[]
             {
-                new BangChamCong{ID_BangChamCong = 1,ID_User=1,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=2,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=3,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=4,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=5,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=6,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=7,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=8,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=9,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=10,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=11,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
-                new BangChamCong{ID_BangChamCong = 1,ID_User=12,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,09,21) },
+                new BangChamCong{ID_BangChamCong = 1,ID_User=1,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 2,ID_User=2,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 3,ID_User=3,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 4,ID_User=4,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 5,ID_User=5,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 6,ID_User=6,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 7,ID_User=7,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 8,ID_User=8,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 9,ID_User=9,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 10,ID_User=10,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 11,ID_User=11,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 12,ID_User=12,LichSuLamViec ="1000100000010000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
             });
             context.MonAns.AddRange(new MonAn[]
             {
@@ -81,7 +76,6 @@ namespace Entity
                 new MonAn{ID_MonAn = 14,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte},
                 new MonAn{ID_MonAn = 15,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte},
                 new MonAn{ID_MonAn = 16,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte},
-
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {
@@ -89,7 +83,6 @@ namespace Entity
                 new LoaiNguyenLieu{ID_LoaiNguyenLieu = 2,TenLoaiNguyenLieu = "Rau cu "},
                 new LoaiNguyenLieu{ID_LoaiNguyenLieu = 3,TenLoaiNguyenLieu = "Do kho"},
                 new LoaiNguyenLieu{ID_LoaiNguyenLieu = 4,TenLoaiNguyenLieu = "Do uong"},
-
             });
             context.NguyenLieus.AddRange(new NguyenLieu[]
             {
@@ -136,51 +129,51 @@ namespace Entity
             });
             context.Bans.AddRange(new Ban[]
             {
-                new Ban{ID_Ban = 1,TenBan = "Ban 1",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 2,TenBan = "Ban 2",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 3,TenBan = "Ban 3",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 4,TenBan = "Ban 4",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 5,TenBan = "Ban 5",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 6,TenBan = "Ban 1",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 7,TenBan = "Ban 2",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 8,TenBan = "Ban 3",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 9,TenBan = "Ban 4",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 10,TenBan = "Ban 5",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 11,TenBan = "Ban 1",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 12,TenBan = "Ban 2",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 13,TenBan = "Ban 3",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 14,TenBan = "Ban 4",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 15,TenBan = "Ban 5",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 16,TenBan = "Ban 1",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 17,TenBan = "Ban 2",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 18,TenBan = "Ban 3",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 19,TenBan = "Ban 4",Tang = 1,TinhTrangBan =1},
-                new Ban{ID_Ban = 20,TenBan = "Ban 5",Tang = 1,TinhTrangBan =0},
-                new Ban{ID_Ban = 1,TenBan = "Ban 1",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 2,TenBan = "Ban 2",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 3,TenBan = "Ban 3",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 4,TenBan = "Ban 4",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 5,TenBan = "Ban 5",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 6,TenBan = "Ban 1",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 7,TenBan = "Ban 2",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 8,TenBan = "Ban 3",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 9,TenBan = "Ban 4",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 10,TenBan = "Ban 5",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 11,TenBan = "Ban 1",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 12,TenBan = "Ban 2",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 13,TenBan = "Ban 3",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 14,TenBan = "Ban 4",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 15,TenBan = "Ban 5",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 16,TenBan = "Ban 1",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 17,TenBan = "Ban 2",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 18,TenBan = "Ban 3",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 19,TenBan = "Ban 4",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 20,TenBan = "Ban 5",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 21,TenBan = "Ban 1",Tang = 2,TinhTrangBan =0},
-                new Ban{ID_Ban = 22,TenBan = "Ban 2",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 23,TenBan = "Ban 3",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 24,TenBan = "Ban 4",Tang = 2,TinhTrangBan =1},
-                new Ban{ID_Ban = 25,TenBan = "Ban 5",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 1,TenBan = "Ban T01-1",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 2,TenBan = "Ban T01-2",Tang = 1,TinhTrangBan =2},
+                new Ban{ID_Ban = 3,TenBan = "Ban T01-3",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 4,TenBan = "Ban T01-4",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 5,TenBan = "Ban T01-5",Tang = 1,TinhTrangBan =5},
+                new Ban{ID_Ban = 6,TenBan = "Ban T01-6",Tang = 1,TinhTrangBan =6},
+                new Ban{ID_Ban = 7,TenBan = "Ban T01-7",Tang = 1,TinhTrangBan =7},
+                new Ban{ID_Ban = 8,TenBan = "Ban T01-8",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 9,TenBan = "Ban T01-9",Tang = 1,TinhTrangBan =9},
+                new Ban{ID_Ban = 10,TenBan = "Ban T01-10",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 11,TenBan = "Ban T01-11",Tang = 1,TinhTrangBan =11},
+                new Ban{ID_Ban = 12,TenBan = "Ban T01-12",Tang = 1,TinhTrangBan =12},
+                new Ban{ID_Ban = 13,TenBan = "Ban T01-13",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 14,TenBan = "Ban T01-14",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 15,TenBan = "Ban T01-15",Tang = 1,TinhTrangBan =15},
+                new Ban{ID_Ban = 16,TenBan = "Ban T01-16",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 17,TenBan = "Ban T01-17",Tang = 1,TinhTrangBan =17},
+                new Ban{ID_Ban = 18,TenBan = "Ban T01-18",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 19,TenBan = "Ban T01-19",Tang = 1,TinhTrangBan =19},
+                new Ban{ID_Ban = 20,TenBan = "Ban T01-20",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 21,TenBan = "Ban T02-1",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 22,TenBan = "Ban T02-2",Tang = 2,TinhTrangBan =22},
+                new Ban{ID_Ban = 23,TenBan = "Ban T02-3",Tang = 2,TinhTrangBan =23},
+                new Ban{ID_Ban = 24,TenBan = "Ban T02-4",Tang = 2,TinhTrangBan =24},
+                new Ban{ID_Ban = 25,TenBan = "Ban T02-5",Tang = 2,TinhTrangBan =25},
+                new Ban{ID_Ban = 26,TenBan = "Ban T02-6",Tang = 2,TinhTrangBan =26},
+                new Ban{ID_Ban = 27,TenBan = "Ban T02-7",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 28,TenBan = "Ban T02-8",Tang = 2,TinhTrangBan =28},
+                new Ban{ID_Ban = 29,TenBan = "Ban T02-9",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 30,TenBan = "Ban T02-10",Tang = 2,TinhTrangBan =30},
+                new Ban{ID_Ban = 31,TenBan = "Ban T02-11",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 32,TenBan = "Ban T02-12",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 33,TenBan = "Ban T02-13",Tang = 2,TinhTrangBan =33},
+                new Ban{ID_Ban = 34,TenBan = "Ban T02-14",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 35,TenBan = "Ban T02-15",Tang = 2,TinhTrangBan =35},
+                new Ban{ID_Ban = 36,TenBan = "Ban T02-16",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 37,TenBan = "Ban T02-17",Tang = 2,TinhTrangBan =37},
+                new Ban{ID_Ban = 38,TenBan = "Ban T02-18",Tang = 2,TinhTrangBan =38},
+                new Ban{ID_Ban = 39,TenBan = "Ban T02-19",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 40,TenBan = "Ban T02-20",Tang = 2,TinhTrangBan =40},
+                new Ban{ID_Ban = 41,TenBan = "Ban T02-21",Tang = 2,TinhTrangBan =0},
+                new Ban{ID_Ban = 42,TenBan = "Ban T02-22",Tang = 2,TinhTrangBan =42},
+                new Ban{ID_Ban = 43,TenBan = "Ban T02-23",Tang = 2,TinhTrangBan =43},
+                new Ban{ID_Ban = 44,TenBan = "Ban T02-24",Tang = 2,TinhTrangBan =44},
+                new Ban{ID_Ban = 45,TenBan = "Ban T02-25",Tang = 2,TinhTrangBan =0},
             });
             context.ChiTietBans.AddRange(new ChiTietBan[]
             {
@@ -208,7 +201,14 @@ namespace Entity
             {
                 new ChiTietNhaCungCap{ID_NguyenLieu = 1,ID_NhaCungCap = 1,DonGia = 70000},
                 new ChiTietNhaCungCap{ID_NguyenLieu = 2,ID_NhaCungCap = 1,DonGia = 90000},
-                new ChiTietNhaCungCap{ID_NguyenLieu = 1,ID_NhaCungCap = 2,DonGia = 75000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 3,ID_NhaCungCap = 2,DonGia = 75000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 4,ID_NhaCungCap = 3,DonGia = 7000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 5,ID_NhaCungCap = 4,DonGia = 22000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 6,ID_NhaCungCap = 5,DonGia = 33000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 7,ID_NhaCungCap = 6,DonGia = 44000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 8,ID_NhaCungCap = 7,DonGia = 55000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 9,ID_NhaCungCap = 8,DonGia = 66000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 10,ID_NhaCungCap = 9,DonGia = 77000},
             });
             context.Khoes.AddRange(new Kho[]
             {

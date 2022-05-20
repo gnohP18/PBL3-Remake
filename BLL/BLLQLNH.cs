@@ -9,8 +9,8 @@ namespace BLL
     public class BLLQLNH
     {
         private DALQLNH dALQLNH;
-        private BLLQLNH _Instance;
-        public BLLQLNH Instance
+        private static BLLQLNH _Instance;
+        public static BLLQLNH Instance
         {
             get
             {

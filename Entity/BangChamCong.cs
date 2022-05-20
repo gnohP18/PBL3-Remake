@@ -11,6 +11,7 @@ namespace Entity
     public class BangChamCong
     {
         [Key][Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_BangChamCong { get; set; }
         [Required]
         public int ID_User { get; set; }

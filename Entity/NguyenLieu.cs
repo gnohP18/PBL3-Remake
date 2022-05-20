@@ -17,6 +17,7 @@ namespace Entity
             this.ChiTietNhaCungCaps = new HashSet<ChiTietNhaCungCap>();
         }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_NguyenLieu { get; set; }
         public string DonViTinh { get; set; }

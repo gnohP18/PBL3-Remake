@@ -14,7 +14,7 @@
             {
                 this.Users = new HashSet<User>();
             }
-            [Key]
+            [Key][DatabaseGenerated(DatabaseGeneratedOption.None)]
             [Required]
             public int ID_CaLam { get; set; }
             public string LichCaLam { get; set; }

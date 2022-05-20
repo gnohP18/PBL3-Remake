@@ -17,6 +17,7 @@ namespace Entity
             this.ChiTietMonAns = new HashSet<ChiTietMonAn>();
         }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_MonAn { get; set; }
         public string TenMonAn { get; set; }

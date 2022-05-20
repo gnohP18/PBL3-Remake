@@ -15,6 +15,7 @@ namespace Entity
             this.MonAns = new HashSet<MonAn>();
         }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_HoaDon { get; set; }
         [Required]

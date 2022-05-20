@@ -15,6 +15,7 @@ namespace Entity
             this.Users = new HashSet<User>();
         }
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_ChucVu { get; set; }
         public string TenChucVu { get; set; }

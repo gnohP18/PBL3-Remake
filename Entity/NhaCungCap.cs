@@ -17,6 +17,7 @@ namespace Entity
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_NhaCungCap { get; set; }
         public string TenNhaCungCap { get; set; }

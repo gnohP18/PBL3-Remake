@@ -14,7 +14,8 @@ namespace Entity
         {
             this.NguyenLieus = new HashSet<NguyenLieu>();
         }
-        [Key, Column(Order = 0)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required]
         public int ID_LoaiNguyenLieu { get; set; }
         public string TenLoaiNguyenLieu { get; set; }

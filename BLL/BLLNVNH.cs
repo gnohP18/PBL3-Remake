@@ -36,26 +36,19 @@ namespace BLL
         }
         public List<Ban> GetAllBanByTinhTrangBanVaTang(bool st, int fl)
         {
-            int ttb = 0;
             if (st)
                 return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).ToList();
             else
                 return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).ToList();
         }
-        public Ban GetAllBanByID_Ban(int id)
+        public Ban GetBanByID_Ban(int id)
         {
-            Ban table = null;
-            foreach (Ban i in GetAllBan())
-            {
-                if (i.ID_Ban == id)
-                {
-                    table = i;
-                    break;
-                }
-            }
-            return table;
+            return dALQLNH.Bans.Where(p => p.ID_Ban == id).FirstOrDefault();
         }
-
+        public List<MonAn> GetAllDishByIDDishAndIDKindOfDish(int idmonan, int idloaimonan)
+        {
+            return dALQLNH.MonAns.Where(p => (p.ID_MonAn == idmonan && p.ID_LoaiMonAn == idloaimonan)).ToList();
+        }
         private List<Ban> GetAllBan()
         {
             return dALQLNH.Bans.ToList();
@@ -84,7 +77,14 @@ namespace BLL
                 }
             }
             return count;
-
+        }
+        public int NumberOfKindDish(int idloaimonan)
+        {
+            return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == idloaimonan).Count();
+        }
+        public List<MonAn> GetAllDishByIDKindOfDish(int idloaimonan)
+        {
+            return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == idloaimonan).ToList();
         }
     }
 }

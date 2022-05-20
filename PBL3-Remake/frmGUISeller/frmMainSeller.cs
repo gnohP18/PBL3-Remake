@@ -88,14 +88,11 @@ namespace GUI.frmGUISeller
         void LoadBanWithTinhTrangBanVaTang(bool st, int fl)
         {
             int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(st, fl);
-            Console.WriteLine("soban=" + soban);
             TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
-            Console.WriteLine("dem1=" + dem1);
             foreach (Ban i in BLLNVNH.Instance.GetAllBanByTinhTrangBanVaTang(st, fl))
             {
                 tb[dem1] = new TableForOrdering();
-                Console.WriteLine(dem1);
                 tb[dem1].IDTable = i.ID_Ban;
                 tb[dem1].NameTable = i.TenBan;
                 tb[dem1].Floor = i.Tang;

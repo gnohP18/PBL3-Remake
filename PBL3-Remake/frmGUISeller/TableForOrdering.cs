@@ -38,7 +38,8 @@ namespace GUI.frmGUISeller
 
         private void btnMenuOrder_Click(object sender, System.EventArgs e)
         {
-            frmOrder frm = new frmOrder();
+            frmOrder frm = new frmOrder(IDTable);
+            frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
 

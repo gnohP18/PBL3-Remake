@@ -163,9 +163,29 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cooking_32 {
+            get {
+                object obj = ResourceManager.GetObject("cooking-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DarkCalendar {
             get {
                 object obj = ResourceManager.GetObject("DarkCalendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap des_32 {
+            get {
+                object obj = ResourceManager.GetObject("des-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +273,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mussel_32 {
+            get {
+                object obj = ResourceManager.GetObject("mussel-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Order_32 {
             get {
                 object obj = ResourceManager.GetObject("Order-32", resourceCulture);
@@ -283,9 +313,39 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap piece_of_cake_32 {
+            get {
+                object obj = ResourceManager.GetObject("piece-of-cake-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plastic_bottle_48 {
             get {
                 object obj = ResourceManager.GetObject("plastic-bottle-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_32 {
+            get {
+                object obj = ResourceManager.GetObject("plus-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poinsettia_32 {
+            get {
+                object obj = ResourceManager.GetObject("poinsettia-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

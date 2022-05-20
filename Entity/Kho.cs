@@ -10,10 +10,12 @@ namespace Entity
     [Table("Kho")]
     public class Kho
     {
-        [Key, Column(Order = 0)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required]
+        public int ID_ChiTietNguyenLieu { get; set; }
         [Required]
         public int ID_NguyenLieu { get; set; }
-        [Key, Column(Order = 1)]
         [Required]
         public int ID_NhaCungCap { get; set; }
         public DateTime NgayNhap { get; set; }

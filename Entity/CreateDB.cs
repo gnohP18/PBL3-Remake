@@ -221,6 +221,7 @@ namespace Entity
             {
                 new Kho{ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2020,06,13),NgayHetHan = new DateTime(2020,07,13),LuongNhapVao = 20,LuongTonKho = 20},
                 new Kho{ID_NguyenLieu = 2,ID_NhaCungCap = 1,NgayNhap = new DateTime(2020,06,13),NgayHetHan = new DateTime(2020,07,13),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_NguyenLieu = 1,ID_NhaCungCap = 2,NgayNhap = new DateTime(2020,06,13),NgayHetHan = new DateTime(2020,07,13),LuongNhapVao = 20,LuongTonKho = 20},
             });
         }
     }

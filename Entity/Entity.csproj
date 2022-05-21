@@ -66,6 +66,7 @@
     <Compile Include="LoaiMonAn.cs" />
     <Compile Include="LoaiNguyenLieu.cs" />
     <Compile Include="MonAn.cs" />
+    <Compile Include="MonAn_View.cs" />
     <Compile Include="NguyenLieu.cs" />
     <Compile Include="NguyenLieu_View.cs" />
     <Compile Include="NhaCungCap.cs" />

@@ -4,6 +4,8 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using BLL;
+using System.Collections.Generic;
 
 namespace GUI.frmGUISeller
 {
@@ -11,10 +13,15 @@ namespace GUI.frmGUISeller
     {
         public int IDTable { get; set; }
         private int IDLoaiMonAn = 2;
+        List<MonAn_View> listMonAnViewDaDat;
+        List<MonAn_View> listMonAnViewDangDat;
         public frmOrder(int id)
         {
             IDTable = id;
             InitializeComponent();
+            listMonAnViewDangDat = new List<MonAn_View>();
+            listMonAnViewDaDat = BLLNVNH.Instance.GetListMonAnByIDBan(IDTable);
+            dgvOrder.DataSource = listMonAnViewDaDat;
         }
 
         private void frmOrder_Load(object sender, EventArgs e)
@@ -24,17 +31,12 @@ namespace GUI.frmGUISeller
             pnDish.AutoScroll = true;
             GetDishByKind(IDLoaiMonAn);
         }
-        private void SetDish(Panel pn, DishForOrdering dsh, int idmonan, int idloaimonan, string tenmonan, int cost, Image img)
+        private void SetDish(Panel pn, DishForOrdering dsh)
         {
-            dsh.ID_MonAn = idmonan;
-            dsh.ID_LoaiMonAn = idloaimonan;
-            dsh.TenMonAn = tenmonan;
-            dsh.Cost = cost;
-            dsh.imgDish = img;
             dsh.Width = 180;
             dsh.Height = 180;
             pn.Controls.Add(dsh);
-            dsh.GUIForDish();
+            //dsh.GUIForDish();
         }
         private void RemoveDish()
         {
@@ -48,6 +50,28 @@ namespace GUI.frmGUISeller
                 return img;
             }
         }
+        private void LoadDishOnDatagridview(MonAn MonAn)
+        {
+            bool checkMonAnExisted = false;
+            foreach(MonAn_View i in listMonAnViewDangDat)
+            {
+                if(i.TenMonAn == MonAn.TenMonAn)
+                {
+                    i.SoLuong++;
+                    i.ThanhTien += MonAn.ThanhTien;
+                    checkMonAnExisted = true;
+                    break;
+                }
+            }
+            if (!checkMonAnExisted)
+            {
+                listMonAnViewDangDat.Add(new MonAn_View { TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
+            }
+            List<MonAn_View> list = new List<MonAn_View>();
+            list.AddRange(listMonAnViewDaDat);
+            list.AddRange(listMonAnViewDangDat);
+            dgvOrder.DataSource = list;
+        }
         private void GetDishByKind(int idloaimonan)
         {
             int somon = BLL.BLLNVNH.Instance.NumberOfKindDish(idloaimonan);
@@ -55,12 +79,8 @@ namespace GUI.frmGUISeller
             int dem1 = 0;
             foreach (MonAn i in BLL.BLLNVNH.Instance.GetAllDishByIDKindOfDish(idloaimonan))
             {
-                dsh[dem1] = new DishForOrdering();
-                dsh[dem1].ID_MonAn = i.ID_MonAn;
-                dsh[dem1].ID_LoaiMonAn = i.ID_LoaiMonAn;
-                dsh[dem1].TenMonAn = i.TenMonAn;
-                dsh[dem1].Cost = i.ThanhTien;
-                dsh[dem1].imgDish = byteArrayToImage(i.AnhMonAn);
+                dsh[dem1] = new DishForOrdering(i);
+                dsh[dem1].d = new DishForOrdering.Mydel(LoadDishOnDatagridview);
                 dem1++;
             }
             if (somon != 0)
@@ -84,7 +104,7 @@ namespace GUI.frmGUISeller
                     int thuong = Convert.ToInt32(i / 4);
                     Ly = 25 + 230 * thuong;
                     dsh[i].SetLocation(Lx, Ly);
-                    SetDish(pnDish, dsh[i], dsh[i].ID_MonAn, dsh[i].ID_LoaiMonAn, dsh[i].TenMonAn, dsh[i].Cost, dsh[i].imgDish);
+                    SetDish(pnDish, dsh[i]);
                 }
             }
 

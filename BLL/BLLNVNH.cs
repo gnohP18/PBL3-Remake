@@ -86,5 +86,25 @@ namespace BLL
         {
             return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == idloaimonan).ToList();
         }
+        public List<MonAn_View> GetListMonAnByIDBan(int ID_Ban)
+        {
+            List<MonAn_View> data = new List<MonAn_View>();
+            var groupMonAn = dALQLNH.ChiTietBans.GroupBy(s => s.ID_Ban).Where(g => g.Key == ID_Ban);
+            foreach(ChiTietBan i in groupMonAn)
+            {
+                MonAn monAn =dALQLNH.MonAns.Find(i.ID_MonAn);
+                foreach(MonAn_View j in data)
+                {
+                    if(j.TenMonAn == monAn.TenMonAn)
+                    {
+                        j.SoLuong++;
+                        j.ThanhTien += monAn.ThanhTien;
+                        continue;
+                    }
+                    data.Add(new MonAn_View { TenMonAn = monAn.TenMonAn, SoLuong = 1, ThanhTien = monAn.ThanhTien });
+                }
+            }
+            return data;
+        }
     }
 }

@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.btnDES = new System.Windows.Forms.Button();
+            this.lblNameDish = new System.Windows.Forms.Label();
             this.btnINC = new System.Windows.Forms.Button();
             this.pBDish = new System.Windows.Forms.PictureBox();
-            this.lblNameDish = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pBDish)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,19 +40,32 @@
             // 
             this.btnDES.FlatAppearance.BorderSize = 0;
             this.btnDES.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDES.Location = new System.Drawing.Point(134, 73);
+            this.btnDES.Image = global::PBL3_Remake.Properties.Resources.des_32;
+            this.btnDES.Location = new System.Drawing.Point(130, 71);
             this.btnDES.Name = "btnDES";
-            this.btnDES.Size = new System.Drawing.Size(33, 33);
+            this.btnDES.Size = new System.Drawing.Size(45, 50);
             this.btnDES.TabIndex = 2;
             this.btnDES.UseVisualStyleBackColor = true;
+            // 
+            // lblNameDish
+            // 
+            this.lblNameDish.AutoSize = true;
+            this.lblNameDish.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameDish.ForeColor = System.Drawing.Color.Black;
+            this.lblNameDish.Location = new System.Drawing.Point(5, 130);
+            this.lblNameDish.Name = "lblNameDish";
+            this.lblNameDish.Size = new System.Drawing.Size(24, 23);
+            this.lblNameDish.TabIndex = 15;
+            this.lblNameDish.Text = "A";
             // 
             // btnINC
             // 
             this.btnINC.FlatAppearance.BorderSize = 0;
             this.btnINC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnINC.Location = new System.Drawing.Point(134, 22);
+            this.btnINC.Image = global::PBL3_Remake.Properties.Resources.plus_32;
+            this.btnINC.Location = new System.Drawing.Point(130, 13);
             this.btnINC.Name = "btnINC";
-            this.btnINC.Size = new System.Drawing.Size(33, 33);
+            this.btnINC.Size = new System.Drawing.Size(45, 50);
             this.btnINC.TabIndex = 1;
             this.btnINC.UseVisualStyleBackColor = true;
             // 
@@ -63,28 +77,28 @@
             this.pBDish.TabIndex = 0;
             this.pBDish.TabStop = false;
             // 
-            // lblNameDish
+            // lblCost
             // 
-            this.lblNameDish.AutoSize = true;
-            this.lblNameDish.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameDish.ForeColor = System.Drawing.Color.Black;
-            this.lblNameDish.Location = new System.Drawing.Point(5, 138);
-            this.lblNameDish.Name = "lblNameDish";
-            this.lblNameDish.Size = new System.Drawing.Size(24, 23);
-            this.lblNameDish.TabIndex = 15;
-            this.lblNameDish.Text = "A";
+            this.lblCost.AutoSize = true;
+            this.lblCost.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCost.ForeColor = System.Drawing.Color.Black;
+            this.lblCost.Location = new System.Drawing.Point(6, 153);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(24, 23);
+            this.lblCost.TabIndex = 16;
+            this.lblCost.Text = "B";
             // 
             // DishForOrdering
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.lblCost);
             this.Controls.Add(this.lblNameDish);
             this.Controls.Add(this.btnDES);
             this.Controls.Add(this.btnINC);
             this.Controls.Add(this.pBDish);
             this.Name = "DishForOrdering";
-            this.Size = new System.Drawing.Size(180, 170);
+            this.Size = new System.Drawing.Size(180, 180);
             ((System.ComponentModel.ISupportInitialize)(this.pBDish)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,5 +111,6 @@
         private System.Windows.Forms.Button btnINC;
         private System.Windows.Forms.Button btnDES;
         private System.Windows.Forms.Label lblNameDish;
+        private System.Windows.Forms.Label lblCost;
     }
 }

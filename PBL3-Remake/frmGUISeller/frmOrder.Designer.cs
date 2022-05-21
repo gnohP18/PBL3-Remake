@@ -39,11 +39,6 @@
             this.lblIDTable = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dishForOrdering1 = new PBL3_Remake.frmGUISeller.DishForOrdering();
-            this.dishForOrdering2 = new PBL3_Remake.frmGUISeller.DishForOrdering();
-            this.dishForOrdering3 = new PBL3_Remake.frmGUISeller.DishForOrdering();
-            this.dishForOrdering4 = new PBL3_Remake.frmGUISeller.DishForOrdering();
-            this.pnDish.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.SuspendLayout();
@@ -126,13 +121,9 @@
             // 
             // pnDish
             // 
-            this.pnDish.Controls.Add(this.dishForOrdering4);
-            this.pnDish.Controls.Add(this.dishForOrdering3);
-            this.pnDish.Controls.Add(this.dishForOrdering2);
-            this.pnDish.Controls.Add(this.dishForOrdering1);
-            this.pnDish.Location = new System.Drawing.Point(7, 68);
+            this.pnDish.Location = new System.Drawing.Point(3, 68);
             this.pnDish.Name = "pnDish";
-            this.pnDish.Size = new System.Drawing.Size(836, 526);
+            this.pnDish.Size = new System.Drawing.Size(840, 526);
             this.pnDish.TabIndex = 25;
             // 
             // panel2
@@ -198,54 +189,6 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Name";
             // 
-            // dishForOrdering1
-            // 
-            this.dishForOrdering1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.dishForOrdering1.ID_LoaiMonAn = 0;
-            this.dishForOrdering1.ID_MonAn = 0;
-            this.dishForOrdering1.imgDish = null;
-            this.dishForOrdering1.Location = new System.Drawing.Point(25, 25);
-            this.dishForOrdering1.Name = "dishForOrdering1";
-            this.dishForOrdering1.Size = new System.Drawing.Size(180, 170);
-            this.dishForOrdering1.TabIndex = 0;
-            this.dishForOrdering1.TenMonAn = null;
-            // 
-            // dishForOrdering2
-            // 
-            this.dishForOrdering2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.dishForOrdering2.ID_LoaiMonAn = 0;
-            this.dishForOrdering2.ID_MonAn = 0;
-            this.dishForOrdering2.imgDish = null;
-            this.dishForOrdering2.Location = new System.Drawing.Point(235, 25);
-            this.dishForOrdering2.Name = "dishForOrdering2";
-            this.dishForOrdering2.Size = new System.Drawing.Size(180, 170);
-            this.dishForOrdering2.TabIndex = 1;
-            this.dishForOrdering2.TenMonAn = null;
-            // 
-            // dishForOrdering3
-            // 
-            this.dishForOrdering3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.dishForOrdering3.ID_LoaiMonAn = 0;
-            this.dishForOrdering3.ID_MonAn = 0;
-            this.dishForOrdering3.imgDish = null;
-            this.dishForOrdering3.Location = new System.Drawing.Point(440, 25);
-            this.dishForOrdering3.Name = "dishForOrdering3";
-            this.dishForOrdering3.Size = new System.Drawing.Size(180, 170);
-            this.dishForOrdering3.TabIndex = 2;
-            this.dishForOrdering3.TenMonAn = null;
-            // 
-            // dishForOrdering4
-            // 
-            this.dishForOrdering4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.dishForOrdering4.ID_LoaiMonAn = 0;
-            this.dishForOrdering4.ID_MonAn = 0;
-            this.dishForOrdering4.imgDish = null;
-            this.dishForOrdering4.Location = new System.Drawing.Point(645, 25);
-            this.dishForOrdering4.Name = "dishForOrdering4";
-            this.dishForOrdering4.Size = new System.Drawing.Size(180, 170);
-            this.dishForOrdering4.TabIndex = 3;
-            this.dishForOrdering4.TenMonAn = null;
-            // 
             // frmOrder
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -265,7 +208,6 @@
             this.Name = "frmOrder";
             this.Text = "frmOrder";
             this.Load += new System.EventHandler(this.frmOrder_Load);
-            this.pnDish.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.ResumeLayout(false);
@@ -286,9 +228,5 @@
         private System.Windows.Forms.Label lblIDTable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private PBL3_Remake.frmGUISeller.DishForOrdering dishForOrdering4;
-        private PBL3_Remake.frmGUISeller.DishForOrdering dishForOrdering3;
-        private PBL3_Remake.frmGUISeller.DishForOrdering dishForOrdering2;
-        private PBL3_Remake.frmGUISeller.DishForOrdering dishForOrdering1;
     }
 }

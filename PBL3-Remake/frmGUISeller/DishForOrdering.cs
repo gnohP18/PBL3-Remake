@@ -13,10 +13,12 @@ namespace PBL3_Remake.frmGUISeller
         public int ID_LoaiMonAn { get; set; }
         public string TenMonAn { get; set; }
         public Image imgDish { get; set; }
+        public int Cost { get; set; }
         public void GUIForDish()
         {
-            lblNameDish.Text = TenMonAn;
+            lblNameDish.Text = TenMonAn.ToString();
             pBDish.Image = imgDish;
+            lblCost.Text = Cost.ToString();
         }
         public void SetLocation(int x, int y)
         {

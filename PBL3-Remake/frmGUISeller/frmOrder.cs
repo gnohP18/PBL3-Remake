@@ -10,7 +10,7 @@ namespace GUI.frmGUISeller
     public partial class frmOrder : Form
     {
         public int IDTable { get; set; }
-        private int IDLoaiMonAn = 1;
+        private int IDLoaiMonAn = 2;
         public frmOrder(int id)
         {
             IDTable = id;
@@ -24,14 +24,16 @@ namespace GUI.frmGUISeller
             pnDish.AutoScroll = true;
             GetDishByKind(IDLoaiMonAn);
         }
-        private void SetDish(Panel pn, DishForOrdering dsh, int idmonan, int idloaimonan, string tenmonan, Image img)
+        private void SetDish(Panel pn, DishForOrdering dsh, int idmonan, int idloaimonan, string tenmonan, int cost, Image img)
         {
             dsh.ID_MonAn = idmonan;
             dsh.ID_LoaiMonAn = idloaimonan;
             dsh.TenMonAn = tenmonan;
+            dsh.Cost = cost;
             dsh.imgDish = img;
             dsh.Width = 180;
-            dsh.Height = 170;
+            dsh.Height = 180;
+            pn.Controls.Add(dsh);
             dsh.GUIForDish();
         }
         private void RemoveDish()
@@ -53,12 +55,11 @@ namespace GUI.frmGUISeller
             int dem1 = 0;
             foreach (MonAn i in BLL.BLLNVNH.Instance.GetAllDishByIDKindOfDish(idloaimonan))
             {
-                Console.WriteLine(idloaimonan);
                 dsh[dem1] = new DishForOrdering();
                 dsh[dem1].ID_MonAn = i.ID_MonAn;
                 dsh[dem1].ID_LoaiMonAn = i.ID_LoaiMonAn;
-                //Image x = (Bitmap)((new ImageConverter()).ConvertFrom(jpegByteArray));
-                //dsh[dem1].imgDish = (Bitmap)((new ImageConverter()).ConvertFrom(i.AnhMonAn));
+                dsh[dem1].TenMonAn = i.TenMonAn;
+                dsh[dem1].Cost = i.ThanhTien;
                 dsh[dem1].imgDish = byteArrayToImage(i.AnhMonAn);
                 dem1++;
             }
@@ -67,23 +68,23 @@ namespace GUI.frmGUISeller
                 for (int i = 0; i < dsh.Length; i++)
                 {
                     int Lx = 0, Ly = 0;
-                    if (i % 3 == 0) Lx = 25;
+                    if (i % 4 == 0) Lx = 25;
                     else if (i % 4 == 1)
                     {
-                        Lx = 330;
+                        Lx = 235;
                     }
-                    else if (i % 3 == 2)
+                    else if (i % 4 == 2)
                     {
-                        Lx = 630;
+                        Lx = 440;
                     }
-                    else if (i % 3 == 2)
+                    else if (i % 4 == 3)
                     {
-                        Lx = 630;
+                        Lx = 645;
                     }
                     int thuong = Convert.ToInt32(i / 4);
-                    Ly = 25 + 260 * thuong;
+                    Ly = 25 + 230 * thuong;
                     dsh[i].SetLocation(Lx, Ly);
-                    SetDish(pnDish, dsh[i], dsh[i].ID_MonAn, dsh[i].ID_LoaiMonAn, dsh[i].TenMonAn, dsh[i].imgDish);
+                    SetDish(pnDish, dsh[i], dsh[i].ID_MonAn, dsh[i].ID_LoaiMonAn, dsh[i].TenMonAn, dsh[i].Cost, dsh[i].imgDish);
                 }
             }
 
@@ -115,6 +116,10 @@ namespace GUI.frmGUISeller
             IDLoaiMonAn = 4;
             RemoveDish();
             GetDishByKind(IDLoaiMonAn);
+        }
+        private void Order_Dish(object sender, EventArgs e)
+        {
+
         }
     }
 }

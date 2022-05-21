@@ -63,7 +63,7 @@ namespace GUI.frmGUIManager
         private void btnStatictis_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //statisticUC.BringToFront();
+            statisticUC.BringToFront();
         }
 
         private void btnBackup_Click(object sender, EventArgs e)

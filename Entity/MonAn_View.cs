@@ -8,8 +8,9 @@ namespace Entity
 {
     public class MonAn_View
     {
-        public string TenMonAn;
-        public int SoLuong;
-        public int ThanhTien;
+        public int ID_MonAn { get; set; }
+        public string TenMonAn { get; set; }
+        public int SoLuong { get; set; }
+        public int ThanhTien { get; set; }
     }
 }

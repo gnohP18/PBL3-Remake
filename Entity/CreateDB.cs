@@ -83,6 +83,9 @@ namespace Entity
                 new MonAn{ID_MonAn = 14,ID_LoaiMonAn =2,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte},
                 new MonAn{ID_MonAn = 15,ID_LoaiMonAn =4,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte},
                 new MonAn{ID_MonAn = 16,ID_LoaiMonAn =4,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte},
+                 new MonAn{ID_MonAn = 17,ID_LoaiMonAn =1,TenMonAn = "Rau tron",ThanhTien =100000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 18,ID_LoaiMonAn =1,TenMonAn = "Dau khuon",ThanhTien =120000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 19,ID_LoaiMonAn =1,TenMonAn = "Dau phung rang",ThanhTien =70000,AnhMonAn = imgbyte},
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {
@@ -184,7 +187,9 @@ namespace Entity
             });
             context.ChiTietBans.AddRange(new ChiTietBan[]
             {
-
+                new ChiTietBan{ID_ChiTietBan = 1,ID_Ban =2,ID_MonAn = 1,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 2,ID_Ban =2,ID_MonAn = 1,TinhTrang=1,SoLuong = 5},
+                new ChiTietBan{ID_ChiTietBan = 3,ID_Ban =2,ID_MonAn = 16,TinhTrang=1,SoLuong = 2},
             });
             context.NhaCungCaps.AddRange(new NhaCungCap[]
             {

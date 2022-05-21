@@ -1,4 +1,5 @@
 ﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 namespace BLL
@@ -90,18 +91,24 @@ namespace BLL
         {
             List<MonAn_View> data = new List<MonAn_View>();
             var groupMonAn = dALQLNH.ChiTietBans.GroupBy(s => s.ID_Ban).Where(g => g.Key == ID_Ban);
-            foreach(ChiTietBan i in groupMonAn)
+            foreach(var childGroup in groupMonAn)
             {
-                MonAn monAn =dALQLNH.MonAns.Find(i.ID_MonAn);
-                foreach(MonAn_View j in data)
+                foreach (ChiTietBan i in childGroup)
                 {
-                    if(j.TenMonAn == monAn.TenMonAn)
+                    MonAn monAn = dALQLNH.MonAns.Find(i.ID_MonAn);
+                    bool checkMonAnExisted = false;
+                    foreach (MonAn_View j in data)
                     {
-                        j.SoLuong++;
-                        j.ThanhTien += monAn.ThanhTien;
-                        continue;
+                        if (j.ID_MonAn == monAn.ID_MonAn)
+                        {
+                            j.SoLuong += i.SoLuong;
+                            j.ThanhTien = j.SoLuong * monAn.ThanhTien;
+                            checkMonAnExisted = true;
+                            continue;
+                        }
                     }
-                    data.Add(new MonAn_View { TenMonAn = monAn.TenMonAn, SoLuong = 1, ThanhTien = monAn.ThanhTien });
+                    if(!checkMonAnExisted)
+                        data.Add(new MonAn_View { ID_MonAn = monAn.ID_MonAn, TenMonAn = monAn.TenMonAn, SoLuong = i.SoLuong, ThanhTien = monAn.ThanhTien });
                 }
             }
             return data;

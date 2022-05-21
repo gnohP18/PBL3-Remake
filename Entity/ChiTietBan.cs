@@ -18,8 +18,8 @@ namespace Entity
         public int ID_Ban { get; set; }
         [Required]
         public int ID_MonAn { get; set; }
+        public int SoLuong { get; set; }
         public int TinhTrang { get; set; }
-
 
         public virtual Ban Ban { get; set; }
         public virtual MonAn MonAn { get; set; }

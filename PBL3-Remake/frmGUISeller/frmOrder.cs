@@ -55,7 +55,7 @@ namespace GUI.frmGUISeller
             bool checkMonAnExisted = false;
             foreach(MonAn_View i in listMonAnViewDangDat)
             {
-                if(i.TenMonAn == MonAn.TenMonAn)
+                if(i.ID_MonAn == MonAn.ID_MonAn)
                 {
                     i.SoLuong++;
                     i.ThanhTien += MonAn.ThanhTien;
@@ -65,7 +65,7 @@ namespace GUI.frmGUISeller
             }
             if (!checkMonAnExisted)
             {
-                listMonAnViewDangDat.Add(new MonAn_View { TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
+                listMonAnViewDangDat.Add(new MonAn_View { ID_MonAn = MonAn.ID_MonAn,TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
             }
             List<MonAn_View> list = new List<MonAn_View>();
             list.AddRange(listMonAnViewDaDat);

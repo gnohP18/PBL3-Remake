@@ -15,8 +15,17 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
-            DALQLNH dALQLNH = new DALQLNH();
-            dataGridView1.DataSource = dALQLNH.Bans.ToList();
+            List<Ban> data = new List<Ban>();
+            data.AddRange(new Ban[]
+            {
+                new Ban{ID_Ban = 1,TenBan = "Ban T01-1",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 2,TenBan = "Ban T01-2",Tang = 1,TinhTrangBan =2},
+                new Ban{ID_Ban = 3,TenBan = "Ban T01-3",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 4,TenBan = "Ban T01-4",Tang = 1,TinhTrangBan =0},
+                new Ban{ID_Ban = 5,TenBan = "Ban T01-5",Tang = 1,TinhTrangBan =5},
+                new Ban{ID_Ban = 6,TenBan = "Ban T01-6",Tang = 1,TinhTrangBan =6},
+            });
+            dataGridView1.DataSource = data;
         }
     }
 }

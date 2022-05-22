@@ -34,14 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnDish = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.lblNameTable = new System.Windows.Forms.Label();
             this.lblIDTable = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.btnPay = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnMainDish = new System.Windows.Forms.Button();
@@ -66,6 +66,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 580);
             this.panel2.TabIndex = 26;
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnPay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPay.FlatAppearance.BorderSize = 0;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnPay.Image = global::PBL3_Remake.Properties.Resources.wallet_64;
+            this.btnPay.Location = new System.Drawing.Point(0, 470);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnPay.Size = new System.Drawing.Size(220, 110);
+            this.btnPay.TabIndex = 32;
+            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnOrder.Image = global::PBL3_Remake.Properties.Resources.Order_64;
+            this.btnOrder.Location = new System.Drawing.Point(220, 470);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnOrder.Size = new System.Drawing.Size(220, 110);
+            this.btnOrder.TabIndex = 31;
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // dgvOrder
             // 
@@ -113,6 +149,7 @@
             this.dgvOrder.Size = new System.Drawing.Size(440, 470);
             this.dgvOrder.TabIndex = 0;
             this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
+            this.dgvOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellContentClick);
             // 
             // lblNameTable
             // 
@@ -165,42 +202,6 @@
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1300, 600);
             this.pnMain.TabIndex = 32;
-            // 
-            // btnPay
-            // 
-            this.btnPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnPay.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnPay.FlatAppearance.BorderSize = 0;
-            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPay.Image = global::PBL3_Remake.Properties.Resources.wallet_64;
-            this.btnPay.Location = new System.Drawing.Point(0, 470);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnPay.Size = new System.Drawing.Size(220, 110);
-            this.btnPay.TabIndex = 32;
-            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnOrder.Image = global::PBL3_Remake.Properties.Resources.Order_64;
-            this.btnOrder.Location = new System.Drawing.Point(220, 470);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnOrder.Size = new System.Drawing.Size(220, 110);
-            this.btnOrder.TabIndex = 31;
-            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // button2
             // 

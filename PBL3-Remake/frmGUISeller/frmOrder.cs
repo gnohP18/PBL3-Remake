@@ -20,11 +20,13 @@ namespace GUI.frmGUISeller
         {
             IDTable = id;
             InitializeComponent();
+            BLLNVNH.Instance.UpdateTrangThaiMonAn();
             listMonAnViewDangDat = new List<MonAn_View>();
             listMonAnViewDaDat = BLLNVNH.Instance.GetListMonAnByIDBan(IDTable);
-            dgvOrder.DataSource = listMonAnViewDaDat;
-            LoadDataGridView(listMonAnViewDaDat);
-            //AddButtonDataGridView();
+            LoadDataGridView();
+            dgvOrder.Columns["ID_MonAn"].Visible = false;
+            dgvOrder.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            AddButtonDataGridView();
         }
 
         private void frmOrder_Load(object sender, EventArgs e)
@@ -32,43 +34,27 @@ namespace GUI.frmGUISeller
             lblIDTable.Text = BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable).ID_Ban.ToString();
             lblNameTable.Text = BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable).TenBan;
             pnDish.AutoScroll = true;
-            GetDishByKind(IDLoaiMonAn);
-            foreach (MonAn_View view in listMonAnViewDaDat)
-            {
-                Console.WriteLine(view.TenMonAn);
-            }
+            ShowDish("");
+ 
         }
         private void SetDish(Panel pn, DishForOrdering dsh)
         {
             dsh.Width = 180;
             dsh.Height = 180;
             pn.Controls.Add(dsh);
-            //dsh.GUIForDish();
         }
-        private void AddButtonDataGridView(List<MonAn_View> lt)
+        private void AddButtonDataGridView()
         {
-            if (lt.Count != CurrentNumberOfDish)
-            {
-                dgvOrder.Columns.Clear();
-                DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-                btn.Text = "Delete";
-                btn.HeaderText = "";
-                btn.Name = "btnDeleteDish";
-                btn.UseColumnTextForButtonValue = true;
-                dgvOrder.Columns.Add(btn);
-            }
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            imageColumn.Image = PBL3_Remake.Properties.Resources.des_32;
+            dgvOrder.Columns.Add(imageColumn);
         }
-        private void LoadDataGridView(List<MonAn_View> lt)
+        private void LoadDataGridView()
         {
-            if (lt != null)
-            {
-                dgvOrder.Columns[0].Visible = false;
-                dgvOrder.Columns[1].HeaderText = "Name dish";
-                dgvOrder.Columns[2].HeaderText = "Number";
-                dgvOrder.Columns[3].HeaderText = "Total";
-                dgvOrder.DataSource = lt;
-                AddButtonDataGridView(lt);
-            }
+            List<MonAn_View> list = new List<MonAn_View>();
+            list.AddRange(listMonAnViewDaDat);
+            list.AddRange(listMonAnViewDangDat);
+            dgvOrder.DataSource = list;
         }
         private void RemoveDish()
         {
@@ -85,6 +71,7 @@ namespace GUI.frmGUISeller
         private void LoadDishOnDatagridview(MonAn MonAn)
         {
             bool checkMonAnExisted = false;
+            List<int> listIDMonAn = new List<int>();
             foreach (MonAn_View i in listMonAnViewDangDat)
             {
                 if (i.ID_MonAn == MonAn.ID_MonAn)
@@ -99,19 +86,18 @@ namespace GUI.frmGUISeller
             {
                 listMonAnViewDangDat.Add(new MonAn_View { ID_MonAn = MonAn.ID_MonAn, TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
             }
-            List<MonAn_View> list = new List<MonAn_View>();
-            list.AddRange(listMonAnViewDaDat);
-            list.AddRange(listMonAnViewDangDat);
-            LoadDataGridView(list);
-            CurrentNumberOfDish = list.Count;
-
+            BLLNVNH.Instance.UpdateTrangThaiMonAn(listMonAnViewDangDat);
+            ShowDish("");
+            LoadDataGridView();
         }
-        private void GetDishByKind(int idloaimonan)
+        private void ShowDish(string txt)
         {
-            int somon = BLL.BLLNVNH.Instance.NumberOfKindDish(idloaimonan);
+            RemoveDish();
+            List<MonAn> listMonAn = BLLNVNH.Instance.GetMonAn(IDLoaiMonAn,"",1);
+            int somon = listMonAn.Count;
             DishForOrdering[] dsh = new DishForOrdering[somon];
             int dem1 = 0;
-            foreach (MonAn i in BLL.BLLNVNH.Instance.GetAllDishByIDKindOfDish(idloaimonan))
+            foreach (MonAn i in listMonAn)
             {
                 dsh[dem1] = new DishForOrdering(i);
                 dsh[dem1].d = new DishForOrdering.Mydel(LoadDishOnDatagridview);
@@ -148,28 +134,28 @@ namespace GUI.frmGUISeller
         {
             IDLoaiMonAn = 1;
             RemoveDish();
-            GetDishByKind(IDLoaiMonAn);
+            ShowDish("");
         }
 
         private void btnMainDish_Click(object sender, EventArgs e)
         {
             IDLoaiMonAn = 2;
             RemoveDish();
-            GetDishByKind(IDLoaiMonAn);
+            ShowDish("");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             IDLoaiMonAn = 3;
             RemoveDish();
-            GetDishByKind(IDLoaiMonAn);
+            ShowDish("");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             IDLoaiMonAn = 4;
             RemoveDish();
-            GetDishByKind(IDLoaiMonAn);
+            ShowDish("");
         }
 
         private void btnPay_Click(object sender, EventArgs e)
@@ -191,24 +177,34 @@ namespace GUI.frmGUISeller
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine(dgvOrder.CurrentRow.Cells[0].Value.ToString() + " " + dgvOrder.CurrentRow.Cells[1].Value.ToString()
-                                + " " + dgvOrder.CurrentRow.Cells[2].Value.ToString());
-            if (e.ColumnIndex == 0)
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
+                e.RowIndex >= listMonAnViewDaDat.Count)
             {
-                //string message = "You have deleted " + dgvOrder.CurrentRow.Cells[2].Value.ToString();
-                //NoticeBox nt = new NoticeBox(message);
-                //nt.Show();
-                //foreach (MonAn_View i in listMonAnViewDaDat)
-                //{
-                //    if (i.TenMonAn == dgvOrder.CurrentRow.Cells[2].Value.ToString())
-                //    {
-                //        Console.WriteLine(dgvOrder.CurrentRow.Cells[2].Value.ToString());
-                //        listMonAnViewDaDat.Remove(i);
-                //        break;
-                //    }
-                //}
-                //LoadDataGridView(listMonAnViewDaDat);
+                listMonAnViewDangDat[e.RowIndex - listMonAnViewDaDat.Count].SoLuong--;
+                if (listMonAnViewDangDat[e.RowIndex - listMonAnViewDaDat.Count].SoLuong == 0)
+                {
+                    listMonAnViewDangDat.RemoveAt(e.RowIndex - listMonAnViewDaDat.Count);
+                }
+                LoadDataGridView();
             }
+        }
+
+        private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
+                e.RowIndex >= listMonAnViewDaDat.Count)
+            {
+                listMonAnViewDangDat[e.RowIndex - listMonAnViewDaDat.Count].SoLuong--;
+                if(listMonAnViewDangDat[e.RowIndex - listMonAnViewDaDat.Count].SoLuong == 0)
+                {
+                    listMonAnViewDangDat.RemoveAt(e.RowIndex - listMonAnViewDaDat.Count);
+                }
+                LoadDataGridView();
+            }*/
         }
     }
 }

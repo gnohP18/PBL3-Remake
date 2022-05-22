@@ -77,13 +77,9 @@ namespace BLL
             }
             return count;
         }
-        public int NumberOfKindDish(int idloaimonan)
+        public List<MonAn> GetMonAn(int ID_LoaiMonAn , string txt, int TrangThai)
         {
-            return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == idloaimonan).Count();
-        }
-        public List<MonAn> GetAllDishByIDKindOfDish(int idloaimonan)
-        {
-            return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == idloaimonan).ToList();
+            return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == ID_LoaiMonAn && p.TrangThai == TrangThai && p.TenMonAn.Contains(txt)).ToList();
         }
         public List<MonAn_View> GetListMonAnByIDBan(int ID_Ban)
         {

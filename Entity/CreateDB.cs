@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\DELL\\Desktop\\Hinh1.png");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -385,6 +385,7 @@ namespace Entity
                 new Kho{ID_ChiTietNguyenLieu=19,ID_NguyenLieu = 9,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(365),LuongNhapVao = 30,LuongTonKho = 30},
                 new Kho{ID_ChiTietNguyenLieu=20,ID_NguyenLieu = 10,ID_NhaCungCap = 5,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
                 new Kho{ID_ChiTietNguyenLieu=21,ID_NguyenLieu = 10,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+
 
 
             });

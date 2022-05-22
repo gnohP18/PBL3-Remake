@@ -12,7 +12,7 @@ namespace Entity
     {
         public HoaDon()
         {
-            this.MonAns = new HashSet<MonAn>();
+            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -24,6 +24,6 @@ namespace Entity
         public int TongTien { get; set; }
 
         public virtual User User { get; set; }
-        public virtual ICollection<MonAn> MonAns { get; set; }
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
     }
 }

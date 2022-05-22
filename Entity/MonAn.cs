@@ -8,7 +8,7 @@ namespace Entity
     {
         public MonAn()
         {
-            this.HoaDons = new HashSet<HoaDon>();
+            this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
             this.ChiTietBans = new HashSet<ChiTietBan>();
             this.ChiTietMonAns = new HashSet<ChiTietMonAn>();
         }
@@ -22,7 +22,7 @@ namespace Entity
         public byte[] AnhMonAn { get; set; }
         public int TrangThai { get; set; }
         public virtual LoaiMonAn LoaiMonAn { get; set; }
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual ICollection<ChiTietBan> ChiTietBans { get; set; }
         public virtual ICollection<ChiTietMonAn> ChiTietMonAns { get; set; }
     }

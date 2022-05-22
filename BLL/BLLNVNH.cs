@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 namespace BLL
 {
-    public class BLLNVNH
+    public class BLLNVNH : BLL
     {
-        private DALQLNH dALQLNH;
         private static BLLNVNH _Instance;
         public static BLLNVNH Instance
         {
@@ -18,7 +17,7 @@ namespace BLL
         }
         private BLLNVNH()
         {
-            dALQLNH = new DALQLNH();
+            
         }
         public int NumberOfStatusAndFloor(bool st, int fl)
         {

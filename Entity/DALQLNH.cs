@@ -19,6 +19,7 @@ namespace Entity
         public virtual DbSet<CaLam> CaLams { get; set; }
         public virtual DbSet<ChiTietMonAn> ChiTietMonAns { get; set; }
         public virtual DbSet<ChiTietCaLam> ChiTietCaLams { get; set; }
+        public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual DbSet<ChiTietNhaCungCap> ChiTietNhaCungCaps { get; set; }
         public virtual DbSet<Kho> Khoes { get; set; }
         public virtual DbSet<ChucVu> ChucVus { get; set; }
@@ -57,15 +58,14 @@ namespace Entity
                 .HasRequired<User>(s => s.User)
                 .WithMany(g => g.HoaDons)
                 .HasForeignKey<int>(s => s.ID_User);
-            modelBuilder.Entity<HoaDon>()
-                .HasMany<MonAn>(s => s.MonAns)
-                .WithMany(c => c.HoaDons)
-                .Map(cs =>
-                {
-                    cs.MapLeftKey("ID_HoaDon");
-                    cs.MapRightKey("ID_MonAn");
-                    cs.ToTable("ChiTietHoaDon");
-                });
+            modelBuilder.Entity<ChiTietHoaDon>()
+                .HasRequired<MonAn>(s => s.MonAn)
+                .WithMany(g => g.ChiTietHoaDons)
+                .HasForeignKey<int>(s => s.ID_MonAn);
+            modelBuilder.Entity<ChiTietHoaDon>()
+                .HasRequired<HoaDon>(s => s.HoaDon)
+                .WithMany(g => g.ChiTietHoaDons)
+                .HasForeignKey<int>(s => s.ID_HoaDon);
             modelBuilder.Entity<ChiTietBan>()
                 .HasRequired<MonAn>(s => s.MonAn)
                 .WithMany(g => g.ChiTietBans)

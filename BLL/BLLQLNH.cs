@@ -5,9 +5,8 @@ using System.Data;
 using System.Linq;
 namespace BLL
 {
-    public class BLLQLNH
+    public class BLLQLNH : BLL
     {
-        private DALQLNH dALQLNH;
         private static BLLQLNH _Instance;
         public static BLLQLNH Instance
         {

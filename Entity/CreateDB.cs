@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\DELL\\Desktop\\Hinh1.png");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -67,25 +67,27 @@ namespace Entity
             });
             context.MonAns.AddRange(new MonAn[]
             {
-                new MonAn{ID_MonAn = 1,ID_LoaiMonAn =2,TenMonAn = "Ech xao",ThanhTien =100000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 2,ID_LoaiMonAn =2,TenMonAn = "Bo xao",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 3,ID_LoaiMonAn =2,TenMonAn = "Long xao nghe",ThanhTien =70000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 4,ID_LoaiMonAn =2,TenMonAn = "Lau nam",ThanhTien =150000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 5,ID_LoaiMonAn =2,TenMonAn = "Ga nuong",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 6,ID_LoaiMonAn =2,TenMonAn = "Bo nuong la lot",ThanhTien =130000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 7,ID_LoaiMonAn =2,TenMonAn = "Trung cut lon xao me",ThanhTien =80000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 8,ID_LoaiMonAn =2,TenMonAn = "Banh trang tron",ThanhTien =12000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 9,ID_LoaiMonAn =2,TenMonAn = "Ga xe",ThanhTien =110000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 10,ID_LoaiMonAn =2,TenMonAn = "Ga um cu chuoi",ThanhTien =135000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 11,ID_LoaiMonAn =2,TenMonAn = "Bo um mang",ThanhTien =100000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 12,ID_LoaiMonAn =2,TenMonAn = "ca loc um chuoi",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 13,ID_LoaiMonAn =2,TenMonAn = "Lau ca loc",ThanhTien =150000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 14,ID_LoaiMonAn =2,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 15,ID_LoaiMonAn =4,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 16,ID_LoaiMonAn =4,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte},
-                 new MonAn{ID_MonAn = 17,ID_LoaiMonAn =1,TenMonAn = "Rau tron",ThanhTien =100000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 18,ID_LoaiMonAn =1,TenMonAn = "Dau khuon",ThanhTien =120000,AnhMonAn = imgbyte},
-                new MonAn{ID_MonAn = 19,ID_LoaiMonAn =1,TenMonAn = "Dau phung rang",ThanhTien =70000,AnhMonAn = imgbyte},
+                new MonAn{ID_MonAn = 1,ID_LoaiMonAn =2,TenMonAn = "Ech xao",ThanhTien =100000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 2,ID_LoaiMonAn =2,TenMonAn = "Bo xao",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 3,ID_LoaiMonAn =2,TenMonAn = "Long xao nghe",ThanhTien =70000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 4,ID_LoaiMonAn =2,TenMonAn = "Lau nam",ThanhTien =150000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 5,ID_LoaiMonAn =2,TenMonAn = "Ga nuong",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 6,ID_LoaiMonAn =2,TenMonAn = "Bo nuong la lot",ThanhTien =130000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 7,ID_LoaiMonAn =2,TenMonAn = "Trung cut lon xao me",ThanhTien =80000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 8,ID_LoaiMonAn =2,TenMonAn = "Banh trang tron",ThanhTien =12000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 9,ID_LoaiMonAn =2,TenMonAn = "Ga xe",ThanhTien =110000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 10,ID_LoaiMonAn =2,TenMonAn = "Ga um cu chuoi",ThanhTien =135000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 11,ID_LoaiMonAn =2,TenMonAn = "Bo um mang",ThanhTien =100000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 12,ID_LoaiMonAn =2,TenMonAn = "ca loc um chuoi",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 13,ID_LoaiMonAn =2,TenMonAn = "Lau ca loc",ThanhTien =150000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 14,ID_LoaiMonAn =2,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 15,ID_LoaiMonAn =4,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 16,ID_LoaiMonAn =4,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 17,ID_LoaiMonAn =1,TenMonAn = "Rau tron",ThanhTien =100000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 18,ID_LoaiMonAn =1,TenMonAn = "Dau khuon",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 19,ID_LoaiMonAn =1,TenMonAn = "Dau phung rang",ThanhTien =70000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 20,ID_LoaiMonAn =4,TenMonAn = "Tiger beer",ThanhTien =17000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 21,ID_LoaiMonAn =4,TenMonAn = "Huda beer",ThanhTien =12000,AnhMonAn = imgbyte, TrangThai =0},
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {
@@ -96,46 +98,127 @@ namespace Entity
             });
             context.NguyenLieus.AddRange(new NguyenLieu[]
             {
-                new NguyenLieu{ID_NguyenLieu = 1,DonViTinh ="kg",TenNguyenLieu = "Thit bo",HSD=60,ID_LoaiNguyenLieu=1},
-                new NguyenLieu{ID_NguyenLieu = 2,DonViTinh ="kg",TenNguyenLieu = "Thit ga",HSD=60,ID_LoaiNguyenLieu=1},
-                new NguyenLieu{ID_NguyenLieu = 3,DonViTinh ="kg",TenNguyenLieu = "Thit ech",HSD=60,ID_LoaiNguyenLieu=1},
-                new NguyenLieu{ID_NguyenLieu = 4,DonViTinh ="kg",TenNguyenLieu = "Ca loc",HSD=7,ID_LoaiNguyenLieu=1},
+                new NguyenLieu{ID_NguyenLieu = 1,DonViTinh ="kg",TenNguyenLieu = "Thit bo",HSD=15,ID_LoaiNguyenLieu=1},
+                new NguyenLieu{ID_NguyenLieu = 2,DonViTinh ="kg",TenNguyenLieu = "Thit ga",HSD=15,ID_LoaiNguyenLieu=1},
+                new NguyenLieu{ID_NguyenLieu = 3,DonViTinh ="kg",TenNguyenLieu = "Thit ech",HSD=15,ID_LoaiNguyenLieu=1},
+                new NguyenLieu{ID_NguyenLieu = 4,DonViTinh ="kg",TenNguyenLieu = "Ca loc",HSD=30,ID_LoaiNguyenLieu=1},
                 new NguyenLieu{ID_NguyenLieu = 5,DonViTinh ="kg",TenNguyenLieu = "Ca chua",HSD=7,ID_LoaiNguyenLieu=2},
-                new NguyenLieu{ID_NguyenLieu = 6,DonViTinh ="kg",TenNguyenLieu = "Hanh tay",HSD=60,ID_LoaiNguyenLieu=2},
-                new NguyenLieu{ID_NguyenLieu = 7,DonViTinh ="kg",TenNguyenLieu = "Hanh la",HSD=7,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 6,DonViTinh ="kg",TenNguyenLieu = "Hanh tay",HSD=7,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 7,DonViTinh ="kg",TenNguyenLieu = "Hanh la",HSD=2,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 8,DonViTinh ="kg",TenNguyenLieu = "Nam rom",HSD=30,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 9,DonViTinh ="lon",TenNguyenLieu = "pepsi",HSD=365,ID_LoaiNguyenLieu=4},
-                new NguyenLieu{ID_NguyenLieu = 10,DonViTinh ="kg",TenNguyenLieu = "Nam tai meo",HSD=120,ID_LoaiNguyenLieu=3},
-                new NguyenLieu{ID_NguyenLieu = 11,DonViTinh ="kg",TenNguyenLieu = "Khoai tay",HSD=30,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 10,DonViTinh ="kg",TenNguyenLieu = "Nam tai meo",HSD=7,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 11,DonViTinh ="kg",TenNguyenLieu = "Khoai tay",HSD=15,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 12,DonViTinh ="kg",TenNguyenLieu = "Bo lac",HSD=365,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 13,DonViTinh ="kg",TenNguyenLieu = "Bot mi",HSD=365,ID_LoaiNguyenLieu=3},
-                new NguyenLieu{ID_NguyenLieu = 14,DonViTinh ="kg",TenNguyenLieu = "Toi",HSD=240,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 14,DonViTinh ="kg",TenNguyenLieu = "Toi",HSD=30,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 15,DonViTinh ="kg",TenNguyenLieu = "Me dot",HSD=240,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 16,DonViTinh ="lon",TenNguyenLieu = "coca",HSD=365,ID_LoaiNguyenLieu=4},
                 new NguyenLieu{ID_NguyenLieu = 17,DonViTinh ="Chai",TenNguyenLieu = "aquafina",HSD=365,ID_LoaiNguyenLieu=4},
-                new NguyenLieu{ID_NguyenLieu = 18,DonViTinh ="kg",TenNguyenLieu = "Rau thom",HSD=7,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 18,DonViTinh ="kg",TenNguyenLieu = "Rau thom",HSD=2,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 19,DonViTinh ="lon",TenNguyenLieu = "Tiger beer",HSD=365,ID_LoaiNguyenLieu=4},
                 new NguyenLieu{ID_NguyenLieu = 20,DonViTinh ="lon",TenNguyenLieu = "Huda beer",HSD=365,ID_LoaiNguyenLieu=4},
-                new NguyenLieu{ID_NguyenLieu = 21,DonViTinh ="kg",TenNguyenLieu = "Thit nai",HSD=60,ID_LoaiNguyenLieu=1},
+                new NguyenLieu{ID_NguyenLieu = 21,DonViTinh ="kg",TenNguyenLieu = "Thit nai",HSD=15,ID_LoaiNguyenLieu=1},
                 new NguyenLieu{ID_NguyenLieu = 22,DonViTinh ="kg",TenNguyenLieu = "Banh mi",HSD=2,ID_LoaiNguyenLieu=3},
-                new NguyenLieu{ID_NguyenLieu = 23,DonViTinh ="Qua",TenNguyenLieu = "Trung ga",HSD=60,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 23,DonViTinh ="Qua",TenNguyenLieu = "Trung ga",HSD=90,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 24,DonViTinh ="kg",TenNguyenLieu = "Banh trang",HSD=30,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 25,DonViTinh ="kg",TenNguyenLieu = "Long",HSD=1,ID_LoaiNguyenLieu=1},
+                new NguyenLieu{ID_NguyenLieu = 26,DonViTinh ="kg",TenNguyenLieu = "Nghe",HSD=30,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 27,DonViTinh ="kg",TenNguyenLieu = "Bun",HSD=1,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 28,DonViTinh ="kg",TenNguyenLieu = "Me",HSD=90,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 29,DonViTinh ="Qua",TenNguyenLieu = "Trung cut lon",HSD=60,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 30,DonViTinh ="Qua",TenNguyenLieu = "Chuoi",HSD=7,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 31,DonViTinh ="kg",TenNguyenLieu = "Mang",HSD=7,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 32,DonViTinh ="kg",TenNguyenLieu = "Rau muong",HSD=1,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 33,DonViTinh ="kg",TenNguyenLieu = "Dau khuon",HSD=1,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 34,DonViTinh ="kg",TenNguyenLieu = "Dau phung",HSD=120,ID_LoaiNguyenLieu=3},
 
+            });
+
+            context.ChiTietCaLams.AddRange(new ChiTietCaLam[]
+            {
+                new ChiTietCaLam{ID_CaLam = 1, ID_User = 1},
+                new ChiTietCaLam{ID_CaLam = 1, ID_User = 2},
+                new ChiTietCaLam{ID_CaLam = 2, ID_User = 3},
+                new ChiTietCaLam{ID_CaLam = 2, ID_User = 1},
+                new ChiTietCaLam{ID_CaLam = 2, ID_User = 4},
             });
             context.ChiTietMonAns.AddRange(new ChiTietMonAn[]
             {
                 new ChiTietMonAn{ID_MonAn = 1,ID_NguyenLieu=2,Luong = 1},
-                new ChiTietMonAn{ID_MonAn = 2,ID_NguyenLieu=1,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 1,ID_NguyenLieu=6,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 1,ID_NguyenLieu=7,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 1,ID_NguyenLieu=14,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 1,ID_NguyenLieu=5,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 2,ID_NguyenLieu=1,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 2,ID_NguyenLieu=5,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 2,ID_NguyenLieu=6,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 2,ID_NguyenLieu=7,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 3,ID_NguyenLieu=25,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 3,ID_NguyenLieu=26,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 3,ID_NguyenLieu=6,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 3,ID_NguyenLieu=7,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=10,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=27,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=7,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 5,ID_NguyenLieu=2,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 6,ID_NguyenLieu=1,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 7,ID_NguyenLieu=29,Luong = 15},
+                new ChiTietMonAn{ID_MonAn = 7,ID_NguyenLieu=28,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 8,ID_NguyenLieu=7,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 8,ID_NguyenLieu=10,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 9,ID_NguyenLieu=2,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 9,ID_NguyenLieu=6,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 10,ID_NguyenLieu=2,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 10,ID_NguyenLieu=30,Luong = 3},
+
+                new ChiTietMonAn{ID_MonAn = 11,ID_NguyenLieu=1,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 11,ID_NguyenLieu=6,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 11,ID_NguyenLieu=31,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 12,ID_NguyenLieu=4,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 12,ID_NguyenLieu=30,Luong = 3},
+                new ChiTietMonAn{ID_MonAn = 12,ID_NguyenLieu=6,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 13,ID_NguyenLieu=4,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 13,ID_NguyenLieu=6,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 13,ID_NguyenLieu=7,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 13,ID_NguyenLieu=8,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 13,ID_NguyenLieu=27,Luong = 1},
+
                 new ChiTietMonAn{ID_MonAn = 14,ID_NguyenLieu=10,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 14,ID_NguyenLieu=14,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 14,ID_NguyenLieu=18,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 14,ID_NguyenLieu=23,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 14,ID_NguyenLieu=4,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 14,ID_NguyenLieu=8,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 15,ID_NguyenLieu=9,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 16,ID_NguyenLieu=16,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 17,ID_NguyenLieu=6,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 17,ID_NguyenLieu=18,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 17,ID_NguyenLieu=23,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 17,ID_NguyenLieu=24,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 17,ID_NguyenLieu=32,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 18,ID_NguyenLieu=33,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 19,ID_NguyenLieu=34,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 20,ID_NguyenLieu=19,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 21,ID_NguyenLieu=20,Luong = 1},
             });
             context.Bans.AddRange(new Ban[]
             {
@@ -194,7 +277,54 @@ namespace Entity
                 new ChiTietBan{ID_ChiTietBan = 5,ID_Ban =5,ID_MonAn = 5,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 6,ID_Ban =5,ID_MonAn = 6,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 7,ID_Ban =5,ID_MonAn = 16,TinhTrang=1,SoLuong = 10},
+                new ChiTietBan{ID_ChiTietBan = 8,ID_Ban =6,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 9,ID_Ban =6,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 10,ID_Ban =6,ID_MonAn = 4,TinhTrang=1,SoLuong = 5},
+                new ChiTietBan{ID_ChiTietBan = 11,ID_Ban =7,ID_MonAn = 5,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 12,ID_Ban =7,ID_MonAn = 6,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 13,ID_Ban =7,ID_MonAn = 7,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 14,ID_Ban =9,ID_MonAn = 8,TinhTrang=1,SoLuong = 6},
+                new ChiTietBan{ID_ChiTietBan = 15,ID_Ban =9,ID_MonAn = 9,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 16,ID_Ban =9,ID_MonAn = 10,TinhTrang=1,SoLuong = 5},
+                new ChiTietBan{ID_ChiTietBan = 17,ID_Ban =11,ID_MonAn = 11,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 18,ID_Ban =11,ID_MonAn = 12,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 19,ID_Ban =11,ID_MonAn = 13,TinhTrang=1,SoLuong = 5},
+                new ChiTietBan{ID_ChiTietBan = 20,ID_Ban =12,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 21,ID_Ban =12,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 22,ID_Ban =12,ID_MonAn = 4,TinhTrang=1,SoLuong = 5},
+                new ChiTietBan{ID_ChiTietBan = 23,ID_Ban =22,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 24,ID_Ban =22,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 25,ID_Ban =22,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 26,ID_Ban =23,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 27,ID_Ban =23,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 28,ID_Ban =23,ID_MonAn = 4,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 29,ID_Ban =24,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 30,ID_Ban =24,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 31,ID_Ban =24,ID_MonAn = 4,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 32,ID_Ban =25,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 33,ID_Ban =25,ID_MonAn = 3,TinhTrang=1,SoLuong = 5},
+                new ChiTietBan{ID_ChiTietBan = 34,ID_Ban =25,ID_MonAn = 4,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 35,ID_Ban =26,ID_MonAn = 2,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 36,ID_Ban =26,ID_MonAn = 3,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 37,ID_Ban =26,ID_MonAn = 4,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 38,ID_Ban =28,ID_MonAn = 2,TinhTrang=1,SoLuong = 6},
+                new ChiTietBan{ID_ChiTietBan = 39,ID_Ban =28,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 40,ID_Ban =28,ID_MonAn = 4,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 41,ID_Ban =30,ID_MonAn = 2,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 42,ID_Ban =30,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 43,ID_Ban =30,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 44,ID_Ban =33,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 45,ID_Ban =33,ID_MonAn = 3,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 46,ID_Ban =33,ID_MonAn = 4,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 47,ID_Ban =35,ID_MonAn = 2,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 48,ID_Ban =35,ID_MonAn = 3,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 49,ID_Ban =35,ID_MonAn = 4,TinhTrang=1,SoLuong = 4},
+                new ChiTietBan{ID_ChiTietBan = 50,ID_Ban =37,ID_MonAn = 2,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 51,ID_Ban =37,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 52,ID_Ban =37,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
+
             });
+
             context.NhaCungCaps.AddRange(new NhaCungCap[]
             {
                 new NhaCungCap{ID_NhaCungCap = 1,TenNhaCungCap = "Cho Dong Xuan",DiaChi = "Da Nang",MaSoThue = "2231",SoDienThoai="0921212233"},
@@ -222,20 +352,62 @@ namespace Entity
                 new ChiTietNhaCungCap{ID_NguyenLieu = 5,ID_NhaCungCap = 4,DonGia = 22000},
                 new ChiTietNhaCungCap{ID_NguyenLieu = 6,ID_NhaCungCap = 5,DonGia = 33000},
                 new ChiTietNhaCungCap{ID_NguyenLieu = 7,ID_NhaCungCap = 6,DonGia = 44000},
-                new ChiTietNhaCungCap{ID_NguyenLieu = 8,ID_NhaCungCap = 7,DonGia = 55000},
-                new ChiTietNhaCungCap{ID_NguyenLieu = 9,ID_NhaCungCap = 8,DonGia = 66000},
-                new ChiTietNhaCungCap{ID_NguyenLieu = 10,ID_NhaCungCap = 9,DonGia = 77000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 8,ID_NhaCungCap = 6,DonGia = 55000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 9,ID_NhaCungCap = 7,DonGia = 66000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 10,ID_NhaCungCap = 7,DonGia = 77000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 10,ID_NhaCungCap = 5,DonGia = 33000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 9,ID_NhaCungCap = 6,DonGia = 44000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 8,ID_NhaCungCap = 5,DonGia = 55000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 7,ID_NhaCungCap = 7,DonGia = 66000},
+                new ChiTietNhaCungCap{ID_NguyenLieu = 6,ID_NhaCungCap = 7,DonGia = 77000},
+
             });
             context.Khoes.AddRange(new Kho[]
             {
-                new Kho{ID_ChiTietNguyenLieu=1,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,19),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
-                new Kho{ID_ChiTietNguyenLieu=2,ID_NguyenLieu = 2,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 30,LuongTonKho = 30},
-                new Kho{ID_ChiTietNguyenLieu=3,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,17),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
-                new Kho{ID_ChiTietNguyenLieu=4,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
-                new Kho{ID_ChiTietNguyenLieu=5,ID_NguyenLieu = 3,ID_NhaCungCap = 2,NgayNhap = new DateTime(2022,05,19),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
-                new Kho{ID_ChiTietNguyenLieu=6,ID_NguyenLieu = 10,ID_NhaCungCap = 9,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 30,LuongTonKho = 30},
-                new Kho{ID_ChiTietNguyenLieu=7,ID_NguyenLieu = 9,ID_NhaCungCap = 8,NgayNhap = new DateTime(2022,05,17),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
-                new Kho{ID_ChiTietNguyenLieu=8,ID_NguyenLieu = 10,ID_NhaCungCap = 9,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,07,13),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=1,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,19),NgayHetHan = new DateTime(2022,05,19).AddDays(15),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=2,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,17),NgayHetHan = new DateTime(2022,05,17).AddDays(15),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=3,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(15),LuongNhapVao = 20,LuongTonKho = 20},
+                new Kho{ID_ChiTietNguyenLieu=4,ID_NguyenLieu = 2,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(15),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=5,ID_NguyenLieu = 2,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(15),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=6,ID_NguyenLieu = 3,ID_NhaCungCap = 2,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(15),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=7,ID_NguyenLieu = 3,ID_NhaCungCap = 2,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(15),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=8,ID_NguyenLieu = 4,ID_NhaCungCap = 3,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(30),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=9,ID_NguyenLieu = 4,ID_NhaCungCap = 3,NgayNhap = new DateTime(2022,05,25),NgayHetHan = new DateTime(2022,05,25).AddDays(30),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=10,ID_NguyenLieu = 5,ID_NhaCungCap = 4,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=11,ID_NguyenLieu = 5,ID_NhaCungCap = 4,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=12,ID_NguyenLieu = 6,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=13,ID_NguyenLieu = 6,ID_NhaCungCap = 5,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=14,ID_NguyenLieu = 7,ID_NhaCungCap = 6,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(2),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=15,ID_NguyenLieu = 7,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(2),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=16,ID_NguyenLieu = 8,ID_NhaCungCap = 5,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(30),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=17,ID_NguyenLieu = 8,ID_NhaCungCap = 6,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(30),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=18,ID_NguyenLieu = 9,ID_NhaCungCap = 6,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(365),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=19,ID_NguyenLieu = 9,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(365),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=20,ID_NguyenLieu = 10,ID_NhaCungCap = 5,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=21,ID_NguyenLieu = 10,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
+
+
+            });
+
+            context.HoaDons.AddRange(new HoaDon[]
+            {
+                new HoaDon{ID_HoaDon = 1, ID_User = 1, NgayLap = new DateTime(2022,05,12), TongTien = 290000},
+                new HoaDon{ID_HoaDon = 2, ID_User = 1, NgayLap = new DateTime(2022,05,12), TongTien = 400000},
+                new HoaDon{ID_HoaDon = 3, ID_User = 2, NgayLap = new DateTime(2022,05,12), TongTien = 202000},
+            });
+
+            context.ChiTietHoaDons.AddRange(new ChiTietHoaDon[]
+            {
+                new ChiTietHoaDon{ID_HoaDon = 1, ID_MonAn = 1},
+                new ChiTietHoaDon{ID_HoaDon = 1, ID_MonAn = 2},
+                new ChiTietHoaDon{ID_HoaDon = 1, ID_MonAn = 3},
+                new ChiTietHoaDon{ID_HoaDon = 2, ID_MonAn = 4},
+                new ChiTietHoaDon{ID_HoaDon = 2, ID_MonAn = 5},
+                new ChiTietHoaDon{ID_HoaDon = 2, ID_MonAn = 6},
+                new ChiTietHoaDon{ID_HoaDon = 3, ID_MonAn = 7},
+                new ChiTietHoaDon{ID_HoaDon = 3, ID_MonAn = 8},
+                new ChiTietHoaDon{ID_HoaDon = 3, ID_MonAn = 9},
+
             });
         }
     }

@@ -35,7 +35,9 @@ namespace GUI.frmGUILogin
             {
                 if (BLLQLNH.Instance.checkLoginManager(txtUsername.Text, txtPassword.Text) == false)
                 {
-                    MessageBox.Show("Login information is not correct!!");
+                    //System.Windows.Forms.MessageBox.Show("Login information is not correct!!");
+                    NoticeBox nt = new NoticeBox("Login information is not correct!!");
+                    nt.Show();
                     return;
                 }
                 //this.Visible = false;
@@ -45,7 +47,7 @@ namespace GUI.frmGUILogin
             }
             else
             {
-                MessageBox.Show("Vui long ...");
+                System.Windows.Forms.MessageBox.Show("Vui long ...");
             }
         }
     }

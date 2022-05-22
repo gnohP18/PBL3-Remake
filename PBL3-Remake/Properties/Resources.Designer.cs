@@ -293,6 +293,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Order_64 {
+            get {
+                object obj = ResourceManager.GetObject("Order-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ordered_48 {
             get {
                 object obj = ResourceManager.GetObject("Ordered-48", resourceCulture);
@@ -353,6 +363,26 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Programmer {
+            get {
+                object obj = ResourceManager.GetObject("Programmer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap propaganda {
+            get {
+                object obj = ResourceManager.GetObject("propaganda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Removeperson_48 {
             get {
                 object obj = ResourceManager.GetObject("Removeperson-48", resourceCulture);
@@ -406,6 +436,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap vegetables_48 {
             get {
                 object obj = ResourceManager.GetObject("vegetables-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallet_64 {
+            get {
+                object obj = ResourceManager.GetObject("wallet-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

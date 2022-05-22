@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("E:\\PBL3-Remake\\PBL3-Remake\\Resources\\icon-32.png");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -190,6 +190,10 @@ namespace Entity
                 new ChiTietBan{ID_ChiTietBan = 1,ID_Ban =2,ID_MonAn = 1,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 2,ID_Ban =2,ID_MonAn = 1,TinhTrang=1,SoLuong = 5},
                 new ChiTietBan{ID_ChiTietBan = 3,ID_Ban =2,ID_MonAn = 16,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 4,ID_Ban =5,ID_MonAn = 4,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 5,ID_Ban =5,ID_MonAn = 5,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 6,ID_Ban =5,ID_MonAn = 6,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 7,ID_Ban =5,ID_MonAn = 16,TinhTrang=1,SoLuong = 10},
             });
             context.NhaCungCaps.AddRange(new NhaCungCap[]
             {

@@ -13,11 +13,12 @@ namespace Entity
         public DALQLNH()
             : base("name=DALQLNH")
         {
-            //Database.SetInitializer<DALQLNH>(new CreateDB());
+            Database.SetInitializer<DALQLNH>(new CreateDB());
         }
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaLam> CaLams { get; set; }
         public virtual DbSet<ChiTietMonAn> ChiTietMonAns { get; set; }
+        public virtual DbSet<ChiTietCaLam> ChiTietCaLams { get; set; }
         public virtual DbSet<ChiTietNhaCungCap> ChiTietNhaCungCaps { get; set; }
         public virtual DbSet<Kho> Khoes { get; set; }
         public virtual DbSet<ChucVu> ChucVus { get; set; }
@@ -40,15 +41,14 @@ namespace Entity
                 .HasRequired<LoaiMonAn>(s => s.LoaiMonAn)
                 .WithMany(g => g.MonAns)
                 .HasForeignKey<int>(s => s.ID_LoaiMonAn);
-            modelBuilder.Entity<CaLam>()
-                .HasMany<User>(s => s.Users)
-                .WithMany(c => c.CaLams)
-                .Map(cs =>
-                {
-                    cs.MapLeftKey("ID_CaLam");
-                    cs.MapRightKey("ID_User");
-                    cs.ToTable("ChiTietCaLam");
-                });
+            modelBuilder.Entity<ChiTietCaLam>()
+                .HasRequired<User>(s => s.User)
+                .WithMany(g => g.ChiTietCaLams)
+                .HasForeignKey<int>(s => s.ID_User);
+            modelBuilder.Entity<ChiTietCaLam>()
+                .HasRequired<CaLam>(s => s.CaLam)
+                .WithMany(g => g.ChiTietCaLams)
+                .HasForeignKey<int>(s => s.ID_CaLam);
             modelBuilder.Entity<User>()
                 .HasRequired<ChucVu>(s => s.ChucVu)
                 .WithMany(g => g.Users)

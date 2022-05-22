@@ -12,12 +12,12 @@
         {
             public CaLam()
             {
-                this.Users = new HashSet<User>();
+                this.ChiTietCaLams = new HashSet<ChiTietCaLam>();
             }
             [Key][DatabaseGenerated(DatabaseGeneratedOption.None)]
             [Required]
             public int ID_CaLam { get; set; }
             public string LichCaLam { get; set; }
-            public virtual ICollection<User> Users { get; set; }
+            public virtual ICollection<ChiTietCaLam> ChiTietCaLams { get; set; }
         }
     }

@@ -20,6 +20,7 @@ namespace Entity
         public string TenMonAn { get; set; }
         public int ThanhTien { get; set; }
         public byte[] AnhMonAn { get; set; }
+        public int TrangThai { get; set; }
         public virtual LoaiMonAn LoaiMonAn { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual ICollection<ChiTietBan> ChiTietBans { get; set; }

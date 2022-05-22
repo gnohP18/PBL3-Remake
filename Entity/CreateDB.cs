@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("E:\\PBL3-Remake\\PBL3-Remake\\Resources\\icon-32.png");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();

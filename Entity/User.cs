@@ -14,7 +14,7 @@ namespace Entity
         {
             this.HoaDons = new HashSet<HoaDon>();
             this.BangChamCongs = new HashSet<BangChamCong>();
-            this.CaLams = new HashSet<CaLam>();
+            this.ChiTietCaLams = new HashSet<ChiTietCaLam>();
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -34,6 +34,6 @@ namespace Entity
         public virtual ChucVu ChucVu { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         public virtual ICollection<BangChamCong> BangChamCongs { get; set; }
-        public virtual ICollection<CaLam> CaLams { get; set; }
+        public virtual ICollection<ChiTietCaLam> ChiTietCaLams { get; set; }
     }
 }

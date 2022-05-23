@@ -17,7 +17,7 @@ namespace BLL
         }
         private BLLNVNH()
         {
-            
+
         }
         public int NumberOfStatusAndFloor(bool st, int fl)
         {
@@ -77,7 +77,7 @@ namespace BLL
             }
             return count;
         }
-        public List<MonAn> GetMonAn(int ID_LoaiMonAn , string txt, int TrangThai)
+        public List<MonAn> GetMonAn(int ID_LoaiMonAn, string txt, int TrangThai)
         {
             return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == ID_LoaiMonAn && p.TrangThai == TrangThai && p.TenMonAn.Contains(txt)).ToList();
         }
@@ -106,6 +106,40 @@ namespace BLL
                 }
             }
             return data;
+        }
+        public void AddDetailTable(List<MonAn_View> lt, int Idtable)
+        {
+            foreach (MonAn_View item in lt)
+            {
+                dALQLNH.ChiTietBans.Add(new ChiTietBan
+                {
+                    ID_ChiTietBan = GetNewIDChiTietBan(),
+                    ID_Ban = Idtable,
+                    ID_MonAn = item.ID_MonAn,
+                    SoLuong = item.SoLuong,
+                    TinhTrang = 0
+                });
+            }
+            dALQLNH.SaveChanges();
+        }
+        public int GetNewIDChiTietBan()
+        {
+            int ID = 1;
+            foreach (ChiTietBan i in dALQLNH.ChiTietBans)
+            {
+                if (ID != i.ID_ChiTietBan)
+                {
+                    return ID;
+                }
+                ID++;
+            }
+            return ID;
+        }
+        public void ChangeStatusTable(int idtatable, int idbanghep)
+        {
+            var table = dALQLNH.Bans.Where(p => p.ID_Ban == idtatable).FirstOrDefault();
+            table.TinhTrangBan = idbanghep;
+            dALQLNH.SaveChanges();
         }
     }
 }

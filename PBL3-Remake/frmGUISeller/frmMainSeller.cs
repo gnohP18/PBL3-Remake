@@ -22,12 +22,14 @@ namespace GUI.frmGUISeller
             LoadAllBanWithTang(1);
 
         }
+
         void SetCbb()
         {
             cbbStatus.Items.Add("All");
             cbbStatus.Items.Add("Emty");
             cbbStatus.Items.Add("Busy");
         }
+
         private int Floor = 0;
         private bool statustb;
         void SetTable(Panel pn, TableForOrdering tb, int id, int fl, bool st)
@@ -40,6 +42,7 @@ namespace GUI.frmGUISeller
             tb.statusTable = st;
             tb.GUITable();
         }
+
         void LoadAllBanWithTang(int fl)
         {
             int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(true, fl) + BLLNVNH.Instance.NumberOfStatusAndFloor(false, fl);
@@ -85,6 +88,7 @@ namespace GUI.frmGUISeller
                 }
             }
         }
+
         void LoadBanWithTinhTrangBanVaTang(bool st, int fl)
         {
             int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(st, fl);
@@ -129,6 +133,7 @@ namespace GUI.frmGUISeller
                 }
             }
         }
+
         void RemoveTable()
         {
             pnTable.Controls.Clear();
@@ -146,8 +151,6 @@ namespace GUI.frmGUISeller
             RemoveTable();
             LoadBanWithTinhTrangBanVaTang(statustb, Floor);
         }
-
-
 
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {

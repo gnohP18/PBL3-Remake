@@ -13,7 +13,6 @@ namespace GUI.frmGUISeller
     {
         public int IDTable { get; set; }
         private int IDLoaiMonAn = 1;
-        private int CurrentNumberOfDish = 0;
         List<MonAn_View> listMonAnViewDaDat;
         List<MonAn_View> listMonAnViewDangDat;
         public frmOrder(int id)
@@ -35,7 +34,7 @@ namespace GUI.frmGUISeller
             lblNameTable.Text = BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable).TenBan;
             pnDish.AutoScroll = true;
             ShowDish("");
- 
+
         }
         private void SetDish(Panel pn, DishForOrdering dsh)
         {
@@ -93,7 +92,7 @@ namespace GUI.frmGUISeller
         private void ShowDish(string txt)
         {
             RemoveDish();
-            List<MonAn> listMonAn = BLLNVNH.Instance.GetMonAn(IDLoaiMonAn,"",1);
+            List<MonAn> listMonAn = BLLNVNH.Instance.GetMonAn(IDLoaiMonAn, "", 1);
             int somon = listMonAn.Count;
             DishForOrdering[] dsh = new DishForOrdering[somon];
             int dem1 = 0;
@@ -172,6 +171,11 @@ namespace GUI.frmGUISeller
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            BLLNVNH.Instance.AddDetailTable(listMonAnViewDangDat, IDTable);
+            if (listMonAnViewDangDat.Count > 0)
+                BLLNVNH.Instance.ChangeStatusTable(IDTable, IDTable);
+            else
+                BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
             this.Close();
         }
 
@@ -205,6 +209,24 @@ namespace GUI.frmGUISeller
                 }
                 LoadDataGridView();
             }*/
+        }
+
+        private void btnCollabTable_Click(object sender, EventArgs e)
+        {
+            frmCollaborTable frm = new frmCollaborTable();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+            if (listMonAnViewDaDat.Count > 0)
+            {
+                if (frm.DialogResult == DialogResult.OK)
+                {
+                    BLLNVNH.Instance.ChangeStatusTable(IDTable, frm.IDCollabTable);
+                    lblIDTable.Text = lblIDTable.Text + "-" + frm.IDCollabTable.ToString();
+                    Console.WriteLine(lblIDTable.Text);
+                }
+            }
+            else
+                BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
         }
     }
 }

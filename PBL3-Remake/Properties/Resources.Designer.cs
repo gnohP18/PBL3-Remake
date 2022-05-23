@@ -173,6 +173,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coupon_32 {
+            get {
+                object obj = ResourceManager.GetObject("coupon-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DarkCalendar {
             get {
                 object obj = ResourceManager.GetObject("DarkCalendar", resourceCulture);
@@ -223,6 +233,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImageCollaborTable {
+            get {
+                object obj = ResourceManager.GetObject("ImageCollaborTable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key_32 {
             get {
                 object obj = ResourceManager.GetObject("key-32", resourceCulture);
@@ -236,6 +256,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap LightCalendar {
             get {
                 object obj = ResourceManager.GetObject("LightCalendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap link_64 {
+            get {
+                object obj = ResourceManager.GetObject("link-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +413,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap receipt_64 {
+            get {
+                object obj = ResourceManager.GetObject("receipt-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Removeperson_48 {
             get {
                 object obj = ResourceManager.GetObject("Removeperson-48", resourceCulture);
@@ -416,6 +456,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap shutdown_48 {
             get {
                 object obj = ResourceManager.GetObject("shutdown-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tax_48 {
+            get {
+                object obj = ResourceManager.GetObject("Tax-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -46,7 +46,7 @@ namespace GUI.frmGUISeller
         private void btnPay_Click(object sender, System.EventArgs e)
         {
             frmPay frm = new frmPay(IDTable);
-            //frmPay.StartPosition = FormStartPosition.CenterScreen;
+            frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
     }

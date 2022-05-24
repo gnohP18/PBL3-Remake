@@ -141,5 +141,37 @@ namespace BLL
             table.TinhTrangBan = idbanghep;
             dALQLNH.SaveChanges();
         }
+        //public void FindCollabTable(Ban tb1, Ban tb2,int ttban)
+        //{
+        //    Console.WriteLine("tb1=" + tb1.TinhTrangBan + " tb2=" + tb2.TinhTrangBan+" ttban="+ttban);
+        //    if (tb1.TinhTrangBan == tb2.ID_Ban)
+        //    {
+        //        if (tb2.ID_Ban == tb2.TinhTrangBan)
+        //        {
+        //            tb2.TinhTrangBan = ttban;
+        //            GetBanByID_Ban(ttban).TinhTrangBan = ttban;
+        //        }
+        //        else FindCollabTable(tb2, GetBanByID_Ban(tb2.TinhTrangBan), ttban);
+        //    }
+
+        //}
+        public void FindCollabTable(Ban tb, int ttban)
+        {
+            //Console.WriteLine(tb.ID_Ban + " " + " tb=" + tb.TinhTrangBan);
+            if (tb.ID_Ban == tb.TinhTrangBan || tb.TinhTrangBan == 0)
+            {
+                tb.TinhTrangBan = ttban;
+                //Console.WriteLine(tb.ID_Ban + " " + " tb=" + tb.TinhTrangBan);
+                GetBanByID_Ban(ttban).TinhTrangBan = ttban;
+                //Console.WriteLine(GetBanByID_Ban(ttban).ID_Ban + " " + " tb=" + GetBanByID_Ban(ttban).TinhTrangBan);
+                dALQLNH.SaveChanges();
+            }
+            else if (tb.ID_Ban != tb.TinhTrangBan)
+            {
+                FindCollabTable(GetBanByID_Ban(tb.TinhTrangBan), ttban);
+            }
+        }
+
     }
 }
+

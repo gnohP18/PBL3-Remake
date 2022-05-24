@@ -20,6 +20,10 @@ namespace GUI.frmGUISeller
             this.StartPosition = FormStartPosition.CenterScreen;
             pnTable.AutoScroll = true;
             LoadAllBanWithTang(1);
+            foreach (Ban i in BLL.BLLNVNH.Instance.GetAllBanByTang(2))
+            {
+                Console.WriteLine(i.ID_Ban + " " + i.TinhTrangBan);
+            }
 
         }
 

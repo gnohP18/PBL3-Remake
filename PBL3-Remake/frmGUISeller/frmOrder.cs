@@ -195,38 +195,22 @@ namespace GUI.frmGUISeller
             }
         }
 
-        private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
-                e.RowIndex >= listMonAnViewDaDat.Count)
-            {
-                listMonAnViewDangDat[e.RowIndex - listMonAnViewDaDat.Count].SoLuong--;
-                if(listMonAnViewDangDat[e.RowIndex - listMonAnViewDaDat.Count].SoLuong == 0)
-                {
-                    listMonAnViewDangDat.RemoveAt(e.RowIndex - listMonAnViewDaDat.Count);
-                }
-                LoadDataGridView();
-            }*/
-        }
-
         private void btnCollabTable_Click(object sender, EventArgs e)
         {
-            frmCollaborTable frm = new frmCollaborTable();
+            frmCollaborTable frm = new frmCollaborTable(BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable));
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
-            if (listMonAnViewDaDat.Count > 0)
-            {
-                if (frm.DialogResult == DialogResult.OK)
-                {
-                    BLLNVNH.Instance.ChangeStatusTable(IDTable, frm.IDCollabTable);
-                    lblIDTable.Text = lblIDTable.Text + "-" + frm.IDCollabTable.ToString();
-                    Console.WriteLine(lblIDTable.Text);
-                }
-            }
-            else
-                BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
+            //if (listMonAnViewDaDat.Count > 0)
+            //{
+            //    if (frm.DialogResult == DialogResult.OK)
+            //    {
+            //        BLLNVNH.Instance.ChangeStatusTable(IDTable, frm.IDCollabTable);
+            //        lblIDTable.Text = lblIDTable.Text + "-" + frm.IDCollabTable.ToString();
+            //        Console.WriteLine(lblIDTable.Text);
+            //    }
+            //}
+            //else
+            //    BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
         }
     }
 }

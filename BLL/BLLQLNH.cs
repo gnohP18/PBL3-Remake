@@ -41,7 +41,16 @@ namespace BLL
             }
             return data;
         }
-
+        public List<ChiTietNguyenLieu_View> GetAllNguyenLieuTrongKho()
+        {
+            List<Kho> listChiTietNguyenLieu = dALQLNH.Khoes.ToList();
+            List<ChiTietNguyenLieu_View> data = new List<ChiTietNguyenLieu_View>();
+            foreach (Kho i in listChiTietNguyenLieu)
+            {
+                data.Add(new ChiTietNguyenLieu_View { ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu, ID_NguyenLieu = i.ID_NguyenLieu, TenNguyenLieu = i.NguyenLieu.TenNguyenLieu, LuongTonKho = i.LuongTonKho, LuongNhapVao = i.LuongNhapVao, NgayNhap = i.NgayNhap, NgayHetHan = i.NgayHetHan, ID_NhaCungCap = i.ID_NhaCungCap });
+            }
+            return data;
+        }
         public Kho GetChiTietNguyenLieuByIDChiTietNguyenLieu(int iD_ChiTietNguyenLieu)
         {
             return dALQLNH.Khoes.Find(iD_ChiTietNguyenLieu);
@@ -69,6 +78,19 @@ namespace BLL
             return data;
         }
 
+        public List<NguyenLieu> GetListNguyenLieuByIdLoaiNguyenLieu(int ID_LoaiNguyenLieu)
+        {
+            List<NguyenLieu> data = new List<NguyenLieu>();
+            foreach(NguyenLieu i in dALQLNH.NguyenLieus)
+            {
+                if(i.ID_LoaiNguyenLieu == ID_LoaiNguyenLieu)
+                {
+                    data.Add(i); 
+                }
+            }
+            return data;
+        }
+
         public void DelChiTietNguyenLieu(List<int> listIDChiTietNguyenLieuDel)
         {
             foreach(int i in listIDChiTietNguyenLieuDel)
@@ -82,6 +104,29 @@ namespace BLL
             }
         }
 
+        public List<ChiTietNguyenLieu_View> getListNguyenLieuHetHan()
+        {
+            List<ChiTietNguyenLieu_View> list = new List<ChiTietNguyenLieu_View>();
+            foreach(ChiTietNguyenLieu_View i in GetAllNguyenLieuTrongKho())
+            {
+                if(i.NgayHetHan < System.DateTime.Now)
+                {
+                    list.Add(i);
+                }
+            }
+
+            return list;
+        }
+
+        public List<NhaCungCap> GetAllNhaCungCap()
+        {
+            List<NhaCungCap> list = new List<NhaCungCap>();
+            foreach(NhaCungCap i in dALQLNH.NhaCungCaps)
+            {
+                list.Add(i);
+            }
+            return list;
+        }
         public List<ChiTietNhaCungCap> GetTT(int id)
         {
             List<ChiTietNhaCungCap> list = new List<ChiTietNhaCungCap>();
@@ -100,6 +145,43 @@ namespace BLL
             User user = (User)(dALQLNH.Users.Where(p => (p.ID_ChucVu == 1 && p.Username == username && p.Password == password)).FirstOrDefault());
             if (user == null) return false;
             else return true;
+        }
+        public List<LoaiNguyenLieu> GetAllLoaiNguyenLieu()
+        {
+            List<LoaiNguyenLieu> list = new List<LoaiNguyenLieu>();
+            DALQLNH dALQLNH = new DALQLNH();
+            foreach(LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
+            {
+                list.Add(i);
+            }
+            return list;
+        }
+
+        public int GetNewIDNguyenLieu()
+        {
+            int ID = 1;
+            foreach (NguyenLieu i in dALQLNH.NguyenLieus)
+            {
+                if (ID != i.ID_NguyenLieu)
+                {
+                    return ID;
+                }
+                ID++;
+            }
+            return ID;
+        }
+        public int GetNewIDChiTietNguyenLieu()
+        {
+            int ID = 1;
+            foreach (Kho i in dALQLNH.Khoes)
+            {
+                if (ID != i.ID_ChiTietNguyenLieu)
+                {
+                    return ID;
+                }
+                ID++;
+            }
+            return ID;
         }
     }
 }

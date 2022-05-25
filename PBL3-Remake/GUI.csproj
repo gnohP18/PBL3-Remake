@@ -115,11 +115,23 @@
     <Compile Include="frmGUISeller\TableForOrdering.Designer.cs">
       <DependentUpon>TableForOrdering.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\AddMaterialToWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\AddMaterialToWareHouse.Designer.cs">
+      <DependentUpon>AddMaterialToWareHouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\AddNewManufacturer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGUIUserControl\AddNewManufacturer.Designer.cs">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\AddNewMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\AddNewMaterial.Designer.cs">
+      <DependentUpon>AddNewMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\BackupUC.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +150,12 @@
     </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.Designer.cs">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\ExpiredMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\ExpiredMaterial.Designer.cs">
+      <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\HelpUC.cs">
       <SubType>UserControl</SubType>
@@ -210,8 +228,14 @@
     <EmbeddedResource Include="frmGUISeller\TableForOrdering.resx">
       <DependentUpon>TableForOrdering.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\AddMaterialToWareHouse.resx">
+      <DependentUpon>AddMaterialToWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\AddNewMaterial.resx">
+      <DependentUpon>AddNewMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\BackupUC.resx">
       <DependentUpon>BackupUC.cs</DependentUpon>
@@ -221,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\ExpiredMaterial.resx">
+      <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\HelpUC.resx">
       <DependentUpon>HelpUC.cs</DependentUpon>

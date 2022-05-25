@@ -35,30 +35,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WareHouseUC));
             this.txtAmountFood = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dtpExpireDay = new System.Windows.Forms.DateTimePicker();
-            this.dtpInputDay = new System.Windows.Forms.DateTimePicker();
-            this.cbbKindOfFood = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtQuality = new System.Windows.Forms.TextBox();
-            this.btnAddNewManuFacturer = new System.Windows.Forms.Button();
-            this.txtIDManufacturer = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvNguyenLieuKho = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtNumber = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtNameFood = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMoreInfor = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtInputFoodName = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnAddNewMaterial = new System.Windows.Forms.Button();
+            this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
+            this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.btnVegetable = new System.Windows.Forms.Button();
             this.btnDriedFood = new System.Windows.Forms.Button();
             this.btnFreshFood = new System.Windows.Forms.Button();
@@ -87,73 +74,6 @@
             this.label14.Size = new System.Drawing.Size(59, 23);
             this.label14.TabIndex = 17;
             this.label14.Text = "Name";
-            // 
-            // dtpExpireDay
-            // 
-            this.dtpExpireDay.Location = new System.Drawing.Point(10, 208);
-            this.dtpExpireDay.Name = "dtpExpireDay";
-            this.dtpExpireDay.Size = new System.Drawing.Size(200, 22);
-            this.dtpExpireDay.TabIndex = 18;
-            // 
-            // dtpInputDay
-            // 
-            this.dtpInputDay.Location = new System.Drawing.Point(10, 157);
-            this.dtpInputDay.Name = "dtpInputDay";
-            this.dtpInputDay.Size = new System.Drawing.Size(200, 22);
-            this.dtpInputDay.TabIndex = 18;
-            // 
-            // cbbKindOfFood
-            // 
-            this.cbbKindOfFood.FormattingEnabled = true;
-            this.cbbKindOfFood.Location = new System.Drawing.Point(10, 270);
-            this.cbbKindOfFood.Name = "cbbKindOfFood";
-            this.cbbKindOfFood.Size = new System.Drawing.Size(223, 24);
-            this.cbbKindOfFood.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label16.Location = new System.Drawing.Point(166, 306);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(139, 23);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Calculation Unit";
-            // 
-            // txtQuality
-            // 
-            this.txtQuality.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtQuality.Location = new System.Drawing.Point(162, 337);
-            this.txtQuality.Name = "txtQuality";
-            this.txtQuality.Size = new System.Drawing.Size(160, 22);
-            this.txtQuality.TabIndex = 16;
-            // 
-            // btnAddNewManuFacturer
-            // 
-            this.btnAddNewManuFacturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnAddNewManuFacturer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddNewManuFacturer.FlatAppearance.BorderSize = 2;
-            this.btnAddNewManuFacturer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddNewManuFacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewManuFacturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddNewManuFacturer.Location = new System.Drawing.Point(221, 390);
-            this.btnAddNewManuFacturer.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddNewManuFacturer.Name = "btnAddNewManuFacturer";
-            this.btnAddNewManuFacturer.Size = new System.Drawing.Size(100, 22);
-            this.btnAddNewManuFacturer.TabIndex = 15;
-            this.btnAddNewManuFacturer.Text = "New";
-            this.btnAddNewManuFacturer.UseVisualStyleBackColor = false;
-            // 
-            // txtIDManufacturer
-            // 
-            this.txtIDManufacturer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtIDManufacturer.Location = new System.Drawing.Point(7, 390);
-            this.txtIDManufacturer.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIDManufacturer.Name = "txtIDManufacturer";
-            this.txtIDManufacturer.Size = new System.Drawing.Size(207, 22);
-            this.txtIDManufacturer.TabIndex = 14;
             // 
             // label13
             // 
@@ -225,50 +145,6 @@
             this.dgvNguyenLieuKho.TabIndex = 0;
             this.dgvNguyenLieuKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguyenLieuKho_CellClick);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(6, 363);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(141, 23);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "ID Manufacturer";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label10.Location = new System.Drawing.Point(36, 4);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(255, 27);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Kê khai nguyên liệu mới";
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.Location = new System.Drawing.Point(6, 337);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(152, 22);
-            this.txtNumber.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(10, 244);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 23);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Kind of food";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -279,30 +155,6 @@
             this.label15.Size = new System.Drawing.Size(75, 23);
             this.label15.TabIndex = 18;
             this.label15.Text = "Amount";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(9, 306);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 23);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Number";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(10, 182);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Day of expire";
             // 
             // txtNameFood
             // 
@@ -345,63 +197,69 @@
             this.btnMoreInfor.UseVisualStyleBackColor = false;
             this.btnMoreInfor.Click += new System.EventHandler(this.btnMoreInfor_Click_1);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(10, 131);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 23);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Input day";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(9, 57);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Input food name";
-            // 
-            // txtInputFoodName
-            // 
-            this.txtInputFoodName.Location = new System.Drawing.Point(10, 84);
-            this.txtInputFoodName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInputFoodName.Name = "txtInputFoodName";
-            this.txtInputFoodName.Size = new System.Drawing.Size(209, 22);
-            this.txtInputFoodName.TabIndex = 1;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.dtpExpireDay);
-            this.panel7.Controls.Add(this.dtpInputDay);
-            this.panel7.Controls.Add(this.cbbKindOfFood);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.txtQuality);
-            this.panel7.Controls.Add(this.btnAddNewManuFacturer);
-            this.panel7.Controls.Add(this.txtIDManufacturer);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.txtNumber);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.txtInputFoodName);
+            this.panel7.Controls.Add(this.btnAddNewMaterial);
+            this.panel7.Controls.Add(this.btnViewExpiredMaterial);
+            this.panel7.Controls.Add(this.btnAddMaterialToWareHouse);
             this.panel7.Location = new System.Drawing.Point(869, 194);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(327, 460);
             this.panel7.TabIndex = 24;
+            // 
+            // btnAddNewMaterial
+            // 
+            this.btnAddNewMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddNewMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAddNewMaterial.FlatAppearance.BorderSize = 2;
+            this.btnAddNewMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddNewMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewMaterial.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddNewMaterial.Location = new System.Drawing.Point(63, 158);
+            this.btnAddNewMaterial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddNewMaterial.Name = "btnAddNewMaterial";
+            this.btnAddNewMaterial.Size = new System.Drawing.Size(180, 45);
+            this.btnAddNewMaterial.TabIndex = 15;
+            this.btnAddNewMaterial.Text = "Add New Material";
+            this.btnAddNewMaterial.UseVisualStyleBackColor = false;
+            this.btnAddNewMaterial.Click += new System.EventHandler(this.btnAddNewMaterial_Click);
+            // 
+            // btnViewExpiredMaterial
+            // 
+            this.btnViewExpiredMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnViewExpiredMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnViewExpiredMaterial.FlatAppearance.BorderSize = 2;
+            this.btnViewExpiredMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewExpiredMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewExpiredMaterial.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnViewExpiredMaterial.Location = new System.Drawing.Point(63, 236);
+            this.btnViewExpiredMaterial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewExpiredMaterial.Name = "btnViewExpiredMaterial";
+            this.btnViewExpiredMaterial.Size = new System.Drawing.Size(180, 45);
+            this.btnViewExpiredMaterial.TabIndex = 15;
+            this.btnViewExpiredMaterial.Text = "ViewExpiredMaterial";
+            this.btnViewExpiredMaterial.UseVisualStyleBackColor = false;
+            this.btnViewExpiredMaterial.Click += new System.EventHandler(this.btnViewExpiredMaterial_Click);
+            // 
+            // btnAddMaterialToWareHouse
+            // 
+            this.btnAddMaterialToWareHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddMaterialToWareHouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAddMaterialToWareHouse.FlatAppearance.BorderSize = 2;
+            this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(63, 75);
+            this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
+            this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(180, 45);
+            this.btnAddMaterialToWareHouse.TabIndex = 15;
+            this.btnAddMaterialToWareHouse.Text = "Add Material To WareHouse";
+            this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
+            this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
             // 
             // btnVegetable
             // 
@@ -497,7 +355,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -506,33 +363,20 @@
 
         private System.Windows.Forms.TextBox txtAmountFood;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtpExpireDay;
-        private System.Windows.Forms.DateTimePicker dtpInputDay;
-        private System.Windows.Forms.ComboBox cbbKindOfFood;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtQuality;
-        private System.Windows.Forms.Button btnAddNewManuFacturer;
-        private System.Windows.Forms.TextBox txtIDManufacturer;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvNguyenLieuKho;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNumber;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnVegetable;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDriedFood;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNameFood;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnMoreInfor;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtInputFoodName;
         private System.Windows.Forms.Button btnFreshFood;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnDrinking;
+        private System.Windows.Forms.Button btnAddMaterialToWareHouse;
+        private System.Windows.Forms.Button btnViewExpiredMaterial;
+        private System.Windows.Forms.Button btnAddNewMaterial;
     }
 }

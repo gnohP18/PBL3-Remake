@@ -9,13 +9,6 @@ namespace GUI.frmGUIUserControl
         public WareHouseUC()
         {
             InitializeComponent();
-            SetCBBKingOfFood();
-        }
-
-        public void SetCBBKingOfFood()
-        {
-            cbbKindOfFood.Items.Clear();
-            cbbKindOfFood.Items.AddRange(BLLNVNH.Instance.GetKindOfFood().ToArray());
         }
         private void btnMoreInfor_Click(object sender, EventArgs e)
         {
@@ -70,7 +63,26 @@ namespace GUI.frmGUIUserControl
                 frm.Show();
             }
         }
+
+        private void btnAddNewMaterial_Click(object sender, EventArgs e)
+        {
+            frmGUIUserControl.AddNewMaterial frm = new AddNewMaterial();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void btnViewExpiredMaterial_Click(object sender, EventArgs e)
+        {
+            frmGUIUserControl.ExpiredMaterial frm = new ExpiredMaterial();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void btnAddMaterialToWareHouse_Click(object sender, EventArgs e)
+        {
+            frmGUIUserControl.AddMaterialToWareHouse frm = new AddMaterialToWareHouse();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
     }
 }
-
-//txtNameFood.Text = dgvNguyenLieuKho.SelectedRows[0].Cells["TenNguyenLieu"].Value.ToString();

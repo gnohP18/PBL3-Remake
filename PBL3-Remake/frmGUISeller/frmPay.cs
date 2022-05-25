@@ -14,6 +14,7 @@ namespace GUI.frmGUISeller
         {
             IDTable = idban;
             InitializeComponent();
+            SetCollabTableTextBox();
         }
         List<string> Voucher = new List<string>();
         private void AddVoucher()
@@ -23,7 +24,7 @@ namespace GUI.frmGUISeller
             Voucher.Add("KM20%");
             Voucher.Add("Giam50k");
         }
-        private void frmPay_Load(object sender, System.EventArgs e)
+        private void frmPay_Load(object sender, EventArgs e)
         {
             listMonAnViewDaDat = BLLNVNH.Instance.GetListMonAnByIDBan(IDTable);
             dgvPayment.DataSource = listMonAnViewDaDat;
@@ -58,6 +59,8 @@ namespace GUI.frmGUISeller
         int guestmoney;
         int sum = 0;
         int tax;
+        string txtcollab = "";
+        string txtMain = "";
         private void Load_Total()
         {
 
@@ -104,7 +107,26 @@ namespace GUI.frmGUISeller
 
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
+
             this.Close();
+        }
+        private void SetCollabTableTextBox()
+        {
+            txtAllCollabTable.Enabled = false;
+            Ban bn = BLLNVNH.Instance.GetBanByID_Ban(IDTable);
+            txtcollab = BLLNVNH.Instance.GetAllCollabTable(bn, bn.TinhTrangBan, txtcollab);
+            txtMain = BLLNVNH.Instance.GetAllMainTable(bn, txtMain);
+            txtAllCollabTable.Text = txtMain + " " + txtcollab;
+        }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            Ban bn = BLLNVNH.Instance.GetBanByID_Ban(IDTable);
+            int ID = BLLNVNH.Instance.FindMainTable(bn);
+            BLLNVNH.Instance.AddDetailTable(listMonAnViewDaDat, ID);
+            frmOrder frm = new frmOrder(ID);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
         }
     }
 }

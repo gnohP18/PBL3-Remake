@@ -109,6 +109,12 @@
     <Compile Include="frmGUISeller\frmPay.Designer.cs">
       <DependentUpon>frmPay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUISeller\frmStatusDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmStatusDish.Designer.cs">
+      <DependentUpon>frmStatusDish.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUISeller\TableForOrdering.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\frmPay.resx">
       <DependentUpon>frmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmStatusDish.resx">
+      <DependentUpon>frmStatusDish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\TableForOrdering.resx">
       <DependentUpon>TableForOrdering.cs</DependentUpon>

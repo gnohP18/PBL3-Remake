@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Entity;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI.frmGUISeller
@@ -20,18 +21,16 @@ namespace GUI.frmGUISeller
             this.StartPosition = FormStartPosition.CenterScreen;
             pnTable.AutoScroll = true;
             LoadAllBanWithTang(1);
-            foreach (Ban i in BLL.BLLNVNH.Instance.GetAllBanByTang(2))
-            {
-                Console.WriteLine(i.ID_Ban + " " + i.TinhTrangBan);
-            }
-
         }
 
         void SetCbb()
         {
-            cbbStatus.Items.Add("All");
-            cbbStatus.Items.Add("Emty");
-            cbbStatus.Items.Add("Busy");
+            cbbStatusTable.Items.Add("All");
+            cbbStatusTable.Items.Add("Emty");
+            cbbStatusTable.Items.Add("Busy");
+            //cbbStatusDish.Items.Add("All");
+            cbbStatusDish.Items.Add("No ready");
+            cbbStatusDish.Items.Add("Done");
         }
 
         private int Floor = 0;
@@ -137,7 +136,6 @@ namespace GUI.frmGUISeller
                 }
             }
         }
-
         void RemoveTable()
         {
             pnTable.Controls.Clear();
@@ -158,19 +156,19 @@ namespace GUI.frmGUISeller
 
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbStatus.SelectedIndex == 1)
+            if (cbbStatusTable.SelectedIndex == 1)
             {
                 statustb = true;
                 RemoveTable();
                 LoadBanWithTinhTrangBanVaTang(statustb, Floor);
             }
-            else if (cbbStatus.SelectedIndex == 2)
+            else if (cbbStatusTable.SelectedIndex == 2)
             {
                 statustb = false;
                 RemoveTable();
                 LoadBanWithTinhTrangBanVaTang(statustb, Floor);
             }
-            else if (cbbStatus.SelectedIndex == 0)
+            else if (cbbStatusTable.SelectedIndex == 0)
             {
                 RemoveTable();
                 LoadAllBanWithTang(Floor);
@@ -180,6 +178,57 @@ namespace GUI.frmGUISeller
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        DataGridView dgvStatusDish;
+        private void LoadDishByStatusDish(int st)
+        {
+            //DataGridView 
+            dgvStatusDish = new DataGridView();
+            pnTable.Controls.Add(dgvStatusDish);
+            dgvStatusDish.Dock = DockStyle.Fill;
+
+            Image NotReadyImage = PBL3_Remake.Properties.Resources.uncheckedRed;
+            Image ReadyImage = PBL3_Remake.Properties.Resources.checkedGreen;
+            dgvStatusDish.DataSource = BLLNVNH.Instance.GetAllDetailTableByStatus(st);
+            DataGridViewImageColumn imgcol = new DataGridViewImageColumn();
+            dgvStatusDish.Columns.Add(imgcol);
+            foreach (DataGridViewRow i in dgvStatusDish.Rows)
+            {
+                if (i.Cells[4].Value.ToString() == "1")
+                {
+                    imgcol.Image = ReadyImage;
+                }
+                if (i.Cells[4].Value.ToString() == "0")
+                {
+                    imgcol.Image = NotReadyImage;
+                }
+            }
+            dgvStatusDish.Columns[5].Visible = false;
+            dgvStatusDish.Columns[6].Visible = false;
+            dgvStatusDish.CellClick += dgvStatusDish_CellsClick;
+            dgvStatusDish.ReadOnly = true;
+            dgvStatusDish.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+        private void cbbStatusDish_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RemoveTable();
+            if (cbbStatusDish.SelectedIndex == 0)
+                LoadDishByStatusDish(0);
+            else if (cbbStatusDish.SelectedIndex == 1)
+                LoadDishByStatusDish(1);
+            //else if (cbbStatusDish.SelectedIndex == 0)
+            //  LoadDishByStatusDish(3);
+        }
+        private void dgvStatusDish_CellsClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 0)
+            {
+                int idctb = Convert.ToInt32(dgvStatusDish.SelectedRows[0].Cells["ID_ChiTietBan"].Value.ToString());
+                Console.WriteLine("ID=" + idctb);
+                frmStatusDish frm = new frmStatusDish(idctb);
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
         }
     }
 }

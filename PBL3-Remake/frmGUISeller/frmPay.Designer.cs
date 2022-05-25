@@ -51,6 +51,10 @@
             this.pBGuestMoney = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pBVoucher = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnYes = new System.Windows.Forms.Button();
+            this.btnNo = new System.Windows.Forms.Button();
+            this.txtAllCollabTable = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -206,7 +210,7 @@
             // 
             this.txtGuestMoney.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtGuestMoney.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuestMoney.Location = new System.Drawing.Point(428, 217);
+            this.txtGuestMoney.Location = new System.Drawing.Point(428, 380);
             this.txtGuestMoney.Name = "txtGuestMoney";
             this.txtGuestMoney.Size = new System.Drawing.Size(275, 34);
             this.txtGuestMoney.TabIndex = 8;
@@ -218,7 +222,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label4.Location = new System.Drawing.Point(428, 179);
+            this.label4.Location = new System.Drawing.Point(428, 342);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 29);
             this.label4.TabIndex = 9;
@@ -289,7 +293,7 @@
             // 
             // pBGuestMoney
             // 
-            this.pBGuestMoney.Location = new System.Drawing.Point(712, 219);
+            this.pBGuestMoney.Location = new System.Drawing.Point(712, 382);
             this.pBGuestMoney.Name = "pBGuestMoney";
             this.pBGuestMoney.Size = new System.Drawing.Size(32, 32);
             this.pBGuestMoney.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,11 +319,60 @@
             this.pBVoucher.TabIndex = 6;
             this.pBVoucher.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
+            this.label7.Location = new System.Drawing.Point(428, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 29);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Collab Table";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnYes
+            // 
+            this.btnYes.FlatAppearance.BorderSize = 0;
+            this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYes.Image = global::PBL3_Remake.Properties.Resources.checkedGreen;
+            this.btnYes.Location = new System.Drawing.Point(433, 264);
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Size = new System.Drawing.Size(33, 33);
+            this.btnYes.TabIndex = 16;
+            this.btnYes.UseVisualStyleBackColor = true;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
+            // 
+            // btnNo
+            // 
+            this.btnNo.FlatAppearance.BorderSize = 0;
+            this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNo.Image = global::PBL3_Remake.Properties.Resources.uncheckedRed;
+            this.btnNo.Location = new System.Drawing.Point(487, 264);
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Size = new System.Drawing.Size(33, 33);
+            this.btnNo.TabIndex = 17;
+            this.btnNo.UseVisualStyleBackColor = true;
+            // 
+            // txtAllCollabTable
+            // 
+            this.txtAllCollabTable.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtAllCollabTable.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAllCollabTable.Location = new System.Drawing.Point(433, 224);
+            this.txtAllCollabTable.Name = "txtAllCollabTable";
+            this.txtAllCollabTable.Size = new System.Drawing.Size(275, 34);
+            this.txtAllCollabTable.TabIndex = 18;
+            // 
             // frmPay
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(840, 526);
+            this.Controls.Add(this.txtAllCollabTable);
+            this.Controls.Add(this.btnNo);
+            this.Controls.Add(this.btnYes);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnPayReceipt);
             this.Controls.Add(this.btnVoucherConfirm);
             this.Controls.Add(this.pBGuestMoney);
@@ -371,5 +424,9 @@
         private System.Windows.Forms.PictureBox pBGuestMoney;
         private System.Windows.Forms.Button btnVoucherConfirm;
         private System.Windows.Forms.Button btnPayReceipt;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnYes;
+        private System.Windows.Forms.Button btnNo;
+        private System.Windows.Forms.TextBox txtAllCollabTable;
     }
 }

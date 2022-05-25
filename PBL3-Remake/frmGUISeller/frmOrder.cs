@@ -143,7 +143,7 @@ namespace GUI.frmGUISeller
             ShowDish("");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDessert_Click(object sender, EventArgs e)
         {
             IDLoaiMonAn = 3;
             RemoveDish();
@@ -172,10 +172,14 @@ namespace GUI.frmGUISeller
         private void btnOrder_Click(object sender, EventArgs e)
         {
             BLLNVNH.Instance.AddDetailTable(listMonAnViewDangDat, IDTable);
-            if (listMonAnViewDangDat.Count > 0)
+            if (listMonAnViewDangDat.Count > 0 && BLLNVNH.Instance.GetBanByID_Ban(IDTable).TinhTrangBan == 0)
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, IDTable);
-            else
+            else if (listMonAnViewDangDat.Count == 0 && listMonAnViewDaDat.Count == 0)
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
+            foreach (Ban i in BLL.BLLNVNH.Instance.GetAllBanByTang(1))
+            {
+                Console.WriteLine(i.ID_Ban + " " + i.TinhTrangBan);
+            }
             this.Close();
         }
 
@@ -200,17 +204,8 @@ namespace GUI.frmGUISeller
             frmCollaborTable frm = new frmCollaborTable(BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable));
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
-            //if (listMonAnViewDaDat.Count > 0)
-            //{
-            //    if (frm.DialogResult == DialogResult.OK)
-            //    {
-            //        BLLNVNH.Instance.ChangeStatusTable(IDTable, frm.IDCollabTable);
-            //        lblIDTable.Text = lblIDTable.Text + "-" + frm.IDCollabTable.ToString();
-            //        Console.WriteLine(lblIDTable.Text);
-            //    }
-            //}
-            //else
-            //    BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
         }
+
+
     }
 }

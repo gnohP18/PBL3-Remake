@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\DELL\\Desktop\\Hinh1.png");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -107,7 +107,7 @@ namespace Entity
                 new NguyenLieu{ID_NguyenLieu = 7,DonViTinh ="kg",TenNguyenLieu = "Hanh la",HSD=2,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 8,DonViTinh ="kg",TenNguyenLieu = "Nam rom",HSD=30,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 9,DonViTinh ="lon",TenNguyenLieu = "pepsi",HSD=365,ID_LoaiNguyenLieu=4},
-                new NguyenLieu{ID_NguyenLieu = 10,DonViTinh ="kg",TenNguyenLieu = "Nam tai meo",HSD=7,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 10,DonViTinh ="kg",TenNguyenLieu = "Nam tai meo",HSD=7,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 11,DonViTinh ="kg",TenNguyenLieu = "Khoai tay",HSD=15,ID_LoaiNguyenLieu=2},
                 new NguyenLieu{ID_NguyenLieu = 12,DonViTinh ="kg",TenNguyenLieu = "Bo lac",HSD=365,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 13,DonViTinh ="kg",TenNguyenLieu = "Bot mi",HSD=365,ID_LoaiNguyenLieu=3},
@@ -409,6 +409,21 @@ namespace Entity
                 new ChiTietHoaDon{ID_HoaDon = 3, ID_MonAn = 8},
                 new ChiTietHoaDon{ID_HoaDon = 3, ID_MonAn = 9},
 
+            });
+            context.ThongTinNhaHangs.AddRange(new ThongTinNhaHang[]
+            {
+                new ThongTinNhaHang{ID_ThongTinNhaHang = 1,
+                    TenNhaHang = "HHP",
+                    DiaChi = "DaNa",
+                    ThoiGianBatDauLamViecSang= new DateTime(2022,09,21,6,30,0),
+                    ThoiGianKetThucLamViecSang = new DateTime(2022,09,21,12,30,0),
+                    ThoiGianBatDauLamViecChieu = new DateTime(2022,09,21,18,30,0),
+                    ThoiGianKetThucLamViecChieu = new DateTime(2022,09,21,21,30,0),
+                    NgayPhatLuong = 5 }
+            });
+            context.Vouchers.AddRange(new Voucher[]
+            {
+                new Voucher{MaVoucher = "ABC",GiaTriVoucher = "30%",HanMucSuDung = 0,MoTa = "Giam 30%",NgayHetHan = new DateTime(2022,12,01)}
             });
         }
     }

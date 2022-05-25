@@ -69,6 +69,27 @@ namespace BLL
             }
             dALQLNH.SaveChanges();
         }
-
+        public int checkLoginCustomer(string username, string password)
+        {
+            User user = (User)dALQLNH.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
+            if (user == null) return -1;
+            if (user.ID_ChucVu == 1) return 1;
+            if (user.ID_ChucVu == 2) return -2;
+            if (user.ID_ChucVu == 3)
+            {
+                int dateNowHashCode = DateTime.Now.GetHashCode();
+                List<ChiTietCaLam> listChiTietCaLam = dALQLNH.ChiTietCaLams.Where(s => s.ID_User == user.ID_User).ToList();
+                List<string> strCaLam = new List<string>();
+                foreach (ChiTietCaLam i in listChiTietCaLam)
+                {
+                    strCaLam.Add(dALQLNH.CaLams.Find(i.ID_CaLam).LichCaLam);
+                }
+                foreach (string i in strCaLam)
+                {
+                    
+                }
+            }
+            return 1;
+        }
     }
 }

@@ -186,7 +186,6 @@ namespace GUI.frmGUISeller
             dgvStatusDish = new DataGridView();
             pnTable.Controls.Add(dgvStatusDish);
             dgvStatusDish.Dock = DockStyle.Fill;
-
             Image NotReadyImage = PBL3_Remake.Properties.Resources.uncheckedRed;
             Image ReadyImage = PBL3_Remake.Properties.Resources.checkedGreen;
             dgvStatusDish.DataSource = BLLNVNH.Instance.GetAllDetailTableByStatus(st);
@@ -208,6 +207,7 @@ namespace GUI.frmGUISeller
             dgvStatusDish.CellClick += dgvStatusDish_CellsClick;
             dgvStatusDish.ReadOnly = true;
             dgvStatusDish.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvStatusDish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         private void cbbStatusDish_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -176,7 +176,7 @@ namespace GUI.frmGUISeller
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, IDTable);
             else if (listMonAnViewDangDat.Count == 0 && listMonAnViewDaDat.Count == 0)
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
-            foreach (Ban i in BLL.BLLNVNH.Instance.GetAllBanByTang(1))
+            foreach (Ban i in BLLNVNH.Instance.GetAllBanByTang(1))
             {
                 Console.WriteLine(i.ID_Ban + " " + i.TinhTrangBan);
             }

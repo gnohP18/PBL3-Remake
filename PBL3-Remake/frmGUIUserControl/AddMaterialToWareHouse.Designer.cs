@@ -55,6 +55,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -211,6 +212,7 @@
             this.panel1.Controls.Add(this.cbbManufacturer);
             this.panel1.Controls.Add(this.cbbMaterialName);
             this.panel1.Controls.Add(this.cbbKindOfMaterial);
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnClose1);
             this.panel1.Controls.Add(this.btnAddManufacturer);
             this.panel1.Controls.Add(this.btnAddMaterialToWareHouse);
@@ -257,7 +259,6 @@
             this.cbbMaterialName.Name = "cbbMaterialName";
             this.cbbMaterialName.Size = new System.Drawing.Size(212, 24);
             this.cbbMaterialName.TabIndex = 16;
-            this.cbbMaterialName.SelectedIndexChanged += new System.EventHandler(this.cbbMaterialName_SelectedIndexChanged);
             // 
             // cbbKindOfMaterial
             // 
@@ -276,14 +277,14 @@
             this.btnClose1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose1.Location = new System.Drawing.Point(235, 386);
+            this.btnClose1.Location = new System.Drawing.Point(336, 386);
             this.btnClose1.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose1.Name = "btnClose1";
             this.btnClose1.Size = new System.Drawing.Size(123, 32);
             this.btnClose1.TabIndex = 15;
             this.btnClose1.Text = "Close";
             this.btnClose1.UseVisualStyleBackColor = false;
-            this.btnClose1.Click += new System.EventHandler(this.btnClose1_Click);
+            this.btnClose1.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnAddManufacturer
             // 
@@ -310,7 +311,7 @@
             this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(63, 386);
+            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(37, 386);
             this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
             this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(123, 32);
@@ -391,6 +392,23 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Material\'s name";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnRefresh.FlatAppearance.BorderSize = 2;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRefresh.Location = new System.Drawing.Point(181, 386);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(123, 32);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // AddMaterialToWareHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -438,5 +456,6 @@
         private System.Windows.Forms.DateTimePicker dtpImportDay;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

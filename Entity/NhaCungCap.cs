@@ -26,5 +26,9 @@ namespace Entity
         public string SoDienThoai { get; set; }
         public virtual ICollection<ChiTietNhaCungCap> ChiTietNhaCungCaps { get; set; }
         public virtual ICollection<Kho> Khoes { get; set; }
+        public override string ToString()
+        {
+            return this.TenNhaCungCap;
+        }
     }
 }

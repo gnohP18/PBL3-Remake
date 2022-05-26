@@ -4,10 +4,16 @@ namespace Entity
 {
     public class DALQLNH : DbContext
     {
+        // Your context has been configured to use a 'DALQLNH' connection string from your application's 
+        // configuration file (App.config or Web.config). By default, this connection string targets the 
+        // 'Entity.DALQLNH' database on your LocalDb instance. 
+        // 
+        // If you wish to target a different database and/or database provider, modify the 'DALQLNH' 
+        // connection string in the application configuration file.
         public DALQLNH()
             : base("name=DALQLNH")
         {
-            //Database.SetInitializer<DALQLNH>(new CreateDB());
+            Database.SetInitializer<DALQLNH>(new CreateDB());
         }
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaLam> CaLams { get; set; }
@@ -26,6 +32,9 @@ namespace Entity
         public virtual DbSet<BangChamCong> BangChamCongs { get; set; }
         public virtual DbSet<ChiTietBan> ChiTietBans { get; set; }
         public virtual DbSet<LoaiMonAn> LoaiMonAns { get; set; }
+        public virtual DbSet<ThongTinNhaHang> ThongTinNhaHangs { get; set; }
+        public virtual DbSet<Voucher> Vouchers { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BangChamCong>()

@@ -17,7 +17,7 @@ namespace GUI.frmGUISeller
         {
             this.AutoScaleMode = AutoScaleMode.None;
             Console.WriteLine("ID " + ID + " " + BLLNVNH.Instance.GetDetailTableByID(ID).MonAn);
-            lblNameDish.Text = BLLNVNH.Instance.GetDetailTableByID(ID).MonAn + " amount" + BLLNVNH.Instance.GetDetailTableByID(ID).SoLuong;
+            lblNameDish.Text = BLLNVNH.Instance.GetDetailTableByID(ID).MonAn.TenMonAn + "-" + BLLNVNH.Instance.GetDetailTableByID(ID).SoLuong;
         }
 
         private void btnClose_Click(object sender, System.EventArgs e)
@@ -28,6 +28,7 @@ namespace GUI.frmGUISeller
         private void btnDone_Click(object sender, System.EventArgs e)
         {
             BLLNVNH.Instance.ChangeStatusDishByID(ID);
+            this.Close();
         }
     }
 }

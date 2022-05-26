@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddNewMaterial = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -36,23 +38,23 @@
             this.txtExpiry = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUnit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.dtpImportDay = new System.Windows.Forms.DateTimePicker();
+            this.cbbManufacturer = new System.Windows.Forms.ComboBox();
             this.cbbMaterialName = new System.Windows.Forms.ComboBox();
             this.cbbKindOfMaterial = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnClose1 = new System.Windows.Forms.Button();
+            this.btnAddManufacturer = new System.Windows.Forms.Button();
+            this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.cbbManufacturer = new System.Windows.Forms.ComboBox();
-            this.dtpImportDay = new System.Windows.Forms.DateTimePicker();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +79,22 @@
             this.panel7.Size = new System.Drawing.Size(473, 499);
             this.panel7.TabIndex = 26;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(37, 159);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(212, 24);
+            this.comboBox2.TabIndex = 16;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(37, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(212, 24);
+            this.comboBox1.TabIndex = 16;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -92,7 +110,6 @@
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnAddNewMaterial
             // 
@@ -162,34 +179,6 @@
             this.txtUnit.Size = new System.Drawing.Size(212, 22);
             this.txtUnit.TabIndex = 1;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(33, 133);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Material\'s name";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(37, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 24);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(37, 159);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(212, 24);
-            this.comboBox2.TabIndex = 16;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -202,18 +191,32 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Kind of material";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(33, 133);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 23);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Material\'s name";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.dtpImportDay);
             this.panel1.Controls.Add(this.cbbManufacturer);
             this.panel1.Controls.Add(this.cbbMaterialName);
             this.panel1.Controls.Add(this.cbbKindOfMaterial);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnClose1);
+            this.panel1.Controls.Add(this.btnAddManufacturer);
+            this.panel1.Controls.Add(this.btnAddMaterialToWareHouse);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
@@ -223,6 +226,30 @@
             this.panel1.Size = new System.Drawing.Size(473, 499);
             this.panel1.TabIndex = 26;
             // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Location = new System.Drawing.Point(37, 276);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(212, 22);
+            this.txtQuantity.TabIndex = 18;
+            // 
+            // dtpImportDay
+            // 
+            this.dtpImportDay.CustomFormat = "dd/MM/yyyy";
+            this.dtpImportDay.Location = new System.Drawing.Point(37, 328);
+            this.dtpImportDay.Name = "dtpImportDay";
+            this.dtpImportDay.Size = new System.Drawing.Size(212, 22);
+            this.dtpImportDay.TabIndex = 17;
+            // 
+            // cbbManufacturer
+            // 
+            this.cbbManufacturer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbManufacturer.FormattingEnabled = true;
+            this.cbbManufacturer.Location = new System.Drawing.Point(37, 213);
+            this.cbbManufacturer.Name = "cbbManufacturer";
+            this.cbbManufacturer.Size = new System.Drawing.Size(212, 24);
+            this.cbbManufacturer.TabIndex = 16;
+            // 
             // cbbMaterialName
             // 
             this.cbbMaterialName.FormattingEnabled = true;
@@ -230,6 +257,7 @@
             this.cbbMaterialName.Name = "cbbMaterialName";
             this.cbbMaterialName.Size = new System.Drawing.Size(212, 24);
             this.cbbMaterialName.TabIndex = 16;
+            this.cbbMaterialName.SelectedIndexChanged += new System.EventHandler(this.cbbMaterialName_SelectedIndexChanged);
             // 
             // cbbKindOfMaterial
             // 
@@ -240,38 +268,56 @@
             this.cbbKindOfMaterial.TabIndex = 16;
             this.cbbKindOfMaterial.SelectedIndexChanged += new System.EventHandler(this.cbbKindOfMaterial_SelectedIndexChanged);
             // 
-            // button1
+            // btnClose1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(244, 328);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 32);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnClose1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnClose1.FlatAppearance.BorderSize = 2;
+            this.btnClose1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose1.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnClose1.Location = new System.Drawing.Point(235, 386);
+            this.btnClose1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose1.Name = "btnClose1";
+            this.btnClose1.Size = new System.Drawing.Size(123, 32);
+            this.btnClose1.TabIndex = 15;
+            this.btnClose1.Text = "Close";
+            this.btnClose1.UseVisualStyleBackColor = false;
+            this.btnClose1.Click += new System.EventHandler(this.btnClose1_Click);
             // 
-            // button2
+            // btnAddManufacturer
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(63, 328);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 32);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddManufacturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddManufacturer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAddManufacturer.FlatAppearance.BorderSize = 2;
+            this.btnAddManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddManufacturer.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddManufacturer.Location = new System.Drawing.Point(257, 210);
+            this.btnAddManufacturer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddManufacturer.Name = "btnAddManufacturer";
+            this.btnAddManufacturer.Size = new System.Drawing.Size(156, 27);
+            this.btnAddManufacturer.TabIndex = 15;
+            this.btnAddManufacturer.Text = "Add manufacturer";
+            this.btnAddManufacturer.UseVisualStyleBackColor = false;
+            this.btnAddManufacturer.Click += new System.EventHandler(this.btnAddManufacturer_Click);
+            // 
+            // btnAddMaterialToWareHouse
+            // 
+            this.btnAddMaterialToWareHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddMaterialToWareHouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAddMaterialToWareHouse.FlatAppearance.BorderSize = 2;
+            this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(63, 386);
+            this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
+            this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(123, 32);
+            this.btnAddMaterialToWareHouse.TabIndex = 15;
+            this.btnAddMaterialToWareHouse.Text = "ADD";
+            this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
+            this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
             // 
             // label4
             // 
@@ -290,12 +336,24 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(33, 239);
+            this.label6.Location = new System.Drawing.Point(33, 301);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 23);
             this.label6.TabIndex = 4;
             this.label6.Text = "Import day:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.label11.Location = new System.Drawing.Point(33, 250);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 23);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Quantity";
             // 
             // label7
             // 
@@ -333,38 +391,6 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Material\'s name";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(257, 210);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 28);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "ADD";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // cbbManufacturer
-            // 
-            this.cbbManufacturer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbManufacturer.FormattingEnabled = true;
-            this.cbbManufacturer.Location = new System.Drawing.Point(37, 213);
-            this.cbbManufacturer.Name = "cbbManufacturer";
-            this.cbbManufacturer.Size = new System.Drawing.Size(212, 24);
-            this.cbbManufacturer.TabIndex = 16;
-            // 
-            // dtpImportDay
-            // 
-            this.dtpImportDay.Location = new System.Drawing.Point(37, 265);
-            this.dtpImportDay.Name = "dtpImportDay";
-            this.dtpImportDay.Size = new System.Drawing.Size(212, 22);
-            this.dtpImportDay.TabIndex = 17;
-            // 
             // AddMaterialToWareHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,14 +427,16 @@
         private System.Windows.Forms.ComboBox cbbManufacturer;
         private System.Windows.Forms.ComboBox cbbMaterialName;
         private System.Windows.Forms.ComboBox cbbKindOfMaterial;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnClose1;
+        private System.Windows.Forms.Button btnAddManufacturer;
+        private System.Windows.Forms.Button btnAddMaterialToWareHouse;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpImportDay;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -163,6 +163,12 @@
     <Compile Include="frmGUIUserControl\ExpiredMaterial.Designer.cs">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\FoodInWareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\FoodInWareHouse.Designer.cs">
+      <DependentUpon>FoodInWareHouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\HelpUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="frmGUIUserControl\InfoFood.Designer.cs">
       <DependentUpon>InfoFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\ManagerFoodUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\ManagerFoodUC.Designer.cs">
+      <DependentUpon>ManagerFoodUC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\MaterialInfo.cs">
       <SubType>Form</SubType>
@@ -258,11 +270,17 @@
     <EmbeddedResource Include="frmGUIUserControl\ExpiredMaterial.resx">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\FoodInWareHouse.resx">
+      <DependentUpon>FoodInWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\HelpUC.resx">
       <DependentUpon>HelpUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\InfoFood.resx">
       <DependentUpon>InfoFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\ManagerFoodUC.resx">
+      <DependentUpon>ManagerFoodUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\MaterialInfo.resx">
       <DependentUpon>MaterialInfo.cs</DependentUpon>
@@ -448,6 +466,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ImageCollaborTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

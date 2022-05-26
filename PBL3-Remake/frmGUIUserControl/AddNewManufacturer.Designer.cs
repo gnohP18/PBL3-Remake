@@ -36,10 +36,8 @@
             this.txtAddressManufacture = new System.Windows.Forms.TextBox();
             this.txtNameNewManufacturer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIDNewManufacturer = new System.Windows.Forms.TextBox();
             this.txtTaxCode = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
@@ -50,6 +48,8 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.btnConfirm);
+            this.panel6.Controls.Add(this.btnClose);
             this.panel6.Controls.Add(this.btnRefresh);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.txtPhoneNumberManufacture);
@@ -57,15 +57,13 @@
             this.panel6.Controls.Add(this.txtAddressManufacture);
             this.panel6.Controls.Add(this.txtNameNewManufacturer);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.txtIDNewManufacturer);
             this.panel6.Controls.Add(this.txtTaxCode);
             this.panel6.Controls.Add(this.label15);
-            this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Location = new System.Drawing.Point(13, 13);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(497, 293);
+            this.panel6.Size = new System.Drawing.Size(479, 272);
             this.panel6.TabIndex = 11;
             // 
             // btnRefresh
@@ -77,19 +75,20 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft New Tai Lue", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.Location = new System.Drawing.Point(7, 249);
+            this.btnRefresh.Location = new System.Drawing.Point(179, 196);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(120, 30);
             this.btnRefresh.TabIndex = 21;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label3.Location = new System.Drawing.Point(250, 158);
+            this.label3.Location = new System.Drawing.Point(260, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 23);
             this.label3.TabIndex = 27;
@@ -97,7 +96,7 @@
             // 
             // txtPhoneNumberManufacture
             // 
-            this.txtPhoneNumberManufacture.Location = new System.Drawing.Point(254, 194);
+            this.txtPhoneNumberManufacture.Location = new System.Drawing.Point(264, 120);
             this.txtPhoneNumberManufacture.Name = "txtPhoneNumberManufacture";
             this.txtPhoneNumberManufacture.Size = new System.Drawing.Size(181, 22);
             this.txtPhoneNumberManufacture.TabIndex = 26;
@@ -107,7 +106,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(6, 158);
+            this.label2.Location = new System.Drawing.Point(303, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 25;
@@ -115,14 +114,14 @@
             // 
             // txtAddressManufacture
             // 
-            this.txtAddressManufacture.Location = new System.Drawing.Point(10, 194);
+            this.txtAddressManufacture.Location = new System.Drawing.Point(264, 67);
             this.txtAddressManufacture.Name = "txtAddressManufacture";
             this.txtAddressManufacture.Size = new System.Drawing.Size(181, 22);
             this.txtAddressManufacture.TabIndex = 24;
             // 
             // txtNameNewManufacturer
             // 
-            this.txtNameNewManufacturer.Location = new System.Drawing.Point(251, 70);
+            this.txtNameNewManufacturer.Location = new System.Drawing.Point(7, 69);
             this.txtNameNewManufacturer.Name = "txtNameNewManufacturer";
             this.txtNameNewManufacturer.Size = new System.Drawing.Size(178, 22);
             this.txtNameNewManufacturer.TabIndex = 23;
@@ -132,18 +131,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(247, 44);
+            this.label1.Location = new System.Drawing.Point(6, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 23);
             this.label1.TabIndex = 22;
             this.label1.Text = "Name new manufacturer";
-            // 
-            // txtIDNewManufacturer
-            // 
-            this.txtIDNewManufacturer.Location = new System.Drawing.Point(10, 60);
-            this.txtIDNewManufacturer.Name = "txtIDNewManufacturer";
-            this.txtIDNewManufacturer.Size = new System.Drawing.Size(178, 22);
-            this.txtIDNewManufacturer.TabIndex = 21;
             // 
             // txtTaxCode
             // 
@@ -162,17 +154,6 @@
             this.label15.Size = new System.Drawing.Size(84, 23);
             this.label15.TabIndex = 18;
             this.label15.Text = "Tax code";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label14.Location = new System.Drawing.Point(6, 34);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(182, 23);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "ID New manufacturer";
             // 
             // label13
             // 
@@ -195,12 +176,13 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft New Tai Lue", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose.Location = new System.Drawing.Point(13, 322);
+            this.btnClose.Location = new System.Drawing.Point(341, 196);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(120, 30);
             this.btnClose.TabIndex = 30;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnConfirm
             // 
@@ -211,20 +193,19 @@
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft New Tai Lue", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.Location = new System.Drawing.Point(390, 322);
+            this.btnConfirm.Location = new System.Drawing.Point(10, 196);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(120, 30);
             this.btnConfirm.TabIndex = 29;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // AddNewManufacturer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(532, 368);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnConfirm);
+            this.ClientSize = new System.Drawing.Size(505, 303);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddNewManufacturer";
@@ -246,10 +227,8 @@
         private System.Windows.Forms.TextBox txtAddressManufacture;
         private System.Windows.Forms.TextBox txtNameNewManufacturer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIDNewManufacturer;
         private System.Windows.Forms.TextBox txtTaxCode;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnConfirm;

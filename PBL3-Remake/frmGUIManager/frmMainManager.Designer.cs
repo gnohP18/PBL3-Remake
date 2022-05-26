@@ -31,18 +31,19 @@ namespace GUI.frmGUIManager
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnBackup = new System.Windows.Forms.Button();
-            this.btnStatictis = new System.Windows.Forms.Button();
-            this.btnWareHouse = new System.Windows.Forms.Button();
-            this.btnEmployee = new System.Windows.Forms.Button();
-            this.btnOverView = new System.Windows.Forms.Button();
             this.pnUC = new System.Windows.Forms.Panel();
+            this.managerFoodUC = new GUI.frmGUIUserControl.ManagerFoodUC();
             this.wareHouseUC = new GUI.frmGUIUserControl.WareHouseUC();
             this.statisticUC = new GUI.frmGUIUserControl.StatisticUC();
             this.employeesUC = new GUI.frmGUIUserControl.EmployeesUC();
             this.backupUC = new GUI.frmGUIUserControl.BackupUC();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnFood = new System.Windows.Forms.Button();
+            this.btnStatictis = new System.Windows.Forms.Button();
+            this.btnWareHouse = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnOverView = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnUC.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,7 @@ namespace GUI.frmGUIManager
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnHelp);
-            this.panel2.Controls.Add(this.btnBackup);
+            this.panel2.Controls.Add(this.btnFood);
             this.panel2.Controls.Add(this.btnStatictis);
             this.panel2.Controls.Add(this.btnWareHouse);
             this.panel2.Controls.Add(this.btnEmployee);
@@ -71,6 +72,58 @@ namespace GUI.frmGUIManager
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 700);
             this.panel2.TabIndex = 1;
+            // 
+            // pnUC
+            // 
+            this.pnUC.Controls.Add(this.managerFoodUC);
+            this.pnUC.Controls.Add(this.wareHouseUC);
+            this.pnUC.Controls.Add(this.statisticUC);
+            this.pnUC.Controls.Add(this.employeesUC);
+            this.pnUC.Controls.Add(this.backupUC);
+            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnUC.Location = new System.Drawing.Point(200, 100);
+            this.pnUC.Name = "pnUC";
+            this.pnUC.Size = new System.Drawing.Size(1200, 700);
+            this.pnUC.TabIndex = 2;
+            // 
+            // managerFoodUC
+            // 
+            this.managerFoodUC.Location = new System.Drawing.Point(102, 380);
+            this.managerFoodUC.Name = "managerFoodUC";
+            this.managerFoodUC.Size = new System.Drawing.Size(316, 155);
+            this.managerFoodUC.TabIndex = 4;
+            // 
+            // wareHouseUC
+            // 
+            this.wareHouseUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.wareHouseUC.Location = new System.Drawing.Point(330, 194);
+            this.wareHouseUC.Name = "wareHouseUC";
+            this.wareHouseUC.Size = new System.Drawing.Size(209, 109);
+            this.wareHouseUC.TabIndex = 3;
+            // 
+            // statisticUC
+            // 
+            this.statisticUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.statisticUC.Location = new System.Drawing.Point(36, 194);
+            this.statisticUC.Name = "statisticUC";
+            this.statisticUC.Size = new System.Drawing.Size(240, 126);
+            this.statisticUC.TabIndex = 2;
+            // 
+            // employeesUC
+            // 
+            this.employeesUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.employeesUC.Location = new System.Drawing.Point(217, 20);
+            this.employeesUC.Name = "employeesUC";
+            this.employeesUC.Size = new System.Drawing.Size(173, 121);
+            this.employeesUC.TabIndex = 1;
+            // 
+            // backupUC
+            // 
+            this.backupUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.backupUC.Location = new System.Drawing.Point(22, 20);
+            this.backupUC.Name = "backupUC";
+            this.backupUC.Size = new System.Drawing.Size(161, 102);
+            this.backupUC.TabIndex = 0;
             // 
             // btnExit
             // 
@@ -108,23 +161,23 @@ namespace GUI.frmGUIManager
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
-            // btnBackup
+            // btnFood
             // 
-            this.btnBackup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBackup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackup.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackup.ForeColor = System.Drawing.Color.White;
-            this.btnBackup.Image = global::PBL3_Remake.Properties.Resources.clouds_48;
-            this.btnBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBackup.Location = new System.Drawing.Point(0, 320);
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(200, 80);
-            this.btnBackup.TabIndex = 4;
-            this.btnBackup.Text = "Backup";
-            this.btnBackup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBackup.UseVisualStyleBackColor = true;
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            this.btnFood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFood.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFood.ForeColor = System.Drawing.Color.White;
+            this.btnFood.Image = global::PBL3_Remake.Properties.Resources.diet_48;
+            this.btnFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFood.Location = new System.Drawing.Point(0, 320);
+            this.btnFood.Name = "btnFood";
+            this.btnFood.Size = new System.Drawing.Size(200, 80);
+            this.btnFood.TabIndex = 4;
+            this.btnFood.Text = "Food";
+            this.btnFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // btnStatictis
             // 
@@ -198,50 +251,6 @@ namespace GUI.frmGUIManager
             this.btnOverView.UseVisualStyleBackColor = true;
             this.btnOverView.Click += new System.EventHandler(this.btnOverView_Click);
             // 
-            // pnUC
-            // 
-            this.pnUC.Controls.Add(this.wareHouseUC);
-            this.pnUC.Controls.Add(this.statisticUC);
-            this.pnUC.Controls.Add(this.employeesUC);
-            this.pnUC.Controls.Add(this.backupUC);
-            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnUC.Location = new System.Drawing.Point(200, 100);
-            this.pnUC.Name = "pnUC";
-            this.pnUC.Size = new System.Drawing.Size(1200, 700);
-            this.pnUC.TabIndex = 2;
-            // 
-            // wareHouseUC
-            // 
-            this.wareHouseUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.wareHouseUC.Location = new System.Drawing.Point(330, 194);
-            this.wareHouseUC.Name = "wareHouseUC";
-            this.wareHouseUC.Size = new System.Drawing.Size(209, 109);
-            this.wareHouseUC.TabIndex = 3;
-            // 
-            // statisticUC
-            // 
-            this.statisticUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.statisticUC.Location = new System.Drawing.Point(36, 194);
-            this.statisticUC.Name = "statisticUC";
-            this.statisticUC.Size = new System.Drawing.Size(240, 126);
-            this.statisticUC.TabIndex = 2;
-            // 
-            // employeesUC
-            // 
-            this.employeesUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.employeesUC.Location = new System.Drawing.Point(217, 20);
-            this.employeesUC.Name = "employeesUC";
-            this.employeesUC.Size = new System.Drawing.Size(173, 121);
-            this.employeesUC.TabIndex = 1;
-            // 
-            // backupUC
-            // 
-            this.backupUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.backupUC.Location = new System.Drawing.Point(22, 20);
-            this.backupUC.Name = "backupUC";
-            this.backupUC.Size = new System.Drawing.Size(161, 102);
-            this.backupUC.TabIndex = 0;
-            // 
             // frmMainManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -268,7 +277,7 @@ namespace GUI.frmGUIManager
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button btnOverView;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.Button btnStatictis;
         private System.Windows.Forms.Button btnWareHouse;
         private System.Windows.Forms.Button btnExit;
@@ -277,5 +286,6 @@ namespace GUI.frmGUIManager
         private frmGUIUserControl.BackupUC backupUC;
         private frmGUIUserControl.StatisticUC statisticUC;
         private frmGUIUserControl.WareHouseUC wareHouseUC;
+        private ManagerFoodUC managerFoodUC;
     }
 }

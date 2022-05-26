@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LightCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LightCalendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Add-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shutdown-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdown-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,6 +181,9 @@
   <data name="warehouse-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="information-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\information-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Order-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Order-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,8 +196,14 @@
   <data name="money-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LightCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LightCalendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Addperson-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Addperson-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diet-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diet-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shutdown-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdown-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +226,9 @@
   <data name="plastic-bottle-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plastic-bottle-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chart-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,6 +244,9 @@
   <data name="Order-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Order-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImageCollaborTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImageCollaborTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -240,6 +255,9 @@
   </data>
   <data name="askquestion-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\askquestion-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Overview-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Overview-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,7 +271,7 @@
   <data name="coupon-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coupon-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImageCollaborTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImageCollaborTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="diet-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diet-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

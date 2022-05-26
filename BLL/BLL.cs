@@ -86,10 +86,14 @@ namespace BLL
                 }
                 foreach (string i in strCaLam)
                 {
-                    
+
                 }
             }
             return 1;
+        }
+        public List<MonAn> GetAllMonAn()
+        {
+            return dALQLNH.MonAns.ToList();
         }
     }
 }

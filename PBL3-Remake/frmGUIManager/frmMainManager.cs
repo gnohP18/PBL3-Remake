@@ -40,6 +40,7 @@ namespace GUI.frmGUIManager
             SetupUC(employeesUC);
             SetupUC(statisticUC);
             SetupUC(wareHouseUC);
+            SetupUC(managerFoodUC);
         }
 
         private void btnOverView_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace GUI.frmGUIManager
         private void btnBackup_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            backupUC.BringToFront();
+            managerFoodUC.BringToFront();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)

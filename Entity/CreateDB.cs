@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("E:\\PBL3-Remake\\PBL3-Remake\\Resources\\money-48.png");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\quang\\Desktop\\PBL3\\PBL3-Remake\\PBL3-Remake\\Resources\\Webp.net-resizeimage (1).jpg");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();
@@ -67,27 +67,27 @@ namespace Entity
             });
             context.MonAns.AddRange(new MonAn[]
             {
-                new MonAn{ID_MonAn = 1,ID_LoaiMonAn =2,TenMonAn = "Ech xao",ThanhTien =100000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 2,ID_LoaiMonAn =2,TenMonAn = "Bo xao",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 3,ID_LoaiMonAn =2,TenMonAn = "Long xao nghe",ThanhTien =70000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 4,ID_LoaiMonAn =2,TenMonAn = "Lau nam",ThanhTien =150000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 5,ID_LoaiMonAn =2,TenMonAn = "Ga nuong",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 6,ID_LoaiMonAn =2,TenMonAn = "Bo nuong la lot",ThanhTien =130000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 7,ID_LoaiMonAn =2,TenMonAn = "Trung cut lon xao me",ThanhTien =80000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 8,ID_LoaiMonAn =2,TenMonAn = "Banh trang tron",ThanhTien =12000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 9,ID_LoaiMonAn =2,TenMonAn = "Ga xe",ThanhTien =110000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 10,ID_LoaiMonAn =2,TenMonAn = "Ga um cu chuoi",ThanhTien =135000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 11,ID_LoaiMonAn =2,TenMonAn = "Bo um mang",ThanhTien =100000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 12,ID_LoaiMonAn =2,TenMonAn = "ca loc um chuoi",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 13,ID_LoaiMonAn =2,TenMonAn = "Lau ca loc",ThanhTien =150000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 14,ID_LoaiMonAn =2,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 15,ID_LoaiMonAn =4,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 16,ID_LoaiMonAn =4,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 17,ID_LoaiMonAn =1,TenMonAn = "Rau tron",ThanhTien =100000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 18,ID_LoaiMonAn =1,TenMonAn = "Dau khuon",ThanhTien =120000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 19,ID_LoaiMonAn =1,TenMonAn = "Dau phung rang",ThanhTien =70000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 20,ID_LoaiMonAn =4,TenMonAn = "Tiger beer",ThanhTien =17000,AnhMonAn = imgbyte, TrangThai =0},
-                new MonAn{ID_MonAn = 21,ID_LoaiMonAn =4,TenMonAn = "Huda beer",ThanhTien =12000,AnhMonAn = imgbyte, TrangThai =0},
+                new MonAn{ID_MonAn = 1,ID_LoaiMonAn =2,TenMonAn = "Ech xao",ThanhTien =100000,AnhMonAn = ImgToByte(Properties.Resources.EchXao), TrangThai =0},
+                new MonAn{ID_MonAn = 2,ID_LoaiMonAn =2,TenMonAn = "Bo xao",ThanhTien =120000,AnhMonAn = ImgToByte(Properties.Resources.BoXao), TrangThai =0},
+                new MonAn{ID_MonAn = 3,ID_LoaiMonAn =2,TenMonAn = "Long xao nghe",ThanhTien =70000,AnhMonAn = ImgToByte(Properties.Resources.LongXaoNghe), TrangThai =0},
+                new MonAn{ID_MonAn = 4,ID_LoaiMonAn =2,TenMonAn = "Lau nam",ThanhTien =150000,AnhMonAn = ImgToByte(Properties.Resources.LauNam), TrangThai =0},
+                new MonAn{ID_MonAn = 5,ID_LoaiMonAn =2,TenMonAn = "Ga nuong",ThanhTien =120000,AnhMonAn = ImgToByte(Properties.Resources.GaNuong), TrangThai =0},
+                new MonAn{ID_MonAn = 6,ID_LoaiMonAn =2,TenMonAn = "Bo nuong la lot",ThanhTien =130000,AnhMonAn = ImgToByte(Properties.Resources.BoNuongLaLot), TrangThai =0},
+                new MonAn{ID_MonAn = 7,ID_LoaiMonAn =2,TenMonAn = "Trung cut lon xao me",ThanhTien =80000,AnhMonAn = ImgToByte(Properties.Resources.TrungCutLon), TrangThai =0},
+                new MonAn{ID_MonAn = 8,ID_LoaiMonAn =2,TenMonAn = "Banh trang tron",ThanhTien =12000,AnhMonAn =ImgToByte(Properties.Resources.BanhTrangTron) , TrangThai =0},
+                new MonAn{ID_MonAn = 9,ID_LoaiMonAn =2,TenMonAn = "Ga xe",ThanhTien =110000,AnhMonAn = ImgToByte(Properties.Resources.TrungCutLon), TrangThai =0},
+                new MonAn{ID_MonAn = 10,ID_LoaiMonAn =2,TenMonAn = "Ga um cu chuoi",ThanhTien =135000,AnhMonAn = ImgToByte(Properties.Resources.GaUmChuoi), TrangThai =0},
+                new MonAn{ID_MonAn = 11,ID_LoaiMonAn =2,TenMonAn = "Bo um mang",ThanhTien =100000,AnhMonAn = ImgToByte(Properties.Resources.BoUmMang), TrangThai =0},
+                new MonAn{ID_MonAn = 12,ID_LoaiMonAn =2,TenMonAn = "ca loc um chuoi",ThanhTien =120000,AnhMonAn = ImgToByte(Properties.Resources.CaLocUmChuoi), TrangThai =0},
+                new MonAn{ID_MonAn = 13,ID_LoaiMonAn =2,TenMonAn = "Lau ca loc",ThanhTien =150000,AnhMonAn = ImgToByte(Properties.Resources.LauCaLoc), TrangThai =0},
+                new MonAn{ID_MonAn = 14,ID_LoaiMonAn =2,TenMonAn = "Lau thai",ThanhTien =150000,AnhMonAn = ImgToByte(Properties.Resources.LauThai), TrangThai =0},
+                new MonAn{ID_MonAn = 15,ID_LoaiMonAn =4,TenMonAn = "pepsi",ThanhTien =10000,AnhMonAn = ImgToByte(Properties.Resources.Pepsi), TrangThai =0},
+                new MonAn{ID_MonAn = 16,ID_LoaiMonAn =4,TenMonAn = "cocacola",ThanhTien =10000,AnhMonAn = ImgToByte(Properties.Resources.CocaCola), TrangThai =0},
+                new MonAn{ID_MonAn = 17,ID_LoaiMonAn =1,TenMonAn = "Rau tron",ThanhTien =100000,AnhMonAn = ImgToByte(Properties.Resources.RauTron), TrangThai =0},
+                new MonAn{ID_MonAn = 18,ID_LoaiMonAn =1,TenMonAn = "Dau khuon",ThanhTien =120000,AnhMonAn = ImgToByte(Properties.Resources.DauKhuon), TrangThai =0},
+                new MonAn{ID_MonAn = 19,ID_LoaiMonAn =1,TenMonAn = "Dau phung rang",ThanhTien =70000,AnhMonAn = ImgToByte(Properties.Resources.DauPhungRang), TrangThai =0},
+                new MonAn{ID_MonAn = 20,ID_LoaiMonAn =4,TenMonAn = "Tiger beer",ThanhTien =17000,AnhMonAn = ImgToByte(Properties.Resources.Tiger), TrangThai =0},
+                new MonAn{ID_MonAn = 21,ID_LoaiMonAn =4,TenMonAn = "Huda beer",ThanhTien =12000,AnhMonAn = ImgToByte(Properties.Resources.Huda), TrangThai =0},
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {
@@ -381,8 +381,8 @@ namespace Entity
                 new Kho{ID_ChiTietNguyenLieu=15,ID_NguyenLieu = 7,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(2),LuongNhapVao = 30,LuongTonKho = 30},
                 new Kho{ID_ChiTietNguyenLieu=16,ID_NguyenLieu = 8,ID_NhaCungCap = 5,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(30),LuongNhapVao = 30,LuongTonKho = 30},
                 new Kho{ID_ChiTietNguyenLieu=17,ID_NguyenLieu = 8,ID_NhaCungCap = 6,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(30),LuongNhapVao = 30,LuongTonKho = 30},
-                new Kho{ID_ChiTietNguyenLieu=18,ID_NguyenLieu = 9,ID_NhaCungCap = 6,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(365),LuongNhapVao = 30,LuongTonKho = 30},
-                new Kho{ID_ChiTietNguyenLieu=19,ID_NguyenLieu = 9,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(365),LuongNhapVao = 30,LuongTonKho = 30},
+                new Kho{ID_ChiTietNguyenLieu=18,ID_NguyenLieu = 9,ID_NhaCungCap = 6,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(365),LuongNhapVao = 30,LuongTonKho = 1},
+                new Kho{ID_ChiTietNguyenLieu=19,ID_NguyenLieu = 9,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(365),LuongNhapVao = 30,LuongTonKho = 2},
                 new Kho{ID_ChiTietNguyenLieu=20,ID_NguyenLieu = 10,ID_NhaCungCap = 5,NgayNhap = new DateTime(2022,05,18),NgayHetHan = new DateTime(2022,05,18).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
                 new Kho{ID_ChiTietNguyenLieu=21,ID_NguyenLieu = 10,ID_NhaCungCap = 7,NgayNhap = new DateTime(2022,05,20),NgayHetHan = new DateTime(2022,05,20).AddDays(7),LuongNhapVao = 30,LuongTonKho = 30},
 
@@ -425,6 +425,13 @@ namespace Entity
             {
                 new Voucher{MaVoucher = "ABC",GiaTriVoucher = "30%",HanMucSuDung = 0,MoTa = "Giam 30%",NgayHetHan = new DateTime(2022,12,01)}
             });
+        }
+        private byte[] ImgToByte(System.Drawing.Image img)
+        {
+            var ms = new MemoryStream();
+            img.Save(ms, img.RawFormat);
+            byte[] imgbyte = ms.ToArray();
+            return imgbyte;
         }
     }
 }

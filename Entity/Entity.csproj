@@ -73,6 +73,11 @@
     <Compile Include="NguyenLieu_View.cs" />
     <Compile Include="NhaCungCap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinNhaHang.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Voucher.cs" />
@@ -80,6 +85,75 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EchXao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoXao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BanhTrangTron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoNuongLaLot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GaNuong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GaXe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauNam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LongXaoNghe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrungCutLon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoUmMang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaLocUmChuoi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CocaCola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DauKhuon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DauPhungRang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GaUmChuoi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Huda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauCaLoc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauThai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pepsi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RauTron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tiger.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,6 +26,7 @@ namespace GUI.frmGUISeller
             dgvOrder.Columns["ID_MonAn"].Visible = false;
             dgvOrder.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             AddButtonDataGridView();
+            ShowDish("");
         }
 
         private void frmOrder_Load(object sender, EventArgs e)
@@ -86,13 +87,12 @@ namespace GUI.frmGUISeller
                 listMonAnViewDangDat.Add(new MonAn_View { ID_MonAn = MonAn.ID_MonAn, TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
             }
             BLLNVNH.Instance.UpdateTrangThaiMonAn(listMonAnViewDangDat);
-            ShowDish("");
             LoadDataGridView();
         }
         private void ShowDish(string txt)
         {
             RemoveDish();
-            List<MonAn> listMonAn = BLLNVNH.Instance.GetMonAn(IDLoaiMonAn, "", 1);
+            List<MonAn> listMonAn = BLLNVNH.Instance.GetMonAn(IDLoaiMonAn, txt, 1);
             int somon = listMonAn.Count;
             DishForOrdering[] dsh = new DishForOrdering[somon];
             int dem1 = 0;
@@ -176,7 +176,7 @@ namespace GUI.frmGUISeller
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, IDTable);
             else if (listMonAnViewDangDat.Count == 0 && listMonAnViewDaDat.Count == 0)
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, 0);
-            foreach (Ban i in BLLNVNH.Instance.GetAllBanByTang(1))
+            foreach (Ban i in BLL.BLLNVNH.Instance.GetAllBanByTang(1))
             {
                 Console.WriteLine(i.ID_Ban + " " + i.TinhTrangBan);
             }

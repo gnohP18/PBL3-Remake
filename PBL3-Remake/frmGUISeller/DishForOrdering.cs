@@ -2,6 +2,8 @@
 using System.IO;
 using System.Windows.Forms;
 using Entity;
+using GUI;
+
 namespace PBL3_Remake.frmGUISeller
 {
     public partial class DishForOrdering : UserControl
@@ -19,6 +21,7 @@ namespace PBL3_Remake.frmGUISeller
         {
             lblNameDish.Text = MonAn.TenMonAn.ToString();
             pBDish.Image = byteArrayToImage(MonAn.AnhMonAn);
+            pBDish.SizeMode = PictureBoxSizeMode.StretchImage;
             lblCost.Text = MonAn.ThanhTien.ToString();
         }
         public void SetLocation(int x, int y)
@@ -35,6 +38,12 @@ namespace PBL3_Remake.frmGUISeller
         }
         private void pBDish_Click(object sender, System.EventArgs e)
         {
+            if (MonAn.TrangThai == 0)
+            {
+                NoticeBox frm = new NoticeBox("Món ăn đã hết!!!");
+                frm.Show();
+                return;
+            }
             d(MonAn);
         }
     }

@@ -156,7 +156,39 @@ namespace BLL
             }
             return list;
         }
-
+        public List<string> GetAllTenLoaiNguyenLieu()
+        {
+            List<string> list = new List<string>();
+            DALQLNH dALQLNH = new DALQLNH();
+            foreach (LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
+            {
+                list.Add(i.TenLoaiNguyenLieu);
+            }
+            return list;
+        }
+        public List<string> GetAllTenNhaCungCap()
+        {
+            List<string> list = new List<string>();
+            DALQLNH dALQLNH = new DALQLNH();
+            foreach (NhaCungCap i in dALQLNH.NhaCungCaps)
+            {
+                list.Add(i.TenNhaCungCap);
+            }
+            return list;
+        }
+        
+        public List<string> GetListTenNguyenLieuByIdLoaiNguyenLieu(int ID_LoaiNguyeLieu)
+        {
+            List<string> data = new List<string>();
+            foreach (NguyenLieu i in dALQLNH.NguyenLieus)
+            {
+                if (i.ID_LoaiNguyenLieu == ID_LoaiNguyeLieu)
+                {
+                    data.Add(i.TenNguyenLieu);
+                }
+            }
+            return data;
+        }
         public int GetNewIDNguyenLieu()
         {
             int ID = 1;
@@ -182,6 +214,56 @@ namespace BLL
                 ID++;
             }
             return ID;
+        }
+
+        public int GetNewIDNhaCungCap()
+        {
+            int ID = 1;
+            foreach (NhaCungCap i in dALQLNH.NhaCungCaps)
+            {
+                if (ID != i.ID_NhaCungCap)
+                {
+                    return ID;
+                }
+                ID++;
+            }
+            return ID;
+        }
+
+        public void AddNewNhaCungCap(int IDNCC, string Name, string Address, string MaSoThue, string SDT)
+        {
+            dALQLNH.NhaCungCaps.Add(new NhaCungCap
+            {
+                ID_NhaCungCap = IDNCC,
+                TenNhaCungCap = Name,
+                DiaChi = Address,
+                MaSoThue = MaSoThue,
+                SoDienThoai = SDT
+            });
+            dALQLNH.SaveChanges();
+        }
+        public float GetLuongTonKhoByIDNguyenLieu(int ID_NguyenLieu)
+        {
+            float res = 0;
+            foreach (Kho i in dALQLNH.Khoes)
+            {
+                if (i.ID_NguyenLieu == ID_NguyenLieu)
+                {
+                    res = i.LuongTonKho;
+                }
+            }
+            return res;
+        }
+        public List<Kho> GetAllKho()
+        {
+            return dALQLNH.Khoes.ToList();
+        }
+
+        public void UpdateLuongNhapVaoVaLuongTonKho(Kho kho, float count)
+        {
+            kho.LuongNhapVao += count;
+            kho.LuongTonKho += count;
+            dALQLNH.SaveChanges();
         }
     }
 }

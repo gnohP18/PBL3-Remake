@@ -20,7 +20,7 @@ namespace GUI.frmGUIUserControl
         {
             pnFood.AutoScroll = true;
         }
-        private void SetFoodView(Panel pn, FoodInWareHouse food, int x, int y)
+        private void SetFoodView(Panel pn, CoursesInWareHouse food, int x, int y)
         {
             pn.Controls.Add(food);
             food.Location = new System.Drawing.Point(x, y);
@@ -34,11 +34,11 @@ namespace GUI.frmGUIUserControl
             List<MonAn> listMonAn = BLLNVNH.Instance.GetAllMonAn();
             int somon = listMonAn.Count;
             Console.WriteLine("So mon an " + somon);
-            FoodInWareHouse[] food = new FoodInWareHouse[somon];
+            CoursesInWareHouse[] food = new CoursesInWareHouse[somon];
             int dem1 = 0;
             foreach (MonAn i in listMonAn)
             {
-                food[dem1] = new FoodInWareHouse(i);
+                food[dem1] = new CoursesInWareHouse(i);
                 dem1++;
             }
             if (somon != 0)
@@ -99,6 +99,11 @@ namespace GUI.frmGUIUserControl
             RemoveFood();
         }
 
-
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+            AddNewCourseToWareHouse frm = new AddNewCourseToWareHouse();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
     }
 }

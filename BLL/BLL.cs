@@ -11,7 +11,7 @@ namespace BLL
         {
             dALQLNH = new DALQLNH();
         }
-        public Dictionary<int,float> GetThongTinLuongNguyenLieuHienTai()
+        public Dictionary<int, float> GetThongTinLuongNguyenLieuHienTai()
         {
             Dictionary<int, float> listThongTinLuongNguyenLieu = new Dictionary<int, float>();
             foreach (NguyenLieu i in dALQLNH.NguyenLieus)
@@ -32,7 +32,7 @@ namespace BLL
             }
             return listThongTinLuongNguyenLieu;
         }
-        public void UpdateTrangThaiMonAn( Dictionary<int,float> listThongTinLuongNguyenLieu , List<MonAn_View> ListMonAnViewLayRa = null)
+        public void UpdateTrangThaiMonAn(Dictionary<int, float> listThongTinLuongNguyenLieu, List<MonAn_View> ListMonAnViewLayRa = null)
         {
             if (ListMonAnViewLayRa == null || ListMonAnViewLayRa.Count == 0)
             {
@@ -91,6 +91,46 @@ namespace BLL
         public List<MonAn> GetAllMonAn()
         {
             return dALQLNH.MonAns.ToList();
+        }
+        public NguyenLieu GetNguyenLieuByTenNguyenLieu(string name)
+        {
+            return dALQLNH.NguyenLieus.Where(p => p.TenNguyenLieu == name).FirstOrDefault();
+        }
+        public int GetNewIDMonAn()
+        {
+            int ID = 1;
+            foreach (MonAn i in dALQLNH.MonAns)
+            {
+                if (ID != i.ID_MonAn)
+                {
+                    return ID;
+                }
+                ID++;
+            }
+            return ID;
+        }
+        public void AddNewMonAn(List<ChiTietNhapMonAn_View> lt, string TenMonAn, int ID_LoaiMonAn, int thanhtien, Byte[] img)
+        {
+            MonAn mon = new MonAn();
+            mon.ID_MonAn = GetNewIDMonAn();
+            mon.ID_LoaiMonAn = ID_LoaiMonAn;
+            mon.TenMonAn = TenMonAn;
+            mon.ThanhTien = thanhtien;
+            mon.AnhMonAn = img;
+            mon.TrangThai = 0;
+            dALQLNH.MonAns.Add(mon);
+            dALQLNH.SaveChanges();
+            foreach (ChiTietNhapMonAn_View i in lt)
+            {
+                dALQLNH.ChiTietMonAns.Add(new ChiTietMonAn
+                {
+                    ID_MonAn = mon.ID_MonAn,
+                    ID_NguyenLieu = i.ID_NguyenLieu,
+                    Luong = i.Luong,
+                });
+                dALQLNH.SaveChanges();
+
+            }
         }
     }
 }

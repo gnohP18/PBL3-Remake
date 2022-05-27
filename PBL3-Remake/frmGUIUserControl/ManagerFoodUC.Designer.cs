@@ -85,6 +85,7 @@
             this.btnAddFood.Size = new System.Drawing.Size(100, 70);
             this.btnAddFood.TabIndex = 0;
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // button2
             // 
@@ -182,8 +183,7 @@
             // 
             // ManagerFoodUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.pnFood);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

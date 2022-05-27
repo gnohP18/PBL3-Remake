@@ -127,6 +127,12 @@
     <Compile Include="frmGUIUserControl\AddMaterialToWareHouse.Designer.cs">
       <DependentUpon>AddMaterialToWareHouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\AddNewCourseToWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\AddNewCourseToWareHouse.Designer.cs">
+      <DependentUpon>AddNewCourseToWareHouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\AddNewManufacturer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,12 +150,6 @@
     </Compile>
     <Compile Include="frmGUIUserControl\BackupUC.Designer.cs">
       <DependentUpon>BackupUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGUIUserControl\CourseInWareHouse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGUIUserControl\CourseInWareHouse.Designer.cs">
-      <DependentUpon>CourseInWareHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\DetailEmployee.cs">
       <SubType>Form</SubType>
@@ -169,11 +169,11 @@
     <Compile Include="frmGUIUserControl\ExpiredMaterial.Designer.cs">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUserControl\FoodInWareHouse.cs">
+    <Compile Include="frmGUIUserControl\CoursesInWareHouse.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmGUIUserControl\FoodInWareHouse.Designer.cs">
-      <DependentUpon>FoodInWareHouse.cs</DependentUpon>
+    <Compile Include="frmGUIUserControl\CoursesInWareHouse.Designer.cs">
+      <DependentUpon>CoursesInWareHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\HelpUC.cs">
       <SubType>UserControl</SubType>
@@ -258,6 +258,9 @@
     <EmbeddedResource Include="frmGUIUserControl\AddMaterialToWareHouse.resx">
       <DependentUpon>AddMaterialToWareHouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\AddNewCourseToWareHouse.resx">
+      <DependentUpon>AddNewCourseToWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,8 +279,8 @@
     <EmbeddedResource Include="frmGUIUserControl\ExpiredMaterial.resx">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\FoodInWareHouse.resx">
-      <DependentUpon>FoodInWareHouse.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUIUserControl\CoursesInWareHouse.resx">
+      <DependentUpon>CoursesInWareHouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\HelpUC.resx">
       <DependentUpon>HelpUC.cs</DependentUpon>

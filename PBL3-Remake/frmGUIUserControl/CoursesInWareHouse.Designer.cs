@@ -1,6 +1,6 @@
 ﻿namespace GUI.frmGUIUserControl
 {
-    partial class FoodInWareHouse
+    partial class CoursesInWareHouse
     {
         /// <summary> 
         /// Required designer variable.
@@ -64,16 +64,16 @@
             this.lblNameFood.TabIndex = 2;
             this.lblNameFood.Text = "A";
             // 
-            // FoodInWareHouse
+            // CoursesInWareHouse
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.lblNameFood);
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.pBFood);
-            this.Name = "FoodInWareHouse";
+            this.Name = "CoursesInWareHouse";
             this.Size = new System.Drawing.Size(200, 150);
-            this.Load += new System.EventHandler(this.FoodInWareHouse_Load);
+            this.Load += new System.EventHandler(this.CoursesInWareHouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBFood)).EndInit();
             this.ResumeLayout(false);
 

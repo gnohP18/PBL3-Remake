@@ -21,15 +21,17 @@ namespace GUI.frmGUIUserControl
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(txtNameNewManufacturer.Text != "" && txtAddressManufacture.Text != "" && txtPhoneNumberManufacture.Text != "" && txtTaxCode.Text != "")
+            if (txtNameNewManufacturer.Text != "" && txtAddressManufacture.Text != "" && txtPhoneNumberManufacture.Text != "" && txtTaxCode.Text != "")
             {
                 BLLQLNH.Instance.AddNewNhaCungCap(BLLQLNH.Instance.GetNewIDNhaCungCap(), txtNameNewManufacturer.Text, txtAddressManufacture.Text, txtTaxCode.Text, txtPhoneNumberManufacture.Text);
-               
-                MessageBox.Show("Add new manufacturer successfully");
+
+                GUI.NoticeBox box = new NoticeBox("Add new manufacturer successfully");
+                box.Show();
             }
             else
             {
-                MessageBox.Show("Please fill fully information!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                GUI.NoticeBox box = new NoticeBox("Please fill fully information!");
+                box.Show();
             }
         }
 

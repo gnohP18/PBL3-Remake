@@ -24,6 +24,7 @@ namespace Entity
         public float LuongTonKho { get; set; }
         public virtual NguyenLieu NguyenLieu { get; set; }
         public virtual NhaCungCap NhaCungCap { get; set; }
+        
 
     }
 }

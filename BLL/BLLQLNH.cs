@@ -156,39 +156,7 @@ namespace BLL
             }
             return list;
         }
-        public List<string> GetAllTenLoaiNguyenLieu()
-        {
-            List<string> list = new List<string>();
-            DALQLNH dALQLNH = new DALQLNH();
-            foreach (LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
-            {
-                list.Add(i.TenLoaiNguyenLieu);
-            }
-            return list;
-        }
-        public List<string> GetAllTenNhaCungCap()
-        {
-            List<string> list = new List<string>();
-            DALQLNH dALQLNH = new DALQLNH();
-            foreach (NhaCungCap i in dALQLNH.NhaCungCaps)
-            {
-                list.Add(i.TenNhaCungCap);
-            }
-            return list;
-        }
-        
-        public List<string> GetListTenNguyenLieuByIdLoaiNguyenLieu(int ID_LoaiNguyeLieu)
-        {
-            List<string> data = new List<string>();
-            foreach (NguyenLieu i in dALQLNH.NguyenLieus)
-            {
-                if (i.ID_LoaiNguyenLieu == ID_LoaiNguyeLieu)
-                {
-                    data.Add(i.TenNguyenLieu);
-                }
-            }
-            return data;
-        }
+
         public int GetNewIDNguyenLieu()
         {
             int ID = 1;
@@ -242,18 +210,7 @@ namespace BLL
             });
             dALQLNH.SaveChanges();
         }
-        public float GetLuongTonKhoByIDNguyenLieu(int ID_NguyenLieu)
-        {
-            float res = 0;
-            foreach (Kho i in dALQLNH.Khoes)
-            {
-                if (i.ID_NguyenLieu == ID_NguyenLieu)
-                {
-                    res = i.LuongTonKho;
-                }
-            }
-            return res;
-        }
+
         public List<Kho> GetAllKho()
         {
             return dALQLNH.Khoes.ToList();
@@ -263,6 +220,20 @@ namespace BLL
         {
             kho.LuongNhapVao += count;
             kho.LuongTonKho += count;
+            dALQLNH.SaveChanges();
+        }
+        public void AddMaterialToWareHouse(Kho i)
+        {
+            dALQLNH.Khoes.Add(new Kho
+            {
+                ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu,
+                ID_NguyenLieu = i.ID_NguyenLieu,
+                ID_NhaCungCap = i.ID_NhaCungCap,
+                NgayNhap = i.NgayNhap,
+                NgayHetHan = i.NgayHetHan,
+                LuongNhapVao = i.LuongNhapVao,
+                LuongTonKho = i.LuongTonKho
+            });
             dALQLNH.SaveChanges();
         }
     }

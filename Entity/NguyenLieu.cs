@@ -30,6 +30,10 @@ namespace Entity
         public virtual ICollection<ChiTietNhaCungCap> ChiTietNhaCungCaps { get; set; }
         public virtual ICollection<Kho> Khoes { get; set; }
         public virtual ICollection<ChiTietMonAn> ChiTietMonAns { get; set; }
+        public override string ToString()
+        {
+            return this.TenNguyenLieu;
+        }
 
     }
 }

@@ -20,5 +20,9 @@ namespace Entity
         public int ID_LoaiNguyenLieu { get; set; }
         public string TenLoaiNguyenLieu { get; set; }
         public virtual ICollection<NguyenLieu> NguyenLieus { get; set; }
+        public override string ToString()
+        {
+            return this.TenLoaiNguyenLieu;
+        }
     }
 }

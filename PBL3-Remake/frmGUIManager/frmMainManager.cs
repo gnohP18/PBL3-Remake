@@ -36,8 +36,8 @@ namespace GUI.frmGUIManager
         }
         private void frmMainManager_Load(object sender, EventArgs e)
         {
-            SetupUC(backupUC);
             SetupUC(employeesUC);
+            SetupUC(helpUC);
             SetupUC(statisticUC);
             SetupUC(wareHouseUC);
             SetupUC(managerFoodUC);
@@ -67,21 +67,21 @@ namespace GUI.frmGUIManager
             statisticUC.BringToFront();
         }
 
-        private void btnBackup_Click(object sender, EventArgs e)
-        {
-            SetUIForButton(sender);
-            managerFoodUC.BringToFront();
-        }
-
         private void btnHelp_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //helpUC.BringToFront();
+            helpUC.BringToFront();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            SetUIForButton(sender);
+            managerFoodUC.BringToFront();
         }
     }
 }

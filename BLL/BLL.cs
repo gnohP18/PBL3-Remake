@@ -129,8 +129,11 @@ namespace BLL
                     Luong = i.Luong,
                 });
                 dALQLNH.SaveChanges();
-
             }
+        }
+        public List<User> GetAllUser()
+        {
+            return dALQLNH.Users.ToList();
         }
     }
 }

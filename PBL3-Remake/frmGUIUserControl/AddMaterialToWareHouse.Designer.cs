@@ -46,6 +46,7 @@
             this.cbbManufacturer = new System.Windows.Forms.ComboBox();
             this.cbbMaterialName = new System.Windows.Forms.ComboBox();
             this.cbbKindOfMaterial = new System.Windows.Forms.ComboBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnClose1 = new System.Windows.Forms.Button();
             this.btnAddManufacturer = new System.Windows.Forms.Button();
             this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -206,7 +206,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
             this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.dtpImportDay);
             this.panel1.Controls.Add(this.cbbManufacturer);
@@ -222,15 +222,16 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(-1, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 499);
+            this.panel1.Size = new System.Drawing.Size(459, 380);
             this.panel1.TabIndex = 26;
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(37, 276);
+            this.txtQuantity.Location = new System.Drawing.Point(37, 235);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(212, 22);
             this.txtQuantity.TabIndex = 18;
@@ -238,7 +239,7 @@
             // dtpImportDay
             // 
             this.dtpImportDay.CustomFormat = "dd/MM/yyyy";
-            this.dtpImportDay.Location = new System.Drawing.Point(37, 328);
+            this.dtpImportDay.Location = new System.Drawing.Point(37, 287);
             this.dtpImportDay.Name = "dtpImportDay";
             this.dtpImportDay.Size = new System.Drawing.Size(212, 22);
             this.dtpImportDay.TabIndex = 17;
@@ -247,7 +248,7 @@
             // 
             this.cbbManufacturer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbbManufacturer.FormattingEnabled = true;
-            this.cbbManufacturer.Location = new System.Drawing.Point(37, 213);
+            this.cbbManufacturer.Location = new System.Drawing.Point(37, 172);
             this.cbbManufacturer.Name = "cbbManufacturer";
             this.cbbManufacturer.Size = new System.Drawing.Size(212, 24);
             this.cbbManufacturer.TabIndex = 16;
@@ -255,7 +256,7 @@
             // cbbMaterialName
             // 
             this.cbbMaterialName.FormattingEnabled = true;
-            this.cbbMaterialName.Location = new System.Drawing.Point(37, 159);
+            this.cbbMaterialName.Location = new System.Drawing.Point(37, 118);
             this.cbbMaterialName.Name = "cbbMaterialName";
             this.cbbMaterialName.Size = new System.Drawing.Size(212, 24);
             this.cbbMaterialName.TabIndex = 16;
@@ -263,21 +264,38 @@
             // cbbKindOfMaterial
             // 
             this.cbbKindOfMaterial.FormattingEnabled = true;
-            this.cbbKindOfMaterial.Location = new System.Drawing.Point(37, 106);
+            this.cbbKindOfMaterial.Location = new System.Drawing.Point(37, 65);
             this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
             this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 24);
             this.cbbKindOfMaterial.TabIndex = 16;
             this.cbbKindOfMaterial.SelectedIndexChanged += new System.EventHandler(this.cbbKindOfMaterial_SelectedIndexChanged);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnRefresh.FlatAppearance.BorderSize = 2;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.btnRefresh.Location = new System.Drawing.Point(173, 331);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(123, 32);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // btnClose1
             // 
-            this.btnClose1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnClose1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             this.btnClose1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnClose1.FlatAppearance.BorderSize = 2;
             this.btnClose1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose1.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClose1.Location = new System.Drawing.Point(336, 386);
+            this.btnClose1.ForeColor = System.Drawing.Color.Black;
+            this.btnClose1.Location = new System.Drawing.Point(328, 331);
             this.btnClose1.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose1.Name = "btnClose1";
             this.btnClose1.Size = new System.Drawing.Size(123, 32);
@@ -288,13 +306,13 @@
             // 
             // btnAddManufacturer
             // 
-            this.btnAddManufacturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddManufacturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             this.btnAddManufacturer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnAddManufacturer.FlatAppearance.BorderSize = 2;
             this.btnAddManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddManufacturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddManufacturer.Location = new System.Drawing.Point(257, 210);
+            this.btnAddManufacturer.ForeColor = System.Drawing.Color.Black;
+            this.btnAddManufacturer.Location = new System.Drawing.Point(257, 169);
             this.btnAddManufacturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddManufacturer.Name = "btnAddManufacturer";
             this.btnAddManufacturer.Size = new System.Drawing.Size(156, 27);
@@ -305,13 +323,13 @@
             // 
             // btnAddMaterialToWareHouse
             // 
-            this.btnAddMaterialToWareHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddMaterialToWareHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             this.btnAddMaterialToWareHouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnAddMaterialToWareHouse.FlatAppearance.BorderSize = 2;
             this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(37, 386);
+            this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.Color.Black;
+            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(29, 331);
             this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
             this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(123, 32);
@@ -324,7 +342,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label4.Location = new System.Drawing.Point(87, 8);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -336,8 +354,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label6.Location = new System.Drawing.Point(33, 301);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label6.Location = new System.Drawing.Point(33, 260);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 23);
@@ -348,8 +366,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(33, 250);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label11.Location = new System.Drawing.Point(33, 209);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 23);
@@ -360,8 +378,8 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(33, 186);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label7.Location = new System.Drawing.Point(33, 145);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 23);
@@ -372,8 +390,8 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(33, 80);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label8.Location = new System.Drawing.Point(33, 39);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 23);
@@ -384,36 +402,18 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(33, 133);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label9.Location = new System.Drawing.Point(33, 92);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(139, 23);
             this.label9.TabIndex = 4;
             this.label9.Text = "Material\'s name";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnRefresh.FlatAppearance.BorderSize = 2;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.Location = new System.Drawing.Point(181, 386);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(123, 32);
-            this.btnRefresh.TabIndex = 15;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // AddMaterialToWareHouse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 503);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(459, 380);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

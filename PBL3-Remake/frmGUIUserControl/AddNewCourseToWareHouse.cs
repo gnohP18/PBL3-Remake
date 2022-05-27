@@ -128,7 +128,8 @@ namespace GUI.frmGUIUserControl
             }
             if (CheckExisted == false)
                 listNguyenLieuDangThem.Add(nhap);
-            //dgvMaterial.DataSource = listNguyenLieuDangThem;
+            cbbKindOfIngredinet.SelectedIndex = -1;
+            cbbIngrendients.SelectedIndex = -1;
             SetDataGridView();
         }
 
@@ -145,18 +146,36 @@ namespace GUI.frmGUIUserControl
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            BLL.BLLQLNH.Instance.AddNewMonAn(listNguyenLieuDangThem, txtNameCourse.Text, ID_LoaiMonAn, Convert.ToInt32(txtThanhTien.Text), ImgToByte(img));
-            Console.WriteLine(txtNameCourse.Text);
-            Console.WriteLine(txtThanhTien.Text);
-            Console.WriteLine(txtAmount.Text);
-            Console.WriteLine(cbbIngrendients.SelectedItem.ToString());
-            Console.WriteLine(cbbKindOfIngredinet.SelectedItem.ToString());
-            Console.WriteLine((cbbLoaiMonAn.SelectedIndex + 1).ToString());
-            foreach (ChiTietNhapMonAn_View i in listNguyenLieuDangThem)
+            if (txtNameCourse.Text != "" || txtThanhTien.Text != "")
             {
-                Console.WriteLine("mon " + i.ID_MonAn + "ID_NguyenLieu" + i.ID_NguyenLieu + " Luong" + i.Luong);
+                BLL.BLLQLNH.Instance.AddNewMonAn(listNguyenLieuDangThem, txtNameCourse.Text, ID_LoaiMonAn, Convert.ToInt32(txtThanhTien.Text), ImgToByte(img));
+                Console.WriteLine(txtNameCourse.Text);
+                Console.WriteLine(txtThanhTien.Text);
+                Console.WriteLine(txtAmount.Text);
+                Console.WriteLine(cbbIngrendients.SelectedItem.ToString());
+                Console.WriteLine(cbbKindOfIngredinet.SelectedItem.ToString());
+                Console.WriteLine((cbbLoaiMonAn.SelectedIndex + 1).ToString());
+                foreach (ChiTietNhapMonAn_View i in listNguyenLieuDangThem)
+                {
+                    Console.WriteLine("mon " + i.ID_MonAn + "ID_NguyenLieu" + i.ID_NguyenLieu + " Luong" + i.Luong);
+                }
+                this.Close();
             }
-            this.Close();
+            else
+            {
+                NoticeBox frm;
+                string mess = "";
+                if (txtNameCourse.Text == "")
+                {
+                    mess = "Please fill the name of course!";
+                }
+                else if (txtThanhTien.Text == "")
+                {
+                    mess = "Please fill the price of course!";
+                }
+                frm = new NoticeBox(mess);
+                frm.Show();
+            }
         }
 
         private void cbbKindOfIIngredinet_SelectedIndexChanged(object sender, EventArgs e)
@@ -172,6 +191,14 @@ namespace GUI.frmGUIUserControl
         private void cbbLoaiMonAn_SelectedIndexChanged(object sender, EventArgs e)
         {
             ID_LoaiMonAn = cbbLoaiMonAn.SelectedIndex + 1;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //int index=Convert.ToInt32(dgvMaterial.CurrentRow.Cells[2].Value.ToString());
+            int index = dgvMaterial.CurrentRow.Index;
+            listNguyenLieuDangThem.RemoveAt(index);
+            SetDataGridView();
         }
     }
 }

@@ -37,5 +37,15 @@ namespace GUI.frmGUIUserControl
         {
             SetUIForButton(sender);
         }
+
+        private void EmployeesUC_Load(object sender, System.EventArgs e)
+        {
+            dgvInforEmployee.DataSource = BLL.BLLQLNH.Instance.GetAllUser();
+            for (int i = 9; i <= 13; i++)
+            {
+                dgvInforEmployee.Columns[i].Visible = false;
+            }
+            dgvInforEmployee.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        }
     }
 }

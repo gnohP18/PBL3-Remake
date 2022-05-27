@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvInforEmployee = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvInforEmployee = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInforEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInforEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,17 +49,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 700);
             this.panel1.TabIndex = 0;
-            // 
-            // dgvInforEmployee
-            // 
-            this.dgvInforEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInforEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInforEmployee.Location = new System.Drawing.Point(100, 0);
-            this.dgvInforEmployee.Name = "dgvInforEmployee";
-            this.dgvInforEmployee.RowHeadersWidth = 51;
-            this.dgvInforEmployee.RowTemplate.Height = 24;
-            this.dgvInforEmployee.Size = new System.Drawing.Size(1100, 700);
-            this.dgvInforEmployee.TabIndex = 1;
             // 
             // button1
             // 
@@ -102,6 +91,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvInforEmployee
+            // 
+            this.dgvInforEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInforEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInforEmployee.Location = new System.Drawing.Point(100, 0);
+            this.dgvInforEmployee.Name = "dgvInforEmployee";
+            this.dgvInforEmployee.RowHeadersWidth = 51;
+            this.dgvInforEmployee.RowTemplate.Height = 24;
+            this.dgvInforEmployee.Size = new System.Drawing.Size(1100, 700);
+            this.dgvInforEmployee.TabIndex = 1;
+            // 
             // EmployeesUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -111,9 +111,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "EmployeesUC";
             this.Size = new System.Drawing.Size(1200, 700);
+            this.Load += new System.EventHandler(this.EmployeesUC_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInforEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInforEmployee)).EndInit();
             this.ResumeLayout(false);
 
         }

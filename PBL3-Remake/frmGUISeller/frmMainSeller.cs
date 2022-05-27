@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Entity;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,6 +9,8 @@ namespace GUI.frmGUISeller
 {
     public partial class frmMainSeller : Form
     {
+        private int Floor = 0;
+        private int statustb = -1;
         public frmMainSeller()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace GUI.frmGUISeller
             this.Height = 700;
             this.StartPosition = FormStartPosition.CenterScreen;
             pnTable.AutoScroll = true;
-            LoadAllBanWithTang(1);
+            LoadBanByTinhTrangBanVaTang(-1,1);
         }
 
         void SetCbb()
@@ -28,40 +31,27 @@ namespace GUI.frmGUISeller
             cbbStatusTable.Items.Add("All");
             cbbStatusTable.Items.Add("Emty");
             cbbStatusTable.Items.Add("Busy");
-            //cbbStatusDish.Items.Add("All");
             cbbStatusDish.Items.Add("No ready");
             cbbStatusDish.Items.Add("Done");
         }
 
-        private int Floor = 0;
-        private bool statustb;
-        void SetTable(Panel pn, TableForOrdering tb, int id, int fl, bool st)
+        
+        void SetTable(Panel pn, TableForOrdering tb)
         {
             tb.Width = 250;
             tb.Height = 200;
             pn.Controls.Add(tb);
-            tb.IDTable = id;
-            tb.Floor = fl;
-            tb.statusTable = st;
-            tb.GUITable();
         }
-
-        void LoadAllBanWithTang(int fl)
+        void LoadBanByTinhTrangBanVaTang(int st, int fl)
         {
-            int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(true, fl) + BLLNVNH.Instance.NumberOfStatusAndFloor(false, fl);
-            Console.WriteLine("Soban " + soban);
+            List<Ban> listBan = BLLNVNH.Instance.GetBanByTinhTrangBanVaTang(st, fl);
+            int soban = listBan.Count;
             TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
-            foreach (Ban i in BLLNVNH.Instance.GetAllBanByTang(fl))
+            foreach (Ban i in listBan)
             {
-                tb[dem1] = new TableForOrdering();
-                tb[dem1].IDTable = i.ID_Ban;
-                tb[dem1].NameTable = i.TenBan;
-                tb[dem1].Floor = i.Tang;
+                tb[dem1] = new TableForOrdering(i);
                 int ttb = i.TinhTrangBan;
-                if (ttb == 0)
-                    tb[dem1].statusTable = false;
-                else tb[dem1].statusTable = true;
                 dem1++;
             }
             int soluongban = soban;
@@ -86,53 +76,7 @@ namespace GUI.frmGUISeller
                     int thuong = Convert.ToInt32(i / 4);
                     Ly = 25 + 260 * thuong;
                     tb[i].SetLocation(Lx, Ly);
-                    //Console.WriteLine(tb[i].IDTable + " " + Ly + " " + Lx);
-                    SetTable(pnTable, tb[i], tb[i].IDTable, Floor, tb[i].statusTable);
-                }
-            }
-        }
-
-        void LoadBanWithTinhTrangBanVaTang(bool st, int fl)
-        {
-            int soban = BLLNVNH.Instance.NumberOfStatusAndFloor(st, fl);
-            TableForOrdering[] tb = new TableForOrdering[soban];
-            int dem1 = 0;
-            foreach (Ban i in BLLNVNH.Instance.GetAllBanByTinhTrangBanVaTang(st, fl))
-            {
-                tb[dem1] = new TableForOrdering();
-                tb[dem1].IDTable = i.ID_Ban;
-                tb[dem1].NameTable = i.TenBan;
-                tb[dem1].Floor = i.Tang;
-                int ttb = i.TinhTrangBan;
-                if (ttb == 0)
-                    tb[dem1].statusTable = false;
-                else tb[dem1].statusTable = true;
-                dem1++;
-            }
-            int soluongban = soban;
-            if (soluongban != 0)
-            {
-                for (int i = 0; i < tb.Length; i++)
-                {
-                    int Lx = 0, Ly = 0;
-                    if (i % 4 == 0) Lx = 20;
-                    else if (i % 4 == 1)
-                    {
-                        Lx = 330;
-                    }
-                    else if (i % 4 == 2)
-                    {
-                        Lx = 630;
-                    }
-                    else if (i % 4 == 3)
-                    {
-                        Lx = 930;
-                    }
-                    int thuong = Convert.ToInt32(i / 4);
-                    Ly = 25 + 260 * thuong;
-                    tb[i].SetLocation(Lx, Ly);
-                    //Console.WriteLine(tb[i].IDTable + " " + Ly + " " + Lx);
-                    SetTable(pnTable, tb[i], tb[i].IDTable, Floor, tb[i].statusTable);
+                    SetTable(pnTable, tb[i]);
                 }
             }
         }
@@ -144,34 +88,35 @@ namespace GUI.frmGUISeller
         {
             Floor = 1;
             RemoveTable();
-            LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+            LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             Floor = 2;
             RemoveTable();
-            LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+            LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
 
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbStatusTable.SelectedIndex == 1)
             {
-                statustb = true;
+                statustb = 0;
                 RemoveTable();
-                LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+                LoadBanByTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatusTable.SelectedIndex == 2)
             {
-                statustb = false;
+                statustb = 1;
                 RemoveTable();
-                LoadBanWithTinhTrangBanVaTang(statustb, Floor);
+                LoadBanByTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatusTable.SelectedIndex == 0)
             {
+                statustb = -1;
                 RemoveTable();
-                LoadAllBanWithTang(Floor);
+                LoadBanByTinhTrangBanVaTang(statustb, Floor);
             }
         }
 
@@ -182,7 +127,6 @@ namespace GUI.frmGUISeller
         DataGridView dgvStatusDish;
         private void LoadDishByStatusDish(int st)
         {
-            //DataGridView 
             dgvStatusDish = new DataGridView();
             pnTable.Controls.Add(dgvStatusDish);
             dgvStatusDish.Dock = DockStyle.Fill;
@@ -216,8 +160,6 @@ namespace GUI.frmGUISeller
                 LoadDishByStatusDish(0);
             else if (cbbStatusDish.SelectedIndex == 1)
                 LoadDishByStatusDish(1);
-            //else if (cbbStatusDish.SelectedIndex == 0)
-            //  LoadDishByStatusDish(3);
         }
         private void dgvStatusDish_CellsClick(object sender, DataGridViewCellEventArgs e)
         {

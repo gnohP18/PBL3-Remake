@@ -32,7 +32,7 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtIDCollabTable = new System.Windows.Forms.TextBox();
+            this.cboBan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,24 +75,24 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtIDCollabTable
+            // cboBan
             // 
-            this.txtIDCollabTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
-            this.txtIDCollabTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDCollabTable.Font = new System.Drawing.Font("Berlin Sans FB", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDCollabTable.ForeColor = System.Drawing.Color.Black;
-            this.txtIDCollabTable.Location = new System.Drawing.Point(389, 85);
-            this.txtIDCollabTable.Name = "txtIDCollabTable";
-            this.txtIDCollabTable.Size = new System.Drawing.Size(100, 48);
-            this.txtIDCollabTable.TabIndex = 8;
-            this.txtIDCollabTable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cboBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
+            this.cboBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBan.ForeColor = System.Drawing.Color.Black;
+            this.cboBan.FormattingEnabled = true;
+            this.cboBan.IntegralHeight = false;
+            this.cboBan.Location = new System.Drawing.Point(344, 91);
+            this.cboBan.Name = "cboBan";
+            this.cboBan.Size = new System.Drawing.Size(143, 59);
+            this.cboBan.TabIndex = 9;
             // 
             // frmCollaborTable
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(600, 250);
-            this.Controls.Add(this.txtIDCollabTable);
+            this.Controls.Add(this.cboBan);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.pictureBox1);
@@ -110,6 +110,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox txtIDCollabTable;
+        private System.Windows.Forms.ComboBox cboBan;
     }
 }

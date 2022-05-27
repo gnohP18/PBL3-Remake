@@ -20,26 +20,15 @@ namespace BLL
         {
 
         }
-        public int NumberOfStatusAndFloor(bool st, int fl)
-        {
-            int dem = 0;
-            if (st)
-                dem = dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).Count();
-            else
-                dem = dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).Count();
-            return dem;
-        }
 
-        public List<Ban> GetAllBanByTang(int fl)
+        public List<Ban> GetBanByTinhTrangBanVaTang(int st, int fl)
         {
-            return dALQLNH.Bans.Where(p => p.Tang == fl).ToList();
-        }
-        public List<Ban> GetAllBanByTinhTrangBanVaTang(bool st, int fl)
-        {
-            if (st)
-                return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).ToList();
-            else
+            if (st == -1)
+                return dALQLNH.Bans.Where(p => p.Tang == fl ).ToList();
+            else if(st == 0)
                 return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).ToList();
+            else
+                return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).ToList();
         }
         public Ban GetBanByID_Ban(int id)
         {
@@ -48,10 +37,6 @@ namespace BLL
         public List<MonAn> GetAllDishByIDDishAndIDKindOfDish(int idmonan, int idloaimonan)
         {
             return dALQLNH.MonAns.Where(p => (p.ID_MonAn == idmonan && p.ID_LoaiMonAn == idloaimonan)).ToList();
-        }
-        private List<Ban> GetAllBan()
-        {
-            return dALQLNH.Bans.ToList();
         }
 
         public List<string> GetKindOfFood()
@@ -144,7 +129,7 @@ namespace BLL
             dALQLNH.SaveChanges();
         }
 
-        public void FindCollabTable(Ban tb, int ttban)
+        public void SetCollabTable(Ban tb, int ttban)
         {
             if (tb.ID_Ban == tb.TinhTrangBan || tb.TinhTrangBan == 0)
             {
@@ -154,7 +139,7 @@ namespace BLL
             }
             else if (tb.ID_Ban != tb.TinhTrangBan)
             {
-                FindCollabTable(GetBanByID_Ban(tb.TinhTrangBan), ttban);
+                SetCollabTable(GetBanByID_Ban(tb.TinhTrangBan), ttban);
             }
         }
         public string GetAllCollabTable(Ban tb, int ttban, string txt)

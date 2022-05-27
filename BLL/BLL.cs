@@ -11,7 +11,7 @@ namespace BLL
         {
             dALQLNH = new DALQLNH();
         }
-        public void UpdateTrangThaiMonAn(List<MonAn_View> ListMonAnViewLayRa = null)
+        public Dictionary<int,float> GetThongTinLuongNguyenLieuHienTai()
         {
             Dictionary<int, float> listThongTinLuongNguyenLieu = new Dictionary<int, float>();
             foreach (NguyenLieu i in dALQLNH.NguyenLieus)
@@ -30,6 +30,10 @@ namespace BLL
                     }
                 }
             }
+            return listThongTinLuongNguyenLieu;
+        }
+        public void UpdateTrangThaiMonAn( Dictionary<int,float> listThongTinLuongNguyenLieu , List<MonAn_View> ListMonAnViewLayRa = null)
+        {
             if (ListMonAnViewLayRa == null || ListMonAnViewLayRa.Count == 0)
             {
                 var parentGroupCTMA = dALQLNH.ChiTietMonAns.GroupBy(s => s.ID_MonAn);
@@ -56,16 +60,9 @@ namespace BLL
                     foreach (ChiTietMonAn i in list)
                     {
                         listThongTinLuongNguyenLieu[i.ID_NguyenLieu] -= i.Luong * monAn_View.SoLuong;
-                        List<ChiTietMonAn> chiTietMonAns = dALQLNH.ChiTietMonAns.Where(s => s.ID_NguyenLieu == i.ID_NguyenLieu).ToList();
-                        foreach (ChiTietMonAn j in chiTietMonAns)
-                        {
-                            if (j.Luong > listThongTinLuongNguyenLieu[i.ID_NguyenLieu])
-                            {
-                                dALQLNH.MonAns.Find(j.ID_MonAn).TrangThai = 0;
-                            }
-                        }
                     }
                 }
+                UpdateTrangThaiMonAn(listThongTinLuongNguyenLieu);
             }
             dALQLNH.SaveChanges();
         }

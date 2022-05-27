@@ -1,32 +1,31 @@
 ﻿using PBL3_Remake.Properties;
 using System.Drawing;
 using System.Windows.Forms;
-
+using Entity;
 
 namespace GUI.frmGUISeller
 {
     public partial class TableForOrdering : UserControl
     {
-        public TableForOrdering()
+        public TableForOrdering(Ban ban)
         {
             InitializeComponent();
+            this.ban = ban;
+            GUITable();
         }
-        public int IDTable { get; set; }
-        public string NameTable { get; set; }
-        public int Floor { get; set; }
-        public bool statusTable { get; set; }
+        Ban ban;
         Bitmap pGreen = Resources.checkedGreen;
         Bitmap pRed = Resources.uncheckedRed;
         public void GUITable()
         {
-            lblFloorNumber.Text = Floor.ToString();
-            lblNameTable.Text = NameTable.ToString();
-            lblIDTable.Text = IDTable.ToString();
-            if (statusTable)
+            lblFloorNumber.Text = ban.Tang.ToString();
+            lblNameTable.Text = ban.TenBan;
+            lblIDTable.Text = ban.ID_Ban.ToString();
+            if (ban.TinhTrangBan == 0)
             {
                 pBStatusTable.Image = Resources.checkedGreen;
             }
-            else if (statusTable == false)
+            else 
             {
                 pBStatusTable.Image = Resources.uncheckedRed;
             }
@@ -38,14 +37,14 @@ namespace GUI.frmGUISeller
 
         private void btnMenuOrder_Click(object sender, System.EventArgs e)
         {
-            frmOrder frm = new frmOrder(IDTable);
+            frmOrder frm = new frmOrder(ban.ID_Ban);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
 
         private void btnPay_Click(object sender, System.EventArgs e)
         {
-            frmPay frm = new frmPay(IDTable);
+            frmPay frm = new frmPay(ban.ID_Ban);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

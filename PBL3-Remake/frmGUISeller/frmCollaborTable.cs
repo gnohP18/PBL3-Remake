@@ -11,7 +11,6 @@ namespace PBL3_Remake.frmGUISeller
         public frmCollaborTable(Ban tb)
         {
             ban = tb;
-
             InitializeComponent();
         }
 
@@ -21,12 +20,7 @@ namespace PBL3_Remake.frmGUISeller
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
-            IDCollabTable = Convert.ToInt32(txtIDCollabTable.Text);
-            BLL.BLLNVNH.Instance.FindCollabTable(ban, IDCollabTable);
-            //foreach (Ban i in BLL.BLLNVNH.Instance.GetAllBanByTang(2))
-            //{
-            //    Console.WriteLine(i.ID_Ban + " " + i.TinhTrangBan);
-            //}
+            BLL.BLLNVNH.Instance.SetCollabTable(ban, IDCollabTable);
             this.Close();
         }
     }

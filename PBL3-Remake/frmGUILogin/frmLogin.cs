@@ -29,18 +29,15 @@ namespace GUI.frmGUILogin
             {
                 frmMainSeller frm = new frmMainSeller();
                 frm.Show();
-                //this.Close();
             }
             else if (radManager.Checked)
             {
                 if (BLLQLNH.Instance.checkLoginManager(txtUsername.Text, txtPassword.Text) == false)
-                {
-                    //System.Windows.Forms.MessageBox.Show("Login information is not correct!!");
+                {;
                     NoticeBox nt = new NoticeBox("Login information is not correct!!");
                     nt.Show();
                     return;
                 }
-                //this.Visible = false;
                 frmMainManager frm = new frmMainManager();
                 frm.Show();
 

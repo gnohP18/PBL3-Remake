@@ -145,6 +145,12 @@
     <Compile Include="frmGUIUserControl\BackupUC.Designer.cs">
       <DependentUpon>BackupUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\CourseInWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\CourseInWareHouse.Designer.cs">
+      <DependentUpon>CourseInWareHouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\DetailEmployee.cs">
       <SubType>Form</SubType>
     </Compile>

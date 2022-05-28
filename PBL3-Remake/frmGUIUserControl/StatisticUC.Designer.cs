@@ -32,9 +32,12 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.CalendarStatistic = new System.Windows.Forms.MonthCalendar();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +57,7 @@
             this.lblOrdered = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.DayChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,7 +65,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DayChart)).BeginInit();
             this.SuspendLayout();
             // 
             // CalendarStatistic
@@ -74,6 +77,7 @@
             this.CalendarStatistic.Name = "CalendarStatistic";
             this.CalendarStatistic.TabIndex = 19;
             this.CalendarStatistic.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.CalendarStatistic.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarStatistic_DateChanged);
             // 
             // panel5
             // 
@@ -92,7 +96,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(140)))), ((int)(((byte)(59)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(118)))));
             this.label4.Location = new System.Drawing.Point(7, 65);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -102,15 +106,15 @@
             // 
             // lblProfit
             // 
-            this.lblProfit.AutoSize = true;
-            this.lblProfit.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(140)))), ((int)(((byte)(59)))));
-            this.lblProfit.Location = new System.Drawing.Point(99, 110);
+            this.lblProfit.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(118)))));
+            this.lblProfit.Location = new System.Drawing.Point(11, 110);
             this.lblProfit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfit.Name = "lblProfit";
-            this.lblProfit.Size = new System.Drawing.Size(25, 25);
+            this.lblProfit.Size = new System.Drawing.Size(156, 25);
             this.lblProfit.TabIndex = 5;
             this.lblProfit.Text = "C";
+            this.lblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -150,15 +154,15 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.lblTotal.Location = new System.Drawing.Point(99, 110);
+            this.lblTotal.Location = new System.Drawing.Point(8, 110);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(24, 25);
+            this.lblTotal.Size = new System.Drawing.Size(159, 25);
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "B";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
             // 
@@ -257,15 +261,16 @@
             // 
             // lblOrdered
             // 
-            this.lblOrdered.AutoSize = true;
-            this.lblOrdered.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblOrdered.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.lblOrdered.Location = new System.Drawing.Point(99, 110);
+            this.lblOrdered.Location = new System.Drawing.Point(7, 110);
             this.lblOrdered.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrdered.Name = "lblOrdered";
-            this.lblOrdered.Size = new System.Drawing.Size(25, 25);
+            this.lblOrdered.Size = new System.Drawing.Size(160, 25);
             this.lblOrdered.TabIndex = 3;
             this.lblOrdered.Text = "A";
+            this.lblOrdered.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox3
             // 
@@ -299,59 +304,75 @@
             this.MainChart.Legends.Add(legend1);
             this.MainChart.Location = new System.Drawing.Point(3, 216);
             this.MainChart.Name = "MainChart";
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(103)))), ((int)(((byte)(216)))));
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(103)))), ((int)(((byte)(216)))));
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(177)))), ((int)(((byte)(219)))));
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(177)))), ((int)(((byte)(219)))));
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Total";
             series1.YValuesPerPoint = 2;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(177)))), ((int)(((byte)(219)))));
-            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(177)))), ((int)(((byte)(219)))));
+            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(103)))), ((int)(((byte)(216)))));
+            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(103)))), ((int)(((byte)(216)))));
             series2.BorderWidth = 3;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             series2.Legend = "Legend1";
-            series2.Name = "Series2";
+            series2.Name = "Profit";
             series2.YValuesPerPoint = 2;
+            series3.BorderColor = System.Drawing.Color.Red;
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Color = System.Drawing.Color.Red;
+            series3.Legend = "Legend1";
+            series3.Name = "Consuming";
             this.MainChart.Series.Add(series1);
             this.MainChart.Series.Add(series2);
+            this.MainChart.Series.Add(series3);
             this.MainChart.Size = new System.Drawing.Size(756, 467);
             this.MainChart.TabIndex = 28;
             this.MainChart.Text = "chart1";
             // 
-            // chart1
+            // DayChart
             // 
-            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.DayChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            this.DayChart.ChartAreas.Add(chartArea2);
             legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(774, 437);
-            this.chart1.Name = "chart1";
-            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(262, 246);
-            this.chart1.TabIndex = 29;
-            this.chart1.Text = "chart1";
+            legend2.Name = "Profit";
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            legend3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            legend3.Name = "Consuming";
+            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            legend4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            legend4.Name = "Total";
+            this.DayChart.Legends.Add(legend2);
+            this.DayChart.Legends.Add(legend3);
+            this.DayChart.Legends.Add(legend4);
+            this.DayChart.Location = new System.Drawing.Point(774, 437);
+            this.DayChart.Name = "DayChart";
+            series4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Legend = "Profit";
+            series4.Name = "Series1";
+            this.DayChart.Series.Add(series4);
+            this.DayChart.Size = new System.Drawing.Size(262, 246);
+            this.DayChart.TabIndex = 29;
+            this.DayChart.Text = "chart1";
             // 
             // StatisticUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.DayChart);
             this.Controls.Add(this.MainChart);
             this.Controls.Add(this.CalendarStatistic);
             this.Controls.Add(this.panel5);
@@ -364,6 +385,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "StatisticUC";
             this.Size = new System.Drawing.Size(1200, 700);
+            this.Load += new System.EventHandler(this.StatisticUC_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -374,7 +396,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DayChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,6 +422,6 @@
         private System.Windows.Forms.Label lblOrdered;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataVisualization.Charting.Chart MainChart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart DayChart;
     }
 }

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using Entity;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 namespace GUI.frmGUIUserControl
 {
     public partial class MaterialInfo : Form
@@ -28,15 +22,15 @@ namespace GUI.frmGUIUserControl
 
         private void dgvInforMaterial_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(dgvInforMaterial.SelectedRows.Count > 0)
+            if (dgvInforMaterial.SelectedRows.Count > 0)
             {
                 List<int> listIDChiTietNguyenLieuDel = new List<int>();
-                foreach(DataGridViewRow i in dgvInforMaterial.SelectedRows)
+                foreach (DataGridViewRow i in dgvInforMaterial.SelectedRows)
                 {
                     listIDChiTietNguyenLieuDel.Add(Convert.ToInt32(i.Cells["ID_ChiTietNguyenLieu"].Value));
                 }
@@ -46,14 +40,14 @@ namespace GUI.frmGUIUserControl
 
         private void dgvInforMaterial_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void dgvInforMaterial_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvInforMaterial.SelectedRows.Count == 1)
             {
-                
+
                 int ID_ChiTietNguyenLieu = Convert.ToInt32(dgvInforMaterial.SelectedRows[0].Cells["ID_ChiTietNguyenLieu"].Value);
                 Kho kho = BLLQLNH.Instance.GetChiTietNguyenLieuByIDChiTietNguyenLieu(ID_ChiTietNguyenLieu);
                 txtMaterialID.Text = kho.NguyenLieu.ID_NguyenLieu.ToString();

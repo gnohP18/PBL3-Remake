@@ -135,5 +135,47 @@ namespace BLL
         {
             return dALQLNH.Users.ToList();
         }
+        public int GetNumberOfOrdered(DateTime Datecustom)
+        {
+            int dem = 0;
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                if (i.NgayLap == Datecustom)
+                {
+                    dem++;
+                }
+            }
+            return dem;
+        }
+        public ChiTietNhaCungCap GetPriceOfInGredient(int ID_NguyenLieu)
+        {
+            return dALQLNH.ChiTietNhaCungCaps.Where(p => p.ID_NguyenLieu == ID_NguyenLieu).FirstOrDefault();
+        }
+        public int GetTotal(DateTime Datecustom)
+        {
+            int total = 0;
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                if (i.NgayLap == Datecustom)
+                {
+                    total += i.TongTien;
+                }
+            }
+            return total;
+        }
+        public int GetProfit(DateTime Datecustom)
+        {
+            int spend = 0;
+            foreach (Kho i in dALQLNH.Khoes)
+            {
+                if (i.NgayNhap == Datecustom)
+                {
+                    spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredient(i.ID_NguyenLieu).DonGia);
+                }
+            }
+            return GetTotal(Datecustom) - spend;
+        }
+        //public int
+
     }
 }

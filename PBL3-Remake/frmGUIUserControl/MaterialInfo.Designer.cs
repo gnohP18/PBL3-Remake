@@ -34,6 +34,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvInforMaterial = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpExpirationDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpImportDate = new System.Windows.Forms.DateTimePicker();
             this.btnMoreInfor = new System.Windows.Forms.Button();
             this.txtManufacture = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.txtMaterialID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.dtpImportDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpExpirationDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInforMaterial)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,9 +59,10 @@
             // btClose
             // 
             this.btClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(195)))), ((int)(((byte)(235)))));
-            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btClose.FlatAppearance.BorderSize = 3;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClose.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.ForeColor = System.Drawing.Color.White;
+            this.btClose.ForeColor = System.Drawing.Color.Black;
             this.btClose.Location = new System.Drawing.Point(46, 557);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(100, 30);
@@ -73,9 +74,10 @@
             // btnDelete
             // 
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(195)))), ((int)(((byte)(235)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.FlatAppearance.BorderSize = 3;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Location = new System.Drawing.Point(162, 557);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
@@ -87,8 +89,9 @@
             // btnOK
             // 
             this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(195)))), ((int)(((byte)(235)))));
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.FlatAppearance.BorderSize = 3;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.ForeColor = System.Drawing.Color.Black;
             this.btnOK.Location = new System.Drawing.Point(634, 557);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 30);
@@ -125,7 +128,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.dtpExpirationDate);
             this.panel1.Controls.Add(this.dtpImportDate);
             this.panel1.Controls.Add(this.btnMoreInfor);
@@ -148,15 +151,29 @@
             this.panel1.Size = new System.Drawing.Size(755, 208);
             this.panel1.TabIndex = 37;
             // 
+            // dtpExpirationDate
+            // 
+            this.dtpExpirationDate.Location = new System.Drawing.Point(513, 115);
+            this.dtpExpirationDate.Name = "dtpExpirationDate";
+            this.dtpExpirationDate.Size = new System.Drawing.Size(175, 22);
+            this.dtpExpirationDate.TabIndex = 64;
+            // 
+            // dtpImportDate
+            // 
+            this.dtpImportDate.Location = new System.Drawing.Point(150, 115);
+            this.dtpImportDate.Name = "dtpImportDate";
+            this.dtpImportDate.Size = new System.Drawing.Size(175, 22);
+            this.dtpImportDate.TabIndex = 64;
+            // 
             // btnMoreInfor
             // 
-            this.btnMoreInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnMoreInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.btnMoreInfor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.btnMoreInfor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.btnMoreInfor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.btnMoreInfor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMoreInfor.Font = new System.Drawing.Font("Microsoft New Tai Lue", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoreInfor.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMoreInfor.ForeColor = System.Drawing.Color.Black;
             this.btnMoreInfor.Location = new System.Drawing.Point(691, 63);
             this.btnMoreInfor.Name = "btnMoreInfor";
             this.btnMoreInfor.Size = new System.Drawing.Size(61, 22);
@@ -176,9 +193,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(344, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 22);
@@ -196,9 +213,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(13, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 22);
@@ -215,9 +232,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label9.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(344, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(133, 22);
@@ -227,9 +244,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(13, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 22);
@@ -239,9 +256,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(13, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 22);
@@ -258,9 +275,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(344, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 22);
@@ -278,9 +295,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(344, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 22);
@@ -298,9 +315,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 22);
@@ -320,24 +337,10 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // dtpImportDate
-            // 
-            this.dtpImportDate.Location = new System.Drawing.Point(150, 115);
-            this.dtpImportDate.Name = "dtpImportDate";
-            this.dtpImportDate.Size = new System.Drawing.Size(175, 22);
-            this.dtpImportDate.TabIndex = 64;
-            // 
-            // dtpExpirationDate
-            // 
-            this.dtpExpirationDate.Location = new System.Drawing.Point(513, 115);
-            this.dtpExpirationDate.Name = "dtpExpirationDate";
-            this.dtpExpirationDate.Size = new System.Drawing.Size(175, 22);
-            this.dtpExpirationDate.TabIndex = 64;
-            // 
             // MaterialInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);

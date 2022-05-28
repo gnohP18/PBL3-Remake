@@ -23,7 +23,15 @@ namespace GUI.frmGUIUserControl
         {
             if (txtNameNewManufacturer.Text != "" && txtAddressManufacture.Text != "" && txtPhoneNumberManufacture.Text != "" && txtTaxCode.Text != "")
             {
-                BLLQLNH.Instance.AddNewNhaCungCap(BLLQLNH.Instance.GetNewIDNhaCungCap(), txtNameNewManufacturer.Text, txtAddressManufacture.Text, txtTaxCode.Text, txtPhoneNumberManufacture.Text);
+                NhaCungCap ncc = new NhaCungCap
+                {
+                    ID_NhaCungCap = BLLQLNH.Instance.GetNewIDNhaCungCap(),
+                    TenNhaCungCap =  txtNameNewManufacturer.Text,
+                    DiaChi = txtAddressManufacture.Text,
+                    MaSoThue = txtTaxCode.Text,
+                    SoDienThoai = txtPhoneNumberManufacture.Text
+                };
+                BLLQLNH.Instance.AddNewNhaCungCap(ncc);
 
                 GUI.NoticeBox box = new NoticeBox("Add new manufacturer successfully");
                 box.Show();

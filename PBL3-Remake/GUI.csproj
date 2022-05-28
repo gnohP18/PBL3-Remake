@@ -139,11 +139,11 @@
     <Compile Include="frmGUIUserControl\AddNewManufacturer.Designer.cs">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUserControl\AddNewMaterial.cs">
+    <Compile Include="frmGUIUserControl\DetailMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGUIUserControl\AddNewMaterial.Designer.cs">
-      <DependentUpon>AddNewMaterial.cs</DependentUpon>
+    <Compile Include="frmGUIUserControl\DetailMaterial.Designer.cs">
+      <DependentUpon>DetailMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\BackupUC.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +156,12 @@
     </Compile>
     <Compile Include="frmGUIUserControl\DetailEmployee.Designer.cs">
       <DependentUpon>DetailEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\MatetialInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\MatetialInformation.Designer.cs">
+      <DependentUpon>MatetialInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.cs">
       <SubType>UserControl</SubType>
@@ -264,14 +270,17 @@
     <EmbeddedResource Include="frmGUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\AddNewMaterial.resx">
-      <DependentUpon>AddNewMaterial.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUIUserControl\DetailMaterial.resx">
+      <DependentUpon>DetailMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\BackupUC.resx">
       <DependentUpon>BackupUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailEmployee.resx">
       <DependentUpon>DetailEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\MatetialInformation.resx">
+      <DependentUpon>MatetialInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>

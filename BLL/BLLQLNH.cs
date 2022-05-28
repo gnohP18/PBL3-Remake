@@ -198,16 +198,9 @@ namespace BLL
             return ID;
         }
 
-        public void AddNewNhaCungCap(int IDNCC, string Name, string Address, string MaSoThue, string SDT)
+        public void AddNewNhaCungCap(NhaCungCap ncc)
         {
-            dALQLNH.NhaCungCaps.Add(new NhaCungCap
-            {
-                ID_NhaCungCap = IDNCC,
-                TenNhaCungCap = Name,
-                DiaChi = Address,
-                MaSoThue = MaSoThue,
-                SoDienThoai = SDT
-            });
+            dALQLNH.NhaCungCaps.Add(ncc);
             dALQLNH.SaveChanges();
         }
 
@@ -224,17 +217,18 @@ namespace BLL
         }
         public void AddMaterialToWareHouse(Kho i)
         {
-            dALQLNH.Khoes.Add(new Kho
-            {
-                ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu,
-                ID_NguyenLieu = i.ID_NguyenLieu,
-                ID_NhaCungCap = i.ID_NhaCungCap,
-                NgayNhap = i.NgayNhap,
-                NgayHetHan = i.NgayHetHan,
-                LuongNhapVao = i.LuongNhapVao,
-                LuongTonKho = i.LuongTonKho
-            });
+            dALQLNH.Khoes.Add(i);
             dALQLNH.SaveChanges();
+        }
+       public void AddNewMaterial(NguyenLieu i)
+        {
+            dALQLNH.NguyenLieus.Add(i);
+            dALQLNH.SaveChanges();
+        }
+
+       public NguyenLieu GetNguyenLieuByIDNguyenLieu(int ID)
+        {
+            return dALQLNH.NguyenLieus.Find(ID);
         }
     }
 }

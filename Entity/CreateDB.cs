@@ -21,7 +21,7 @@ namespace Entity
                 new CaLam{ID_CaLam = 4,LichCaLam = "00000100010001"},
                 new CaLam{ID_CaLam = 5,LichCaLam = "11000000000000"},
             });
-            System.Drawing.Image img = System.Drawing.Image.FromFile("D:\\PBL3-Remake\\PBL3-Remake\\Resources\\money-48.png");
+            System.Drawing.Image img = System.Drawing.Image.FromFile("C:\\Users\\DELL\\Desktop\\Hinh1.png");
             var ms = new MemoryStream();
             img.Save(ms, img.RawFormat);
             byte[] imgbyte = ms.ToArray();

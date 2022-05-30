@@ -64,6 +64,7 @@
     <Compile Include="ChucVu.cs" />
     <Compile Include="CreateDB.cs" />
     <Compile Include="DALQLNH.cs" />
+    <Compile Include="DayChart_view.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="Kho.cs" />
     <Compile Include="LoaiMonAn.cs" />

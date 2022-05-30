@@ -175,7 +175,55 @@ namespace BLL
             }
             return GetTotal(Datecustom) - spend;
         }
-        //public int
+        public int GetTotal(string Datecustom)
+        {
+            int total = 0;
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                if (i.NgayLap.ToShortDateString() == Datecustom)
+                {
+                    total += i.TongTien;
+                }
+            }
+            return total;
+        }
+        public int GetProfit(string Datecustom)
+        {
+            int spend = 0;
+            foreach (Kho i in dALQLNH.Khoes)
+            {
+                if (i.NgayNhap.ToShortDateString() == Datecustom)
+                {
+                    spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredient(i.ID_NguyenLieu).DonGia);
+                }
+            }
+            return GetTotal(Datecustom) - spend;
+        }
+        public List<Statistic_view> GetAllDoanhThu()
+        {
+            List<string> date = new List<string>();
+            List<Statistic_view> liststatistic = new List<Statistic_view>();
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                date.Add(i.NgayLap.ToShortDateString());
+            }
+            //foreach (string i in date)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            int Songay = date.Distinct().Count();
+            for (int i = 0; i < Songay; i++)
+            {
+                Statistic_view st = new Statistic_view();
+                st.ID_money = i;
+                st.Total = GetTotal(date[i]);
+                st.Profit = GetProfit(date[i]);
+                st.Consuming = st.Total - st.Profit;
+                st.Date = Convert.ToDateTime(date[i]);
+                liststatistic.Add(st);
+            }
+            return liststatistic;
+        }
 
     }
 }

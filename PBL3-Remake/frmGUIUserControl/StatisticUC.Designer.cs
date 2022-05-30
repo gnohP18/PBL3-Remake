@@ -35,9 +35,10 @@
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.LegendItem legendItem1 = new System.Windows.Forms.DataVisualization.Charting.LegendItem();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.CalendarStatistic = new System.Windows.Forms.MonthCalendar();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.btn2WeekAgo = new System.Windows.Forms.Button();
             this.btn1WeekAgo = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOrdered = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             // 
             this.CalendarStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.CalendarStatistic.ForeColor = System.Drawing.Color.Black;
-            this.CalendarStatistic.Location = new System.Drawing.Point(774, 216);
+            this.CalendarStatistic.Location = new System.Drawing.Point(774, 136);
             this.CalendarStatistic.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.CalendarStatistic.Name = "CalendarStatistic";
             this.CalendarStatistic.TabIndex = 19;
@@ -218,21 +218,11 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(1066, 442);
+            this.panel4.Location = new System.Drawing.Point(1051, 136);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(111, 199);
+            this.panel4.Size = new System.Drawing.Size(111, 207);
             this.panel4.TabIndex = 24;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(1066, 216);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(111, 199);
-            this.panel3.TabIndex = 23;
             // 
             // panel1
             // 
@@ -339,34 +329,36 @@
             // DayChart
             // 
             this.DayChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            chartArea2.AlignWithChartArea = "ChartArea1";
             chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             chartArea2.Name = "ChartArea1";
             this.DayChart.ChartAreas.Add(chartArea2);
+            legend2.Alignment = System.Drawing.StringAlignment.Far;
             legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            legend2.CustomItems.Add(legendItem1);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             legend2.Name = "Profit";
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            legend3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend3.Name = "Consuming";
-            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            legend4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend4.Name = "Total";
             this.DayChart.Legends.Add(legend2);
-            this.DayChart.Legends.Add(legend3);
-            this.DayChart.Legends.Add(legend4);
-            this.DayChart.Location = new System.Drawing.Point(774, 437);
+            this.DayChart.Location = new System.Drawing.Point(774, 357);
             this.DayChart.Name = "DayChart";
             series4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             series4.BorderWidth = 3;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series4.Legend = "Profit";
-            series4.Name = "Series1";
+            series4.Name = "Series0";
+            series4.Points.Add(dataPoint1);
             this.DayChart.Series.Add(series4);
-            this.DayChart.Size = new System.Drawing.Size(262, 246);
+            this.DayChart.Size = new System.Drawing.Size(405, 326);
             this.DayChart.TabIndex = 29;
             this.DayChart.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.White;
+            title1.Name = "Title1";
+            title1.Text = "Date dashboard";
+            this.DayChart.Titles.Add(title1);
             // 
             // StatisticUC
             // 
@@ -381,7 +373,6 @@
             this.Controls.Add(this.btn2WeekAgo);
             this.Controls.Add(this.btn1WeekAgo);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "StatisticUC";
             this.Size = new System.Drawing.Size(1200, 700);
@@ -416,7 +407,6 @@
         private System.Windows.Forms.Button btn2WeekAgo;
         private System.Windows.Forms.Button btn1WeekAgo;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblOrdered;

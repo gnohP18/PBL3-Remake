@@ -33,7 +33,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbbKindOfMaterial = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnAddNewMaterial = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.lbTienDe = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.panel7.Controls.Add(this.txtID);
             this.panel7.Controls.Add(this.cbbKindOfMaterial);
             this.panel7.Controls.Add(this.btnClose);
-            this.panel7.Controls.Add(this.btnAddNewMaterial);
+            this.panel7.Controls.Add(this.btnOK);
             this.panel7.Controls.Add(this.lbTienDe);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.label2);
@@ -81,7 +81,7 @@
             this.txtID.Location = new System.Drawing.Point(90, 36);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(141, 22);
-            this.txtID.TabIndex = 17;
+            this.txtID.TabIndex = 1;
             // 
             // cbbKindOfMaterial
             // 
@@ -90,7 +90,7 @@
             this.cbbKindOfMaterial.Location = new System.Drawing.Point(35, 243);
             this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
             this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 24);
-            this.cbbKindOfMaterial.TabIndex = 16;
+            this.cbbKindOfMaterial.TabIndex = 3;
             // 
             // btnClose
             // 
@@ -104,27 +104,27 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 32);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnAddNewMaterial
+            // btnOK
             // 
-            this.btnAddNewMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnAddNewMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddNewMaterial.FlatAppearance.BorderSize = 2;
-            this.btnAddNewMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddNewMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewMaterial.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddNewMaterial.Location = new System.Drawing.Point(4, 287);
-            this.btnAddNewMaterial.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddNewMaterial.Name = "btnAddNewMaterial";
-            this.btnAddNewMaterial.Size = new System.Drawing.Size(123, 32);
-            this.btnAddNewMaterial.TabIndex = 15;
-            this.btnAddNewMaterial.Text = "OK";
-            this.btnAddNewMaterial.UseVisualStyleBackColor = false;
-            this.btnAddNewMaterial.Click += new System.EventHandler(this.btnAddNewMaterial_Click);
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnOK.FlatAppearance.BorderSize = 2;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnOK.Location = new System.Drawing.Point(4, 287);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(123, 32);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // lbTienDe
             // 
@@ -168,7 +168,7 @@
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpiry.Name = "txtExpiry";
             this.txtExpiry.Size = new System.Drawing.Size(212, 22);
-            this.txtExpiry.TabIndex = 1;
+            this.txtExpiry.TabIndex = 2;
             // 
             // label1
             // 
@@ -179,7 +179,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 23);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Unit";
             // 
             // txtUnit
@@ -208,7 +208,7 @@
             this.txtInputMaterialName.Margin = new System.Windows.Forms.Padding(4);
             this.txtInputMaterialName.Name = "txtInputMaterialName";
             this.txtInputMaterialName.Size = new System.Drawing.Size(212, 22);
-            this.txtInputMaterialName.TabIndex = 1;
+            this.txtInputMaterialName.TabIndex = 0;
             // 
             // DetailMaterial
             // 
@@ -227,7 +227,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnAddNewMaterial;
+        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lbTienDe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtInputMaterialName;

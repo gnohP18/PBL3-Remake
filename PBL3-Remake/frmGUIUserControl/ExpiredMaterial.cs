@@ -28,14 +28,29 @@ namespace GUI.frmGUIUserControl
             Close();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
             List<int> ListID_ChiTietNguyenLieuXoa = new List<int>();
-            foreach(DataGridViewRow i in dgvExpiredMaterial.SelectedRows)
+            foreach (DataGridViewRow i in dgvExpiredMaterial.SelectedRows)
             {
                 ListID_ChiTietNguyenLieuXoa.Add(Convert.ToInt32(i.Cells["ID_ChiTietNguyenLieu"].Value.ToString()));
             }
             BLLQLNH.Instance.DelChiTietNguyenLieu(ListID_ChiTietNguyenLieuXoa);
+            NoticeBox box = new NoticeBox("Delete successfull");
+            box.Show();
+            ReloadDGV();
+        }
+
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            List<int> ListID_ChiTietNguyenLieuXoa = new List<int>();
+            foreach (DataGridViewRow i in dgvExpiredMaterial.Rows)
+            {
+                ListID_ChiTietNguyenLieuXoa.Add(Convert.ToInt32(i.Cells["ID_ChiTietNguyenLieu"].Value.ToString()));
+            }
+            BLLQLNH.Instance.DelChiTietNguyenLieu(ListID_ChiTietNguyenLieuXoa);
+            NoticeBox box = new NoticeBox("Delete successfull");
+            box.Show();
             ReloadDGV();
         }
     }

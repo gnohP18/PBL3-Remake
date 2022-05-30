@@ -71,5 +71,10 @@ namespace GUI.frmGUIUserControl
             }
 
         }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

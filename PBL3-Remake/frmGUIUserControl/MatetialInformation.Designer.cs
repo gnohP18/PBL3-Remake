@@ -52,9 +52,10 @@
             this.btClose.Location = new System.Drawing.Point(772, 675);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(222, 30);
-            this.btClose.TabIndex = 43;
+            this.btClose.TabIndex = 8;
             this.btClose.Text = "CLose";
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // label8
             // 
@@ -91,7 +92,7 @@
             this.btnVegetable.Location = new System.Drawing.Point(611, 72);
             this.btnVegetable.Name = "btnVegetable";
             this.btnVegetable.Size = new System.Drawing.Size(170, 76);
-            this.btnVegetable.TabIndex = 47;
+            this.btnVegetable.TabIndex = 3;
             this.btnVegetable.Text = "Vegetable";
             this.btnVegetable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVegetable.UseVisualStyleBackColor = false;
@@ -110,7 +111,7 @@
             this.btnDriedFood.Location = new System.Drawing.Point(255, 72);
             this.btnDriedFood.Name = "btnDriedFood";
             this.btnDriedFood.Size = new System.Drawing.Size(170, 76);
-            this.btnDriedFood.TabIndex = 45;
+            this.btnDriedFood.TabIndex = 1;
             this.btnDriedFood.Text = "Dried Food";
             this.btnDriedFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDriedFood.UseVisualStyleBackColor = false;
@@ -129,7 +130,7 @@
             this.btnFreshFood.Location = new System.Drawing.Point(433, 72);
             this.btnFreshFood.Name = "btnFreshFood";
             this.btnFreshFood.Size = new System.Drawing.Size(170, 76);
-            this.btnFreshFood.TabIndex = 46;
+            this.btnFreshFood.TabIndex = 2;
             this.btnFreshFood.Text = "Fresh Food";
             this.btnFreshFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFreshFood.UseVisualStyleBackColor = false;
@@ -148,7 +149,7 @@
             this.btnDrinking.Location = new System.Drawing.Point(789, 72);
             this.btnDrinking.Name = "btnDrinking";
             this.btnDrinking.Size = new System.Drawing.Size(170, 76);
-            this.btnDrinking.TabIndex = 48;
+            this.btnDrinking.TabIndex = 4;
             this.btnDrinking.Text = "Drinking";
             this.btnDrinking.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDrinking.UseVisualStyleBackColor = false;
@@ -165,7 +166,7 @@
             this.btnAllMaterial.Location = new System.Drawing.Point(77, 72);
             this.btnAllMaterial.Name = "btnAllMaterial";
             this.btnAllMaterial.Size = new System.Drawing.Size(170, 76);
-            this.btnAllMaterial.TabIndex = 45;
+            this.btnAllMaterial.TabIndex = 0;
             this.btnAllMaterial.Text = "All Material";
             this.btnAllMaterial.UseVisualStyleBackColor = false;
             this.btnAllMaterial.Click += new System.EventHandler(this.btnAllMaterial_Click);
@@ -179,7 +180,7 @@
             this.btnUpdateMaterial.Location = new System.Drawing.Point(290, 675);
             this.btnUpdateMaterial.Name = "btnUpdateMaterial";
             this.btnUpdateMaterial.Size = new System.Drawing.Size(222, 30);
-            this.btnUpdateMaterial.TabIndex = 43;
+            this.btnUpdateMaterial.TabIndex = 6;
             this.btnUpdateMaterial.Text = "Update material";
             this.btnUpdateMaterial.UseVisualStyleBackColor = true;
             this.btnUpdateMaterial.Click += new System.EventHandler(this.btnUpdateMaterial_Click);
@@ -193,7 +194,7 @@
             this.btnAddNewMaterial.Location = new System.Drawing.Point(45, 675);
             this.btnAddNewMaterial.Name = "btnAddNewMaterial";
             this.btnAddNewMaterial.Size = new System.Drawing.Size(222, 30);
-            this.btnAddNewMaterial.TabIndex = 43;
+            this.btnAddNewMaterial.TabIndex = 5;
             this.btnAddNewMaterial.Text = "Add new material";
             this.btnAddNewMaterial.UseVisualStyleBackColor = true;
             this.btnAddNewMaterial.Click += new System.EventHandler(this.btnAddNewMaterial_Click);
@@ -207,7 +208,7 @@
             this.btnDeleteMaterial.Location = new System.Drawing.Point(544, 675);
             this.btnDeleteMaterial.Name = "btnDeleteMaterial";
             this.btnDeleteMaterial.Size = new System.Drawing.Size(222, 30);
-            this.btnDeleteMaterial.TabIndex = 43;
+            this.btnDeleteMaterial.TabIndex = 7;
             this.btnDeleteMaterial.Text = "Delete material";
             this.btnDeleteMaterial.UseVisualStyleBackColor = true;
             // 

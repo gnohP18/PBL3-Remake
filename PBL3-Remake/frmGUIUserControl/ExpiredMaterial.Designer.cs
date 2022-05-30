@@ -32,6 +32,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvExpiredMaterial = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnDeleteAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpiredMaterial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // dgvExpiredMaterial
             // 
@@ -91,12 +93,30 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Expired Material";
             // 
+            // btnDeleteAll
+            // 
+            this.btnDeleteAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.btnDeleteAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnDeleteAll.FlatAppearance.BorderSize = 2;
+            this.btnDeleteAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAll.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteAll.Location = new System.Drawing.Point(356, 312);
+            this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteAll.Name = "btnDeleteAll";
+            this.btnDeleteAll.Size = new System.Drawing.Size(123, 32);
+            this.btnDeleteAll.TabIndex = 20;
+            this.btnDeleteAll.Text = "Delete All";
+            this.btnDeleteAll.UseVisualStyleBackColor = false;
+            this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
+            // 
             // ExpiredMaterial
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(874, 354);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnDeleteAll);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvExpiredMaterial);
             this.Controls.Add(this.label10);
@@ -115,5 +135,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvExpiredMaterial;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnDeleteAll;
     }
 }

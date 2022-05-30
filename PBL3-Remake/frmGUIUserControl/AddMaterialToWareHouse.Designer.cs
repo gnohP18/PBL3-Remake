@@ -108,7 +108,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 32);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
@@ -124,7 +124,7 @@
             this.btnAddNewMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNewMaterial.Name = "btnAddNewMaterial";
             this.btnAddNewMaterial.Size = new System.Drawing.Size(123, 32);
-            this.btnAddNewMaterial.TabIndex = 15;
+            this.btnAddNewMaterial.TabIndex = 0;
             this.btnAddNewMaterial.Text = "ADD";
             this.btnAddNewMaterial.UseVisualStyleBackColor = false;
             // 
@@ -137,7 +137,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(297, 27);
-            this.label10.TabIndex = 10;
+            this.label10.TabIndex = 2;
             this.label10.Text = "Add Material To Warehouse";
             // 
             // label2
@@ -227,14 +227,14 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 380);
-            this.panel1.TabIndex = 26;
+            this.panel1.TabIndex = 0;
             // 
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(37, 235);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(212, 22);
-            this.txtQuantity.TabIndex = 18;
+            this.txtQuantity.TabIndex = 3;
             // 
             // dtpImportDay
             // 
@@ -242,7 +242,7 @@
             this.dtpImportDay.Location = new System.Drawing.Point(37, 287);
             this.dtpImportDay.Name = "dtpImportDay";
             this.dtpImportDay.Size = new System.Drawing.Size(212, 22);
-            this.dtpImportDay.TabIndex = 17;
+            this.dtpImportDay.TabIndex = 4;
             // 
             // cbbManufacturer
             // 
@@ -251,7 +251,7 @@
             this.cbbManufacturer.Location = new System.Drawing.Point(37, 172);
             this.cbbManufacturer.Name = "cbbManufacturer";
             this.cbbManufacturer.Size = new System.Drawing.Size(212, 24);
-            this.cbbManufacturer.TabIndex = 16;
+            this.cbbManufacturer.TabIndex = 2;
             // 
             // cbbMaterialName
             // 
@@ -259,7 +259,7 @@
             this.cbbMaterialName.Location = new System.Drawing.Point(37, 118);
             this.cbbMaterialName.Name = "cbbMaterialName";
             this.cbbMaterialName.Size = new System.Drawing.Size(212, 24);
-            this.cbbMaterialName.TabIndex = 16;
+            this.cbbMaterialName.TabIndex = 1;
             // 
             // cbbKindOfMaterial
             // 
@@ -267,7 +267,7 @@
             this.cbbKindOfMaterial.Location = new System.Drawing.Point(37, 65);
             this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
             this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 24);
-            this.cbbKindOfMaterial.TabIndex = 16;
+            this.cbbKindOfMaterial.TabIndex = 0;
             this.cbbKindOfMaterial.SelectedIndexChanged += new System.EventHandler(this.cbbKindOfMaterial_SelectedIndexChanged);
             // 
             // btnRefresh
@@ -282,7 +282,7 @@
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(123, 32);
-            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -299,7 +299,7 @@
             this.btnClose1.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose1.Name = "btnClose1";
             this.btnClose1.Size = new System.Drawing.Size(123, 32);
-            this.btnClose1.TabIndex = 15;
+            this.btnClose1.TabIndex = 7;
             this.btnClose1.Text = "Close";
             this.btnClose1.UseVisualStyleBackColor = false;
             this.btnClose1.Click += new System.EventHandler(this.btnClose_Click);
@@ -316,7 +316,7 @@
             this.btnAddManufacturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddManufacturer.Name = "btnAddManufacturer";
             this.btnAddManufacturer.Size = new System.Drawing.Size(156, 27);
-            this.btnAddManufacturer.TabIndex = 15;
+            this.btnAddManufacturer.TabIndex = 8;
             this.btnAddManufacturer.Text = "Add manufacturer";
             this.btnAddManufacturer.UseVisualStyleBackColor = false;
             this.btnAddManufacturer.Click += new System.EventHandler(this.btnAddManufacturer_Click);
@@ -333,7 +333,7 @@
             this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
             this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(123, 32);
-            this.btnAddMaterialToWareHouse.TabIndex = 15;
+            this.btnAddMaterialToWareHouse.TabIndex = 5;
             this.btnAddMaterialToWareHouse.Text = "ADD";
             this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
             this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
@@ -347,7 +347,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(297, 27);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Add Material To Warehouse";
             // 
             // label6
@@ -359,7 +359,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 23);
-            this.label6.TabIndex = 4;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Import day:";
             // 
             // label11

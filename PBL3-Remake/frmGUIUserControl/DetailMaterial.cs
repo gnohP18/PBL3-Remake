@@ -27,7 +27,6 @@ namespace GUI.frmGUIUserControl
         public void SetCBB()
         {
             cbbKindOfMaterial.Items.AddRange(BLLQLNH.Instance.GetAllLoaiNguyenLieu().ToArray());
-            cbbKindOfMaterial.DisplayMember = "TenLoaiNguyenLieu";
         }
         void GUI()
         {
@@ -40,6 +39,7 @@ namespace GUI.frmGUIUserControl
                 txtInputMaterialName.Text = nl.TenNguyenLieu.ToString();
                 txtUnit.Text = nl.DonViTinh.ToString();
                 txtExpiry.Text = nl.HSD.ToString();
+                cbbKindOfMaterial.SelectedItem = nl.LoaiNguyenLieu;
             }
             else
             {
@@ -53,32 +53,20 @@ namespace GUI.frmGUIUserControl
             Close();
         }
 
-        private void btnAddNewMaterial_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            foreach (NguyenLieu i in BLLQLNH.Instance.GetAllNguyenLieu())
+            LoaiNguyenLieu lnl = (LoaiNguyenLieu)(cbbKindOfMaterial.SelectedItem);
+            NguyenLieu nl = new NguyenLieu
             {
-                if (i.TenNguyenLieu.ToUpper() == txtInputMaterialName.ToString().ToUpper())
-                {
-                    GUI.NoticeBox box = new NoticeBox("Material name have already exist");
-                    box.Show();
-                }
-                else
-                {
-                    LoaiNguyenLieu lnl = (LoaiNguyenLieu)(cbbKindOfMaterial.SelectedItem);
-                    NguyenLieu nl = new NguyenLieu
-                    {
-                        ID_NguyenLieu = Convert.ToInt32(txtID.Text),
-                        DonViTinh = txtUnit.Text,
-                        TenNguyenLieu = txtInputMaterialName.Text,
-                        HSD = Convert.ToInt32(txtExpiry.Text),
-                        ID_LoaiNguyenLieu = lnl.ID_LoaiNguyenLieu
-                    };
-                    BLLQLNH.Instance.AddNewMaterial(nl);
-                    GUI.NoticeBox box = new NoticeBox("");
-                    box.Show();
-                    break;
-                }
-            }
+                ID_NguyenLieu = Convert.ToInt32(txtID.Text),
+                TenNguyenLieu = txtInputMaterialName.Text,
+                DonViTinh = txtUnit.Text,
+                HSD = Convert.ToInt32(txtExpiry.Text),
+                ID_LoaiNguyenLieu = lnl.ID_LoaiNguyenLieu
+            };
+            BLLQLNH.Instance.ExcuteAddorUpdate(nl);
+            NoticeBox box = new NoticeBox("Action performed");
+            box.Show();
             d(0);
         }
     }

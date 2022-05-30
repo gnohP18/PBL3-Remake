@@ -81,5 +81,10 @@ namespace GUI.frmGUIUserControl
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
+
+        private void btnAllMaterial_Click(object sender, EventArgs e)
+        {
+           dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(0);
+        }
     }
 }

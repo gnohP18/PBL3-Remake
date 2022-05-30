@@ -36,6 +36,7 @@ namespace GUI.frmGUIManager
         }
         private void frmMainManager_Load(object sender, EventArgs e)
         {
+            SetupUC(overViewUC);
             SetupUC(employeesUC);
             SetupUC(helpUC);
             SetupUC(statisticUC);
@@ -46,7 +47,7 @@ namespace GUI.frmGUIManager
         private void btnOverView_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //overviewUC.BringToFront();
+            overViewUC.BringToFront();
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)

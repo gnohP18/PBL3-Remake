@@ -157,17 +157,17 @@
     <Compile Include="frmGUIUserControl\DetailEmployee.Designer.cs">
       <DependentUpon>DetailEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUserControl\MatetialInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGUIUserControl\MatetialInformation.Designer.cs">
-      <DependentUpon>MatetialInformation.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.Designer.cs">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\MatetialInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\MatetialInformation.Designer.cs">
+      <DependentUpon>MatetialInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\ExpiredMaterial.cs">
       <SubType>Form</SubType>
@@ -279,11 +279,11 @@
     <EmbeddedResource Include="frmGUIUserControl\DetailEmployee.resx">
       <DependentUpon>DetailEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\MatetialInformation.resx">
-      <DependentUpon>MatetialInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\MatetialInformation.resx">
+      <DependentUpon>MatetialInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\ExpiredMaterial.resx">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>

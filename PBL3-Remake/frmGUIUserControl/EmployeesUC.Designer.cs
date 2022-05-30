@@ -48,7 +48,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 700);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 2;
             // 
             // button1
             // 
@@ -64,7 +64,6 @@
             this.button1.TabIndex = 7;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAddEmployee
             // 
@@ -80,7 +79,6 @@
             this.btnAddEmployee.TabIndex = 6;
             this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddEmployee.UseVisualStyleBackColor = true;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // pictureBox1
             // 
@@ -95,23 +93,21 @@
             // 
             this.dgvInforEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInforEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInforEmployee.Location = new System.Drawing.Point(100, 0);
+            this.dgvInforEmployee.Location = new System.Drawing.Point(0, 0);
             this.dgvInforEmployee.Name = "dgvInforEmployee";
             this.dgvInforEmployee.RowHeadersWidth = 51;
             this.dgvInforEmployee.RowTemplate.Height = 24;
-            this.dgvInforEmployee.Size = new System.Drawing.Size(1100, 700);
-            this.dgvInforEmployee.TabIndex = 1;
+            this.dgvInforEmployee.Size = new System.Drawing.Size(1200, 700);
+            this.dgvInforEmployee.TabIndex = 3;
             // 
             // EmployeesUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.Controls.Add(this.dgvInforEmployee);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgvInforEmployee);
             this.Name = "EmployeesUC";
             this.Size = new System.Drawing.Size(1200, 700);
-            this.Load += new System.EventHandler(this.EmployeesUC_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInforEmployee)).EndInit();
@@ -122,9 +118,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvInforEmployee;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnAddEmployee;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgvInforEmployee;
     }
 }

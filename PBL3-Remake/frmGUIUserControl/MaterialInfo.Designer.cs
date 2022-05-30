@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             this.btClose = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvInforMaterial = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpExpirationDate = new System.Windows.Forms.DateTimePicker();
             this.dtpImportDate = new System.Windows.Forms.DateTimePicker();
-            this.btnMoreInfor = new System.Windows.Forms.Button();
             this.txtManufacture = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtUnit = new System.Windows.Forms.TextBox();
@@ -51,7 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaterialID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInforMaterial)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,41 +59,13 @@
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClose.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClose.ForeColor = System.Drawing.Color.Black;
-            this.btClose.Location = new System.Drawing.Point(46, 557);
+            this.btClose.Location = new System.Drawing.Point(682, 558);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(100, 30);
             this.btClose.TabIndex = 36;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(195)))), ((int)(((byte)(235)))));
-            this.btnDelete.FlatAppearance.BorderSize = 3;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(162, 557);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 35;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnOK
-            // 
-            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(195)))), ((int)(((byte)(235)))));
-            this.btnOK.FlatAppearance.BorderSize = 3;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.Location = new System.Drawing.Point(634, 557);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 30);
-            this.btnOK.TabIndex = 34;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -122,8 +90,6 @@
             this.dgvInforMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInforMaterial.Size = new System.Drawing.Size(755, 287);
             this.dgvInforMaterial.TabIndex = 31;
-            this.dgvInforMaterial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInforMaterial_CellClick);
-            this.dgvInforMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInforMaterial_CellContentClick);
             this.dgvInforMaterial.SelectionChanged += new System.EventHandler(this.dgvInforMaterial_SelectionChanged);
             // 
             // panel1
@@ -131,7 +97,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
             this.panel1.Controls.Add(this.dtpExpirationDate);
             this.panel1.Controls.Add(this.dtpImportDate);
-            this.panel1.Controls.Add(this.btnMoreInfor);
             this.panel1.Controls.Add(this.txtManufacture);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtUnit);
@@ -164,23 +129,6 @@
             this.dtpImportDate.Name = "dtpImportDate";
             this.dtpImportDate.Size = new System.Drawing.Size(175, 22);
             this.dtpImportDate.TabIndex = 64;
-            // 
-            // btnMoreInfor
-            // 
-            this.btnMoreInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
-            this.btnMoreInfor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnMoreInfor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnMoreInfor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnMoreInfor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMoreInfor.Font = new System.Drawing.Font("Microsoft New Tai Lue", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoreInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnMoreInfor.Location = new System.Drawing.Point(691, 63);
-            this.btnMoreInfor.Name = "btnMoreInfor";
-            this.btnMoreInfor.Size = new System.Drawing.Size(61, 22);
-            this.btnMoreInfor.TabIndex = 38;
-            this.btnMoreInfor.Text = "More";
-            this.btnMoreInfor.UseVisualStyleBackColor = false;
-            this.btnMoreInfor.Click += new System.EventHandler(this.btnMoreInfor_Click);
             // 
             // txtManufacture
             // 
@@ -324,29 +272,13 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Material ID";
             // 
-            // btnEdit
-            // 
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(195)))), ((int)(((byte)(235)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(682, 10);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 30);
-            this.btnEdit.TabIndex = 38;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
             // MaterialInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btClose);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvInforMaterial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -364,8 +296,6 @@
         #endregion
 
         private System.Windows.Forms.Button btClose;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvInforMaterial;
         private System.Windows.Forms.Panel panel1;
@@ -383,8 +313,6 @@
         private System.Windows.Forms.TextBox txtImportQuantity;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnMoreInfor;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.DateTimePicker dtpExpirationDate;
         private System.Windows.Forms.DateTimePicker dtpImportDate;
     }

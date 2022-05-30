@@ -293,6 +293,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap invoice_32 {
+            get {
+                object obj = ResourceManager.GetObject("invoice-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key_32 {
             get {
                 object obj = ResourceManager.GetObject("key-32", resourceCulture);
@@ -516,6 +526,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap shutdown_48 {
             get {
                 object obj = ResourceManager.GetObject("shutdown-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spending_32 {
+            get {
+                object obj = ResourceManager.GetObject("spending-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

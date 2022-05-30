@@ -2,6 +2,7 @@
 using Entity;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI.frmGUIUserControl
@@ -11,6 +12,24 @@ namespace GUI.frmGUIUserControl
         public ManagerFoodUC()
         {
             InitializeComponent();
+        }
+        private Button CurrentButton;
+        private void SetUIForButton(object button)
+        {
+
+            var btn = (Button)button;
+            //highlight button
+            btn.BackColor = Color.FromArgb(66, 134, 244);
+            btn.ForeColor = Color.White;
+            //btn.RightToLeft = RightToLeft.Yes;
+            //Unhighlight button
+            if (CurrentButton != null && CurrentButton != btn)
+            {
+                //btn.RightToLeft = RightToLeft.No;
+                CurrentButton.BackColor = Color.FromArgb(17, 21, 37);
+                CurrentButton.ForeColor = Color.White;
+            }
+            CurrentButton = btn;
         }
         private void RemoveFood()
         {
@@ -76,31 +95,36 @@ namespace GUI.frmGUIUserControl
         {
             RemoveFood();
             ShowAllFood();
+            SetUIForButton(sender);
         }
 
         private void btnAppetizer_Click(object sender, EventArgs e)
         {
+            SetUIForButton(sender);
             RemoveFood();
         }
 
         private void btnMainDish_Click(object sender, EventArgs e)
         {
+            SetUIForButton(sender);
             RemoveFood();
         }
 
         private void btnDessert_Click(object sender, EventArgs e)
         {
             RemoveFood();
-
+            SetUIForButton(sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SetUIForButton(sender);
             RemoveFood();
         }
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
+
             AddNewCourseToWareHouse frm = new AddNewCourseToWareHouse();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();

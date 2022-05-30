@@ -147,7 +147,7 @@ namespace BLL
             }
             return dem;
         }
-        public ChiTietNhaCungCap GetPriceOfInGredient(int ID_NguyenLieu)
+        public ChiTietNhaCungCap GetPriceOfInGredientByIDInGredient(int ID_NguyenLieu)
         {
             return dALQLNH.ChiTietNhaCungCaps.Where(p => p.ID_NguyenLieu == ID_NguyenLieu).FirstOrDefault();
         }
@@ -170,7 +170,8 @@ namespace BLL
             {
                 if (i.NgayNhap == Datecustom)
                 {
-                    spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredient(i.ID_NguyenLieu).DonGia);
+                    if (GetPriceOfInGredientByIDInGredient(i.ID_NguyenLieu) != null)
+                        spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredientByIDInGredient(i.ID_NguyenLieu).DonGia);
                 }
             }
             return GetTotal(Datecustom) - spend;
@@ -194,7 +195,8 @@ namespace BLL
             {
                 if (i.NgayNhap.ToShortDateString() == Datecustom)
                 {
-                    spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredient(i.ID_NguyenLieu).DonGia);
+                    if (GetPriceOfInGredientByIDInGredient(i.ID_NguyenLieu) != null)
+                        spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredientByIDInGredient(i.ID_NguyenLieu).DonGia);
                 }
             }
             return GetTotal(Datecustom) - spend;

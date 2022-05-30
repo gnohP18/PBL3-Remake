@@ -48,7 +48,7 @@ namespace GUI.frmGUIUserControl
         {
             int count = Convert.ToInt32(dgvNguyenLieuKho.SelectedRows[0].Cells["ID_NguyenLieu"].Value.ToString());
             txtNameFood.Text = dgvNguyenLieuKho.SelectedRows[0].Cells["TenNguyenLieu"].Value.ToString();
-            txtAmountFood.Text = Convert.ToString(BLLNVNH.Instance.GetSoLuongNguyenLieuByIDNguyenLieu(count));
+            txtAmountFood.Text = dgvNguyenLieuKho.SelectedRows[0].Cells["LuongTonKho"].Value.ToString();
         }
 
         private void btnMoreInfor_Click_1(object sender, EventArgs e)

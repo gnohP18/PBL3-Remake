@@ -34,35 +34,7 @@ namespace BLL
         {
             return dALQLNH.Bans.Where(p => p.ID_Ban == id).FirstOrDefault();
         }
-        public List<MonAn> GetAllDishByIDDishAndIDKindOfDish(int idmonan, int idloaimonan)
-        {
-            return dALQLNH.MonAns.Where(p => (p.ID_MonAn == idmonan && p.ID_LoaiMonAn == idloaimonan)).ToList();
-        }
 
-        public List<string> GetKindOfFood()
-        {
-            DALQLNH dALQLNH = new DALQLNH();
-            List<string> list = new List<string>();
-            foreach (LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
-            {
-                list.Add(i.TenLoaiNguyenLieu);
-            }
-            return list;
-        }
-
-        public float GetSoLuongNguyenLieuByIDNguyenLieu(int id)
-        {
-            float count = 0;
-            DALQLNH dALQLNH = new DALQLNH();
-            foreach (Kho i in dALQLNH.Khoes)
-            {
-                if (i.ID_NguyenLieu == id)
-                {
-                    count = i.LuongTonKho;
-                }
-            }
-            return count;
-        }
         public List<MonAn> GetMonAn(int ID_LoaiMonAn, string txt, int TrangThai)
         {
             return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == ID_LoaiMonAn && p.TrangThai == TrangThai && p.TenMonAn.Contains(txt)).ToList();

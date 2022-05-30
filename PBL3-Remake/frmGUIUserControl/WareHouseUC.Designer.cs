@@ -43,13 +43,14 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMoreInfor = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnAddNewMaterial = new System.Windows.Forms.Button();
+            this.btnMaterialInformation = new System.Windows.Forms.Button();
             this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
             this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.btnVegetable = new System.Windows.Forms.Button();
             this.btnDriedFood = new System.Windows.Forms.Button();
             this.btnFreshFood = new System.Windows.Forms.Button();
             this.btnDrinking = new System.Windows.Forms.Button();
+            this.btnAllMaterial = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieuKho)).BeginInit();
             this.panel6.SuspendLayout();
@@ -201,7 +202,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.btnAddNewMaterial);
+            this.panel7.Controls.Add(this.btnMaterialInformation);
             this.panel7.Controls.Add(this.btnViewExpiredMaterial);
             this.panel7.Controls.Add(this.btnAddMaterialToWareHouse);
             this.panel7.Location = new System.Drawing.Point(869, 194);
@@ -210,22 +211,22 @@
             this.panel7.Size = new System.Drawing.Size(327, 460);
             this.panel7.TabIndex = 24;
             // 
-            // btnAddNewMaterial
+            // btnMaterialInformation
             // 
-            this.btnAddNewMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnAddNewMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddNewMaterial.FlatAppearance.BorderSize = 2;
-            this.btnAddNewMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddNewMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewMaterial.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddNewMaterial.Location = new System.Drawing.Point(63, 158);
-            this.btnAddNewMaterial.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddNewMaterial.Name = "btnAddNewMaterial";
-            this.btnAddNewMaterial.Size = new System.Drawing.Size(180, 45);
-            this.btnAddNewMaterial.TabIndex = 15;
-            this.btnAddNewMaterial.Text = "Add New Material";
-            this.btnAddNewMaterial.UseVisualStyleBackColor = false;
-            this.btnAddNewMaterial.Click += new System.EventHandler(this.btnAddNewMaterial_Click);
+            this.btnMaterialInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnMaterialInformation.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnMaterialInformation.FlatAppearance.BorderSize = 2;
+            this.btnMaterialInformation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaterialInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterialInformation.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMaterialInformation.Location = new System.Drawing.Point(63, 158);
+            this.btnMaterialInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaterialInformation.Name = "btnMaterialInformation";
+            this.btnMaterialInformation.Size = new System.Drawing.Size(180, 45);
+            this.btnMaterialInformation.TabIndex = 15;
+            this.btnMaterialInformation.Text = "Material information";
+            this.btnMaterialInformation.UseVisualStyleBackColor = false;
+            this.btnMaterialInformation.Click += new System.EventHandler(this.btnMaterialInformation_Click);
             // 
             // btnViewExpiredMaterial
             // 
@@ -337,10 +338,27 @@
             this.btnDrinking.UseVisualStyleBackColor = false;
             this.btnDrinking.Click += new System.EventHandler(this.btnDrinking_Click);
             // 
+            // btnAllMaterial
+            // 
+            this.btnAllMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAllMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAllMaterial.FlatAppearance.BorderSize = 2;
+            this.btnAllMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllMaterial.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
+            this.btnAllMaterial.Location = new System.Drawing.Point(677, 47);
+            this.btnAllMaterial.Name = "btnAllMaterial";
+            this.btnAllMaterial.Size = new System.Drawing.Size(169, 125);
+            this.btnAllMaterial.TabIndex = 29;
+            this.btnAllMaterial.Text = "All Material";
+            this.btnAllMaterial.UseVisualStyleBackColor = false;
+            this.btnAllMaterial.Click += new System.EventHandler(this.btnAllMaterial_Click);
+            // 
             // WareHouseUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.Controls.Add(this.btnAllMaterial);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnVegetable);
             this.Controls.Add(this.btnDriedFood);
@@ -377,6 +395,7 @@
         private System.Windows.Forms.Button btnDrinking;
         private System.Windows.Forms.Button btnAddMaterialToWareHouse;
         private System.Windows.Forms.Button btnViewExpiredMaterial;
-        private System.Windows.Forms.Button btnAddNewMaterial;
+        private System.Windows.Forms.Button btnMaterialInformation;
+        private System.Windows.Forms.Button btnAllMaterial;
     }
 }

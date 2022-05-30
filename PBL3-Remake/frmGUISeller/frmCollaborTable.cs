@@ -10,7 +10,7 @@ namespace PBL3_Remake.frmGUISeller
         public Ban ban { get; set; }
         public frmCollaborTable(Ban tb)
         {
-            ban = tb;
+            
             InitializeComponent();
         }
 

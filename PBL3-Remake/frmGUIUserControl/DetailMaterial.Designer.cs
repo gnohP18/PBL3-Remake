@@ -1,6 +1,6 @@
 ﻿namespace GUI.frmGUIUserControl
 {
-    partial class AddNewMaterial
+    partial class DetailMaterial
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,59 @@
         private void InitializeComponent()
         {
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.cbbKindOfMaterial = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnAddNewMaterial = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.lbTienDe = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtExpiry = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtInputFoodName = new System.Windows.Forms.TextBox();
+            this.txtInputMaterialName = new System.Windows.Forms.TextBox();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.txtID);
             this.panel7.Controls.Add(this.cbbKindOfMaterial);
             this.panel7.Controls.Add(this.btnClose);
-            this.panel7.Controls.Add(this.btnAddNewMaterial);
-            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.btnOK);
+            this.panel7.Controls.Add(this.lbTienDe);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.txtExpiry);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.txtUnit);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.txtInputFoodName);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Controls.Add(this.txtInputMaterialName);
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(319, 334);
+            this.panel7.Size = new System.Drawing.Size(320, 337);
             this.panel7.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 16);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(90, 36);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(141, 22);
+            this.txtID.TabIndex = 1;
             // 
             // cbbKindOfMaterial
             // 
@@ -71,7 +90,7 @@
             this.cbbKindOfMaterial.Location = new System.Drawing.Point(35, 243);
             this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
             this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 24);
-            this.cbbKindOfMaterial.TabIndex = 16;
+            this.cbbKindOfMaterial.TabIndex = 3;
             // 
             // btnClose
             // 
@@ -85,39 +104,39 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 32);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnAddNewMaterial
+            // btnOK
             // 
-            this.btnAddNewMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnAddNewMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddNewMaterial.FlatAppearance.BorderSize = 2;
-            this.btnAddNewMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddNewMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewMaterial.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddNewMaterial.Location = new System.Drawing.Point(4, 287);
-            this.btnAddNewMaterial.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddNewMaterial.Name = "btnAddNewMaterial";
-            this.btnAddNewMaterial.Size = new System.Drawing.Size(123, 32);
-            this.btnAddNewMaterial.TabIndex = 15;
-            this.btnAddNewMaterial.Text = "ADD";
-            this.btnAddNewMaterial.UseVisualStyleBackColor = false;
-            this.btnAddNewMaterial.Click += new System.EventHandler(this.btnAddNewMaterial_Click);
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnOK.FlatAppearance.BorderSize = 2;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnOK.Location = new System.Drawing.Point(4, 287);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(123, 32);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // label10
+            // lbTienDe
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label10.Location = new System.Drawing.Point(71, 9);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 23);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Add new material";
+            this.lbTienDe.AutoSize = true;
+            this.lbTienDe.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTienDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.lbTienDe.Location = new System.Drawing.Point(71, 9);
+            this.lbTienDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTienDe.Name = "lbTienDe";
+            this.lbTienDe.Size = new System.Drawing.Size(160, 23);
+            this.lbTienDe.TabIndex = 10;
+            this.lbTienDe.Text = "Add new material";
             // 
             // label3
             // 
@@ -149,7 +168,7 @@
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpiry.Name = "txtExpiry";
             this.txtExpiry.Size = new System.Drawing.Size(212, 22);
-            this.txtExpiry.TabIndex = 1;
+            this.txtExpiry.TabIndex = 2;
             // 
             // label1
             // 
@@ -160,7 +179,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 23);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Unit";
             // 
             // txtUnit
@@ -183,21 +202,21 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Material name";
             // 
-            // txtInputFoodName
+            // txtInputMaterialName
             // 
-            this.txtInputFoodName.Location = new System.Drawing.Point(35, 84);
-            this.txtInputFoodName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtInputFoodName.Name = "txtInputFoodName";
-            this.txtInputFoodName.Size = new System.Drawing.Size(212, 22);
-            this.txtInputFoodName.TabIndex = 1;
+            this.txtInputMaterialName.Location = new System.Drawing.Point(35, 84);
+            this.txtInputMaterialName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInputMaterialName.Name = "txtInputMaterialName";
+            this.txtInputMaterialName.Size = new System.Drawing.Size(212, 22);
+            this.txtInputMaterialName.TabIndex = 0;
             // 
-            // AddNewMaterial
+            // DetailMaterial
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(319, 334);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddNewMaterial";
+            this.Name = "DetailMaterial";
             this.Text = "AddNewMaterial";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -208,10 +227,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnAddNewMaterial;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label lbTienDe;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtInputFoodName;
+        private System.Windows.Forms.TextBox txtInputMaterialName;
         private System.Windows.Forms.ComboBox cbbKindOfMaterial;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label3;
@@ -219,5 +238,7 @@
         private System.Windows.Forms.TextBox txtExpiry;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

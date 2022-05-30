@@ -39,11 +39,12 @@ namespace GUI.frmGUIManager
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnOverView = new System.Windows.Forms.Button();
             this.pnUC = new System.Windows.Forms.Panel();
-            this.managerFoodUC = new GUI.frmGUIUserControl.ManagerFoodUC();
             this.wareHouseUC = new GUI.frmGUIUserControl.WareHouseUC();
             this.statisticUC = new GUI.frmGUIUserControl.StatisticUC();
-            this.employeesUC = new GUI.frmGUIUserControl.EmployeesUC();
             this.helpUC = new GUI.frmGUIUserControl.HelpUC();
+            this.overViewUC = new GUI.frmGUIUserControl.OverViewUC();
+            this.managerFoodUC = new GUI.frmGUIUserControl.ManagerFoodUC();
+            this.employeesUC = new GUI.frmGUIUserControl.EmployeesUC();
             this.panel2.SuspendLayout();
             this.pnUC.SuspendLayout();
             this.SuspendLayout();
@@ -201,10 +202,11 @@ namespace GUI.frmGUIManager
             // 
             // pnUC
             // 
-            this.pnUC.Controls.Add(this.helpUC);
-            this.pnUC.Controls.Add(this.managerFoodUC);
             this.pnUC.Controls.Add(this.wareHouseUC);
             this.pnUC.Controls.Add(this.statisticUC);
+            this.pnUC.Controls.Add(this.helpUC);
+            this.pnUC.Controls.Add(this.overViewUC);
+            this.pnUC.Controls.Add(this.managerFoodUC);
             this.pnUC.Controls.Add(this.employeesUC);
             this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnUC.Location = new System.Drawing.Point(200, 100);
@@ -212,44 +214,52 @@ namespace GUI.frmGUIManager
             this.pnUC.Size = new System.Drawing.Size(1200, 700);
             this.pnUC.TabIndex = 2;
             // 
-            // managerFoodUC
-            // 
-            this.managerFoodUC.Location = new System.Drawing.Point(545, 44);
-            this.managerFoodUC.Name = "managerFoodUC";
-            this.managerFoodUC.Size = new System.Drawing.Size(316, 155);
-            this.managerFoodUC.TabIndex = 4;
-            // 
             // wareHouseUC
             // 
             this.wareHouseUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.wareHouseUC.Location = new System.Drawing.Point(330, 194);
+            this.wareHouseUC.Location = new System.Drawing.Point(643, 338);
             this.wareHouseUC.Name = "wareHouseUC";
-            this.wareHouseUC.Size = new System.Drawing.Size(209, 109);
-            this.wareHouseUC.TabIndex = 3;
+            this.wareHouseUC.Size = new System.Drawing.Size(171, 165);
+            this.wareHouseUC.TabIndex = 5;
             // 
             // statisticUC
             // 
             this.statisticUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.statisticUC.Location = new System.Drawing.Point(36, 194);
+            this.statisticUC.DateCustom = new System.DateTime(((long)(0)));
+            this.statisticUC.Location = new System.Drawing.Point(373, 320);
             this.statisticUC.Name = "statisticUC";
-            this.statisticUC.Size = new System.Drawing.Size(240, 126);
-            this.statisticUC.TabIndex = 2;
-            // 
-            // employeesUC
-            // 
-            this.employeesUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.employeesUC.Location = new System.Drawing.Point(217, 20);
-            this.employeesUC.Name = "employeesUC";
-            this.employeesUC.Size = new System.Drawing.Size(173, 121);
-            this.employeesUC.TabIndex = 1;
+            this.statisticUC.Size = new System.Drawing.Size(177, 203);
+            this.statisticUC.TabIndex = 4;
             // 
             // helpUC
             // 
             this.helpUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.helpUC.Location = new System.Drawing.Point(630, 269);
+            this.helpUC.Location = new System.Drawing.Point(55, 301);
             this.helpUC.Name = "helpUC";
-            this.helpUC.Size = new System.Drawing.Size(253, 150);
-            this.helpUC.TabIndex = 5;
+            this.helpUC.Size = new System.Drawing.Size(231, 179);
+            this.helpUC.TabIndex = 3;
+            // 
+            // overViewUC
+            // 
+            this.overViewUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.overViewUC.Location = new System.Drawing.Point(505, 83);
+            this.overViewUC.Name = "overViewUC";
+            this.overViewUC.Size = new System.Drawing.Size(275, 186);
+            this.overViewUC.TabIndex = 2;
+            // 
+            // managerFoodUC
+            // 
+            this.managerFoodUC.Location = new System.Drawing.Point(225, 80);
+            this.managerFoodUC.Name = "managerFoodUC";
+            this.managerFoodUC.Size = new System.Drawing.Size(221, 189);
+            this.managerFoodUC.TabIndex = 1;
+            // 
+            // employeesUC
+            // 
+            this.employeesUC.Location = new System.Drawing.Point(55, 80);
+            this.employeesUC.Name = "employeesUC";
+            this.employeesUC.Size = new System.Drawing.Size(154, 160);
+            this.employeesUC.TabIndex = 0;
             // 
             // frmMainManager
             // 
@@ -282,10 +292,11 @@ namespace GUI.frmGUIManager
         private System.Windows.Forms.Button btnWareHouse;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnUC;
-        private frmGUIUserControl.EmployeesUC employeesUC;
-        private frmGUIUserControl.StatisticUC statisticUC;
-        private frmGUIUserControl.WareHouseUC wareHouseUC;
+        private EmployeesUC employeesUC;
         private ManagerFoodUC managerFoodUC;
+        private WareHouseUC wareHouseUC;
+        private StatisticUC statisticUC;
         private HelpUC helpUC;
+        private OverViewUC overViewUC;
     }
 }

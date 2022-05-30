@@ -64,7 +64,7 @@ namespace BLL
             {
                 int ID_NguyenLieu = childGroup.Key;
                 NguyenLieu nl = dALQLNH.NguyenLieus.Find(ID_NguyenLieu);
-                if (nl.ID_LoaiNguyenLieu != ID_LoaiNguyenLieu) continue;
+                if (nl.ID_LoaiNguyenLieu != ID_LoaiNguyenLieu && ID_LoaiNguyenLieu != 0) continue;
                 float LuongTonKhoConHSD = 0;
                 foreach (Kho s in childGroup)
                 {
@@ -130,7 +130,6 @@ namespace BLL
         public List<ChiTietNhaCungCap> GetTT(int id)
         {
             List<ChiTietNhaCungCap> list = new List<ChiTietNhaCungCap>();
-            DALQLNH dALQLNH = new DALQLNH();
             foreach (ChiTietNhaCungCap i in dALQLNH.ChiTietNhaCungCaps)
             {
                 if (i.ID_NguyenLieu == id)
@@ -149,7 +148,6 @@ namespace BLL
         public List<LoaiNguyenLieu> GetAllLoaiNguyenLieu()
         {
             List<LoaiNguyenLieu> list = new List<LoaiNguyenLieu>();
-            DALQLNH dALQLNH = new DALQLNH();
             foreach(LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
             {
                 list.Add(i);
@@ -198,16 +196,9 @@ namespace BLL
             return ID;
         }
 
-        public void AddNewNhaCungCap(int IDNCC, string Name, string Address, string MaSoThue, string SDT)
+        public void AddNewNhaCungCap(NhaCungCap ncc)
         {
-            dALQLNH.NhaCungCaps.Add(new NhaCungCap
-            {
-                ID_NhaCungCap = IDNCC,
-                TenNhaCungCap = Name,
-                DiaChi = Address,
-                MaSoThue = MaSoThue,
-                SoDienThoai = SDT
-            });
+            dALQLNH.NhaCungCaps.Add(ncc);
             dALQLNH.SaveChanges();
         }
 
@@ -224,17 +215,66 @@ namespace BLL
         }
         public void AddMaterialToWareHouse(Kho i)
         {
-            dALQLNH.Khoes.Add(new Kho
-            {
-                ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu,
-                ID_NguyenLieu = i.ID_NguyenLieu,
-                ID_NhaCungCap = i.ID_NhaCungCap,
-                NgayNhap = i.NgayNhap,
-                NgayHetHan = i.NgayHetHan,
-                LuongNhapVao = i.LuongNhapVao,
-                LuongTonKho = i.LuongTonKho
-            });
+            dALQLNH.Khoes.Add(i);
             dALQLNH.SaveChanges();
+        }
+
+        public bool checkAddorUpdate(int id)
+        {
+            foreach(NguyenLieu i in GetAllNguyenLieu())
+            {
+                if(i.ID_NguyenLieu == id)
+                {
+                    return true;
+                }   
+            }
+            return false;
+        }
+       public void ExcuteAddorUpdate(NguyenLieu i)
+        {   
+            if(checkAddorUpdate(i.ID_NguyenLieu))
+            {
+                NguyenLieu nl = dALQLNH.NguyenLieus.Find(i.ID_NguyenLieu);
+                nl.ID_NguyenLieu = i.ID_NguyenLieu;
+                nl.DonViTinh = i.DonViTinh;
+                nl.TenNguyenLieu = i.TenNguyenLieu;
+                nl.HSD = i.HSD;
+                nl.ID_LoaiNguyenLieu = i.ID_LoaiNguyenLieu;
+            }
+            else
+            {
+                dALQLNH.NguyenLieus.Add(i);
+            }
+            
+            dALQLNH.SaveChanges();
+        }
+
+       public NguyenLieu GetNguyenLieuByIDNguyenLieu(int ID)
+        {
+            return dALQLNH.NguyenLieus.Find(ID);
+        }
+
+        public bool checkTrungTenNL(string TenNL)
+        {
+            foreach(NguyenLieu i in GetAllNguyenLieu())
+            {
+                if(i.TenNguyenLieu == TenNL)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void DelNguyenLieu(List<int> listIDNguyenLieuDel)
+        {
+            foreach (int i in listIDNguyenLieuDel)
+            {
+                NguyenLieu nl = dALQLNH.NguyenLieus.Find(i);               
+                dALQLNH.NguyenLieus.Remove(nl);
+                dALQLNH.SaveChanges();
+
+            }
         }
     }
 }

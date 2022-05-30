@@ -22,25 +22,22 @@ namespace GUI.frmGUIUserControl
             frmGUIUserControl.AddNewManufacturer frm = new frmGUIUserControl.AddNewManufacturer();
             frm.Show();
         }
-        public void Show(int IDNguyenLieu)
+        void Show(int IDNguyenLieu)
         {
            dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(IDNguyenLieu);
+        }
+        private void btnFreshFood_Click(object sender, EventArgs e)
+        {
+            Show(1);
+        }
+        private void btnVegetable_Click(object sender, EventArgs e)
+        {
+            Show(2);
         }
         private void btnDriedFood_Click(object sender, EventArgs e)
         {
             Show(3);
         }
-
-        private void btnVegetable_Click(object sender, EventArgs e)
-        {
-            Show(2);
-        }
-
-        private void btnFreshFood_Click(object sender, EventArgs e)
-        {
-            Show(1);
-        }
-
         private void btnDrinking_Click(object sender, EventArgs e)
         {
             Show(4);
@@ -51,7 +48,7 @@ namespace GUI.frmGUIUserControl
         {
             int count = Convert.ToInt32(dgvNguyenLieuKho.SelectedRows[0].Cells["ID_NguyenLieu"].Value.ToString());
             txtNameFood.Text = dgvNguyenLieuKho.SelectedRows[0].Cells["TenNguyenLieu"].Value.ToString();
-            txtAmountFood.Text = Convert.ToString(BLLNVNH.Instance.GetSoLuongNguyenLieuByIDNguyenLieu(count));
+            txtAmountFood.Text = dgvNguyenLieuKho.SelectedRows[0].Cells["LuongTonKho"].Value.ToString();
         }
 
         private void btnMoreInfor_Click_1(object sender, EventArgs e)
@@ -62,13 +59,6 @@ namespace GUI.frmGUIUserControl
                 frmGUIUserControl.MaterialInfo frm = new MaterialInfo(ID_NguyenLieu);
                 frm.Show();
             }
-        }
-
-        private void btnAddNewMaterial_Click(object sender, EventArgs e)
-        {
-            frmGUIUserControl.AddNewMaterial frm = new AddNewMaterial();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
         }
 
         private void btnViewExpiredMaterial_Click(object sender, EventArgs e)
@@ -83,6 +73,18 @@ namespace GUI.frmGUIUserControl
             frmGUIUserControl.AddMaterialToWareHouse frm = new AddMaterialToWareHouse();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
+        }
+
+        private void btnMaterialInformation_Click(object sender, EventArgs e)
+        {
+            frmGUIUserControl.MatetialInformation frm = new MatetialInformation();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void btnAllMaterial_Click(object sender, EventArgs e)
+        {
+           dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(0);
         }
     }
 }

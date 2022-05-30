@@ -197,11 +197,9 @@ namespace GUI.frmGUISeller
 
         private void btnCollabTable_Click(object sender, EventArgs e)
         {
-            frmCollaborTable frm = new frmCollaborTable(BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable));
+            frmCollaborTable frm = new frmCollaborTable(BLLNVNH.Instance.GetBanByID_Ban(IDTable));
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
-
-
     }
 }

@@ -265,6 +265,17 @@ namespace BLL
             }
             return false;
         }
+
+        public void DelNguyenLieu(List<int> listIDNguyenLieuDel)
+        {
+            foreach (int i in listIDNguyenLieuDel)
+            {
+                NguyenLieu nl = dALQLNH.NguyenLieus.Find(i);               
+                dALQLNH.NguyenLieus.Remove(nl);
+                dALQLNH.SaveChanges();
+
+            }
+        }
     }
 }
 

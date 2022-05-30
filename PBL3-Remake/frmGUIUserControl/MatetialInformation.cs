@@ -76,5 +76,18 @@ namespace GUI.frmGUIUserControl
         {
             Close();
         }
+
+        private void btnDeleteMaterial_Click(object sender, EventArgs e)
+        {
+            List<int> list = new List<int>();
+            foreach(DataGridViewRow i in dgvNguyenLieu.SelectedRows)
+            {
+                list.Add(Convert.ToInt32(i.Cells["ID_NguyenLieu"].Value.ToString()));
+            }
+            BLLQLNH.Instance.DelNguyenLieu(list);
+            ReloadDgv(0);
+            NoticeBox box = new NoticeBox("Delete material success!");
+            box.Show();
+        }
     }
 }

@@ -132,6 +132,9 @@ namespace Entity
                 new NguyenLieu{ID_NguyenLieu = 32,DonViTinh ="kg",TenNguyenLieu = "Rau muong",HSD=1,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 33,DonViTinh ="kg",TenNguyenLieu = "Dau khuon",HSD=1,ID_LoaiNguyenLieu=3},
                 new NguyenLieu{ID_NguyenLieu = 34,DonViTinh ="kg",TenNguyenLieu = "Dau phung",HSD=120,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 35,DonViTinh ="qua",TenNguyenLieu = "Ot",HSD=7,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 36,DonViTinh ="gram",TenNguyenLieu = "La lot",HSD=7,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 37,DonViTinh ="kg",TenNguyenLieu = "Duong",HSD=90,ID_LoaiNguyenLieu=3},
 
             });
 
@@ -163,11 +166,16 @@ namespace Entity
 
                 new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=10,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=27,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=32,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=7,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 4,ID_NguyenLieu=33,Luong = 1},
 
                 new ChiTietMonAn{ID_MonAn = 5,ID_NguyenLieu=2,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 5,ID_NguyenLieu=18,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 5,ID_NguyenLieu=35,Luong = 1},
 
                 new ChiTietMonAn{ID_MonAn = 6,ID_NguyenLieu=1,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 6,ID_NguyenLieu=36,Luong = 1},
 
                 new ChiTietMonAn{ID_MonAn = 7,ID_NguyenLieu=29,Luong = 15},
                 new ChiTietMonAn{ID_MonAn = 7,ID_NguyenLieu=28,Luong = 1},
@@ -215,6 +223,8 @@ namespace Entity
                 new ChiTietMonAn{ID_MonAn = 18,ID_NguyenLieu=33,Luong = 1},
 
                 new ChiTietMonAn{ID_MonAn = 19,ID_NguyenLieu=34,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 19,ID_NguyenLieu=37,Luong = 1},
+
 
                 new ChiTietMonAn{ID_MonAn = 20,ID_NguyenLieu=19,Luong = 1},
 

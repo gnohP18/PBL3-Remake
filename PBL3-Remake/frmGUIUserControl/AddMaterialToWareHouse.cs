@@ -64,7 +64,7 @@ namespace GUI.frmGUIUserControl
                 {
                     if (i.NguyenLieu.TenNguyenLieu == cbbMaterialName.SelectedItem.ToString()
                         && i.NhaCungCap.TenNhaCungCap == cbbManufacturer.SelectedItem.ToString()
-                        && i.NgayNhap == dtpImportDay.Value)
+                        && i.NgayNhap.ToShortDateString() == dtpImportDay.Value.ToShortDateString())
                     {
                         BLLQLNH.Instance.UpdateLuongNhapVaoVaLuongTonKho(i, Convert.ToInt32(txtQuantity.Text.ToString()));
                         GUI.NoticeBox box = new NoticeBox("Add material successfully!");

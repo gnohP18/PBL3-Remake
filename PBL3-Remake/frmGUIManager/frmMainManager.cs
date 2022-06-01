@@ -36,42 +36,42 @@ namespace GUI.frmGUIManager
         }
         private void frmMainManager_Load(object sender, EventArgs e)
         {
-            SetupUC(overViewUC);
+            /*SetupUC(overViewUC);
             SetupUC(employeesUC);
             SetupUC(helpUC);
             SetupUC(statisticUC);
             SetupUC(wareHouseUC);
-            SetupUC(managerFoodUC);
+            SetupUC(managerFoodUC);*/
         }
 
         private void btnOverView_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            overViewUC.BringToFront();
+            //overViewUC.BringToFront();
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            employeesUC.BringToFront();
+            //employeesUC.BringToFront();
         }
 
         private void btnWareHouse_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            wareHouseUC.BringToFront();
+            //wareHouseUC.BringToFront();
         }
 
         private void btnStatictis_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            statisticUC.BringToFront();
+            //statisticUC.BringToFront();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            helpUC.BringToFront();
+            //helpUC.BringToFront();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace GUI.frmGUIManager
         private void btnFood_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            managerFoodUC.BringToFront();
+            //managerFoodUC.BringToFront();
         }
     }
 }

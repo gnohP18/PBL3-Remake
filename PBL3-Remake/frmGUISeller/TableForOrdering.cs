@@ -2,11 +2,13 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Entity;
+using System;
 
 namespace GUI.frmGUISeller
 {
     public partial class TableForOrdering : UserControl
     {
+        public frmMainSeller.Mydel d;
         public TableForOrdering(Ban ban)
         {
             InitializeComponent();
@@ -38,6 +40,7 @@ namespace GUI.frmGUISeller
         private void btnMenuOrder_Click(object sender, System.EventArgs e)
         {
             frmOrder frm = new frmOrder(ban.ID_Ban);
+            frm.d = d;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

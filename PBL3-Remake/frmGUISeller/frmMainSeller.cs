@@ -9,12 +9,15 @@ namespace GUI.frmGUISeller
 {
     public partial class frmMainSeller : Form
     {
-        private int Floor = 0;
+        private int Floor = 1;
         private int statustb = -1;
+        public delegate void Mydel(int st, int fl);
+        public Mydel d { get; set; }
         public frmMainSeller()
         {
             InitializeComponent();
             SetCbb();
+            d = new Mydel(LoadBanByTinhTrangBanVaTang);
         }
 
         private void frmMainSeller_Load(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace GUI.frmGUISeller
             cbbStatusTable.Items.Add("Busy");
             cbbStatusDish.Items.Add("No ready");
             cbbStatusDish.Items.Add("Done");
+            cbbStatusTable.SelectedIndex = 0;
         }
 
         
@@ -44,6 +48,7 @@ namespace GUI.frmGUISeller
         }
         void LoadBanByTinhTrangBanVaTang(int st, int fl)
         {
+            RemoveTable();
             List<Ban> listBan = BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(st, fl);
             int soban = listBan.Count;
             TableForOrdering[] tb = new TableForOrdering[soban];
@@ -51,6 +56,7 @@ namespace GUI.frmGUISeller
             foreach (Ban i in listBan)
             {
                 tb[dem1] = new TableForOrdering(i);
+                tb[dem1].d = d;
                 int ttb = i.TinhTrangBan;
                 dem1++;
             }
@@ -87,14 +93,12 @@ namespace GUI.frmGUISeller
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             Floor = 1;
-            RemoveTable();
             LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             Floor = 2;
-            RemoveTable();
             LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
 
@@ -103,19 +107,16 @@ namespace GUI.frmGUISeller
             if (cbbStatusTable.SelectedIndex == 1)
             {
                 statustb = 0;
-                RemoveTable();
                 LoadBanByTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatusTable.SelectedIndex == 2)
             {
                 statustb = 1;
-                RemoveTable();
                 LoadBanByTinhTrangBanVaTang(statustb, Floor);
             }
             else if (cbbStatusTable.SelectedIndex == 0)
             {
                 statustb = -1;
-                RemoveTable();
                 LoadBanByTinhTrangBanVaTang(statustb, Floor);
             }
         }

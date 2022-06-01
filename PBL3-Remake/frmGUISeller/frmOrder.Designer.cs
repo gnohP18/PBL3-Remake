@@ -47,8 +47,10 @@
             this.btnDessert = new System.Windows.Forms.Button();
             this.btnMainDish = new System.Windows.Forms.Button();
             this.btnAppetizer = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
+            this.pnMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDish
@@ -216,6 +218,7 @@
             // 
             // pnMain
             // 
+            this.pnMain.Controls.Add(this.btnExit);
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Name = "pnMain";
@@ -298,6 +301,22 @@
             this.btnAppetizer.UseVisualStyleBackColor = false;
             this.btnAppetizer.Click += new System.EventHandler(this.btnAppetizer_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Image = global::PBL3_Remake.Properties.Resources.exit_32;
+            this.btnExit.Location = new System.Drawing.Point(788, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnExit.Size = new System.Drawing.Size(55, 64);
+            this.btnExit.TabIndex = 34;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmOrder
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -321,6 +340,7 @@
             this.Load += new System.EventHandler(this.frmOrder_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
+            this.pnMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +363,6 @@
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.Button btnCollabTable;
+        private System.Windows.Forms.Button btnExit;
     }
 }

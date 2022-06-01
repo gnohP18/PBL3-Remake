@@ -117,17 +117,27 @@ namespace BLL
             dALQLNH.SaveChanges();
         }
 
-        public void SetCollabTable(Ban tb, int ttban)
+        public void SetCollabTable(Ban MainBan, int IDCollabBan)
         {
-            if (tb.ID_Ban == tb.TinhTrangBan || tb.TinhTrangBan == 0)
+            if (MainBan.ID_Ban == MainBan.TinhTrangBan || MainBan.TinhTrangBan == 0)
             {
-                tb.TinhTrangBan = ttban;
-                GetBanByID_Ban(ttban).TinhTrangBan = ttban;
+                Ban banCollab = GetBanByID_Ban(IDCollabBan);
+                MainBan.TinhTrangBan = IDCollabBan;
+                if(banCollab.TinhTrangBan == 0)
+                    banCollab.TinhTrangBan = IDCollabBan;
+                else
+                {
+                    List<ChiTietBan> chiTietBans = dALQLNH.ChiTietBans.Where(s => s.ID_Ban == IDCollabBan).ToList();
+                    foreach(ChiTietBan i in chiTietBans)
+                    {
+                        i.ID_Ban = MainBan.ID_Ban;
+                    }
+                }
                 dALQLNH.SaveChanges();
             }
-            else if (tb.ID_Ban != tb.TinhTrangBan)
+            else if (MainBan.ID_Ban != MainBan.TinhTrangBan)
             {
-                SetCollabTable(GetBanByID_Ban(tb.TinhTrangBan), ttban);
+                SetCollabTable(GetBanByID_Ban(MainBan.TinhTrangBan), IDCollabBan);
             }
         }
         public string GetAllCollabTable(Ban tb, int ttban, string txt)

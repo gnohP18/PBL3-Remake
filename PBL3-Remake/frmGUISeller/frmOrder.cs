@@ -11,6 +11,7 @@ namespace GUI.frmGUISeller
 {
     public partial class frmOrder : Form
     {
+        public frmMainSeller.Mydel d;
         public int IDTable { get; set; }
         private int IDLoaiMonAn = 1;
         List<MonAn_View> listMonAnViewDaDat;
@@ -200,6 +201,13 @@ namespace GUI.frmGUISeller
             frmCollaborTable frm = new frmCollaborTable(BLLNVNH.Instance.GetBanByID_Ban(IDTable));
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            d(-1, 1);
+            this.Close();
+            
         }
     }
 }

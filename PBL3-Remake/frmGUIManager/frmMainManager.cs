@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
+using GUI.frmGUIUserControl;
 namespace GUI.frmGUIManager
 {
     public partial class frmMainManager : Form
@@ -36,42 +36,42 @@ namespace GUI.frmGUIManager
         }
         private void frmMainManager_Load(object sender, EventArgs e)
         {
-            /*SetupUC(overViewUC);
-            SetupUC(employeesUC);
-            SetupUC(helpUC);
-            SetupUC(statisticUC);
-            SetupUC(wareHouseUC);
-            SetupUC(managerFoodUC);*/
+            SetupUC(OverViewUC.Instance);
+            SetupUC(EmployeesUC.Instance);
+            SetupUC(HelpUC.Instance);
+            SetupUC(StatisticUC.Instance);
+            SetupUC(WareHouseUC.Instance);
+            SetupUC(ManagerFoodUC.Instance);
         }
 
         private void btnOverView_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //overViewUC.BringToFront();
+            OverViewUC.Instance.BringToFront();
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //employeesUC.BringToFront();
+            EmployeesUC.Instance.BringToFront();
         }
 
         private void btnWareHouse_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //wareHouseUC.BringToFront();
+            WareHouseUC.Instance.BringToFront();
         }
 
         private void btnStatictis_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //statisticUC.BringToFront();
+            StatisticUC.Instance.BringToFront();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //helpUC.BringToFront();
+            HelpUC.Instance.BringToFront();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace GUI.frmGUIManager
         private void btnFood_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            //managerFoodUC.BringToFront();
+            ManagerFoodUC.Instance.BringToFront();
         }
     }
 }

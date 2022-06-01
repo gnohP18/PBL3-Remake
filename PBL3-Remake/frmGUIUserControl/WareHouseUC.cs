@@ -6,7 +6,12 @@ namespace GUI.frmGUIUserControl
 
     public partial class WareHouseUC : UserControl
     {
-        public WareHouseUC()
+        private static WareHouseUC _Instance;
+        public static WareHouseUC Instance
+        {
+            get { if (_Instance == null) _Instance = new WareHouseUC(); return _Instance; }
+        }
+        private WareHouseUC()
         {
             InitializeComponent();
         }

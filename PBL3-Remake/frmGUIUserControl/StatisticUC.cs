@@ -9,6 +9,11 @@ namespace GUI.frmGUIUserControl
 {
     public partial class StatisticUC : UserControl
     {
+        private static StatisticUC _Instance;
+        public static StatisticUC Instance
+        {
+            get { if (_Instance == null) _Instance = new StatisticUC(); return _Instance; }
+        }
         #region Variable Instance
         List<Statistic_view> ListDoanhThu = new List<Statistic_view>();
         List<Statistic_view> DoanhThuTheoNgay = new List<Statistic_view>();
@@ -22,7 +27,7 @@ namespace GUI.frmGUIUserControl
         private DateTime DayStart { get; set; }
         public DateTime DayEnd { get; set; }
         #endregion
-        public StatisticUC()
+        private StatisticUC()
         {
             InitializeComponent();
         }

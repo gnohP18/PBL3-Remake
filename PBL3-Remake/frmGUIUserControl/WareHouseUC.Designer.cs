@@ -46,11 +46,11 @@
             this.btnMaterialInformation = new System.Windows.Forms.Button();
             this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
             this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
+            this.btnAllMaterial = new System.Windows.Forms.Button();
             this.btnVegetable = new System.Windows.Forms.Button();
             this.btnDriedFood = new System.Windows.Forms.Button();
             this.btnFreshFood = new System.Windows.Forms.Button();
             this.btnDrinking = new System.Windows.Forms.Button();
-            this.btnAllMaterial = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieuKho)).BeginInit();
             this.panel6.SuspendLayout();
@@ -262,6 +262,22 @@
             this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
             this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
             // 
+            // btnAllMaterial
+            // 
+            this.btnAllMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAllMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAllMaterial.FlatAppearance.BorderSize = 2;
+            this.btnAllMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllMaterial.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
+            this.btnAllMaterial.Location = new System.Drawing.Point(677, 47);
+            this.btnAllMaterial.Name = "btnAllMaterial";
+            this.btnAllMaterial.Size = new System.Drawing.Size(169, 125);
+            this.btnAllMaterial.TabIndex = 29;
+            this.btnAllMaterial.Text = "All Material";
+            this.btnAllMaterial.UseVisualStyleBackColor = false;
+            this.btnAllMaterial.Click += new System.EventHandler(this.btnAllMaterial_Click);
+            // 
             // btnVegetable
             // 
             this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
@@ -337,22 +353,6 @@
             this.btnDrinking.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDrinking.UseVisualStyleBackColor = false;
             this.btnDrinking.Click += new System.EventHandler(this.btnDrinking_Click);
-            // 
-            // btnAllMaterial
-            // 
-            this.btnAllMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAllMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAllMaterial.FlatAppearance.BorderSize = 2;
-            this.btnAllMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllMaterial.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
-            this.btnAllMaterial.Location = new System.Drawing.Point(677, 47);
-            this.btnAllMaterial.Name = "btnAllMaterial";
-            this.btnAllMaterial.Size = new System.Drawing.Size(169, 125);
-            this.btnAllMaterial.TabIndex = 29;
-            this.btnAllMaterial.Text = "All Material";
-            this.btnAllMaterial.UseVisualStyleBackColor = false;
-            this.btnAllMaterial.Click += new System.EventHandler(this.btnAllMaterial_Click);
             // 
             // WareHouseUC
             // 

@@ -9,7 +9,12 @@ namespace GUI.frmGUIUserControl
 {
     public partial class ManagerFoodUC : UserControl
     {
-        public ManagerFoodUC()
+        private static ManagerFoodUC _Instance;
+        public static ManagerFoodUC Instance
+        {
+            get { if (_Instance == null) _Instance = new ManagerFoodUC(); return _Instance; }
+        }
+        private ManagerFoodUC()
         {
             InitializeComponent();
         }

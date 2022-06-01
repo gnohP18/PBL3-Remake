@@ -12,7 +12,12 @@ namespace GUI.frmGUIUserControl
 {
     public partial class HelpUC : UserControl
     {
-        public HelpUC()
+        private static HelpUC _Instance;
+        public static HelpUC Instance
+        {
+            get { if (_Instance == null) _Instance = new HelpUC(); return _Instance; }
+        }
+        private HelpUC()
         {
             InitializeComponent();
         }

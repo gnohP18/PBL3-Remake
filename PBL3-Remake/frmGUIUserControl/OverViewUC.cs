@@ -12,7 +12,12 @@ namespace GUI.frmGUIUserControl
 {
     public partial class OverViewUC : UserControl
     {
-        public OverViewUC()
+        private static OverViewUC _Instance;
+        public static OverViewUC Instance
+        {
+            get { if (_Instance == null) _Instance = new OverViewUC(); return _Instance; }
+        }
+        private OverViewUC()
         {
             InitializeComponent();
         }

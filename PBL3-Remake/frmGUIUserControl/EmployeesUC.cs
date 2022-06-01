@@ -5,7 +5,12 @@ namespace GUI.frmGUIUserControl
 {
     public partial class EmployeesUC : UserControl
     {
-        public EmployeesUC()
+        private static EmployeesUC _Instance;
+        public static EmployeesUC Instance
+        {
+            get { if (_Instance == null) _Instance = new EmployeesUC(); return _Instance; }
+        }
+        private EmployeesUC()
         {
             InitializeComponent();
         }

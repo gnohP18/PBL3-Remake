@@ -43,35 +43,39 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblProfit = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblConsuming = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnDetailInvoice = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOrdered = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MainChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.DayChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDetailInvoice = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dtpDayEnd = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
+            this.dtpDayStart = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DayChart)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // CalendarStatistic
@@ -119,8 +123,19 @@
             this.lblProfit.Name = "lblProfit";
             this.lblProfit.Size = new System.Drawing.Size(156, 25);
             this.lblProfit.TabIndex = 5;
-            this.lblProfit.Text = "C";
+            this.lblProfit.Text = "D";
             this.lblProfit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PBL3_Remake.Properties.Resources.money_48;
+            this.pictureBox2.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -143,9 +158,9 @@
             this.label3.Location = new System.Drawing.Point(4, 65);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 23);
+            this.label3.Size = new System.Drawing.Size(108, 23);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Total";
+            this.label3.Text = "Comsuming";
             // 
             // lblConsuming
             // 
@@ -156,8 +171,19 @@
             this.lblConsuming.Name = "lblConsuming";
             this.lblConsuming.Size = new System.Drawing.Size(159, 25);
             this.lblConsuming.TabIndex = 4;
-            this.lblConsuming.Text = "B";
+            this.lblConsuming.Text = "C";
             this.lblConsuming.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PBL3_Remake.Properties.Resources.spending_32;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -168,8 +194,33 @@
             this.panel4.Location = new System.Drawing.Point(1051, 20);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(132, 207);
+            this.panel4.Size = new System.Drawing.Size(132, 75);
             this.panel4.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(70)))), ((int)(((byte)(74)))));
+            this.label5.Location = new System.Drawing.Point(59, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 23);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Invoice";
+            // 
+            // btnDetailInvoice
+            // 
+            this.btnDetailInvoice.FlatAppearance.BorderSize = 0;
+            this.btnDetailInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailInvoice.ForeColor = System.Drawing.Color.Coral;
+            this.btnDetailInvoice.Image = global::PBL3_Remake.Properties.Resources.invoice_32;
+            this.btnDetailInvoice.Location = new System.Drawing.Point(9, 11);
+            this.btnDetailInvoice.Name = "btnDetailInvoice";
+            this.btnDetailInvoice.Size = new System.Drawing.Size(48, 48);
+            this.btnDetailInvoice.TabIndex = 0;
+            this.btnDetailInvoice.UseVisualStyleBackColor = true;
+            this.btnDetailInvoice.Click += new System.EventHandler(this.btnDetailInvoice_Click);
             // 
             // panel1
             // 
@@ -208,6 +259,17 @@
             this.lblOrdered.TabIndex = 3;
             this.lblOrdered.Text = "A";
             this.lblOrdered.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::PBL3_Remake.Properties.Resources.Ordered_48;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // MainChart
             // 
@@ -374,68 +436,68 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox2
+            // dtpDayEnd
             // 
-            this.pictureBox2.Image = global::PBL3_Remake.Properties.Resources.money_48;
-            this.pictureBox2.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.dtpDayEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpDayEnd.BorderSize = 0;
+            this.dtpDayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpDayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDayEnd.Location = new System.Drawing.Point(1051, 189);
+            this.dtpDayEnd.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dtpDayEnd.Name = "dtpDayEnd";
+            this.dtpDayEnd.Size = new System.Drawing.Size(132, 35);
+            this.dtpDayEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtpDayEnd.TabIndex = 30;
+            this.dtpDayEnd.TextColor = System.Drawing.Color.White;
+            this.dtpDayEnd.ValueChanged += new System.EventHandler(this.dtpDayEnd_ValueChanged);
             // 
-            // pictureBox1
+            // dtpDayStart
             // 
-            this.pictureBox1.Image = global::PBL3_Remake.Properties.Resources.spending_32;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.dtpDayStart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpDayStart.BorderSize = 0;
+            this.dtpDayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpDayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDayStart.Location = new System.Drawing.Point(1051, 125);
+            this.dtpDayStart.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dtpDayStart.Name = "dtpDayStart";
+            this.dtpDayStart.Size = new System.Drawing.Size(132, 35);
+            this.dtpDayStart.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtpDayStart.TabIndex = 31;
+            this.dtpDayStart.TextColor = System.Drawing.Color.White;
+            this.dtpDayStart.ValueChanged += new System.EventHandler(this.dtpDayStart_ValueChanged);
             // 
-            // btnDetailInvoice
+            // label6
             // 
-            this.btnDetailInvoice.FlatAppearance.BorderSize = 0;
-            this.btnDetailInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetailInvoice.ForeColor = System.Drawing.Color.Coral;
-            this.btnDetailInvoice.Image = global::PBL3_Remake.Properties.Resources.invoice_32;
-            this.btnDetailInvoice.Location = new System.Drawing.Point(9, 11);
-            this.btnDetailInvoice.Name = "btnDetailInvoice";
-            this.btnDetailInvoice.Size = new System.Drawing.Size(48, 48);
-            this.btnDetailInvoice.TabIndex = 0;
-            this.btnDetailInvoice.UseVisualStyleBackColor = true;
-            this.btnDetailInvoice.Click += new System.EventHandler(this.btnDetailInvoice_Click);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightPink;
+            this.label6.Location = new System.Drawing.Point(1052, 97);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 25);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Start";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox3
+            // label7
             // 
-            this.pictureBox3.Image = global::PBL3_Remake.Properties.Resources.Ordered_48;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(70)))), ((int)(((byte)(74)))));
-            this.label5.Location = new System.Drawing.Point(59, 21);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 23);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Invoice";
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.LightPink;
+            this.label7.Location = new System.Drawing.Point(1052, 161);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 25);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "End";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // StatisticUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dtpDayStart);
+            this.Controls.Add(this.dtpDayEnd);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.DayChart);
             this.Controls.Add(this.MainChart);
@@ -449,20 +511,20 @@
             this.Load += new System.EventHandler(this.StatisticUC_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DayChart)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,5 +553,9 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnDetailInvoice;
         private System.Windows.Forms.Label label5;
+        private PBL3_Remake.GUI.CustomItem.CustomDateTimePicker dtpDayEnd;
+        private PBL3_Remake.GUI.CustomItem.CustomDateTimePicker dtpDayStart;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -19,6 +19,8 @@ namespace GUI.frmGUIUserControl
         private int Total { get; set; }
         private int Profit { get; set; }
         private int Consuming { get; set; }
+        private DateTime DayStart { get; set; }
+        public DateTime DayEnd { get; set; }
         #endregion
         public StatisticUC()
         {
@@ -50,14 +52,13 @@ namespace GUI.frmGUIUserControl
             dc.Text = text;
             return dc;
         }
-        private void SetDataForMainChart(DateTime dt)
+        private void SetDataForMainChart(DateTime daystart, DateTime dayend)
         {
             MainChart.Series[0].Points.Clear();
             List<Statistic_view> listbydate = new List<Statistic_view>();
-            DateTime dtBefore = dt.AddDays(-30);
             foreach (Statistic_view i in ListDoanhThu)
             {
-                if (i.Date > dtBefore && i.Date < dt)
+                if (i.Date > daystart && i.Date < dayend)
                 {
                     listbydate.Add(i);
                 }
@@ -103,11 +104,6 @@ namespace GUI.frmGUIUserControl
         private void StatisticUC_Load(object sender, EventArgs e)
         {
             ListDoanhThu = BLL.BLLNVNH.Instance.GetAllDoanhThu();
-            Console.WriteLine("Tong so ngay " + BLL.BLLNVNH.Instance.GetAllDoanhThu().Count);
-            foreach (Statistic_view i in ListDoanhThu)
-            {
-                Console.WriteLine("ID " + i.ID_money + " Consuming " + i.Consuming + " Total " + i.Total + " Profit " + i.Profit + " ngay " + i.Date.ToShortDateString());
-            }
             DateTime dt = DateTime.Now;
             NumberOfOrdered = BLL.BLLNVNH.Instance.GetNumberOfOrdered(dt);
             Profit = BLL.BLLNVNH.Instance.GetProfit(dt);
@@ -123,7 +119,7 @@ namespace GUI.frmGUIUserControl
             lblTotal.Text = DoanhThuNgay.Total.ToString();
             lblConsuming.Text = DoanhThuNgay.Consuming.ToString();
             SetDataForDateCustom(dt);
-            SetDataForMainChart(dt);
+            SetDataForMainChart(dt, dt.AddDays(-30));
         }
 
         private void CalendarStatistic_DateChanged(object sender, DateRangeEventArgs e)
@@ -138,32 +134,41 @@ namespace GUI.frmGUIUserControl
             DC_v.Add(AddDV_v(Consuming, DateCustom, "Consuming"));
             DC_v.Add(AddDV_v(Total, DateCustom, "Total"));
             DC_v.Add(AddDV_v(Profit, DateCustom, "Profit"));
-            SetDataForDateCustom(DateCustom);
             lblOrdered.Text = BLL.BLLNVNH.Instance.GetNumberOfOrdered(CalendarStatistic.SelectionStart).ToString();
             lblProfit.Text = DoanhThuNgay.Profit.ToString();
             lblTotal.Text = DoanhThuNgay.Total.ToString();
             lblConsuming.Text = DoanhThuNgay.Consuming.ToString();
             SetDataForDateCustom(CalendarStatistic.SelectionStart);
-            SetDataForMainChart(DateCustom);
         }
-
-        private void btn1WeekAgo_Click(object sender, EventArgs e)
-        {
-            SetUIForButton(sender);
-        }
-
-        private void btn2WeekAgo_Click(object sender, EventArgs e)
-        {
-            SetUIForButton(sender);
-        }
-
-        private void btn1MonthAgo_Click(object sender, EventArgs e)
-        {
-            SetUIForButton(sender);
-        }
-
         private void btnDetailInvoice_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dtpDayStart_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDayStart.Value < dtpDayEnd.Value)
+            {
+                DayStart = dtpDayStart.Value;
+                SetDataForMainChart(DayStart, DayEnd);
+            }
+            else
+            {
+                NoticeBox frm = new NoticeBox("You start day is invalid!");
+            }
+        }
+
+        private void dtpDayEnd_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDayStart.Value < dtpDayEnd.Value)
+            {
+                DayEnd = dtpDayEnd.Value;
+                SetDataForMainChart(DayStart, DayEnd);
+            }
+            else
+            {
+                NoticeBox frm = new NoticeBox("You end day is invalid!");
+            }
 
         }
     }

@@ -152,9 +152,10 @@ namespace GUI.frmGUIUserControl
                 DayStart = dtpDayStart.Value;
                 SetDataForMainChart(DayStart, DayEnd);
             }
-            else
+            else if (dtpDayStart.Value > dtpDayEnd.Value)
             {
                 NoticeBox frm = new NoticeBox("You start day is invalid!");
+                frm.Show();
             }
         }
 
@@ -165,9 +166,10 @@ namespace GUI.frmGUIUserControl
                 DayEnd = dtpDayEnd.Value;
                 SetDataForMainChart(DayStart, DayEnd);
             }
-            else
+            else if (dtpDayStart.Value > dtpDayEnd.Value)
             {
                 NoticeBox frm = new NoticeBox("You end day is invalid!");
+                frm.Show();
             }
 
         }

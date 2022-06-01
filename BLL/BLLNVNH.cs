@@ -21,14 +21,30 @@ namespace BLL
 
         }
 
-        public List<Ban> GetBanByTinhTrangBanVaTang(int st, int fl)
+        public List<Ban> GetMainBanByTinhTrangBanVaTang(int st, int fl)
         {
-            if (st == -1)
-                return dALQLNH.Bans.Where(p => p.Tang == fl).ToList();
-            else if (st == 0)
+            if(st == 0)
+            {
                 return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).ToList();
+            }
             else
-                return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).ToList();
+            {
+                List<Ban> list;
+                if(st == -1)
+                    list = new List<Ban>(dALQLNH.Bans.Where(p => p.Tang == fl).ToList());
+                else
+                {
+                    list = new List<Ban>(dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan != 0)).ToList());
+                }
+                foreach(Ban i in list.ToList())
+                {
+                    if(dALQLNH.Bans.Where(p => (p.TinhTrangBan == i.ID_Ban && p.TinhTrangBan != p.ID_Ban)).FirstOrDefault()!= null)
+                    {
+                        list.Remove(i);
+                    }
+                }
+                return list;
+            }
         }
         public Ban GetBanByID_Ban(int id)
         {
@@ -124,7 +140,6 @@ namespace BLL
             else
             {
                 Console.WriteLine(txt);
-                txt = txt + " " + GetBanByID_Ban(tb.TinhTrangBan).TenBan;
                 return GetAllCollabTable(GetBanByID_Ban(tb.TinhTrangBan), ttban, txt);
             }
         }

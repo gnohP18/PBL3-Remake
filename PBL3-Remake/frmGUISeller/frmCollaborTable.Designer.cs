@@ -78,13 +78,14 @@
             // cboBan
             // 
             this.cboBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
-            this.cboBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBan.ForeColor = System.Drawing.Color.Black;
             this.cboBan.FormattingEnabled = true;
+            this.cboBan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cboBan.IntegralHeight = false;
             this.cboBan.Location = new System.Drawing.Point(344, 91);
             this.cboBan.Name = "cboBan";
-            this.cboBan.Size = new System.Drawing.Size(143, 59);
+            this.cboBan.Size = new System.Drawing.Size(157, 46);
             this.cboBan.TabIndex = 9;
             // 
             // frmCollaborTable

@@ -44,7 +44,7 @@ namespace GUI.frmGUISeller
         }
         void LoadBanByTinhTrangBanVaTang(int st, int fl)
         {
-            List<Ban> listBan = BLLNVNH.Instance.GetBanByTinhTrangBanVaTang(st, fl);
+            List<Ban> listBan = BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(st, fl);
             int soban = listBan.Count;
             TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
@@ -166,7 +166,6 @@ namespace GUI.frmGUISeller
             if (e.ColumnIndex != 0)
             {
                 int idctb = Convert.ToInt32(dgvStatusDish.SelectedRows[0].Cells["ID_ChiTietBan"].Value.ToString());
-                Console.WriteLine("ID=" + idctb);
                 frmStatusDish frm = new frmStatusDish(idctb);
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();

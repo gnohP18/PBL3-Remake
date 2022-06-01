@@ -19,5 +19,9 @@ namespace Entity
         public int Tang { get; set; }
         public int TinhTrangBan { get; set; }
         public virtual ICollection<ChiTietBan> ChiTietBans { get; set; }
+        public override string ToString()
+        {
+            return this.TenBan;
+        }
     }
 }

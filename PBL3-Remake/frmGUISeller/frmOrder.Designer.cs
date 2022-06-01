@@ -78,10 +78,10 @@
             this.btnCollabTable.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCollabTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCollabTable.Image = global::PBL3_Remake.Properties.Resources.link_64;
-            this.btnCollabTable.Location = new System.Drawing.Point(110, 470);
+            this.btnCollabTable.Location = new System.Drawing.Point(146, 470);
             this.btnCollabTable.Name = "btnCollabTable";
             this.btnCollabTable.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnCollabTable.Size = new System.Drawing.Size(110, 110);
+            this.btnCollabTable.Size = new System.Drawing.Size(148, 110);
             this.btnCollabTable.TabIndex = 33;
             this.btnCollabTable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCollabTable.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@
             this.btnPay.Location = new System.Drawing.Point(0, 470);
             this.btnPay.Name = "btnPay";
             this.btnPay.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnPay.Size = new System.Drawing.Size(110, 110);
+            this.btnPay.Size = new System.Drawing.Size(146, 110);
             this.btnPay.TabIndex = 32;
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPay.UseVisualStyleBackColor = false;
@@ -114,10 +114,10 @@
             this.btnOrder.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.SystemColors.Control;
             this.btnOrder.Image = global::PBL3_Remake.Properties.Resources.Order_64;
-            this.btnOrder.Location = new System.Drawing.Point(220, 470);
+            this.btnOrder.Location = new System.Drawing.Point(294, 470);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnOrder.Size = new System.Drawing.Size(220, 110);
+            this.btnOrder.Size = new System.Drawing.Size(146, 110);
             this.btnOrder.TabIndex = 31;
             this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOrder.UseVisualStyleBackColor = false;

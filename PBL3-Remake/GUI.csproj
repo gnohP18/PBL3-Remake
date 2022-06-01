@@ -145,12 +145,6 @@
     <Compile Include="frmGUIUserControl\DetailMaterial.Designer.cs">
       <DependentUpon>DetailMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUserControl\BackupUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmGUIUserControl\BackupUC.Designer.cs">
-      <DependentUpon>BackupUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGUIUserControl\DetailEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,9 +266,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailMaterial.resx">
       <DependentUpon>DetailMaterial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\BackupUC.resx">
-      <DependentUpon>BackupUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailEmployee.resx">
       <DependentUpon>DetailEmployee.cs</DependentUpon>
@@ -502,6 +493,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diet-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spending-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

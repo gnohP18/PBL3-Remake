@@ -121,6 +121,9 @@
   <data name="BanhTrangTron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BanhTrangTron.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BoKobeStake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\bokobestake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BoNuongLaLot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BoNuongLaLot.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,12 @@
   </data>
   <data name="CocaCola" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CocaCola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuaHoangDeHap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cuahoangdehap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuaHoangDeSotBoToi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cuahoangdesotbotoi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DauKhuon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DauKhuon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,6 +186,12 @@
   </data>
   <data name="Tiger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tiger.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TomHumAlaskaHap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\tomhumalaskahap.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TomHumAlaskaSotBoToi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\tomhumalaskasotbotoi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TrungCutLon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TrungCutLon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

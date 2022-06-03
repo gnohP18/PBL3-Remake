@@ -489,6 +489,11 @@ namespace Entity
                 new Kho{ID_ChiTietNguyenLieu=56,ID_NguyenLieu = 40,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
                 new Kho{ID_ChiTietNguyenLieu=57,ID_NguyenLieu = 41,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
                 new Kho{ID_ChiTietNguyenLieu=58,ID_NguyenLieu = 42,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
+                new Kho{ID_ChiTietNguyenLieu=59,ID_NguyenLieu = 43,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
+                new Kho{ID_ChiTietNguyenLieu=60,ID_NguyenLieu = 44,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
+                new Kho{ID_ChiTietNguyenLieu=61,ID_NguyenLieu = 45,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
+                new Kho{ID_ChiTietNguyenLieu=62,ID_NguyenLieu = 46,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
+                new Kho{ID_ChiTietNguyenLieu=63,ID_NguyenLieu = 47,ID_NhaCungCap = 3,NgayNhap = DateTime.Now,NgayHetHan = DateTime.Now.AddDays(20),LuongNhapVao = 7,LuongTonKho = 6},
 
                 //new Kho{ID_ChiTietNguyenLieu=1,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,04,18),NgayHetHan = new DateTime(2022,05,18).AddDays(15),LuongNhapVao = 5,LuongTonKho = 2},
                 //new Kho{ID_ChiTietNguyenLieu=2,ID_NguyenLieu = 1,ID_NhaCungCap = 1,NgayNhap = new DateTime(2022,04,19),NgayHetHan = new DateTime(2022,05,19).AddDays(15),LuongNhapVao = 5,LuongTonKho = 2},

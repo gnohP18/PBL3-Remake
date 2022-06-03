@@ -93,9 +93,9 @@ namespace Entity
                 new MonAn{ID_MonAn = 24,ID_LoaiMonAn =2,TenMonAn = "Bo kobe stake",ThanhTien =1900000,AnhMonAn = ImgToByte(Properties.Resources.BoKobeStake), TrangThai =0},
                 new MonAn{ID_MonAn = 25,ID_LoaiMonAn =2,TenMonAn = "Cua Hoang De sot bo toi",ThanhTien =1600000,AnhMonAn = ImgToByte(Properties.Resources.CuaHoangDeSotBoToi), TrangThai =0},
                 new MonAn{ID_MonAn = 26,ID_LoaiMonAn =2,TenMonAn = "Tom hum alaska sot bo toi",ThanhTien =1400000,AnhMonAn = ImgToByte(Properties.Resources.TomHumAlaskaSotBoToi), TrangThai =0},
-                new MonAn{ID_MonAn = 27,ID_LoaiMonAn =4,TenMonAn = "Che vai hat sen",ThanhTien =30000,AnhMonAn = ImgToByte(Properties.Resources.CheVaiHatSen), TrangThai =0},
-                new MonAn{ID_MonAn = 28,ID_LoaiMonAn =4,TenMonAn = "Bi do ham dua",ThanhTien =60000,AnhMonAn = ImgToByte(Properties.Resources.BiDoHamDua), TrangThai =0},
-                new MonAn{ID_MonAn = 29,ID_LoaiMonAn =4,TenMonAn = "Banh dau xanh",ThanhTien =30000,AnhMonAn = ImgToByte(Properties.Resources.BanhDauXanh), TrangThai =0},
+                new MonAn{ID_MonAn = 27,ID_LoaiMonAn =3,TenMonAn = "Che vai hat sen",ThanhTien =30000,AnhMonAn = ImgToByte(Properties.Resources.CheVaiHatSen), TrangThai =0},
+                new MonAn{ID_MonAn = 28,ID_LoaiMonAn =3,TenMonAn = "Bi do ham dua",ThanhTien =60000,AnhMonAn = ImgToByte(Properties.Resources.BiDoHamDua), TrangThai =0},
+                new MonAn{ID_MonAn = 29,ID_LoaiMonAn =3,TenMonAn = "Banh dau xanh",ThanhTien =30000,AnhMonAn = ImgToByte(Properties.Resources.BanhDauXanh), TrangThai =0},
 
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]

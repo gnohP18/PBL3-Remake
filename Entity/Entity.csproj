@@ -165,6 +165,9 @@
     <None Include="Resources\TomHumAlaskaHap.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\CheVaiHatSen.jpg" />
+    <None Include="Resources\BiDoHamDua.jpg" />
+    <None Include="Resources\BanhDauXanh.jpg" />
     <Content Include="Resources\TomHumAlaskaSotBoToi.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

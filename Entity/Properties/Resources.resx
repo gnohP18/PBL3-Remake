@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BanhDauXanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BanhDauXanh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BanhTrangTron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BanhTrangTron.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BiDoHamDua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BiDoHamDua.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BoKobeStake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\bokobestake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,6 +141,9 @@
   </data>
   <data name="CaLocUmChuoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CaLocUmChuoi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CheVaiHatSen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheVaiHatSen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CocaCola" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CocaCola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

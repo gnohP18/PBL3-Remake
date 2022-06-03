@@ -63,9 +63,29 @@ namespace Entity.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BanhDauXanh {
+            get {
+                object obj = ResourceManager.GetObject("BanhDauXanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BanhTrangTron {
             get {
                 object obj = ResourceManager.GetObject("BanhTrangTron", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BiDoHamDua {
+            get {
+                object obj = ResourceManager.GetObject("BiDoHamDua", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +136,16 @@ namespace Entity.Properties {
         internal static System.Drawing.Bitmap CaLocUmChuoi {
             get {
                 object obj = ResourceManager.GetObject("CaLocUmChuoi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheVaiHatSen {
+            get {
+                object obj = ResourceManager.GetObject("CheVaiHatSen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

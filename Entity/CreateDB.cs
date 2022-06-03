@@ -93,6 +93,10 @@ namespace Entity
                 new MonAn{ID_MonAn = 24,ID_LoaiMonAn =2,TenMonAn = "Bo kobe stake",ThanhTien =1900000,AnhMonAn = ImgToByte(Properties.Resources.BoKobeStake), TrangThai =0},
                 new MonAn{ID_MonAn = 25,ID_LoaiMonAn =2,TenMonAn = "Cua Hoang De sot bo toi",ThanhTien =1600000,AnhMonAn = ImgToByte(Properties.Resources.CuaHoangDeSotBoToi), TrangThai =0},
                 new MonAn{ID_MonAn = 26,ID_LoaiMonAn =2,TenMonAn = "Tom hum alaska sot bo toi",ThanhTien =1400000,AnhMonAn = ImgToByte(Properties.Resources.TomHumAlaskaSotBoToi), TrangThai =0},
+                new MonAn{ID_MonAn = 27,ID_LoaiMonAn =4,TenMonAn = "Che vai hat sen",ThanhTien =30000,AnhMonAn = ImgToByte(Properties.Resources.CheVaiHatSen), TrangThai =0},
+                new MonAn{ID_MonAn = 28,ID_LoaiMonAn =4,TenMonAn = "Bi do ham dua",ThanhTien =60000,AnhMonAn = ImgToByte(Properties.Resources.BiDoHamDua), TrangThai =0},
+                new MonAn{ID_MonAn = 29,ID_LoaiMonAn =4,TenMonAn = "Banh dau xanh",ThanhTien =30000,AnhMonAn = ImgToByte(Properties.Resources.BanhDauXanh), TrangThai =0},
+
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {
@@ -144,7 +148,12 @@ namespace Entity
                 new NguyenLieu{ID_NguyenLieu = 39,DonViTinh ="kg",TenNguyenLieu = "Tom hum alaska",HSD=90,ID_LoaiNguyenLieu=1},
                 new NguyenLieu{ID_NguyenLieu = 40,DonViTinh ="kg",TenNguyenLieu = "Bo Kobe",HSD=90,ID_LoaiNguyenLieu=1},
                 new NguyenLieu{ID_NguyenLieu = 41,DonViTinh ="kg",TenNguyenLieu = "Bo",HSD=90,ID_LoaiNguyenLieu=3},
-                new NguyenLieu{ID_NguyenLieu = 42,DonViTinh ="kg",TenNguyenLieu = "Toi",HSD=90,ID_LoaiNguyenLieu=3},
+                new NguyenLieu{ID_NguyenLieu = 42,DonViTinh ="kg",TenNguyenLieu = "Toi",HSD=90,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 43,DonViTinh ="kg",TenNguyenLieu = "Bi do",HSD=90,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 44,DonViTinh ="kg",TenNguyenLieu = "Hat sen",HSD=90,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 45,DonViTinh ="kg",TenNguyenLieu = "Vai",HSD=90,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 46,DonViTinh ="kg",TenNguyenLieu = "Dau xanh",HSD=90,ID_LoaiNguyenLieu=2},
+                new NguyenLieu{ID_NguyenLieu = 47,DonViTinh ="lon",TenNguyenLieu = "Nuoc cot dua",HSD=90,ID_LoaiNguyenLieu=3},
 
 
 
@@ -255,6 +264,20 @@ namespace Entity
                 new ChiTietMonAn{ID_MonAn = 26,ID_NguyenLieu=39,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 26,ID_NguyenLieu=41,Luong = 1},
                 new ChiTietMonAn{ID_MonAn = 26,ID_NguyenLieu=42,Luong = 1},
+
+                new ChiTietMonAn{ID_MonAn = 27,ID_NguyenLieu=37,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 27,ID_NguyenLieu=44,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 27,ID_NguyenLieu=45,Luong = 1},
+
+
+                new ChiTietMonAn{ID_MonAn = 28,ID_NguyenLieu=37,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 28,ID_NguyenLieu=43,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 28,ID_NguyenLieu=47,Luong = 1},
+
+
+                new ChiTietMonAn{ID_MonAn = 29,ID_NguyenLieu=37,Luong = 1},
+                new ChiTietMonAn{ID_MonAn = 29,ID_NguyenLieu=46,Luong = 1},
+
             });
             context.Bans.AddRange(new Ban[]
             {
@@ -326,17 +349,17 @@ namespace Entity
                 new ChiTietBan{ID_ChiTietBan = 18,ID_Ban =11,ID_MonAn = 12,TinhTrang=1,SoLuong = 1},
                 new ChiTietBan{ID_ChiTietBan = 19,ID_Ban =11,ID_MonAn = 13,TinhTrang=1,SoLuong = 5},
                 new ChiTietBan{ID_ChiTietBan = 20,ID_Ban =12,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
-                new ChiTietBan{ID_ChiTietBan = 21,ID_Ban =12,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 21,ID_Ban =12,ID_MonAn = 17,TinhTrang=1,SoLuong = 1},
                 new ChiTietBan{ID_ChiTietBan = 22,ID_Ban =12,ID_MonAn = 4,TinhTrang=1,SoLuong = 5},
                 new ChiTietBan{ID_ChiTietBan = 23,ID_Ban =22,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 24,ID_Ban =22,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
                 new ChiTietBan{ID_ChiTietBan = 25,ID_Ban =22,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
-                new ChiTietBan{ID_ChiTietBan = 26,ID_Ban =23,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 26,ID_Ban =23,ID_MonAn = 18,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 27,ID_Ban =23,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
                 new ChiTietBan{ID_ChiTietBan = 28,ID_Ban =23,ID_MonAn = 4,TinhTrang=1,SoLuong = 3},
-                new ChiTietBan{ID_ChiTietBan = 29,ID_Ban =24,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 29,ID_Ban =24,ID_MonAn = 19,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 30,ID_Ban =24,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
-                new ChiTietBan{ID_ChiTietBan = 31,ID_Ban =24,ID_MonAn = 4,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 31,ID_Ban =24,ID_MonAn = 19,TinhTrang=1,SoLuong = 3},
                 new ChiTietBan{ID_ChiTietBan = 32,ID_Ban =25,ID_MonAn = 2,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 33,ID_Ban =25,ID_MonAn = 3,TinhTrang=1,SoLuong = 5},
                 new ChiTietBan{ID_ChiTietBan = 34,ID_Ban =25,ID_MonAn = 4,TinhTrang=1,SoLuong = 2},
@@ -344,7 +367,7 @@ namespace Entity
                 new ChiTietBan{ID_ChiTietBan = 36,ID_Ban =26,ID_MonAn = 3,TinhTrang=1,SoLuong = 4},
                 new ChiTietBan{ID_ChiTietBan = 37,ID_Ban =26,ID_MonAn = 4,TinhTrang=1,SoLuong = 4},
                 new ChiTietBan{ID_ChiTietBan = 38,ID_Ban =28,ID_MonAn = 2,TinhTrang=1,SoLuong = 6},
-                new ChiTietBan{ID_ChiTietBan = 39,ID_Ban =28,ID_MonAn = 3,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 39,ID_Ban =28,ID_MonAn = 17,TinhTrang=1,SoLuong = 1},
                 new ChiTietBan{ID_ChiTietBan = 40,ID_Ban =28,ID_MonAn = 4,TinhTrang=1,SoLuong = 3},
                 new ChiTietBan{ID_ChiTietBan = 41,ID_Ban =30,ID_MonAn = 2,TinhTrang=1,SoLuong = 1},
                 new ChiTietBan{ID_ChiTietBan = 42,ID_Ban =30,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},

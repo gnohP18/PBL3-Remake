@@ -13,7 +13,7 @@ namespace Entity
         public DALQLNH()
             : base("name=DALQLNH")
         {
-            Database.SetInitializer<DALQLNH>(new CreateDB());
+            //Database.SetInitializer<DALQLNH>(new CreateDB());
         }
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaLam> CaLams { get; set; }
@@ -34,7 +34,7 @@ namespace Entity
         public virtual DbSet<LoaiMonAn> LoaiMonAns { get; set; }
         public virtual DbSet<ThongTinNhaHang> ThongTinNhaHangs { get; set; }
         public virtual DbSet<Voucher> Vouchers { get; set; }
-
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BangChamCong>()
@@ -105,6 +105,14 @@ namespace Entity
                 .HasRequired<NhaCungCap>(s => s.NhaCungCap)
                 .WithMany(g => g.ChiTietNhaCungCaps)
                 .HasForeignKey<int>(s => s.ID_NhaCungCap);
+            modelBuilder.Entity<HoaDon>()
+                .HasRequired<KhachHang>(s => s.KhachHang)
+                .WithMany(g => g.HoaDons)
+                .HasForeignKey<int>(s => s.ID_KhachHang);
+            modelBuilder.Entity<HoaDon>()
+                .HasRequired<Voucher>(s => s.Voucher)
+                .WithMany(g => g.HoaDons)
+                .HasForeignKey<string>(s => s.MaVoucher);
         }
     }
     // Add a DbSet for each entity type that you want to include in your model. For more information 

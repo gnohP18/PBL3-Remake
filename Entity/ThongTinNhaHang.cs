@@ -17,6 +17,8 @@ namespace Entity
         public int ID_ThongTinNhaHang { get; set; }
         public string TenNhaHang { get; set; }
         public string DiaChi { get; set; }
+        public int SoTienQuyDoiThanhDiemTichLuy { get; set; }
+        public int DiemTichLuyQuyDoiThanhTien { get; set; }
         public DateTime ThoiGianBatDauLamViecSang { get; set; }
         public DateTime ThoiGianKetThucLamViecSang { get; set; }
         public DateTime ThoiGianBatDauLamViecChieu { get; set; }

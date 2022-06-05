@@ -81,10 +81,12 @@ namespace BLL
             }
             return data;
         }
-        public void AddDetailTable(List<MonAn_View> lt, int Idtable)
+        public void Order(List<MonAn_View> lt, int Idtable)
         {
+            
             foreach (MonAn_View item in lt)
             {
+                //Add detail table
                 dALQLNH.ChiTietBans.Add(new ChiTietBan
                 {
                     ID_ChiTietBan = GetNewIDChiTietBan(),
@@ -92,9 +94,29 @@ namespace BLL
                     ID_MonAn = item.ID_MonAn,
                     SoLuong = item.SoLuong,
                     TinhTrang = 0
-                }); dALQLNH.SaveChanges();
+                }); 
+                //Get material from warehouse
+                List<ChiTietMonAn> listChiTietMonAn = dALQLNH.ChiTietMonAns.Where(s => s.ID_MonAn == item.ID_MonAn).ToList();
+                foreach (ChiTietMonAn chiTietMonAn in listChiTietMonAn)
+                {
+                    float luong = chiTietMonAn.Luong*item.SoLuong;
+                    List<Kho> khos = dALQLNH.Khoes.Where(s => s.ID_NguyenLieu == chiTietMonAn.ID_NguyenLieu && s.NgayHetHan > DateTime.Now).OrderBy(s => s.NgayHetHan).ToList();
+                    foreach (Kho i in khos)
+                    {
+                        if (i.LuongTonKho >= luong)
+                        {
+                            i.LuongTonKho -= luong;
+                            break;
+                        }
+                        else
+                        {
+                            luong -= i.LuongTonKho;
+                            i.LuongTonKho = 0;
+                        }
+                    }
+                }
+                dALQLNH.SaveChanges();
             }
-
         }
         public int GetNewIDChiTietBan()
         {

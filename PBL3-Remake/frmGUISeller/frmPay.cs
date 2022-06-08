@@ -9,13 +9,14 @@ namespace GUI.frmGUISeller
     public partial class frmPay : Form
     {
         List<MonAn_View> listMonAnViewDaDat;
+        public delegate void Mydel();
+        public Mydel d;
         public int IDTable { get; set; }
         public frmPay(int idban)
         {
             IDTable = idban;
             InitializeComponent();
-            SetCollabTableTextBox();
-        }
+            SetCollabTableTextBox();        }
         List<string> Voucher = new List<string>();
         private void AddVoucher()
         {
@@ -51,10 +52,6 @@ namespace GUI.frmGUISeller
                 dgvPayment.DataSource = lt;
                 Load_Total();
             }
-        }
-        private void LoadListDishOrdered()
-        {
-            dgvPayment.DataSource = listMonAnViewDaDat;
         }
         int guestmoney;
         int sum = 0;
@@ -121,12 +118,13 @@ namespace GUI.frmGUISeller
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            Ban bn = BLLNVNH.Instance.GetBanByID_Ban(IDTable);
-            int ID = BLLNVNH.Instance.FindMainTable(bn);
-            BLLNVNH.Instance.Order(listMonAnViewDaDat, ID);
-            frmOrder frm = new frmOrder(ID);
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+
+            d();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

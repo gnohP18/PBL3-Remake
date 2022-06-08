@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbStatusDish = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbStatusTable = new System.Windows.Forms.ComboBox();
-            this.pnTable = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbbStatusDish = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFloor2 = new System.Windows.Forms.Button();
             this.btnFloor1 = new System.Windows.Forms.Button();
+            this.cbbStatusTable = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnTable = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // cbbStatusDish
+            // 
+            this.cbbStatusDish.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbStatusDish.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbStatusDish.FormattingEnabled = true;
+            this.cbbStatusDish.Location = new System.Drawing.Point(544, 45);
+            this.cbbStatusDish.Name = "cbbStatusDish";
+            this.cbbStatusDish.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatusDish.TabIndex = 26;
+            this.cbbStatusDish.SelectedIndexChanged += new System.EventHandler(this.cbbStatusDish_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(413, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 26);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Status dish";
             // 
             // label2
             // 
@@ -85,48 +108,6 @@
             this.label1.Size = new System.Drawing.Size(110, 26);
             this.label1.TabIndex = 23;
             this.label1.Text = "Employee";
-            // 
-            // cbbStatusTable
-            // 
-            this.cbbStatusTable.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbbStatusTable.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbStatusTable.FormattingEnabled = true;
-            this.cbbStatusTable.Location = new System.Drawing.Point(860, 45);
-            this.cbbStatusTable.Name = "cbbStatusTable";
-            this.cbbStatusTable.Size = new System.Drawing.Size(167, 24);
-            this.cbbStatusTable.TabIndex = 18;
-            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
-            // 
-            // pnTable
-            // 
-            this.pnTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTable.Location = new System.Drawing.Point(0, 100);
-            this.pnTable.Name = "pnTable";
-            this.pnTable.Size = new System.Drawing.Size(1300, 600);
-            this.pnTable.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(413, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 26);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Status dish";
-            // 
-            // cbbStatusDish
-            // 
-            this.cbbStatusDish.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbbStatusDish.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbStatusDish.FormattingEnabled = true;
-            this.cbbStatusDish.Location = new System.Drawing.Point(544, 45);
-            this.cbbStatusDish.Name = "cbbStatusDish";
-            this.cbbStatusDish.Size = new System.Drawing.Size(167, 24);
-            this.cbbStatusDish.TabIndex = 26;
-            this.cbbStatusDish.SelectedIndexChanged += new System.EventHandler(this.cbbStatusDish_SelectedIndexChanged);
             // 
             // btnExit
             // 
@@ -182,6 +163,17 @@
             this.btnFloor1.UseVisualStyleBackColor = false;
             this.btnFloor1.Click += new System.EventHandler(this.btnFloor1_Click);
             // 
+            // cbbStatusTable
+            // 
+            this.cbbStatusTable.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbStatusTable.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbbStatusTable.FormattingEnabled = true;
+            this.cbbStatusTable.Location = new System.Drawing.Point(860, 45);
+            this.cbbStatusTable.Name = "cbbStatusTable";
+            this.cbbStatusTable.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatusTable.TabIndex = 18;
+            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -192,6 +184,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnTable
+            // 
+            this.pnTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnTable.Location = new System.Drawing.Point(0, 100);
+            this.pnTable.Name = "pnTable";
+            this.pnTable.Size = new System.Drawing.Size(1300, 600);
+            this.pnTable.TabIndex = 1;
             // 
             // frmMainSeller
             // 

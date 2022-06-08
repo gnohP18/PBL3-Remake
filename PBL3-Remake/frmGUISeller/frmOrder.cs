@@ -161,9 +161,10 @@ namespace GUI.frmGUISeller
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            btnPay.Enabled = false;
+            //btnPay.Enabled = false;
             RemoveDish();
             frmPay frm = new frmPay(IDTable);
+            frm.d = new frmPay.Mydel(CloseOrder);
             frm.MdiParent = this;
             pnDish.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -203,11 +204,14 @@ namespace GUI.frmGUISeller
             frm.Show();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void CloseOrder()
         {
             d(-1, 1);
             this.Close();
-            
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            CloseOrder();
         }
     }
 }

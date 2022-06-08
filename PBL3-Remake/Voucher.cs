@@ -10,7 +10,7 @@ namespace Entity
     {
         public Voucher()
         {
-            this.HoaDons = new HashSet<HoaDon>();
+          
         }
         [Key]
         [Required]
@@ -19,6 +19,6 @@ namespace Entity
         public string MoTa { get; set; }
         public DateTime NgayHetHan { get; set; }
         public int HanMucSuDung { get; set; }
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
+
     }
 }

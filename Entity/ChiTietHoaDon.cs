@@ -16,6 +16,7 @@ namespace Entity
         [Key, Column(Order = 1)]
         [Required]
         public int ID_MonAn { get; set; }
+        public int SoLuong { get; set; }
         public virtual HoaDon HoaDon { get; set; }
         public virtual MonAn MonAn { get; set; }
     }

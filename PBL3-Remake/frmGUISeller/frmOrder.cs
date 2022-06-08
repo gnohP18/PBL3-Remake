@@ -173,7 +173,7 @@ namespace GUI.frmGUISeller
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            BLLNVNH.Instance.AddDetailTable(listMonAnViewDangDat, IDTable);
+            BLLNVNH.Instance.Order(listMonAnViewDangDat, IDTable);
             if (listMonAnViewDangDat.Count > 0 && BLLNVNH.Instance.GetBanByID_Ban(IDTable).TinhTrangBan == 0)
                 BLLNVNH.Instance.ChangeStatusTable(IDTable, IDTable);
             this.Close();

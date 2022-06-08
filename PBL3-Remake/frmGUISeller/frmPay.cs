@@ -126,7 +126,7 @@ namespace GUI.frmGUISeller
         {
             Ban bn = BLLNVNH.Instance.GetBanByID_Ban(IDTable);
             int ID = BLLNVNH.Instance.FindMainTable(bn);
-            BLLNVNH.Instance.AddDetailTable(listMonAnViewDaDat, ID);
+            BLLNVNH.Instance.Order(listMonAnViewDaDat, ID);
             frmOrder frm = new frmOrder(ID);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();

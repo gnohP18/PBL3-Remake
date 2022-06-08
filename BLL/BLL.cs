@@ -209,10 +209,6 @@ namespace BLL
             {
                 date.Add(i.NgayLap.ToShortDateString());
             }
-            //foreach (string i in date)
-            //{
-            //    Console.WriteLine(i);
-            //}
             int Songay = date.Distinct().Count();
             for (int i = 0; i < Songay; i++)
             {
@@ -226,6 +222,26 @@ namespace BLL
             }
             return liststatistic;
         }
-
+        public List<HoaDon> GetHoaDonByNgay(DateTime dt)
+        {
+            List<HoaDon> hd = new List<HoaDon>();
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                if (dt == i.NgayLap) hd.Add(i);
+            }
+            return hd;
+        }
+        public List<ChiTietHoaDon> GetAllChiTietHoaDonByIDHoaDon(int id)
+        {
+            List<ChiTietHoaDon> list = new List<ChiTietHoaDon>();
+            foreach (ChiTietHoaDon i in dALQLNH.ChiTietHoaDons)
+            {
+                if (i.ID_HoaDon == id)
+                {
+                    list.Add(i);
+                }
+            }
+            return list;
+        }
     }
 }

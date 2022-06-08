@@ -43,13 +43,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMoreInfor = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnMaterialInformation = new System.Windows.Forms.Button();
-            this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
-            this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.btnAllMaterial = new System.Windows.Forms.Button();
             this.btnVegetable = new System.Windows.Forms.Button();
             this.btnDriedFood = new System.Windows.Forms.Button();
             this.btnFreshFood = new System.Windows.Forms.Button();
+            this.btnMaterialInformation = new System.Windows.Forms.Button();
+            this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
+            this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.btnDrinking = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieuKho)).BeginInit();
@@ -96,7 +96,7 @@
             this.panel5.Location = new System.Drawing.Point(4, 194);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(842, 460);
+            this.panel5.Size = new System.Drawing.Size(1008, 489);
             this.panel5.TabIndex = 22;
             // 
             // dgvNguyenLieuKho
@@ -104,9 +104,9 @@
             this.dgvNguyenLieuKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNguyenLieuKho.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -120,29 +120,30 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNguyenLieuKho.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNguyenLieuKho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNguyenLieuKho.EnableHeadersVisualStyles = false;
             this.dgvNguyenLieuKho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
-            this.dgvNguyenLieuKho.Location = new System.Drawing.Point(-1, -1);
+            this.dgvNguyenLieuKho.Location = new System.Drawing.Point(0, 0);
             this.dgvNguyenLieuKho.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNguyenLieuKho.Name = "dgvNguyenLieuKho";
             this.dgvNguyenLieuKho.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNguyenLieuKho.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNguyenLieuKho.RowHeadersVisible = false;
             this.dgvNguyenLieuKho.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.dgvNguyenLieuKho.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNguyenLieuKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNguyenLieuKho.Size = new System.Drawing.Size(841, 460);
+            this.dgvNguyenLieuKho.Size = new System.Drawing.Size(1006, 487);
             this.dgvNguyenLieuKho.TabIndex = 0;
             this.dgvNguyenLieuKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguyenLieuKho_CellClick);
             // 
@@ -205,62 +206,11 @@
             this.panel7.Controls.Add(this.btnMaterialInformation);
             this.panel7.Controls.Add(this.btnViewExpiredMaterial);
             this.panel7.Controls.Add(this.btnAddMaterialToWareHouse);
-            this.panel7.Location = new System.Drawing.Point(869, 194);
+            this.panel7.Location = new System.Drawing.Point(1020, 194);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(327, 460);
+            this.panel7.Size = new System.Drawing.Size(176, 489);
             this.panel7.TabIndex = 24;
-            // 
-            // btnMaterialInformation
-            // 
-            this.btnMaterialInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnMaterialInformation.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnMaterialInformation.FlatAppearance.BorderSize = 2;
-            this.btnMaterialInformation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMaterialInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaterialInformation.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMaterialInformation.Location = new System.Drawing.Point(63, 158);
-            this.btnMaterialInformation.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMaterialInformation.Name = "btnMaterialInformation";
-            this.btnMaterialInformation.Size = new System.Drawing.Size(180, 45);
-            this.btnMaterialInformation.TabIndex = 15;
-            this.btnMaterialInformation.Text = "Material information";
-            this.btnMaterialInformation.UseVisualStyleBackColor = false;
-            this.btnMaterialInformation.Click += new System.EventHandler(this.btnMaterialInformation_Click);
-            // 
-            // btnViewExpiredMaterial
-            // 
-            this.btnViewExpiredMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnViewExpiredMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnViewExpiredMaterial.FlatAppearance.BorderSize = 2;
-            this.btnViewExpiredMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewExpiredMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewExpiredMaterial.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnViewExpiredMaterial.Location = new System.Drawing.Point(63, 236);
-            this.btnViewExpiredMaterial.Margin = new System.Windows.Forms.Padding(4);
-            this.btnViewExpiredMaterial.Name = "btnViewExpiredMaterial";
-            this.btnViewExpiredMaterial.Size = new System.Drawing.Size(180, 45);
-            this.btnViewExpiredMaterial.TabIndex = 15;
-            this.btnViewExpiredMaterial.Text = "ViewExpiredMaterial";
-            this.btnViewExpiredMaterial.UseVisualStyleBackColor = false;
-            this.btnViewExpiredMaterial.Click += new System.EventHandler(this.btnViewExpiredMaterial_Click);
-            // 
-            // btnAddMaterialToWareHouse
-            // 
-            this.btnAddMaterialToWareHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnAddMaterialToWareHouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddMaterialToWareHouse.FlatAppearance.BorderSize = 2;
-            this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(63, 75);
-            this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
-            this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(180, 45);
-            this.btnAddMaterialToWareHouse.TabIndex = 15;
-            this.btnAddMaterialToWareHouse.Text = "Add Material To WareHouse";
-            this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
-            this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
             // 
             // btnAllMaterial
             // 
@@ -334,6 +284,69 @@
             this.btnFreshFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFreshFood.UseVisualStyleBackColor = false;
             this.btnFreshFood.Click += new System.EventHandler(this.btnFreshFood_Click);
+            // 
+            // btnMaterialInformation
+            // 
+            this.btnMaterialInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnMaterialInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMaterialInformation.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnMaterialInformation.FlatAppearance.BorderSize = 2;
+            this.btnMaterialInformation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaterialInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterialInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.btnMaterialInformation.Image = global::PBL3_Remake.Properties.Resources.ingredients_64;
+            this.btnMaterialInformation.Location = new System.Drawing.Point(0, 329);
+            this.btnMaterialInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaterialInformation.Name = "btnMaterialInformation";
+            this.btnMaterialInformation.Size = new System.Drawing.Size(174, 158);
+            this.btnMaterialInformation.TabIndex = 15;
+            this.btnMaterialInformation.Text = "Material information";
+            this.btnMaterialInformation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaterialInformation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMaterialInformation.UseVisualStyleBackColor = false;
+            this.btnMaterialInformation.Click += new System.EventHandler(this.btnMaterialInformation_Click);
+            // 
+            // btnViewExpiredMaterial
+            // 
+            this.btnViewExpiredMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnViewExpiredMaterial.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnViewExpiredMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnViewExpiredMaterial.FlatAppearance.BorderSize = 2;
+            this.btnViewExpiredMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewExpiredMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewExpiredMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.btnViewExpiredMaterial.Image = global::PBL3_Remake.Properties.Resources.expired_food_64;
+            this.btnViewExpiredMaterial.Location = new System.Drawing.Point(0, 163);
+            this.btnViewExpiredMaterial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewExpiredMaterial.Name = "btnViewExpiredMaterial";
+            this.btnViewExpiredMaterial.Size = new System.Drawing.Size(174, 166);
+            this.btnViewExpiredMaterial.TabIndex = 15;
+            this.btnViewExpiredMaterial.Text = "View Expired Material";
+            this.btnViewExpiredMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnViewExpiredMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnViewExpiredMaterial.UseVisualStyleBackColor = false;
+            this.btnViewExpiredMaterial.Click += new System.EventHandler(this.btnViewExpiredMaterial_Click);
+            // 
+            // btnAddMaterialToWareHouse
+            // 
+            this.btnAddMaterialToWareHouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAddMaterialToWareHouse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddMaterialToWareHouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAddMaterialToWareHouse.FlatAppearance.BorderSize = 2;
+            this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.btnAddMaterialToWareHouse.Image = global::PBL3_Remake.Properties.Resources.add_to_basket_64;
+            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(0, 0);
+            this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
+            this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(174, 163);
+            this.btnAddMaterialToWareHouse.TabIndex = 15;
+            this.btnAddMaterialToWareHouse.Text = "Add Material To WareHouse";
+            this.btnAddMaterialToWareHouse.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddMaterialToWareHouse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
+            this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
             // 
             // btnDrinking
             // 

@@ -34,11 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.Entity.Design.Extensibility, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -139,6 +145,12 @@
     <Compile Include="frmGUIUserControl\AddNewManufacturer.Designer.cs">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\DetailInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\DetailInvoice.Designer.cs">
+      <DependentUpon>DetailInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\DetailMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,12 @@
     </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.Designer.cs">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\MatetialInformation.cs">
       <SubType>Form</SubType>
@@ -264,6 +282,9 @@
     <EmbeddedResource Include="frmGUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\DetailInvoice.resx">
+      <DependentUpon>DetailInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailMaterial.resx">
       <DependentUpon>DetailMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\MatetialInformation.resx">
       <DependentUpon>MatetialInformation.cs</DependentUpon>
@@ -499,6 +523,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\invoice-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-basket-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expired-food-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredients-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

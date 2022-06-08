@@ -66,6 +66,7 @@
     <Compile Include="DALQLNH.cs" />
     <Compile Include="DayChart_view.cs" />
     <Compile Include="HoaDon.cs" />
+    <Compile Include="HoaDon_view.cs" />
     <Compile Include="Kho.cs" />
     <Compile Include="LoaiMonAn.cs" />
     <Compile Include="LoaiNguyenLieu.cs" />

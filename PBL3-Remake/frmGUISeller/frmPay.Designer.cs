@@ -55,6 +55,7 @@
             this.btnYes = new System.Windows.Forms.Button();
             this.btnNo = new System.Windows.Forms.Button();
             this.txtAllCollabTable = new System.Windows.Forms.TextBox();
+            this.ExportPDF = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -364,11 +365,23 @@
             this.txtAllCollabTable.Size = new System.Drawing.Size(275, 34);
             this.txtAllCollabTable.TabIndex = 18;
             // 
+            // ExportPDF
+            // 
+            this.ExportPDF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.ExportPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExportPDF.Location = new System.Drawing.Point(415, 450);
+            this.ExportPDF.Name = "ExportPDF";
+            this.ExportPDF.Size = new System.Drawing.Size(70, 70);
+            this.ExportPDF.TabIndex = 19;
+            this.ExportPDF.UseVisualStyleBackColor = true;
+            this.ExportPDF.Click += new System.EventHandler(this.ExportPDF_Click);
+            // 
             // frmPay
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(840, 526);
+            this.Controls.Add(this.ExportPDF);
             this.Controls.Add(this.txtAllCollabTable);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnYes);
@@ -428,5 +441,6 @@
         private System.Windows.Forms.Button btnYes;
         private System.Windows.Forms.Button btnNo;
         private System.Windows.Forms.TextBox txtAllCollabTable;
+        private System.Windows.Forms.Button ExportPDF;
     }
 }

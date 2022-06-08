@@ -83,6 +83,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_to_basket_64 {
+            get {
+                object obj = ResourceManager.GetObject("add-to-basket-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Addperson_48 {
             get {
                 object obj = ResourceManager.GetObject("Addperson-48", resourceCulture);
@@ -263,6 +273,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap expired_food_64 {
+            get {
+                object obj = ResourceManager.GetObject("expired-food-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_32 {
             get {
                 object obj = ResourceManager.GetObject("icon-32", resourceCulture);
@@ -286,6 +306,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap information_32 {
             get {
                 object obj = ResourceManager.GetObject("information-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingredients_64 {
+            get {
+                object obj = ResourceManager.GetObject("ingredients-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

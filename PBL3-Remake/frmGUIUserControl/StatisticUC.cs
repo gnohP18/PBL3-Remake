@@ -147,7 +147,8 @@ namespace GUI.frmGUIUserControl
         }
         private void btnDetailInvoice_Click(object sender, EventArgs e)
         {
-
+            DetailInvoice frm = new DetailInvoice(DateCustom);
+            frm.Show();
         }
 
         private void dtpDayStart_ValueChanged(object sender, EventArgs e)

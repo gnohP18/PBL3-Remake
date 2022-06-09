@@ -29,7 +29,7 @@ namespace GUI.frmGUIUserControl
         }
         void Show(int IDNguyenLieu)
         {
-           dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(IDNguyenLieu);
+            dgvNguyenLieuKho.DataSource = NguyenLieuBLL.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(IDNguyenLieu);
         }
         private void btnFreshFood_Click(object sender, EventArgs e)
         {
@@ -58,9 +58,9 @@ namespace GUI.frmGUIUserControl
 
         private void btnMoreInfor_Click_1(object sender, EventArgs e)
         {
-            if(dgvNguyenLieuKho.SelectedRows.Count == 1)
+            if (dgvNguyenLieuKho.SelectedRows.Count == 1)
             {
-                int ID_NguyenLieu =Convert.ToInt32(dgvNguyenLieuKho.SelectedRows[0].Cells["ID_NguyenLieu"].Value);
+                int ID_NguyenLieu = Convert.ToInt32(dgvNguyenLieuKho.SelectedRows[0].Cells["ID_NguyenLieu"].Value);
                 frmGUIUserControl.MaterialInfo frm = new MaterialInfo(ID_NguyenLieu);
                 frm.Show();
             }
@@ -89,7 +89,7 @@ namespace GUI.frmGUIUserControl
 
         private void btnAllMaterial_Click(object sender, EventArgs e)
         {
-           dgvNguyenLieuKho.DataSource = BLLQLNH.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(0);
+            dgvNguyenLieuKho.DataSource = NguyenLieuBLL.Instance.GetListNguyenLieuTrongKhoByIdLoaiNguyenLieu(0);
         }
     }
 }

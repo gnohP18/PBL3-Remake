@@ -20,7 +20,7 @@ namespace BLL
         {
 
         }
-        #region Bàn
+        #region Bàn,thao tác về tìm bàn ghép, bàn chính, thông tin về món ăn trên bàn
         public List<Ban> GetMainBanByTinhTrangBanVaTang(int st, int fl)
         {
             if (st == 0)
@@ -157,50 +157,6 @@ namespace BLL
         public ChiTietBan GetDetailTableByID(int idctb)
         {
             return dALQLNH.ChiTietBans.Where(i => i.ID_ChiTietBan == idctb).FirstOrDefault();
-        }
-        #endregion
-        #region Món ăn
-        public List<MonAn> GetMonAn(int ID_LoaiMonAn, string txt, int TrangThai)
-        {
-            return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == ID_LoaiMonAn && p.TrangThai == TrangThai && p.TenMonAn.Contains(txt)).ToList();
-        }
-        public List<MonAn_View> GetListMonAnByIDBan(int ID_Ban)
-        {
-            List<MonAn_View> data = new List<MonAn_View>();
-            var groupMonAn = dALQLNH.ChiTietBans.GroupBy(s => s.ID_Ban).Where(g => g.Key == ID_Ban);
-            foreach (var childGroup in groupMonAn)
-            {
-                foreach (ChiTietBan i in childGroup)
-                {
-                    MonAn monAn = dALQLNH.MonAns.Find(i.ID_MonAn);
-                    bool checkMonAnExisted = false;
-                    foreach (MonAn_View j in data)
-                    {
-                        if (j.ID_MonAn == monAn.ID_MonAn)
-                        {
-                            j.SoLuong += i.SoLuong;
-                            j.ThanhTien = j.SoLuong * monAn.ThanhTien;
-                            checkMonAnExisted = true;
-                            continue;
-                        }
-                    }
-                    if (!checkMonAnExisted)
-                        data.Add(new MonAn_View { ID_MonAn = monAn.ID_MonAn, TenMonAn = monAn.TenMonAn, SoLuong = i.SoLuong, ThanhTien = monAn.ThanhTien });
-                }
-            }
-            return data;
-        }
-        public void ChangeStatusDishByID(int id)
-        {
-            foreach (ChiTietBan i in dALQLNH.ChiTietBans)
-            {
-                if (i.ID_ChiTietBan == id)
-                {
-                    i.TinhTrang = 1;
-                    break;
-                }
-            }
-            dALQLNH.SaveChanges();
         }
         #endregion
         #region Khác

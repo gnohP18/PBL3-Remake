@@ -1,14 +1,7 @@
-﻿using Entity;
+﻿using BLL;
+using Entity;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace GUI.frmGUIUserControl
 {
@@ -25,13 +18,13 @@ namespace GUI.frmGUIUserControl
             {
                 NhaCungCap ncc = new NhaCungCap
                 {
-                    ID_NhaCungCap = BLLQLNH.Instance.GetNewIDNhaCungCap(),
-                    TenNhaCungCap =  txtNameNewManufacturer.Text,
+                    ID_NhaCungCap = NhaCungCapBLL.Instance.GetNewIDNhaCungCap(),
+                    TenNhaCungCap = txtNameNewManufacturer.Text,
                     DiaChi = txtAddressManufacture.Text,
                     MaSoThue = txtTaxCode.Text,
                     SoDienThoai = txtPhoneNumberManufacture.Text
                 };
-                BLLQLNH.Instance.AddNewNhaCungCap(ncc);
+                NhaCungCapBLL.Instance.AddNewNhaCungCap(ncc);
 
                 GUI.NoticeBox box = new NoticeBox("Add new manufacturer successfully");
                 box.Show();

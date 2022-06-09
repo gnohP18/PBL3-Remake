@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using Entity;
+using System;
+using System.Windows.Forms;
 
 namespace GUI.frmGUIUserControl
 {
@@ -26,14 +19,14 @@ namespace GUI.frmGUIUserControl
         }
         public void SetCBB()
         {
-            cbbKindOfMaterial.Items.AddRange(BLLQLNH.Instance.GetAllLoaiNguyenLieu().ToArray());
+            cbbKindOfMaterial.Items.AddRange(NguyenLieuBLL.Instance.GetAllLoaiNguyenLieu().ToArray());
         }
         void GUI()
         {
             txtID.Enabled = false;
-            NguyenLieu nl = BLLQLNH.Instance.GetNguyenLieuByIDNguyenLieu(IDNguyenLieu);
-            if(nl != null)
-            {   
+            NguyenLieu nl = NguyenLieuBLL.Instance.GetNguyenLieuByIDNguyenLieu(IDNguyenLieu);
+            if (nl != null)
+            {
                 lbTienDe.Text = "Update Material";
                 txtID.Text = nl.ID_NguyenLieu.ToString();
                 txtInputMaterialName.Text = nl.TenNguyenLieu.ToString();
@@ -44,7 +37,7 @@ namespace GUI.frmGUIUserControl
             else
             {
                 lbTienDe.Text = "Add New Material";
-                txtID.Text = BLLQLNH.Instance.GetNewIDNguyenLieu().ToString();
+                txtID.Text = NguyenLieuBLL.Instance.GetNewIDNguyenLieu().ToString();
             }
         }
 
@@ -64,7 +57,7 @@ namespace GUI.frmGUIUserControl
                 HSD = Convert.ToInt32(txtExpiry.Text),
                 ID_LoaiNguyenLieu = lnl.ID_LoaiNguyenLieu
             };
-            BLLQLNH.Instance.ExcuteAddorUpdate(nl);
+            NguyenLieuBLL.Instance.ExcuteAddorUpdate(nl);
             NoticeBox box = new NoticeBox("Action performed");
             box.Show();
             d(0);

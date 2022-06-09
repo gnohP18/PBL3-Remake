@@ -1,7 +1,6 @@
 ﻿using BLL;
 using Entity;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 namespace GUI.frmGUIUserControl
 {
@@ -12,7 +11,7 @@ namespace GUI.frmGUIUserControl
         {
             InitializeComponent();
             this.ID_NguyenLieu = ID_NguyenLieu;
-            dgvInforMaterial.DataSource = BLLQLNH.Instance.GetThongTinNguyenLieuTrongKho(ID_NguyenLieu);
+            dgvInforMaterial.DataSource = NguyenLieuBLL.Instance.GetThongTinNguyenLieuTrongKho(ID_NguyenLieu);
         }
         private void dgvInforMaterial_SelectionChanged(object sender, EventArgs e)
         {
@@ -20,7 +19,7 @@ namespace GUI.frmGUIUserControl
             {
 
                 int ID_ChiTietNguyenLieu = Convert.ToInt32(dgvInforMaterial.SelectedRows[0].Cells["ID_ChiTietNguyenLieu"].Value);
-                Kho kho = BLLQLNH.Instance.GetChiTietNguyenLieuByIDChiTietNguyenLieu(ID_ChiTietNguyenLieu);
+                Kho kho = KhoBLL.Instance.GetChiTietNguyenLieuByIDChiTietNguyenLieu(ID_ChiTietNguyenLieu);
                 txtMaterialID.Text = kho.NguyenLieu.ID_NguyenLieu.ToString();
                 txtMaterialName.Text = kho.NguyenLieu.TenNguyenLieu;
                 txtUnit.Text = kho.NguyenLieu.DonViTinh;

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using BLL;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace GUI.frmGUIUserControl
 {
@@ -23,16 +17,9 @@ namespace GUI.frmGUIUserControl
         void GUI()
         {
             this.StartPosition = FormStartPosition.CenterParent;
-            //dgvInforInputFood.Columns.Add("STT", "STT");
-            //dgvInforInputFood.Columns.Add("MaNguyenLieu", "Mã Nguyên Liệu");
-            //dgvInforInputFood.Columns.Add("MaNhaCungCap", "Mã nhà cung cấp");
-            //dgvInforInputFood.Columns.Add("NgayNhap", "Ngày nhập");
-            //dgvInforInputFood.Columns.Add("DinhLuong", "Định lượng");
-            //dgvInforInputFood.Rows.Add("1", "101", "NCC102", "20/4/2022", "9kg");
-            //dgvInforInputFood.Rows.Add("2", "101", "NCC103", "20/4/2022", "7kg");
             txtFoodID.Text = Convert.ToString(IDNL);
             dgvInforInputFood.ReadOnly = true;
-            dgvInforInputFood.DataSource = BLLQLNH.Instance.GetTT(IDNL);
+            dgvInforInputFood.DataSource = NhaCungCapBLL.Instance.GetTT(IDNL);
         }
 
         public void GetDataToDGV(int id)
@@ -45,7 +32,7 @@ namespace GUI.frmGUIUserControl
         {
 
             var btn = (Button)button;
-            //Highlighjt button
+            //Highlight button
             btn.BackColor = Color.FromArgb(66, 134, 244);
             btn.ForeColor = Color.White;
             //Unhighlight button

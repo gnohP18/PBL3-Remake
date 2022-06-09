@@ -1,12 +1,6 @@
 ﻿using BLL;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI.frmGUIUserControl
@@ -23,14 +17,15 @@ namespace GUI.frmGUIUserControl
         {
             if (IDLoaiNguyenLieu == 0)
             {
-                dgvNguyenLieu.DataSource = BLLQLNH.Instance.GetAllNguyenLieu();
+                dgvNguyenLieu.DataSource = NguyenLieuBLL.Instance.GetAllNguyenLieu();
             }
 
-            else {
-                dgvNguyenLieu.DataSource = BLLQLNH.Instance.GetListNguyenLieuByIdLoaiNguyenLieu(IDLoaiNguyenLieu);
+            else
+            {
+                dgvNguyenLieu.DataSource = NguyenLieuBLL.Instance.GetListNguyenLieuByIdLoaiNguyenLieu(IDLoaiNguyenLieu);
             }
 
-            
+
         }
         private void btnFreshFood_Click(object sender, EventArgs e)
         {
@@ -80,11 +75,11 @@ namespace GUI.frmGUIUserControl
         private void btnDeleteMaterial_Click(object sender, EventArgs e)
         {
             List<int> list = new List<int>();
-            foreach(DataGridViewRow i in dgvNguyenLieu.SelectedRows)
+            foreach (DataGridViewRow i in dgvNguyenLieu.SelectedRows)
             {
                 list.Add(Convert.ToInt32(i.Cells["ID_NguyenLieu"].Value.ToString()));
             }
-            BLLQLNH.Instance.DelNguyenLieu(list);
+            NguyenLieuBLL.Instance.DelNguyenLieu(list);
             ReloadDgv(0);
             NoticeBox box = new NoticeBox("Delete material success!");
             box.Show();

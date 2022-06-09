@@ -1,13 +1,7 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace GUI.frmGUIUserControl
 {
@@ -20,7 +14,7 @@ namespace GUI.frmGUIUserControl
         }
         void ReloadDGV()
         {
-            dgvExpiredMaterial.DataSource = BLLQLNH.Instance.getListNguyenLieuHetHan();
+            dgvExpiredMaterial.DataSource = NguyenLieuBLL.Instance.getListNguyenLieuHetHan();
             dgvExpiredMaterial.ReadOnly = true;
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -35,7 +29,7 @@ namespace GUI.frmGUIUserControl
             {
                 ListID_ChiTietNguyenLieuXoa.Add(Convert.ToInt32(i.Cells["ID_ChiTietNguyenLieu"].Value.ToString()));
             }
-            BLLQLNH.Instance.DelChiTietNguyenLieu(ListID_ChiTietNguyenLieuXoa);
+            NguyenLieuBLL.Instance.DelChiTietNguyenLieu(ListID_ChiTietNguyenLieuXoa);
             NoticeBox box = new NoticeBox("Delete successfull");
             box.Show();
             ReloadDGV();
@@ -48,7 +42,7 @@ namespace GUI.frmGUIUserControl
             {
                 ListID_ChiTietNguyenLieuXoa.Add(Convert.ToInt32(i.Cells["ID_ChiTietNguyenLieu"].Value.ToString()));
             }
-            BLLQLNH.Instance.DelChiTietNguyenLieu(ListID_ChiTietNguyenLieuXoa);
+            NguyenLieuBLL.Instance.DelChiTietNguyenLieu(ListID_ChiTietNguyenLieuXoa);
             NoticeBox box = new NoticeBox("Delete successfull");
             box.Show();
             ReloadDGV();

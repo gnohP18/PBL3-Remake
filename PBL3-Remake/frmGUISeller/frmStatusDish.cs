@@ -27,7 +27,7 @@ namespace GUI.frmGUISeller
 
         private void btnDone_Click(object sender, System.EventArgs e)
         {
-            BLLNVNH.Instance.ChangeStatusDishByID(ID);
+            BLL.MonAnBLL.Instance.ChangeStatusDishByID(ID);
             this.Close();
         }
     }

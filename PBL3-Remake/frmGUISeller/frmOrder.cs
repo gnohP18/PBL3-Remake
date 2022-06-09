@@ -22,7 +22,7 @@ namespace GUI.frmGUISeller
             InitializeComponent();
             BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai());
             listMonAnViewDangDat = new List<MonAn_View>();
-            listMonAnViewDaDat = BLLNVNH.Instance.GetListMonAnByIDBan(IDTable);
+            listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
             LoadDataGridView();
             dgvOrder.Columns["ID_MonAn"].Visible = false;
             dgvOrder.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -87,14 +87,14 @@ namespace GUI.frmGUISeller
             {
                 listMonAnViewDangDat.Add(new MonAn_View { ID_MonAn = MonAn.ID_MonAn, TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
             }
-            BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(),listMonAnViewDangDat);
+            BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
             LoadDataGridView();
         }
         private void ShowDish(string txt)
         {
             RemoveDish();
-            BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(),listMonAnViewDangDat);
-            List<MonAn> listMonAn = BLLNVNH.Instance.GetMonAn(IDLoaiMonAn, txt, 1);
+            BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
+            List<MonAn> listMonAn = MonAnBLL.Instance.GetMonAn(IDLoaiMonAn, txt, 1);
             int somon = listMonAn.Count;
             DishForOrdering[] dsh = new DishForOrdering[somon];
             int dem1 = 0;
@@ -192,7 +192,7 @@ namespace GUI.frmGUISeller
                 {
                     listMonAnViewDangDat.RemoveAt(e.RowIndex - listMonAnViewDaDat.Count);
                 }
-                BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(),listMonAnViewDangDat);
+                BLLNVNH.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
                 LoadDataGridView();
             }
         }

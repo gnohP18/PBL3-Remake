@@ -35,7 +35,7 @@ namespace GUI.frmGUIUserControl
             cbbKindOfIngredinet.Items.Add("Vegetable");
             cbbKindOfIngredinet.Items.Add("DriedFood");
             cbbKindOfIngredinet.Items.Add("Drinking");
-            foreach (NguyenLieu i in BLL.BLLQLNH.Instance.GetAllNguyenLieu())
+            foreach (NguyenLieu i in BLL.NguyenLieuBLL.Instance.GetAllNguyenLieu())
             {
                 if (i.ID_LoaiNguyenLieu == (cbbKindOfIngredinet.SelectedIndex + 1))
                 {
@@ -55,7 +55,7 @@ namespace GUI.frmGUIUserControl
         private void SetCBBIngredient()
         {
             cbbIngrendients.Items.Clear();
-            foreach (NguyenLieu i in BLL.BLLQLNH.Instance.GetAllNguyenLieu())
+            foreach (NguyenLieu i in BLL.NguyenLieuBLL.Instance.GetAllNguyenLieu())
             {
                 if (i.ID_LoaiNguyenLieu == (cbbKindOfIngredinet.SelectedIndex + 1))
                 {
@@ -66,7 +66,7 @@ namespace GUI.frmGUIUserControl
         }
         private void LoadMonAn(int ID)
         {
-            MonAn UpdateMon = BLL.BLLNVNH.Instance
+
 
 
         }

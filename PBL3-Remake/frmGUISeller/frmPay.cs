@@ -19,7 +19,8 @@ namespace GUI.frmGUISeller
         {
             IDTable = idban;
             InitializeComponent();
-            SetCollabTableTextBox();        }
+            SetCollabTableTextBox();
+        }
         List<string> Voucher = new List<string>();
         private void AddVoucher()
         {
@@ -30,7 +31,7 @@ namespace GUI.frmGUISeller
         }
         private void frmPay_Load(object sender, EventArgs e)
         {
-            listMonAnViewDaDat = BLLNVNH.Instance.GetListMonAnByIDBan(IDTable);
+            listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
             dgvPayment.DataSource = listMonAnViewDaDat;
             LoadDataGridView(listMonAnViewDaDat);
             AddVoucher();

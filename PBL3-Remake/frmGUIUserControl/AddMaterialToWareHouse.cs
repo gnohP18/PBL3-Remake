@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using Entity;
+using System;
+using System.Windows.Forms;
 
 namespace GUI.frmGUIUserControl
 {
@@ -21,7 +14,7 @@ namespace GUI.frmGUIUserControl
         }
         void SetCBB()
         {
-            cbbKindOfMaterial.Items.AddRange(BLLQLNH.Instance.GetAllLoaiNguyenLieu().ToArray());
+            cbbKindOfMaterial.Items.AddRange(NguyenLieuBLL.Instance.GetAllLoaiNguyenLieu().ToArray());
         }
 
 
@@ -30,9 +23,9 @@ namespace GUI.frmGUIUserControl
             if (cbbKindOfMaterial.SelectedIndex != -1)
             {
                 cbbMaterialName.Items.Clear();
-                cbbMaterialName.Items.AddRange(BLLQLNH.Instance.GetListNguyenLieuByIdLoaiNguyenLieu(cbbKindOfMaterial.SelectedIndex + 1).ToArray());
+                cbbMaterialName.Items.AddRange(NguyenLieuBLL.Instance.GetListNguyenLieuByIdLoaiNguyenLieu(cbbKindOfMaterial.SelectedIndex + 1).ToArray());
                 cbbManufacturer.Items.Clear();
-                cbbManufacturer.Items.AddRange(BLLQLNH.Instance.GetAllNhaCungCap().ToArray());
+                cbbManufacturer.Items.AddRange(NhaCungCapBLL.Instance.GetAllNhaCungCap().ToArray());
             }
         }
 
@@ -57,34 +50,35 @@ namespace GUI.frmGUIUserControl
         //cung nguyen lieu & ngay nhap ==> + vao luong ton kho
 
         private void btnAddMaterialToWareHouse_Click(object sender, EventArgs e)
-        {   
+        {
             if (cbbKindOfMaterial.SelectedIndex != -1 && cbbMaterialName.SelectedIndex != -1 && cbbManufacturer.SelectedIndex != -1 && dtpImportDay.Checked != false)
             {
-                foreach (Kho i in BLL.BLLQLNH.Instance.GetAllKho())
+                foreach (Kho i in BLL.KhoBLL.Instance.GetAllKho())
                 {
                     if (i.NguyenLieu.TenNguyenLieu == cbbMaterialName.SelectedItem.ToString()
                         && i.NhaCungCap.TenNhaCungCap == cbbManufacturer.SelectedItem.ToString()
                         && i.NgayNhap.ToShortDateString() == dtpImportDay.Value.ToShortDateString())
                     {
-                        BLLQLNH.Instance.UpdateLuongNhapVaoVaLuongTonKho(i, Convert.ToInt32(txtQuantity.Text.ToString()));
+                        KhoBLL.Instance.UpdateLuongNhapVaoVaLuongTonKho(i, Convert.ToInt32(txtQuantity.Text.ToString()));
                         GUI.NoticeBox box = new NoticeBox("Add material successfully!");
                         box.Show();
                     }
 
                     else
-                    {   NguyenLieu nl = (NguyenLieu)(cbbMaterialName.SelectedItem);
+                    {
+                        NguyenLieu nl = (NguyenLieu)(cbbMaterialName.SelectedItem);
                         NhaCungCap ncc = (NhaCungCap)(cbbManufacturer.SelectedItem);
                         Kho kho = new Kho
                         {
-                        ID_ChiTietNguyenLieu = BLLQLNH.Instance.GetNewIDChiTietNguyenLieu(),
-                        ID_NguyenLieu = nl.ID_NguyenLieu,
-                        ID_NhaCungCap = ncc.ID_NhaCungCap,
-                        NgayNhap = dtpImportDay.Value,
-                        NgayHetHan = dtpImportDay.Value.AddDays(nl.HSD),
-                        LuongNhapVao = Convert.ToInt32(txtQuantity.Text.ToString()),
-                        LuongTonKho = Convert.ToInt32(txtQuantity.Text.ToString()),
-                    };
-                        BLLQLNH.Instance.AddMaterialToWareHouse(kho);
+                            ID_ChiTietNguyenLieu = NguyenLieuBLL.Instance.GetNewIDChiTietNguyenLieu(),
+                            ID_NguyenLieu = nl.ID_NguyenLieu,
+                            ID_NhaCungCap = ncc.ID_NhaCungCap,
+                            NgayNhap = dtpImportDay.Value,
+                            NgayHetHan = dtpImportDay.Value.AddDays(nl.HSD),
+                            LuongNhapVao = Convert.ToInt32(txtQuantity.Text.ToString()),
+                            LuongTonKho = Convert.ToInt32(txtQuantity.Text.ToString()),
+                        };
+                        KhoBLL.Instance.AddMaterialToWareHouse(kho);
                         GUI.NoticeBox box = new NoticeBox("Add material successfully!");
                         box.Show();
                         break;

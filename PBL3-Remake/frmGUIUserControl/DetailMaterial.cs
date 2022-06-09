@@ -57,9 +57,26 @@ namespace GUI.frmGUIUserControl
                 HSD = Convert.ToInt32(txtExpiry.Text),
                 ID_LoaiNguyenLieu = lnl.ID_LoaiNguyenLieu
             };
-            NguyenLieuBLL.Instance.ExcuteAddorUpdate(nl);
-            NoticeBox box = new NoticeBox("Action performed");
-            box.Show();
+            if(NguyenLieuBLL.Instance.checkAddorUpdate(nl.ID_NguyenLieu))
+            {
+                NguyenLieuBLL.Instance.ExcuteUpdate(nl);
+                NoticeBox box = new NoticeBox("Update material performed");
+                box.Show();
+            }
+            else
+            {
+                if(NguyenLieuBLL.Instance.checkTrungTenNL(nl.TenNguyenLieu))
+                {
+                    NoticeBox box = new NoticeBox("Material's name have already exist");
+                    box.Show();
+                }
+                else
+                {
+                    NguyenLieuBLL.Instance.ExcuteAdd(nl);
+                    NoticeBox box = new NoticeBox("Add material performed");
+                    box.Show();
+                }
+            }    
             d(0);
         }
     }

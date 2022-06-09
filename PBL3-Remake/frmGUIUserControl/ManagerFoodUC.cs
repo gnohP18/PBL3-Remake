@@ -51,13 +51,15 @@ namespace GUI.frmGUIUserControl
             food.Width = 200;
             food.Height = 150;
         }
-        private void ShowAllFood()
+        private void ShowAllFood(int ID_LoaiMonAn)
         {
-            RemoveFood();
-
-            List<MonAn> listMonAn = BLLNVNH.Instance.GetAllMonAn();
+            List<MonAn> listMonAn = null;
+            if (ID_LoaiMonAn == 0)
+            {
+                listMonAn = BLLNVNH.Instance.GetAllMonAn();
+            }
+            else listMonAn = BLLNVNH.Instance.GetAllMonAnByIDLoaiMonAn(ID_LoaiMonAn);
             int somon = listMonAn.Count;
-            Console.WriteLine("So mon an " + somon);
             CoursesInWareHouse[] food = new CoursesInWareHouse[somon];
             int dem1 = 0;
             foreach (MonAn i in listMonAn)
@@ -89,9 +91,7 @@ namespace GUI.frmGUIUserControl
                     }
                     int thuong = Convert.ToInt32(i / 5);
                     Ly = 20 + 200 * thuong;
-                    //food[i].SetLocation(Lx, Ly);
                     SetFoodView(pnFood, food[i], Lx, Ly);
-                    Console.WriteLine("ten mon " + food[i].mon.TenMonAn + " Lx,Ly=" + Lx + "," + Ly);
                 }
             }
         }
@@ -99,38 +99,40 @@ namespace GUI.frmGUIUserControl
         private void btnAll_Click(object sender, EventArgs e)
         {
             RemoveFood();
-            ShowAllFood();
             SetUIForButton(sender);
+            ShowAllFood(0);
         }
 
         private void btnAppetizer_Click(object sender, EventArgs e)
         {
-            SetUIForButton(sender);
             RemoveFood();
+            SetUIForButton(sender);
+            ShowAllFood(1);
         }
 
         private void btnMainDish_Click(object sender, EventArgs e)
         {
-            SetUIForButton(sender);
             RemoveFood();
+            SetUIForButton(sender);
+            ShowAllFood(2);
         }
 
         private void btnDessert_Click(object sender, EventArgs e)
         {
             RemoveFood();
             SetUIForButton(sender);
+            ShowAllFood(3);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SetUIForButton(sender);
             RemoveFood();
+            SetUIForButton(sender);
+            ShowAllFood(4);
         }
-
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-
-            AddNewCourseToWareHouse frm = new AddNewCourseToWareHouse();
+            AddNewCourseToWareHouse frm = new AddNewCourseToWareHouse(-1);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

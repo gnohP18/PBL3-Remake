@@ -21,7 +21,9 @@ namespace GUI.frmGUIUserControl
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-
+            AddNewCourseToWareHouse frm = new AddNewCourseToWareHouse(mon.ID_MonAn);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
         }
         private Image byteArrayToImage(byte[] byteArrayIn)
         {

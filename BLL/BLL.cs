@@ -11,6 +11,7 @@ namespace BLL
         {
             dALQLNH = new DALQLNH();
         }
+        #region Thông tin nguyên liệu hiện tại, lấy nguyên liệu qua tên
         public Dictionary<int, float> GetThongTinLuongNguyenLieuHienTai()
         {
             Dictionary<int, float> listThongTinLuongNguyenLieu = new Dictionary<int, float>();
@@ -31,6 +32,54 @@ namespace BLL
                 }
             }
             return listThongTinLuongNguyenLieu;
+        }
+        public NguyenLieu GetNguyenLieuByTenNguyenLieu(string name)
+        {
+            return dALQLNH.NguyenLieus.Where(p => p.TenNguyenLieu == name).FirstOrDefault();
+        }
+        #endregion
+        #region CheckLogin, GetAllUser
+        public int checkLoginCustomer(string username, string password)
+        {
+            User user = (User)dALQLNH.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
+            if (user == null) return -1;
+            if (user.ID_ChucVu == 1) return 1;
+            if (user.ID_ChucVu == 2) return -2;
+            if (user.ID_ChucVu == 3)
+            {
+                int dateNowHashCode = DateTime.Now.GetHashCode();
+                List<ChiTietCaLam> listChiTietCaLam = dALQLNH.ChiTietCaLams.Where(s => s.ID_User == user.ID_User).ToList();
+                List<string> strCaLam = new List<string>();
+                foreach (ChiTietCaLam i in listChiTietCaLam)
+                {
+                    strCaLam.Add(dALQLNH.CaLams.Find(i.ID_CaLam).LichCaLam);
+                }
+                foreach (string i in strCaLam)
+                {
+
+                }
+            }
+            return 1;
+        }
+        public List<User> GetAllUser()
+        {
+            return dALQLNH.Users.ToList();
+        }
+        #endregion
+        #region Lấy tất cả món ăn, Lấy món ăn qua IDLoaiMonAn
+        public List<MonAn> GetAllMonAn()
+        {
+            return dALQLNH.MonAns.ToList();
+        }
+        public List<MonAn> GetAllMonAnByIDLoaiMonAn(int ID_LoaiMonAn)
+        {
+            List<MonAn> listMonAn = new List<MonAn>();
+            foreach (MonAn monan in dALQLNH.MonAns)
+            {
+                if (ID_LoaiMonAn == monan.ID_LoaiMonAn)
+                    listMonAn.Add(monan);
+            }
+            return listMonAn;
         }
         public void UpdateTrangThaiMonAn(Dictionary<int, float> listThongTinLuongNguyenLieu, List<MonAn_View> ListMonAnViewLayRa = null)
         {
@@ -66,36 +115,8 @@ namespace BLL
             }
             dALQLNH.SaveChanges();
         }
-        public int checkLoginCustomer(string username, string password)
-        {
-            User user = (User)dALQLNH.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
-            if (user == null) return -1;
-            if (user.ID_ChucVu == 1) return 1;
-            if (user.ID_ChucVu == 2) return -2;
-            if (user.ID_ChucVu == 3)
-            {
-                int dateNowHashCode = DateTime.Now.GetHashCode();
-                List<ChiTietCaLam> listChiTietCaLam = dALQLNH.ChiTietCaLams.Where(s => s.ID_User == user.ID_User).ToList();
-                List<string> strCaLam = new List<string>();
-                foreach (ChiTietCaLam i in listChiTietCaLam)
-                {
-                    strCaLam.Add(dALQLNH.CaLams.Find(i.ID_CaLam).LichCaLam);
-                }
-                foreach (string i in strCaLam)
-                {
-
-                }
-            }
-            return 1;
-        }
-        public List<MonAn> GetAllMonAn()
-        {
-            return dALQLNH.MonAns.ToList();
-        }
-        public NguyenLieu GetNguyenLieuByTenNguyenLieu(string name)
-        {
-            return dALQLNH.NguyenLieus.Where(p => p.TenNguyenLieu == name).FirstOrDefault();
-        }
+        #endregion
+        #region Thêm, sửa, xóa món ăn
         public int GetNewIDMonAn()
         {
             int ID = 1;
@@ -131,9 +152,11 @@ namespace BLL
                 dALQLNH.SaveChanges();
             }
         }
-        public List<User> GetAllUser()
+        #endregion
+        #region Thống kê
+        public ChiTietNhaCungCap GetPriceOfInGredientByIDInGredient(int ID_NguyenLieu)
         {
-            return dALQLNH.Users.ToList();
+            return dALQLNH.ChiTietNhaCungCaps.Where(p => p.ID_NguyenLieu == ID_NguyenLieu).FirstOrDefault();
         }
         public int GetNumberOfOrdered(DateTime Datecustom)
         {
@@ -146,10 +169,6 @@ namespace BLL
                 }
             }
             return dem;
-        }
-        public ChiTietNhaCungCap GetPriceOfInGredientByIDInGredient(int ID_NguyenLieu)
-        {
-            return dALQLNH.ChiTietNhaCungCaps.Where(p => p.ID_NguyenLieu == ID_NguyenLieu).FirstOrDefault();
         }
         public int GetTotal(DateTime Datecustom)
         {
@@ -243,5 +262,6 @@ namespace BLL
             }
             return list;
         }
+        #endregion
     }
 }

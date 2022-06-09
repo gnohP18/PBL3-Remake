@@ -80,13 +80,15 @@
             // 
             // CalendarStatistic
             // 
-            this.CalendarStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.CalendarStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.CalendarStatistic.ForeColor = System.Drawing.Color.Black;
             this.CalendarStatistic.Location = new System.Drawing.Point(774, 20);
             this.CalendarStatistic.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.CalendarStatistic.Name = "CalendarStatistic";
             this.CalendarStatistic.TabIndex = 19;
+            this.CalendarStatistic.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.CalendarStatistic.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.CalendarStatistic.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.CalendarStatistic.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarStatistic_DateChanged);
             // 
             // panel5

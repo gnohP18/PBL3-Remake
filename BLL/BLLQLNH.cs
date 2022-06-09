@@ -1,5 +1,4 @@
 ﻿using Entity;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -21,6 +20,13 @@ namespace BLL
         {
             dALQLNH = new DALQLNH();
         }
+        public bool checkLoginManager(string username, string password)
+        {
+            User user = (User)(dALQLNH.Users.Where(p => (p.ID_ChucVu == 1 && p.Username == username && p.Password == password)).FirstOrDefault());
+            if (user == null) return false;
+            else return true;
+        }
+        #region Lấy tất cả nguyên liệu,nguyên liệu trong kho qua ID_NguyenLieu, lấy qua ID_NguyenLieu,ID_LoaiNguyenLieu
         public List<NguyenLieu> GetAllNguyenLieu()
         {
             List<NguyenLieu> list = new List<NguyenLieu>();
@@ -37,7 +43,7 @@ namespace BLL
             List<ChiTietNguyenLieu_View> data = new List<ChiTietNguyenLieu_View>();
             foreach (Kho i in listChiTietNguyenLieu)
             {
-                data.Add(new ChiTietNguyenLieu_View { ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu,ID_NguyenLieu = i.ID_NguyenLieu, TenNguyenLieu = i.NguyenLieu.TenNguyenLieu, LuongTonKho = i.LuongTonKho, LuongNhapVao = i.LuongNhapVao ,NgayNhap = i.NgayNhap,NgayHetHan = i.NgayHetHan,ID_NhaCungCap = i.ID_NhaCungCap});
+                data.Add(new ChiTietNguyenLieu_View { ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu, ID_NguyenLieu = i.ID_NguyenLieu, TenNguyenLieu = i.NguyenLieu.TenNguyenLieu, LuongTonKho = i.LuongTonKho, LuongNhapVao = i.LuongNhapVao, NgayNhap = i.NgayNhap, NgayHetHan = i.NgayHetHan, ID_NhaCungCap = i.ID_NhaCungCap });
             }
             return data;
         }
@@ -68,12 +74,12 @@ namespace BLL
                 float LuongTonKhoConHSD = 0;
                 foreach (Kho s in childGroup)
                 {
-                    if(s.NgayHetHan > System.DateTime.Now)
+                    if (s.NgayHetHan > System.DateTime.Now)
                     {
                         LuongTonKhoConHSD += s.LuongTonKho;
                     }
                 }
-                data.Add(new NguyenLieu_View { ID_NguyenLieu = nl.ID_NguyenLieu,TenNguyenLieu = nl.TenNguyenLieu ,DonViTinh = nl.DonViTinh,TenLoaiNguyenLieu = nl.LoaiNguyenLieu.TenLoaiNguyenLieu ,LuongTonKho = LuongTonKhoConHSD});
+                data.Add(new NguyenLieu_View { ID_NguyenLieu = nl.ID_NguyenLieu, TenNguyenLieu = nl.TenNguyenLieu, DonViTinh = nl.DonViTinh, TenLoaiNguyenLieu = nl.LoaiNguyenLieu.TenLoaiNguyenLieu, LuongTonKho = LuongTonKhoConHSD });
             }
             return data;
         }
@@ -81,11 +87,11 @@ namespace BLL
         public List<NguyenLieu> GetListNguyenLieuByIdLoaiNguyenLieu(int ID_LoaiNguyenLieu)
         {
             List<NguyenLieu> data = new List<NguyenLieu>();
-            foreach(NguyenLieu i in dALQLNH.NguyenLieus)
+            foreach (NguyenLieu i in dALQLNH.NguyenLieus)
             {
-                if(i.ID_LoaiNguyenLieu == ID_LoaiNguyenLieu)
+                if (i.ID_LoaiNguyenLieu == ID_LoaiNguyenLieu)
                 {
-                    data.Add(i); 
+                    data.Add(i);
                 }
             }
             return data;
@@ -93,10 +99,10 @@ namespace BLL
 
         public void DelChiTietNguyenLieu(List<int> listIDChiTietNguyenLieuDel)
         {
-            foreach(int i in listIDChiTietNguyenLieuDel)
+            foreach (int i in listIDChiTietNguyenLieuDel)
             {
                 Kho kho = dALQLNH.Khoes.Find(i);
-                if(kho.NgayHetHan < System.DateTime.Now)
+                if (kho.NgayHetHan < System.DateTime.Now)
                 {
                     dALQLNH.Khoes.Remove(kho);
                     dALQLNH.SaveChanges();
@@ -107,48 +113,20 @@ namespace BLL
         public List<ChiTietNguyenLieu_View> getListNguyenLieuHetHan()
         {
             List<ChiTietNguyenLieu_View> list = new List<ChiTietNguyenLieu_View>();
-            foreach(ChiTietNguyenLieu_View i in GetAllNguyenLieuTrongKho())
+            foreach (ChiTietNguyenLieu_View i in GetAllNguyenLieuTrongKho())
             {
-                if(i.NgayHetHan < System.DateTime.Now)
+                if (i.NgayHetHan < System.DateTime.Now)
                 {
                     list.Add(i);
                 }
             }
 
             return list;
-        }
-
-        public List<NhaCungCap> GetAllNhaCungCap()
-        {
-            List<NhaCungCap> list = new List<NhaCungCap>();
-            foreach(NhaCungCap i in dALQLNH.NhaCungCaps)
-            {
-                list.Add(i);
-            }
-            return list;
-        }
-        public List<ChiTietNhaCungCap> GetTT(int id)
-        {
-            List<ChiTietNhaCungCap> list = new List<ChiTietNhaCungCap>();
-            foreach (ChiTietNhaCungCap i in dALQLNH.ChiTietNhaCungCaps)
-            {
-                if (i.ID_NguyenLieu == id)
-                {
-                    list.Add(i);
-                }
-            }
-            return list;
-        }
-        public bool checkLoginManager(string username, string password)
-        {
-            User user = (User)(dALQLNH.Users.Where(p => (p.ID_ChucVu == 1 && p.Username == username && p.Password == password)).FirstOrDefault());
-            if (user == null) return false;
-            else return true;
         }
         public List<LoaiNguyenLieu> GetAllLoaiNguyenLieu()
         {
             List<LoaiNguyenLieu> list = new List<LoaiNguyenLieu>();
-            foreach(LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
+            foreach (LoaiNguyenLieu i in dALQLNH.LoaiNguyenLieus)
             {
                 list.Add(i);
             }
@@ -181,7 +159,29 @@ namespace BLL
             }
             return ID;
         }
-
+        #endregion
+        #region Lấy tất cả nhà cung cấp, Chi tiết nhà cung cấp
+        public List<NhaCungCap> GetAllNhaCungCap()
+        {
+            List<NhaCungCap> list = new List<NhaCungCap>();
+            foreach (NhaCungCap i in dALQLNH.NhaCungCaps)
+            {
+                list.Add(i);
+            }
+            return list;
+        }
+        public List<ChiTietNhaCungCap> GetTT(int id)
+        {
+            List<ChiTietNhaCungCap> list = new List<ChiTietNhaCungCap>();
+            foreach (ChiTietNhaCungCap i in dALQLNH.ChiTietNhaCungCaps)
+            {
+                if (i.ID_NguyenLieu == id)
+                {
+                    list.Add(i);
+                }
+            }
+            return list;
+        }
         public int GetNewIDNhaCungCap()
         {
             int ID = 1;
@@ -201,7 +201,8 @@ namespace BLL
             dALQLNH.NhaCungCaps.Add(ncc);
             dALQLNH.SaveChanges();
         }
-
+        #endregion
+        #region lấy tất cả nguyên liệu trong kho,Update Nhập vào và tồn kho,thêm nguyên liệu vào trong kho,Thêm sửa xóa nhập nguyên liệu
         public List<Kho> GetAllKho()
         {
             return dALQLNH.Khoes.ToList();
@@ -221,18 +222,18 @@ namespace BLL
 
         public bool checkAddorUpdate(int id)
         {
-            foreach(NguyenLieu i in GetAllNguyenLieu())
+            foreach (NguyenLieu i in GetAllNguyenLieu())
             {
-                if(i.ID_NguyenLieu == id)
+                if (i.ID_NguyenLieu == id)
                 {
                     return true;
-                }   
+                }
             }
             return false;
         }
-       public void ExcuteAddorUpdate(NguyenLieu i)
-        {   
-            if(checkAddorUpdate(i.ID_NguyenLieu))
+        public void ExcuteAddorUpdate(NguyenLieu i)
+        {
+            if (checkAddorUpdate(i.ID_NguyenLieu))
             {
                 NguyenLieu nl = dALQLNH.NguyenLieus.Find(i.ID_NguyenLieu);
                 nl.ID_NguyenLieu = i.ID_NguyenLieu;
@@ -245,20 +246,20 @@ namespace BLL
             {
                 dALQLNH.NguyenLieus.Add(i);
             }
-            
+
             dALQLNH.SaveChanges();
         }
 
-       public NguyenLieu GetNguyenLieuByIDNguyenLieu(int ID)
+        public NguyenLieu GetNguyenLieuByIDNguyenLieu(int ID)
         {
             return dALQLNH.NguyenLieus.Find(ID);
         }
 
         public bool checkTrungTenNL(string TenNL)
         {
-            foreach(NguyenLieu i in GetAllNguyenLieu())
+            foreach (NguyenLieu i in GetAllNguyenLieu())
             {
-                if(i.TenNguyenLieu == TenNL)
+                if (i.TenNguyenLieu == TenNL)
                 {
                     return true;
                 }
@@ -270,12 +271,12 @@ namespace BLL
         {
             foreach (int i in listIDNguyenLieuDel)
             {
-                NguyenLieu nl = dALQLNH.NguyenLieus.Find(i);               
+                NguyenLieu nl = dALQLNH.NguyenLieus.Find(i);
                 dALQLNH.NguyenLieus.Remove(nl);
                 dALQLNH.SaveChanges();
 
             }
         }
+        #endregion
     }
 }
-

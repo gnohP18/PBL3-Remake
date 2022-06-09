@@ -1,5 +1,4 @@
-﻿using PBL3_Remake;
-using System;
+﻿using System;
 using System.Windows.Forms;
 namespace GUI
 {
@@ -13,7 +12,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmGUIManager.frmMainManager());
         }
     }
 }

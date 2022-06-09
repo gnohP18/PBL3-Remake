@@ -12,9 +12,11 @@ namespace GUI.frmGUIUserControl
         List<ChiTietNhapMonAn_View> listNguyenLieuDangThem = new List<ChiTietNhapMonAn_View>();
         List<string> ListIngredient = new List<string>();
         private int ID_LoaiMonAn { get; set; }
+        private int ID_MonAn { get; set; }
         Image img;
-        public AddNewCourseToWareHouse()
+        public AddNewCourseToWareHouse(int ID_MonAn)
         {
+            this.ID_MonAn = ID_MonAn;
             InitializeComponent();
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -40,11 +42,7 @@ namespace GUI.frmGUIUserControl
                     ListIngredient.Add(i.TenNguyenLieu);
                     cbbIngrendients.Items.Add(i.TenNguyenLieu);
                 }
-                //else if (cbbIngrendients.SelectedIndex == 0)
-                //{
-                //    ListIngredient.Add(i.TenNguyenLieu);
-                //    cbbIngrendients.Items.Add(i.TenNguyenLieu);
-                //}
+
             }
         }
         private byte[] ImgToByte(System.Drawing.Image img)
@@ -66,12 +64,23 @@ namespace GUI.frmGUIUserControl
                 }
             }
         }
+        private void LoadMonAn(int ID)
+        {
+            MonAn UpdateMon = BLL.BLLNVNH.Instance
+
+
+        }
         private void GUI()
         {
             SetCBB();
             int id = BLL.BLLNVNH.Instance.GetAllMonAn().Count;
             id++;
-            lblIDCourse.Text = id.ToString();
+            if (ID_MonAn == -1)
+                lblIDCourse.Text = id.ToString();
+            else
+            {
+                lblIDCourse.Text = ID_MonAn.ToString();
+            }
             AutoCompleteStringCollection autoSearchIngredients = new AutoCompleteStringCollection();
             cbbIngrendients.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbbIngrendients.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -185,7 +194,7 @@ namespace GUI.frmGUIUserControl
 
         private void cbbIngrendients_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show(cbbIngrendients.SelectedItem.ToString());
+
         }
 
         private void cbbLoaiMonAn_SelectedIndexChanged(object sender, EventArgs e)
@@ -195,10 +204,14 @@ namespace GUI.frmGUIUserControl
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //int index=Convert.ToInt32(dgvMaterial.CurrentRow.Cells[2].Value.ToString());
             int index = dgvMaterial.CurrentRow.Index;
             listNguyenLieuDangThem.RemoveAt(index);
             SetDataGridView();
+        }
+
+        private void btnDeleteCourse_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

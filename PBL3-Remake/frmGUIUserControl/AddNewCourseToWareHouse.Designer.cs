@@ -52,6 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnDeleteCourse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pBCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             this.SuspendLayout();
@@ -241,7 +242,7 @@
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(90, 441);
+            this.btnRefresh.Location = new System.Drawing.Point(98, 441);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 17;
@@ -272,9 +273,9 @@
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(211, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 26);
+            this.label8.Size = new System.Drawing.Size(196, 26);
             this.label8.TabIndex = 20;
-            this.label8.Text = "Add new course";
+            this.label8.Text = "Course information";
             // 
             // btnAdd
             // 
@@ -294,7 +295,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(12, 441);
+            this.btnDelete.Location = new System.Drawing.Point(179, 441);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 22;
@@ -302,11 +303,25 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnDeleteCourse
+            // 
+            this.btnDeleteCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.btnDeleteCourse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDeleteCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteCourse.Location = new System.Drawing.Point(17, 441);
+            this.btnDeleteCourse.Name = "btnDeleteCourse";
+            this.btnDeleteCourse.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteCourse.TabIndex = 23;
+            this.btnDeleteCourse.Text = "Remove course";
+            this.btnDeleteCourse.UseVisualStyleBackColor = false;
+            this.btnDeleteCourse.Click += new System.EventHandler(this.btnDeleteCourse_Click);
+            // 
             // AddNewCourseToWareHouse
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(601, 476);
+            this.Controls.Add(this.btnDeleteCourse);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label8);
@@ -368,5 +383,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnDeleteCourse;
     }
 }

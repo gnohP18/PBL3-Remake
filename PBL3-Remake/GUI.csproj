@@ -127,6 +127,12 @@
     <Compile Include="frmGUISeller\frmStatusDish.Designer.cs">
       <DependentUpon>frmStatusDish.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUISeller\GuestInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\GuestInformation.Designer.cs">
+      <DependentUpon>GuestInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUISeller\TableForOrdering.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\frmStatusDish.resx">
       <DependentUpon>frmStatusDish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\GuestInformation.resx">
+      <DependentUpon>GuestInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\TableForOrdering.resx">
       <DependentUpon>TableForOrdering.cs</DependentUpon>
@@ -541,6 +550,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ingredients-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt-321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -203,5 +203,9 @@ namespace BLL
 
             }
         }
+        public NguyenLieu GetNguyenLieuByTenNguyenLieu(string name)
+        {
+            return dALQLNH.NguyenLieus.Where(p => p.TenNguyenLieu == name).FirstOrDefault();
+        }
     }
 }

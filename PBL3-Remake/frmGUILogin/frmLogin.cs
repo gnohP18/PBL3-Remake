@@ -32,12 +32,12 @@ namespace GUI.frmGUILogin
             }
             else if (radManager.Checked)
             {
-                if (BLLQLNH.Instance.checkLoginManager(txtUsername.Text, txtPassword.Text) == false)
-                {;
+                /*if (BLLQLNH.Instance.checkLoginManager(txtUsername.Text, txtPassword.Text) == false)
+                {
                     NoticeBox nt = new NoticeBox("Login information is not correct!!");
                     nt.Show();
                     return;
-                }
+                }*/
                 frmMainManager frm = new frmMainManager();
                 frm.Show();
 

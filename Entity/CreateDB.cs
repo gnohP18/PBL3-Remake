@@ -783,9 +783,9 @@ namespace Entity
                     TenNhaHang = "HHP",
                     DiaChi = "DaNa",
                     ThoiGianBatDauLamViecSang= new DateTime(2022,09,21,6,30,0),
-                    ThoiGianKetThucLamViecSang = new DateTime(2022,09,21,12,30,0),
+                    ThoiGianKetThucLamViecSang = new DateTime(2022,09,21,12,00,0),
                     ThoiGianBatDauLamViecChieu = new DateTime(2022,09,21,18,30,0),
-                    ThoiGianKetThucLamViecChieu = new DateTime(2022,09,21,21,30,0),
+                    ThoiGianKetThucLamViecChieu = new DateTime(2022,09,21,24,00,0),
                     SoTienQuyDoiThanhDiemTichLuy = 1000,
                     DiemTichLuyQuyDoiThanhTien = 10,
                     NgayPhatLuong = 5 }

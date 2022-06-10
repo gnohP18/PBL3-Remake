@@ -5,16 +5,17 @@ namespace GUI.frmGUIUserControl
 {
     public partial class DetailInvoice : Form
     {
-        private DateTime _date;
-        public DetailInvoice(DateTime dt)
+        private DateTime dateStart,dateEnd;
+        public DetailInvoice(DateTime dtStart,DateTime dtEnd)
         {
-            _date = dt;
+            dateStart = dtStart;
+            dateEnd = dtEnd;
             InitializeComponent();
             SetupDatagridView();
         }
         private void SetupDatagridView()
         {
-            dgvDanhSachHoaDon.DataSource = BLL.BLLNVNH.Instance.GetHoaDonByNgay(_date);
+            dgvDanhSachHoaDon.DataSource = BLL.BLLNVNH.Instance.GetHoaDonByFromDatetoDate(dateStart,dateEnd);
         }
 
         private void dgvDanhSachHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)

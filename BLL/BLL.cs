@@ -75,15 +75,35 @@ namespace BLL
             }
             return hd;
         }
-        public List<ChiTietHoaDon> GetAllChiTietHoaDonByIDHoaDon(int id)
+        public List<HoaDon_View> GetHoaDonByFromDatetoDate(DateTime dateStart, DateTime dateEnd)
         {
-            List<ChiTietHoaDon> list = new List<ChiTietHoaDon>();
-            foreach (ChiTietHoaDon i in dALQLNH.ChiTietHoaDons)
+            List<HoaDon_View> hoaDonviews = new List<HoaDon_View>();
+            foreach (HoaDon i in dALQLNH.HoaDons.Where(s => s.NgayLap >= dateStart && s.NgayLap <= dateEnd))
             {
-                if (i.ID_HoaDon == id)
+                hoaDonviews.Add(new HoaDon_View
                 {
-                    list.Add(i);
-                }
+                    ID_HoaDon = i.ID_HoaDon,
+                    NgayLap = i.NgayLap,
+                    TenKhachHang = i.KhachHang.TenKhachHang,
+                    TenNhanVien = i.User.TenUser,
+                    MaVoucher = i.MaVoucher,
+                    TienQuyDoiTuDiemTichLuy = i.TienQuyDoiTuDiemTichLuy,
+                    TongTien = i.TongTien
+                });
+            }
+            return hoaDonviews;
+        }
+        public List<ChiTietHoaDon_View> GetChiTietHoaDonByIDHoaDon(int id)
+        {
+            List<ChiTietHoaDon_View> list = new List<ChiTietHoaDon_View>();
+            foreach (ChiTietHoaDon i in dALQLNH.HoaDons.Find(id).ChiTietHoaDons)
+            {
+                list.Add(new ChiTietHoaDon_View
+                {
+                    TenMonAn = i.MonAn.TenMonAn,
+                    SoLuong = i.SoLuong,
+                    ThanhTien = i.MonAn.ThanhTien*i.SoLuong
+                });
             }
             return list;
         }

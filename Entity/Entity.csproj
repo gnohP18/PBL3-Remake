@@ -57,6 +57,7 @@
     <Compile Include="ChiTietBan.cs" />
     <Compile Include="ChiTietCaLam.cs" />
     <Compile Include="ChiTietHoaDon.cs" />
+    <Compile Include="ChiTietHoaDon_View.cs" />
     <Compile Include="ChiTietMonAn.cs" />
     <Compile Include="ChiTietNguyenLieu_View.cs" />
     <Compile Include="ChiTietNhaCungCap.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="DALQLNH.cs" />
     <Compile Include="DayChart_view.cs" />
     <Compile Include="HoaDon.cs" />
+    <Compile Include="HoaDon_View.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="Kho.cs" />
     <Compile Include="LoaiMonAn.cs" />

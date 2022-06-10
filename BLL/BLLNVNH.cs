@@ -20,6 +20,8 @@ namespace BLL
         {
 
         }
+
+        
         #region Bàn,thao tác về tìm bàn ghép, bàn chính, thông tin về món ăn trên bàn
         public List<Ban> GetMainBanByTinhTrangBanVaTang(int st, int fl)
         {

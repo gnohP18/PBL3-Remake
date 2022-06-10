@@ -14,7 +14,7 @@ namespace GUI.frmGUIUserControl
         }
         private void SetupDataGridView()
         {
-            dgvHoaDon.DataSource = BLL.BLLNVNH.Instance.GetAllChiTietHoaDonByIDHoaDon(ID_HoaDon);
+            dgvHoaDon.DataSource = BLL.BLLNVNH.Instance.GetChiTietHoaDonByIDHoaDon(ID_HoaDon);
         }
         private void btnOK_Click(object sender, EventArgs e)
         {

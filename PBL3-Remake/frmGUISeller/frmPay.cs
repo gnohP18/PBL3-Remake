@@ -1,10 +1,7 @@
 ﻿using BLL;
 using Entity;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 
 namespace GUI.frmGUISeller
@@ -22,12 +19,20 @@ namespace GUI.frmGUISeller
             SetCollabTableTextBox();
         }
         List<string> Voucher = new List<string>();
+        List<string> PhoneNumber = new List<string>();
         private void AddVoucher()
         {
-            Voucher.Add("Voucher123");
-            Voucher.Add("KM50%");
-            Voucher.Add("KM20%");
-            Voucher.Add("Giam50k");
+            foreach (Voucher i in BLL.VoucherBLL.Instance.GetAllVoucher())
+            {
+                Voucher.Add(i.MaVoucher);
+            }
+        }
+        private void AddPhoneNumber()
+        {
+            foreach (KhachHang i in KhachHangBLL.Instance.GetAllGuest())
+            {
+                PhoneNumber.Add(i.SDT);
+            }
         }
         private void frmPay_Load(object sender, EventArgs e)
         {
@@ -36,13 +41,21 @@ namespace GUI.frmGUISeller
             LoadDataGridView(listMonAnViewDaDat);
             AddVoucher();
             AutoCompleteStringCollection autoVoucher = new AutoCompleteStringCollection();
+            AutoCompleteStringCollection autoPhoneNumberGuest = new AutoCompleteStringCollection();
             txtVoucher.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtVoucher.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtGuestPhone.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtGuestPhone.AutoCompleteSource = AutoCompleteSource.CustomSource;
             foreach (string i in Voucher)
             {
                 autoVoucher.Add(i);
             }
+            foreach (string i in PhoneNumber)
+            {
+                autoPhoneNumberGuest.Add(i);
+            }
             txtVoucher.AutoCompleteCustomSource = autoVoucher;
+            txtGuestPhone.AutoCompleteCustomSource = autoPhoneNumberGuest;
             lblTotal.Text = (sum + tax).ToString();
         }
         private void LoadDataGridView(List<MonAn_View> lt)
@@ -122,7 +135,6 @@ namespace GUI.frmGUISeller
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-
             d();
         }
 
@@ -131,78 +143,30 @@ namespace GUI.frmGUISeller
             this.Close();
         }
 
-        private void ExportPDF_Click(object sender, EventArgs e)
+        private void pBCheckGuest_Click(object sender, EventArgs e)
         {
-            NoticeBox frmnotice = new NoticeBox("");
-            string mess = "";
-            if (dgvPayment.Rows.Count > 0)
+            if (txtGuestPhone.Text == "new")
             {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Output.pdf";
-                bool fileError = false;
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    if (File.Exists(sfd.FileName))
-                    {
-                        try
-                        {
-                            File.Delete(sfd.FileName);
-                        }
-                        catch (IOException ex)
-                        {
-                            fileError = true;
-                            MessageBox.Show("Không thể ghi dữ liệu tới ổ đĩa. Mô tả lỗi:" + ex.Message);
-                        }
-                    }
-                    if (!fileError)
-                    {
-                        try
-                        {
-                            PdfPTable pdfTable = new PdfPTable(dgvPayment.Columns.Count);
-                            pdfTable.DefaultCell.Padding = 3;
-                            pdfTable.WidthPercentage = 100;
-                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-
-                            foreach (DataGridViewColumn column in dgvPayment.Columns)
-                            {
-                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-                                pdfTable.AddCell(cell);
-                            }
-
-                            foreach (DataGridViewRow row in dgvPayment.Rows)
-                            {
-                                foreach (DataGridViewCell cell in row.Cells)
-                                {
-                                    pdfTable.AddCell(cell.Value.ToString());
-                                }
-                            }
-
-                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
-                            {
-                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
-                                PdfWriter.GetInstance(pdfDoc, stream);
-                                pdfDoc.Open();
-                                pdfDoc.Add(pdfTable);
-                                pdfDoc.Close();
-                                stream.Close();
-                            }
-                            mess = "Export successfully!!!";
-                            frmnotice = new NoticeBox(mess);
-                            frmnotice.Show();
-                        }
-                        catch (Exception ex)
-                        {
-                            mess = "Error:" + ex.Message;
-                            frmnotice = new NoticeBox(mess);
-                            frmnotice.Show();
-                        }
-                    }
-                }
+                GuestInformation frm = new GuestInformation(-1);
+                frm.Show();
             }
             else
             {
-                MessageBox.Show("Không có bản ghi nào được Export!!!", "Info");
+                GuestInformation frm = new GuestInformation(BLL.KhachHangBLL.Instance.GetGuestByGuestPhoneNumber(txtGuestPhone.Text).ID_KhachHang);
+                frm.Show();
+            }
+
+        }
+
+        private void txtGuestPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (txtGuestPhone.Text == "new")
+            {
+                pBCheckGuest.Image = PBL3_Remake.Properties.Resources.uncheckedRed;
+            }
+            else
+            {
+                pBCheckGuest.Image = PBL3_Remake.Properties.Resources.checkedGreen;
             }
         }
     }

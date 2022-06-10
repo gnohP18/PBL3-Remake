@@ -157,22 +157,21 @@ namespace BLL
             }
             return false;
         }
-        public void ExcuteAddorUpdate(NguyenLieu i)
+        public void ExcuteUpdate(NguyenLieu i)
         {
-            if (checkAddorUpdate(i.ID_NguyenLieu))
-            {
-                NguyenLieu nl = dALQLNH.NguyenLieus.Find(i.ID_NguyenLieu);
-                nl.ID_NguyenLieu = i.ID_NguyenLieu;
-                nl.DonViTinh = i.DonViTinh;
-                nl.TenNguyenLieu = i.TenNguyenLieu;
-                nl.HSD = i.HSD;
-                nl.ID_LoaiNguyenLieu = i.ID_LoaiNguyenLieu;
-            }
-            else
-            {
-                dALQLNH.NguyenLieus.Add(i);
-            }
+            NguyenLieu nl = dALQLNH.NguyenLieus.Find(i.ID_NguyenLieu);
+            nl.ID_NguyenLieu = i.ID_NguyenLieu;
+            nl.DonViTinh = i.DonViTinh;
+            nl.TenNguyenLieu = i.TenNguyenLieu;
+            nl.HSD = i.HSD;
+            nl.ID_LoaiNguyenLieu = i.ID_LoaiNguyenLieu;
 
+            dALQLNH.SaveChanges();
+
+        }
+        public void ExcuteAdd(NguyenLieu i)
+        {
+            dALQLNH.NguyenLieus.Add(i);
             dALQLNH.SaveChanges();
         }
 
@@ -202,6 +201,10 @@ namespace BLL
                 dALQLNH.SaveChanges();
 
             }
+        }
+        public NguyenLieu GetNguyenLieuByTenNguyenLieu(string name)
+        {
+            return dALQLNH.NguyenLieus.Where(p => p.TenNguyenLieu == name).FirstOrDefault();
         }
     }
 }

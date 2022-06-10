@@ -59,5 +59,6 @@ namespace BLL
             dALQLNH.NhaCungCaps.Add(ncc);
             dALQLNH.SaveChanges();
         }
+
     }
 }

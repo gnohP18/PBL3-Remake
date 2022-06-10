@@ -13,7 +13,7 @@ namespace Entity
         public DALQLNH()
             : base("name=DALQLNH")
         {
-            Database.SetInitializer<DALQLNH>(new CreateDB());
+            //Database.SetInitializer<DALQLNH>(new CreateDB());
         }
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaLam> CaLams { get; set; }

@@ -52,6 +52,12 @@ namespace GUI.frmGUIUserControl
             byte[] imgbyte = ms.ToArray();
             return imgbyte;
         }
+        private Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
         private void SetCBBIngredient()
         {
             cbbIngrendients.Items.Clear();
@@ -64,22 +70,27 @@ namespace GUI.frmGUIUserControl
                 }
             }
         }
+
         private void LoadMonAn(int ID)
         {
-
-
-
+            MonAn LoadMon = BLL.MonAnBLL.Instance.GetMonAnByID(ID);
+            pBCourse.Image = byteArrayToImage(LoadMon.AnhMonAn);
+            pBCourse.SizeMode = PictureBoxSizeMode.StretchImage;
+            lblIDCourse.Text = LoadMon.ID_MonAn.ToString();
+            txtNameCourse.Text = LoadMon.TenMonAn;
+            txtThanhTien.Text = LoadMon.ThanhTien.ToString();
+            cbbLoaiMonAn.SelectedIndex = LoadMon.ID_LoaiMonAn;
         }
         private void GUI()
         {
             SetCBB();
-            int id = BLL.BLLNVNH.Instance.GetAllMonAn().Count;
+            int id = BLL.MonAnBLL.Instance.GetAllMonAn().Count;
             id++;
             if (ID_MonAn == -1)
                 lblIDCourse.Text = id.ToString();
             else
             {
-                lblIDCourse.Text = ID_MonAn.ToString();
+                LoadMonAn(ID_MonAn);
             }
             AutoCompleteStringCollection autoSearchIngredients = new AutoCompleteStringCollection();
             cbbIngrendients.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -123,7 +134,7 @@ namespace GUI.frmGUIUserControl
             dem++;
             ChiTietNhapMonAn_View nhap = new ChiTietNhapMonAn_View();
             nhap.TenMonAn = txtNameCourse.Text;
-            nhap.ID_NguyenLieu = BLL.BLLQLNH.Instance.GetNguyenLieuByTenNguyenLieu(cbbIngrendients.SelectedItem.ToString()).ID_NguyenLieu;
+            nhap.ID_NguyenLieu = BLL.NguyenLieuBLL.Instance.GetNguyenLieuByTenNguyenLieu(cbbIngrendients.SelectedItem.ToString()).ID_NguyenLieu;
             nhap.Luong = (float)(Convert.ToDouble(txtAmount.Text));
             nhap.ID_MonAn = Convert.ToInt32(lblIDCourse.Text);
             nhap.TenNguyenLieu = cbbIngrendients.SelectedItem.ToString();
@@ -157,7 +168,7 @@ namespace GUI.frmGUIUserControl
         {
             if (txtNameCourse.Text != "" || txtThanhTien.Text != "")
             {
-                BLL.BLLQLNH.Instance.AddNewMonAn(listNguyenLieuDangThem, txtNameCourse.Text, ID_LoaiMonAn, Convert.ToInt32(txtThanhTien.Text), ImgToByte(img));
+                BLL.MonAnBLL.Instance.AddNewMonAn(listNguyenLieuDangThem, txtNameCourse.Text, ID_LoaiMonAn, Convert.ToInt32(txtThanhTien.Text), ImgToByte(img));
                 Console.WriteLine(txtNameCourse.Text);
                 Console.WriteLine(txtThanhTien.Text);
                 Console.WriteLine(txtAmount.Text);

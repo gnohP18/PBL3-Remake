@@ -56,9 +56,9 @@ namespace GUI.frmGUIUserControl
             List<MonAn> listMonAn = null;
             if (ID_LoaiMonAn == 0)
             {
-                listMonAn = BLLNVNH.Instance.GetAllMonAn();
+                listMonAn = MonAnBLL.Instance.GetAllMonAn();
             }
-            else listMonAn = BLLNVNH.Instance.GetAllMonAnByIDLoaiMonAn(ID_LoaiMonAn);
+            else listMonAn = MonAnBLL.Instance.GetAllMonAnByIDLoaiMonAn(ID_LoaiMonAn);
             int somon = listMonAn.Count;
             CoursesInWareHouse[] food = new CoursesInWareHouse[somon];
             int dem1 = 0;

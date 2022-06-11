@@ -80,6 +80,9 @@ namespace GUI.frmGUIUserControl
             txtNameCourse.Text = LoadMon.TenMonAn;
             txtThanhTien.Text = LoadMon.ThanhTien.ToString();
             cbbLoaiMonAn.SelectedIndex = LoadMon.ID_LoaiMonAn;
+            dgvMaterial.DataSource = BLL.MonAnBLL.Instance.GetChiTietMonAnByIDMonAn(ID);
+            dgvMaterial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvMaterial.Columns[3].Visible = false;
         }
         private void GUI()
         {
@@ -222,7 +225,8 @@ namespace GUI.frmGUIUserControl
 
         private void btnDeleteCourse_Click(object sender, EventArgs e)
         {
-
+            NoticeBox frm = new NoticeBox("Bạn muốn xóa món ăn này chứ");
+            frm.Show();
         }
     }
 }

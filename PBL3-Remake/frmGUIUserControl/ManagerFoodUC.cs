@@ -124,7 +124,7 @@ namespace GUI.frmGUIUserControl
             ShowAllFood(3);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnBeverages_Click(object sender, EventArgs e)
         {
             RemoveFood();
             SetUIForButton(sender);

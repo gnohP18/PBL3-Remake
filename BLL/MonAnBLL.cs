@@ -150,5 +150,17 @@ namespace BLL
                 dALQLNH.SaveChanges();
             }
         }
+        public List<ChiTietMonAn> GetChiTietMonAnByIDMonAn(int ID_MonAn)
+        {
+            List<ChiTietMonAn> list = new List<ChiTietMonAn>();
+            foreach (ChiTietMonAn mon in dALQLNH.ChiTietMonAns)
+            {
+                if (ID_MonAn == mon.ID_MonAn)
+                {
+                    list.Add(mon);
+                }
+            }
+            return list;
+        }
     }
 }

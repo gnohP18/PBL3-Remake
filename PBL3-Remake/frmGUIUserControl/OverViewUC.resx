@@ -117,4 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="OverViewCalendar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnFloor2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5gUHAzEnOO/pdgAAAZFJREFU
+        WEftl71KA0EURhcrxT8sRB9AOwV/sBECeQFRBB9BCBaCna1WltrapBDsrCzFTizE2iqQJ1A7K3U9d+bu
+        siazs1mYDSh74EAy8907NyHZbKKaf0scx9O4g3s57uK8xsND83ssoqPx8NC8a8/w8qTx8NA8GeAW1x2u
+        4KjGw0PzZIC2Lg0XDq4HqHYAGk/iI77l+IVCZQM0bP9CzrUkLDRu2v6GazxzeIKzWhIWGmcHaOry8JBD
+        7dmGeoC+AVibwG3s/RXc1EgxhOfwFF0fMPngJbgGuLFbTrY05ofghc0X0tCSFNYu7ZaTI435Idi2eXNR
+        cV1sxAcc15IU1kZwCVv4iVlKD9DVpVJQt4HvpsNvqh+AmjV8NdVx/I3H9qGh2gHIZ1+5HL6P8q1IONSo
+        H4KlByDbd7huyd4VvuCiLpnFMVxF122T3E4JAw1ArvdtP9CtfAg9m7ifwgHIzGD28PSVeyHYMSV+7jSe
+        Cxm5aH2gfGUHO1zQQvmT0HvJTJQ/F1Ma90JuAZf1ac1fIIp+AIWe0IMs15XqAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnFloor1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5gUHAzEnOO/pdgAAAZFJREFU
+        WEftl71KA0EURhcrxT8sRB9AOwV/sBECeQFRBB9BCBaCna1WltrapBDsrCzFTizE2iqQJ1A7K3U9d+bu
+        siazs1mYDSh74EAy8907NyHZbKKaf0scx9O4g3s57uK8xsND83ssoqPx8NC8a8/w8qTx8NA8GeAW1x2u
+        4KjGw0PzZIC2Lg0XDq4HqHYAGk/iI77l+IVCZQM0bP9CzrUkLDRu2v6GazxzeIKzWhIWGmcHaOry8JBD
+        7dmGeoC+AVibwG3s/RXc1EgxhOfwFF0fMPngJbgGuLFbTrY05ofghc0X0tCSFNYu7ZaTI435Idi2eXNR
+        cV1sxAcc15IU1kZwCVv4iVlKD9DVpVJQt4HvpsNvqh+AmjV8NdVx/I3H9qGh2gHIZ1+5HL6P8q1IONSo
+        H4KlByDbd7huyd4VvuCiLpnFMVxF122T3E4JAw1ArvdtP9CtfAg9m7ifwgHIzGD28PSVeyHYMSV+7jSe
+        Cxm5aH2gfGUHO1zQQvmT0HvJTJQ/F1Ma90JuAZf1ac1fIIp+AIWe0IMs15XqAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="RealTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

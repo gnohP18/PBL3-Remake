@@ -40,7 +40,7 @@ namespace GUI.frmGUIUserControl
         }
         private void SetDataForMainChart(DateTime daystart, DateTime dayend)
         {
-            int SumOrder = 0, SumTotal = 0, SumComsuming = 0, SumProfit = 0;
+            int SumTotal = 0, SumComsuming = 0, SumProfit = 0;
             MainChart.Series[0].Points.Clear();
             List<Statistic_view> listbydate = new List<Statistic_view>();
             foreach (Statistic_view i in ListDoanhThu)

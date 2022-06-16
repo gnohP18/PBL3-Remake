@@ -69,7 +69,7 @@
             this.cbbStatusDish.FormattingEnabled = true;
             this.cbbStatusDish.Location = new System.Drawing.Point(544, 45);
             this.cbbStatusDish.Name = "cbbStatusDish";
-            this.cbbStatusDish.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatusDish.Size = new System.Drawing.Size(167, 21);
             this.cbbStatusDish.TabIndex = 26;
             this.cbbStatusDish.SelectedIndexChanged += new System.EventHandler(this.cbbStatusDish_SelectedIndexChanged);
             // 
@@ -81,7 +81,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(413, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 26);
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Status dish";
             // 
@@ -93,7 +93,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(720, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 26);
+            this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Status table";
             // 
@@ -103,9 +103,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(116, 37);
+            this.label1.Location = new System.Drawing.Point(116, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 26);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Employee";
             // 
@@ -170,7 +170,7 @@
             this.cbbStatusTable.FormattingEnabled = true;
             this.cbbStatusTable.Location = new System.Drawing.Point(860, 45);
             this.cbbStatusTable.Name = "cbbStatusTable";
-            this.cbbStatusTable.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatusTable.Size = new System.Drawing.Size(167, 21);
             this.cbbStatusTable.TabIndex = 18;
             this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
             // 

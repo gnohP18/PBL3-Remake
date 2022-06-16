@@ -1,7 +1,6 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -31,24 +30,6 @@ namespace GUI.frmGUIUserControl
         {
             InitializeComponent();
         }
-        private Button CurrentButton;
-        private void SetUIForButton(object button)
-        {
-
-            var btn = (Button)button;
-            //highlight button
-            btn.BackColor = Color.FromArgb(66, 134, 244);
-            btn.ForeColor = Color.White;
-            //btn.RightToLeft = RightToLeft.Yes;
-            //Unhighlight button
-            if (CurrentButton != null && CurrentButton != btn)
-            {
-                //btn.RightToLeft = RightToLeft.No;
-                CurrentButton.BackColor = Color.FromArgb(17, 21, 37);
-                CurrentButton.ForeColor = Color.White;
-            }
-            CurrentButton = btn;
-        }
         private DayChart_view AddDV_v(int value, DateTime date, string text)
         {
             DayChart_view dc = new DayChart_view();
@@ -59,31 +40,39 @@ namespace GUI.frmGUIUserControl
         }
         private void SetDataForMainChart(DateTime daystart, DateTime dayend)
         {
+            int SumOrder = 0, SumTotal = 0, SumComsuming = 0, SumProfit = 0;
             MainChart.Series[0].Points.Clear();
             List<Statistic_view> listbydate = new List<Statistic_view>();
             foreach (Statistic_view i in ListDoanhThu)
             {
                 if (i.Date > daystart && i.Date < dayend)
                 {
+                    SumTotal += i.Total;
+                    SumProfit += i.Profit;
+                    SumComsuming += i.Consuming;
                     listbydate.Add(i);
                 }
             }
-            MainChart.ChartAreas[0].AxisY.Maximum = 3000000;
-            MainChart.ChartAreas[0].AxisY.Minimum = -3000000;
+            lblOrderDateTimeCustom.Text = listbydate.Count.ToString();
+            lblConsumingDateTimeCustom.Text = SumComsuming.ToString();
+            lblProfitDateTimeCustom.Text = SumProfit.ToString();
+            lblTotalDateTimeCustom.Text = SumTotal.ToString();
+            MainChart.ChartAreas[0].AxisY.Maximum = 5000000;
+            MainChart.ChartAreas[0].AxisY.Minimum = -5000000;
             MainChart.DataSource = listbydate;
             MainChart.Series["Total"].YValueMembers = "Total";
-            MainChart.Series["Total"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            MainChart.Series["Total"].YValueType = ChartValueType.Int32;
             MainChart.Series["Total"].XValueMember = "Date";
             MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Weeks;
-            MainChart.Series["Total"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+            MainChart.Series["Total"].XValueType = ChartValueType.Date;
             MainChart.Series["Profit"].YValueMembers = "Profit";
-            MainChart.Series["Profit"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            MainChart.Series["Profit"].YValueType = ChartValueType.Int32;
             MainChart.Series["Profit"].XValueMember = "Date";
-            MainChart.Series["Profit"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+            MainChart.Series["Profit"].XValueType = ChartValueType.Date;
             MainChart.Series["Consuming"].YValueMembers = "Consuming";
-            MainChart.Series["Consuming"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            MainChart.Series["Consuming"].YValueType = ChartValueType.Int32;
             MainChart.Series["Consuming"].XValueMember = "Date";
-            MainChart.Series["Consuming"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Date;
+            MainChart.Series["Consuming"].XValueType = ChartValueType.Date;
             MainChart.DataBind();
         }
         private void SetDataForDateCustom(DateTime date)
@@ -98,10 +87,14 @@ namespace GUI.frmGUIUserControl
                     DoanhThuTheoNgay.Add(i);
                 }
             }
-            Console.WriteLine(NumberOfOrdered + " " + Profit + " " + Total);
+            lblOrdered.Text = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(date).ToString();
+            lblProfit.Text = Profit.ToString();
+            lblTotal.Text = Total.ToString();
+            lblConsuming.Text = Consuming.ToString();
+            //Console.WriteLine(date.ToShortDateString() + " " + NumberOfOrdered + " " + Profit + " " + Consuming + " " + Total);
             DayChart.DataSource = DC_v;
             DayChart.Series[0].YValueMembers = "Value";
-            DayChart.Series[0].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            DayChart.Series[0].YValueType = ChartValueType.Int32;
             DayChart.Series[0].XValueMember = "Text";
             DayChart.DataBind();
         }
@@ -118,12 +111,6 @@ namespace GUI.frmGUIUserControl
             DC_v.Add(AddDV_v(Total, dt, "Total"));
             DC_v.Add(AddDV_v(Profit, dt, "Profit"));
             SetDataForDateCustom(dt);
-            lblOrdered.Text = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(CalendarStatistic.SelectionStart).ToString();
-            lblProfit.Text = DoanhThuNgay.Profit.ToString();
-            lblTotal.Text = DoanhThuNgay.Total.ToString();
-            lblConsuming.Text = DoanhThuNgay.Consuming.ToString();
-            SetDataForDateCustom(dt);
-            SetDataForMainChart(dt, dt.AddDays(-30));
         }
 
         private void CalendarStatistic_DateChanged(object sender, DateRangeEventArgs e)
@@ -146,7 +133,7 @@ namespace GUI.frmGUIUserControl
         }
         private void btnDetailInvoice_Click(object sender, EventArgs e)
         {
-            DetailInvoice frm = new DetailInvoice(DayStart,DayEnd);
+            DetailInvoice frm = new DetailInvoice(DayStart, DayEnd);
             frm.Show();
         }
 

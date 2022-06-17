@@ -39,7 +39,7 @@ namespace GUI.frmGUIUserControl
             dgvDanhSachHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDanhSachHoaDon.DataSource = BLL.HoaDonBLL.Instance.GetAllInvoice_viewByDay(CurrentDay);
             dgvTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentFloor);
+            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(0, CurrentFloor);
         }
         private void SetDataForDateCustom()
         {
@@ -72,6 +72,9 @@ namespace GUI.frmGUIUserControl
             int BusyTableFloor2 = BLL.BLLNVNH.Instance.GetAllTableByFloor(2).Count - BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(0, 2).Count;
             lblNumberofTableFl1.Text = BusyTableFloor1.ToString();
             lblNumberofTableFl2.Text = BusyTableFloor2.ToString();
+            cbbStatusTable.Items.Add("All");
+            cbbStatusTable.Items.Add("Busy");
+            cbbStatusTable.Items.Add("Emty");
         }
         private void OverViewUC_Load(object sender, EventArgs e)
         {
@@ -99,13 +102,13 @@ namespace GUI.frmGUIUserControl
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             CurrentFloor = 1;
-            SetupDataGridView();
+            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             CurrentFloor = 2;
-            SetupDataGridView();
+            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
         }
 
         private void dgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -116,5 +119,13 @@ namespace GUI.frmGUIUserControl
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
+
+        private void cbbStatusTable_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            CurrentStatus = cbbStatusTable.SelectedIndex;
+            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+        }
     }
 }
+
+

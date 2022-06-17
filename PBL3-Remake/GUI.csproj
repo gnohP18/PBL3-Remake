@@ -193,6 +193,12 @@
     <Compile Include="frmGUIUserControl\Invoice.Designer.cs">
       <DependentUpon>Invoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\MainMenuUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\MainMenuUC.Designer.cs">
+      <DependentUpon>MainMenuUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\MatetialInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\MainMenuUC.resx">
+      <DependentUpon>MainMenuUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\MatetialInformation.resx">
       <DependentUpon>MatetialInformation.cs</DependentUpon>
@@ -565,6 +574,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cafe-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant -128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

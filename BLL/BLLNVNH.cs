@@ -33,17 +33,44 @@ namespace BLL
             }
             return bans;
         }
-        public List<Table_view> GetAllTable_viewByFloor(int Floor)
+        public List<Table_view> GetAllTable_viewByFloor(int NumberOfDishes, int Floor)
         {
             List<Table_view> list = new List<Table_view>();
-            foreach (Ban ban in GetAllTableByFloor(Floor))
+            if (NumberOfDishes == 0)
+                foreach (Ban ban in GetAllTableByFloor(Floor))
+                {
+                    Table_view tb = new Table_view();
+                    tb.ID_Table = ban.ID_Ban;
+                    tb.Floor = "Floor " + Floor.ToString();
+                    tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
+                    tb.NameTable = ban.TenBan;
+                    list.Add(tb);
+                }
+            else if (NumberOfDishes == 1)
             {
-                Table_view tb = new Table_view();
-                tb.ID_Table = ban.ID_Ban;
-                tb.Floor = "Floor " + Floor.ToString();
-                tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
-                tb.NameTable = ban.TenBan;
-                list.Add(tb);
+                foreach (Ban ban in GetAllTableByFloor(Floor))
+                {
+                    Table_view tb = new Table_view();
+                    tb.ID_Table = ban.ID_Ban;
+                    tb.Floor = "Floor " + Floor.ToString();
+                    tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
+                    tb.NameTable = ban.TenBan;
+                    if (tb.NumberOfDish > 0)
+                        list.Add(tb);
+                }
+            }
+            else if (NumberOfDishes == 2)
+            {
+                foreach (Ban ban in GetAllTableByFloor(Floor))
+                {
+                    Table_view tb = new Table_view();
+                    tb.ID_Table = ban.ID_Ban;
+                    tb.Floor = "Floor " + Floor.ToString();
+                    tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
+                    tb.NameTable = ban.TenBan;
+                    if (tb.NumberOfDish == 0)
+                        list.Add(tb);
+                }
             }
             return list;
         }

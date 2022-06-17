@@ -1,4 +1,7 @@
-﻿namespace BLL
+﻿using Entity;
+using System.Linq;
+
+namespace BLL
 {
     public class NhanVienBLL : BLL
     {
@@ -15,6 +18,10 @@
         private NhanVienBLL()
         {
 
+        }
+        public User GetEmployeeByID_Employee(int ID_Employee)
+        {
+            return dALQLNH.Users.Where(p => p.ID_User == ID_Employee).FirstOrDefault();
         }
     }
 }

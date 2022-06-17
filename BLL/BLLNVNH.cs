@@ -21,8 +21,58 @@ namespace BLL
 
         }
 
-        
+
         #region Bàn,thao tác về tìm bàn ghép, bàn chính, thông tin về món ăn trên bàn
+        public List<Ban> GetAllTableByFloor(int fl)
+        {
+            List<Ban> bans = new List<Ban>();
+            foreach (Ban i in dALQLNH.Bans)
+            {
+                if (i.Tang == fl)
+                    bans.Add(i);
+            }
+            return bans;
+        }
+        public List<Table_view> GetAllTable_viewByFloor(int Floor)
+        {
+            List<Table_view> list = new List<Table_view>();
+            foreach (Ban ban in GetAllTableByFloor(Floor))
+            {
+                Table_view tb = new Table_view();
+                tb.ID_Table = ban.ID_Ban;
+                tb.Floor = "Floor " + Floor.ToString();
+                tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
+                tb.NameTable = ban.TenBan;
+                list.Add(tb);
+            }
+            return list;
+        }
+        public List<ChiTietBan> GetAllDetailTableByID_Table(int ID_Table)
+        {
+            List<ChiTietBan> list = new List<ChiTietBan>();
+            foreach (ChiTietBan i in dALQLNH.ChiTietBans)
+            {
+                if (ID_Table == i.ID_Ban)
+                {
+                    list.Add(i);
+                }
+            }
+            return list;
+        }
+        public List<MonAn_View> GetAllDish_viewByIDDetailTable(int ID_Detail_Table)
+        {
+            List<MonAn_View> list = new List<MonAn_View>();
+            foreach (ChiTietBan i in GetAllDetailTableByID_Table(ID_Detail_Table))
+            {
+                MonAn_View mnv = new MonAn_View();
+                mnv.ID_MonAn = i.ID_MonAn;
+                mnv.TenMonAn = i.MonAn.TenMonAn;
+                mnv.SoLuong = i.SoLuong;
+                mnv.ThanhTien = i.SoLuong * i.MonAn.ThanhTien;
+                list.Add(mnv);
+            }
+            return list;
+        }
         public List<Ban> GetMainBanByTinhTrangBanVaTang(int st, int fl)
         {
             if (st == 0)

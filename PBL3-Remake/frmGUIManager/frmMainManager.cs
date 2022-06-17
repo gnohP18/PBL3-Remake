@@ -1,7 +1,7 @@
-﻿using System;
+﻿using GUI.frmGUIUserControl;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using GUI.frmGUIUserControl;
 namespace GUI.frmGUIManager
 {
     public partial class frmMainManager : Form
@@ -83,6 +83,11 @@ namespace GUI.frmGUIManager
         {
             SetUIForButton(sender);
             ManagerFoodUC.Instance.BringToFront();
+        }
+
+        private void btnInforRestaurant_Click(object sender, EventArgs e)
+        {
+            SetUIForButton(sender);
         }
     }
 }

@@ -34,12 +34,20 @@ namespace GUI.frmGUISeller
                 PhoneNumber.Add(i.SDT);
             }
         }
+        private bool CheckVoucherOrPhoneNumber(List<string> list, string check)
+        {
+            bool dk = false;
+            foreach (string s in list)
+                if (s == check) dk = true;
+            return dk;
+        }
         private void frmPay_Load(object sender, EventArgs e)
         {
             listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
             dgvPayment.DataSource = listMonAnViewDaDat;
             LoadDataGridView(listMonAnViewDaDat);
             AddVoucher();
+            AddPhoneNumber();
             AutoCompleteStringCollection autoVoucher = new AutoCompleteStringCollection();
             AutoCompleteStringCollection autoPhoneNumberGuest = new AutoCompleteStringCollection();
             txtVoucher.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -93,7 +101,7 @@ namespace GUI.frmGUISeller
 
         private void txtVoucher_TextChanged(object sender, EventArgs e)
         {
-            if (txtVoucher.Text == "Voucher123" || txtVoucher.Text == "km123" || txtVoucher.Text == "QLNH111")
+            if (CheckVoucherOrPhoneNumber(Voucher, txtVoucher.Text))
             {
                 pBVoucher.Image = PBL3_Remake.Properties.Resources.checkedGreen;
             }
@@ -150,7 +158,7 @@ namespace GUI.frmGUISeller
                 GuestInformation frm = new GuestInformation(-1);
                 frm.Show();
             }
-            else
+            else if (CheckVoucherOrPhoneNumber(PhoneNumber, txtGuestPhone.Text))
             {
                 GuestInformation frm = new GuestInformation(BLL.KhachHangBLL.Instance.GetGuestByGuestPhoneNumber(txtGuestPhone.Text).ID_KhachHang);
                 frm.Show();
@@ -164,7 +172,7 @@ namespace GUI.frmGUISeller
             {
                 pBCheckGuest.Image = PBL3_Remake.Properties.Resources.uncheckedRed;
             }
-            else
+            else if (CheckVoucherOrPhoneNumber(PhoneNumber, txtGuestPhone.Text))
             {
                 pBCheckGuest.Image = PBL3_Remake.Properties.Resources.checkedGreen;
             }

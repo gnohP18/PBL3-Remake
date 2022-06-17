@@ -31,6 +31,8 @@ namespace GUI.frmGUIManager
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnUC = new System.Windows.Forms.Panel();
+            this.btnInforRestaurant = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -38,7 +40,6 @@ namespace GUI.frmGUIManager
             this.btnWareHouse = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnOverView = new System.Windows.Forms.Button();
-            this.pnUC = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,11 +62,36 @@ namespace GUI.frmGUIManager
             this.panel2.Controls.Add(this.btnWareHouse);
             this.panel2.Controls.Add(this.btnEmployee);
             this.panel2.Controls.Add(this.btnOverView);
+            this.panel2.Controls.Add(this.btnInforRestaurant);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 700);
             this.panel2.TabIndex = 1;
+            // 
+            // pnUC
+            // 
+            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnUC.Location = new System.Drawing.Point(200, 100);
+            this.pnUC.Name = "pnUC";
+            this.pnUC.Size = new System.Drawing.Size(1200, 700);
+            this.pnUC.TabIndex = 2;
+            // 
+            // btnInforRestaurant
+            // 
+            this.btnInforRestaurant.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInforRestaurant.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnInforRestaurant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInforRestaurant.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInforRestaurant.ForeColor = System.Drawing.Color.White;
+            this.btnInforRestaurant.Image = global::PBL3_Remake.Properties.Resources.cafe_48;
+            this.btnInforRestaurant.Location = new System.Drawing.Point(0, 0);
+            this.btnInforRestaurant.Name = "btnInforRestaurant";
+            this.btnInforRestaurant.Size = new System.Drawing.Size(200, 80);
+            this.btnInforRestaurant.TabIndex = 7;
+            this.btnInforRestaurant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInforRestaurant.UseVisualStyleBackColor = true;
+            this.btnInforRestaurant.Click += new System.EventHandler(this.btnInforRestaurant_Click);
             // 
             // btnExit
             // 
@@ -94,7 +120,7 @@ namespace GUI.frmGUIManager
             this.btnHelp.ForeColor = System.Drawing.Color.White;
             this.btnHelp.Image = global::PBL3_Remake.Properties.Resources.askquestion_48;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 400);
+            this.btnHelp.Location = new System.Drawing.Point(0, 480);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(200, 80);
             this.btnHelp.TabIndex = 5;
@@ -112,7 +138,7 @@ namespace GUI.frmGUIManager
             this.btnFood.ForeColor = System.Drawing.Color.White;
             this.btnFood.Image = global::PBL3_Remake.Properties.Resources.diet_48;
             this.btnFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFood.Location = new System.Drawing.Point(0, 320);
+            this.btnFood.Location = new System.Drawing.Point(0, 400);
             this.btnFood.Name = "btnFood";
             this.btnFood.Size = new System.Drawing.Size(200, 80);
             this.btnFood.TabIndex = 4;
@@ -130,7 +156,7 @@ namespace GUI.frmGUIManager
             this.btnStatictis.ForeColor = System.Drawing.Color.White;
             this.btnStatictis.Image = global::PBL3_Remake.Properties.Resources.chart_48;
             this.btnStatictis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatictis.Location = new System.Drawing.Point(0, 240);
+            this.btnStatictis.Location = new System.Drawing.Point(0, 320);
             this.btnStatictis.Name = "btnStatictis";
             this.btnStatictis.Size = new System.Drawing.Size(200, 80);
             this.btnStatictis.TabIndex = 3;
@@ -148,7 +174,7 @@ namespace GUI.frmGUIManager
             this.btnWareHouse.ForeColor = System.Drawing.Color.White;
             this.btnWareHouse.Image = global::PBL3_Remake.Properties.Resources.warehouse_48;
             this.btnWareHouse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWareHouse.Location = new System.Drawing.Point(0, 160);
+            this.btnWareHouse.Location = new System.Drawing.Point(0, 240);
             this.btnWareHouse.Name = "btnWareHouse";
             this.btnWareHouse.Size = new System.Drawing.Size(200, 80);
             this.btnWareHouse.TabIndex = 2;
@@ -166,7 +192,7 @@ namespace GUI.frmGUIManager
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.Image = global::PBL3_Remake.Properties.Resources.Employee_48;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 80);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 160);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(200, 80);
             this.btnEmployee.TabIndex = 1;
@@ -184,7 +210,7 @@ namespace GUI.frmGUIManager
             this.btnOverView.ForeColor = System.Drawing.Color.White;
             this.btnOverView.Image = global::PBL3_Remake.Properties.Resources.Overview_48;
             this.btnOverView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOverView.Location = new System.Drawing.Point(0, 0);
+            this.btnOverView.Location = new System.Drawing.Point(0, 80);
             this.btnOverView.Name = "btnOverView";
             this.btnOverView.Size = new System.Drawing.Size(200, 80);
             this.btnOverView.TabIndex = 0;
@@ -192,14 +218,6 @@ namespace GUI.frmGUIManager
             this.btnOverView.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOverView.UseVisualStyleBackColor = true;
             this.btnOverView.Click += new System.EventHandler(this.btnOverView_Click);
-            // 
-            // pnUC
-            // 
-            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnUC.Location = new System.Drawing.Point(200, 100);
-            this.pnUC.Name = "pnUC";
-            this.pnUC.Size = new System.Drawing.Size(1200, 700);
-            this.pnUC.TabIndex = 2;
             // 
             // frmMainManager
             // 
@@ -231,5 +249,6 @@ namespace GUI.frmGUIManager
         private System.Windows.Forms.Button btnWareHouse;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnUC;
+        private System.Windows.Forms.Button btnInforRestaurant;
     }
 }

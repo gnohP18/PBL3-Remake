@@ -21,5 +21,10 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void btnClose_Click_1(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

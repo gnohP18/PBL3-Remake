@@ -17,6 +17,8 @@ namespace GUI.frmGUIUserControl
             InitializeComponent();
         }
         #region Local Variable
+        private int CurrentFloor { get; set; }
+        private int CurrentStatus { get; set; }
         private int NumberOfOrdered { get; set; }
         private int Total { get; set; }
         private int Profit { get; set; }
@@ -36,6 +38,8 @@ namespace GUI.frmGUIUserControl
         {
             dgvDanhSachHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDanhSachHoaDon.DataSource = BLL.HoaDonBLL.Instance.GetAllInvoice_viewByDay(CurrentDay);
+            dgvTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentFloor);
         }
         private void SetDataForDateCustom()
         {
@@ -60,14 +64,22 @@ namespace GUI.frmGUIUserControl
             Overviewchart.Series[0].YValueMembers = "Value";
             Overviewchart.Series[0].XValueMember = "Text";
         }
-
+        private void GUI()
+        {
+            SetupDataGridView();
+            SetDataForDateCustom();
+            int BusyTableFloor1 = BLL.BLLNVNH.Instance.GetAllTableByFloor(1).Count - BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(0, 1).Count;
+            int BusyTableFloor2 = BLL.BLLNVNH.Instance.GetAllTableByFloor(2).Count - BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(0, 2).Count;
+            lblNumberofTableFl1.Text = BusyTableFloor1.ToString();
+            lblNumberofTableFl2.Text = BusyTableFloor2.ToString();
+        }
         private void OverViewUC_Load(object sender, EventArgs e)
         {
             OverViewCalendar.MaxSelectionCount = 1;
             CurrentDay = OverViewCalendar.SelectionStart.Date;
+            CurrentFloor = 1;
             RealTime.Start();
-            SetupDataGridView();
-            SetDataForDateCustom();
+            GUI();
         }
 
         private void RealTime_Tick(object sender, EventArgs e)
@@ -80,6 +92,27 @@ namespace GUI.frmGUIUserControl
             int index = dgvDanhSachHoaDon.CurrentCell.RowIndex;
             int ID_HoaDon = Convert.ToInt32(dgvDanhSachHoaDon.Rows[index].Cells[0].Value.ToString());
             Invoice frm = new Invoice(ID_HoaDon);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+
+        private void btnFloor1_Click(object sender, EventArgs e)
+        {
+            CurrentFloor = 1;
+            SetupDataGridView();
+        }
+
+        private void btnFloor2_Click(object sender, EventArgs e)
+        {
+            CurrentFloor = 2;
+            SetupDataGridView();
+        }
+
+        private void dgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvTable.CurrentCell.RowIndex;
+            int ID_Tabel_view = Convert.ToInt32(dgvTable.Rows[index].Cells[0].Value.ToString());
+            DetailTable frm = new DetailTable(ID_Tabel_view);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

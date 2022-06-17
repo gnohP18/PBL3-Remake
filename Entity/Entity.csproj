@@ -84,6 +84,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Statistic_view.cs" />
+    <Compile Include="Table_view.cs" />
     <Compile Include="ThongTinNhaHang.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Voucher.cs" />

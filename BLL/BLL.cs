@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+
 namespace BLL
 {
     public class BLL
@@ -36,27 +38,77 @@ namespace BLL
 
         #endregion
         #region CheckLogin, GetAllUser
-        public int checkLoginCustomer(string username, string password)
+        public int GetBuoiLamNow()
         {
-            User user = (User)dALQLNH.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
-            if (user == null) return -1;
-            if (user.ID_ChucVu == 1) return 1;
-            if (user.ID_ChucVu == 2) return -2;
-            if (user.ID_ChucVu == 3)
+            DateTime dtNow = DateTime.Now;
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+            if (dtNow.TimeOfDay >= TTNH.ThoiGianBatDauLamViecSang && dtNow.TimeOfDay <= TTNH.ThoiGianKetThucLamViecSang)
             {
-                int dateNowHashCode = DateTime.Now.GetHashCode();
-                List<ChiTietCaLam> listChiTietCaLam = dALQLNH.ChiTietCaLams.Where(s => s.ID_User == user.ID_User).ToList();
-                List<string> strCaLam = new List<string>();
-                foreach (ChiTietCaLam i in listChiTietCaLam)
+                return 0;
+            }
+            if (dtNow.TimeOfDay >= TTNH.ThoiGianBatDauLamViecChieu && dtNow.TimeOfDay <= TTNH.ThoiGianKetThucLamViecChieu)
+            {
+                return 1;
+            }
+            return -1;
+        }
+        public void ChamCong(int ID_User)
+        {
+            User user = dALQLNH.Users.Find(ID_User);
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+            DateTime dtNow = DateTime.Now;
+            int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
+            int SangChieu = GetBuoiLamNow();
+            BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s=>s.ID_User == ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
+            if (bangChamCong.LichSuLamViec[indexDay*2 + SangChieu] != '0') return;
+            TimeSpan TimeLate;
+            if (SangChieu == 0)
+            {
+                TimeLate = dtNow.TimeOfDay - TTNH.ThoiGianBatDauLamViecSang;
+            }
+            else
+            {
+                TimeLate = dtNow.TimeOfDay - TTNH.ThoiGianBatDauLamViecChieu;
+            }
+            int MinuteLate = TimeLate.Hours * 60 + TimeLate.Minutes;
+            StringBuilder temp = new StringBuilder(bangChamCong.LichSuLamViec);
+            if (MinuteLate < 15) temp[indexDay * 2 + SangChieu] = '1';
+            else temp[indexDay * 2 + SangChieu] = (char)(MinuteLate / 15 + 64);
+            bangChamCong.LichSuLamViec = temp.ToString();
+            dALQLNH.SaveChanges();
+        }
+        public int checkLogin(string username, string password, bool isCustomerLogin)
+        {
+            User user = (User)(dALQLNH.Users.Where(p => p.Username == username && p.Password == password).FirstOrDefault());
+            if (user == null) return -1;
+            if (user.ID_ChucVu == 1 ) return 1;
+            if(isCustomerLogin == true && user.ID_ChucVu != 2 && GetBuoiLamNow() != -1)
+            {
+                int SangChieu = GetBuoiLamNow();
+                foreach(ChiTietCaLam i in user.ChiTietCaLams)
                 {
-                    strCaLam.Add(dALQLNH.CaLams.Find(i.ID_CaLam).LichCaLam);
+                    if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode()*2 + SangChieu] == '1') return 1;
                 }
-                foreach (string i in strCaLam)
+                return 0;
+            }
+            if(isCustomerLogin == false && user.ID_ChucVu == 2)
+            {
+                return 1;
+            }
+            return 0;
+        }
+        public List<User> GetAllNhanVienCoLichLamViecByTime(DateTime dt)
+        {
+            List<User> data = new List<User> ();
+            int SangChieu = GetBuoiLamNow();
+            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
+            {
+                if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
                 {
-
+                    data.Add(i.User);
                 }
             }
-            return 1;
+            return data;
         }
         public List<User> GetAllUser()
         {

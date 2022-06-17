@@ -27,20 +27,41 @@ namespace GUI.frmGUILogin
         {
             if (radEmployee.Checked)
             {
-                frmMainSeller frm = new frmMainSeller();
-                frm.Show();
+                int CheckLogin = BLLNVNH.Instance.checkLogin(txtUsername.Text, txtPassword.Text, true);
+                NoticeBox box;
+                if (CheckLogin == -1)
+                {
+                    box = new NoticeBox("Don't find this account , please check again!!");
+                    box.ShowDialog();
+                    return;
+                }
+                if(CheckLogin == 0)
+                {
+                    box = new NoticeBox("This time is not your work shift!!");
+                    box.ShowDialog();
+                    return;
+                }
+                if (CheckLogin == 1)
+                {
+                    frmMainSeller frm = new frmMainSeller();
+                    frm.Show();
+                }
             }
             else if (radManager.Checked)
             {
-                /*if (BLLQLNH.Instance.checkLoginManager(txtUsername.Text, txtPassword.Text) == false)
+                int CheckLogin = BLLNVNH.Instance.checkLogin(txtUsername.Text, txtPassword.Text, false);
+                NoticeBox box;
+                if (CheckLogin != 1)
                 {
-                    NoticeBox nt = new NoticeBox("Login information is not correct!!");
-                    nt.Show();
+                    box = new NoticeBox("Don't find this account , please check again!!");
+                    box.ShowDialog();
                     return;
-                }*/
-                frmMainManager frm = new frmMainManager();
-                frm.Show();
-
+                }
+                if (CheckLogin == 1)
+                {
+                    frmMainManager frm = new frmMainManager();
+                    frm.Show();
+                }
             }
             else
             {

@@ -19,10 +19,11 @@ namespace Entity
         public string DiaChi { get; set; }
         public int SoTienQuyDoiThanhDiemTichLuy { get; set; }
         public int DiemTichLuyQuyDoiThanhTien { get; set; }
-        public DateTime ThoiGianBatDauLamViecSang { get; set; }
-        public DateTime ThoiGianKetThucLamViecSang { get; set; }
-        public DateTime ThoiGianBatDauLamViecChieu { get; set; }
-        public DateTime ThoiGianKetThucLamViecChieu { get; set; }
+        public TimeSpan ThoiGianBatDauLamViecSang { get; set; }
+        public TimeSpan ThoiGianKetThucLamViecSang { get; set; }
+        public TimeSpan ThoiGianBatDauLamViecChieu { get; set; }
+        public TimeSpan ThoiGianKetThucLamViecChieu { get; set; }
+        public DateTime NgayBatDauChamCongHienTai { get; set; }
         public int NgayPhatLuong { get; set; }
     }
 }

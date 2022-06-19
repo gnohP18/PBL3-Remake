@@ -13,8 +13,10 @@ namespace GUI.frmGUISeller
         private int statustb = -1;
         public delegate void Mydel(int st, int fl);
         public Mydel d { get; set; }
+        private User _user { get; set; }
         public frmMainSeller()
         {
+            //_user = user;
             InitializeComponent();
             SetCbb();
             d = new Mydel(LoadBanByTinhTrangBanVaTang);
@@ -26,7 +28,15 @@ namespace GUI.frmGUISeller
             this.Height = 700;
             this.StartPosition = FormStartPosition.CenterScreen;
             pnTable.AutoScroll = true;
-            LoadBanByTinhTrangBanVaTang(-1,1);
+            LoadBanByTinhTrangBanVaTang(-1, 1);
+            //if (_user.ChucVu.ID_ChucVu == 3)
+            //{
+            //    btnRollUp.Visible = true;
+            //}
+            //else
+            //{
+            //    btnRollUp.Visible = false;
+            //}
         }
 
         void SetCbb()
@@ -39,7 +49,7 @@ namespace GUI.frmGUISeller
             cbbStatusTable.SelectedIndex = 0;
         }
 
-        
+
         void SetTable(Panel pn, TableForOrdering tb)
         {
             tb.Width = 250;
@@ -171,6 +181,11 @@ namespace GUI.frmGUISeller
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
             }
+        }
+
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

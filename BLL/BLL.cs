@@ -1,9 +1,9 @@
-﻿using Entity;
+﻿using DTO;
+using Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DTO;
 namespace BLL
 {
     public class BLL
@@ -59,8 +59,8 @@ namespace BLL
             DateTime dtNow = DateTime.Now;
             int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
             int SangChieu = GetBuoiLamNow();
-            BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s=>s.ID_User == ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
-            if (bangChamCong.LichSuLamViec[indexDay*2 + SangChieu] != '0') return;
+            BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
+            if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') return;
             TimeSpan TimeLate;
             if (SangChieu == 0)
             {
@@ -81,31 +81,31 @@ namespace BLL
         {
             User user = (User)(dALQLNH.Users.Where(p => p.Username == username && p.Password == password).FirstOrDefault());
             if (user == null) return -1;
-            if (user.ID_ChucVu == 1 ) return 1;
-            if(isCustomerLogin == true && user.ID_ChucVu != 2 && GetBuoiLamNow() != -1)
+            if (user.ID_ChucVu == 1) return 1;
+            if (isCustomerLogin == true && user.ID_ChucVu != 2 && GetBuoiLamNow() != -1)
             {
                 int SangChieu = GetBuoiLamNow();
-                foreach(ChiTietCaLam i in user.ChiTietCaLams)
+                foreach (ChiTietCaLam i in user.ChiTietCaLams)
                 {
-                    if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode()*2 + SangChieu] == '1') return 1;
+                    if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1') return 1;
                 }
                 return 0;
             }
-            if(isCustomerLogin == false && user.ID_ChucVu == 2)
+            if (isCustomerLogin == false && user.ID_ChucVu == 2)
             {
                 return 1;
             }
             return 0;
         }
-        public Dictionary<User,bool> GetThongTinDiemDanhNhanVienNow()
+        public List<User> GetAllNhanVienCoLichLamViecByTime()
         {
-            Dictionary<User, bool> data = new Dictionary<User, bool>();
+            List<User> data = new List<User>();
             int SangChieu = GetBuoiLamNow();
             foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
             {
                 if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
                 {
-                    data.Add(i.User,false);
+                    data.Add(i.User);
                 }
             }
             return data;
@@ -113,6 +113,10 @@ namespace BLL
         public List<User> GetAllUser()
         {
             return dALQLNH.Users.ToList();
+        }
+        public User GetUserByUsername(string Username)
+        {
+            return dALQLNH.Users.Where(p => p.Username == Username).FirstOrDefault();
         }
         #endregion
         #region Thống kê
@@ -154,7 +158,7 @@ namespace BLL
                 {
                     TenMonAn = i.MonAn.TenMonAn,
                     SoLuong = i.SoLuong,
-                    ThanhTien = i.MonAn.ThanhTien*i.SoLuong
+                    ThanhTien = i.MonAn.ThanhTien * i.SoLuong
                 });
             }
             return list;

@@ -1,6 +1,5 @@
-﻿using Entity;
+﻿using DTO;
 using System.Linq;
-using DTO;
 namespace BLL
 {
     public class NhanVienBLL : BLL
@@ -23,5 +22,6 @@ namespace BLL
         {
             return dALQLNH.Users.Where(p => p.ID_User == ID_Employee).FirstOrDefault();
         }
+
     }
 }

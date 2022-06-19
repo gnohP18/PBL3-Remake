@@ -35,7 +35,7 @@ namespace GUI.frmGUILogin
                     box.ShowDialog();
                     return;
                 }
-                if(CheckLogin == 0)
+                if (CheckLogin == 0)
                 {
                     box = new NoticeBox("This time is not your work shift!!");
                     box.ShowDialog();
@@ -44,6 +44,7 @@ namespace GUI.frmGUILogin
                 if (CheckLogin == 1)
                 {
                     frmMainSeller frm = new frmMainSeller();
+                    //BLL.BLLNVNH.Instance.GetUserByUsername(txtUsername.Text)
                     frm.Show();
                 }
             }

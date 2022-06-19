@@ -97,7 +97,7 @@ namespace BLL
             }
             return 0;
         }
-        public Dictionary<User,bool> GetThongTinDiemDanhNhanVienByTime(DateTime dt)
+        public Dictionary<User,bool> GetThongTinDiemDanhNhanVienNow()
         {
             Dictionary<User, bool> data = new Dictionary<User, bool>();
             int SangChieu = GetBuoiLamNow();

@@ -118,6 +118,10 @@ namespace BLL
         {
             return dALQLNH.Users.Where(p => p.Username == Username).FirstOrDefault();
         }
+        public User GetUserByID_User(int ID_User)
+        {
+            return dALQLNH.Users.Where(p => p.ID_User == ID_User).FirstOrDefault();
+        }
         #endregion
         #region Thống kê
 

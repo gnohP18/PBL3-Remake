@@ -1,10 +1,12 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI.frmGUIUserControl
 {
     public partial class EmployeesUC : UserControl
     {
+        #region Instance
         private static EmployeesUC _Instance;
         public static EmployeesUC Instance
         {
@@ -14,7 +16,11 @@ namespace GUI.frmGUIUserControl
         {
             InitializeComponent();
         }
+        #endregion
+        #region Local Variable
         private Button CurrentButton;
+        #endregion
+        #region Function 
         private void SetUIForButton(object button)
         {
 
@@ -32,25 +38,40 @@ namespace GUI.frmGUIUserControl
             }
             CurrentButton = btn;
         }
-
-        private void btnAddEmployee_Click(object sender, System.EventArgs e)
+        private void LoadDataGridView()
         {
-            SetUIForButton(sender);
+            dgvManageEmployee.DataSource = BLL.NhanVienBLL.Instance.GetAllEmployee_view();
+            dgvManageEmployee.Columns[1].Width = 150;
         }
-
-        private void button1_Click(object sender, System.EventArgs e)
-        {
-            SetUIForButton(sender);
-        }
-
+        #endregion
+        #region Event UC
         private void EmployeesUC_Load(object sender, System.EventArgs e)
         {
-            dgvInforEmployee.DataSource = BLL.BLLQLNH.Instance.GetAllUser();
-            for (int i = 9; i <= 13; i++)
-            {
-                dgvInforEmployee.Columns[i].Visible = false;
-            }
-            dgvInforEmployee.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            LoadDataGridView();
         }
+
+        private void btnDeleteEmployee_Click(object sender, System.EventArgs e)
+        {
+            SetUIForButton(sender);
+        }
+
+        private void btnAddEmployee_Click_1(object sender, System.EventArgs e)
+        {
+            SetUIForButton(sender);
+            DetailEmployee frm = new DetailEmployee(-1);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.d = new DetailEmployee.Mydel(LoadDataGridView);
+            frm.Show();
+        }
+
+        private void dgvManageEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvManageEmployee.CurrentCell.RowIndex;
+            int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
+            DetailEmployee frm = new DetailEmployee(ID_User);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+        #endregion
     }
 }

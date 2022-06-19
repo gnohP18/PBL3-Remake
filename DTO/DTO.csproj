@@ -63,6 +63,7 @@
     <Compile Include="ChiTietNhapMonAn_View.cs" />
     <Compile Include="ChucVu.cs" />
     <Compile Include="DayChart_view.cs" />
+    <Compile Include="Employee_view.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="HoaDon_view.cs" />
     <Compile Include="KhachHang.cs" />

@@ -232,7 +232,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label4.Location = new System.Drawing.Point(430, 354);
+            this.label4.Location = new System.Drawing.Point(406, 353);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 23);
             this.label4.TabIndex = 9;

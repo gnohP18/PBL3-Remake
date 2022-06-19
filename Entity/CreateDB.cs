@@ -800,6 +800,7 @@ namespace Entity
                     ThoiGianKetThucLamViecSang = new TimeSpan(12,0,0),
                     ThoiGianBatDauLamViecChieu =  new TimeSpan(18,30,0),
                     ThoiGianKetThucLamViecChieu =  new TimeSpan(23,59,59),
+                    NgayBatDauChamCongHienTai = new DateTime(2022,6,5),
                     SoTienQuyDoiThanhDiemTichLuy = 1000,
                     DiemTichLuyQuyDoiThanhTien = 10,
                     NgayPhatLuong = 5 }

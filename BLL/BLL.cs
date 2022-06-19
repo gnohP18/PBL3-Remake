@@ -97,15 +97,15 @@ namespace BLL
             }
             return 0;
         }
-        public List<User> GetAllNhanVienCoLichLamViecByTime(DateTime dt)
+        public Dictionary<User,bool> GetThongTinDiemDanhNhanVienByTime(DateTime dt)
         {
-            List<User> data = new List<User> ();
+            Dictionary<User, bool> data = new Dictionary<User, bool>();
             int SangChieu = GetBuoiLamNow();
             foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
             {
                 if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
                 {
-                    data.Add(i.User);
+                    data.Add(i.User,false);
                 }
             }
             return data;

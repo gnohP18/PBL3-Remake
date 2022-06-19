@@ -1,7 +1,7 @@
 ﻿using PBL3_Remake.Properties;
 using System.Drawing;
 using System.Windows.Forms;
-using Entity;
+using DTO;
 using System;
 
 namespace GUI.frmGUISeller

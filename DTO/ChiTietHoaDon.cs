@@ -5,18 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace Entity
+namespace DTO
 {
-    [Table("ChiTietCaLam")]
-    public class ChiTietCaLam
+    [Table("ChiTietHoaDon")]
+    public class ChiTietHoaDon
     {
         [Key, Column(Order = 0)]
         [Required]
-        public int ID_CaLam { get; set; }
+        public int ID_HoaDon { get; set; }
         [Key, Column(Order = 1)]
         [Required]
-        public int ID_User { get; set; }
-        public virtual CaLam CaLam { get; set; }
-        public virtual User User { get; set; }
+        public int ID_MonAn { get; set; }
+        public int SoLuong { get; set; }
+        public virtual HoaDon HoaDon { get; set; }
+        public virtual MonAn MonAn { get; set; }
     }
 }

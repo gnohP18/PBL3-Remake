@@ -1,5 +1,5 @@
 ﻿using BLL;
-using Entity;
+using DTO;
 using PBL3_Remake.frmGUISeller;
 using System;
 using System.Collections.Generic;

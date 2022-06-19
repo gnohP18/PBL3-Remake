@@ -1,5 +1,5 @@
 ﻿using BLL;
-using Entity;
+using DTO;
 using System;
 using System.Windows.Forms;
 namespace GUI.frmGUIUserControl

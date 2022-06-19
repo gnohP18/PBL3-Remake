@@ -65,6 +65,10 @@
     <Compile Include="VoucherBLL.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{26374b00-b4d8-4b0f-9d2a-f21db65cf956}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{142d7d31-acc3-4bbe-8904-f86694323e3e}</Project>
       <Name>Entity</Name>

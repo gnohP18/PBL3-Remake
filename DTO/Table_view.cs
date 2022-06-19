@@ -1,4 +1,4 @@
-﻿namespace Entity
+﻿namespace DTO
 {
     public class Table_view
     {

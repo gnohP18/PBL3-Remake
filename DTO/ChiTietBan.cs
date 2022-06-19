@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace DTO
 {
     [Table("ChiTietBan")]
     public class ChiTietBan

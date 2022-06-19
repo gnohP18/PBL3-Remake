@@ -1,6 +1,6 @@
 ﻿using Entity;
 using System.Collections.Generic;
-
+using DTO;
 namespace BLL
 {
     public class NhaCungCapBLL : BLL

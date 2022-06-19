@@ -1,4 +1,4 @@
-﻿namespace Entity
+﻿namespace DTO
 {
     public class ChiTietNhapMonAn_View
     {

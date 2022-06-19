@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entity;
+using DTO;
 using BLL;
 using GUI.frmGUISeller;
 using System.Threading;

@@ -1,5 +1,5 @@
 using System.Data.Entity;
-
+using DTO;
 namespace Entity
 {
     public class DALQLNH : DbContext

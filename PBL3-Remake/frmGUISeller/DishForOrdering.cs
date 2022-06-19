@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using Entity;
+using DTO;
 using GUI;
 
 namespace PBL3_Remake.frmGUISeller

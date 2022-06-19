@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entity
+namespace DTO
 {
     public class Statistic_view
     {

@@ -1,4 +1,4 @@
-﻿using Entity;
+﻿using DTO;
 using System.Windows.Forms;
 
 namespace GUI.frmGUIUserControl

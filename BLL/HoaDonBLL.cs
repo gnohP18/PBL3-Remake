@@ -1,7 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
-
+using DTO;
 namespace BLL
 {
     public class HoaDonBLL : BLL

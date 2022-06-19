@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{1FD67A94-5CDA-4BD6-AFAE-9C4F90C18732}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{26374B00-B4D8-4B0F-9D2A-F21DB65CF956}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1FD67A94-5CDA-4BD6-AFAE-9C4F90C18732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FD67A94-5CDA-4BD6-AFAE-9C4F90C18732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FD67A94-5CDA-4BD6-AFAE-9C4F90C18732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26374B00-B4D8-4B0F-9D2A-F21DB65CF956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26374B00-B4D8-4B0F-9D2A-F21DB65CF956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26374B00-B4D8-4B0F-9D2A-F21DB65CF956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26374B00-B4D8-4B0F-9D2A-F21DB65CF956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

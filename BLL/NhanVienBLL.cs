@@ -1,6 +1,6 @@
 ﻿using Entity;
 using System.Linq;
-
+using DTO;
 namespace BLL
 {
     public class NhanVienBLL : BLL

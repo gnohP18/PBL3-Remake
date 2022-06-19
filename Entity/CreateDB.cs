@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.IO;
+using DTO;
 namespace Entity
 {
     public class CreateDB : DropCreateDatabaseAlways<DALQLNH>

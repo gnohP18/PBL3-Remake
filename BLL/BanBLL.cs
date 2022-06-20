@@ -1,29 +1,28 @@
-﻿using Entity;
+﻿using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DTO;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace BLL
 {
-    public class BLLNVNH : BLL
+    public class BanBLL : BLL
     {
-        private static BLLNVNH _Instance;
-        public static BLLNVNH Instance
+        private static BanBLL _Instance;
+        public static BanBLL Instance
         {
             get
             {
-                if (_Instance == null) _Instance = new BLLNVNH();
+                if (_Instance == null) _Instance = new BanBLL();
                 return _Instance;
             }
             private set { }
         }
-        private BLLNVNH()
+        private BanBLL()
         {
 
         }
-
-
-        #region Bàn,thao tác về tìm bàn ghép, bàn chính, thông tin về món ăn trên bàn
         public List<Ban> GetAllTableByFloor(int fl)
         {
             List<Ban> bans = new List<Ban>();
@@ -84,20 +83,6 @@ namespace BLL
                 {
                     list.Add(i);
                 }
-            }
-            return list;
-        }
-        public List<MonAn_View> GetAllDish_viewByIDDetailTable(int ID_Detail_Table)
-        {
-            List<MonAn_View> list = new List<MonAn_View>();
-            foreach (ChiTietBan i in GetAllDetailTableByID_Table(ID_Detail_Table))
-            {
-                MonAn_View mnv = new MonAn_View();
-                mnv.ID_MonAn = i.ID_MonAn;
-                mnv.TenMonAn = i.MonAn.TenMonAn;
-                mnv.SoLuong = i.SoLuong;
-                mnv.ThanhTien = i.SoLuong * i.MonAn.ThanhTien;
-                list.Add(mnv);
             }
             return list;
         }
@@ -238,8 +223,6 @@ namespace BLL
         {
             return dALQLNH.ChiTietBans.Where(i => i.ID_ChiTietBan == idctb).FirstOrDefault();
         }
-        #endregion
-        #region Khác
         public void Order(List<MonAn_View> lt, int Idtable)
         {
 
@@ -248,7 +231,7 @@ namespace BLL
                 //Add detail table
                 dALQLNH.ChiTietBans.Add(new ChiTietBan
                 {
-                    ID_ChiTietBan = GetNewIDChiTietBan(),
+                    ID_ChiTietBan = BanBLL.Instance.GetNewIDChiTietBan(),
                     ID_Ban = Idtable,
                     ID_MonAn = item.ID_MonAn,
                     SoLuong = item.SoLuong,
@@ -277,31 +260,5 @@ namespace BLL
                 dALQLNH.SaveChanges();
             }
         }
-        #endregion
-
-
-        //public int checkLoginCustomer(string username, string password)
-        //{
-        //    User user = (User)dALQLNH.Users.Where(u => u.Username == username && u.Password == password).FirstOrDefault();
-        //    if (user == null) return -1;
-        //    if (user.ID_ChucVu == 1) return 1;
-        //    if (user.ID_ChucVu == 2) return -2;
-        //    if (user.ID_ChucVu == 3)
-        //    {
-        //        int dateNowHashCode = DateTime.Now.GetHashCode();
-        //        List<ChiTietCaLam> listChiTietCaLam = dALQLNH.ChiTietCaLams.Where(s => s.ID_User == user.ID_User).ToList();
-        //        List<string> strCaLam = new List<string>();
-        //        foreach (ChiTietCaLam i in listChiTietCaLam)
-        //        {
-        //            strCaLam.Add(dALQLNH.CaLams.Find(i.ID_CaLam).LichCaLam);
-        //        }
-        //        foreach (string i in strCaLam)
-        //        {
-
-        //        }
-        //    }
-        //    return 1;
-        //}
     }
 }
-

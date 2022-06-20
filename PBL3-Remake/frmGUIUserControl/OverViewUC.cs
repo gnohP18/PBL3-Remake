@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
+using BLL;
 namespace GUI.frmGUIUserControl
 {
     public partial class OverViewUC : UserControl
@@ -39,7 +39,7 @@ namespace GUI.frmGUIUserControl
             dgvDanhSachHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDanhSachHoaDon.DataSource = BLL.HoaDonBLL.Instance.GetAllInvoice_viewByDay(CurrentDay);
             dgvTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(0, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(0, CurrentFloor);
         }
         private void SetDataForDateCustom()
         {
@@ -68,8 +68,8 @@ namespace GUI.frmGUIUserControl
         {
             SetupDataGridView();
             SetDataForDateCustom();
-            int BusyTableFloor1 = BLL.BLLNVNH.Instance.GetAllTableByFloor(1).Count - BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(0, 1).Count;
-            int BusyTableFloor2 = BLL.BLLNVNH.Instance.GetAllTableByFloor(2).Count - BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(0, 2).Count;
+            int BusyTableFloor1 = BanBLL.Instance.GetAllTableByFloor(1).Count - BanBLL.Instance.GetMainBanByTinhTrangBanVaTang(0, 1).Count;
+            int BusyTableFloor2 = BanBLL.Instance.GetAllTableByFloor(2).Count - BanBLL.Instance.GetMainBanByTinhTrangBanVaTang(0, 2).Count;
             lblNumberofTableFl1.Text = BusyTableFloor1.ToString();
             lblNumberofTableFl2.Text = BusyTableFloor2.ToString();
             cbbStatusTable.Items.Add("All");
@@ -102,13 +102,13 @@ namespace GUI.frmGUIUserControl
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             CurrentFloor = 1;
-            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             CurrentFloor = 2;
-            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
         }
 
         private void dgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -123,7 +123,7 @@ namespace GUI.frmGUIUserControl
         private void cbbStatusTable_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             CurrentStatus = cbbStatusTable.SelectedIndex;
-            dgvTable.DataSource = BLL.BLLNVNH.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
         }
     }
 }

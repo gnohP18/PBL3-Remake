@@ -1,6 +1,6 @@
 ﻿using DTO;
 using System.Windows.Forms;
-
+using BLL;
 namespace GUI.frmGUIUserControl
 {
     public partial class DetailTable : Form
@@ -17,12 +17,12 @@ namespace GUI.frmGUIUserControl
         {
             int sum = 0;
             dgvTable_view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTable_view.DataSource = BLL.BLLNVNH.Instance.GetAllDish_viewByIDDetailTable(ID_Table_view);
-            foreach (MonAn_View i in BLL.BLLNVNH.Instance.GetAllDish_viewByIDDetailTable(ID_Table_view))
+            dgvTable_view.DataSource = MonAnBLL.Instance.GetAllDish_viewByIDDetailTable(ID_Table_view);
+            foreach (MonAn_View i in MonAnBLL.Instance.GetAllDish_viewByIDDetailTable(ID_Table_view))
             {
                 sum += i.ThanhTien;
             }
-            lblNumberOfDishes.Text = BLL.BLLNVNH.Instance.GetAllDish_viewByIDDetailTable(ID_Table_view).Count.ToString();
+            lblNumberOfDishes.Text = MonAnBLL.Instance.GetAllDish_viewByIDDetailTable(ID_Table_view).Count.ToString();
             lblTotal.Text = sum.ToString();
         }
 

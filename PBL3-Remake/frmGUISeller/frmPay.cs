@@ -135,9 +135,9 @@ namespace GUI.frmGUISeller
         private void SetCollabTableTextBox()
         {
             txtAllCollabTable.Enabled = false;
-            Ban bn = BLLNVNH.Instance.GetBanByID_Ban(IDTable);
-            txtcollab = BLLNVNH.Instance.GetAllCollabTable(bn, bn.TinhTrangBan, txtcollab);
-            txtMain = BLLNVNH.Instance.GetAllMainTable(bn, txtMain);
+            Ban bn = BanBLL.Instance.GetBanByID_Ban(IDTable);
+            txtcollab = BanBLL.Instance.GetAllCollabTable(bn, bn.TinhTrangBan, txtcollab);
+            txtMain = BanBLL.Instance.GetAllMainTable(bn, txtMain);
             txtAllCollabTable.Text = txtMain + " " + txtcollab;
         }
 

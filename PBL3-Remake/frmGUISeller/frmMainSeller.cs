@@ -59,7 +59,7 @@ namespace GUI.frmGUISeller
         void LoadBanByTinhTrangBanVaTang(int st, int fl)
         {
             RemoveTable();
-            List<Ban> listBan = BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(st, fl);
+            List<Ban> listBan = BanBLL.Instance.GetMainBanByTinhTrangBanVaTang(st, fl);
             int soban = listBan.Count;
             TableForOrdering[] tb = new TableForOrdering[soban];
             int dem1 = 0;
@@ -143,7 +143,7 @@ namespace GUI.frmGUISeller
             dgvStatusDish.Dock = DockStyle.Fill;
             Image NotReadyImage = PBL3_Remake.Properties.Resources.uncheckedRed;
             Image ReadyImage = PBL3_Remake.Properties.Resources.checkedGreen;
-            dgvStatusDish.DataSource = BLLNVNH.Instance.GetAllDetailTableByStatus(st);
+            dgvStatusDish.DataSource = BanBLL.Instance.GetAllDetailTableByStatus(st);
             DataGridViewImageColumn imgcol = new DataGridViewImageColumn();
             dgvStatusDish.Columns.Add(imgcol);
             foreach (DataGridViewRow i in dgvStatusDish.Rows)

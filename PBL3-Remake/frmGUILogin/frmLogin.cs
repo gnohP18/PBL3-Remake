@@ -27,7 +27,7 @@ namespace GUI.frmGUILogin
         {
             if (radEmployee.Checked)
             {
-                int CheckLogin = BLLNVNH.Instance.checkLogin(txtUsername.Text, txtPassword.Text, true);
+                int CheckLogin = NhanVienBLL.Instance.checkLogin(txtUsername.Text, txtPassword.Text, true);
                 NoticeBox box;
                 if (CheckLogin == -1)
                 {
@@ -50,7 +50,7 @@ namespace GUI.frmGUILogin
             }
             else if (radManager.Checked)
             {
-                int CheckLogin = BLLNVNH.Instance.checkLogin(txtUsername.Text, txtPassword.Text, false);
+                int CheckLogin = NhanVienBLL.Instance.checkLogin(txtUsername.Text, txtPassword.Text, false);
                 NoticeBox box;
                 if (CheckLogin != 1)
                 {

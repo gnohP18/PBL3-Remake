@@ -162,5 +162,19 @@ namespace BLL
             }
             return list;
         }
+        public List<MonAn_View> GetAllDish_viewByIDDetailTable(int ID_Detail_Table)
+        {
+            List<MonAn_View> list = new List<MonAn_View>();
+            foreach (ChiTietBan i in BanBLL.Instance.GetAllDetailTableByID_Table(ID_Detail_Table))
+            {
+                MonAn_View mnv = new MonAn_View();
+                mnv.ID_MonAn = i.ID_MonAn;
+                mnv.TenMonAn = i.MonAn.TenMonAn;
+                mnv.SoLuong = i.SoLuong;
+                mnv.ThanhTien = i.SoLuong * i.MonAn.ThanhTien;
+                list.Add(mnv);
+            }
+            return list;
+        }
     }
 }

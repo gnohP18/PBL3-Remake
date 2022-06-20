@@ -1,7 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Windows.Forms;
-
+using BLL;
 namespace PBL3_Remake.frmGUISeller
 {
     public partial class frmCollaborTable : Form
@@ -12,10 +12,10 @@ namespace PBL3_Remake.frmGUISeller
         {
             InitializeComponent();
             if(tb.TinhTrangBan != 0)
-                cboBan.Items.AddRange(BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(-1,tb.Tang).ToArray());
+                cboBan.Items.AddRange(BanBLL.Instance.GetMainBanByTinhTrangBanVaTang(-1,tb.Tang).ToArray());
             else
             {
-                cboBan.Items.AddRange(BLL.BLLNVNH.Instance.GetMainBanByTinhTrangBanVaTang(0, tb.Tang).ToArray());
+                cboBan.Items.AddRange(BanBLL.Instance.GetMainBanByTinhTrangBanVaTang(0, tb.Tang).ToArray());
             }
             ban = tb;
         }
@@ -26,8 +26,8 @@ namespace PBL3_Remake.frmGUISeller
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if(cboBan.SelectedIndex != -1) 
-                BLL.BLLNVNH.Instance.SetCollabTable(ban, ((Ban)cboBan.SelectedItem).ID_Ban);
+            if(cboBan.SelectedIndex != -1)
+                BanBLL.Instance.SetCollabTable(ban, ((Ban)cboBan.SelectedItem).ID_Ban);
             this.Close();
         }
     }

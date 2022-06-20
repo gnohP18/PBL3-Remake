@@ -51,8 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL.cs" />
-    <Compile Include="BLLNVNH.cs" />
-    <Compile Include="BLLQLNH.cs" />
+    <Compile Include="BanBLL.cs" />
     <Compile Include="HoaDonBLL.cs" />
     <Compile Include="KhachHangBLL.cs" />
     <Compile Include="KhoBLL.cs" />

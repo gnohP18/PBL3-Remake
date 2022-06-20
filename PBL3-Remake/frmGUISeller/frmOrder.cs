@@ -32,8 +32,8 @@ namespace GUI.frmGUISeller
 
         private void frmOrder_Load(object sender, EventArgs e)
         {
-            lblIDTable.Text = BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable).ID_Ban.ToString();
-            lblNameTable.Text = BLL.BLLNVNH.Instance.GetBanByID_Ban(IDTable).TenBan;
+            lblIDTable.Text = BanBLL.Instance.GetBanByID_Ban(IDTable).ID_Ban.ToString();
+            lblNameTable.Text = BanBLL.Instance.GetBanByID_Ban(IDTable).TenBan;
             pnDish.AutoScroll = true;
             ShowDish("");
 
@@ -174,9 +174,9 @@ namespace GUI.frmGUISeller
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            BLLNVNH.Instance.Order(listMonAnViewDangDat, IDTable);
-            if (listMonAnViewDangDat.Count > 0 && BLLNVNH.Instance.GetBanByID_Ban(IDTable).TinhTrangBan == 0)
-                BLLNVNH.Instance.ChangeStatusTable(IDTable, IDTable);
+            BanBLL.Instance.Order(listMonAnViewDangDat, IDTable);
+            if (listMonAnViewDangDat.Count > 0 && BanBLL.Instance.GetBanByID_Ban(IDTable).TinhTrangBan == 0)
+                BanBLL.Instance.ChangeStatusTable(IDTable, IDTable);
             this.Close();
         }
 
@@ -199,7 +199,7 @@ namespace GUI.frmGUISeller
 
         private void btnCollabTable_Click(object sender, EventArgs e)
         {
-            frmCollaborTable frm = new frmCollaborTable(BLLNVNH.Instance.GetBanByID_Ban(IDTable));
+            frmCollaborTable frm = new frmCollaborTable(BanBLL.Instance.GetBanByID_Ban(IDTable));
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

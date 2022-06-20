@@ -16,8 +16,8 @@ namespace GUI.frmGUISeller
         private void frmStatusDish_Load(object sender, System.EventArgs e)
         {
             this.AutoScaleMode = AutoScaleMode.None;
-            Console.WriteLine("ID " + ID + " " + BLLNVNH.Instance.GetDetailTableByID(ID).MonAn);
-            lblNameDish.Text = BLLNVNH.Instance.GetDetailTableByID(ID).MonAn.TenMonAn + "-" + BLLNVNH.Instance.GetDetailTableByID(ID).SoLuong;
+            Console.WriteLine("ID " + ID + " " + BanBLL.Instance.GetDetailTableByID(ID).MonAn);
+            lblNameDish.Text = BanBLL.Instance.GetDetailTableByID(ID).MonAn.TenMonAn + "-" + BanBLL.Instance.GetDetailTableByID(ID).SoLuong;
         }
 
         private void btnClose_Click(object sender, System.EventArgs e)

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using DTO;
+using System;
+
 namespace BLL
 {
     public class NguyenLieuBLL : BLL
@@ -39,6 +41,27 @@ namespace BLL
                 data.Add(new ChiTietNguyenLieu_View { ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu, ID_NguyenLieu = i.ID_NguyenLieu, TenNguyenLieu = i.NguyenLieu.TenNguyenLieu, LuongTonKho = i.LuongTonKho, LuongNhapVao = i.LuongNhapVao, NgayNhap = i.NgayNhap, NgayHetHan = i.NgayHetHan, ID_NhaCungCap = i.ID_NhaCungCap });
             }
             return data;
+        }
+        public Dictionary<int, float> GetThongTinLuongNguyenLieuHienTai()
+        {
+            Dictionary<int, float> listThongTinLuongNguyenLieu = new Dictionary<int, float>();
+            foreach (NguyenLieu i in dALQLNH.NguyenLieus)
+            {
+                listThongTinLuongNguyenLieu.Add(i.ID_NguyenLieu, 0);
+            }
+            var parentGroupKho = dALQLNH.Khoes.GroupBy(s => s.ID_NguyenLieu);
+            foreach (var childGroupKho in parentGroupKho)
+            {
+                int ID_NguyenLieu = childGroupKho.Key;
+                foreach (Kho i in childGroupKho)
+                {
+                    if (i.NgayHetHan > DateTime.Now)
+                    {
+                        listThongTinLuongNguyenLieu[ID_NguyenLieu] += i.LuongTonKho;
+                    }
+                }
+            }
+            return listThongTinLuongNguyenLieu;
         }
         public List<ChiTietNguyenLieu_View> GetAllNguyenLieuTrongKho()
         {

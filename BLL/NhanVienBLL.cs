@@ -95,5 +95,26 @@ namespace BLL
             dALQLNH.BangChamCongs.Add(newbcc);
             dALQLNH.SaveChanges();
         }
+        public List<User> GetAllUser()
+        {
+            return dALQLNH.Users.ToList();
+        }
+        public User GetUserByID_User(int ID_User)
+        {
+            return dALQLNH.Users.Where(p => p.ID_User == ID_User).FirstOrDefault();
+        }
+        public List<User> GetAllNhanVienCoLichLamViecByTime()
+        {
+            List<User> data = new List<User>();
+            int SangChieu = GetBuoiLamNow();
+            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
+            {
+                if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
+                {
+                    data.Add(i.User);
+                }
+            }
+            return data;
+        }
     }
 }

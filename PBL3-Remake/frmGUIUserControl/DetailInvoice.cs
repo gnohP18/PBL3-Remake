@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using BLL;
 namespace GUI.frmGUIUserControl
 {
     public partial class DetailInvoice : Form
@@ -15,7 +15,7 @@ namespace GUI.frmGUIUserControl
         }
         private void SetupDatagridView()
         {
-            dgvDanhSachHoaDon.DataSource = BLL.BLLNVNH.Instance.GetHoaDonByFromDatetoDate(dateStart,dateEnd);
+            dgvDanhSachHoaDon.DataSource = HoaDonBLL.Instance.GetHoaDonByFromDatetoDate(dateStart,dateEnd);
         }
 
         private void dgvDanhSachHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)

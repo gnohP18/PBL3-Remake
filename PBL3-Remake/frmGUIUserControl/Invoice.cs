@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using BLL;
 namespace GUI.frmGUIUserControl
 {
     public partial class Invoice : Form
@@ -14,7 +14,7 @@ namespace GUI.frmGUIUserControl
         }
         private void SetupDataGridView()
         {
-            dgvHoaDon.DataSource = BLL.BLLNVNH.Instance.GetChiTietHoaDonByIDHoaDon(ID_HoaDon);
+            dgvHoaDon.DataSource = HoaDonBLL.Instance.GetChiTietHoaDonByIDHoaDon(ID_HoaDon);
         }
         private void btnOK_Click(object sender, EventArgs e)
         {

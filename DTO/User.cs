@@ -29,6 +29,8 @@ namespace DTO
         public string CMND_CCCD { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string SDT { get; set; }
+        public bool DaXoa { get; set; }
         public System.DateTime NgayBatDauLam { get; set; }
 
         public virtual ChucVu ChucVu { get; set; }

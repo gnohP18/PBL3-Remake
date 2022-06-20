@@ -20,7 +20,7 @@ namespace GUI.frmGUISeller
         {
             IDTable = id;
             InitializeComponent();
-            MonAnBLL.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai());
+            MonAnBLL.Instance.UpdateTrangThaiMonAn(NguyenLieuBLL.Instance.GetThongTinLuongNguyenLieuHienTai());
             listMonAnViewDangDat = new List<MonAn_View>();
             listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
             LoadDataGridView();
@@ -87,13 +87,13 @@ namespace GUI.frmGUISeller
             {
                 listMonAnViewDangDat.Add(new MonAn_View { ID_MonAn = MonAn.ID_MonAn, TenMonAn = MonAn.TenMonAn, SoLuong = 1, ThanhTien = MonAn.ThanhTien });
             }
-            MonAnBLL.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
+            MonAnBLL.Instance.UpdateTrangThaiMonAn(NguyenLieuBLL.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
             LoadDataGridView();
         }
         private void ShowDish(string txt)
         {
             RemoveDish();
-            MonAnBLL.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
+            MonAnBLL.Instance.UpdateTrangThaiMonAn(NguyenLieuBLL.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
             List<MonAn> listMonAn = MonAnBLL.Instance.GetMonAn(IDLoaiMonAn, txt, 1);
             int somon = listMonAn.Count;
             DishForOrdering[] dsh = new DishForOrdering[somon];
@@ -192,7 +192,7 @@ namespace GUI.frmGUISeller
                 {
                     listMonAnViewDangDat.RemoveAt(e.RowIndex - listMonAnViewDaDat.Count);
                 }
-                MonAnBLL.Instance.UpdateTrangThaiMonAn(BLLNVNH.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
+                MonAnBLL.Instance.UpdateTrangThaiMonAn(NguyenLieuBLL.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
                 LoadDataGridView();
             }
         }

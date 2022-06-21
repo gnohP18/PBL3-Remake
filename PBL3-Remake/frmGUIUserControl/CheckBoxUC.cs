@@ -71,6 +71,7 @@ namespace GUI.frmGUIUserControl
                 {
                     picCheck.Visible = true;
                     picUnchecked.Visible = false;
+                    Add(user.Key.ID_User);
                 }
             }
             if(isDiemDanh == false)

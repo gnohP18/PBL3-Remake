@@ -193,5 +193,10 @@ namespace GUI.frmGUISeller
             frm.Show();
         }
 
+        private void btnAttend_Click(object sender, EventArgs e)
+        {
+            frmGUISeller.frmAttendance form = new frmAttendance();
+            form.ShowDialog();
+        }
     }
 }

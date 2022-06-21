@@ -106,11 +106,11 @@
     <Compile Include="frmGUISeller\DishForOrdering.Designer.cs">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUISeller\frmAttendence.cs">
+    <Compile Include="frmGUISeller\frmAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGUISeller\frmAttendence.Designer.cs">
-      <DependentUpon>frmAttendence.cs</DependentUpon>
+    <Compile Include="frmGUISeller\frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUISeller\frmCollaborTable.cs">
       <SubType>Form</SubType>
@@ -324,8 +324,8 @@
     <EmbeddedResource Include="frmGUISeller\DishForOrdering.resx">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUISeller\frmAttendence.resx">
-      <DependentUpon>frmAttendence.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUISeller\frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\frmCollaborTable.resx">
       <DependentUpon>frmCollaborTable.cs</DependentUpon>

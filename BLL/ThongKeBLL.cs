@@ -1,9 +1,4 @@
-﻿using Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using DTO;
-namespace BLL
+﻿namespace BLL
 {
     public class ThongKeBLL : BLL
     {

@@ -17,7 +17,7 @@ namespace DTO
         public int ID_User { get; set; }
         public string LichSuLamViec { get; set; }
         public DateTime NgayDauTienTinhCong { get; set; }
-
+        public int TinhLuong { get; set; }
         public virtual User User { get; set; }
     }
 }

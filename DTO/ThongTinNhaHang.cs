@@ -25,5 +25,6 @@ namespace DTO
         public TimeSpan ThoiGianKetThucLamViecChieu { get; set; }
         public DateTime NgayBatDauChamCongHienTai { get; set; }
         public int NgayPhatLuong { get; set; }
+        public int TienPhatTre15p { get; set; }   
     }
 }

@@ -67,7 +67,7 @@
             this.lbMess1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(81)))), ((int)(((byte)(128)))));
             this.lbMess1.Location = new System.Drawing.Point(92, 0);
             this.lbMess1.Name = "lbMess1";
-            this.lbMess1.Size = new System.Drawing.Size(544, 43);
+            this.lbMess1.Size = new System.Drawing.Size(581, 43);
             this.lbMess1.TabIndex = 2;
             this.lbMess1.Text = "abc";
             this.lbMess1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -79,7 +79,7 @@
             this.lbMess2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(81)))), ((int)(((byte)(128)))));
             this.lbMess2.Location = new System.Drawing.Point(92, 43);
             this.lbMess2.Name = "lbMess2";
-            this.lbMess2.Size = new System.Drawing.Size(544, 43);
+            this.lbMess2.Size = new System.Drawing.Size(581, 43);
             this.lbMess2.TabIndex = 2;
             this.lbMess2.Text = "abc";
             this.lbMess2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +94,7 @@
             this.Controls.Add(this.picUnchecked);
             this.Controls.Add(this.picCheck);
             this.Name = "CheckBoxUC";
-            this.Size = new System.Drawing.Size(636, 86);
+            this.Size = new System.Drawing.Size(673, 86);
             this.Click += new System.EventHandler(this.picCheck_Click);
             ((System.ComponentModel.ISupportInitialize)(this.picCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUnchecked)).EndInit();

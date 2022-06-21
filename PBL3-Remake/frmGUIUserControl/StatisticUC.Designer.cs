@@ -61,8 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.dtpDayEnd = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
-            this.dtpDayStart = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -81,6 +79,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblProfitDateTimeCustom = new System.Windows.Forms.Label();
+            this.dtpDayStart = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
+            this.dtpDayEnd = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -136,7 +136,7 @@
             this.label4.Location = new System.Drawing.Point(124, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 19);
+            this.label4.Size = new System.Drawing.Size(54, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Profit";
             // 
@@ -184,7 +184,7 @@
             this.label3.Location = new System.Drawing.Point(89, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 19);
+            this.label3.Size = new System.Drawing.Size(108, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Comsuming";
             // 
@@ -231,7 +231,7 @@
             this.label5.Location = new System.Drawing.Point(59, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
+            this.label5.Size = new System.Drawing.Size(69, 23);
             this.label5.TabIndex = 6;
             this.label5.Text = "Invoice";
             // 
@@ -269,7 +269,7 @@
             this.label2.Location = new System.Drawing.Point(104, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 19);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ordered";
             // 
@@ -435,7 +435,7 @@
             this.label1.Location = new System.Drawing.Point(128, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 19);
+            this.label1.Size = new System.Drawing.Size(51, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Total";
             // 
@@ -461,36 +461,6 @@
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "B";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dtpDayEnd
-            // 
-            this.dtpDayEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dtpDayEnd.BorderSize = 0;
-            this.dtpDayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpDayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDayEnd.Location = new System.Drawing.Point(158, 199);
-            this.dtpDayEnd.MinimumSize = new System.Drawing.Size(0, 35);
-            this.dtpDayEnd.Name = "dtpDayEnd";
-            this.dtpDayEnd.Size = new System.Drawing.Size(132, 35);
-            this.dtpDayEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dtpDayEnd.TabIndex = 30;
-            this.dtpDayEnd.TextColor = System.Drawing.Color.White;
-            this.dtpDayEnd.ValueChanged += new System.EventHandler(this.dtpDayEnd_ValueChanged);
-            // 
-            // dtpDayStart
-            // 
-            this.dtpDayStart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dtpDayStart.BorderSize = 0;
-            this.dtpDayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.dtpDayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDayStart.Location = new System.Drawing.Point(8, 199);
-            this.dtpDayStart.MinimumSize = new System.Drawing.Size(0, 35);
-            this.dtpDayStart.Name = "dtpDayStart";
-            this.dtpDayStart.Size = new System.Drawing.Size(132, 35);
-            this.dtpDayStart.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dtpDayStart.TabIndex = 31;
-            this.dtpDayStart.TextColor = System.Drawing.Color.White;
-            this.dtpDayStart.ValueChanged += new System.EventHandler(this.dtpDayStart_ValueChanged);
             // 
             // label6
             // 
@@ -537,7 +507,7 @@
             this.label8.Location = new System.Drawing.Point(4, 53);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 19);
+            this.label8.Size = new System.Drawing.Size(78, 23);
             this.label8.TabIndex = 4;
             this.label8.Text = "Ordered";
             // 
@@ -586,7 +556,7 @@
             this.label10.Location = new System.Drawing.Point(9, 54);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 19);
+            this.label10.Size = new System.Drawing.Size(51, 23);
             this.label10.TabIndex = 5;
             this.label10.Text = "Total";
             // 
@@ -634,7 +604,7 @@
             this.label12.Location = new System.Drawing.Point(4, 54);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 19);
+            this.label12.Size = new System.Drawing.Size(108, 23);
             this.label12.TabIndex = 5;
             this.label12.Text = "Comsuming";
             // 
@@ -682,7 +652,7 @@
             this.label14.Location = new System.Drawing.Point(6, 54);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 19);
+            this.label14.Size = new System.Drawing.Size(54, 23);
             this.label14.TabIndex = 6;
             this.label14.Text = "Profit";
             // 
@@ -708,6 +678,36 @@
             this.lblProfitDateTimeCustom.TabIndex = 5;
             this.lblProfitDateTimeCustom.Text = "D";
             this.lblProfitDateTimeCustom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dtpDayStart
+            // 
+            this.dtpDayStart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpDayStart.BorderSize = 0;
+            this.dtpDayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpDayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDayStart.Location = new System.Drawing.Point(8, 199);
+            this.dtpDayStart.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dtpDayStart.Name = "dtpDayStart";
+            this.dtpDayStart.Size = new System.Drawing.Size(132, 35);
+            this.dtpDayStart.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtpDayStart.TabIndex = 31;
+            this.dtpDayStart.TextColor = System.Drawing.Color.White;
+            this.dtpDayStart.ValueChanged += new System.EventHandler(this.dtpDayStart_ValueChanged);
+            // 
+            // dtpDayEnd
+            // 
+            this.dtpDayEnd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpDayEnd.BorderSize = 0;
+            this.dtpDayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtpDayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDayEnd.Location = new System.Drawing.Point(158, 199);
+            this.dtpDayEnd.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dtpDayEnd.Name = "dtpDayEnd";
+            this.dtpDayEnd.Size = new System.Drawing.Size(132, 35);
+            this.dtpDayEnd.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dtpDayEnd.TabIndex = 30;
+            this.dtpDayEnd.TextColor = System.Drawing.Color.White;
+            this.dtpDayEnd.ValueChanged += new System.EventHandler(this.dtpDayEnd_ValueChanged);
             // 
             // StatisticUC
             // 

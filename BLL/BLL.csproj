@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="BLL.cs" />
     <Compile Include="BanBLL.cs" />
+    <Compile Include="CaLamBLL.cs" />
     <Compile Include="HoaDonBLL.cs" />
     <Compile Include="KhachHangBLL.cs" />
     <Compile Include="KhoBLL.cs" />

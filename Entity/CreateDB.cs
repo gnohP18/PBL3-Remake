@@ -13,8 +13,8 @@ namespace Entity
                 new ChucVu{ID_ChucVu = 1,TenChucVu ="Admin",MoTa = "Quyen han toi thuong",HeSoLuong = 0},
                 new ChucVu{ID_ChucVu = 2,TenChucVu ="Quan ly", MoTa = "Quan ly doanh thu, nhap xuat nha hang",HeSoLuong = 0},
                 new ChucVu{ID_ChucVu = 3,TenChucVu ="Nhan vien truong ca",MoTa = "Phu trach quan ly , diem danh cac nhan vien trong ca lam",HeSoLuong = 150000},
-                new ChucVu{ID_ChucVu = 4,TenChucVu ="Nhan vien phuc vu",MoTa = "Phu trach ban hang , phuc vu khach hang",HeSoLuong = 100000},
-                new ChucVu{ID_ChucVu = 5,TenChucVu ="Nhan vien bep",MoTa = "Phu trach lam mon an",HeSoLuong = 100000},
+                new ChucVu{ID_ChucVu = 4,TenChucVu ="Nhan vien phuc vu",MoTa = "Phu trach ban hang , phuc vu khach hang",HeSoLuong = 130000},   
+                new ChucVu{ID_ChucVu = 5,TenChucVu ="Nhan vien bep",MoTa = "Phu trach lam mon an",HeSoLuong = 130000},
 
             });
             context.CaLams.AddRange(new CaLam[]
@@ -49,18 +49,20 @@ namespace Entity
             });
             context.BangChamCongs.AddRange(new BangChamCong[]
             {
-                new BangChamCong{ID_BangChamCong = 1,ID_User=1,LichSuLamViec ="010101010101010A01010101010101010101010101010101010A01010101010",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 2,ID_User=2,LichSuLamViec ="101010101010101010101010101010101010101010101010101010101010101",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 3,ID_User=3,LichSuLamViec ="101010101010101010101010101010101010101010101010101010101010101",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 4,ID_User=4,LichSuLamViec ="0001000A0100010001000101000100010001010001000100010100010001000",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 5,ID_User=5,LichSuLamViec ="00100010A000100010001010001000100010B0001000B000101000100010001",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 6,ID_User=6,LichSuLamViec ="001000101000A000100010100010001000A0100010001000101000100010001",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 7,ID_User=7,LichSuLamViec ="01000101000100010001010001000100010A0001000B0001010001000100010",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 8,ID_User=8,LichSuLamViec ="0100010100010001000A0100010001000101000100010001010001000100010",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 9,ID_User=9,LichSuLamViec ="100010100010001000101000100010001010001000100010100010001000101",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 10,ID_User=10,LichSuLamViec ="100010100010001000A01000100010001010001000100010100010001000101",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 11,ID_User=11,LichSuLamViec ="010101010101010101010B0101010B010101010101010101010A01010101010",NgayDauTienTinhCong = new DateTime(2020,05,02) },
-                new BangChamCong{ID_BangChamCong = 12,ID_User=12,LichSuLamViec ="00100010100010001000101000100010001010001000100010A000100010001",NgayDauTienTinhCong = new DateTime(2020,05,02) },
+                new BangChamCong{ID_BangChamCong = 1,ID_User=3,LichSuLamViec ="00B00000D0001000C00000D000C000D00000D0001000C000001000B000A0000",NgayDauTienTinhCong = new DateTime(2020,05,05),TinhLuong =1650000 },
+                new BangChamCong{ID_BangChamCong = 2,ID_User=4,LichSuLamViec ="000B00000D000D000100000B000D000A000001000D000B000001000C000D000",NgayDauTienTinhCong = new DateTime(2020,05,05) ,TinhLuong = 1390000},
+                new BangChamCong{ID_BangChamCong = 3,ID_User=5,LichSuLamViec ="1000B00000D0001000B00000B000A000D00000B000C000A00000B0001000D00",NgayDauTienTinhCong = new DateTime(2020,05,05), TinhLuong = 1550000 },
+                new BangChamCong{ID_BangChamCong = 4,ID_User=6,LichSuLamViec ="0D000C00000C0001000D00000C000C000D00000A000D000C00000A000C00010",NgayDauTienTinhCong = new DateTime(2020,05,05),TinhLuong = 1460000},
+                new BangChamCong{ID_BangChamCong = 5,ID_User=7,LichSuLamViec ="0000000A0000000000000A0000000000000C0000000000000D0000000000000",NgayDauTienTinhCong = new DateTime(2020,05,05),TinhLuong = 430000 },
+                new BangChamCong{ID_BangChamCong = 6,ID_User=8,LichSuLamViec ="00B00000D0001000C00000D000C000D00000D0001000C000001000B000A0000",NgayDauTienTinhCong = new DateTime(2020,05,05) ,TinhLuong =1650000},
+                new BangChamCong{ID_BangChamCong = 7,ID_User=9,LichSuLamViec ="000B00000D000D000100000B000D000A000001000D000B000001000C000D000",NgayDauTienTinhCong = new DateTime(2020,05,05) ,TinhLuong = 1390000},
+                new BangChamCong{ID_BangChamCong = 8,ID_User=10,LichSuLamViec ="1000B00000D0001000B00000B000A000D00000B000C000A00000B0001000D00",NgayDauTienTinhCong = new DateTime(2020,05,05) , TinhLuong = 1550000},
+                new BangChamCong{ID_BangChamCong = 9,ID_User=11,LichSuLamViec ="0D000C00000C0001000D00000C000C000D00000A000D000C00000A000C00010",NgayDauTienTinhCong = new DateTime(2020,05,05),TinhLuong = 1460000 },
+                new BangChamCong{ID_BangChamCong = 10,ID_User=12,LichSuLamViec ="0000000A0000000000000A0000000000000C0000000000000D0000000000000",NgayDauTienTinhCong = new DateTime(2020,05,05) ,TinhLuong = 430000},
+                new BangChamCong{ID_BangChamCong = 11,ID_User=13,LichSuLamViec ="00B00000D0001000C00000D000C000D00000D0001000C000001000B000A0000",NgayDauTienTinhCong = new DateTime(2020,05,05),TinhLuong =1650000 },
+                new BangChamCong{ID_BangChamCong = 12,ID_User=14,LichSuLamViec ="000B00000D000D000100000B000D000A000001000D000B000001000C000D000",NgayDauTienTinhCong = new DateTime(2020,05,05) ,TinhLuong = 1390000 },
+                new BangChamCong{ID_BangChamCong = 13,ID_User=15,LichSuLamViec ="1000B00000D0001000B00000B000A000D00000B000C000A00000B0001000D00",NgayDauTienTinhCong = new DateTime(2020,05,05), TinhLuong = 1550000 },
+
             });
             context.LoaiMonAns.AddRange(new LoaiMonAn[]
             {
@@ -803,7 +805,9 @@ namespace Entity
                     NgayBatDauChamCongHienTai = new DateTime(2022,6,5),
                     SoTienQuyDoiThanhDiemTichLuy = 1000,
                     DiemTichLuyQuyDoiThanhTien = 10,
-                    NgayPhatLuong = 5 }
+                    NgayPhatLuong = 5,
+                    TienPhatTre15p = 10000,
+                }
             });
             context.Vouchers.AddRange(new Voucher[]
             {

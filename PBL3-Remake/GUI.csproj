@@ -43,6 +43,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
@@ -163,12 +166,6 @@
     <Compile Include="frmGUIUserControl\AddNewManufacturer.Designer.cs">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUserControl\DateTimeSheetUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frmGUIUserControl\DateTimeSheetUC.Designer.cs">
-      <DependentUpon>DateTimeSheetUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGUIUserControl\DetailInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,12 +195,6 @@
     </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.Designer.cs">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGUIUserControl\EmployeeTimeSheet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGUIUserControl\EmployeeTimeSheet.Designer.cs">
-      <DependentUpon>EmployeeTimeSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\Invoice.cs">
       <SubType>Form</SubType>
@@ -271,11 +262,11 @@
     <Compile Include="frmGUIUserControl\StatisticUC.Designer.cs">
       <DependentUpon>StatisticUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUserControl\TimeSheetUC.cs">
+    <Compile Include="frmGUIUserControl\CheckBoxUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmGUIUserControl\TimeSheetUC.Designer.cs">
-      <DependentUpon>TimeSheetUC.cs</DependentUpon>
+    <Compile Include="frmGUIUserControl\CheckBoxUC.Designer.cs">
+      <DependentUpon>CheckBoxUC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\WareHouseUC.cs">
       <SubType>UserControl</SubType>
@@ -339,9 +330,6 @@
     <EmbeddedResource Include="frmGUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\DateTimeSheetUC.resx">
-      <DependentUpon>DateTimeSheetUC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailInvoice.resx">
       <DependentUpon>DetailInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,9 +344,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\EmployeeTimeSheet.resx">
-      <DependentUpon>EmployeeTimeSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
@@ -393,8 +378,8 @@
     <EmbeddedResource Include="frmGUIUserControl\StatisticUC.resx">
       <DependentUpon>StatisticUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUserControl\TimeSheetUC.resx">
-      <DependentUpon>TimeSheetUC.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUIUserControl\CheckBoxUC.resx">
+      <DependentUpon>CheckBoxUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\WareHouseUC.resx">
       <DependentUpon>WareHouseUC.cs</DependentUpon>
@@ -616,12 +601,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\networking-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\calendar-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\salary-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -200,7 +200,7 @@ namespace BLL
         }
         public void DeleteEmployee(int ID_User)
         {
-            GetEmployeeByID_Employee(ID_User).DaXoa = true;
+            GetNhanVienByID(ID_User).DaXoa = true;
             dALQLNH.SaveChanges();
         }
         public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User)

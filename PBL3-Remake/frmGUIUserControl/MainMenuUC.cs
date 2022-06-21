@@ -1,20 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3_Remake.frmGUIUserControl
+namespace GUI.frmGUIUserControl
 {
     public partial class MainMenuUC : UserControl
     {
+        private static MainMenuUC _Instance;
+        public static MainMenuUC Instance
+        {
+            get { if (_Instance == null) _Instance = new MainMenuUC(); return _Instance; }
+        }
         public MainMenuUC()
         {
             InitializeComponent();
+            timer_pick.Start();
+        }
+        #region Function
+        #endregion
+        #region Event UC
+        private void timer_pick_Tick(object sender, System.EventArgs e)
+        {
+            lblRealTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+
+        private void linkFb1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/tk.sin.33");
+        }
+        #endregion
+
+        private void linkFb2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/profile.php?id=100010835591776");
+        }
+
+        private void linkFb3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/nxhung02");
         }
     }
 }

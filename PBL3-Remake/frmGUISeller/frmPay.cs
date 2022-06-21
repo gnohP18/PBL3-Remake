@@ -8,18 +8,20 @@ namespace GUI.frmGUISeller
 {
     public partial class frmPay : Form
     {
-        List<MonAn_View> listMonAnViewDaDat;
-        public delegate void Mydel();
-        public Mydel d;
-        public int IDTable { get; set; }
         public frmPay(int idban)
         {
             IDTable = idban;
             InitializeComponent();
-            SetCollabTableTextBox();
         }
+        #region Local Variable
+        List<MonAn_View> listMonAnViewDaDat;
+        public delegate void Mydel();
+        public Mydel d;
+        public int IDTable { get; set; }
         List<string> Voucher = new List<string>();
         List<string> PhoneNumber = new List<string>();
+        #endregion
+        #region Function
         private void AddVoucher()
         {
             foreach (Voucher i in BLL.VoucherBLL.Instance.GetAllVoucher())
@@ -81,8 +83,6 @@ namespace GUI.frmGUISeller
         int guestmoney;
         int sum = 0;
         int tax;
-        string txtcollab = "";
-        string txtMain = "";
         private void Load_Total()
         {
 
@@ -98,7 +98,8 @@ namespace GUI.frmGUISeller
             tax = sum / 100 * 5;
             lblTax.Text = tax.ToString();
         }
-
+        #endregion
+        #region Event Form
         private void txtVoucher_TextChanged(object sender, EventArgs e)
         {
             if (CheckVoucherOrPhoneNumber(Voucher, txtVoucher.Text))
@@ -131,14 +132,6 @@ namespace GUI.frmGUISeller
         {
 
             this.Close();
-        }
-        private void SetCollabTableTextBox()
-        {
-            txtAllCollabTable.Enabled = false;
-            Ban bn = BanBLL.Instance.GetBanByID_Ban(IDTable);
-            txtcollab = BanBLL.Instance.GetAllCollabTable(bn, bn.TinhTrangBan, txtcollab);
-            txtMain = BanBLL.Instance.GetAllMainTable(bn, txtMain);
-            txtAllCollabTable.Text = txtMain + " " + txtcollab;
         }
 
         private void btnYes_Click(object sender, EventArgs e)
@@ -177,5 +170,6 @@ namespace GUI.frmGUISeller
                 pBCheckGuest.Image = PBL3_Remake.Properties.Resources.checkedGreen;
             }
         }
+        #endregion
     }
 }

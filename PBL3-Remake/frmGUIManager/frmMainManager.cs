@@ -9,6 +9,7 @@ namespace GUI.frmGUIManager
         public frmMainManager()
         {
             InitializeComponent();
+            MainMenuUC.Instance.BringToFront();
         }
 
         void SetupUC(UserControl uc)
@@ -36,6 +37,7 @@ namespace GUI.frmGUIManager
         }
         private void frmMainManager_Load(object sender, EventArgs e)
         {
+            SetupUC(MainMenuUC.Instance);
             SetupUC(OverViewUC.Instance);
             SetupUC(EmployeesUC.Instance);
             SetupUC(HelpUC.Instance);
@@ -88,6 +90,7 @@ namespace GUI.frmGUIManager
         private void btnInforRestaurant_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
+            MainMenuUC.Instance.BringToFront();
         }
     }
 }

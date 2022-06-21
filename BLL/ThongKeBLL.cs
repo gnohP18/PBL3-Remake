@@ -1,8 +1,7 @@
-﻿using Entity;
+﻿using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DTO;
 namespace BLL
 {
     public class ThongKeBLL : BLL
@@ -95,8 +94,8 @@ namespace BLL
             {
                 date.Add(i.NgayLap.ToShortDateString());
             }
-            int Songay = date.Distinct().Count();
-            for (int i = 0; i < Songay; i++)
+            date = date.Distinct().ToList();
+            for (int i = 0; i < date.Count(); i++)
             {
                 Statistic_view st = new Statistic_view();
                 st.ID_money = i;

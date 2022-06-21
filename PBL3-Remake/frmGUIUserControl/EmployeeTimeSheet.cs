@@ -9,7 +9,7 @@ namespace GUI.frmGUIUserControl
     {
         public EmployeeTimeSheet(int User_ID)
         {
-            _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(User_ID);
+            _User = BLL.NhanVienBLL.Instance.GetEmployeeByID_Employee(User_ID);
             User_Position = BLL.NhanVienBLL.Instance.GetPositionByID_Position(User_ID);
             if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(User_ID) != null)
             {
@@ -25,7 +25,6 @@ namespace GUI.frmGUIUserControl
         private int NumberDateOfMonth { get; set; }
         private int NumberOfDateLate { get; set; }
         private int NumberOfDateAbsent { get; set; }
-        private string Text { get; set; }
         private string TimeSheet { get; set; }
         private List<DayChart_view> Dc_v { get; set; }
         #endregion

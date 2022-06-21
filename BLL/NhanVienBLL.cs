@@ -22,7 +22,7 @@ namespace BLL
         {
 
         }
-        public User GetNhanVienByID(int ID_Employee)
+        public User GetEmployeeByID_Employee(int ID_Employee)
         {
             return dALQLNH.Users.Where(p => p.ID_User == ID_Employee).FirstOrDefault();
         }
@@ -119,11 +119,11 @@ namespace BLL
             }
             return data;
         }
-        public Dictionary<User,bool> GetThongTinDiemDanhNhanVienNow()
+        public Dictionary<User, bool> GetThongTinDiemDanhNhanVienNow()
         {
-            Dictionary<User,bool> data = new Dictionary<User,bool>();
+            Dictionary<User, bool> data = new Dictionary<User, bool>();
             int SangChieu = GetBuoiLamNow();
-            foreach(ChiTietCaLam i in dALQLNH.ChiTietCaLams)
+            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
             {
                 /*if(i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode()*2+SangChieu] == '1')
                 {
@@ -131,10 +131,10 @@ namespace BLL
                     DateTime dtNow = DateTime.Now;
                     int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
                     BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == i.User.ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();*/
-                    //if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') 
-                        
-                    data.Add(i.User, false);
-                    //else data.Add(i.User, false);
+                //if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') 
+
+                data.Add(i.User, false);
+                //else data.Add(i.User, false);
                 //}
             }
             return data;

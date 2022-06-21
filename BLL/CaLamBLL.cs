@@ -1,9 +1,7 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTO;
 namespace BLL
 {
     public class CaLamBLL : BLL
@@ -22,10 +20,10 @@ namespace BLL
         {
 
         }
-        public Dictionary<CaLam,bool> GetAllCaLamByID_NhanVien(int ID_NhanVien)
+        public Dictionary<CaLam, bool> GetAllCaLamByID_NhanVien(int ID_NhanVien)
         {
-            Dictionary<CaLam,bool> data = new Dictionary<CaLam,bool>();
-            if(NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien) == null)
+            Dictionary<CaLam, bool> data = new Dictionary<CaLam, bool>();
+            if (NhanVienBLL.Instance.GetEmployeeByID_Employee(ID_NhanVien) == null)
             {
                 foreach (CaLam i in dALQLNH.CaLams.ToList()) data.Add(i, false);
             }
@@ -39,7 +37,7 @@ namespace BLL
             }
             return data;
         }
-        public string GetStringCaLamTheoSangChieuByIDCalam(int ID_Calam,bool isSang)
+        public string GetStringCaLamTheoSangChieuByIDCalam(int ID_Calam, bool isSang)
         {
             string result = "";
             CaLam calam = dALQLNH.CaLams.Find(ID_Calam);
@@ -47,7 +45,7 @@ namespace BLL
             if (isSang == true)
             {
                 result += "Morning shift :";
-                for (int i =0;i< LichCaLam.Length;i++)
+                for (int i = 0; i < LichCaLam.Length; i++)
                 {
                     if (i % 2 == 0 && LichCaLam[i] == '1')
                     {

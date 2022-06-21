@@ -21,7 +21,7 @@ namespace GUI.frmGUIUserControl
         {
             if (ID_User != -1)
             {
-                _ID_User = BLL.NhanVienBLL.Instance.GetEmployeeByID_Employee(ID_User);
+                _ID_User = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
                 flag = 0;
             }
             else if (ID_User == -1)

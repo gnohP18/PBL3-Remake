@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using BLL;
 using DTO;
-using GUI;
-using BLL;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 namespace GUI.frmGUIManager
 {
     public partial class frmShift : Form
@@ -47,7 +40,7 @@ namespace GUI.frmGUIManager
         {
             if (ListIDCalam.Count > 0)
             {
-                CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
+                //CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
                 this.Close();
             }
             else

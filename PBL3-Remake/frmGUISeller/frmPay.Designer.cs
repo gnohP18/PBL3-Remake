@@ -60,6 +60,8 @@
             this.pBVoucher = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbUsePoint = new Guna.UI2.WinForms.Guna2ImageCheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblNameGuest = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -402,7 +404,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label11.Location = new System.Drawing.Point(436, 222);
+            this.label11.Location = new System.Drawing.Point(436, 217);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 19);
             this.label11.TabIndex = 25;
@@ -416,16 +418,44 @@
             this.cbUsePoint.ImageOffset = new System.Drawing.Point(0, 0);
             this.cbUsePoint.ImageRotate = 0F;
             this.cbUsePoint.ImageSize = new System.Drawing.Size(32, 32);
-            this.cbUsePoint.Location = new System.Drawing.Point(406, 219);
+            this.cbUsePoint.Location = new System.Drawing.Point(408, 217);
             this.cbUsePoint.Name = "cbUsePoint";
             this.cbUsePoint.Size = new System.Drawing.Size(24, 24);
             this.cbUsePoint.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
+            this.label7.Location = new System.Drawing.Point(408, 157);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 19);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Guest name";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblNameGuest
+            // 
+            this.lblNameGuest.AutoSize = true;
+            this.lblNameGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblNameGuest.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameGuest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
+            this.lblNameGuest.Location = new System.Drawing.Point(549, 159);
+            this.lblNameGuest.Name = "lblNameGuest";
+            this.lblNameGuest.Size = new System.Drawing.Size(19, 19);
+            this.lblNameGuest.TabIndex = 28;
+            this.lblNameGuest.Text = "C";
+            this.lblNameGuest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmPay
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(840, 526);
+            this.Controls.Add(this.lblNameGuest);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cbUsePoint);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lblPoint);
@@ -494,5 +524,7 @@
         private System.Windows.Forms.Label lblPoint;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2ImageCheckBox cbUsePoint;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblNameGuest;
     }
 }

@@ -94,5 +94,36 @@ namespace BLL
             }
             return list;
         }
+        public void AddNewDetailInvoice(int ID_Invoice, int ID_Dish, int Amount)
+        {
+            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            cthd.ID_HoaDon = ID_Invoice;
+            cthd.ID_MonAn = ID_Dish;
+            cthd.SoLuong = Amount;
+            dALQLNH.ChiTietHoaDons.Add(cthd);
+            dALQLNH.SaveChanges();
+        }
+        public List<HoaDon> GetAllInvoice()
+        {
+            return dALQLNH.HoaDons.ToList();
+        }
+        public void AddNewInvoice(int ID_User, int ID_Guest, int Total, int MoneyConvertFromPoint, string MaVoucher, List<MonAn_View> list)
+        {
+            HoaDon invoice = new HoaDon();
+            invoice.ID_HoaDon = GetAllInvoice().Count + 1;
+            invoice.ID_User = ID_User;
+            invoice.TongTien = Total;
+            invoice.ID_KhachHang = ID_Guest;
+            invoice.TienQuyDoiTuDiemTichLuy = MoneyConvertFromPoint;
+            invoice.MaVoucher = MaVoucher;
+            invoice.NgayLap = DateTime.Now;
+            dALQLNH.HoaDons.Add(invoice);
+            dALQLNH.SaveChanges();
+            foreach (MonAn_View i in list)
+            {
+                AddNewDetailInvoice(invoice.ID_HoaDon, i.ID_MonAn, i.SoLuong);
+            }
+
+        }
     }
 }

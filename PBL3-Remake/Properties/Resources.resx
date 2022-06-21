@@ -139,8 +139,8 @@
   <data name="checkedGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkedGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendar-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add-to-basket-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-to-basket-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chicken-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chicken-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,9 +160,6 @@
   <data name="Programmer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Programmer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="remove-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remove-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Employee-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Employee-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,6 +169,9 @@
   <data name="cloud-database-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud-database-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Order-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Order-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vegetables-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vegetables-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,9 +180,6 @@
   </data>
   <data name="propaganda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\propaganda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="money-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warehouse-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,23 +196,20 @@
   <data name="cooking-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooking-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoginImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="money-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ingredients-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ingredients-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cafe-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cafe-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LightCalendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LightCalendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="link-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\link-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Addperson-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Addperson-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,8 +235,8 @@
   <data name="icon-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ordered-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ordered-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="networking-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\networking-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,8 +259,8 @@
   <data name="add-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Order-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Order-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImageCollaborTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImageCollaborTable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,8 +274,8 @@
   <data name="askquestion-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\askquestion-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add-to-basket-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-to-basket-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="remove-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spending-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spending-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,14 +283,17 @@
   <data name="Overview-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Overview-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="des-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\des-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="receipt-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\receipt-321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ordered-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ordered-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="link-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\link-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="des-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\des-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coupon-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coupon-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,7 +301,7 @@
   <data name="restaurant -128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurant -128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="salary-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salary-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calendar-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

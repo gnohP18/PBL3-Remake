@@ -10,16 +10,13 @@ namespace GUI.frmGUIUserControl
         public EmployeeTimeSheet(int User_ID)
         {
             _User = BLL.NhanVienBLL.Instance.GetEmployeeByID_Employee(User_ID);
-            User_Position = new ChucVu();
-
+            User_Position = BLL.NhanVienBLL.Instance.GetPositionByID_Position(User_ID);
             if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(User_ID) != null)
             {
                 TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(User_ID).LichSuLamViec;
             };
             InitializeComponent();
             SetupDataForChart(DateTime.Now);
-            SetupSalary();
-            SetupTimeSheet();
         }
         #region Local Variable
         private User _User { get; set; }
@@ -33,60 +30,61 @@ namespace GUI.frmGUIUserControl
         private List<DayChart_view> Dc_v { get; set; }
         #endregion
         #region Funtion
-        private int NumberOfDay(DateTime dt)
+        int DayOfMonth(DateTime date)
         {
-            DateTime newmonth = new DateTime(dt.Year, dt.Month, 5);
-            newmonth = newmonth.AddMonths(1);
-            int num = 0;
-            while (dt <= newmonth)
+            switch (date.Month)
             {
-                num++;
-                dt = dt.AddDays(1);
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    return 31;
+                case 2:
+                    if ((date.Year % 4 == 0 && date.Year % 100 != 0) || date.Year % 400 == 0)
+                        return 29;
+                    else
+                        return 28;
+                default:
+                    return 30; ;
             }
-            return num;
         }
         private void SetupDataForChart(DateTime date)
         {
-            //NumberDateOfMonth = NumberOfDay(date);
-            NumberDateOfMonth = BLL.NhanVienBLL.Instance.GetTimeSheetsByID_User(_User.ID_User).LichSuLamViec.Length;
+            NumberDateOfMonth = DayOfMonth(date);
+            char[] charTimeSheet = TimeSheet.ToCharArray();
             NumberOfDateAttendance = 0;
             NumberOfDateAbsent = 0;
             NumberOfDateLate = 0;
-            char[] charTimeSheet = TimeSheet.ToCharArray();
             foreach (char c in charTimeSheet)
             {
                 if (c == '0') NumberOfDateAbsent++;
                 if (c == '1') NumberOfDateAttendance++;
             }
-            NumberOfDateLate = NumberDateOfMonth - NumberOfDateAbsent - NumberOfDateAttendance;
+            NumberOfDateLate = NumberDateOfMonth * 2 - NumberOfDateAbsent - NumberOfDateAttendance;
             NumberOfDateAttendance += NumberOfDateLate;
             Console.WriteLine("Absent " + NumberOfDateAbsent);
             Console.WriteLine("Attendance " + NumberOfDateAttendance);
             Console.WriteLine("Late " + NumberOfDateLate);
             Dc_v = new List<DayChart_view>();
-            Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateAttendance, Text = "Attendance" });
-            Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateLate, Text = "Late" });
             Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateAbsent, Text = "Absent" });
+            Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateLate, Text = "Late" });
+            Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateAttendance, Text = "Attendance" });
             DayChart.DataSource = Dc_v;
             DayChart.Series[0].YValueMembers = "Value";
             DayChart.Series[0].XValueMember = "Text";
         }
         private void SetupSalary()
         {
-            User_Position = BLL.NhanVienBLL.Instance.GetPositionByID_Position(_User.ID_ChucVu);
-            lblID_User.Text = _User.ID_User.ToString();
-            lblName_User.Text = _User.TenUser;
             lblAbsent.Text = NumberOfDateAbsent.ToString();
             lblAttendance.Text = NumberOfDateAttendance.ToString();
             lblLate.Text = NumberOfDateLate.ToString();
             lblPosition.Text = User_Position.TenChucVu;
             lblCoefficientsSalary.Text = User_Position.HeSoLuong.ToString();
-        }
-        private void SetupTimeSheet()
-        {
-            TimeSheetUC tsUC = new TimeSheetUC(BLL.NhanVienBLL.Instance.GetTimeSheetsByID_User(_User.ID_User).LichSuLamViec);
-            this.Controls.Add(tsUC);
-            tsUC.Location = new System.Drawing.Point(400, 0);
+
+
         }
         #endregion
 

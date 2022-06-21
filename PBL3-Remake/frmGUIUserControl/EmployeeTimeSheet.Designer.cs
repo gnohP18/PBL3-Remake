@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID_User = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             this.lblName_User = new System.Windows.Forms.Label();
             this.DayChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnOK = new System.Windows.Forms.Button();
+            this.timeSheetUC1 = new GUI.frmGUIUserControl.TimeSheetUC();
             this.lblAbsent = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblAttendance = new System.Windows.Forms.Label();
@@ -51,8 +52,8 @@
             this.lblPosition = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotalSalary = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblTotalSalary = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DayChart)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -120,40 +121,40 @@
             // DayChart
             // 
             this.DayChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            chartArea1.AlignWithChartArea = "ChartArea1";
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            chartArea1.Name = "ChartArea1";
-            this.DayChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            legend1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.Title = "Time Sheet";
-            legend1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend1.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend1.TitleSeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.DayChart.Legends.Add(legend1);
+            chartArea2.AlignWithChartArea = "ChartArea1";
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            chartArea2.Name = "ChartArea1";
+            this.DayChart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            legend2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.Title = "Time Sheet";
+            legend2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            legend2.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend2.TitleSeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.DayChart.Legends.Add(legend2);
             this.DayChart.Location = new System.Drawing.Point(24, 44);
             this.DayChart.Name = "DayChart";
             this.DayChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series0";
-            series1.Points.Add(dataPoint1);
-            this.DayChart.Series.Add(series1);
+            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "Series0";
+            series2.Points.Add(dataPoint2);
+            this.DayChart.Series.Add(series2);
             this.DayChart.Size = new System.Drawing.Size(356, 330);
             this.DayChart.TabIndex = 32;
             this.DayChart.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.ForeColor = System.Drawing.Color.White;
-            title1.Name = "Title1";
-            title1.Text = "Statistic time sheet";
-            this.DayChart.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.White;
+            title2.Name = "Title1";
+            title2.Text = "Statistic time sheet";
+            this.DayChart.Titles.Add(title2);
             // 
             // btnOK
             // 
@@ -171,6 +172,14 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // timeSheetUC1
+            // 
+            this.timeSheetUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
+            this.timeSheetUC1.Location = new System.Drawing.Point(400, 0);
+            this.timeSheetUC1.Name = "timeSheetUC1";
+            this.timeSheetUC1.Size = new System.Drawing.Size(600, 430);
+            this.timeSheetUC1.TabIndex = 31;
             // 
             // lblAbsent
             // 
@@ -303,18 +312,6 @@
             this.panel1.Size = new System.Drawing.Size(186, 46);
             this.panel1.TabIndex = 46;
             // 
-            // lblTotalSalary
-            // 
-            this.lblTotalSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
-            this.lblTotalSalary.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSalary.ForeColor = System.Drawing.Color.Black;
-            this.lblTotalSalary.Location = new System.Drawing.Point(94, 27);
-            this.lblTotalSalary.Name = "lblTotalSalary";
-            this.lblTotalSalary.Size = new System.Drawing.Size(89, 15);
-            this.lblTotalSalary.TabIndex = 47;
-            this.lblTotalSalary.Text = "F";
-            this.lblTotalSalary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -326,6 +323,18 @@
             this.label4.Size = new System.Drawing.Size(34, 15);
             this.label4.TabIndex = 47;
             this.label4.Text = "Total";
+            // 
+            // lblTotalSalary
+            // 
+            this.lblTotalSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
+            this.lblTotalSalary.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSalary.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalSalary.Location = new System.Drawing.Point(94, 27);
+            this.lblTotalSalary.Name = "lblTotalSalary";
+            this.lblTotalSalary.Size = new System.Drawing.Size(89, 15);
+            this.lblTotalSalary.TabIndex = 47;
+            this.lblTotalSalary.Text = "F";
+            this.lblTotalSalary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // EmployeeTimeSheet
             // 
@@ -345,6 +354,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.DayChart);
+            this.Controls.Add(this.timeSheetUC1);
             this.Controls.Add(this.lblName_User);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblID_User);
@@ -367,6 +377,7 @@
         private System.Windows.Forms.Label lblID_User;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblName_User;
+        private TimeSheetUC timeSheetUC1;
         private System.Windows.Forms.DataVisualization.Charting.Chart DayChart;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblAbsent;

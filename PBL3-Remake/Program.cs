@@ -12,7 +12,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.Form1());
+            Application.Run(new frmGUIUserControl.EmployeeTimeSheet(3));
         }
     }
 }

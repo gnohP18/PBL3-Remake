@@ -76,9 +76,7 @@ namespace GUI.frmGUIUserControl
         {
             int index = dgvManageEmployee.CurrentCell.RowIndex;
             int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
-            EmployeeTimeSheet frm = new EmployeeTimeSheet(ID_User);
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+
         }
         #endregion
 

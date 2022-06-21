@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.timeSheetUC = new GUI.frmGUIUserControl.TimeSheetUC();
             this.SuspendLayout();
             // 
             // button1

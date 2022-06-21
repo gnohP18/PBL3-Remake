@@ -12,7 +12,7 @@ using BLL;
 using GUI.frmGUISeller;
 using System.Threading;
 
-namespace PBL3_Remake
+namespace GUI
 {
     public partial class Form1 : Form
     {
@@ -20,38 +20,19 @@ namespace PBL3_Remake
         {
             InitializeComponent();
             //LoadBanByTinhTrangBanVaTang(-1, 1);
-            Control.CheckForIllegalCrossThreadCalls = false;
         }
-        void LoadBanByTinhTrangBanVaTang(int st, int fl)
-        {
-            //if (!this.IsHandleCreated) return;
-            Thread thread1 = new Thread(new ThreadStart(() => {
-                for (int i = 0; i < 5; i++)
-                {
-                    Thread thread = new Thread(new ThreadStart(() => {
-                        for (int j = 0; j < 5; j++)
-                            Console.WriteLine(i + ": " + j + "");
-                    }))
-                    { IsBackground = true };
-                    thread.Start();
-                }
-            }));
-            thread1.Start();
-        }
+       
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-
-            for (int i = 0; i < 5; i++)
+            /*foreach(KeyValuePair<User,bool>  i in NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow())
             {
-                Task thread = new Task(() =>
-                {
-                    for (int j = 0; j < 5; j++)
-                        Console.WriteLine(i + ": " + j + "");
-                });
-                thread.Start();
-            }    
-           
+                pn.Controls.Add(new frmGUIUserControl.CheckBoxUC(i));
+            }*/
+            foreach (KeyValuePair<CaLam, bool> i in CaLamBLL.Instance.GetAllCaLamByID_NhanVien(3))
+            {
+                pn.Controls.Add(new frmGUIUserControl.CheckBoxUC(i));
+            }
         }
     }
 }

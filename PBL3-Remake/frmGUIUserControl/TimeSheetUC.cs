@@ -26,11 +26,15 @@ namespace GUI.frmGUIUserControl
         #region Function
         private void SetupDataForTimeSheet(string TimeSheet)
         {
-            Console.WriteLine(TimeSheet);
+            //Console.WriteLine(TimeSheet);
             char[] chars1 = TimeSheet.ToCharArray();
             foreach (var c in chars1)
             {
                 DateState.Add(c.ToString());
+            }
+            foreach (string c in DateState)
+            {
+                Console.WriteLine(c);
             }
         }
 
@@ -93,7 +97,7 @@ namespace GUI.frmGUIUserControl
             DateTime useDate = new DateTime(DateCustom.Year, DateCustom.Month, 5);
             lblMonth.Text = useDate.Month.ToString() + "/" + useDate.Year.ToString();
             int line = 0;
-            Console.WriteLine(NumberOfDay(useDate));
+            //Console.WriteLine(NumberOfDay(useDate));
             for (int i = 1; i <= NumberOfDay(DateCustom); i++)
             {
                 int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());

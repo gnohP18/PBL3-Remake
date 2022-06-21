@@ -170,15 +170,7 @@
             this.btnOK.TabIndex = 35;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // timeSheetUC1
-            // 
-            this.timeSheetUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
-            this.timeSheetUC1.Location = new System.Drawing.Point(400, 0);
-            this.timeSheetUC1.Name = "timeSheetUC1";
-            this.timeSheetUC1.Size = new System.Drawing.Size(600, 430);
-            this.timeSheetUC1.TabIndex = 31;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);            
             // 
             // lblAbsent
             // 
@@ -353,7 +345,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.DayChart);
-            this.Controls.Add(this.timeSheetUC1);
             this.Controls.Add(this.lblName_User);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblID_User);
@@ -376,7 +367,6 @@
         private System.Windows.Forms.Label lblID_User;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblName_User;
-        private TimeSheetUC timeSheetUC1;
         private System.Windows.Forms.DataVisualization.Charting.Chart DayChart;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Label lblAbsent;

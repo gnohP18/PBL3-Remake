@@ -36,7 +36,7 @@ namespace BLL
             if (GetTimeSheetsByID_User(ID_User) != null)
                 foreach (char i in GetTimeSheetsByID_User(ID_User).LichSuLamViec.ToCharArray())
                 {
-                    if (i == '1' || i == 'A' || i == 'B')
+                    if (i == '1' || 'A' <= i && i <= 'Z')
                     {
                         NumberOdDayWork++;
                     }
@@ -48,32 +48,35 @@ namespace BLL
             List<Employee_view> list = new List<Employee_view>();
             foreach (User i in dALQLNH.Users)
             {
-                Employee_view employee = new Employee_view();
-                employee.ID_User = i.ID_User;
-                employee.User_Name = i.TenUser;
-                employee.User_Position = i.ChucVu.TenChucVu;
-                employee.Phone_number = i.SDT;
-                employee.DateStartWork = i.NgayBatDauLam;
-                employee.DateOfBirth = i.NgaySinh;
-                employee.UserNameLogin = i.Username;
-                employee.PasswordLogin = i.Password;
-                employee.NumberOfDayWork = GetNumberOfDayWorkByID_User(i.ID_User);
-                foreach (User us in GetAllNhanVienCoLichLamViecByTime())
+                if (i.DaXoa == false)
                 {
-                    if (us.ID_User == i.ID_User)
+                    Employee_view employee = new Employee_view();
+                    employee.ID_User = i.ID_User;
+                    employee.User_Name = i.TenUser;
+                    employee.User_Position = i.ChucVu.TenChucVu;
+                    employee.Phone_number = i.SDT;
+                    employee.DateStartWork = i.NgayBatDauLam;
+                    employee.DateOfBirth = i.NgaySinh;
+                    employee.UserNameLogin = i.Username;
+                    employee.PasswordLogin = i.Password;
+                    employee.NumberOfDayWork = GetNumberOfDayWorkByID_User(i.ID_User);
+                    foreach (User us in GetAllNhanVienCoLichLamViecByTime())
                     {
-                        employee.Status = "Working";
+                        if (us.ID_User == i.ID_User)
+                        {
+                            employee.Status = "Working";
+                        }
+                        else
+                        {
+                            employee.Status = "Offline";
+                        }
+                        if (us.DaXoa == true)
+                        {
+                            employee.Status = "Remove";
+                        }
                     }
-                    else
-                    {
-                        employee.Status = "Offline";
-                    }
-                    if (us.DaXoa == true)
-                    {
-                        employee.Status = "Remove";
-                    }
+                    list.Add(employee);
                 }
-                list.Add(employee);
             }
             return list;
         }
@@ -209,5 +212,6 @@ namespace BLL
         {
             return dALQLNH.ChucVus.Where(p => p.ID_ChucVu == ID_Position).FirstOrDefault();
         }
+
     }
 }

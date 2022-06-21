@@ -35,6 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvManageEmployee = new System.Windows.Forms.DataGridView();
+            this.btnSalaryManage = new System.Windows.Forms.Button();
             this.btnTimeSheetEmployee = new System.Windows.Forms.Button();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.btnSalaryManage);
             this.panel1.Controls.Add(this.btnTimeSheetEmployee);
             this.panel1.Controls.Add(this.btnDeleteEmployee);
             this.panel1.Controls.Add(this.btnAddEmployee);
@@ -115,7 +117,24 @@
             this.dgvManageEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvManageEmployee.Size = new System.Drawing.Size(1125, 700);
             this.dgvManageEmployee.TabIndex = 4;
-            this.dgvManageEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageEmployee_CellContentClick);
+            this.dgvManageEmployee.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageEmployee_CellContentDoubleClick);
+            // 
+            // btnSalaryManage
+            // 
+            this.btnSalaryManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalaryManage.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnSalaryManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalaryManage.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalaryManage.ForeColor = System.Drawing.Color.White;
+            this.btnSalaryManage.Image = global::PBL3_Remake.Properties.Resources.salary_48;
+            this.btnSalaryManage.Location = new System.Drawing.Point(0, 276);
+            this.btnSalaryManage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalaryManage.Name = "btnSalaryManage";
+            this.btnSalaryManage.Size = new System.Drawing.Size(75, 65);
+            this.btnSalaryManage.TabIndex = 9;
+            this.btnSalaryManage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalaryManage.UseVisualStyleBackColor = true;
+            this.btnSalaryManage.Click += new System.EventHandler(this.btnSalaryManage_Click);
             // 
             // btnTimeSheetEmployee
             // 
@@ -204,5 +223,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvManageEmployee;
         private System.Windows.Forms.Button btnTimeSheetEmployee;
+        private System.Windows.Forms.Button btnSalaryManage;
     }
 }

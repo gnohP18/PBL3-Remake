@@ -8,18 +8,24 @@ namespace GUI.frmGUISeller
 {
     public partial class frmPay : Form
     {
-        List<MonAn_View> listMonAnViewDaDat;
-        public delegate void Mydel();
-        public Mydel d;
-        public int IDTable { get; set; }
         public frmPay(int idban)
         {
             IDTable = idban;
             InitializeComponent();
-            SetCollabTableTextBox();
         }
+        #region Local Variable
+        List<MonAn_View> listMonAnViewDaDat;
+        public delegate void Mydel();
+        public Mydel d;
+        public int IDTable { get; set; }
         List<string> Voucher = new List<string>();
         List<string> PhoneNumber = new List<string>();
+        public KhachHang _Guest { get; set; }
+        int guestmoney;
+        int sum = 0;
+        int tax;
+        #endregion
+        #region Function
         private void AddVoucher()
         {
             foreach (Voucher i in BLL.VoucherBLL.Instance.GetAllVoucher())
@@ -41,6 +47,43 @@ namespace GUI.frmGUISeller
                 if (s == check) dk = true;
             return dk;
         }
+
+        private void LoadDataGridView(List<MonAn_View> lt)
+        {
+            if (lt != null)
+            {
+                dgvPayment.Columns[0].Visible = false;
+                dgvPayment.Columns[1].HeaderText = "Name dish";
+                dgvPayment.Columns[2].HeaderText = "Number";
+                dgvPayment.Columns[3].HeaderText = "Total";
+                dgvPayment.DataSource = lt;
+                Load_Total();
+            }
+        }
+
+        private void Load_Total()
+        {
+
+            foreach (DataGridViewRow row in dgvPayment.Rows)
+            {
+                sum += Convert.ToInt32(row.Cells[3].Value.ToString());
+            }
+            lblBill.Text = sum.ToString();
+            if (txtGuestMoney.Text.Length > 0)
+            {
+                guestmoney = Convert.ToInt32(txtGuestMoney.ToString());
+            }
+            tax = sum / 100 * 5;
+            lblTax.Text = tax.ToString();
+        }
+        private void LoadGuest()
+        {
+            _Guest = BLL.KhachHangBLL.Instance.GetGuestByGuestPhoneNumber(txtGuestPhone.Text);
+            lblNameGuest.Text = _Guest.TenKhachHang;
+            lblPoint.Text = _Guest.DiemTichLuy.ToString();
+        }
+        #endregion
+        #region Event Form
         private void frmPay_Load(object sender, EventArgs e)
         {
             listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
@@ -66,39 +109,6 @@ namespace GUI.frmGUISeller
             txtGuestPhone.AutoCompleteCustomSource = autoPhoneNumberGuest;
             lblTotal.Text = (sum + tax).ToString();
         }
-        private void LoadDataGridView(List<MonAn_View> lt)
-        {
-            if (lt != null)
-            {
-                dgvPayment.Columns[0].Visible = false;
-                dgvPayment.Columns[1].HeaderText = "Name dish";
-                dgvPayment.Columns[2].HeaderText = "Number";
-                dgvPayment.Columns[3].HeaderText = "Total";
-                dgvPayment.DataSource = lt;
-                Load_Total();
-            }
-        }
-        int guestmoney;
-        int sum = 0;
-        int tax;
-        string txtcollab = "";
-        string txtMain = "";
-        private void Load_Total()
-        {
-
-            foreach (DataGridViewRow row in dgvPayment.Rows)
-            {
-                sum += Convert.ToInt32(row.Cells[3].Value.ToString());
-            }
-            lblBill.Text = sum.ToString();
-            if (txtGuestMoney.Text.Length > 0)
-            {
-                guestmoney = Convert.ToInt32(txtGuestMoney.ToString());
-            }
-            tax = sum / 100 * 5;
-            lblTax.Text = tax.ToString();
-        }
-
         private void txtVoucher_TextChanged(object sender, EventArgs e)
         {
             if (CheckVoucherOrPhoneNumber(Voucher, txtVoucher.Text))
@@ -129,16 +139,8 @@ namespace GUI.frmGUISeller
 
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
-
+            BLL.HoaDonBLL.Instance.AddNewInvoice();
             this.Close();
-        }
-        private void SetCollabTableTextBox()
-        {
-            txtAllCollabTable.Enabled = false;
-            Ban bn = BanBLL.Instance.GetBanByID_Ban(IDTable);
-            txtcollab = BanBLL.Instance.GetAllCollabTable(bn, bn.TinhTrangBan, txtcollab);
-            txtMain = BanBLL.Instance.GetAllMainTable(bn, txtMain);
-            txtAllCollabTable.Text = txtMain + " " + txtcollab;
         }
 
         private void btnYes_Click(object sender, EventArgs e)
@@ -165,7 +167,6 @@ namespace GUI.frmGUISeller
             }
 
         }
-
         private void txtGuestPhone_TextChanged(object sender, EventArgs e)
         {
             if (txtGuestPhone.Text == "new")
@@ -175,7 +176,9 @@ namespace GUI.frmGUISeller
             else if (CheckVoucherOrPhoneNumber(PhoneNumber, txtGuestPhone.Text))
             {
                 pBCheckGuest.Image = PBL3_Remake.Properties.Resources.checkedGreen;
+                LoadGuest();
             }
         }
+        #endregion
     }
 }

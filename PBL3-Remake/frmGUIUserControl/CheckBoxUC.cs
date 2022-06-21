@@ -15,6 +15,10 @@ namespace GUI.frmGUIUserControl
     {
         KeyValuePair<User, bool> user;
         KeyValuePair<CaLam, bool> calam;
+        public delegate void AddDelegate(int ID);
+        public delegate void RemoveDelegate(int ID);
+        public AddDelegate Add;
+        public RemoveDelegate Remove;
         bool isDiemDanh;
         public CheckBoxUC(KeyValuePair<User,bool> user)
         {
@@ -75,11 +79,13 @@ namespace GUI.frmGUIUserControl
                 {
                     picCheck.Visible = true;
                     picUnchecked.Visible = false;
+                    Add(calam.Key.ID_CaLam);
                 }
                 else
                 {
                     picCheck.Visible = false;
                     picUnchecked.Visible = true;
+                    Remove(calam.Key.ID_CaLam);
                 }
             }
 

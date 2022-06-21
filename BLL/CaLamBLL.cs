@@ -70,5 +70,26 @@ namespace BLL
                 return result;
             }
         }
+
+        public void SetCaLamForNhanVien(int ID_NhanVien, List<int> listIDCaLam)
+        {
+            foreach(ChiTietCaLam i in dALQLNH.ChiTietCaLams.ToList())
+            {
+                if(i.ID_User == ID_NhanVien)
+                {
+                    dALQLNH.ChiTietCaLams.Remove(i);
+                    dALQLNH.SaveChanges();
+                }
+            }
+            foreach(int i in listIDCaLam)
+            {
+                dALQLNH.ChiTietCaLams.Add(new ChiTietCaLam
+                {
+                    ID_User = ID_NhanVien,
+                    ID_CaLam = i
+                });
+                dALQLNH.SaveChanges();
+            }
+        }
     }
 }

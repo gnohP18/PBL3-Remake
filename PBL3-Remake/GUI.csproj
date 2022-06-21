@@ -88,6 +88,12 @@
     <Compile Include="frmGUIManager\frmMainManager.Designer.cs">
       <DependentUpon>frmMainManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIManager\frmShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\frmShift.Designer.cs">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUISeller\DetailTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +106,11 @@
     <Compile Include="frmGUISeller\DishForOrdering.Designer.cs">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUISeller\frmAttendaneEmployee.cs">
+    <Compile Include="frmGUISeller\frmAttendence.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGUISeller\frmAttendaneEmployee.Designer.cs">
-      <DependentUpon>frmAttendaneEmployee.cs</DependentUpon>
+    <Compile Include="frmGUISeller\frmAttendence.Designer.cs">
+      <DependentUpon>frmAttendence.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUISeller\frmCollaborTable.cs">
       <SubType>Form</SubType>
@@ -309,14 +315,17 @@
     <EmbeddedResource Include="frmGUIManager\frmMainManager.resx">
       <DependentUpon>frmMainManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\frmShift.resx">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\DetailTable.resx">
       <DependentUpon>DetailTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\DishForOrdering.resx">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUISeller\frmAttendaneEmployee.resx">
-      <DependentUpon>frmAttendaneEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUISeller\frmAttendence.resx">
+      <DependentUpon>frmAttendence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\frmCollaborTable.resx">
       <DependentUpon>frmCollaborTable.cs</DependentUpon>

@@ -1,7 +1,6 @@
-﻿using Entity;
+﻿using DTO;
 using System;
 using System.Collections.Generic;
-using DTO;
 using System.Linq;
 
 namespace BLL

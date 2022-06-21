@@ -189,7 +189,8 @@ namespace GUI.frmGUISeller
 
         private void btnDetailTable_Click(object sender, EventArgs e)
         {
-
+            frmGUISeller.DetailTable frm = new DetailTable();
+            frm.Show();
         }
 
     }

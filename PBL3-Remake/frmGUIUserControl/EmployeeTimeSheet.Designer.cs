@@ -40,7 +40,6 @@
             this.lblName_User = new System.Windows.Forms.Label();
             this.DayChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnOK = new System.Windows.Forms.Button();
-            this.timeSheetUC1 = new GUI.frmGUIUserControl.TimeSheetUC();
             this.lblAbsent = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblAttendance = new System.Windows.Forms.Label();

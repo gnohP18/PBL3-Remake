@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtUserNameLogin = new System.Windows.Forms.TextBox();
+            this.txtPasswordLogin = new System.Windows.Forms.TextBox();
+            this.cbbPosition = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblNumberOfDayWork = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpDayStartWork = new System.Windows.Forms.DateTimePicker();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpDayOfBirth = new System.Windows.Forms.DateTimePicker();
             this.txtCIEmployee = new System.Windows.Forms.TextBox();
@@ -37,22 +48,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDEmployee = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.pBUser = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtpDayStartWork = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblNumberOfDayWork = new System.Windows.Forms.Label();
             this.btnChangePicUser = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbbPosition = new System.Windows.Forms.ComboBox();
-            this.txtPasswordLogin = new System.Windows.Forms.TextBox();
-            this.txtUserNameLogin = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnAddNewEmployee = new System.Windows.Forms.Button();
-            this.btnDeleteEmployee = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.txtPhonenumber = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pBUser = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBUser)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +62,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txtPhonenumber);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtUserNameLogin);
@@ -85,13 +89,143 @@
             this.panel1.Size = new System.Drawing.Size(413, 242);
             this.panel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.PowderBlue;
+            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(27, 219);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 19);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.PowderBlue;
+            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(27, 198);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 19);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Account";
+            // 
+            // txtUserNameLogin
+            // 
+            this.txtUserNameLogin.Location = new System.Drawing.Point(107, 197);
+            this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUserNameLogin.Name = "txtUserNameLogin";
+            this.txtUserNameLogin.Size = new System.Drawing.Size(182, 20);
+            this.txtUserNameLogin.TabIndex = 25;
+            // 
+            // txtPasswordLogin
+            // 
+            this.txtPasswordLogin.Location = new System.Drawing.Point(107, 218);
+            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPasswordLogin.Name = "txtPasswordLogin";
+            this.txtPasswordLogin.Size = new System.Drawing.Size(182, 20);
+            this.txtPasswordLogin.TabIndex = 24;
+            // 
+            // cbbPosition
+            // 
+            this.cbbPosition.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbPosition.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cbbPosition.FormattingEnabled = true;
+            this.cbbPosition.Location = new System.Drawing.Point(9, 171);
+            this.cbbPosition.Name = "cbbPosition";
+            this.cbbPosition.Size = new System.Drawing.Size(182, 21);
+            this.cbbPosition.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.PowderBlue;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(9, 147);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 19);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "User position";
+            // 
+            // lblNumberOfDayWork
+            // 
+            this.lblNumberOfDayWork.AutoSize = true;
+            this.lblNumberOfDayWork.BackColor = System.Drawing.Color.PowderBlue;
+            this.lblNumberOfDayWork.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfDayWork.ForeColor = System.Drawing.Color.Black;
+            this.lblNumberOfDayWork.Location = new System.Drawing.Point(225, 171);
+            this.lblNumberOfDayWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumberOfDayWork.Name = "lblNumberOfDayWork";
+            this.lblNumberOfDayWork.Size = new System.Drawing.Size(20, 19);
+            this.lblNumberOfDayWork.TabIndex = 20;
+            this.lblNumberOfDayWork.Text = "A";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.PowderBlue;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(225, 147);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 19);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Number of day work";
+            // 
+            // dtpDayStartWork
+            // 
+            this.dtpDayStartWork.CustomFormat = "dd/MM/yyyy";
+            this.dtpDayStartWork.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDayStartWork.Location = new System.Drawing.Point(229, 70);
+            this.dtpDayStartWork.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDayStartWork.Name = "dtpDayStartWork";
+            this.dtpDayStartWork.Size = new System.Drawing.Size(91, 20);
+            this.dtpDayStartWork.TabIndex = 18;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(355, 215);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(56, 25);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.PowderBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(225, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 19);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Date start work";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.PowderBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(243, 12);
+            this.label4.Location = new System.Drawing.Point(225, 11);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 19);
@@ -102,7 +236,7 @@
             // 
             this.dtpDayOfBirth.CustomFormat = "dd/MM/yyyy";
             this.dtpDayOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDayOfBirth.Location = new System.Drawing.Point(247, 33);
+            this.dtpDayOfBirth.Location = new System.Drawing.Point(229, 32);
             this.dtpDayOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDayOfBirth.Name = "dtpDayOfBirth";
             this.dtpDayOfBirth.Size = new System.Drawing.Size(91, 20);
@@ -172,22 +306,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "ID Employee";
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.LightBlue;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(355, 215);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(56, 25);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.LightBlue;
@@ -195,7 +313,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.Location = new System.Drawing.Point(529, 434);
+            this.btnOK.Location = new System.Drawing.Point(527, 266);
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 25);
@@ -203,64 +321,6 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // pBUser
-            // 
-            this.pBUser.Location = new System.Drawing.Point(20, 19);
-            this.pBUser.Margin = new System.Windows.Forms.Padding(2);
-            this.pBUser.Name = "pBUser";
-            this.pBUser.Size = new System.Drawing.Size(148, 206);
-            this.pBUser.TabIndex = 1;
-            this.pBUser.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.PowderBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(243, 55);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 19);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Date start work";
-            // 
-            // dtpDayStartWork
-            // 
-            this.dtpDayStartWork.CustomFormat = "dd/MM/yyyy";
-            this.dtpDayStartWork.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDayStartWork.Location = new System.Drawing.Point(247, 71);
-            this.dtpDayStartWork.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpDayStartWork.Name = "dtpDayStartWork";
-            this.dtpDayStartWork.Size = new System.Drawing.Size(91, 20);
-            this.dtpDayStartWork.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.PowderBlue;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(243, 98);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 19);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Number of day work";
-            // 
-            // lblNumberOfDayWork
-            // 
-            this.lblNumberOfDayWork.AutoSize = true;
-            this.lblNumberOfDayWork.BackColor = System.Drawing.Color.PowderBlue;
-            this.lblNumberOfDayWork.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumberOfDayWork.ForeColor = System.Drawing.Color.Black;
-            this.lblNumberOfDayWork.Location = new System.Drawing.Point(243, 122);
-            this.lblNumberOfDayWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNumberOfDayWork.Name = "lblNumberOfDayWork";
-            this.lblNumberOfDayWork.Size = new System.Drawing.Size(20, 19);
-            this.lblNumberOfDayWork.TabIndex = 20;
-            this.lblNumberOfDayWork.Text = "A";
             // 
             // btnChangePicUser
             // 
@@ -278,71 +338,6 @@
             this.btnChangePicUser.UseVisualStyleBackColor = false;
             this.btnChangePicUser.Click += new System.EventHandler(this.btnChangePicUser_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.PowderBlue;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(9, 147);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 19);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "User position";
-            // 
-            // cbbPosition
-            // 
-            this.cbbPosition.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbPosition.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cbbPosition.FormattingEnabled = true;
-            this.cbbPosition.Location = new System.Drawing.Point(9, 171);
-            this.cbbPosition.Name = "cbbPosition";
-            this.cbbPosition.Size = new System.Drawing.Size(182, 21);
-            this.cbbPosition.TabIndex = 23;
-            // 
-            // txtPasswordLogin
-            // 
-            this.txtPasswordLogin.Location = new System.Drawing.Point(107, 218);
-            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPasswordLogin.Name = "txtPasswordLogin";
-            this.txtPasswordLogin.Size = new System.Drawing.Size(182, 20);
-            this.txtPasswordLogin.TabIndex = 24;
-            // 
-            // txtUserNameLogin
-            // 
-            this.txtUserNameLogin.Location = new System.Drawing.Point(107, 197);
-            this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUserNameLogin.Name = "txtUserNameLogin";
-            this.txtUserNameLogin.Size = new System.Drawing.Size(182, 20);
-            this.txtUserNameLogin.TabIndex = 25;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.PowderBlue;
-            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(27, 198);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 19);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Account";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.PowderBlue;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(27, 219);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 19);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Password";
-            // 
             // btnAddNewEmployee
             // 
             this.btnAddNewEmployee.BackColor = System.Drawing.Color.LightBlue;
@@ -350,7 +345,7 @@
             this.btnAddNewEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewEmployee.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewEmployee.Location = new System.Drawing.Point(20, 434);
+            this.btnAddNewEmployee.Location = new System.Drawing.Point(18, 266);
             this.btnAddNewEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewEmployee.Name = "btnAddNewEmployee";
             this.btnAddNewEmployee.Size = new System.Drawing.Size(90, 25);
@@ -359,30 +354,60 @@
             this.btnAddNewEmployee.UseVisualStyleBackColor = false;
             this.btnAddNewEmployee.Click += new System.EventHandler(this.btnAddNewEmployee_Click);
             // 
-            // btnDeleteEmployee
+            // btnRefresh
             // 
-            this.btnDeleteEmployee.BackColor = System.Drawing.Color.LightBlue;
-            this.btnDeleteEmployee.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteEmployee.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(114, 434);
-            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(90, 25);
-            this.btnDeleteEmployee.TabIndex = 23;
-            this.btnDeleteEmployee.Text = "Delete";
-            this.btnDeleteEmployee.UseVisualStyleBackColor = false;
-            this.btnDeleteEmployee.Visible = false;
-            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
+            this.btnRefresh.BackColor = System.Drawing.Color.LightBlue;
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.btnRefresh.Location = new System.Drawing.Point(112, 266);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(90, 25);
+            this.btnRefresh.TabIndex = 23;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Visible = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // txtPhonenumber
+            // 
+            this.txtPhonenumber.Location = new System.Drawing.Point(229, 121);
+            this.txtPhonenumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhonenumber.Name = "txtPhonenumber";
+            this.txtPhonenumber.Size = new System.Drawing.Size(182, 20);
+            this.txtPhonenumber.TabIndex = 28;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.PowderBlue;
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(225, 98);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 19);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Phone number";
+            // 
+            // pBUser
+            // 
+            this.pBUser.Location = new System.Drawing.Point(20, 19);
+            this.pBUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pBUser.Name = "pBUser";
+            this.pBUser.Size = new System.Drawing.Size(148, 206);
+            this.pBUser.TabIndex = 1;
+            this.pBUser.TabStop = false;
             // 
             // DetailEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(596, 467);
-            this.Controls.Add(this.btnDeleteEmployee);
+            this.ClientSize = new System.Drawing.Size(596, 300);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnAddNewEmployee);
             this.Controls.Add(this.btnChangePicUser);
             this.Controls.Add(this.btnOK);
@@ -427,6 +452,8 @@
         private System.Windows.Forms.TextBox txtUserNameLogin;
         private System.Windows.Forms.TextBox txtPasswordLogin;
         private System.Windows.Forms.Button btnAddNewEmployee;
-        private System.Windows.Forms.Button btnDeleteEmployee;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPhonenumber;
     }
 }

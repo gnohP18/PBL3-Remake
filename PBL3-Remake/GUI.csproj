@@ -175,6 +175,12 @@
     <Compile Include="frmGUIUserControl\AddNewManufacturer.Designer.cs">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\DateTimeSheetUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\DateTimeSheetUC.Designer.cs">
+      <DependentUpon>DateTimeSheetUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\DetailInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,12 @@
     </Compile>
     <Compile Include="frmGUIUserControl\EmployeesUC.Designer.cs">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\EmployeeTimeSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\EmployeeTimeSheet.Designer.cs">
+      <DependentUpon>EmployeeTimeSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\Invoice.cs">
       <SubType>Form</SubType>
@@ -277,6 +289,12 @@
     <Compile Include="frmGUIUserControl\CheckBoxUC.Designer.cs">
       <DependentUpon>CheckBoxUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\TimeSheetUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\TimeSheetUC.Designer.cs">
+      <DependentUpon>TimeSheetUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\WareHouseUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -342,6 +360,9 @@
     <EmbeddedResource Include="frmGUIUserControl\AddNewManufacturer.resx">
       <DependentUpon>AddNewManufacturer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\DateTimeSheetUC.resx">
+      <DependentUpon>DateTimeSheetUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailInvoice.resx">
       <DependentUpon>DetailInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\EmployeesUC.resx">
       <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\EmployeeTimeSheet.resx">
+      <DependentUpon>EmployeeTimeSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
@@ -392,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\CheckBoxUC.resx">
       <DependentUpon>CheckBoxUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\TimeSheetUC.resx">
+      <DependentUpon>TimeSheetUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\WareHouseUC.resx">
       <DependentUpon>WareHouseUC.cs</DependentUpon>
@@ -620,6 +647,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+    <None Include="Resources\calendar-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

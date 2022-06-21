@@ -33,20 +33,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvManageEmployee = new System.Windows.Forms.DataGridView();
+            this.btnTimeSheetEmployee = new System.Windows.Forms.Button();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvManageEmployee = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.btnTimeSheetEmployee);
             this.panel1.Controls.Add(this.btnDeleteEmployee);
             this.panel1.Controls.Add(this.btnAddEmployee);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -56,50 +58,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(75, 700);
             this.panel1.TabIndex = 2;
-            // 
-            // btnDeleteEmployee
-            // 
-            this.btnDeleteEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDeleteEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteEmployee.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteEmployee.Image = global::PBL3_Remake.Properties.Resources.Removeperson_48;
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(0, 146);
-            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(75, 65);
-            this.btnDeleteEmployee.TabIndex = 7;
-            this.btnDeleteEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
-            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
-            // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnAddEmployee.Image = global::PBL3_Remake.Properties.Resources.Addperson_48;
-            this.btnAddEmployee.Location = new System.Drawing.Point(0, 81);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(75, 65);
-            this.btnAddEmployee.TabIndex = 6;
-            this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 81);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -159,6 +117,67 @@
             this.dgvManageEmployee.TabIndex = 4;
             this.dgvManageEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManageEmployee_CellContentClick);
             // 
+            // btnTimeSheetEmployee
+            // 
+            this.btnTimeSheetEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTimeSheetEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnTimeSheetEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimeSheetEmployee.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimeSheetEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnTimeSheetEmployee.Image = global::PBL3_Remake.Properties.Resources.calendar_48;
+            this.btnTimeSheetEmployee.Location = new System.Drawing.Point(0, 211);
+            this.btnTimeSheetEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimeSheetEmployee.Name = "btnTimeSheetEmployee";
+            this.btnTimeSheetEmployee.Size = new System.Drawing.Size(75, 65);
+            this.btnTimeSheetEmployee.TabIndex = 8;
+            this.btnTimeSheetEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimeSheetEmployee.UseVisualStyleBackColor = true;
+            this.btnTimeSheetEmployee.Click += new System.EventHandler(this.btnTimeSheetEmployee_Click);
+            // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeleteEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteEmployee.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteEmployee.Image = global::PBL3_Remake.Properties.Resources.Removeperson_48;
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(0, 146);
+            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(75, 65);
+            this.btnDeleteEmployee.TabIndex = 7;
+            this.btnDeleteEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddEmployee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployee.Image = global::PBL3_Remake.Properties.Resources.Addperson_48;
+            this.btnAddEmployee.Location = new System.Drawing.Point(0, 81);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(75, 65);
+            this.btnAddEmployee.TabIndex = 6;
+            this.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // EmployeesUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -169,9 +188,9 @@
             this.Size = new System.Drawing.Size(1200, 700);
             this.Load += new System.EventHandler(this.EmployeesUC_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +203,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvManageEmployee;
+        private System.Windows.Forms.Button btnTimeSheetEmployee;
     }
 }

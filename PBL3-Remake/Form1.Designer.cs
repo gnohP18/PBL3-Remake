@@ -28,33 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pn = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.timeSheetUC = new GUI.frmGUIUserControl.TimeSheetUC();
             this.SuspendLayout();
             // 
-            // pn
+            // button1
             // 
-            this.pn.AutoScroll = true;
-            this.pn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn.Location = new System.Drawing.Point(0, 0);
-            this.pn.Name = "pn";
-            this.pn.Size = new System.Drawing.Size(765, 499);
-            this.pn.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(445, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timeSheetUC
+            // 
+            this.timeSheetUC.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.timeSheetUC.Location = new System.Drawing.Point(148, 35);
+            this.timeSheetUC.Name = "timeSheetUC";
+            this.timeSheetUC.Size = new System.Drawing.Size(618, 391);
+            this.timeSheetUC.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 499);
-            this.Controls.Add(this.pn);
+            this.ClientSize = new System.Drawing.Size(931, 493);
+            this.Controls.Add(this.timeSheetUC);
+            this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel pn;
+        private System.Windows.Forms.Button button1;
+        private GUI.frmGUIUserControl.TimeSheetUC timeSheetUC;
     }
 }

@@ -23,7 +23,7 @@ namespace BLL
         public Dictionary<CaLam, bool> GetAllCaLamByID_NhanVien(int ID_NhanVien)
         {
             Dictionary<CaLam, bool> data = new Dictionary<CaLam, bool>();
-            if (NhanVienBLL.Instance.GetEmployeeByID_Employee(ID_NhanVien) == null)
+            if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien) == null)
             {
                 foreach (CaLam i in dALQLNH.CaLams.ToList()) data.Add(i, false);
             }

@@ -42,7 +42,7 @@ namespace BLL
                 {
                     HoaDon_View hdv = new HoaDon_View();
                     hdv.ID_HoaDon = i.ID_HoaDon;
-                    hdv.TenNhanVien = NhanVienBLL.Instance.GetEmployeeByID_Employee(i.ID_User).TenUser;
+                    hdv.TenNhanVien = NhanVienBLL.Instance.GetNhanVienByID(i.ID_User).TenUser;
                     hdv.TenKhachHang = KhachHangBLL.Instance.GetGuestByIDGuest(i.ID_KhachHang).TenKhachHang;
                     hdv.TienQuyDoiTuDiemTichLuy = i.TienQuyDoiTuDiemTichLuy;
                     hdv.NgayLap = i.NgayLap;

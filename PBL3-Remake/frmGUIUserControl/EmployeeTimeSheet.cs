@@ -9,7 +9,7 @@ namespace GUI.frmGUIUserControl
     {
         public EmployeeTimeSheet(int User_ID)
         {
-            _User = BLL.NhanVienBLL.Instance.GetEmployeeByID_Employee(User_ID);
+            _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(User_ID);
             User_Position = BLL.NhanVienBLL.Instance.GetPositionByID_Position(User_ID);
             if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(User_ID) != null)
             {

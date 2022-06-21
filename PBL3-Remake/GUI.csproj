@@ -46,6 +46,9 @@
     <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.Barcode.v21.2, Version=21.2.20212.46, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v21.2, Version=21.2.20212.46, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Portable.Core.v21.2, Version=21.2.20212.46, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
@@ -93,6 +96,12 @@
     </Compile>
     <Compile Include="frmGUIManager\frmMainManager.Designer.cs">
       <DependentUpon>frmMainManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\DetailTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\DetailTable.Designer.cs">
+      <DependentUpon>DetailTable.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUISeller\DishForOrdering.cs">
       <SubType>UserControl</SubType>
@@ -294,6 +303,9 @@
     <EmbeddedResource Include="frmGUIManager\frmMainManager.resx">
       <DependentUpon>frmMainManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\DetailTable.resx">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\DishForOrdering.resx">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +399,7 @@
     <EmbeddedResource Include="NoticeBox.resx">
       <DependentUpon>NoticeBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -601,6 +614,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\networking-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detail-table-icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

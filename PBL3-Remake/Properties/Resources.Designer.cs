@@ -173,6 +173,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cloud_database_32 {
             get {
                 object obj = ResourceManager.GetObject("cloud-database-32", resourceCulture);
@@ -236,6 +246,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap des_32 {
             get {
                 object obj = ResourceManager.GetObject("des-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap detail_table_icons {
+            get {
+                object obj = ResourceManager.GetObject("detail_table_icons", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

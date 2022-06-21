@@ -232,7 +232,7 @@
   <data name="expired-food-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expired-food-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-   <data name="wallet-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="wallet-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wallet-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -300,5 +300,11 @@
   </data>
   <data name="restaurant -128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurant -128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="detail_table_icons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\detail-table-icons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

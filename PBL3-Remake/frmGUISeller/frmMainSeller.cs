@@ -44,8 +44,6 @@ namespace GUI.frmGUISeller
             cbbStatusTable.Items.Add("All");
             cbbStatusTable.Items.Add("Emty");
             cbbStatusTable.Items.Add("Busy");
-            cbbStatusDish.Items.Add("No ready");
-            cbbStatusDish.Items.Add("Done");
             cbbStatusTable.SelectedIndex = 0;
         }
 
@@ -164,14 +162,14 @@ namespace GUI.frmGUISeller
             dgvStatusDish.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStatusDish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
-        private void cbbStatusDish_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            RemoveTable();
-            if (cbbStatusDish.SelectedIndex == 0)
-                LoadDishByStatusDish(0);
-            else if (cbbStatusDish.SelectedIndex == 1)
-                LoadDishByStatusDish(1);
-        }
+        //private void cbbStatusDish_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    RemoveTable();
+        //    if (cbbStatusDish.SelectedIndex == 0)
+        //        LoadDishByStatusDish(0);
+        //    else if (cbbStatusDish.SelectedIndex == 1)
+        //        LoadDishByStatusDish(1);
+        //}
         private void dgvStatusDish_CellsClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex != 0)
@@ -187,5 +185,12 @@ namespace GUI.frmGUISeller
         {
 
         }
+
+
+        private void btnDetailTable_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -280,6 +280,12 @@
     <Compile Include="frmGUIUserControl\CheckBoxUC.Designer.cs">
       <DependentUpon>CheckBoxUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\TimeSheetUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\TimeSheetUC.Designer.cs">
+      <DependentUpon>TimeSheetUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\WareHouseUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -398,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\CheckBoxUC.resx">
       <DependentUpon>CheckBoxUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\TimeSheetUC.resx">
+      <DependentUpon>TimeSheetUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\WareHouseUC.resx">
       <DependentUpon>WareHouseUC.cs</DependentUpon>

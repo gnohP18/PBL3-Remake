@@ -52,6 +52,7 @@ namespace BLL
                 employee.ID_User = i.ID_User;
                 employee.User_Name = i.TenUser;
                 employee.User_Position = i.ChucVu.TenChucVu;
+                employee.Phone_number = i.SDT;
                 employee.DateStartWork = i.NgayBatDauLam;
                 employee.DateOfBirth = i.NgaySinh;
                 employee.UserNameLogin = i.Username;
@@ -66,6 +67,10 @@ namespace BLL
                     else
                     {
                         employee.Status = "Offline";
+                    }
+                    if (us.DaXoa == true)
+                    {
+                        employee.Status = "Remove";
                     }
                 }
                 list.Add(employee);
@@ -100,10 +105,6 @@ namespace BLL
         public List<User> GetAllUser()
         {
             return dALQLNH.Users.ToList();
-        }
-        public User GetUserByID_User(int ID_User)
-        {
-            return dALQLNH.Users.Where(p => p.ID_User == ID_User).FirstOrDefault();
         }
         public List<User> GetAllNhanVienCoLichLamViecByTime()
         {
@@ -176,6 +177,19 @@ namespace BLL
             else temp[indexDay * 2 + SangChieu] = (char)(MinuteLate / 15 + 64);
             bangChamCong.LichSuLamViec = temp.ToString();
             dALQLNH.SaveChanges();
+        }
+        public void DeleteEmployee(int ID_User)
+        {
+            GetEmployeeByID_Employee(ID_User).DaXoa = true;
+            dALQLNH.SaveChanges();
+        }
+        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User)
+        {
+            return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User).FirstOrDefault();
+        }
+        public ChucVu GetPositionByID_Position(int ID_Position)
+        {
+            return dALQLNH.ChucVus.Where(p => p.ID_ChucVu == ID_Position).FirstOrDefault();
         }
     }
 }

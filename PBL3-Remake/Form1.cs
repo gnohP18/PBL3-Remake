@@ -1,18 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DTO;
-using BLL;
-using GUI.frmGUISeller;
 using System.Threading;
+using System.Windows.Forms;
 
-namespace PBL3_Remake
+namespace GUI
 {
     public partial class Form1 : Form
     {
@@ -21,14 +12,17 @@ namespace PBL3_Remake
             InitializeComponent();
             //LoadBanByTinhTrangBanVaTang(-1, 1);
             Control.CheckForIllegalCrossThreadCalls = false;
+            Test();
         }
         void LoadBanByTinhTrangBanVaTang(int st, int fl)
         {
             //if (!this.IsHandleCreated) return;
-            Thread thread1 = new Thread(new ThreadStart(() => {
+            Thread thread1 = new Thread(new ThreadStart(() =>
+            {
                 for (int i = 0; i < 5; i++)
                 {
-                    Thread thread = new Thread(new ThreadStart(() => {
+                    Thread thread = new Thread(new ThreadStart(() =>
+                    {
                         for (int j = 0; j < 5; j++)
                             Console.WriteLine(i + ": " + j + "");
                     }))
@@ -42,16 +36,42 @@ namespace PBL3_Remake
         private void button1_Click(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < 5; i++)
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Task thread = new Task(() =>
+            //    {
+            //        for (int j = 0; j < 5; j++)
+            //            Console.WriteLine(i + ": " + j + "");
+            //    });
+            //    thread.Start();
+            //}    
+            //Sheet = new List<List<string>>();
+
+        }
+        private void LoadDateTimeSheet()
+        {
+
+        }
+        private void Test()
+        {
+            string sheet1 = "010101010101010A01010101010101010101010101010101010A0101010101";
+            ////Console.WriteLine(sheet1);
+            char[] chars1 = sheet1.ToCharArray();
+            List<string> ngay = new List<string>();
+            //int dem = 0;
+            for (int i = 0; i < chars1.Length; i++)
             {
-                Task thread = new Task(() =>
-                {
-                    for (int j = 0; j < 5; j++)
-                        Console.WriteLine(i + ": " + j + "");
-                });
-                thread.Start();
-            }    
-           
+                ngay.Add(chars1[i].ToString());
+            }
+            //foreach (string s in ngay)
+            //{
+            //    Console.WriteLine(dem + " " + s);
+            //    dem++;
+            //}
+            //foreach (char s in ngay[1])
+            //{
+            //    Console.WriteLine(s + "...");
+            //}
         }
     }
 }

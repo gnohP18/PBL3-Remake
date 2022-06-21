@@ -72,6 +72,14 @@ namespace GUI.frmGUIUserControl
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
+        private void btnTimeSheetEmployee_Click(object sender, EventArgs e)
+        {
+            int index = dgvManageEmployee.CurrentCell.RowIndex;
+            int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
+
+        }
         #endregion
+
+
     }
 }

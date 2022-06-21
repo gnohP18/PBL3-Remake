@@ -21,7 +21,7 @@ namespace GUI.frmGUIUserControl
         {
             if (ID_User != -1)
             {
-                _ID_User = BLL.NhanVienBLL.Instance.GetUserByID_User(ID_User);
+                _ID_User = BLL.NhanVienBLL.Instance.GetEmployeeByID_Employee(ID_User);
                 flag = 0;
             }
             else if (ID_User == -1)
@@ -31,7 +31,7 @@ namespace GUI.frmGUIUserControl
             else if (ID_User == 0)
             {
                 flag = 2;
-                btnDeleteEmployee.Visible = true;
+                btnRefresh.Visible = true;
             }
             InitializeComponent();
             GUI();
@@ -66,12 +66,6 @@ namespace GUI.frmGUIUserControl
             }
             cbbPosition.AutoCompleteCustomSource = autoNamePosition;
         }
-        private void Setuppanel(Panel pn)
-        {
-            pn.Width = 20;
-            pn.Height = 20;
-
-        }
         private void GUI()
         {
             if (flag == 0)
@@ -82,12 +76,12 @@ namespace GUI.frmGUIUserControl
                 dtpDayOfBirth.Value = _ID_User.NgaySinh;
                 dtpDayStartWork.Value = _ID_User.NgayBatDauLam;
                 dtpDayStartWork.Enabled = false;
+                txtPhonenumber.Text = _ID_User.SDT;
                 lblNumberOfDayWork.Text = BLL.NhanVienBLL.Instance.GetNumberOfDayWorkByID_User(_ID_User.ID_User).ToString();
                 pBUser.Image = byteArrayToImage(_ID_User.AnhUser);
                 cbbPosition.Text = _ID_User.ChucVu.TenChucVu;
                 txtUserNameLogin.Text = _ID_User.Username;
                 txtPasswordLogin.Text = _ID_User.Password;
-                TestWithTableLayoutPanel();
             }
             if (flag == 1)
             {
@@ -98,6 +92,7 @@ namespace GUI.frmGUIUserControl
                 txtNameEmployee.Text = "";
                 dtpDayOfBirth.Value = DateTime.Now;
                 dtpDayStartWork.Value = DateTime.Now.AddDays(1);
+                txtPhonenumber.Text = "";
                 lblNumberOfDayWork.Text = "0";
                 txtCIEmployee.Enabled = true;
                 txtNameEmployee.Enabled = true;
@@ -106,59 +101,6 @@ namespace GUI.frmGUIUserControl
                 btnChangePicUser.Enabled = true;
                 dtpDayOfBirth.Enabled = true;
                 cbbPosition.Enabled = true;
-            }
-        }
-        private void TestWithTableLayoutPanel()
-        {
-            TableLayoutPanel tpn3 = new TableLayoutPanel();
-            tpn3.Width = 600;
-            tpn3.Height = 170;
-            tpn3.AutoScroll = true;
-            this.Controls.Add(tpn3);
-            tpn3.Location = new Point(20, 270);
-            tpn3.ColumnCount = 14;
-            tpn3.RowCount = 6;
-            string[] thusangchieu = { "T2S", "T2C", "T3S", "T3C", "T4S", "T4C", "T5S", "T5C", "T6S", "T6C", "T7S", "T7C", "CNS", "CNC", };
-            for (int i = 0; i < tpn3.ColumnCount; i++)
-            {
-                Label label = new Label();
-                label.Text = thusangchieu[i];
-                label.AutoSize = false;
-                label.TextAlign = ContentAlignment.MiddleCenter;
-                label.Size = new Size(35, 25);
-                label.BackColor = Color.White;
-                tpn3.Controls.Add(label);
-            }
-            if (BLL.NhanVienBLL.Instance.GetTimeSheetsByID_User(_ID_User.ID_User) != null)
-            {
-                char[] cs = BLL.NhanVienBLL.Instance.GetTimeSheetsByID_User(_ID_User.ID_User).LichSuLamViec.ToCharArray();
-                foreach (char c in cs)
-                {
-                    if (c == '0')
-                    {
-                        Panel pnred = new Panel();
-                        pnred.BackColor = Color.Red;
-                        Setuppanel(pnred);
-                        tpn3.Controls.Add(pnred);
-                        Console.Write("Red ");
-                    }
-                    if (c == '1')
-                    {
-                        Panel pngreen = new Panel();
-                        pngreen.BackColor = Color.Green;
-                        Setuppanel(pngreen);
-                        tpn3.Controls.Add(pngreen);
-                        Console.Write("Green ");
-                    }
-                    if (c == 'A')
-                    {
-                        Panel panorange = new Panel();
-                        panorange.BackColor = Color.Orange;
-                        Setuppanel(panorange);
-                        tpn3.Controls.Add(panorange);
-                        Console.Write("Orange ");
-                    }
-                }
             }
         }
         #endregion
@@ -217,11 +159,26 @@ namespace GUI.frmGUIUserControl
             d();
             this.Close();
         }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtCIEmployee.Text = "";
+            txtPasswordLogin.Text = "";
+            txtUserNameLogin.Text = "";
+            txtNameEmployee.Text = "";
+            dtpDayOfBirth.Value = DateTime.Now;
+            dtpDayStartWork.Value = DateTime.Now.AddDays(1);
+            txtPhonenumber.Text = "";
+            lblNumberOfDayWork.Text = "0";
+            txtCIEmployee.Enabled = true;
+            txtNameEmployee.Enabled = true;
+            txtPasswordLogin.Enabled = true;
+            txtUserNameLogin.Enabled = true;
+            btnChangePicUser.Enabled = true;
+            dtpDayOfBirth.Enabled = true;
+            cbbPosition.Enabled = true;
+        }
         #endregion
 
-        private void btnDeleteEmployee_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

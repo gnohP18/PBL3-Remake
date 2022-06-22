@@ -119,7 +119,6 @@
             this.btnAttendance.Text = "Attendance";
             this.btnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAttendance.UseVisualStyleBackColor = false;
-            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
             // label2
             // 

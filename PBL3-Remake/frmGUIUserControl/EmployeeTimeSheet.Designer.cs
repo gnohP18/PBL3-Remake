@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID_User = new System.Windows.Forms.Label();
@@ -51,8 +51,10 @@
             this.lblPosition = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblTotalSalary = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnPre = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DayChart)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(23, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 20);
+            this.label3.Size = new System.Drawing.Size(123, 26);
             this.label3.TabIndex = 26;
             this.label3.Text = "Time sheet";
             // 
@@ -77,7 +79,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(133, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 15);
+            this.label1.Size = new System.Drawing.Size(25, 19);
             this.label1.TabIndex = 27;
             this.label1.Text = "ID";
             // 
@@ -89,7 +91,7 @@
             this.lblID_User.ForeColor = System.Drawing.Color.Black;
             this.lblID_User.Location = new System.Drawing.Point(155, 8);
             this.lblID_User.Name = "lblID_User";
-            this.lblID_User.Size = new System.Drawing.Size(18, 15);
+            this.lblID_User.Size = new System.Drawing.Size(25, 19);
             this.lblID_User.TabIndex = 28;
             this.lblID_User.Text = "ID";
             // 
@@ -101,7 +103,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(25, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 29;
             this.label2.Text = "Name";
             // 
@@ -113,47 +115,47 @@
             this.lblName_User.ForeColor = System.Drawing.Color.Black;
             this.lblName_User.Location = new System.Drawing.Point(70, 27);
             this.lblName_User.Name = "lblName_User";
-            this.lblName_User.Size = new System.Drawing.Size(16, 15);
+            this.lblName_User.Size = new System.Drawing.Size(20, 19);
             this.lblName_User.TabIndex = 30;
             this.lblName_User.Text = "A";
             // 
             // DayChart
             // 
             this.DayChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            chartArea2.AlignWithChartArea = "ChartArea1";
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            chartArea2.Name = "ChartArea1";
-            this.DayChart.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            legend2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.Title = "Time Sheet";
-            legend2.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            legend2.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
-            legend2.TitleSeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.DayChart.Legends.Add(legend2);
+            chartArea3.AlignWithChartArea = "ChartArea1";
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            chartArea3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            chartArea3.Name = "ChartArea1";
+            this.DayChart.ChartAreas.Add(chartArea3);
+            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            legend3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.Title = "Time Sheet";
+            legend3.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            legend3.TitleSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.Line;
+            legend3.TitleSeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
+            this.DayChart.Legends.Add(legend3);
             this.DayChart.Location = new System.Drawing.Point(24, 44);
             this.DayChart.Name = "DayChart";
             this.DayChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "Series0";
-            series2.Points.Add(dataPoint2);
-            this.DayChart.Series.Add(series2);
+            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            series3.BorderWidth = 3;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.Legend = "Legend1";
+            series3.Name = "Series0";
+            series3.Points.Add(dataPoint3);
+            this.DayChart.Series.Add(series3);
             this.DayChart.Size = new System.Drawing.Size(356, 330);
             this.DayChart.TabIndex = 32;
             this.DayChart.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.ForeColor = System.Drawing.Color.White;
-            title2.Name = "Title1";
-            title2.Text = "Statistic time sheet";
-            this.DayChart.Titles.Add(title2);
+            title3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.ForeColor = System.Drawing.Color.White;
+            title3.Name = "Title1";
+            title3.Text = "Statistic time sheet";
+            this.DayChart.Titles.Add(title3);
             // 
             // btnOK
             // 
@@ -170,7 +172,7 @@
             this.btnOK.TabIndex = 35;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);            
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // lblAbsent
             // 
@@ -192,7 +194,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(21, 377);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 15);
+            this.label5.Size = new System.Drawing.Size(57, 19);
             this.label5.TabIndex = 36;
             this.label5.Text = "Absent";
             // 
@@ -216,7 +218,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(21, 393);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 15);
+            this.label6.Size = new System.Drawing.Size(91, 19);
             this.label6.TabIndex = 38;
             this.label6.Text = "Attendance";
             // 
@@ -240,7 +242,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(21, 410);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 15);
+            this.label8.Size = new System.Drawing.Size(41, 19);
             this.label8.TabIndex = 40;
             this.label8.Text = "Late";
             // 
@@ -264,7 +266,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(193, 393);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 15);
+            this.label7.Size = new System.Drawing.Size(134, 19);
             this.label7.TabIndex = 44;
             this.label7.Text = "Coefficients salary";
             // 
@@ -288,7 +290,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(193, 377);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 15);
+            this.label10.Size = new System.Drawing.Size(66, 19);
             this.label10.TabIndex = 42;
             this.label10.Text = "Position";
             // 
@@ -303,18 +305,6 @@
             this.panel1.Size = new System.Drawing.Size(186, 46);
             this.panel1.TabIndex = 46;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
-            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 15);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Total";
-            // 
             // lblTotalSalary
             // 
             this.lblTotalSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
@@ -326,6 +316,52 @@
             this.lblTotalSalary.TabIndex = 47;
             this.lblTotalSalary.Text = "F";
             this.lblTotalSalary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(185)))));
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(3, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 19);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Total";
+            // 
+            // btnPre
+            // 
+            this.btnPre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnPre.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnPre.FlatAppearance.BorderSize = 2;
+            this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPre.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnPre.Location = new System.Drawing.Point(462, 438);
+            this.btnPre.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPre.Name = "btnPre";
+            this.btnPre.Size = new System.Drawing.Size(67, 19);
+            this.btnPre.TabIndex = 35;
+            this.btnPre.Text = "Previous";
+            this.btnPre.UseVisualStyleBackColor = false;
+            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnNext.FlatAppearance.BorderSize = 2;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNext.Location = new System.Drawing.Point(676, 438);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(67, 19);
+            this.btnNext.TabIndex = 35;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // EmployeeTimeSheet
             // 
@@ -343,6 +379,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblAbsent);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPre);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.DayChart);
             this.Controls.Add(this.lblName_User);
@@ -382,5 +420,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTotalSalary;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnPre;
+        private System.Windows.Forms.Button btnNext;
     }
 }

@@ -24,5 +24,9 @@ namespace BLL
         {
             return dALQLNH.Vouchers.ToList();
         }
+        public Voucher GetVoucherByMa(string Ma)
+        {
+            return dALQLNH.Vouchers.Find(Ma);
+        }
     }
 }

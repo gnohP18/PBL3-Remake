@@ -9,10 +9,12 @@ namespace GUI.frmGUISeller
     public partial class TableForOrdering : UserControl
     {
         public frmMainSeller.Mydel d;
-        public TableForOrdering(Ban ban)
+        int ID_NhanVien;
+        public TableForOrdering(Ban ban,int ID_NhanVien)
         {
             InitializeComponent();
             this.ban = ban;
+            this.ID_NhanVien = ID_NhanVien;
             GUITable();
         }
         Ban ban;
@@ -39,7 +41,7 @@ namespace GUI.frmGUISeller
 
         private void btnMenuOrder_Click(object sender, System.EventArgs e)
         {
-            frmOrder frm = new frmOrder(ban.ID_Ban);
+            frmOrder frm = new frmOrder(ban.ID_Ban,ID_NhanVien);
             frm.d = d;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
@@ -47,7 +49,7 @@ namespace GUI.frmGUISeller
 
         private void btnPay_Click(object sender, System.EventArgs e)
         {
-            frmPay frm = new frmPay(ban.ID_Ban);
+            frmPay frm = new frmPay(ban.ID_Ban,ID_NhanVien);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

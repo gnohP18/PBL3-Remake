@@ -80,6 +80,10 @@ namespace BLL
             }
             return list;
         }
+        public User GetNhanVienByUserName(string Username)
+        {
+            return dALQLNH.Users.Where(s => s.Username == Username).FirstOrDefault();
+        }
         public List<ChucVu> GetAllPosition()
         {
             return dALQLNH.ChucVus.ToList();
@@ -204,9 +208,13 @@ namespace BLL
             GetNhanVienByID(ID_User).DaXoa = true;
             dALQLNH.SaveChanges();
         }
-        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User)
+        public DateTime GetNgayChamCongHienTai()
         {
-            return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User).FirstOrDefault();
+            return dALQLNH.ThongTinNhaHangs.Find(1).NgayBatDauChamCongHienTai;
+        }
+        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User,DateTime date)
+        {
+            return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User && c.NgayDauTienTinhCong == date).FirstOrDefault();
         }
         public ChucVu GetPositionByID_Position(int ID_Position)
         {

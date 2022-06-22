@@ -12,7 +12,7 @@ namespace GUI.frmGUIUserControl
         #region Local variable
         public delegate void Mydel();
         public Mydel d { get; set; }
-        private User _ID_User { get; set; }
+        private User user { get; set; }
         private int flag { get; set; }
         private Image img;
         private List<string> ListNamePosition = new List<string>();
@@ -21,7 +21,7 @@ namespace GUI.frmGUIUserControl
         {
             if (ID_User != -1)
             {
-                _ID_User = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
+                user = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
                 flag = 0;
             }
             else if (ID_User == -1)
@@ -70,18 +70,17 @@ namespace GUI.frmGUIUserControl
         {
             if (flag == 0)
             {
-                txtIDEmployee.Text = _ID_User.ID_User.ToString();
-                txtCIEmployee.Text = _ID_User.CMND_CCCD.ToString();
-                txtNameEmployee.Text = _ID_User.TenUser;
-                dtpDayOfBirth.Value = _ID_User.NgaySinh;
-                dtpDayStartWork.Value = _ID_User.NgayBatDauLam;
+                txtIDEmployee.Text = user.ID_User.ToString();
+                txtCIEmployee.Text = user.CMND_CCCD.ToString();
+                txtNameEmployee.Text = user.TenUser;
+                dtpDayOfBirth.Value = user.NgaySinh;
+                dtpDayStartWork.Value = user.NgayBatDauLam;
                 dtpDayStartWork.Enabled = false;
-                txtPhonenumber.Text = _ID_User.SDT;
-                lblNumberOfDayWork.Text = BLL.NhanVienBLL.Instance.GetNumberOfDayWorkByID_User(_ID_User.ID_User).ToString();
-                pBUser.Image = byteArrayToImage(_ID_User.AnhUser);
-                cbbPosition.Text = _ID_User.ChucVu.TenChucVu;
-                txtUserNameLogin.Text = _ID_User.Username;
-                txtPasswordLogin.Text = _ID_User.Password;
+                txtPhonenumber.Text = user.SDT;
+                pBUser.Image = byteArrayToImage(user.AnhUser);
+                cbbPosition.Text = user.ChucVu.TenChucVu;
+                txtUserNameLogin.Text = user.Username;
+                txtPasswordLogin.Text = user.Password;
             }
             if (flag == 1)
             {
@@ -93,7 +92,6 @@ namespace GUI.frmGUIUserControl
                 dtpDayOfBirth.Value = DateTime.Now;
                 dtpDayStartWork.Value = DateTime.Now.AddDays(1);
                 txtPhonenumber.Text = "";
-                lblNumberOfDayWork.Text = "0";
                 txtCIEmployee.Enabled = true;
                 txtNameEmployee.Enabled = true;
                 txtPasswordLogin.Enabled = true;
@@ -118,6 +116,7 @@ namespace GUI.frmGUIUserControl
             cbbPosition.Enabled = false;
             btnChangePicUser.Enabled = false;
             dtpDayOfBirth.Enabled = false;
+            btnShift.Enabled = false;
             AddNamePosition();
         }
 
@@ -128,6 +127,7 @@ namespace GUI.frmGUIUserControl
             cbbPosition.Enabled = true;
             dtpDayOfBirth.Enabled = true;
             btnChangePicUser.Enabled = true;
+            btnShift.Enabled = true;
         }
 
         private void btnChangePicUser_Click(object sender, EventArgs e)
@@ -168,7 +168,6 @@ namespace GUI.frmGUIUserControl
             dtpDayOfBirth.Value = DateTime.Now;
             dtpDayStartWork.Value = DateTime.Now.AddDays(1);
             txtPhonenumber.Text = "";
-            lblNumberOfDayWork.Text = "0";
             txtCIEmployee.Enabled = true;
             txtNameEmployee.Enabled = true;
             txtPasswordLogin.Enabled = true;
@@ -177,8 +176,13 @@ namespace GUI.frmGUIUserControl
             dtpDayOfBirth.Enabled = true;
             cbbPosition.Enabled = true;
         }
+
         #endregion
 
-
+        private void btnShift_Click(object sender, EventArgs e)
+        {
+            frmGUIManager.frmShift frm = new frmGUIManager.frmShift(user.ID_User);
+            frm.ShowDialog();
+        }
     }
 }

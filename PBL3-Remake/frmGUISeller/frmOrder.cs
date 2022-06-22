@@ -16,9 +16,11 @@ namespace GUI.frmGUISeller
         private int IDLoaiMonAn = 1;
         List<MonAn_View> listMonAnViewDaDat;
         List<MonAn_View> listMonAnViewDangDat;
-        public frmOrder(int id)
+        int ID_NhanVien;
+        public frmOrder(int id,int ID_NhanVien)
         {
             IDTable = id;
+            this.ID_NhanVien = ID_NhanVien;
             InitializeComponent();
             MonAnBLL.Instance.UpdateTrangThaiMonAn(NguyenLieuBLL.Instance.GetThongTinLuongNguyenLieuHienTai());
             listMonAnViewDangDat = new List<MonAn_View>();
@@ -163,13 +165,14 @@ namespace GUI.frmGUISeller
         {
             //btnPay.Enabled = false;
             RemoveDish();
-            frmPay frm = new frmPay(IDTable);
+            frmPay frm = new frmPay(IDTable,ID_NhanVien);
             frm.d = new frmPay.Mydel(CloseOrder);
             frm.MdiParent = this;
             pnDish.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
             pnDish.AutoScroll = false;
             frm.Show();
+            d(-1, 1);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -178,6 +181,7 @@ namespace GUI.frmGUISeller
             if (listMonAnViewDangDat.Count > 0 && BanBLL.Instance.GetBanByID_Ban(IDTable).TinhTrangBan == 0)
                 BanBLL.Instance.ChangeStatusTable(IDTable, IDTable);
             this.Close();
+            d(-1, 1);
         }
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -195,13 +199,16 @@ namespace GUI.frmGUISeller
                 MonAnBLL.Instance.UpdateTrangThaiMonAn(NguyenLieuBLL.Instance.GetThongTinLuongNguyenLieuHienTai(), listMonAnViewDangDat);
                 LoadDataGridView();
             }
+
         }
 
         private void btnCollabTable_Click(object sender, EventArgs e)
         {
             frmCollaborTable frm = new frmCollaborTable(BanBLL.Instance.GetBanByID_Ban(IDTable));
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            frm.ShowDialog();
+            listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
+            LoadDataGridView();
         }
 
         private void CloseOrder()

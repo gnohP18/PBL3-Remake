@@ -13,13 +13,14 @@ namespace GUI.frmGUISeller
         private int statustb = -1;
         public delegate void Mydel(int st, int fl);
         public Mydel d { get; set; }
-        private User _user { get; set; }
-        public frmMainSeller()
+        private int ID_NhanVien;
+        public frmMainSeller(int ID_NhanVien)
         {
             //_user = user;
             InitializeComponent();
             SetCbb();
             d = new Mydel(LoadBanByTinhTrangBanVaTang);
+            this.ID_NhanVien = ID_NhanVien;
         }
 
         private void frmMainSeller_Load(object sender, EventArgs e)
@@ -29,14 +30,8 @@ namespace GUI.frmGUISeller
             this.StartPosition = FormStartPosition.CenterScreen;
             pnTable.AutoScroll = true;
             LoadBanByTinhTrangBanVaTang(-1, 1);
-            //if (_user.ChucVu.ID_ChucVu == 3)
-            //{
-            //    btnRollUp.Visible = true;
-            //}
-            //else
-            //{
-            //    btnRollUp.Visible = false;
-            //}
+            if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).ID_ChucVu == 3) btnAttend.Visible = true;
+            else btnAttend.Visible = false;
         }
 
         void SetCbb()
@@ -63,7 +58,7 @@ namespace GUI.frmGUISeller
             int dem1 = 0;
             foreach (Ban i in listBan)
             {
-                tb[dem1] = new TableForOrdering(i);
+                tb[dem1] = new TableForOrdering(i,ID_NhanVien);
                 tb[dem1].d = d;
                 int ttb = i.TinhTrangBan;
                 dem1++;
@@ -133,59 +128,6 @@ namespace GUI.frmGUISeller
         {
             this.Close();
         }
-        DataGridView dgvStatusDish;
-        private void LoadDishByStatusDish(int st)
-        {
-            dgvStatusDish = new DataGridView();
-            pnTable.Controls.Add(dgvStatusDish);
-            dgvStatusDish.Dock = DockStyle.Fill;
-            Image NotReadyImage = PBL3_Remake.Properties.Resources.uncheckedRed;
-            Image ReadyImage = PBL3_Remake.Properties.Resources.checkedGreen;
-            dgvStatusDish.DataSource = BanBLL.Instance.GetAllDetailTableByStatus(st);
-            DataGridViewImageColumn imgcol = new DataGridViewImageColumn();
-            dgvStatusDish.Columns.Add(imgcol);
-            foreach (DataGridViewRow i in dgvStatusDish.Rows)
-            {
-                if (i.Cells[4].Value.ToString() == "1")
-                {
-                    imgcol.Image = ReadyImage;
-                }
-                if (i.Cells[4].Value.ToString() == "0")
-                {
-                    imgcol.Image = NotReadyImage;
-                }
-            }
-            dgvStatusDish.Columns[5].Visible = false;
-            dgvStatusDish.Columns[6].Visible = false;
-            dgvStatusDish.CellClick += dgvStatusDish_CellsClick;
-            dgvStatusDish.ReadOnly = true;
-            dgvStatusDish.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStatusDish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-        }
-        //private void cbbStatusDish_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    RemoveTable();
-        //    if (cbbStatusDish.SelectedIndex == 0)
-        //        LoadDishByStatusDish(0);
-        //    else if (cbbStatusDish.SelectedIndex == 1)
-        //        LoadDishByStatusDish(1);
-        //}
-        private void dgvStatusDish_CellsClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != 0)
-            {
-                int idctb = Convert.ToInt32(dgvStatusDish.SelectedRows[0].Cells["ID_ChiTietBan"].Value.ToString());
-                frmStatusDish frm = new frmStatusDish(idctb);
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
-            }
-        }
-
-        private void btnAttendance_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void btnDetailTable_Click(object sender, EventArgs e)
         {

@@ -40,7 +40,7 @@ namespace GUI.frmGUIManager
         {
             if (ListIDCalam.Count > 0)
             {
-                //CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
+                CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
                 this.Close();
             }
             else

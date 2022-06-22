@@ -10,17 +10,23 @@ namespace GUI.frmGUIUserControl
         public EmployeeTimeSheet(int User_ID)
         {
             _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(User_ID);
-
-            if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(User_ID) != null)
-            {
-                TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(User_ID).LichSuLamViec;
-            };
+            date = BLL.NhanVienBLL.Instance.GetNgayChamCongHienTai();
+            LoadTimeSheet();
             InitializeComponent();
-            SetupDataForChart(DateTime.Now);
+            SetupDataForChart(date);
             SetupSalary();
             SetupTimeSheetUC();
         }
+        void LoadTimeSheet()
+        {
+            if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date) != null)
+            {
+                TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
+            }
+            else TimeSheet = null;
+        }
         #region Local Variable
+        private DateTime date { get; set; }
         private User _User { get; set; }
         private ChucVu User_Position { get; set; }
         private int NumberOfDateAttendance { get; set; }
@@ -57,9 +63,6 @@ namespace GUI.frmGUIUserControl
                 if ('A' <= c && c <= 'Z') NumberOfDateLate++;
             }
             NumberOfDateAttendance += NumberOfDateLate;
-            Console.WriteLine("Absent " + NumberOfDateAbsent);
-            Console.WriteLine("Attendance " + NumberOfDateAttendance);
-            Console.WriteLine("Late " + NumberOfDateLate);
             Dc_v = new List<DayChart_view>();
             Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateAttendance, Text = "Attendance" });
             Dc_v.Add(new DayChart_view { Date = date, Value = NumberOfDateLate, Text = "Late" });
@@ -79,10 +82,11 @@ namespace GUI.frmGUIUserControl
             lblID_User.Text = _User.ID_User.ToString();
             lblName_User.Text = _User.TenUser;
         }
+        TimeSheetUC tsUC;
         private void SetupTimeSheetUC()
         {
-
-            TimeSheetUC tsUC = new TimeSheetUC(BLL.NhanVienBLL.Instance.GetTimeSheetsByID_User(_User.ID_User).LichSuLamViec);
+            if(tsUC != null) this.Controls.Remove(tsUC);
+            tsUC = new TimeSheetUC(BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User,date).LichSuLamViec,date);
             tsUC.Location = new System.Drawing.Point(400, 0);
             this.Controls.Add(tsUC);
         }
@@ -91,6 +95,35 @@ namespace GUI.frmGUIUserControl
         private void btnOK_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (date == BLL.NhanVienBLL.Instance.GetNgayChamCongHienTai()) return;
+            date = new DateTime(date.Year, date.Month + 1, date.Day);
+            LoadTimeSheet();
+            if (TimeSheet == null)
+            {
+                date = new DateTime(date.Year, date.Month - 1, date.Day);
+                return;
+            }
+            SetupDataForChart(DateTime.Now);
+            SetupSalary();
+            SetupTimeSheetUC();
+        }
+
+        private void btnPre_Click(object sender, EventArgs e)
+        {
+            date = new DateTime(date.Year, date.Month - 1, date.Day);
+            LoadTimeSheet();
+            if(TimeSheet == null)
+            {
+                date = new DateTime(date.Year, date.Month +1, date.Day);
+                return;
+            }
+            SetupDataForChart(DateTime.Now);
+            SetupSalary();
+            SetupTimeSheetUC();
         }
     }
 }

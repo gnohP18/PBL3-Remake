@@ -221,6 +221,40 @@ namespace BLL
         {
             return dALQLNH.ChucVus.Where(p => p.ID_ChucVu == ID_Position).FirstOrDefault();
         }
+        public int GetNumberOfDayWork(string TimeSheet)
+        {
+            char[] TimeSheetChar = TimeSheet.ToCharArray();
+            int DayAbsent = 0;
+            foreach (char c in TimeSheetChar)
+            {
+                if (c == '0') DayAbsent++;
+            }
+            return TimeSheetChar.Length - DayAbsent;
+        }
+        public int GetNumberDayWorkFormDayStartWorkByID_User(int ID_User)
+        {
+            int DayWork = 0;
+            foreach (BangChamCong i in dALQLNH.BangChamCongs)
+            {
+                if (i.ID_User == ID_User)
+                {
+                    DayWork += GetNumberOfDayWork(i.LichSuLamViec);
+                }
+            }
+            return DayWork;
+        }
+        //public List<SalaryEmployee_view> GetAllSalaryEmployee_view()
+        //{
+        //    List<SalaryEmployee_view> list = new List<SalaryEmployee_view>();
+        //    foreach (User i in dALQLNH.Users)
+        //    {
+        //        SalaryEmployee_view slrEmployee = new SalaryEmployee_view();
+        //        slrEmployee.ID_User = i.ID_User;
+        //        slrEmployee.Name_User = i.TenUser;
+        //        slrEmployee.CoefficientsSalary = i.ChucVu.HeSoLuong;
+        //        slrEmployee.TotalDayWork = GetNumberDayWorkFormDayStartWorkByID_User(i.ID_User);
 
+        //    }
+        //}
     }
 }

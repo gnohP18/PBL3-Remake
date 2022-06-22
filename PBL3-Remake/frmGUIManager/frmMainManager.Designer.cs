@@ -29,10 +29,8 @@ namespace GUI.frmGUIManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnUC = new System.Windows.Forms.Panel();
-            this.btnInforRestaurant = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -40,17 +38,15 @@ namespace GUI.frmGUIManager
             this.btnWareHouse = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnOverView = new System.Windows.Forms.Button();
+            this.btnInforRestaurant = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1400, 100);
-            this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -76,22 +72,6 @@ namespace GUI.frmGUIManager
             this.pnUC.Name = "pnUC";
             this.pnUC.Size = new System.Drawing.Size(1200, 700);
             this.pnUC.TabIndex = 2;
-            // 
-            // btnInforRestaurant
-            // 
-            this.btnInforRestaurant.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInforRestaurant.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnInforRestaurant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInforRestaurant.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInforRestaurant.ForeColor = System.Drawing.Color.White;
-            this.btnInforRestaurant.Image = global::PBL3_Remake.Properties.Resources.cafe_48;
-            this.btnInforRestaurant.Location = new System.Drawing.Point(0, 0);
-            this.btnInforRestaurant.Name = "btnInforRestaurant";
-            this.btnInforRestaurant.Size = new System.Drawing.Size(200, 80);
-            this.btnInforRestaurant.TabIndex = 7;
-            this.btnInforRestaurant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInforRestaurant.UseVisualStyleBackColor = true;
-            this.btnInforRestaurant.Click += new System.EventHandler(this.btnInforRestaurant_Click);
             // 
             // btnExit
             // 
@@ -219,6 +199,55 @@ namespace GUI.frmGUIManager
             this.btnOverView.UseVisualStyleBackColor = true;
             this.btnOverView.Click += new System.EventHandler(this.btnOverView_Click);
             // 
+            // btnInforRestaurant
+            // 
+            this.btnInforRestaurant.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInforRestaurant.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnInforRestaurant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInforRestaurant.Font = new System.Drawing.Font("Myanmar Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInforRestaurant.ForeColor = System.Drawing.Color.White;
+            this.btnInforRestaurant.Image = global::PBL3_Remake.Properties.Resources.cafe_48;
+            this.btnInforRestaurant.Location = new System.Drawing.Point(0, 0);
+            this.btnInforRestaurant.Name = "btnInforRestaurant";
+            this.btnInforRestaurant.Size = new System.Drawing.Size(200, 80);
+            this.btnInforRestaurant.TabIndex = 7;
+            this.btnInforRestaurant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInforRestaurant.UseVisualStyleBackColor = true;
+            this.btnInforRestaurant.Click += new System.EventHandler(this.btnInforRestaurant_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1400, 100);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::PBL3_Remake.Properties.Resources.Panel;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1400, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::PBL3_Remake.Properties.Resources.cafe_48;
+            this.pictureBox2.Location = new System.Drawing.Point(720, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmMainManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -233,6 +262,10 @@ namespace GUI.frmGUIManager
             this.Text = "frmMainManager";
             this.Load += new System.EventHandler(this.frmMainManager_Load);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,5 +283,7 @@ namespace GUI.frmGUIManager
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnUC;
         private System.Windows.Forms.Button btnInforRestaurant;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

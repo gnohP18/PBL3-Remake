@@ -36,8 +36,6 @@
             this.btnWed = new System.Windows.Forms.Button();
             this.btnTue = new System.Windows.Forms.Button();
             this.btnMon = new System.Windows.Forms.Button();
-            this.btnPerious = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,6 +43,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblMonth = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPerious = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pnMain
@@ -119,28 +119,6 @@
             this.btnMon.Text = "Mon";
             this.btnMon.UseVisualStyleBackColor = true;
             // 
-            // btnPerious
-            // 
-            this.btnPerious.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPerious.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPerious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerious.Location = new System.Drawing.Point(2, 38);
-            this.btnPerious.Name = "btnPerious";
-            this.btnPerious.Size = new System.Drawing.Size(30, 330);
-            this.btnPerious.TabIndex = 16;
-            this.btnPerious.UseVisualStyleBackColor = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNext.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Location = new System.Drawing.Point(570, 38);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(30, 330);
-            this.btnNext.TabIndex = 17;
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -148,7 +126,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(30, 401);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 18;
             this.label1.Text = "Absented";
             // 
@@ -175,7 +153,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(227, 401);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
+            this.label2.Size = new System.Drawing.Size(91, 19);
             this.label2.TabIndex = 20;
             this.label2.Text = "Attendance";
             // 
@@ -194,7 +172,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(477, 406);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
+            this.label3.Size = new System.Drawing.Size(41, 19);
             this.label3.TabIndex = 22;
             this.label3.Text = "Late";
             // 
@@ -208,6 +186,34 @@
             this.lblMonth.TabIndex = 24;
             this.lblMonth.Text = "A";
             this.lblMonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Image = global::PBL3_Remake.Properties.Resources.arrow_right_32;
+            this.btnNext.Location = new System.Drawing.Point(566, 38);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(32, 330);
+            this.btnNext.TabIndex = 17;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPerious
+            // 
+            this.btnPerious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(59)))));
+            this.btnPerious.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPerious.FlatAppearance.BorderSize = 0;
+            this.btnPerious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerious.Image = global::PBL3_Remake.Properties.Resources.arrow_left_32;
+            this.btnPerious.Location = new System.Drawing.Point(2, 38);
+            this.btnPerious.Name = "btnPerious";
+            this.btnPerious.Size = new System.Drawing.Size(32, 330);
+            this.btnPerious.TabIndex = 16;
+            this.btnPerious.UseVisualStyleBackColor = false;
+            this.btnPerious.Click += new System.EventHandler(this.btnPerious_Click);
             // 
             // TimeSheetUC
             // 

@@ -92,6 +92,8 @@ namespace GUI.frmGUIUserControl
             tsUC = new TimeSheetUC(TimeSheet, date);
             tsUC.Location = new System.Drawing.Point(400, 0);
             this.Controls.Add(tsUC);
+            tsUC.dNext = new TimeSheetUC.Mydel(btnNext_Click);
+            tsUC.dPre = new TimeSheetUC.Mydel(btnPre_Click);
         }
         #endregion
 

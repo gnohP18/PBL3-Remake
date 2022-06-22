@@ -6,7 +6,7 @@ namespace GUI.frmGUIUserControl
 {
     public partial class TimeSheetUC : UserControl
     {
-        public TimeSheetUC(string TimeSheet,DateTime date)
+        public TimeSheetUC(string TimeSheet, DateTime date)
         {
             _TimeSheet = TimeSheet;
             InitializeComponent();
@@ -16,6 +16,9 @@ namespace GUI.frmGUIUserControl
 
         }
         #region Local Variable
+        public delegate void Mydel(object o, EventArgs e);
+        public Mydel dNext { get; set; }
+        public Mydel dPre { get; set; }
         private string _TimeSheet { get; set; }
         private List<List<DateTimeSheetUC>> MaTrix { get; set; }
         private List<string> dateOfWeek = new List<string>() { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
@@ -118,6 +121,17 @@ namespace GUI.frmGUIUserControl
                     SetupDateTimeSheet(dts, "", "0", "0");
                 }
             }
+        }
+        #endregion
+        #region Event UC
+        private void btnPerious_Click(object sender, EventArgs e)
+        {
+            dPre(sender, e);
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            dNext(sender, e);
         }
         #endregion
     }

@@ -58,6 +58,7 @@ namespace GUI.frmGUIUserControl
             NoticeBox frm = new NoticeBox("You have deleted User " + ID_User);
             frm.Show();
             BLL.NhanVienBLL.Instance.DeleteEmployee(ID_User);
+            LoadDataGridView();
         }
 
         private void btnAddEmployee_Click_1(object sender, System.EventArgs e)

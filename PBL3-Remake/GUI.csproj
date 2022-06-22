@@ -274,6 +274,12 @@
     <Compile Include="frmGUIUserControl\OverViewUC.Designer.cs">
       <DependentUpon>OverViewUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\SalaryManageUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\SalaryManageUC.Designer.cs">
+      <DependentUpon>SalaryManageUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\StatisticUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -407,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\OverViewUC.resx">
       <DependentUpon>OverViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\SalaryManageUC.resx">
+      <DependentUpon>SalaryManageUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\StatisticUC.resx">
       <DependentUpon>StatisticUC.cs</DependentUpon>

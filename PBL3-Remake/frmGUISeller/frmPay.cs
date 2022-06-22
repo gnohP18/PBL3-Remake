@@ -139,7 +139,7 @@ namespace GUI.frmGUISeller
 
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
-            BLL.HoaDonBLL.Instance.AddNewInvoice();
+            //BLL.HoaDonBLL.Instance.AddNewInvoice();
             this.Close();
         }
 

@@ -41,8 +41,9 @@
             this.pnText.Controls.Add(this.lblDate);
             this.pnText.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnText.Location = new System.Drawing.Point(0, 0);
+            this.pnText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnText.Name = "pnText";
-            this.pnText.Size = new System.Drawing.Size(70, 20);
+            this.pnText.Size = new System.Drawing.Size(93, 25);
             this.pnText.TabIndex = 0;
             // 
             // lblDate
@@ -50,8 +51,9 @@
             this.lblDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDate.Location = new System.Drawing.Point(0, 0);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(70, 20);
+            this.lblDate.Size = new System.Drawing.Size(93, 25);
             this.lblDate.TabIndex = 0;
             this.lblDate.Text = "A";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,28 +61,33 @@
             // pnAfternoon
             // 
             this.pnAfternoon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnAfternoon.Location = new System.Drawing.Point(35, 20);
+            this.pnAfternoon.Location = new System.Drawing.Point(47, 25);
+            this.pnAfternoon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnAfternoon.Name = "pnAfternoon";
-            this.pnAfternoon.Size = new System.Drawing.Size(35, 30);
+            this.pnAfternoon.Size = new System.Drawing.Size(47, 37);
             this.pnAfternoon.TabIndex = 1;
+            this.pnAfternoon.Click += new System.EventHandler(this.pnAfternoon_Click);
             // 
             // pnMorning
             // 
             this.pnMorning.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnMorning.Location = new System.Drawing.Point(0, 20);
+            this.pnMorning.Location = new System.Drawing.Point(0, 25);
+            this.pnMorning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnMorning.Name = "pnMorning";
-            this.pnMorning.Size = new System.Drawing.Size(35, 30);
+            this.pnMorning.Size = new System.Drawing.Size(47, 37);
             this.pnMorning.TabIndex = 2;
+            this.pnMorning.Click += new System.EventHandler(this.pnMorning_Click);
             // 
             // DateTimeSheetUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnAfternoon);
             this.Controls.Add(this.pnMorning);
             this.Controls.Add(this.pnText);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DateTimeSheetUC";
-            this.Size = new System.Drawing.Size(70, 50);
+            this.Size = new System.Drawing.Size(93, 62);
             this.pnText.ResumeLayout(false);
             this.ResumeLayout(false);
 

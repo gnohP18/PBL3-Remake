@@ -80,6 +80,10 @@ namespace BLL
             }
             return list;
         }
+        public User GetNhanVienByUserName(string Username)
+        {
+            return dALQLNH.Users.Where(s => s.Username == Username).FirstOrDefault();
+        }
         public List<ChucVu> GetAllPosition()
         {
             return dALQLNH.ChucVus.ToList();
@@ -128,19 +132,18 @@ namespace BLL
             int SangChieu = GetBuoiLamNow();
             foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
             {
-                /*if(i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode()*2+SangChieu] == '1')
+                if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
                 {
                     ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
                     DateTime dtNow = DateTime.Now;
                     int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
-                    BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == i.User.ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();*/
-                //if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') 
-
-                data.Add(i.User, false);
-                //else data.Add(i.User, false);
-                //}
+                    BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == i.User.ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
+                    if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') 
+                        data.Add(i.User, true);
+                    else data.Add(i.User, false);
+                }
             }
-            return data;
+                return data;
         }
         public int checkLogin(string username, string password, bool isCustomerLogin)
         {
@@ -184,7 +187,6 @@ namespace BLL
             int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
             int SangChieu = GetBuoiLamNow();
             BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
-            if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') return;
             TimeSpan TimeLate;
             if (SangChieu == 0)
             {
@@ -206,9 +208,13 @@ namespace BLL
             GetNhanVienByID(ID_User).DaXoa = true;
             dALQLNH.SaveChanges();
         }
-        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User)
+        public DateTime GetNgayChamCongHienTai()
         {
-            return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User).FirstOrDefault();
+            return dALQLNH.ThongTinNhaHangs.Find(1).NgayBatDauChamCongHienTai;
+        }
+        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User,DateTime date)
+        {
+            return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User && c.NgayDauTienTinhCong == date).FirstOrDefault();
         }
         public ChucVu GetPositionByID_Position(int ID_Position)
         {

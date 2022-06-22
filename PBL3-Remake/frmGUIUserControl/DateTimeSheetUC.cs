@@ -28,17 +28,14 @@ namespace GUI.frmGUIUserControl
             if (status == "0")
             {
                 pn.BackColor = Color.Red;
-                Console.WriteLine("Red");
             }
             if (status == "1")
             {
                 pn.BackColor = Color.Green;
-                Console.WriteLine("Green");
             }
             if (check(status))
             {
                 pn.BackColor = Color.Orange;
-                Console.WriteLine("Orange");
             }
         }
         public void SetupUC()
@@ -48,5 +45,50 @@ namespace GUI.frmGUIUserControl
             lblDate.Text = Text;
         }
         #endregion
+
+        private void pnMorning_Click(object sender, EventArgs e)
+        {
+            NoticeBox box;
+            if (Morning_State == "0")
+            {
+                box = new NoticeBox("Dont work");
+                box.ShowDialog();
+            }
+            else if (Morning_State == "1")
+            {
+                box = new NoticeBox("Work on time");
+                box.ShowDialog();
+            }
+            else
+            {
+                char c = Morning_State[0];
+                Console.WriteLine(c);
+                int late = (c - 64) * 15;
+                box = new NoticeBox("Work late " + late + " minute");
+                box.ShowDialog();
+            }
+        }
+
+        private void pnAfternoon_Click(object sender, EventArgs e)
+        {
+            NoticeBox box;
+            if (Afternoon_State == "0")
+            {
+                box = new NoticeBox("Dont work");
+                box.ShowDialog();
+            }
+            else if (Afternoon_State == "1")
+            {
+                box = new NoticeBox("Work on time");
+                box.ShowDialog();
+            }
+            else
+            {
+                char c = Afternoon_State[0];
+                int late = (c - 64) * 15;
+                box = new NoticeBox("Work late " + late + " minute");
+                box.ShowDialog();
+            }
+        }
     }
 }

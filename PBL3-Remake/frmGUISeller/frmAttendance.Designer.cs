@@ -1,6 +1,6 @@
 ﻿namespace GUI.frmGUISeller
 {
-    partial class frmAttendence
+    partial class frmAttendance
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,7 @@
             this.btnOK.Size = new System.Drawing.Size(180, 45);
             this.btnOK.TabIndex = 8;
             this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // pnNhanVien
             // 
@@ -64,11 +65,11 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(42)))), ((int)(((byte)(91)))));
             this.label1.Location = new System.Drawing.Point(253, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 41);
+            this.label1.Size = new System.Drawing.Size(199, 41);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Attendence";
+            this.label1.Text = "Attendance";
             // 
-            // frmAttendence
+            // frmAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,7 +77,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.pnNhanVien);
             this.Controls.Add(this.label1);
-            this.Name = "frmAttendence";
+            this.Name = "frmAttendance";
             this.Text = "frmAttendence";
             this.Load += new System.EventHandler(this.frmAttendence_Load);
             this.ResumeLayout(false);

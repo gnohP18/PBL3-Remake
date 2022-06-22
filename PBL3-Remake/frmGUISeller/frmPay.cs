@@ -8,22 +8,26 @@ namespace GUI.frmGUISeller
 {
     public partial class frmPay : Form
     {
-        public frmPay(int idban)
+        public frmPay(int idban,int idNhanVien)
         {
-            IDTable = idban;
             InitializeComponent();
+            IDTable = idban;
+            IDNhanVien = idNhanVien;
         }
         #region Local Variable
         List<MonAn_View> listMonAnViewDaDat;
         public delegate void Mydel();
         public Mydel d;
         public int IDTable { get; set; }
+        public int IDNhanVien { get; set; }
         List<string> Voucher = new List<string>();
         List<string> PhoneNumber = new List<string>();
         public KhachHang _Guest { get; set; }
         int guestmoney;
-        int sum = 0;
+        int bill = 0;
         int tax;
+        int TienQuyDoiTuDiemTichLuy;
+        string MaVoucher;
         #endregion
         #region Function
         private void AddVoucher()
@@ -66,14 +70,14 @@ namespace GUI.frmGUISeller
 
             foreach (DataGridViewRow row in dgvPayment.Rows)
             {
-                sum += Convert.ToInt32(row.Cells[3].Value.ToString());
+                bill += Convert.ToInt32(row.Cells[3].Value.ToString());
             }
-            lblBill.Text = sum.ToString();
+            lblBill.Text = bill.ToString();
             if (txtGuestMoney.Text.Length > 0)
             {
                 guestmoney = Convert.ToInt32(txtGuestMoney.ToString());
             }
-            tax = sum / 100 * 5;
+            tax = bill / 100 * 5;
             lblTax.Text = tax.ToString();
         }
         private void LoadGuest()
@@ -107,7 +111,7 @@ namespace GUI.frmGUISeller
             }
             txtVoucher.AutoCompleteCustomSource = autoVoucher;
             txtGuestPhone.AutoCompleteCustomSource = autoPhoneNumberGuest;
-            lblTotal.Text = (sum + tax).ToString();
+            lblTotal.Text = (bill + tax).ToString();
         }
         private void txtVoucher_TextChanged(object sender, EventArgs e)
         {
@@ -122,7 +126,7 @@ namespace GUI.frmGUISeller
         {
             if (txtGuestMoney.Text.Length != 0)
                 guestmoney = Convert.ToInt32(txtGuestMoney.Text);
-            if (guestmoney > (sum + tax))
+            if (guestmoney > (bill + tax))
             {
                 pBGuestMoney.Image = PBL3_Remake.Properties.Resources.checkedGreen;
             }
@@ -131,15 +135,38 @@ namespace GUI.frmGUISeller
 
         private void btnVoucherConfirm_Click(object sender, EventArgs e)
         {
-            sum -= 50000;
-            lblTotal.Text = (sum + tax).ToString();
-            txtVoucher.Text = "";
-            pBVoucher.Image = null;
+            Voucher vc = VoucherBLL.Instance.GetVoucherByMa(txtVoucher.Text);
+            if (vc != null) {
+                this.MaVoucher = vc.MaVoucher;
+                string s = vc.GiaTriVoucher;
+                if (vc.GiaTriVoucher.Contains("%")) {
+                    s = "";
+                    foreach(char i in vc.GiaTriVoucher)
+                    {
+                        if (i != '%') s += i;
+                    }
+                    bill -= Convert.ToInt32(s)*bill/100;
+                }
+                else if(vc.GiaTriVoucher.Contains("N"))
+                {
+
+                }
+                else
+                {
+                    bill -= Convert.ToInt32(s) ;
+                }
+                lblTotal.Text = (bill + tax).ToString();
+                txtVoucher.Text = "- " + vc.GiaTriVoucher;
+                txtVoucher.Enabled = false;
+                pBVoucher.Image = null;
+            }
         }
 
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
-            //BLL.HoaDonBLL.Instance.AddNewInvoice();
+            int total = Convert.ToInt32(lblTotal.Text);
+            BLL.HoaDonBLL.Instance.AddNewInvoice(IDNhanVien,_Guest.ID_KhachHang,total,TienQuyDoiTuDiemTichLuy,MaVoucher,listMonAnViewDaDat);
+            BanBLL.Instance.SetEmptyBan(IDTable);
             this.Close();
         }
 
@@ -180,5 +207,14 @@ namespace GUI.frmGUISeller
             }
         }
         #endregion
+
+        private void cbUsePoint_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbUsePoint.Checked == true) TienQuyDoiTuDiemTichLuy = HoaDonBLL.Instance.GetTienFromDiemTichLuy(Convert.ToInt32(lblPoint.Text));
+            else TienQuyDoiTuDiemTichLuy = 0;
+            int tempBill = bill;
+            tempBill -= TienQuyDoiTuDiemTichLuy;
+            lblTotal.Text = (tempBill + tax).ToString();
+        }
     }
 }

@@ -21,6 +21,10 @@ namespace BLL
         {
 
         }
+        public int GetTienFromDiemTichLuy(int Diem)
+        {
+            return dALQLNH.ThongTinNhaHangs.Find(1).DiemTichLuyQuyDoiThanhTien * Diem;
+        }
         public List<HoaDon> GetAllHoaDonByIDKhachHang(int ID_KhachHang)
         {
             List<HoaDon> list = new List<HoaDon>();
@@ -96,7 +100,7 @@ namespace BLL
         }
         public void AddNewDetailInvoice(int ID_Invoice, int ID_Dish, int Amount)
         {
-            ChiTietHoaDon cthd = new ChiTietHoaDon();
+            ChiTietHoaDon cthd = dALQLNH.ChiTietHoaDons.Create();
             cthd.ID_HoaDon = ID_Invoice;
             cthd.ID_MonAn = ID_Dish;
             cthd.SoLuong = Amount;
@@ -107,10 +111,23 @@ namespace BLL
         {
             return dALQLNH.HoaDons.ToList();
         }
+        public int GetNewIDHoaDon()
+        {
+            int id = 1;
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                if (id != i.ID_HoaDon)
+                {
+                    return id;
+                }
+                id++;
+            }
+            return id;
+        }
         public void AddNewInvoice(int ID_User, int ID_Guest, int Total, int MoneyConvertFromPoint, string MaVoucher, List<MonAn_View> list)
         {
-            HoaDon invoice = new HoaDon();
-            invoice.ID_HoaDon = GetAllInvoice().Count + 1;
+            HoaDon invoice = dALQLNH.HoaDons.Create();
+            invoice.ID_HoaDon = GetNewIDHoaDon();
             invoice.ID_User = ID_User;
             invoice.TongTien = Total;
             invoice.ID_KhachHang = ID_Guest;

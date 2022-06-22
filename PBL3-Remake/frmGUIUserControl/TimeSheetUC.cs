@@ -6,12 +6,12 @@ namespace GUI.frmGUIUserControl
 {
     public partial class TimeSheetUC : UserControl
     {
-        public TimeSheetUC(string TimeSheet)
+        public TimeSheetUC(string TimeSheet,DateTime date)
         {
             _TimeSheet = TimeSheet;
             InitializeComponent();
             LoadDateTimeSheet();
-            DateCustom = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 5);
+            DateCustom = new DateTime(date.Year, date.Month, 5);
             AddNumberIntoMatrixByDate();
 
         }
@@ -31,10 +31,6 @@ namespace GUI.frmGUIUserControl
             foreach (var c in chars1)
             {
                 DateState.Add(c.ToString());
-            }
-            foreach (string c in DateState)
-            {
-                Console.WriteLine(c);
             }
         }
 

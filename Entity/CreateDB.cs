@@ -13,7 +13,7 @@ namespace Entity
                 new ChucVu{ID_ChucVu = 1,TenChucVu ="Admin",MoTa = "Quyen han toi thuong",HeSoLuong = 0},
                 new ChucVu{ID_ChucVu = 2,TenChucVu ="Quan ly", MoTa = "Quan ly doanh thu, nhap xuat nha hang",HeSoLuong = 0},
                 new ChucVu{ID_ChucVu = 3,TenChucVu ="Nhan vien truong ca",MoTa = "Phu trach quan ly , diem danh cac nhan vien trong ca lam",HeSoLuong = 150000},
-                new ChucVu{ID_ChucVu = 4,TenChucVu ="Nhan vien phuc vu",MoTa = "Phu trach ban hang , phuc vu khach hang",HeSoLuong = 130000},   
+                new ChucVu{ID_ChucVu = 4,TenChucVu ="Nhan vien phuc vu",MoTa = "Phu trach ban hang , phuc vu khach hang",HeSoLuong = 130000},
                 new ChucVu{ID_ChucVu = 5,TenChucVu ="Nhan vien bep",MoTa = "Phu trach lam mon an",HeSoLuong = 130000},
 
             });
@@ -826,9 +826,9 @@ namespace Entity
                 new ThongTinNhaHang{ID_ThongTinNhaHang = 1,
                     TenNhaHang = "HHP",
                     DiaChi = "DaNa",
-                    ThoiGianBatDauLamViecSang= new TimeSpan(3,15,0),
+                    ThoiGianBatDauLamViecSang= new TimeSpan(6,30,0),
                     ThoiGianKetThucLamViecSang = new TimeSpan(12,0,0),
-                    ThoiGianBatDauLamViecChieu =  new TimeSpan(18,30,0),
+                    ThoiGianBatDauLamViecChieu =  new TimeSpan(14,00,0),
                     ThoiGianKetThucLamViecChieu =  new TimeSpan(23,59,59),
                     NgayBatDauChamCongHienTai = new DateTime(2022,6,5),
                     SoTienQuyDoiThanhDiemTichLuy = 1000,

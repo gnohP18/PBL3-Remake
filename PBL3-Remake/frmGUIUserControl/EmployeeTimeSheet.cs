@@ -35,6 +35,7 @@ namespace GUI.frmGUIUserControl
         private int NumberOfDateAbsent { get; set; }
         private string TimeSheet { get; set; }
         private List<DayChart_view> Dc_v { get; set; }
+        TimeSheetUC tsUC;
         #endregion
         #region Funtion
         private int NumberOfDay(DateTime dt)
@@ -51,6 +52,7 @@ namespace GUI.frmGUIUserControl
         }
         private void SetupDataForChart(DateTime date)
         {
+            DayChart.Series[0].Points.Clear();
             NumberDateOfMonth = NumberOfDay(date);
             char[] charTimeSheet = TimeSheet.ToCharArray();
             NumberOfDateAttendance = 0;
@@ -82,11 +84,12 @@ namespace GUI.frmGUIUserControl
             lblID_User.Text = _User.ID_User.ToString();
             lblName_User.Text = _User.TenUser;
         }
-        TimeSheetUC tsUC;
+
         private void SetupTimeSheetUC()
         {
-            if(tsUC != null) this.Controls.Remove(tsUC);
-            tsUC = new TimeSheetUC(BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User,date).LichSuLamViec,date);
+            if (tsUC != null) this.Controls.Remove(tsUC);
+            TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
+            tsUC = new TimeSheetUC(TimeSheet, date);
             tsUC.Location = new System.Drawing.Point(400, 0);
             this.Controls.Add(tsUC);
         }
@@ -107,7 +110,7 @@ namespace GUI.frmGUIUserControl
                 date = new DateTime(date.Year, date.Month - 1, date.Day);
                 return;
             }
-            SetupDataForChart(DateTime.Now);
+            SetupDataForChart(date);
             SetupSalary();
             SetupTimeSheetUC();
         }
@@ -116,12 +119,12 @@ namespace GUI.frmGUIUserControl
         {
             date = new DateTime(date.Year, date.Month - 1, date.Day);
             LoadTimeSheet();
-            if(TimeSheet == null)
+            if (TimeSheet == null)
             {
-                date = new DateTime(date.Year, date.Month +1, date.Day);
+                date = new DateTime(date.Year, date.Month + 1, date.Day);
                 return;
             }
-            SetupDataForChart(DateTime.Now);
+            SetupDataForChart(date);
             SetupSalary();
             SetupTimeSheetUC();
         }

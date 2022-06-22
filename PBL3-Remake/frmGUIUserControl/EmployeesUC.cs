@@ -12,7 +12,7 @@ namespace GUI.frmGUIUserControl
         {
             get { if (_Instance == null) _Instance = new EmployeesUC(); return _Instance; }
         }
-        private EmployeesUC()
+        public EmployeesUC()
         {
             InitializeComponent();
         }

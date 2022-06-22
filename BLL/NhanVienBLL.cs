@@ -138,12 +138,12 @@ namespace BLL
                     DateTime dtNow = DateTime.Now;
                     int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
                     BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == i.User.ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
-                    if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0') 
+                    if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0')
                         data.Add(i.User, true);
                     else data.Add(i.User, false);
                 }
             }
-                return data;
+            return data;
         }
         public int checkLogin(string username, string password, bool isCustomerLogin)
         {
@@ -201,6 +201,7 @@ namespace BLL
             if (MinuteLate < 15) temp[indexDay * 2 + SangChieu] = '1';
             else temp[indexDay * 2 + SangChieu] = (char)(MinuteLate / 15 + 64);
             bangChamCong.LichSuLamViec = temp.ToString();
+            bangChamCong.TinhLuong += user.ChucVu.HeSoLuong - MinuteLate / 15 * TTNH.TienPhatTre15p;
             dALQLNH.SaveChanges();
         }
         public void DeleteEmployee(int ID_User)
@@ -212,7 +213,7 @@ namespace BLL
         {
             return dALQLNH.ThongTinNhaHangs.Find(1).NgayBatDauChamCongHienTai;
         }
-        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User,DateTime date)
+        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User, DateTime date)
         {
             return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User && c.NgayDauTienTinhCong == date).FirstOrDefault();
         }

@@ -14,7 +14,7 @@ namespace GUI.frmGUIUserControl
         {
             get { if (_Instance == null) _Instance = new ManagerFoodUC(); return _Instance; }
         }
-        private ManagerFoodUC()
+        public ManagerFoodUC()
         {
             InitializeComponent();
         }

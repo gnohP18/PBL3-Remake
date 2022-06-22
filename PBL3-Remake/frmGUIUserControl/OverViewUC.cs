@@ -1,8 +1,8 @@
-﻿using DTO;
+﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using BLL;
 namespace GUI.frmGUIUserControl
 {
     public partial class OverViewUC : UserControl
@@ -12,7 +12,7 @@ namespace GUI.frmGUIUserControl
         {
             get { if (_Instance == null) _Instance = new OverViewUC(); return _Instance; }
         }
-        private OverViewUC()
+        public OverViewUC()
         {
             InitializeComponent();
         }

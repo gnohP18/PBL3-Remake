@@ -26,7 +26,7 @@ namespace GUI.frmGUIUserControl
         private DateTime DayStart { get; set; }
         public DateTime DayEnd { get; set; }
         #endregion
-        private StatisticUC()
+        public StatisticUC()
         {
             InitializeComponent();
         }

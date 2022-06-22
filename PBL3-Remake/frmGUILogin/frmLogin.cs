@@ -10,6 +10,7 @@ namespace GUI.frmGUILogin
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -45,6 +46,8 @@ namespace GUI.frmGUILogin
                 {
                     frmMainSeller frm = new frmMainSeller(NhanVienBLL.Instance.GetNhanVienByUserName(txtUsername.Text).ID_User);
                     frm.Show();
+                    frm.Owner = this;
+                    this.Hide();
                 }
             }
             else if (radManager.Checked)
@@ -61,6 +64,8 @@ namespace GUI.frmGUILogin
                 {
                     frmMainManager frm = new frmMainManager();
                     frm.Show();
+                    frm.Owner = this;
+                    this.Hide();
                 }
             }
             else

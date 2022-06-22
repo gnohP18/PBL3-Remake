@@ -2,7 +2,6 @@
 using DTO;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI.frmGUISeller
@@ -58,7 +57,7 @@ namespace GUI.frmGUISeller
             int dem1 = 0;
             foreach (Ban i in listBan)
             {
-                tb[dem1] = new TableForOrdering(i,ID_NhanVien);
+                tb[dem1] = new TableForOrdering(i, ID_NhanVien);
                 tb[dem1].d = d;
                 int ttb = i.TinhTrangBan;
                 dem1++;
@@ -126,7 +125,8 @@ namespace GUI.frmGUISeller
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Owner.Show();
+            this.Dispose();
         }
 
         private void btnDetailTable_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ namespace GUI.frmGUISeller
 {
     public partial class frmPay : Form
     {
-        public frmPay(int idban,int idNhanVien)
+        public frmPay(int idban, int idNhanVien)
         {
             InitializeComponent();
             IDTable = idban;
@@ -136,24 +136,26 @@ namespace GUI.frmGUISeller
         private void btnVoucherConfirm_Click(object sender, EventArgs e)
         {
             Voucher vc = VoucherBLL.Instance.GetVoucherByMa(txtVoucher.Text);
-            if (vc != null) {
+            if (vc != null)
+            {
                 this.MaVoucher = vc.MaVoucher;
                 string s = vc.GiaTriVoucher;
-                if (vc.GiaTriVoucher.Contains("%")) {
+                if (vc.GiaTriVoucher.Contains("%"))
+                {
                     s = "";
-                    foreach(char i in vc.GiaTriVoucher)
+                    foreach (char i in vc.GiaTriVoucher)
                     {
                         if (i != '%') s += i;
                     }
-                    bill -= Convert.ToInt32(s)*bill/100;
+                    bill -= Convert.ToInt32(s) * bill / 100;
                 }
-                else if(vc.GiaTriVoucher.Contains("N"))
+                else if (vc.GiaTriVoucher.Contains("N"))
                 {
 
                 }
                 else
                 {
-                    bill -= Convert.ToInt32(s) ;
+                    bill -= Convert.ToInt32(s);
                 }
                 lblTotal.Text = (bill + tax).ToString();
                 txtVoucher.Text = "- " + vc.GiaTriVoucher;
@@ -165,7 +167,7 @@ namespace GUI.frmGUISeller
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
             int total = Convert.ToInt32(lblTotal.Text);
-            BLL.HoaDonBLL.Instance.AddNewInvoice(IDNhanVien,_Guest.ID_KhachHang,total,TienQuyDoiTuDiemTichLuy,MaVoucher,listMonAnViewDaDat);
+            BLL.HoaDonBLL.Instance.AddNewInvoice(IDNhanVien, _Guest.ID_KhachHang, total, TienQuyDoiTuDiemTichLuy, MaVoucher, listMonAnViewDaDat);
             BanBLL.Instance.SetEmptyBan(IDTable);
             this.Close();
         }

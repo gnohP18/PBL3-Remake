@@ -43,11 +43,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnDessert = new System.Windows.Forms.Button();
             this.btnMainDish = new System.Windows.Forms.Button();
             this.btnAppetizer = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.pnMain.SuspendLayout();
@@ -179,7 +179,7 @@
             this.lblNameTable.ForeColor = System.Drawing.Color.White;
             this.lblNameTable.Location = new System.Drawing.Point(683, 36);
             this.lblNameTable.Name = "lblNameTable";
-            this.lblNameTable.Size = new System.Drawing.Size(31, 31);
+            this.lblNameTable.Size = new System.Drawing.Size(23, 24);
             this.lblNameTable.TabIndex = 27;
             this.lblNameTable.Text = "B";
             // 
@@ -190,7 +190,7 @@
             this.lblIDTable.ForeColor = System.Drawing.Color.White;
             this.lblIDTable.Location = new System.Drawing.Point(684, 10);
             this.lblIDTable.Name = "lblIDTable";
-            this.lblIDTable.Size = new System.Drawing.Size(27, 26);
+            this.lblIDTable.Size = new System.Drawing.Size(23, 21);
             this.lblIDTable.TabIndex = 28;
             this.lblIDTable.Text = "A";
             // 
@@ -201,7 +201,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(616, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 26);
+            this.label1.Size = new System.Drawing.Size(27, 21);
             this.label1.TabIndex = 29;
             this.label1.Text = "ID";
             // 
@@ -212,7 +212,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(616, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 26);
+            this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 30;
             this.label2.Text = "Name";
             // 
@@ -224,6 +224,22 @@
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1300, 600);
             this.pnMain.TabIndex = 32;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Image = global::PBL3_Remake.Properties.Resources.exit_32;
+            this.btnExit.Location = new System.Drawing.Point(788, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnExit.Size = new System.Drawing.Size(55, 64);
+            this.btnExit.TabIndex = 34;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // button2
             // 
@@ -300,22 +316,6 @@
             this.btnAppetizer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAppetizer.UseVisualStyleBackColor = false;
             this.btnAppetizer.Click += new System.EventHandler(this.btnAppetizer_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExit.Image = global::PBL3_Remake.Properties.Resources.exit_32;
-            this.btnExit.Location = new System.Drawing.Point(788, 5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnExit.Size = new System.Drawing.Size(55, 64);
-            this.btnExit.TabIndex = 34;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmOrder
             // 

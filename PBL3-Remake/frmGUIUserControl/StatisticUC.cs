@@ -13,7 +13,7 @@ namespace GUI.frmGUIUserControl
         {
             get { if (_Instance == null) _Instance = new StatisticUC(); return _Instance; }
         }
-        #region Variable Instance
+        #region Local Variable 
         List<Statistic_view> ListDoanhThu = new List<Statistic_view>();
         List<Statistic_view> DoanhThuTheoNgay = new List<Statistic_view>();
         private Statistic_view DoanhThuNgay = new Statistic_view();

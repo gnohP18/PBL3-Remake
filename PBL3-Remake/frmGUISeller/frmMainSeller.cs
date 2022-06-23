@@ -8,31 +8,21 @@ namespace GUI.frmGUISeller
 {
     public partial class frmMainSeller : Form
     {
-        private int Floor = 1;
-        private int statustb = -1;
-        public delegate void Mydel(int st, int fl);
-        public Mydel d { get; set; }
-        private int ID_NhanVien;
         public frmMainSeller(int ID_NhanVien)
         {
-            //_user = user;
             InitializeComponent();
             SetCbb();
             d = new Mydel(LoadBanByTinhTrangBanVaTang);
             this.ID_NhanVien = ID_NhanVien;
         }
-
-        private void frmMainSeller_Load(object sender, EventArgs e)
-        {
-            this.Width = 1300;
-            this.Height = 700;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            pnTable.AutoScroll = true;
-            LoadBanByTinhTrangBanVaTang(-1, 1);
-            if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).ID_ChucVu == 3) btnAttend.Visible = true;
-            else btnAttend.Visible = false;
-        }
-
+        #region Local Variable
+        private int Floor = 1;
+        private int statustb = -1;
+        public delegate void Mydel(int st, int fl);
+        public Mydel d { get; set; }
+        private int ID_NhanVien;
+        #endregion
+        #region Function
         void SetCbb()
         {
             cbbStatusTable.Items.Add("All");
@@ -40,8 +30,6 @@ namespace GUI.frmGUISeller
             cbbStatusTable.Items.Add("Busy");
             cbbStatusTable.SelectedIndex = 0;
         }
-
-
         void SetTable(Panel pn, TableForOrdering tb)
         {
             tb.Width = 250;
@@ -92,6 +80,9 @@ namespace GUI.frmGUISeller
         {
             pnTable.Controls.Clear();
         }
+
+        #endregion
+        #region Event Form
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             Floor = 1;
@@ -103,7 +94,16 @@ namespace GUI.frmGUISeller
             Floor = 2;
             LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
-
+        private void frmMainSeller_Load(object sender, EventArgs e)
+        {
+            this.Width = 1300;
+            this.Height = 700;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            pnTable.AutoScroll = true;
+            LoadBanByTinhTrangBanVaTang(-1, 1);
+            if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).ID_ChucVu == 3) btnAttend.Visible = true;
+            else btnAttend.Visible = false;
+        }
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbStatusTable.SelectedIndex == 1)
@@ -140,5 +140,7 @@ namespace GUI.frmGUISeller
             frmGUISeller.frmAttendance form = new frmAttendance();
             form.ShowDialog();
         }
+        #endregion
+
     }
 }

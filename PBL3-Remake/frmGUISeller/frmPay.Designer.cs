@@ -62,6 +62,10 @@
             this.cbUsePoint = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNameGuest = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -69,11 +73,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBGuestMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBVoucher)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblBill);
@@ -99,10 +107,10 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(330, 427);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 43);
+            this.label1.Size = new System.Drawing.Size(56, 34);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bill";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,7 +120,7 @@
             this.lblBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblBill.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(118)))));
+            this.lblBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblBill.Location = new System.Drawing.Point(130, 472);
             this.lblBill.Name = "lblBill";
             this.lblBill.Size = new System.Drawing.Size(267, 48);
@@ -162,18 +170,19 @@
             this.dgvPayment.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPayment.RowTemplate.Height = 24;
             this.dgvPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPayment.Size = new System.Drawing.Size(400, 414);
+            this.dgvPayment.Size = new System.Drawing.Size(400, 368);
             this.dgvPayment.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label2.Location = new System.Drawing.Point(412, 14);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(11, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "Voucher";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,21 +191,22 @@
             // 
             this.txtVoucher.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtVoucher.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVoucher.Location = new System.Drawing.Point(509, 16);
+            this.txtVoucher.Location = new System.Drawing.Point(123, 28);
             this.txtVoucher.Name = "txtVoucher";
-            this.txtVoucher.Size = new System.Drawing.Size(120, 23);
+            this.txtVoucher.Size = new System.Drawing.Size(120, 20);
             this.txtVoucher.TabIndex = 7;
             this.txtVoucher.TextChanged += new System.EventHandler(this.txtVoucher_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label3.Location = new System.Drawing.Point(748, 427);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(354, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 43);
+            this.label3.Size = new System.Drawing.Size(82, 34);
             this.label3.TabIndex = 7;
             this.label3.Text = "Total";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,7 +217,7 @@
             this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.lblTotal.Location = new System.Drawing.Point(563, 472);
+            this.lblTotal.Location = new System.Drawing.Point(170, 169);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(267, 48);
             this.lblTotal.TabIndex = 6;
@@ -218,21 +228,22 @@
             // 
             this.txtGuestMoney.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtGuestMoney.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuestMoney.Location = new System.Drawing.Point(410, 379);
+            this.txtGuestMoney.Location = new System.Drawing.Point(8, 25);
             this.txtGuestMoney.Name = "txtGuestMoney";
-            this.txtGuestMoney.Size = new System.Drawing.Size(275, 23);
+            this.txtGuestMoney.Size = new System.Drawing.Size(275, 20);
             this.txtGuestMoney.TabIndex = 8;
             this.txtGuestMoney.TextChanged += new System.EventHandler(this.txtGuestMoney_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label4.Location = new System.Drawing.Point(406, 353);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(4, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 24);
+            this.label4.Size = new System.Drawing.Size(100, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "Guest money";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -240,12 +251,13 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label5.Location = new System.Drawing.Point(412, 45);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(11, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 24);
+            this.label5.Size = new System.Drawing.Size(38, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "Tax ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -253,22 +265,24 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label6.Location = new System.Drawing.Point(462, 80);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(61, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.Size = new System.Drawing.Size(37, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "5%=";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTax
             // 
+            this.lblTax.BackColor = System.Drawing.Color.Transparent;
             this.lblTax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTax.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.lblTax.Location = new System.Drawing.Point(503, 72);
+            this.lblTax.ForeColor = System.Drawing.Color.Black;
+            this.lblTax.Location = new System.Drawing.Point(102, 85);
             this.lblTax.Name = "lblTax";
             this.lblTax.Size = new System.Drawing.Size(254, 35);
             this.lblTax.TabIndex = 11;
@@ -279,21 +293,22 @@
             // 
             this.txtGuestPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtGuestPhone.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuestPhone.Location = new System.Drawing.Point(553, 130);
+            this.txtGuestPhone.Location = new System.Drawing.Point(153, 7);
             this.txtGuestPhone.Name = "txtGuestPhone";
-            this.txtGuestPhone.Size = new System.Drawing.Size(204, 23);
+            this.txtGuestPhone.Size = new System.Drawing.Size(204, 20);
             this.txtGuestPhone.TabIndex = 19;
             this.txtGuestPhone.TextChanged += new System.EventHandler(this.txtGuestPhone_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label8.Location = new System.Drawing.Point(406, 128);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(6, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 24);
+            this.label8.Size = new System.Drawing.Size(136, 19);
             this.label8.TabIndex = 20;
             this.label8.Text = "Guest information";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -301,12 +316,13 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label9.Location = new System.Drawing.Point(404, 185);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(8, 62);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 24);
+            this.label9.Size = new System.Drawing.Size(48, 19);
             this.label9.TabIndex = 22;
             this.label9.Text = "Point";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -314,19 +330,20 @@
             // lblPoint
             // 
             this.lblPoint.AutoSize = true;
+            this.lblPoint.BackColor = System.Drawing.Color.Transparent;
             this.lblPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPoint.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.lblPoint.Location = new System.Drawing.Point(475, 185);
+            this.lblPoint.ForeColor = System.Drawing.Color.Black;
+            this.lblPoint.Location = new System.Drawing.Point(147, 62);
             this.lblPoint.Name = "lblPoint";
-            this.lblPoint.Size = new System.Drawing.Size(25, 24);
+            this.lblPoint.Size = new System.Drawing.Size(21, 19);
             this.lblPoint.TabIndex = 23;
             this.lblPoint.Text = "D";
             this.lblPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pBCheckGuest
             // 
-            this.pBCheckGuest.Location = new System.Drawing.Point(763, 128);
+            this.pBCheckGuest.Location = new System.Drawing.Point(363, 5);
             this.pBCheckGuest.Name = "pBCheckGuest";
             this.pBCheckGuest.Size = new System.Drawing.Size(24, 24);
             this.pBCheckGuest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -339,7 +356,7 @@
             this.btnYes.FlatAppearance.BorderSize = 0;
             this.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYes.Image = global::PBL3_Remake.Properties.Resources.checkedGreen;
-            this.btnYes.Location = new System.Drawing.Point(797, 162);
+            this.btnYes.Location = new System.Drawing.Point(393, 3);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(33, 33);
             this.btnYes.TabIndex = 16;
@@ -351,7 +368,7 @@
             this.btnPayReceipt.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnPayReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayReceipt.Image = global::PBL3_Remake.Properties.Resources.receipt_32;
-            this.btnPayReceipt.Location = new System.Drawing.Point(509, 472);
+            this.btnPayReceipt.Location = new System.Drawing.Point(8, 169);
             this.btnPayReceipt.Name = "btnPayReceipt";
             this.btnPayReceipt.Size = new System.Drawing.Size(48, 48);
             this.btnPayReceipt.TabIndex = 14;
@@ -363,7 +380,7 @@
             this.btnVoucherConfirm.FlatAppearance.BorderSize = 0;
             this.btnVoucherConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoucherConfirm.Image = global::PBL3_Remake.Properties.Resources.coupon_32;
-            this.btnVoucherConfirm.Location = new System.Drawing.Point(635, 10);
+            this.btnVoucherConfirm.Location = new System.Drawing.Point(249, 22);
             this.btnVoucherConfirm.Name = "btnVoucherConfirm";
             this.btnVoucherConfirm.Size = new System.Drawing.Size(33, 33);
             this.btnVoucherConfirm.TabIndex = 13;
@@ -372,7 +389,7 @@
             // 
             // pBGuestMoney
             // 
-            this.pBGuestMoney.Location = new System.Drawing.Point(691, 371);
+            this.pBGuestMoney.Location = new System.Drawing.Point(289, 19);
             this.pBGuestMoney.Name = "pBGuestMoney";
             this.pBGuestMoney.Size = new System.Drawing.Size(32, 32);
             this.pBGuestMoney.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,7 +399,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PBL3_Remake.Properties.Resources.Tax_48;
-            this.pictureBox2.Location = new System.Drawing.Point(408, 66);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 79);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -391,7 +408,7 @@
             // 
             // pBVoucher
             // 
-            this.pBVoucher.Location = new System.Drawing.Point(479, 12);
+            this.pBVoucher.Location = new System.Drawing.Point(93, 27);
             this.pBVoucher.Name = "pBVoucher";
             this.pBVoucher.Size = new System.Drawing.Size(24, 24);
             this.pBVoucher.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -401,12 +418,13 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label11.Location = new System.Drawing.Point(436, 217);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(36, 94);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 24);
+            this.label11.Size = new System.Drawing.Size(80, 19);
             this.label11.TabIndex = 25;
             this.label11.Text = "Use points";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -418,7 +436,7 @@
             this.cbUsePoint.ImageOffset = new System.Drawing.Point(0, 0);
             this.cbUsePoint.ImageRotate = 0F;
             this.cbUsePoint.ImageSize = new System.Drawing.Size(32, 32);
-            this.cbUsePoint.Location = new System.Drawing.Point(408, 217);
+            this.cbUsePoint.Location = new System.Drawing.Point(8, 94);
             this.cbUsePoint.Name = "cbUsePoint";
             this.cbUsePoint.Size = new System.Drawing.Size(24, 24);
             this.cbUsePoint.TabIndex = 26;
@@ -427,12 +445,13 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.label7.Location = new System.Drawing.Point(408, 157);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(8, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 24);
+            this.label7.Size = new System.Drawing.Size(92, 19);
             this.label7.TabIndex = 27;
             this.label7.Text = "Guest name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -440,45 +459,88 @@
             // lblNameGuest
             // 
             this.lblNameGuest.AutoSize = true;
+            this.lblNameGuest.BackColor = System.Drawing.Color.Transparent;
             this.lblNameGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNameGuest.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameGuest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
-            this.lblNameGuest.Location = new System.Drawing.Point(549, 159);
+            this.lblNameGuest.ForeColor = System.Drawing.Color.Black;
+            this.lblNameGuest.Location = new System.Drawing.Point(149, 36);
             this.lblNameGuest.Name = "lblNameGuest";
-            this.lblNameGuest.Size = new System.Drawing.Size(23, 24);
+            this.lblNameGuest.Size = new System.Drawing.Size(19, 19);
             this.lblNameGuest.TabIndex = 28;
             this.lblNameGuest.Text = "C";
             this.lblNameGuest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel2.Controls.Add(this.txtGuestMoney);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.pBGuestMoney);
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnPayReceipt);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(400, 303);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(440, 223);
+            this.panel2.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.lblTax);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtVoucher);
+            this.panel3.Controls.Add(this.pBVoucher);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.btnVoucherConfirm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(400, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(440, 268);
+            this.panel3.TabIndex = 6;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::PBL3_Remake.Properties.Resources.Panel;
+            this.pictureBox3.Location = new System.Drawing.Point(400, 268);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(440, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.btnYes);
+            this.panel4.Controls.Add(this.lblNameGuest);
+            this.panel4.Controls.Add(this.txtGuestPhone);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.pBCheckGuest);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.cbUsePoint);
+            this.panel4.Controls.Add(this.lblPoint);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Location = new System.Drawing.Point(3, 133);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(432, 120);
+            this.panel4.TabIndex = 15;
+            // 
             // frmPay
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(840, 526);
-            this.Controls.Add(this.lblNameGuest);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbUsePoint);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.lblPoint);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.pBCheckGuest);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtGuestPhone);
-            this.Controls.Add(this.btnYes);
-            this.Controls.Add(this.btnPayReceipt);
-            this.Controls.Add(this.btnVoucherConfirm);
-            this.Controls.Add(this.pBGuestMoney);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblTax);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtGuestMoney);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.pBVoucher);
-            this.Controls.Add(this.txtVoucher);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPay";
@@ -492,8 +554,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBGuestMoney)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBVoucher)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -527,5 +595,9 @@
         private Guna.UI2.WinForms.Guna2ImageCheckBox cbUsePoint;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblNameGuest;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

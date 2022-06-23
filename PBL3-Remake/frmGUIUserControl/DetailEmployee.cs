@@ -176,13 +176,11 @@ namespace GUI.frmGUIUserControl
             dtpDayOfBirth.Enabled = true;
             cbbPosition.Enabled = true;
         }
-
-        #endregion
-
         private void btnShift_Click(object sender, EventArgs e)
         {
             frmGUIManager.frmShift frm = new frmGUIManager.frmShift(user.ID_User);
             frm.ShowDialog();
         }
+        #endregion
     }
 }

@@ -27,6 +27,10 @@ namespace GUI.frmGUIUserControl
         {
             if (status == "0")
             {
+                pn.BackColor = Color.FromArgb(87, 209, 255);
+            }
+            if (status == "2")
+            {
                 pn.BackColor = Color.Red;
             }
             if (status == "1")
@@ -45,7 +49,7 @@ namespace GUI.frmGUIUserControl
             lblDate.Text = Text;
         }
         #endregion
-
+        #region Event UC
         private void pnMorning_Click(object sender, EventArgs e)
         {
             NoticeBox box;
@@ -90,5 +94,6 @@ namespace GUI.frmGUIUserControl
                 box.ShowDialog();
             }
         }
+        #endregion
     }
 }

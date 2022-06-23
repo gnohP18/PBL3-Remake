@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace BLL
 {
     public class NhanVienBLL : BLL
@@ -22,6 +23,7 @@ namespace BLL
         {
 
         }
+
         public User GetNhanVienByID(int ID_Employee)
         {
             return dALQLNH.Users.Where(p => p.ID_User == ID_Employee).FirstOrDefault();
@@ -227,7 +229,7 @@ namespace BLL
             int DayAbsent = 0;
             foreach (char c in TimeSheetChar)
             {
-                if (c == '0') DayAbsent++;
+                if (c == '0' || c == '2') DayAbsent++;
             }
             return TimeSheetChar.Length - DayAbsent;
         }
@@ -243,18 +245,62 @@ namespace BLL
             }
             return DayWork;
         }
-        //public List<SalaryEmployee_view> GetAllSalaryEmployee_view()
-        //{
-        //    List<SalaryEmployee_view> list = new List<SalaryEmployee_view>();
-        //    foreach (User i in dALQLNH.Users)
-        //    {
-        //        SalaryEmployee_view slrEmployee = new SalaryEmployee_view();
-        //        slrEmployee.ID_User = i.ID_User;
-        //        slrEmployee.Name_User = i.TenUser;
-        //        slrEmployee.CoefficientsSalary = i.ChucVu.HeSoLuong;
-        //        slrEmployee.TotalDayWork = GetNumberDayWorkFormDayStartWorkByID_User(i.ID_User);
+        public int GetNumberOfTotalDayWorkByID_User(int ID_User)
+        {
+            int DayNoHaveWork = 0;
+            string strTimeSheet = "";
+            foreach (BangChamCong i in dALQLNH.BangChamCongs)
+            {
+                if (i.ID_User == ID_User)
+                {
+                    strTimeSheet += i.LichSuLamViec;
+                }
+            }
+            char[] charTimeSheet = strTimeSheet.ToCharArray();
+            foreach (char c in charTimeSheet)
+            {
+                if (c == '0') DayNoHaveWork++;
+            }
+            int TotalDayWork = charTimeSheet.Length - DayNoHaveWork;
+            return TotalDayWork;
+        }
 
-        //    }
-        //}
+        public List<SalaryEmployee_view> GetAllSalaryEmployee_view()
+        {
+            List<SalaryEmployee_view> list = new List<SalaryEmployee_view>();
+            foreach (User i in dALQLNH.Users)
+            {
+                SalaryEmployee_view slrEmployee = new SalaryEmployee_view();
+                slrEmployee.ID_User = i.ID_User;
+                slrEmployee.Name_User = i.TenUser;
+                slrEmployee.CoefficientsSalary = i.ChucVu.HeSoLuong;
+                slrEmployee.TotalDayWork = GetNumberDayWorkFormDayStartWorkByID_User(i.ID_User);
+                slrEmployee.Name_Position = GetPositionByID_Position(i.ID_ChucVu).TenChucVu;
+                int DayWork = GetNumberDayWorkFormDayStartWorkByID_User(i.ID_User);
+                int DayTotal = GetNumberOfTotalDayWorkByID_User(i.ID_User);
+                if (DayWork != 0 && DayTotal != 0)
+                {
+                    slrEmployee.PerCentDayWorkAndDayAbsent = (float)(DayWork) / (float)(DayTotal) * 100;
+                }
+                else
+                {
+                    slrEmployee.PerCentDayWorkAndDayAbsent = 0;
+                }
+                list.Add(slrEmployee);
+            }
+            return list;
+        }
+        public SalaryEmployee_view GetSalaryEmployee_viewByID_User(int ID_User)
+        {
+            SalaryEmployee_view salaryEmployee = new SalaryEmployee_view();
+            foreach (SalaryEmployee_view i in GetAllSalaryEmployee_view())
+            {
+                if (i.ID_User == ID_User)
+                    salaryEmployee = i;
+            }
+            return salaryEmployee;
+        }
+
+
     }
 }

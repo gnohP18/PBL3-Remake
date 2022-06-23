@@ -17,14 +17,7 @@ namespace GUI.frmGUIUserControl
             SetupSalary();
             SetupTimeSheetUC();
         }
-        void LoadTimeSheet()
-        {
-            if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date) != null)
-            {
-                TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
-            }
-            else TimeSheet = null;
-        }
+
         #region Local Variable
         private DateTime date { get; set; }
         private User _User { get; set; }
@@ -38,6 +31,15 @@ namespace GUI.frmGUIUserControl
         TimeSheetUC tsUC;
         #endregion
         #region Funtion
+        void LoadTimeSheet()
+        {
+            if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date) != null)
+            {
+                TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
+            }
+            else TimeSheet = null;
+        }
+
         private int NumberOfDay(DateTime dt)
         {
             DateTime newmonth = new DateTime(dt.Year, dt.Month, 5);

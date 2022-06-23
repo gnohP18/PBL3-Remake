@@ -81,6 +81,9 @@ namespace GUI.frmGUIUserControl
         }
         private void btnSalaryManage_Click(object sender, EventArgs e)
         {
+            this.Controls.Add(SalaryManageUC.Instance);
+            SalaryManageUC.Instance.Dock = DockStyle.Fill;
+            SalaryManageUC.Instance.BringToFront();
             SetUIForButton(sender);
         }
 
@@ -91,6 +94,10 @@ namespace GUI.frmGUIUserControl
             DetailEmployee frm = new DetailEmployee(ID_User);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
+        }
+        private void pBDGV_Click(object sender, EventArgs e)
+        {
+            dgvManageEmployee.BringToFront();
         }
         #endregion
 

@@ -12,7 +12,10 @@ using DTO;
 namespace GUI.frmGUIUserControl
 {
     public partial class DetailManufacturer : Form
-    {   int MA { get; set; }
+    {
+        public delegate void MyDel();
+        public MyDel d;
+        int MA { get; set; }
         public DetailManufacturer(int ma)
         {   
             MA = ma;
@@ -100,6 +103,7 @@ namespace GUI.frmGUIUserControl
                 SoDienThoai = txtPhone.Text  
         };
         NhaCungCapBLL.Instance.UpdateNhaCungCap(nhaCungCap);
+            d();
         Close();
         }
     }

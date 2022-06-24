@@ -33,6 +33,7 @@ namespace GUI.frmGUIUserControl
             {
                 int IDNCC = Convert.ToInt32(dgvNhaCungCap.SelectedRows[0].Cells["ID_NhaCungCap"].Value.ToString());
                 frmGUIUserControl.DetailManufacturer frm = new DetailManufacturer(IDNCC);
+                frm.d = new DetailManufacturer.MyDel(Load);
                 frm.Show();
             }
         else
@@ -43,6 +44,9 @@ namespace GUI.frmGUIUserControl
             
         }
 
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -197,27 +197,20 @@ namespace BLL
             }
         }
 
-        public List<ChiTietBan> GetAllDetailTableByStatus(int st)
+        public List<ChiTietBan_View> GetAllChiTietBan_ViewByStatus(int st)
         {
-            List<ChiTietBan> list = new List<ChiTietBan>();
-            if (st == 3)
+            List<ChiTietBan_View> data = new List<ChiTietBan_View>();
+            foreach(ChiTietBan i in dALQLNH.ChiTietBans.Where(s=>s.TinhTrang == st).ToList())
             {
-                foreach (ChiTietBan i in dALQLNH.ChiTietBans)
+                data.Add(new ChiTietBan_View
                 {
-                    list.Add(i);
-                }
+                    ID_Ban = i.ID_Ban,
+                    TenBan = i.Ban.TenBan,
+                    TenMonAn = i.MonAn.TenMonAn,
+                    SoLuong = i.SoLuong
+                });
             }
-            else
-            {
-                foreach (ChiTietBan i in dALQLNH.ChiTietBans)
-                {
-                    if (i.TinhTrang == st)
-                    {
-                        list.Add(i);
-                    }
-                }
-            }
-            return list;
+            return data;
         }
         public ChiTietBan GetDetailTableByID(int idctb)
         {

@@ -184,6 +184,12 @@
     <Compile Include="frmGUIUserControl\DetailInvoice.Designer.cs">
       <DependentUpon>DetailInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\DetailManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\DetailManufacturer.Designer.cs">
+      <DependentUpon>DetailManufacturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\DetailMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     </Compile>
     <Compile Include="frmGUIUserControl\MainMenuUC.Designer.cs">
       <DependentUpon>MainMenuUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUserControl\ManufacturerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\ManufacturerManagement.Designer.cs">
+      <DependentUpon>ManufacturerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUserControl\MatetialInformation.cs">
       <SubType>Form</SubType>
@@ -363,6 +375,9 @@
     <EmbeddedResource Include="frmGUIUserControl\DetailInvoice.resx">
       <DependentUpon>DetailInvoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\DetailManufacturer.resx">
+      <DependentUpon>DetailManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\DetailMaterial.resx">
       <DependentUpon>DetailMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\MainMenuUC.resx">
       <DependentUpon>MainMenuUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\ManufacturerManagement.resx">
+      <DependentUpon>ManufacturerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\MatetialInformation.resx">
       <DependentUpon>MatetialInformation.cs</DependentUpon>

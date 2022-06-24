@@ -29,12 +29,6 @@ namespace GUI.frmGUIUserControl
             }
         }
 
-        private void btnAddManufacturer_Click(object sender, EventArgs e)
-        {
-            frmGUIUserControl.AddNewManufacturer frm = new frmGUIUserControl.AddNewManufacturer();
-            frm.Show();
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             cbbKindOfMaterial.SelectedIndex = -1;
@@ -94,6 +88,10 @@ namespace GUI.frmGUIUserControl
 
         }
 
-
+        private void btnManufacturerManagement_Click(object sender, EventArgs e)
+        {
+            frmGUIUserControl.ManufacturerManagement frm = new ManufacturerManagement();
+            frm.Show();
+        }
     }
 }

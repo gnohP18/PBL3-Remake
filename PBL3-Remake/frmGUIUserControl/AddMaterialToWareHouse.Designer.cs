@@ -48,7 +48,7 @@
             this.cbbKindOfMaterial = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnClose1 = new System.Windows.Forms.Button();
-            this.btnAddManufacturer = new System.Windows.Forms.Button();
+            this.btnManufacturerManagement = new System.Windows.Forms.Button();
             this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -214,7 +214,7 @@
             this.panel1.Controls.Add(this.cbbKindOfMaterial);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnClose1);
-            this.panel1.Controls.Add(this.btnAddManufacturer);
+            this.panel1.Controls.Add(this.btnManufacturerManagement);
             this.panel1.Controls.Add(this.btnAddMaterialToWareHouse);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
@@ -304,22 +304,22 @@
             this.btnClose1.UseVisualStyleBackColor = false;
             this.btnClose1.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnAddManufacturer
+            // btnManufacturerManagement
             // 
-            this.btnAddManufacturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
-            this.btnAddManufacturer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAddManufacturer.FlatAppearance.BorderSize = 2;
-            this.btnAddManufacturer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddManufacturer.ForeColor = System.Drawing.Color.Black;
-            this.btnAddManufacturer.Location = new System.Drawing.Point(257, 169);
-            this.btnAddManufacturer.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddManufacturer.Name = "btnAddManufacturer";
-            this.btnAddManufacturer.Size = new System.Drawing.Size(156, 27);
-            this.btnAddManufacturer.TabIndex = 8;
-            this.btnAddManufacturer.Text = "Add manufacturer";
-            this.btnAddManufacturer.UseVisualStyleBackColor = false;
-            this.btnAddManufacturer.Click += new System.EventHandler(this.btnAddManufacturer_Click);
+            this.btnManufacturerManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.btnManufacturerManagement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnManufacturerManagement.FlatAppearance.BorderSize = 2;
+            this.btnManufacturerManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnManufacturerManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManufacturerManagement.ForeColor = System.Drawing.Color.Black;
+            this.btnManufacturerManagement.Location = new System.Drawing.Point(257, 169);
+            this.btnManufacturerManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnManufacturerManagement.Name = "btnManufacturerManagement";
+            this.btnManufacturerManagement.Size = new System.Drawing.Size(198, 27);
+            this.btnManufacturerManagement.TabIndex = 8;
+            this.btnManufacturerManagement.Text = "Manufacturer Management";
+            this.btnManufacturerManagement.UseVisualStyleBackColor = false;
+            this.btnManufacturerManagement.Click += new System.EventHandler(this.btnManufacturerManagement_Click);
             // 
             // btnAddMaterialToWareHouse
             // 
@@ -446,7 +446,7 @@
         private System.Windows.Forms.ComboBox cbbMaterialName;
         private System.Windows.Forms.ComboBox cbbKindOfMaterial;
         private System.Windows.Forms.Button btnClose1;
-        private System.Windows.Forms.Button btnAddManufacturer;
+        private System.Windows.Forms.Button btnManufacturerManagement;
         private System.Windows.Forms.Button btnAddMaterialToWareHouse;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;

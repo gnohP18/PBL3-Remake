@@ -7,15 +7,19 @@ namespace GUI.frmGUIManager
 {
     public partial class frmShift : Form
     {
-        Dictionary<CaLam, bool> listCaLam;
-        List<int> ListIDCalam = new List<int>();
-        int ID_NhanVien;
         public frmShift(int ID_NhanVien)
         {
             InitializeComponent();
             this.listCaLam = CaLamBLL.Instance.GetAllCaLamByID_NhanVien(ID_NhanVien);
             this.ID_NhanVien = ID_NhanVien;
         }
+        #region Local Variable
+        Dictionary<CaLam, bool> listCaLam;
+        List<int> ListIDCalam = new List<int>();
+        int ID_NhanVien;
+
+        #endregion
+        #region Function
         private void DelIDCalam(int IDCalam)
         {
             ListIDCalam.Remove(IDCalam);
@@ -24,6 +28,8 @@ namespace GUI.frmGUIManager
         {
             ListIDCalam.Add(IDCalam);
         }
+        #endregion
+        #region Event FORM
         private void frmShift_Load(object sender, EventArgs e)
         {
             foreach (KeyValuePair<CaLam, bool> i in listCaLam)
@@ -38,16 +44,23 @@ namespace GUI.frmGUIManager
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (ListIDCalam.Count > 0)
+            if (!BLL.CaLamBLL.Instance.CheckExistedUserHaveShiftOrNo(ID_NhanVien))
             {
-                CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
-                this.Close();
+                if (ListIDCalam.Count > 0)
+                {
+                    CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
+                    this.Close();
+                }
+                else
+                {
+                    NoticeBox box = new NoticeBox("please select at least one shift!!");
+                    box.ShowDialog();
+                }
             }
-            else
-            {
-                NoticeBox box = new NoticeBox("please select at least one shift!!");
-                box.ShowDialog();
-            }
+
         }
+        #endregion
+
+
     }
 }

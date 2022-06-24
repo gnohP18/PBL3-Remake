@@ -78,9 +78,11 @@ namespace GUI.frmGUIUserControl
                 dtpDayStartWork.Enabled = false;
                 txtPhonenumber.Text = user.SDT;
                 pBUser.Image = byteArrayToImage(user.AnhUser);
+                pBUser.SizeMode = PictureBoxSizeMode.StretchImage;
                 cbbPosition.Text = user.ChucVu.TenChucVu;
                 txtUserNameLogin.Text = user.Username;
                 txtPasswordLogin.Text = user.Password;
+                btnAddNewEmployee.Visible = false;
             }
             if (flag == 1)
             {
@@ -97,9 +99,18 @@ namespace GUI.frmGUIUserControl
                 txtPasswordLogin.Enabled = true;
                 txtUserNameLogin.Enabled = true;
                 btnChangePicUser.Enabled = true;
+                txtPhonenumber.Enabled = true;
                 dtpDayOfBirth.Enabled = true;
                 cbbPosition.Enabled = true;
+                btnRefresh.Visible = true;
+                btnShift.Visible = false;
             }
+        }
+        private void OpenShiftForm()
+        {
+            frmGUIManager.frmShift frm = new frmGUIManager.frmShift(BLL.NhanVienBLL.Instance.GetAllUser().Count + 1);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
         }
         #endregion
         #region Event UC function
@@ -112,6 +123,7 @@ namespace GUI.frmGUIUserControl
         {
             txtCIEmployee.Enabled = false;
             txtIDEmployee.Enabled = false;
+            txtPhonenumber.Enabled = false;
             txtNameEmployee.Enabled = false;
             cbbPosition.Enabled = false;
             btnChangePicUser.Enabled = false;
@@ -128,6 +140,7 @@ namespace GUI.frmGUIUserControl
             dtpDayOfBirth.Enabled = true;
             btnChangePicUser.Enabled = true;
             btnShift.Enabled = true;
+            txtPhonenumber.Enabled = true;
         }
 
         private void btnChangePicUser_Click(object sender, EventArgs e)
@@ -151,6 +164,7 @@ namespace GUI.frmGUIUserControl
             newuser.ID_ChucVu = cbbPosition.SelectedIndex + 1;
             newuser.CMND_CCCD = txtCIEmployee.Text;
             newuser.Username = txtUserNameLogin.Text;
+            newuser.SDT = txtPhonenumber.Text;
             newuser.Password = txtPasswordLogin.Text;
             newuser.NgaySinh = dtpDayOfBirth.Value;
             newuser.NgayBatDauLam = DateTime.Now;
@@ -158,7 +172,9 @@ namespace GUI.frmGUIUserControl
             BLL.NhanVienBLL.Instance.AddNewEmployee(newuser);
             d();
             this.Close();
+            OpenShiftForm();
         }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             txtCIEmployee.Text = "";

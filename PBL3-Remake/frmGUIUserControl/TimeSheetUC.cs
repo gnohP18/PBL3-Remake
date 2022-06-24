@@ -37,19 +37,6 @@ namespace GUI.frmGUIUserControl
             }
         }
 
-        private int NumberOfDay(DateTime dt)
-        {
-            DateTime newmonth = new DateTime(dt.Year, dt.Month, 5);
-            newmonth = newmonth.AddMonths(1);
-            int num = 0;
-            while (dt <= newmonth)
-            {
-                num++;
-                dt = dt.AddDays(1);
-            }
-            return num;
-        }
-
         private void SetupDateTimeSheet(DateTimeSheetUC dts, string text, string Morning_state, string Afternoon_state)
         {
             dts.Morning_State = Morning_state;
@@ -97,7 +84,7 @@ namespace GUI.frmGUIUserControl
             lblMonth.Text = useDate.Month.ToString() + "/" + useDate.Year.ToString();
             int line = 0;
             //Console.WriteLine(NumberOfDay(useDate));
-            for (int i = 1; i <= NumberOfDay(DateCustom); i++)
+            for (int i = 1; i <= BLL.NhanVienBLL.Instance.NumberDayofMonth(DateCustom); i++)
             {
                 int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
                 DateTimeSheetUC dts = MaTrix[line][column];

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace DTO
@@ -22,5 +18,9 @@ namespace DTO
         public string MoTa { get; set; }
         public int HeSoLuong { get; set; }
         public virtual ICollection<User> Users { get; set; }
+        public override string ToString()
+        {
+            return TenChucVu;
+        }
     }
 }

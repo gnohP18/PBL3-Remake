@@ -23,28 +23,52 @@ namespace BLL
         {
 
         }
+        public int GetNumberTimeLate(char c)
+        {
 
-        public User GetNhanVienByID(int ID_Employee)
-        {
-            return dALQLNH.Users.Where(p => p.ID_User == ID_Employee).FirstOrDefault();
-        }
-        public BangChamCong GetTimeSheetsByID_User(int ID_User)
-        {
-            return dALQLNH.BangChamCongs.Where(p => p.ID_User == ID_User).FirstOrDefault();
-        }
-        public int GetNumberOfDayWorkByID_User(int ID_User)
-        {
-            int NumberOdDayWork = 0;
-            if (GetTimeSheetsByID_User(ID_User) != null)
-                foreach (char i in GetTimeSheetsByID_User(ID_User).LichSuLamViec.ToCharArray())
+            Dictionary<char, int> Temp = new Dictionary<char, int>();
+            for (int i = 0; i < 25; i++)
+            {
+                Temp.Add((char)(65 + i), 15 * (i + 1));
+                //Console.WriteLine(Temp.Values + "\t" + Temp.Values);
+            }
+            //foreach (char i in Temp.Keys)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            int NumberTimeLate = 0;
+            foreach (KeyValuePair<char, int> T in Temp)
+            {
+                if (T.Key == c)
                 {
-                    if (i == '1' || 'A' <= i && i <= 'Z')
-                    {
-                        NumberOdDayWork++;
-                    }
+                    NumberTimeLate = T.Value;
                 }
-            return NumberOdDayWork;
+            }
+            return NumberTimeLate;
         }
+        public int GetSalaryByID_User_ByDate(int ID_User, DateTime month)
+        {
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+            BangChamCong bcc = dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User && c.NgayDauTienTinhCong.Month == month.Month).FirstOrDefault();
+            int NumberTimeLate = 0;
+            int DayWork = GetNumberOfDayWork(bcc.LichSuLamViec);
+            char[] charbcc = bcc.LichSuLamViec.ToCharArray();
+            foreach (char i in charbcc)
+            {
+                if ('A' <= i && i <= 'Z')
+                {
+                    NumberTimeLate += GetNumberTimeLate(i);
+                    Console.WriteLine(NumberTimeLate);
+                }
+
+            }
+            User _Us = GetNhanVienByID(ID_User);
+            ChucVu cv = GetPositionByID_Position(_Us.ID_ChucVu);
+            Console.WriteLine("Total timelate " + NumberTimeLate);
+            int Salary = DayWork * cv.HeSoLuong - NumberTimeLate / 15 * TTNH.TienPhatTre15p;
+            return Salary;
+        }
+
         public List<Employee_view> GetAllEmployee_view()
         {
             List<Employee_view> list = new List<Employee_view>();
@@ -90,9 +114,22 @@ namespace BLL
         {
             return dALQLNH.ChucVus.ToList();
         }
+        public int GetNewIDHoaDon()
+        {
+            int id = 1;
+            foreach (User i in dALQLNH.Users)
+            {
+                if (id != i.ID_User)
+                {
+                    return id;
+                }
+                id++;
+            }
+            return id;
+        }
         public void AddNewEmployee(User _us)
         {
-            int NewID_User = dALQLNH.Users.Count() + 1;
+            int NewID_User = GetNewIDHoaDon();
             _us.ID_User = NewID_User;
             dALQLNH.Users.Add(_us);
             dALQLNH.SaveChanges();
@@ -213,10 +250,43 @@ namespace BLL
             }
             return DayWork;
         }
+        public User GetNhanVienByID(int ID_Employee)
+        {
+            return dALQLNH.Users.Where(p => p.ID_User == ID_Employee).FirstOrDefault();
+        }
+        public BangChamCong GetNewestTimeSheetsByID_User(int ID_User)
+        {
+            List<BangChamCong> NewestTimeSheets = new List<BangChamCong>();
+            foreach (BangChamCong i in dALQLNH.BangChamCongs)
+            {
+                if (i.ID_User == ID_User)
+                {
+                    NewestTimeSheets.Add(i);
+                }
+            }
+            //return dALQLNH.BangChamCongs.Where(p => p.ID_User == ID_User).FirstOrDefault();
+            if (NewestTimeSheets.Count > 0)
+                return NewestTimeSheets[NewestTimeSheets.Count - 1];
+            else return null;
+        }
+        public int GetNumberOfDayWorkByID_User(int ID_User)
+        {
+            int NumberOfDayWork = 0;
+            if (GetNewestTimeSheetsByID_User(ID_User) != null)
+                foreach (char i in GetNewestTimeSheetsByID_User(ID_User).LichSuLamViec.ToCharArray())
+                {
+                    if (i == '1' || 'A' <= i && i <= 'Z')
+                    {
+                        NumberOfDayWork++;
+                    }
+                }
+            return NumberOfDayWork;
+        }
         public int GetNumberOfTotalDayWorkByID_User(int ID_User)
         {
             int DayNoHaveWork = 0;
             string strTimeSheet = "";
+
             foreach (BangChamCong i in dALQLNH.BangChamCongs)
             {
                 if (i.ID_User == ID_User)
@@ -254,6 +324,7 @@ namespace BLL
                 {
                     slrEmployee.PerCentDayWorkAndDayAbsent = 0;
                 }
+
                 list.Add(slrEmployee);
             }
             return list;
@@ -268,7 +339,55 @@ namespace BLL
             }
             return salaryEmployee;
         }
+        #region Salary Employee
+        public int NumberDayofMonth(DateTime dt)
+        {
+            DateTime newmonth = new DateTime(dt.Year, dt.Month, 5);
+            newmonth = newmonth.AddMonths(1);
+            int num = 0;
+            while (dt <= newmonth)
+            {
+                num++;
+                dt = dt.AddDays(1);
+            }
+            return num;
+        }
+        //public Dictionary<DateTime, char> ReturnDayWorkFormTimeSheet(DateTime month, string TimeSheet)
+        //{
+        //    ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+        //    int PaySalaryDay = TTNH.NgayPhatLuong;
+        //    DateTime StartDay = new DateTime(month.Year, month.Month, TTNH.NgayPhatLuong);
+        //    Dictionary<DateTime, char> dayWorkAndState = new Dictionary<DateTime, char>();
+        //    char[] charTimeSheet = TimeSheet.ToCharArray();
+        //    int oldindex = 1;
+        //    int newindex = 1;
+        //    for (int i = 0; i < charTimeSheet.Length; i += 2)
+        //    {
+        //        if (charTimeSheet[i] == '1' || 'A' <= charTimeSheet[i] && charTimeSheet[i] <= 'Z')
+        //        {
+        //            if (i % 2 == 0) newindex = i / 2;
+        //            else if (i % 2 == 1) newindex = (i - 1) / 2;
+        //            dayWorkAndState.Add(StartDay.AddDays(newindex - oldindex), '1');
+        //            oldindex = newindex;
+        //        }
+        //    }
+        //    return dayWorkAndState;
+        //}
+        //public BangChamCong GetTimeSheetByID_UserAndID_TimeSheet(int ID_User, DateTime month)
+        //{
+        //    return dALQLNH.BangChamCongs.Where(p => p.ID_User == ID_User && p.NgayDauTienTinhCong.Month == month.Month).FirstOrDefault();
+        //}
+        //public Dictionary<DateTime,string> GetAllDayWorkAndStateByID_UserAndTimeSheet(int ID_User,DateTime month)
+        //{
+        //    Dictionary<DateTime,string> dayWorkAndState = new Dictionary<DateTime,string>();
+        //    BangChamCong bcc= GetTimeSheetByID_UserAndID_TimeSheet(ID_User,month);
+        //    char[] CharTimeSheet = bcc.LichSuLamViec.ToCharArray();
+        //    for (int i = 0; i < CharTimeSheet.Length; i++)
+        //    {
 
+        //    }
+        //}
+        #endregion
 
     }
 }

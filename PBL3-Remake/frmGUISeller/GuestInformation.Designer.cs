@@ -56,13 +56,13 @@
             // 
             this.txtGuestName.Location = new System.Drawing.Point(134, 72);
             this.txtGuestName.Name = "txtGuestName";
-            this.txtGuestName.Size = new System.Drawing.Size(265, 22);
+            this.txtGuestName.Size = new System.Drawing.Size(265, 20);
             this.txtGuestName.TabIndex = 54;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 46);
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(172, 9);
@@ -86,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 75);
@@ -98,7 +98,7 @@
             // lblIDGuest
             // 
             this.lblIDGuest.AutoSize = true;
-            this.lblIDGuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.lblIDGuest.BackColor = System.Drawing.Color.Transparent;
             this.lblIDGuest.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDGuest.ForeColor = System.Drawing.Color.Black;
             this.lblIDGuest.Location = new System.Drawing.Point(130, 46);
@@ -110,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(12, 107);
@@ -123,13 +123,13 @@
             // 
             this.txtGuestPhone.Location = new System.Drawing.Point(134, 104);
             this.txtGuestPhone.Name = "txtGuestPhone";
-            this.txtGuestPhone.Size = new System.Drawing.Size(265, 22);
+            this.txtGuestPhone.Size = new System.Drawing.Size(265, 20);
             this.txtGuestPhone.TabIndex = 59;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(12, 136);
@@ -142,13 +142,13 @@
             // 
             this.txtGuestAddress.Location = new System.Drawing.Point(134, 133);
             this.txtGuestAddress.Name = "txtGuestAddress";
-            this.txtGuestAddress.Size = new System.Drawing.Size(265, 22);
+            this.txtGuestAddress.Size = new System.Drawing.Size(265, 20);
             this.txtGuestAddress.TabIndex = 61;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(12, 167);
@@ -162,7 +162,7 @@
             this.radMale.AutoSize = true;
             this.radMale.Location = new System.Drawing.Point(134, 167);
             this.radMale.Name = "radMale";
-            this.radMale.Size = new System.Drawing.Size(55, 20);
+            this.radMale.Size = new System.Drawing.Size(48, 17);
             this.radMale.TabIndex = 63;
             this.radMale.TabStop = true;
             this.radMale.Text = "Male";
@@ -173,7 +173,7 @@
             this.radFemale.AutoSize = true;
             this.radFemale.Location = new System.Drawing.Point(238, 165);
             this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(71, 20);
+            this.radFemale.Size = new System.Drawing.Size(59, 17);
             this.radFemale.TabIndex = 64;
             this.radFemale.TabStop = true;
             this.radFemale.Text = "Female";
@@ -182,7 +182,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(12, 195);
@@ -203,7 +203,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(12, 223);
@@ -217,7 +217,7 @@
             this.txtGuestPoint.Location = new System.Drawing.Point(134, 223);
             this.txtGuestPoint.Name = "txtGuestPoint";
             this.txtGuestPoint.ReadOnly = true;
-            this.txtGuestPoint.Size = new System.Drawing.Size(265, 22);
+            this.txtGuestPoint.Size = new System.Drawing.Size(265, 20);
             this.txtGuestPoint.TabIndex = 69;
             // 
             // btClose
@@ -237,7 +237,7 @@
             // lblRegistDay
             // 
             this.lblRegistDay.AutoSize = true;
-            this.lblRegistDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.lblRegistDay.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistDay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistDay.ForeColor = System.Drawing.Color.Black;
             this.lblRegistDay.Location = new System.Drawing.Point(130, 195);
@@ -291,7 +291,7 @@
             // GuestInformation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(202)))), ((int)(((byte)(164)))));
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(411, 467);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);

@@ -2,43 +2,27 @@
 using DTO;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI.frmGUISeller
 {
     public partial class frmMainSeller : Form
     {
+        public frmMainSeller(int ID_NhanVien)
+        {
+            InitializeComponent();
+            SetCbb();
+            d = new Mydel(LoadBanByTinhTrangBanVaTang);
+            this.ID_NhanVien = ID_NhanVien;
+        }
+        #region Local Variable
         private int Floor = 1;
         private int statustb = -1;
         public delegate void Mydel(int st, int fl);
         public Mydel d { get; set; }
-        private User _user { get; set; }
-        public frmMainSeller()
-        {
-            //_user = user;
-            InitializeComponent();
-            SetCbb();
-            d = new Mydel(LoadBanByTinhTrangBanVaTang);
-        }
-
-        private void frmMainSeller_Load(object sender, EventArgs e)
-        {
-            this.Width = 1300;
-            this.Height = 700;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            pnTable.AutoScroll = true;
-            LoadBanByTinhTrangBanVaTang(-1, 1);
-            //if (_user.ChucVu.ID_ChucVu == 3)
-            //{
-            //    btnRollUp.Visible = true;
-            //}
-            //else
-            //{
-            //    btnRollUp.Visible = false;
-            //}
-        }
-
+        private int ID_NhanVien;
+        #endregion
+        #region Function
         void SetCbb()
         {
             cbbStatusTable.Items.Add("All");
@@ -46,8 +30,6 @@ namespace GUI.frmGUISeller
             cbbStatusTable.Items.Add("Busy");
             cbbStatusTable.SelectedIndex = 0;
         }
-
-
         void SetTable(Panel pn, TableForOrdering tb)
         {
             tb.Width = 250;
@@ -63,7 +45,7 @@ namespace GUI.frmGUISeller
             int dem1 = 0;
             foreach (Ban i in listBan)
             {
-                tb[dem1] = new TableForOrdering(i);
+                tb[dem1] = new TableForOrdering(i, ID_NhanVien);
                 tb[dem1].d = d;
                 int ttb = i.TinhTrangBan;
                 dem1++;
@@ -98,6 +80,9 @@ namespace GUI.frmGUISeller
         {
             pnTable.Controls.Clear();
         }
+
+        #endregion
+        #region Event Form
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             Floor = 1;
@@ -109,7 +94,16 @@ namespace GUI.frmGUISeller
             Floor = 2;
             LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
-
+        private void frmMainSeller_Load(object sender, EventArgs e)
+        {
+            this.Width = 1300;
+            this.Height = 700;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            pnTable.AutoScroll = true;
+            LoadBanByTinhTrangBanVaTang(-1, 1);
+            if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).ID_ChucVu == 3) btnAttend.Visible = true;
+            else btnAttend.Visible = false;
+        }
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbStatusTable.SelectedIndex == 1)
@@ -131,67 +125,22 @@ namespace GUI.frmGUISeller
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Owner.Show();
+            this.Dispose();
         }
-        DataGridView dgvStatusDish;
-        private void LoadDishByStatusDish(int st)
-        {
-            dgvStatusDish = new DataGridView();
-            pnTable.Controls.Add(dgvStatusDish);
-            dgvStatusDish.Dock = DockStyle.Fill;
-            Image NotReadyImage = PBL3_Remake.Properties.Resources.uncheckedRed;
-            Image ReadyImage = PBL3_Remake.Properties.Resources.checkedGreen;
-            dgvStatusDish.DataSource = BanBLL.Instance.GetAllDetailTableByStatus(st);
-            DataGridViewImageColumn imgcol = new DataGridViewImageColumn();
-            dgvStatusDish.Columns.Add(imgcol);
-            foreach (DataGridViewRow i in dgvStatusDish.Rows)
-            {
-                if (i.Cells[4].Value.ToString() == "1")
-                {
-                    imgcol.Image = ReadyImage;
-                }
-                if (i.Cells[4].Value.ToString() == "0")
-                {
-                    imgcol.Image = NotReadyImage;
-                }
-            }
-            dgvStatusDish.Columns[5].Visible = false;
-            dgvStatusDish.Columns[6].Visible = false;
-            dgvStatusDish.CellClick += dgvStatusDish_CellsClick;
-            dgvStatusDish.ReadOnly = true;
-            dgvStatusDish.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStatusDish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-        }
-        //private void cbbStatusDish_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    RemoveTable();
-        //    if (cbbStatusDish.SelectedIndex == 0)
-        //        LoadDishByStatusDish(0);
-        //    else if (cbbStatusDish.SelectedIndex == 1)
-        //        LoadDishByStatusDish(1);
-        //}
-        private void dgvStatusDish_CellsClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != 0)
-            {
-                int idctb = Convert.ToInt32(dgvStatusDish.SelectedRows[0].Cells["ID_ChiTietBan"].Value.ToString());
-                frmStatusDish frm = new frmStatusDish(idctb);
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
-            }
-        }
-
-        private void btnAttendance_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void btnDetailTable_Click(object sender, EventArgs e)
         {
             frmGUISeller.DetailTable frm = new DetailTable();
             frm.Show();
         }
+
+        private void btnAttend_Click(object sender, EventArgs e)
+        {
+            frmGUISeller.frmAttendance form = new frmAttendance();
+            form.ShowDialog();
+        }
+        #endregion
 
     }
 }

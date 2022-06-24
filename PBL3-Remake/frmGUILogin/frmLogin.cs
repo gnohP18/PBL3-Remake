@@ -10,6 +10,7 @@ namespace GUI.frmGUILogin
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -19,8 +20,8 @@ namespace GUI.frmGUILogin
 
         private void btnConnectToDataBase_Click(object sender, EventArgs e)
         {
-            frmDataBase frm = new frmDataBase();
-            frm.Show();
+            /*frmDataBase frm = new frmDataBase();
+            frm.Show();*/
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -43,9 +44,10 @@ namespace GUI.frmGUILogin
                 }
                 if (CheckLogin == 1)
                 {
-                    frmMainSeller frm = new frmMainSeller();
-                    //BLL.BLLNVNH.Instance.GetUserByUsername(txtUsername.Text)
+                    frmMainSeller frm = new frmMainSeller(NhanVienBLL.Instance.GetNhanVienByUserName(txtUsername.Text).ID_User);
                     frm.Show();
+                    frm.Owner = this;
+                    this.Hide();
                 }
             }
             else if (radManager.Checked)
@@ -62,6 +64,8 @@ namespace GUI.frmGUILogin
                 {
                     frmMainManager frm = new frmMainManager();
                     frm.Show();
+                    frm.Owner = this;
+                    this.Hide();
                 }
             }
             else

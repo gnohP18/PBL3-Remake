@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAttend = new System.Windows.Forms.Button();
             this.btnDetailTable = new System.Windows.Forms.Button();
-            this.btnAttendance = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
@@ -47,8 +47,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.btnAttend);
             this.panel1.Controls.Add(this.btnDetailTable);
-            this.panel1.Controls.Add(this.btnAttendance);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnExit);
@@ -62,6 +62,25 @@
             this.panel1.Size = new System.Drawing.Size(1300, 100);
             this.panel1.TabIndex = 0;
             // 
+            // btnAttend
+            // 
+            this.btnAttend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnAttend.FlatAppearance.BorderSize = 0;
+            this.btnAttend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttend.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttend.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAttend.Image = global::PBL3_Remake.Properties.Resources.networking_32;
+            this.btnAttend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttend.Location = new System.Drawing.Point(479, 24);
+            this.btnAttend.Name = "btnAttend";
+            this.btnAttend.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnAttend.Size = new System.Drawing.Size(176, 50);
+            this.btnAttend.TabIndex = 28;
+            this.btnAttend.Text = "Attendance";
+            this.btnAttend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAttend.UseVisualStyleBackColor = false;
+            this.btnAttend.Click += new System.EventHandler(this.btnAttend_Click);
+            // 
             // btnDetailTable
             // 
             this.btnDetailTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -71,7 +90,7 @@
             this.btnDetailTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDetailTable.Image = global::PBL3_Remake.Properties.Resources.detail_table_icons;
             this.btnDetailTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetailTable.Location = new System.Drawing.Point(413, 34);
+            this.btnDetailTable.Location = new System.Drawing.Point(269, 26);
             this.btnDetailTable.Name = "btnDetailTable";
             this.btnDetailTable.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnDetailTable.Size = new System.Drawing.Size(165, 50);
@@ -81,34 +100,15 @@
             this.btnDetailTable.UseVisualStyleBackColor = false;
             this.btnDetailTable.Click += new System.EventHandler(this.btnDetailTable_Click);
             // 
-            // btnAttendance
-            // 
-            this.btnAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnAttendance.FlatAppearance.BorderSize = 0;
-            this.btnAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttendance.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendance.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAttendance.Image = global::PBL3_Remake.Properties.Resources.networking_32;
-            this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAttendance.Location = new System.Drawing.Point(242, 31);
-            this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnAttendance.Size = new System.Drawing.Size(165, 50);
-            this.btnAttendance.TabIndex = 27;
-            this.btnAttendance.Text = "Attendance";
-            this.btnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAttendance.UseVisualStyleBackColor = false;
-            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(720, 43);
+            this.label2.Location = new System.Drawing.Point(735, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 26);
+            this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Status table";
             // 
@@ -118,9 +118,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(116, 40);
+            this.label1.Location = new System.Drawing.Point(109, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 26);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Employee";
             // 
@@ -149,7 +149,7 @@
             this.btnFloor2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFloor2.Image = ((System.Drawing.Image)(resources.GetObject("btnFloor2.Image")));
             this.btnFloor2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFloor2.Location = new System.Drawing.Point(1168, 25);
+            this.btnFloor2.Location = new System.Drawing.Point(1168, 26);
             this.btnFloor2.Name = "btnFloor2";
             this.btnFloor2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnFloor2.Size = new System.Drawing.Size(120, 50);
@@ -168,7 +168,7 @@
             this.btnFloor1.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFloor1.Image = ((System.Drawing.Image)(resources.GetObject("btnFloor1.Image")));
             this.btnFloor1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFloor1.Location = new System.Drawing.Point(1048, 25);
+            this.btnFloor1.Location = new System.Drawing.Point(1048, 26);
             this.btnFloor1.Name = "btnFloor1";
             this.btnFloor1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnFloor1.Size = new System.Drawing.Size(120, 50);
@@ -183,9 +183,9 @@
             this.cbbStatusTable.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbbStatusTable.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbbStatusTable.FormattingEnabled = true;
-            this.cbbStatusTable.Location = new System.Drawing.Point(860, 45);
+            this.cbbStatusTable.Location = new System.Drawing.Point(875, 41);
             this.cbbStatusTable.Name = "cbbStatusTable";
-            this.cbbStatusTable.Size = new System.Drawing.Size(167, 24);
+            this.cbbStatusTable.Size = new System.Drawing.Size(167, 21);
             this.cbbStatusTable.TabIndex = 18;
             this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
             // 
@@ -193,7 +193,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.pictureBox1.Image = global::PBL3_Remake.Properties.Resources.icon_32;
-            this.pictureBox1.Location = new System.Drawing.Point(78, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -239,7 +239,7 @@
         private System.Windows.Forms.ComboBox cbbStatusTable;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnTable;
-        private System.Windows.Forms.Button btnAttendance;
         private System.Windows.Forms.Button btnDetailTable;
+        private System.Windows.Forms.Button btnAttend;
     }
 }

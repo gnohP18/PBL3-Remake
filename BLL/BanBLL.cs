@@ -260,5 +260,12 @@ namespace BLL
                 dALQLNH.SaveChanges();
             }
         }
+        public void SetEmptyBan(int ID_Ban)
+        {
+            Ban ban = dALQLNH.Bans.Find(ID_Ban);
+            if (ban.TinhTrangBan != ID_Ban) SetEmptyBan(dALQLNH.Bans.Find(ban.TinhTrangBan).ID_Ban);
+            dALQLNH.Bans.Find(ID_Ban).TinhTrangBan = 0;
+            dALQLNH.SaveChanges();
+        }
     }
 }

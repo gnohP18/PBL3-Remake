@@ -70,12 +70,6 @@
     <Compile Include="CustomItem\DateTimePickerCustom.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGUILogin\frmDataBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +88,12 @@
     <Compile Include="frmGUIManager\frmMainManager.Designer.cs">
       <DependentUpon>frmMainManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIManager\frmShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\frmShift.Designer.cs">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUISeller\DetailTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +106,11 @@
     <Compile Include="frmGUISeller\DishForOrdering.Designer.cs">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUISeller\frmAttendaneEmployee.cs">
+    <Compile Include="frmGUISeller\frmAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGUISeller\frmAttendaneEmployee.Designer.cs">
-      <DependentUpon>frmAttendaneEmployee.cs</DependentUpon>
+    <Compile Include="frmGUISeller\frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUISeller\frmCollaborTable.cs">
       <SubType>Form</SubType>
@@ -286,6 +286,12 @@
     <Compile Include="frmGUIUserControl\OverViewUC.Designer.cs">
       <DependentUpon>OverViewUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUIUserControl\SalaryManageUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUserControl\SalaryManageUC.Designer.cs">
+      <DependentUpon>SalaryManageUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUserControl\StatisticUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,9 +324,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGUILogin\frmDataBase.resx">
       <DependentUpon>frmDataBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,14 +333,17 @@
     <EmbeddedResource Include="frmGUIManager\frmMainManager.resx">
       <DependentUpon>frmMainManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\frmShift.resx">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\DetailTable.resx">
       <DependentUpon>DetailTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\DishForOrdering.resx">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUISeller\frmAttendaneEmployee.resx">
-      <DependentUpon>frmAttendaneEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUISeller\frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUISeller\frmCollaborTable.resx">
       <DependentUpon>frmCollaborTable.cs</DependentUpon>
@@ -425,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\OverViewUC.resx">
       <DependentUpon>OverViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUserControl\SalaryManageUC.resx">
+      <DependentUpon>SalaryManageUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUserControl\StatisticUC.resx">
       <DependentUpon>StatisticUC.cs</DependentUpon>
@@ -662,6 +671,33 @@
   <ItemGroup>
     <None Include="Resources\close.png" />
     <None Include="Resources\calendar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-building-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-left-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

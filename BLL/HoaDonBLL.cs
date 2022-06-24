@@ -1,7 +1,6 @@
-﻿using Entity;
+﻿using DTO;
 using System;
 using System.Collections.Generic;
-using DTO;
 using System.Linq;
 
 namespace BLL
@@ -21,6 +20,10 @@ namespace BLL
         private HoaDonBLL()
         {
 
+        }
+        public int GetTienFromDiemTichLuy(int Diem)
+        {
+            return dALQLNH.ThongTinNhaHangs.Find(1).DiemTichLuyQuyDoiThanhTien * Diem;
         }
         public List<HoaDon> GetAllHoaDonByIDKhachHang(int ID_KhachHang)
         {
@@ -94,6 +97,50 @@ namespace BLL
                 });
             }
             return list;
+        }
+        public void AddNewDetailInvoice(int ID_Invoice, int ID_Dish, int Amount)
+        {
+            ChiTietHoaDon cthd = dALQLNH.ChiTietHoaDons.Create();
+            cthd.ID_HoaDon = ID_Invoice;
+            cthd.ID_MonAn = ID_Dish;
+            cthd.SoLuong = Amount;
+            dALQLNH.ChiTietHoaDons.Add(cthd);
+            dALQLNH.SaveChanges();
+        }
+        public List<HoaDon> GetAllInvoice()
+        {
+            return dALQLNH.HoaDons.ToList();
+        }
+        public int GetNewIDHoaDon()
+        {
+            int id = 1;
+            foreach (HoaDon i in dALQLNH.HoaDons)
+            {
+                if (id != i.ID_HoaDon)
+                {
+                    return id;
+                }
+                id++;
+            }
+            return id;
+        }
+        public void AddNewInvoice(int ID_User, int ID_Guest, int Total, int MoneyConvertFromPoint, string MaVoucher, List<MonAn_View> list)
+        {
+            HoaDon invoice = dALQLNH.HoaDons.Create();
+            invoice.ID_HoaDon = GetNewIDHoaDon();
+            invoice.ID_User = ID_User;
+            invoice.TongTien = Total;
+            invoice.ID_KhachHang = ID_Guest;
+            invoice.TienQuyDoiTuDiemTichLuy = MoneyConvertFromPoint;
+            invoice.MaVoucher = MaVoucher;
+            invoice.NgayLap = DateTime.Now;
+            dALQLNH.HoaDons.Add(invoice);
+            dALQLNH.SaveChanges();
+            foreach (MonAn_View i in list)
+            {
+                AddNewDetailInvoice(invoice.ID_HoaDon, i.ID_MonAn, i.SoLuong);
+            }
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace GUI.frmGUIUserControl
         {
             get { if (_Instance == null) _Instance = new WareHouseUC(); return _Instance; }
         }
-        private WareHouseUC()
+        public WareHouseUC()
         {
             InitializeComponent();
         }

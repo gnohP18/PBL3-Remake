@@ -12,7 +12,7 @@ namespace GUI.frmGUIUserControl
         {
             get { if (_Instance == null) _Instance = new EmployeesUC(); return _Instance; }
         }
-        private EmployeesUC()
+        public EmployeesUC()
         {
             InitializeComponent();
         }
@@ -53,6 +53,12 @@ namespace GUI.frmGUIUserControl
         private void btnDeleteEmployee_Click(object sender, System.EventArgs e)
         {
             SetUIForButton(sender);
+            int index = dgvManageEmployee.CurrentCell.RowIndex;
+            int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
+            NoticeBox frm = new NoticeBox("You have deleted User " + ID_User);
+            frm.Show();
+            BLL.NhanVienBLL.Instance.DeleteEmployee(ID_User);
+            LoadDataGridView();
         }
 
         private void btnAddEmployee_Click_1(object sender, System.EventArgs e)
@@ -64,7 +70,24 @@ namespace GUI.frmGUIUserControl
             frm.Show();
         }
 
-        private void dgvManageEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnTimeSheetEmployee_Click(object sender, EventArgs e)
+        {
+            SetUIForButton(sender);
+            int index = dgvManageEmployee.CurrentCell.RowIndex;
+            int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
+            EmployeeTimeSheet frm = new EmployeeTimeSheet(ID_User);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+        }
+        private void btnSalaryManage_Click(object sender, EventArgs e)
+        {
+            this.Controls.Add(SalaryManageUC.Instance);
+            SalaryManageUC.Instance.Dock = DockStyle.Fill;
+            SalaryManageUC.Instance.BringToFront();
+            SetUIForButton(sender);
+        }
+
+        private void dgvManageEmployee_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = dgvManageEmployee.CurrentCell.RowIndex;
             int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
@@ -72,14 +95,11 @@ namespace GUI.frmGUIUserControl
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }
-        private void btnTimeSheetEmployee_Click(object sender, EventArgs e)
+        private void pBDGV_Click(object sender, EventArgs e)
         {
-            int index = dgvManageEmployee.CurrentCell.RowIndex;
-            int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
-
+            dgvManageEmployee.BringToFront();
         }
         #endregion
-
 
     }
 }

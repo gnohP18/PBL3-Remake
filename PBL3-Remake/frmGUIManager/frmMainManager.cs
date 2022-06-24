@@ -6,9 +6,24 @@ namespace GUI.frmGUIManager
 {
     public partial class frmMainManager : Form
     {
+        MainMenuUC MainMenuUC;
+        OverViewUC OverViewUC;
+        EmployeesUC EmployeesUC;
+        HelpUC HelpUC;
+        StatisticUC StatisticUC;
+        WareHouseUC WareHouseUC;
+        ManagerFoodUC ManagerFoodUC;
         public frmMainManager()
         {
             InitializeComponent();
+            MainMenuUC = new MainMenuUC();
+            OverViewUC = new OverViewUC();
+            EmployeesUC = new EmployeesUC();
+            HelpUC = new HelpUC();
+            StatisticUC = new StatisticUC();
+            WareHouseUC = new WareHouseUC();
+            ManagerFoodUC = new ManagerFoodUC();
+            MainMenuUC.BringToFront();
         }
 
         void SetupUC(UserControl uc)
@@ -36,58 +51,61 @@ namespace GUI.frmGUIManager
         }
         private void frmMainManager_Load(object sender, EventArgs e)
         {
-            SetupUC(OverViewUC.Instance);
-            SetupUC(EmployeesUC.Instance);
-            SetupUC(HelpUC.Instance);
-            SetupUC(StatisticUC.Instance);
-            SetupUC(WareHouseUC.Instance);
-            SetupUC(ManagerFoodUC.Instance);
+            SetupUC(MainMenuUC);
+            SetupUC(OverViewUC);
+            SetupUC(EmployeesUC);
+            SetupUC(HelpUC);
+            SetupUC(StatisticUC);
+            SetupUC(WareHouseUC);
+            SetupUC(ManagerFoodUC);
         }
 
         private void btnOverView_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            OverViewUC.Instance.BringToFront();
+            OverViewUC.BringToFront();
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            EmployeesUC.Instance.BringToFront();
+            EmployeesUC.BringToFront();
         }
 
         private void btnWareHouse_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            WareHouseUC.Instance.BringToFront();
+            WareHouseUC.BringToFront();
         }
 
         private void btnStatictis_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            StatisticUC.Instance.BringToFront();
+            StatisticUC.BringToFront();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            HelpUC.Instance.BringToFront();
+            HelpUC.BringToFront();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Owner.Show();
+            this.Dispose();
         }
 
         private void btnFood_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
-            ManagerFoodUC.Instance.BringToFront();
+            ManagerFoodUC.BringToFront();
         }
 
         private void btnInforRestaurant_Click(object sender, EventArgs e)
         {
             SetUIForButton(sender);
+            MainMenuUC.BringToFront();
         }
     }
 }

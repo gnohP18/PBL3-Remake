@@ -13,7 +13,7 @@ namespace Entity
         public DALQLNH()
             : base("name=DALQLNH")
         {
-            Database.SetInitializer<DALQLNH>(new CreateDB());
+            //Database.SetInitializer<DALQLNH>(new CreateDB());
         }
         public virtual DbSet<Ban> Bans { get; set; }
         public virtual DbSet<CaLam> CaLams { get; set; }
@@ -113,6 +113,7 @@ namespace Entity
                 .HasRequired<Voucher>(s => s.Voucher)
                 .WithMany(g => g.HoaDons)
                 .HasForeignKey<string>(s => s.MaVoucher);
+
         }
     }
     // Add a DbSet for each entity type that you want to include in your model. For more information 

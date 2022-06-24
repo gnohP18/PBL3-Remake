@@ -50,7 +50,7 @@
             this.textBox3.Location = new System.Drawing.Point(23, 107);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(322, 28);
+            this.textBox3.Size = new System.Drawing.Size(322, 23);
             this.textBox3.TabIndex = 19;
             // 
             // textBox1
@@ -61,7 +61,7 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(23, 54);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 28);
+            this.textBox1.Size = new System.Drawing.Size(322, 23);
             this.textBox1.TabIndex = 18;
             // 
             // btnCheck
@@ -91,7 +91,7 @@
             this.label1.Location = new System.Drawing.Point(18, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 30);
+            this.label1.Size = new System.Drawing.Size(257, 24);
             this.label1.TabIndex = 16;
             this.label1.Text = "Connect to DataBase";
             // 

@@ -54,6 +54,7 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pBUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.cbbShift = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pBUser)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +67,10 @@
             this.btnShift.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShift.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShift.ForeColor = System.Drawing.Color.Black;
-            this.btnShift.Location = new System.Drawing.Point(118, 201);
-            this.btnShift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShift.Location = new System.Drawing.Point(18, 303);
+            this.btnShift.Margin = new System.Windows.Forms.Padding(2);
             this.btnShift.Name = "btnShift";
-            this.btnShift.Size = new System.Drawing.Size(78, 26);
+            this.btnShift.Size = new System.Drawing.Size(65, 26);
             this.btnShift.TabIndex = 30;
             this.btnShift.Text = "Shift";
             this.btnShift.UseVisualStyleBackColor = false;
@@ -91,7 +92,7 @@
             // txtPhonenumber
             // 
             this.txtPhonenumber.Location = new System.Drawing.Point(16, 180);
-            this.txtPhonenumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhonenumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhonenumber.Name = "txtPhonenumber";
             this.txtPhonenumber.Size = new System.Drawing.Size(182, 20);
             this.txtPhonenumber.TabIndex = 28;
@@ -125,7 +126,7 @@
             // txtUserNameLogin
             // 
             this.txtUserNameLogin.Location = new System.Drawing.Point(10, 263);
-            this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserNameLogin.Name = "txtUserNameLogin";
             this.txtUserNameLogin.Size = new System.Drawing.Size(161, 20);
             this.txtUserNameLogin.TabIndex = 25;
@@ -133,7 +134,7 @@
             // txtPasswordLogin
             // 
             this.txtPasswordLogin.Location = new System.Drawing.Point(11, 306);
-            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtPasswordLogin.Name = "txtPasswordLogin";
             this.txtPasswordLogin.Size = new System.Drawing.Size(160, 20);
             this.txtPasswordLogin.TabIndex = 24;
@@ -166,7 +167,7 @@
             this.dtpDayStartWork.CustomFormat = "dd/MM/yyyy";
             this.dtpDayStartWork.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDayStartWork.Location = new System.Drawing.Point(10, 222);
-            this.dtpDayStartWork.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDayStartWork.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDayStartWork.Name = "dtpDayStartWork";
             this.dtpDayStartWork.Size = new System.Drawing.Size(91, 20);
             this.dtpDayStartWork.TabIndex = 18;
@@ -179,7 +180,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Location = new System.Drawing.Point(198, 272);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(56, 25);
             this.btnEdit.TabIndex = 2;
@@ -218,7 +219,7 @@
             this.dtpDayOfBirth.CustomFormat = "dd/MM/yyyy";
             this.dtpDayOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDayOfBirth.Location = new System.Drawing.Point(16, 277);
-            this.dtpDayOfBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDayOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDayOfBirth.Name = "dtpDayOfBirth";
             this.dtpDayOfBirth.Size = new System.Drawing.Size(91, 20);
             this.dtpDayOfBirth.TabIndex = 15;
@@ -226,7 +227,7 @@
             // txtCIEmployee
             // 
             this.txtCIEmployee.Location = new System.Drawing.Point(18, 137);
-            this.txtCIEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCIEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.txtCIEmployee.Name = "txtCIEmployee";
             this.txtCIEmployee.Size = new System.Drawing.Size(182, 20);
             this.txtCIEmployee.TabIndex = 14;
@@ -247,7 +248,7 @@
             // txtNameEmployee
             // 
             this.txtNameEmployee.Location = new System.Drawing.Point(16, 89);
-            this.txtNameEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameEmployee.Name = "txtNameEmployee";
             this.txtNameEmployee.Size = new System.Drawing.Size(182, 20);
             this.txtNameEmployee.TabIndex = 12;
@@ -268,7 +269,7 @@
             // txtIDEmployee
             // 
             this.txtIDEmployee.Location = new System.Drawing.Point(16, 38);
-            this.txtIDEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDEmployee.Name = "txtIDEmployee";
             this.txtIDEmployee.ReadOnly = true;
             this.txtIDEmployee.Size = new System.Drawing.Size(182, 20);
@@ -294,8 +295,8 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.Location = new System.Drawing.Point(383, 333);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Location = new System.Drawing.Point(383, 387);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 25);
             this.btnOK.TabIndex = 3;
@@ -311,7 +312,7 @@
             this.btnChangePicUser.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePicUser.ForeColor = System.Drawing.Color.Black;
             this.btnChangePicUser.Location = new System.Drawing.Point(54, 163);
-            this.btnChangePicUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangePicUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangePicUser.Name = "btnChangePicUser";
             this.btnChangePicUser.Size = new System.Drawing.Size(75, 31);
             this.btnChangePicUser.TabIndex = 21;
@@ -326,8 +327,8 @@
             this.btnAddNewEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewEmployee.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewEmployee.ForeColor = System.Drawing.Color.Black;
-            this.btnAddNewEmployee.Location = new System.Drawing.Point(8, 333);
-            this.btnAddNewEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNewEmployee.Location = new System.Drawing.Point(7, 387);
+            this.btnAddNewEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNewEmployee.Name = "btnAddNewEmployee";
             this.btnAddNewEmployee.Size = new System.Drawing.Size(90, 25);
             this.btnAddNewEmployee.TabIndex = 22;
@@ -342,8 +343,8 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(102, 333);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(101, 387);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(90, 25);
             this.btnRefresh.TabIndex = 23;
@@ -365,6 +366,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.guna2ShadowPanel1.Controls.Add(this.cbbShift);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.btnEdit);
             this.guna2ShadowPanel1.Controls.Add(this.txtCIEmployee);
@@ -383,15 +385,25 @@
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(176, 13);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(263, 304);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(263, 369);
             this.guna2ShadowPanel1.TabIndex = 31;
+            // 
+            // cbbShift
+            // 
+            this.cbbShift.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbbShift.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cbbShift.FormattingEnabled = true;
+            this.cbbShift.Location = new System.Drawing.Point(16, 334);
+            this.cbbShift.Name = "cbbShift";
+            this.cbbShift.Size = new System.Drawing.Size(182, 21);
+            this.cbbShift.TabIndex = 31;
             // 
             // DetailEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(450, 364);
+            this.ClientSize = new System.Drawing.Size(445, 425);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -405,7 +417,7 @@
             this.Controls.Add(this.dtpDayStartWork);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DetailEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailEmployee";
@@ -445,5 +457,6 @@
         private System.Windows.Forms.Button btnShift;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pBUser;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private System.Windows.Forms.ComboBox cbbShift;
     }
 }

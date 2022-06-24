@@ -73,15 +73,15 @@ namespace BLL
 
         public void SetCaLamForNhanVien(int ID_NhanVien, List<int> listIDCaLam)
         {
-            foreach(ChiTietCaLam i in dALQLNH.ChiTietCaLams.ToList())
+            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams.ToList())
             {
-                if(i.ID_User == ID_NhanVien)
+                if (i.ID_User == ID_NhanVien)
                 {
                     dALQLNH.ChiTietCaLams.Remove(i);
                     dALQLNH.SaveChanges();
                 }
             }
-            foreach(int i in listIDCaLam)
+            foreach (int i in listIDCaLam)
             {
                 dALQLNH.ChiTietCaLams.Add(new ChiTietCaLam
                 {
@@ -90,6 +90,23 @@ namespace BLL
                 });
                 dALQLNH.SaveChanges();
             }
+
+        }
+        public bool CheckExistedUserHaveShiftOrNo(int ID_User)
+        {
+            bool result = false;
+            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
+            {
+                if (i.ID_User == ID_User)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
+        public void AddNewTimeSheetByID_User(int ID_User)
+        {
+
         }
     }
 }

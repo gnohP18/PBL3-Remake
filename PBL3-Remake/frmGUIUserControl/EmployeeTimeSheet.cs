@@ -62,7 +62,7 @@ namespace GUI.frmGUIUserControl
             NumberOfDateLate = 0;
             foreach (char c in charTimeSheet)
             {
-                if (c == '0') NumberOfDateAbsent++;
+                if (c == '2') NumberOfDateAbsent++;
                 if (c == '1') NumberOfDateAttendance++;
                 if ('A' <= c && c <= 'Z') NumberOfDateLate++;
             }
@@ -85,6 +85,8 @@ namespace GUI.frmGUIUserControl
             lblCoefficientsSalary.Text = User_Position.HeSoLuong.ToString();
             lblID_User.Text = _User.ID_User.ToString();
             lblName_User.Text = _User.TenUser;
+            lblTotalSalary.Text = BLL.NhanVienBLL.Instance.GetSalaryByID_User_ByDate(_User.ID_User, date).ToString();
+
         }
 
         private void SetupTimeSheetUC()
@@ -102,6 +104,7 @@ namespace GUI.frmGUIUserControl
         private void btnOK_Click(object sender, EventArgs e)
         {
             this.Close();
+            BLL.NhanVienBLL.Instance.GetNumberTimeLate('a');
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -131,6 +134,7 @@ namespace GUI.frmGUIUserControl
             SetupDataForChart(date);
             SetupSalary();
             SetupTimeSheetUC();
+
         }
     }
 }

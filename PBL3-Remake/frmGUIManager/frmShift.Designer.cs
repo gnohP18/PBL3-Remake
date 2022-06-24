@@ -57,7 +57,7 @@
             this.btnOK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnOK.Location = new System.Drawing.Point(386, 397);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(135, 37);
             this.btnOK.TabIndex = 5;
@@ -68,7 +68,7 @@
             // 
             this.pnCaLam.AutoScroll = true;
             this.pnCaLam.Location = new System.Drawing.Point(1, 54);
-            this.pnCaLam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnCaLam.Margin = new System.Windows.Forms.Padding(2);
             this.pnCaLam.Name = "pnCaLam";
             this.pnCaLam.Size = new System.Drawing.Size(529, 327);
             this.pnCaLam.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.Controls.Add(this.pnCaLam);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmShift";
             this.Text = "frmShift";
             this.Load += new System.EventHandler(this.frmShift_Load);

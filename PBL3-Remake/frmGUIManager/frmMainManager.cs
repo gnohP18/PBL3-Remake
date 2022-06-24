@@ -93,7 +93,7 @@ namespace GUI.frmGUIManager
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
-            this.Dispose();
+            this.Close();
         }
 
         private void btnFood_Click(object sender, EventArgs e)

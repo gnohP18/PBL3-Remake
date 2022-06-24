@@ -63,8 +63,8 @@ namespace GUI.frmGUILogin
                 if (CheckLogin == 1)
                 {
                     frmMainManager frm = new frmMainManager();
-                    frm.Show();
                     frm.Owner = this;
+                    frm.Show();
                     this.Hide();
                 }
             }

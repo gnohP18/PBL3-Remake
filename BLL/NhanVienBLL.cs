@@ -218,44 +218,12 @@ namespace BLL
             }
             return -1;
         }
-        public void ChamCong(int ID_User)
-        {
-            User user = dALQLNH.Users.Find(ID_User);
-            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
-            DateTime dtNow = DateTime.Now;
-            int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
-            int SangChieu = GetBuoiLamNow();
-            BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
-            TimeSpan TimeLate;
-            if (SangChieu == 0)
-            {
-                TimeLate = dtNow.TimeOfDay - TTNH.ThoiGianBatDauLamViecSang;
-            }
-            else
-            {
-                TimeLate = dtNow.TimeOfDay - TTNH.ThoiGianBatDauLamViecChieu;
-            }
-            int MinuteLate = TimeLate.Hours * 60 + TimeLate.Minutes;
-            StringBuilder temp = new StringBuilder(bangChamCong.LichSuLamViec);
-            if (MinuteLate < 15) temp[indexDay * 2 + SangChieu] = '1';
-            else temp[indexDay * 2 + SangChieu] = (char)(MinuteLate / 15 + 64);
-            bangChamCong.LichSuLamViec = temp.ToString();
-            bangChamCong.TinhLuong += user.ChucVu.HeSoLuong - MinuteLate / 15 * TTNH.TienPhatTre15p;
-            dALQLNH.SaveChanges();
-        }
         public void DeleteEmployee(int ID_User)
         {
             GetNhanVienByID(ID_User).DaXoa = true;
             dALQLNH.SaveChanges();
         }
-        public DateTime GetNgayChamCongHienTai()
-        {
-            return dALQLNH.ThongTinNhaHangs.Find(1).NgayBatDauChamCongHienTai;
-        }
-        public BangChamCong GetEmployeeTimeSheetByID_User(int ID_User, DateTime date)
-        {
-            return dALQLNH.BangChamCongs.Where(c => c.ID_User == ID_User && c.NgayDauTienTinhCong == date).FirstOrDefault();
-        }
+        
         public ChucVu GetPositionByID_Position(int ID_Position)
         {
             return dALQLNH.ChucVus.Where(p => p.ID_ChucVu == ID_Position).FirstOrDefault();

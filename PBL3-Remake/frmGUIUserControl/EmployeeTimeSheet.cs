@@ -10,7 +10,7 @@ namespace GUI.frmGUIUserControl
         public EmployeeTimeSheet(int User_ID)
         {
             _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(User_ID);
-            date = BLL.NhanVienBLL.Instance.GetNgayChamCongHienTai();
+            date = BLL.BangChamCongBLL.Instance.GetNgayChamCongHienTai();
             LoadTimeSheet();
             InitializeComponent();
             SetupDataForChart(date);
@@ -33,9 +33,9 @@ namespace GUI.frmGUIUserControl
         #region Funtion
         void LoadTimeSheet()
         {
-            if (BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date) != null)
+            if (BLL.BangChamCongBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date) != null)
             {
-                TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
+                TimeSheet = BLL.BangChamCongBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
             }
             else TimeSheet = null;
         }
@@ -92,7 +92,7 @@ namespace GUI.frmGUIUserControl
         private void SetupTimeSheetUC()
         {
             if (tsUC != null) this.Controls.Remove(tsUC);
-            TimeSheet = BLL.NhanVienBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
+            TimeSheet = BLL.BangChamCongBLL.Instance.GetEmployeeTimeSheetByID_User(_User.ID_User, date).LichSuLamViec;
             tsUC = new TimeSheetUC(TimeSheet, date);
             tsUC.Location = new System.Drawing.Point(400, 0);
             this.Controls.Add(tsUC);
@@ -109,7 +109,7 @@ namespace GUI.frmGUIUserControl
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (date == BLL.NhanVienBLL.Instance.GetNgayChamCongHienTai()) return;
+            if (date == BLL.BangChamCongBLL.Instance.GetNgayChamCongHienTai()) return;
             date = new DateTime(date.Year, date.Month + 1, date.Day);
             LoadTimeSheet();
             if (TimeSheet == null)

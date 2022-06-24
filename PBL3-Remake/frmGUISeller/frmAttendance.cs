@@ -40,7 +40,7 @@ namespace GUI.frmGUISeller
         {
             foreach(int i in ListIDNhanVien)
             {
-                NhanVienBLL.Instance.ChamCong(i);
+                BangChamCongBLL.Instance.ChamCong(i);
             }
             this.Close();
         }

@@ -54,6 +54,7 @@
     <Compile Include="BangChamCong.cs" />
     <Compile Include="CaLam.cs" />
     <Compile Include="ChiTietBan.cs" />
+    <Compile Include="ChiTietBan_View.cs" />
     <Compile Include="ChiTietCaLam.cs" />
     <Compile Include="ChiTietHoaDon.cs" />
     <Compile Include="ChiTietHoaDon_View.cs" />

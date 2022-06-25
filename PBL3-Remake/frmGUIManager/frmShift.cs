@@ -34,33 +34,34 @@ namespace GUI.frmGUIManager
         {
             foreach (KeyValuePair<CaLam, bool> i in listCaLam)
             {
+                if(i.Value == true)
+                    ListIDCalam.Add(i.Key.ID_CaLam);
                 frmGUIUserControl.CheckBoxUC uc = new frmGUIUserControl.CheckBoxUC(i);
                 uc.Add = new frmGUIUserControl.CheckBoxUC.AddDelegate(AddIDCalam);
                 uc.Remove = new frmGUIUserControl.CheckBoxUC.RemoveDelegate(DelIDCalam);
                 pnCaLam.Controls.Add(uc);
-
             }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (!BLL.CaLamBLL.Instance.CheckExistedUserHaveShiftOrNo(ID_NhanVien))
+            if (ListIDCalam.Count > 0)
             {
-                if (ListIDCalam.Count > 0)
-                {
-                    CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
-                    this.Close();
-                }
-                else
-                {
-                    NoticeBox box = new NoticeBox("please select at least one shift!!");
-                    box.ShowDialog();
-                }
+                CaLamBLL.Instance.SetCaLamForNhanVien(ID_NhanVien, ListIDCalam);
+                this.Close();
             }
-
+            else
+            {
+                NoticeBox box = new NoticeBox("please select at least one shift!!");
+                box.ShowDialog();
+            }
         }
+
         #endregion
 
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

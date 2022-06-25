@@ -42,7 +42,7 @@
             this.label1.Location = new System.Drawing.Point(231, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 33);
+            this.label1.Size = new System.Drawing.Size(86, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "Shift";
             // 
@@ -89,6 +89,7 @@
             this.btnClose.Size = new System.Drawing.Size(135, 37);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmShift
             // 

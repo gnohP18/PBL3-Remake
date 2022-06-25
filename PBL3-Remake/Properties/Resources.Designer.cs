@@ -173,6 +173,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_1_48 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-1-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_48 {
             get {
                 object obj = ResourceManager.GetObject("calendar-48", resourceCulture);
@@ -496,6 +506,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap office_building_32 {
             get {
                 object obj = ResourceManager.GetObject("office-building-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap officer_32 {
+            get {
+                object obj = ResourceManager.GetObject("officer-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

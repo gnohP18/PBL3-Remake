@@ -699,5 +699,11 @@
   <ItemGroup>
     <None Include="Resources\Panel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-1-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\officer-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

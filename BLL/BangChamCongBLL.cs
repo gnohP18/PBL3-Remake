@@ -51,9 +51,17 @@ namespace BLL
             int MinuteLate = TimeLate.Hours * 60 + TimeLate.Minutes;
             StringBuilder temp = new StringBuilder(bangChamCong.LichSuLamViec);
             if (MinuteLate < 15) temp[indexDay * 2 + SangChieu] = '1';
-            else temp[indexDay * 2 + SangChieu] = (char)(MinuteLate / 15 + 64);
+            else if (MinuteLate / 15 + 64 >= 120)
+            {
+                temp[indexDay * 2 + SangChieu] = '2';
+                bangChamCong.TinhLuong = 0;
+            }
+            else
+            {
+                temp[indexDay * 2 + SangChieu] = (char)(MinuteLate / 15 + 64);
+                bangChamCong.TinhLuong += user.ChucVu.HeSoLuong - MinuteLate / 15 * TTNH.TienPhatTre15p;
+            }
             bangChamCong.LichSuLamViec = temp.ToString();
-            bangChamCong.TinhLuong += user.ChucVu.HeSoLuong - MinuteLate / 15 * TTNH.TienPhatTre15p;
             dALQLNH.SaveChanges();
         }
         public int GetNewIDBangChamCong()

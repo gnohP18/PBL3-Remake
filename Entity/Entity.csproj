@@ -140,6 +140,21 @@
     <None Include="Resources\TomHumAlaskaHap.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\User15.jpg" />
+    <None Include="Resources\User14.jpg" />
+    <None Include="Resources\User13.jpg" />
+    <None Include="Resources\User12.jpg" />
+    <None Include="Resources\User11.jpg" />
+    <None Include="Resources\User10.jpg" />
+    <None Include="Resources\User9.png" />
+    <None Include="Resources\User8.jpg" />
+    <None Include="Resources\User7.jpg" />
+    <None Include="Resources\User6.jpg" />
+    <None Include="Resources\User5.jpg" />
+    <None Include="Resources\User4.jpg" />
+    <None Include="Resources\User3.jpg" />
+    <None Include="Resources\User2.jpg" />
+    <None Include="Resources\User1.jpg" />
     <None Include="Resources\CheVaiHatSen.jpg" />
     <None Include="Resources\BiDoHamDua.jpg" />
     <None Include="Resources\BanhDauXanh.jpg" />

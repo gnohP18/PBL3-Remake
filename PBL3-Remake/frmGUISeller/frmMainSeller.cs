@@ -145,6 +145,14 @@ namespace GUI.frmGUISeller
         private void Real_time_Tick(object sender, EventArgs e)
         {
             lblTimeWork.Text = DateTime.Now.ToShortTimeString();
+            if (DateTime.Now.TimeOfDay >= new TimeSpan(2, 0, 0) && btnAttend.Enabled == true)
+            {
+                foreach(KeyValuePair<User,bool> i in BLL.NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow())
+                {
+                    if (i.Value == false) BangChamCongBLL.Instance.ChamCong(i.Key.ID_User);
+                }
+                btnAttend.Enabled = false;
+            }
         }
         #endregion
 

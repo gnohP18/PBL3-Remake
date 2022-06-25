@@ -82,7 +82,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 75);
+            this.label3.Location = new System.Drawing.Point(12, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 56;
@@ -94,7 +94,7 @@
             this.lblIDGuest.BackColor = System.Drawing.Color.Transparent;
             this.lblIDGuest.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDGuest.ForeColor = System.Drawing.Color.Black;
-            this.lblIDGuest.Location = new System.Drawing.Point(130, 46);
+            this.lblIDGuest.Location = new System.Drawing.Point(214, 46);
             this.lblIDGuest.Name = "lblIDGuest";
             this.lblIDGuest.Size = new System.Drawing.Size(64, 19);
             this.lblIDGuest.TabIndex = 57;
@@ -106,7 +106,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 107);
+            this.label4.Location = new System.Drawing.Point(12, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 58;
@@ -118,7 +118,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(12, 136);
+            this.label5.Location = new System.Drawing.Point(12, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 60;
@@ -130,7 +130,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(12, 167);
+            this.label6.Location = new System.Drawing.Point(12, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 19);
             this.label6.TabIndex = 62;
@@ -139,7 +139,7 @@
             // radMale
             // 
             this.radMale.AutoSize = true;
-            this.radMale.Location = new System.Drawing.Point(134, 167);
+            this.radMale.Location = new System.Drawing.Point(218, 239);
             this.radMale.Name = "radMale";
             this.radMale.Size = new System.Drawing.Size(48, 17);
             this.radMale.TabIndex = 63;
@@ -150,7 +150,7 @@
             // radFemale
             // 
             this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(238, 165);
+            this.radFemale.Location = new System.Drawing.Point(336, 239);
             this.radFemale.Name = "radFemale";
             this.radFemale.Size = new System.Drawing.Size(59, 17);
             this.radFemale.TabIndex = 64;
@@ -164,7 +164,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(12, 195);
+            this.label7.Location = new System.Drawing.Point(12, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 19);
             this.label7.TabIndex = 66;
@@ -173,7 +173,7 @@
             // dgvHistoryReceipt
             // 
             this.dgvHistoryReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistoryReceipt.Location = new System.Drawing.Point(16, 256);
+            this.dgvHistoryReceipt.Location = new System.Drawing.Point(12, 357);
             this.dgvHistoryReceipt.Name = "dgvHistoryReceipt";
             this.dgvHistoryReceipt.RowTemplate.Height = 24;
             this.dgvHistoryReceipt.Size = new System.Drawing.Size(383, 166);
@@ -185,7 +185,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(12, 223);
+            this.label8.Location = new System.Drawing.Point(12, 326);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 19);
             this.label8.TabIndex = 68;
@@ -197,7 +197,7 @@
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btClose.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClose.ForeColor = System.Drawing.Color.Black;
-            this.btClose.Location = new System.Drawing.Point(16, 430);
+            this.btClose.Location = new System.Drawing.Point(12, 529);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(100, 30);
             this.btClose.TabIndex = 70;
@@ -211,7 +211,7 @@
             this.lblRegistDay.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistDay.Font = new System.Drawing.Font("Microsoft New Tai Lue", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistDay.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistDay.Location = new System.Drawing.Point(130, 195);
+            this.lblRegistDay.Location = new System.Drawing.Point(214, 278);
             this.lblRegistDay.Name = "lblRegistDay";
             this.lblRegistDay.Size = new System.Drawing.Size(124, 19);
             this.lblRegistDay.TabIndex = 71;
@@ -237,7 +237,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(299, 430);
+            this.btnAdd.Location = new System.Drawing.Point(295, 529);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 30);
             this.btnAdd.TabIndex = 73;
@@ -251,7 +251,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(161, 430);
+            this.btnDelete.Location = new System.Drawing.Point(161, 529);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
             this.btnDelete.TabIndex = 74;
@@ -263,7 +263,7 @@
             // 
             this.txtGuestName.AutoRoundedCorners = true;
             this.txtGuestName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtGuestName.BorderRadius = 9;
+            this.txtGuestName.BorderRadius = 17;
             this.txtGuestName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGuestName.DefaultText = "";
             this.txtGuestName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -274,19 +274,19 @@
             this.txtGuestName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGuestName.ForeColor = System.Drawing.Color.Black;
             this.txtGuestName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGuestName.Location = new System.Drawing.Point(134, 68);
+            this.txtGuestName.Location = new System.Drawing.Point(209, 74);
             this.txtGuestName.Name = "txtGuestName";
             this.txtGuestName.PasswordChar = '\0';
             this.txtGuestName.PlaceholderText = "";
             this.txtGuestName.SelectedText = "";
-            this.txtGuestName.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestName.Size = new System.Drawing.Size(190, 36);
             this.txtGuestName.TabIndex = 75;
             // 
             // txtGuestPhone
             // 
             this.txtGuestPhone.AutoRoundedCorners = true;
             this.txtGuestPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtGuestPhone.BorderRadius = 9;
+            this.txtGuestPhone.BorderRadius = 17;
             this.txtGuestPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGuestPhone.DefaultText = "";
             this.txtGuestPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -297,19 +297,19 @@
             this.txtGuestPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGuestPhone.ForeColor = System.Drawing.Color.Black;
             this.txtGuestPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGuestPhone.Location = new System.Drawing.Point(134, 103);
+            this.txtGuestPhone.Location = new System.Drawing.Point(209, 128);
             this.txtGuestPhone.Name = "txtGuestPhone";
             this.txtGuestPhone.PasswordChar = '\0';
             this.txtGuestPhone.PlaceholderText = "";
             this.txtGuestPhone.SelectedText = "";
-            this.txtGuestPhone.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestPhone.Size = new System.Drawing.Size(190, 36);
             this.txtGuestPhone.TabIndex = 76;
             // 
             // txtGuestAddress
             // 
             this.txtGuestAddress.AutoRoundedCorners = true;
             this.txtGuestAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtGuestAddress.BorderRadius = 9;
+            this.txtGuestAddress.BorderRadius = 17;
             this.txtGuestAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGuestAddress.DefaultText = "";
             this.txtGuestAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -320,19 +320,19 @@
             this.txtGuestAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGuestAddress.ForeColor = System.Drawing.Color.Black;
             this.txtGuestAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGuestAddress.Location = new System.Drawing.Point(134, 136);
+            this.txtGuestAddress.Location = new System.Drawing.Point(209, 183);
             this.txtGuestAddress.Name = "txtGuestAddress";
             this.txtGuestAddress.PasswordChar = '\0';
             this.txtGuestAddress.PlaceholderText = "";
             this.txtGuestAddress.SelectedText = "";
-            this.txtGuestAddress.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestAddress.Size = new System.Drawing.Size(190, 36);
             this.txtGuestAddress.TabIndex = 77;
             // 
             // txtGuestPoint
             // 
             this.txtGuestPoint.AutoRoundedCorners = true;
             this.txtGuestPoint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtGuestPoint.BorderRadius = 9;
+            this.txtGuestPoint.BorderRadius = 17;
             this.txtGuestPoint.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGuestPoint.DefaultText = "";
             this.txtGuestPoint.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -343,19 +343,19 @@
             this.txtGuestPoint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGuestPoint.ForeColor = System.Drawing.Color.Black;
             this.txtGuestPoint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGuestPoint.Location = new System.Drawing.Point(134, 217);
+            this.txtGuestPoint.Location = new System.Drawing.Point(205, 309);
             this.txtGuestPoint.Name = "txtGuestPoint";
             this.txtGuestPoint.PasswordChar = '\0';
             this.txtGuestPoint.PlaceholderText = "";
             this.txtGuestPoint.SelectedText = "";
-            this.txtGuestPoint.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestPoint.Size = new System.Drawing.Size(190, 36);
             this.txtGuestPoint.TabIndex = 78;
             // 
             // GuestInformation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ClientSize = new System.Drawing.Size(411, 467);
+            this.ClientSize = new System.Drawing.Size(411, 571);
             this.Controls.Add(this.txtGuestPoint);
             this.Controls.Add(this.txtGuestAddress);
             this.Controls.Add(this.txtGuestPhone);

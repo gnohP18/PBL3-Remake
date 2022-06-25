@@ -96,7 +96,7 @@ namespace GUI.frmGUIUserControl
                 LoadMonAn(ID_MonAn);
             }
             AutoCompleteStringCollection autoSearchIngredients = new AutoCompleteStringCollection();
-            cbbIngrendients.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //cbbIngrendients.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbbIngrendients.AutoCompleteSource = AutoCompleteSource.CustomSource;
             foreach (string i in ListIngredient)
             {
@@ -132,28 +132,31 @@ namespace GUI.frmGUIUserControl
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            bool CheckExisted = false;
-            int dem = listNguyenLieuDangThem.Count;
-            dem++;
-            ChiTietNhapMonAn_View nhap = new ChiTietNhapMonAn_View();
-            nhap.TenMonAn = txtNameCourse.Text;
-            nhap.ID_NguyenLieu = BLL.NguyenLieuBLL.Instance.GetNguyenLieuByTenNguyenLieu(cbbIngrendients.SelectedItem.ToString()).ID_NguyenLieu;
-            nhap.Luong = (float)(Convert.ToDouble(txtAmount.Text));
-            nhap.ID_MonAn = Convert.ToInt32(lblIDCourse.Text);
-            nhap.TenNguyenLieu = cbbIngrendients.SelectedItem.ToString();
-            foreach (ChiTietNhapMonAn_View i in listNguyenLieuDangThem)
+            if (cbbIngrendients.SelectedIndex != -1 && cbbKindOfIngredinet.SelectedIndex != -1 && txtAmount.Text != "")
             {
-                if (i.TenNguyenLieu == nhap.TenNguyenLieu)
+                bool CheckExisted = false;
+                int dem = listNguyenLieuDangThem.Count;
+                dem++;
+                ChiTietNhapMonAn_View nhap = new ChiTietNhapMonAn_View();
+                nhap.TenMonAn = txtNameCourse.Text;
+                nhap.ID_NguyenLieu = BLL.NguyenLieuBLL.Instance.GetNguyenLieuByTenNguyenLieu(cbbIngrendients.SelectedItem.ToString()).ID_NguyenLieu;
+                nhap.Luong = (float)(Convert.ToDouble(txtAmount.Text));
+                nhap.ID_MonAn = Convert.ToInt32(lblIDCourse.Text);
+                nhap.TenNguyenLieu = cbbIngrendients.SelectedItem.ToString();
+                foreach (ChiTietNhapMonAn_View i in listNguyenLieuDangThem)
                 {
-                    i.Luong += nhap.Luong;
-                    CheckExisted = true;
+                    if (i.TenNguyenLieu == nhap.TenNguyenLieu)
+                    {
+                        i.Luong += nhap.Luong;
+                        CheckExisted = true;
+                    }
                 }
+                if (CheckExisted == false)
+                    listNguyenLieuDangThem.Add(nhap);
+                cbbKindOfIngredinet.SelectedIndex = -1;
+                cbbIngrendients.SelectedIndex = -1;
+                SetDataGridView();
             }
-            if (CheckExisted == false)
-                listNguyenLieuDangThem.Add(nhap);
-            cbbKindOfIngredinet.SelectedIndex = -1;
-            cbbIngrendients.SelectedIndex = -1;
-            SetDataGridView();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -172,16 +175,10 @@ namespace GUI.frmGUIUserControl
             if (txtNameCourse.Text != "" || txtThanhTien.Text != "")
             {
                 BLL.MonAnBLL.Instance.AddNewMonAn(listNguyenLieuDangThem, txtNameCourse.Text, ID_LoaiMonAn, Convert.ToInt32(txtThanhTien.Text), ImgToByte(img));
-                Console.WriteLine(txtNameCourse.Text);
-                Console.WriteLine(txtThanhTien.Text);
-                Console.WriteLine(txtAmount.Text);
-                Console.WriteLine(cbbIngrendients.SelectedItem.ToString());
-                Console.WriteLine(cbbKindOfIngredinet.SelectedItem.ToString());
-                Console.WriteLine((cbbLoaiMonAn.SelectedIndex + 1).ToString());
-                foreach (ChiTietNhapMonAn_View i in listNguyenLieuDangThem)
-                {
-                    Console.WriteLine("mon " + i.ID_MonAn + "ID_NguyenLieu" + i.ID_NguyenLieu + " Luong" + i.Luong);
-                }
+                //foreach (ChiTietNhapMonAn_View i in listNguyenLieuDangThem)
+                //{
+                //    Console.WriteLine("mon " + i.ID_MonAn + "ID_NguyenLieu" + i.ID_NguyenLieu + " Luong" + i.Luong);
+                //}
                 this.Close();
             }
             else

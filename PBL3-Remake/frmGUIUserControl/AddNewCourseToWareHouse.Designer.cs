@@ -358,6 +358,7 @@
             this.cbbLoaiMonAn.Name = "cbbLoaiMonAn";
             this.cbbLoaiMonAn.Size = new System.Drawing.Size(187, 36);
             this.cbbLoaiMonAn.TabIndex = 27;
+            this.cbbLoaiMonAn.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiMonAn_SelectedIndexChanged);
             // 
             // cbbKindOfIngredinet
             // 
@@ -377,6 +378,7 @@
             this.cbbKindOfIngredinet.Name = "cbbKindOfIngredinet";
             this.cbbKindOfIngredinet.Size = new System.Drawing.Size(187, 36);
             this.cbbKindOfIngredinet.TabIndex = 28;
+            this.cbbKindOfIngredinet.SelectedIndexChanged += new System.EventHandler(this.cbbKindOfIIngredinet_SelectedIndexChanged);
             // 
             // cbbIngrendients
             // 
@@ -396,6 +398,7 @@
             this.cbbIngrendients.Name = "cbbIngrendients";
             this.cbbIngrendients.Size = new System.Drawing.Size(187, 36);
             this.cbbIngrendients.TabIndex = 29;
+            this.cbbIngrendients.SelectedIndexChanged += new System.EventHandler(this.cbbIngrendients_SelectedIndexChanged);
             // 
             // guna2CustomGradientPanel1
             // 

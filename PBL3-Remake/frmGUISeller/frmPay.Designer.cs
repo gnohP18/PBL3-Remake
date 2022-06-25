@@ -41,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTax = new System.Windows.Forms.Label();
@@ -60,7 +59,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblNameGuest = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblChangeMoney = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtGuestMoney = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtVoucher = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -195,7 +197,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(354, 133);
+            this.label3.Location = new System.Drawing.Point(354, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 34);
             this.label3.TabIndex = 7;
@@ -209,26 +211,12 @@
             this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Tai Le", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.lblTotal.Location = new System.Drawing.Point(170, 169);
+            this.lblTotal.Location = new System.Drawing.Point(170, 125);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(267, 48);
             this.lblTotal.TabIndex = 6;
-            this.lblTotal.Text = "C";
+            this.lblTotal.Text = "E";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(4, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 19);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Guest money";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
@@ -278,7 +266,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(6, 5);
+            this.label8.Location = new System.Drawing.Point(8, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 19);
             this.label8.TabIndex = 20;
@@ -292,7 +280,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(8, 62);
+            this.label9.Location = new System.Drawing.Point(261, 60);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 19);
             this.label9.TabIndex = 22;
@@ -306,7 +294,7 @@
             this.lblPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPoint.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPoint.ForeColor = System.Drawing.Color.Black;
-            this.lblPoint.Location = new System.Drawing.Point(147, 62);
+            this.lblPoint.Location = new System.Drawing.Point(360, 60);
             this.lblPoint.Name = "lblPoint";
             this.lblPoint.Size = new System.Drawing.Size(21, 19);
             this.lblPoint.TabIndex = 23;
@@ -315,7 +303,7 @@
             // 
             // pBCheckGuest
             // 
-            this.pBCheckGuest.Location = new System.Drawing.Point(363, 5);
+            this.pBCheckGuest.Location = new System.Drawing.Point(364, 12);
             this.pBCheckGuest.Name = "pBCheckGuest";
             this.pBCheckGuest.Size = new System.Drawing.Size(24, 24);
             this.pBCheckGuest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -361,7 +349,7 @@
             // 
             // pBGuestMoney
             // 
-            this.pBGuestMoney.Location = new System.Drawing.Point(289, 19);
+            this.pBGuestMoney.Location = new System.Drawing.Point(218, 28);
             this.pBGuestMoney.Name = "pBGuestMoney";
             this.pBGuestMoney.Size = new System.Drawing.Size(32, 32);
             this.pBGuestMoney.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,7 +382,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(36, 94);
+            this.label11.Location = new System.Drawing.Point(42, 90);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 19);
             this.label11.TabIndex = 25;
@@ -408,7 +396,7 @@
             this.cbUsePoint.ImageOffset = new System.Drawing.Point(0, 0);
             this.cbUsePoint.ImageRotate = 0F;
             this.cbUsePoint.ImageSize = new System.Drawing.Size(32, 32);
-            this.cbUsePoint.Location = new System.Drawing.Point(8, 94);
+            this.cbUsePoint.Location = new System.Drawing.Point(12, 89);
             this.cbUsePoint.Name = "cbUsePoint";
             this.cbUsePoint.Size = new System.Drawing.Size(24, 24);
             this.cbUsePoint.TabIndex = 26;
@@ -421,7 +409,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(8, 34);
+            this.label7.Location = new System.Drawing.Point(8, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 19);
             this.label7.TabIndex = 27;
@@ -435,7 +423,7 @@
             this.lblNameGuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNameGuest.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameGuest.ForeColor = System.Drawing.Color.Black;
-            this.lblNameGuest.Location = new System.Drawing.Point(149, 36);
+            this.lblNameGuest.Location = new System.Drawing.Point(164, 60);
             this.lblNameGuest.Name = "lblNameGuest";
             this.lblNameGuest.Size = new System.Drawing.Size(19, 19);
             this.lblNameGuest.TabIndex = 28;
@@ -445,6 +433,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel2.Controls.Add(this.lblChangeMoney);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.txtGuestMoney);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pBGuestMoney);
@@ -457,10 +447,37 @@
             this.panel2.Size = new System.Drawing.Size(440, 223);
             this.panel2.TabIndex = 29;
             // 
+            // lblChangeMoney
+            // 
+            this.lblChangeMoney.BackColor = System.Drawing.Color.Transparent;
+            this.lblChangeMoney.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblChangeMoney.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChangeMoney.ForeColor = System.Drawing.Color.Black;
+            this.lblChangeMoney.Location = new System.Drawing.Point(290, 182);
+            this.lblChangeMoney.Name = "lblChangeMoney";
+            this.lblChangeMoney.Size = new System.Drawing.Size(147, 19);
+            this.lblChangeMoney.TabIndex = 32;
+            this.lblChangeMoney.Text = "F";
+            this.lblChangeMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(168, 182);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(115, 19);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Change money";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtGuestMoney
             // 
             this.txtGuestMoney.AutoRoundedCorners = true;
-            this.txtGuestMoney.BorderRadius = 9;
+            this.txtGuestMoney.BorderRadius = 17;
             this.txtGuestMoney.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGuestMoney.DefaultText = "";
             this.txtGuestMoney.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -476,8 +493,23 @@
             this.txtGuestMoney.PasswordChar = '\0';
             this.txtGuestMoney.PlaceholderText = "";
             this.txtGuestMoney.SelectedText = "";
-            this.txtGuestMoney.Size = new System.Drawing.Size(277, 21);
+            this.txtGuestMoney.Size = new System.Drawing.Size(190, 36);
             this.txtGuestMoney.TabIndex = 30;
+            this.txtGuestMoney.TextChanged += new System.EventHandler(this.txtGuestMoney_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(4, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 19);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Guest money";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel3
             // 
@@ -501,7 +533,7 @@
             // txtVoucher
             // 
             this.txtVoucher.AutoRoundedCorners = true;
-            this.txtVoucher.BorderRadius = 9;
+            this.txtVoucher.BorderRadius = 17;
             this.txtVoucher.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtVoucher.DefaultText = "";
             this.txtVoucher.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -512,13 +544,14 @@
             this.txtVoucher.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtVoucher.ForeColor = System.Drawing.Color.Black;
             this.txtVoucher.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtVoucher.Location = new System.Drawing.Point(123, 30);
+            this.txtVoucher.Location = new System.Drawing.Point(122, 22);
             this.txtVoucher.Name = "txtVoucher";
             this.txtVoucher.PasswordChar = '\0';
             this.txtVoucher.PlaceholderText = "";
             this.txtVoucher.SelectedText = "";
-            this.txtVoucher.Size = new System.Drawing.Size(189, 21);
+            this.txtVoucher.Size = new System.Drawing.Size(190, 36);
             this.txtVoucher.TabIndex = 30;
+            this.txtVoucher.TextChanged += new System.EventHandler(this.txtVoucher_TextChanged);
             // 
             // panel4
             // 
@@ -541,7 +574,7 @@
             // txtGuestPhone
             // 
             this.txtGuestPhone.AutoRoundedCorners = true;
-            this.txtGuestPhone.BorderRadius = 9;
+            this.txtGuestPhone.BorderRadius = 17;
             this.txtGuestPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGuestPhone.DefaultText = "";
             this.txtGuestPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -557,8 +590,9 @@
             this.txtGuestPhone.PasswordChar = '\0';
             this.txtGuestPhone.PlaceholderText = "";
             this.txtGuestPhone.SelectedText = "";
-            this.txtGuestPhone.Size = new System.Drawing.Size(189, 21);
+            this.txtGuestPhone.Size = new System.Drawing.Size(190, 36);
             this.txtGuestPhone.TabIndex = 29;
+            this.txtGuestPhone.TextChanged += new System.EventHandler(this.txtGuestPhone_TextChanged);
             // 
             // pictureBox3
             // 
@@ -613,7 +647,6 @@
         private System.Windows.Forms.PictureBox pBVoucher;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblTax;
@@ -637,5 +670,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtGuestMoney;
         private Guna.UI2.WinForms.Guna2TextBox txtVoucher;
         private Guna.UI2.WinForms.Guna2TextBox txtGuestPhone;
+        private System.Windows.Forms.Label lblChangeMoney;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
     }
 }

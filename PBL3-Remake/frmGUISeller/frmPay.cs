@@ -131,6 +131,7 @@ namespace GUI.frmGUISeller
                 pBGuestMoney.Image = PBL3_Remake.Properties.Resources.checkedGreen;
             }
             else pBGuestMoney.Image = PBL3_Remake.Properties.Resources.uncheckedRed;
+            lblChangeMoney.Text = (bill + tax - guestmoney).ToString();
         }
 
         private void btnVoucherConfirm_Click(object sender, EventArgs e)
@@ -208,8 +209,6 @@ namespace GUI.frmGUISeller
                 LoadGuest();
             }
         }
-        #endregion
-
         private void cbUsePoint_CheckedChanged(object sender, EventArgs e)
         {
             if (cbUsePoint.Checked == true) TienQuyDoiTuDiemTichLuy = HoaDonBLL.Instance.GetTienFromDiemTichLuy(Convert.ToInt32(lblPoint.Text));
@@ -218,5 +217,7 @@ namespace GUI.frmGUISeller
             tempBill -= TienQuyDoiTuDiemTichLuy;
             lblTotal.Text = (tempBill + tax).ToString();
         }
+        #endregion
+
     }
 }

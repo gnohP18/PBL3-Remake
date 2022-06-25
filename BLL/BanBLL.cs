@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
@@ -200,16 +198,21 @@ namespace BLL
         public List<ChiTietBan_View> GetAllChiTietBan_ViewByStatus(int st)
         {
             List<ChiTietBan_View> data = new List<ChiTietBan_View>();
-            foreach(ChiTietBan i in dALQLNH.ChiTietBans.Where(s=>s.TinhTrang == st).ToList())
+            foreach (ChiTietBan i in dALQLNH.ChiTietBans.Where(s => s.TinhTrang == st).ToList())
             {
                 data.Add(new ChiTietBan_View
                 {
                     ID_Ban = i.ID_Ban,
                     TenBan = i.Ban.TenBan,
                     TenMonAn = i.MonAn.TenMonAn,
-                    SoLuong = i.SoLuong
+                    SoLuong = i.SoLuong,
+                    TinhTrang = i.TinhTrang,
                 });
             }
+            //foreach (ChiTietBan_View b in data)
+            //{
+            //    Console.WriteLine(b.TenBan + " " + b.TenMonAn);
+            //}
             return data;
         }
         public ChiTietBan GetDetailTableByID(int idctb)

@@ -33,13 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WareHouseUC));
-            this.txtAmountFood = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvNguyenLieuKho = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtNameFood = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMoreInfor = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -51,28 +49,22 @@
             this.btnDriedFood = new System.Windows.Forms.Button();
             this.btnFreshFood = new System.Windows.Forms.Button();
             this.btnDrinking = new System.Windows.Forms.Button();
+            this.txtNameFood = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAmountFood = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieuKho)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtAmountFood
-            // 
-            this.txtAmountFood.Enabled = false;
-            this.txtAmountFood.Location = new System.Drawing.Point(88, 94);
-            this.txtAmountFood.Name = "txtAmountFood";
-            this.txtAmountFood.Size = new System.Drawing.Size(100, 20);
-            this.txtAmountFood.TabIndex = 19;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label14.Location = new System.Drawing.Point(2, 32);
+            this.label14.Location = new System.Drawing.Point(2, 43);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 18);
+            this.label14.Size = new System.Drawing.Size(60, 21);
             this.label14.TabIndex = 17;
             this.label14.Text = "Name";
             // 
@@ -93,10 +85,10 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.dgvNguyenLieuKho);
-            this.panel5.Location = new System.Drawing.Point(4, 194);
+            this.panel5.Location = new System.Drawing.Point(4, 144);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1008, 489);
+            this.panel5.Size = new System.Drawing.Size(1008, 539);
             this.panel5.TabIndex = 22;
             // 
             // dgvNguyenLieuKho
@@ -143,40 +135,32 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.dgvNguyenLieuKho.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNguyenLieuKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNguyenLieuKho.Size = new System.Drawing.Size(1006, 487);
+            this.dgvNguyenLieuKho.Size = new System.Drawing.Size(1006, 537);
             this.dgvNguyenLieuKho.TabIndex = 0;
             this.dgvNguyenLieuKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguyenLieuKho_CellClick);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
-            this.label15.Location = new System.Drawing.Point(3, 94);
+            this.label15.Location = new System.Drawing.Point(3, 85);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 18);
+            this.label15.Size = new System.Drawing.Size(76, 21);
             this.label15.TabIndex = 18;
             this.label15.Text = "Amount";
-            // 
-            // txtNameFood
-            // 
-            this.txtNameFood.Enabled = false;
-            this.txtNameFood.Location = new System.Drawing.Point(10, 60);
-            this.txtNameFood.Name = "txtNameFood";
-            this.txtNameFood.Size = new System.Drawing.Size(178, 20);
-            this.txtNameFood.TabIndex = 21;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.txtAmountFood);
             this.panel6.Controls.Add(this.txtNameFood);
             this.panel6.Controls.Add(this.btnMoreInfor);
-            this.panel6.Controls.Add(this.txtAmountFood);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label13);
-            this.panel6.Location = new System.Drawing.Point(869, 48);
+            this.panel6.Location = new System.Drawing.Point(869, 11);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(327, 125);
@@ -185,15 +169,15 @@
             // btnMoreInfor
             // 
             this.btnMoreInfor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnMoreInfor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.btnMoreInfor.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMoreInfor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.btnMoreInfor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.btnMoreInfor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMoreInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoreInfor.Font = new System.Drawing.Font("Microsoft New Tai Lue", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMoreInfor.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMoreInfor.Location = new System.Drawing.Point(195, 93);
+            this.btnMoreInfor.Location = new System.Drawing.Point(265, 85);
             this.btnMoreInfor.Name = "btnMoreInfor";
-            this.btnMoreInfor.Size = new System.Drawing.Size(96, 22);
+            this.btnMoreInfor.Size = new System.Drawing.Size(60, 22);
             this.btnMoreInfor.TabIndex = 20;
             this.btnMoreInfor.Text = "More";
             this.btnMoreInfor.UseVisualStyleBackColor = false;
@@ -206,10 +190,10 @@
             this.panel7.Controls.Add(this.btnMaterialInformation);
             this.panel7.Controls.Add(this.btnViewExpiredMaterial);
             this.panel7.Controls.Add(this.btnAddMaterialToWareHouse);
-            this.panel7.Location = new System.Drawing.Point(1020, 194);
+            this.panel7.Location = new System.Drawing.Point(1020, 145);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(176, 489);
+            this.panel7.Size = new System.Drawing.Size(176, 538);
             this.panel7.TabIndex = 24;
             // 
             // btnMaterialInformation
@@ -222,10 +206,10 @@
             this.btnMaterialInformation.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterialInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnMaterialInformation.Image = global::PBL3_Remake.Properties.Resources.ingredients_64;
-            this.btnMaterialInformation.Location = new System.Drawing.Point(0, 329);
+            this.btnMaterialInformation.Location = new System.Drawing.Point(0, 369);
             this.btnMaterialInformation.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaterialInformation.Name = "btnMaterialInformation";
-            this.btnMaterialInformation.Size = new System.Drawing.Size(174, 158);
+            this.btnMaterialInformation.Size = new System.Drawing.Size(174, 167);
             this.btnMaterialInformation.TabIndex = 15;
             this.btnMaterialInformation.Text = "Material information";
             this.btnMaterialInformation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -243,10 +227,10 @@
             this.btnViewExpiredMaterial.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewExpiredMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnViewExpiredMaterial.Image = global::PBL3_Remake.Properties.Resources.expired_food_64;
-            this.btnViewExpiredMaterial.Location = new System.Drawing.Point(0, 163);
+            this.btnViewExpiredMaterial.Location = new System.Drawing.Point(0, 176);
             this.btnViewExpiredMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewExpiredMaterial.Name = "btnViewExpiredMaterial";
-            this.btnViewExpiredMaterial.Size = new System.Drawing.Size(174, 166);
+            this.btnViewExpiredMaterial.Size = new System.Drawing.Size(174, 193);
             this.btnViewExpiredMaterial.TabIndex = 15;
             this.btnViewExpiredMaterial.Text = "View Expired Material";
             this.btnViewExpiredMaterial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -267,7 +251,7 @@
             this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(0, 0);
             this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
-            this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(174, 163);
+            this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(174, 176);
             this.btnAddMaterialToWareHouse.TabIndex = 15;
             this.btnAddMaterialToWareHouse.Text = "Add Material To WareHouse";
             this.btnAddMaterialToWareHouse.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -283,7 +267,7 @@
             this.btnAllMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAllMaterial.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
-            this.btnAllMaterial.Location = new System.Drawing.Point(677, 47);
+            this.btnAllMaterial.Location = new System.Drawing.Point(677, 10);
             this.btnAllMaterial.Name = "btnAllMaterial";
             this.btnAllMaterial.Size = new System.Drawing.Size(169, 125);
             this.btnAllMaterial.TabIndex = 29;
@@ -301,7 +285,7 @@
             this.btnVegetable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
             this.btnVegetable.Image = ((System.Drawing.Image)(resources.GetObject("btnVegetable.Image")));
             this.btnVegetable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVegetable.Location = new System.Drawing.Point(344, 47);
+            this.btnVegetable.Location = new System.Drawing.Point(344, 10);
             this.btnVegetable.Name = "btnVegetable";
             this.btnVegetable.Size = new System.Drawing.Size(170, 125);
             this.btnVegetable.TabIndex = 27;
@@ -320,7 +304,7 @@
             this.btnDriedFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
             this.btnDriedFood.Image = ((System.Drawing.Image)(resources.GetObject("btnDriedFood.Image")));
             this.btnDriedFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDriedFood.Location = new System.Drawing.Point(4, 47);
+            this.btnDriedFood.Location = new System.Drawing.Point(4, 10);
             this.btnDriedFood.Name = "btnDriedFood";
             this.btnDriedFood.Size = new System.Drawing.Size(170, 125);
             this.btnDriedFood.TabIndex = 25;
@@ -339,7 +323,7 @@
             this.btnFreshFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(82)))), ((int)(((byte)(0)))));
             this.btnFreshFood.Image = ((System.Drawing.Image)(resources.GetObject("btnFreshFood.Image")));
             this.btnFreshFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFreshFood.Location = new System.Drawing.Point(174, 47);
+            this.btnFreshFood.Location = new System.Drawing.Point(174, 10);
             this.btnFreshFood.Name = "btnFreshFood";
             this.btnFreshFood.Size = new System.Drawing.Size(170, 125);
             this.btnFreshFood.TabIndex = 26;
@@ -358,7 +342,7 @@
             this.btnDrinking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnDrinking.Image = ((System.Drawing.Image)(resources.GetObject("btnDrinking.Image")));
             this.btnDrinking.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDrinking.Location = new System.Drawing.Point(514, 47);
+            this.btnDrinking.Location = new System.Drawing.Point(514, 10);
             this.btnDrinking.Name = "btnDrinking";
             this.btnDrinking.Size = new System.Drawing.Size(170, 125);
             this.btnDrinking.TabIndex = 28;
@@ -366,6 +350,52 @@
             this.btnDrinking.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDrinking.UseVisualStyleBackColor = false;
             this.btnDrinking.Click += new System.EventHandler(this.btnDrinking_Click);
+            // 
+            // txtNameFood
+            // 
+            this.txtNameFood.AutoRoundedCorners = true;
+            this.txtNameFood.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtNameFood.BorderRadius = 14;
+            this.txtNameFood.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameFood.DefaultText = "";
+            this.txtNameFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameFood.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNameFood.ForeColor = System.Drawing.Color.Black;
+            this.txtNameFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameFood.Location = new System.Drawing.Point(75, 39);
+            this.txtNameFood.Name = "txtNameFood";
+            this.txtNameFood.PasswordChar = '\0';
+            this.txtNameFood.PlaceholderText = "";
+            this.txtNameFood.SelectedText = "";
+            this.txtNameFood.Size = new System.Drawing.Size(190, 30);
+            this.txtNameFood.TabIndex = 23;
+            // 
+            // txtAmountFood
+            // 
+            this.txtAmountFood.AutoRoundedCorners = true;
+            this.txtAmountFood.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtAmountFood.BorderRadius = 14;
+            this.txtAmountFood.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAmountFood.DefaultText = "";
+            this.txtAmountFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAmountFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAmountFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAmountFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAmountFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAmountFood.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAmountFood.ForeColor = System.Drawing.Color.Black;
+            this.txtAmountFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAmountFood.Location = new System.Drawing.Point(75, 81);
+            this.txtAmountFood.Name = "txtAmountFood";
+            this.txtAmountFood.PasswordChar = '\0';
+            this.txtAmountFood.PlaceholderText = "";
+            this.txtAmountFood.SelectedText = "";
+            this.txtAmountFood.Size = new System.Drawing.Size(190, 30);
+            this.txtAmountFood.TabIndex = 24;
             // 
             // WareHouseUC
             // 
@@ -391,8 +421,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtAmountFood;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel5;
@@ -400,7 +428,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnVegetable;
         private System.Windows.Forms.Button btnDriedFood;
-        private System.Windows.Forms.TextBox txtNameFood;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnMoreInfor;
         private System.Windows.Forms.Button btnFreshFood;
@@ -410,5 +437,7 @@
         private System.Windows.Forms.Button btnViewExpiredMaterial;
         private System.Windows.Forms.Button btnMaterialInformation;
         private System.Windows.Forms.Button btnAllMaterial;
+        private Guna.UI2.WinForms.Guna2TextBox txtAmountFood;
+        private Guna.UI2.WinForms.Guna2TextBox txtNameFood;
     }
 }

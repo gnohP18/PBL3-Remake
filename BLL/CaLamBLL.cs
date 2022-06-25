@@ -92,18 +92,6 @@ namespace BLL
             }
 
         }
-        public bool CheckExistedUserHaveShiftOrNo(int ID_User)
-        {
-            bool result = false;
-            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
-            {
-                if (i.ID_User == ID_User)
-                {
-                    result = true;
-                }
-            }
-            return result;
-        }
         public void AddNewTimeSheetByID_User(int ID_User)
         {
 

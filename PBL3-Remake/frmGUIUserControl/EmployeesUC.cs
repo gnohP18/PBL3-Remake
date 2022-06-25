@@ -92,8 +92,9 @@ namespace GUI.frmGUIUserControl
             int index = dgvManageEmployee.CurrentCell.RowIndex;
             int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
             DetailEmployee frm = new DetailEmployee(ID_User);
+            frm.d = new DetailEmployee.Mydel(LoadDataGridView);
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            frm.ShowDialog();
         }
         private void pBDGV_Click(object sender, EventArgs e)
         {

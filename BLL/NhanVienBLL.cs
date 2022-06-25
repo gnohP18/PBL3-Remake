@@ -114,7 +114,36 @@ namespace BLL
         {
             return dALQLNH.ChucVus.ToList();
         }
-        public int GetNewIDHoaDon()
+        public bool checkUsername(string Username)
+        {
+            if (dALQLNH.Users.Where(s => s.Username == Username) != null) return false;
+            else return true;
+        }
+        public void Execute(User user)
+        {
+            User userDB = dALQLNH.Users.Find(user.ID_User);
+            if(userDB != null)
+            {
+                userDB.TenUser = user.TenUser;
+                userDB.Username = user.Username;
+                userDB.AnhUser = user.AnhUser;
+                userDB.ID_ChucVu = user.ID_ChucVu;
+                userDB.CMND_CCCD = user.CMND_CCCD;
+                userDB.SDT = user.SDT;
+                userDB.DiaChi = user.DiaChi;
+                userDB.Password = user.Password;
+                userDB.NgayBatDauLam = user.NgayBatDauLam;
+                userDB.NgaySinh = user.NgaySinh;
+            }
+            else
+            {
+                user.ID_User = GetNewIDUser();
+                dALQLNH.Users.Add(user);
+                dALQLNH.Entry(user).Reference(s => s.ChucVu).Load();
+            }
+            dALQLNH.SaveChanges();
+        }
+        public int GetNewIDUser()
         {
             int id = 1;
             foreach (User i in dALQLNH.Users)
@@ -126,27 +155,6 @@ namespace BLL
                 id++;
             }
             return id;
-        }
-        public void AddNewEmployee(User _us)
-        {
-            int NewID_User = GetNewIDHoaDon();
-            _us.ID_User = NewID_User;
-            dALQLNH.Users.Add(_us);
-            dALQLNH.SaveChanges();
-            DateTime dt = DateTime.Now;
-            int NewID_TimeSheets = dALQLNH.BangChamCongs.Count() + 1;
-            string TimeSheet = "";
-            for (int i = 0; i < dt.Day; i++)
-            {
-                TimeSheet += "0";
-            }
-            BangChamCong newbcc = new BangChamCong();
-            newbcc.ID_User = NewID_User;
-            newbcc.ID_BangChamCong = NewID_TimeSheets;
-            newbcc.LichSuLamViec = TimeSheet;
-            newbcc.NgayDauTienTinhCong = DateTime.Now.AddDays(1);
-            dALQLNH.BangChamCongs.Add(newbcc);
-            dALQLNH.SaveChanges();
         }
         public List<User> GetAllUser()
         {

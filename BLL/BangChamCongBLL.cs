@@ -100,9 +100,26 @@ namespace BLL
             }
         }
 
-        private void SetUpBangChamCongNowForNhanVien(object iD_NhanVien)
+        public void SetUpBangChamCongNowForNhanVien(int ID_NhanVien)
         {
-            
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+            DateTime dtEndChamCong = TTNH.NgayBatDauChamCongHienTai.AddMonths(1);
+            dtEndChamCong = new DateTime(dtEndChamCong.Year, dtEndChamCong.Month, TTNH.NgayPhatLuong);
+            string s = "";
+            for (int i = 1; i < (dtEndChamCong - TTNH.NgayBatDauChamCongHienTai).Days * 2 + 2; i++)
+            {
+                s += "0";
+            }
+            dALQLNH.BangChamCongs.Add(new BangChamCong
+            {
+                ID_BangChamCong = GetNewIDBangChamCong(),
+                ID_User = ID_NhanVien,
+                NgayDauTienTinhCong = TTNH.NgayBatDauChamCongHienTai,
+                LichSuLamViec = s,
+                TinhLuong = 0
+            });
+            dALQLNH.SaveChanges();
+
         }
     }
 }

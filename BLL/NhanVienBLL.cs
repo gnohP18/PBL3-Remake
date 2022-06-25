@@ -134,14 +134,19 @@ namespace BLL
                 userDB.Password = user.Password;
                 userDB.NgayBatDauLam = user.NgayBatDauLam;
                 userDB.NgaySinh = user.NgaySinh;
+                dALQLNH.SaveChanges();
             }
             else
             {
                 user.ID_User = GetNewIDUser();
                 dALQLNH.Users.Add(user);
                 dALQLNH.Entry(user).Reference(s => s.ChucVu).Load();
+                dALQLNH.SaveChanges();
+                if(user.ID_ChucVu != 1 && user.ID_ChucVu != 2)
+                {
+                    BangChamCongBLL.Instance.SetUpBangChamCongNowForNhanVien(user.ID_User);
+                }
             }
-            dALQLNH.SaveChanges();
         }
         public int GetNewIDUser()
         {

@@ -10,7 +10,7 @@ namespace GUI.frmGUILogin
         public frmLogin()
         {
             InitializeComponent();
-            
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -33,18 +33,22 @@ namespace GUI.frmGUILogin
                 if (CheckLogin == -1)
                 {
                     box = new NoticeBox("Don't find this account , please check again!!");
-                    box.ShowDialog();
+                    txtUsername.IconRight = PBL3_Remake.Properties.Resources.uncheckedRed;
+                    txtPassword.IconRight = PBL3_Remake.Properties.Resources.uncheckedRed;
+                    box.Show();
                     return;
                 }
                 if (CheckLogin == 0)
                 {
                     box = new NoticeBox("This time is not your work shift!!");
-                    box.ShowDialog();
+                    box.Show();
                     return;
                 }
                 if (CheckLogin == 1)
                 {
                     frmMainSeller frm = new frmMainSeller(NhanVienBLL.Instance.GetNhanVienByUserName(txtUsername.Text).ID_User);
+                    txtUsername.IconRight = PBL3_Remake.Properties.Resources.checkedGreen;
+                    txtPassword.IconRight = PBL3_Remake.Properties.Resources.checkedGreen;
                     frm.Show();
                     frm.Owner = this;
                     this.Hide();
@@ -57,12 +61,16 @@ namespace GUI.frmGUILogin
                 if (CheckLogin != 1)
                 {
                     box = new NoticeBox("Don't find this account , please check again!!");
+                    txtUsername.IconRight = PBL3_Remake.Properties.Resources.uncheckedRed;
+                    txtPassword.IconRight = PBL3_Remake.Properties.Resources.uncheckedRed;
                     box.ShowDialog();
                     return;
                 }
                 if (CheckLogin == 1)
                 {
                     frmMainManager frm = new frmMainManager();
+                    txtUsername.IconRight = PBL3_Remake.Properties.Resources.checkedGreen;
+                    txtPassword.IconRight = PBL3_Remake.Properties.Resources.checkedGreen;
                     frm.Owner = this;
                     frm.Show();
                     this.Hide();
@@ -70,7 +78,7 @@ namespace GUI.frmGUILogin
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Vui long ...");
+                System.Windows.Forms.MessageBox.Show("Please check one at least");
             }
         }
     }

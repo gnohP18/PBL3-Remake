@@ -18,7 +18,8 @@ namespace GUI.frmGUIUserControl
         List<Statistic_view> DoanhThuTheoNgay = new List<Statistic_view>();
         private Statistic_view DoanhThuNgay = new Statistic_view();
         private List<DayChart_view> DC_v = new List<DayChart_view>();
-        public DateTime DateCustom { get; set; }
+        public DateTime DateCustomVenue { get; set; }
+        public DateTime DateCustomSalary { get; set; }
         private int NumberOfOrdered { get; set; }
         private int Total { get; set; }
         private int Profit { get; set; }
@@ -30,6 +31,7 @@ namespace GUI.frmGUIUserControl
         {
             InitializeComponent();
         }
+        #region Function
         private DayChart_view AddDV_v(int value, DateTime date, string text)
         {
             DayChart_view dc = new DayChart_view();
@@ -98,6 +100,8 @@ namespace GUI.frmGUIUserControl
             DayChart.Series[0].XValueMember = "Text";
             DayChart.DataBind();
         }
+        #endregion
+        #region Event UC
         private void StatisticUC_Load(object sender, EventArgs e)
         {
             ListDoanhThu = BLL.ThongKeBLL.Instance.GetAllDoanhThu();
@@ -116,15 +120,15 @@ namespace GUI.frmGUIUserControl
         private void CalendarStatistic_DateChanged(object sender, DateRangeEventArgs e)
         {
             CalendarStatistic.MaxSelectionCount = 1;
-            DateCustom = CalendarStatistic.SelectionStart;
-            NumberOfOrdered = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(DateCustom);
-            Profit = BLL.ThongKeBLL.Instance.GetProfit(DateCustom);
-            Total = BLL.ThongKeBLL.Instance.GetTotal(DateCustom);
+            DateCustomVenue = CalendarStatistic.SelectionStart;
+            NumberOfOrdered = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(DateCustomVenue);
+            Profit = BLL.ThongKeBLL.Instance.GetProfit(DateCustomVenue);
+            Total = BLL.ThongKeBLL.Instance.GetTotal(DateCustomVenue);
             Consuming = Total - Profit;
             DC_v.Clear();
-            DC_v.Add(AddDV_v(Consuming, DateCustom, "Consuming"));
-            DC_v.Add(AddDV_v(Total, DateCustom, "Total"));
-            DC_v.Add(AddDV_v(Profit, DateCustom, "Profit"));
+            DC_v.Add(AddDV_v(Consuming, DateCustomVenue, "Consuming"));
+            DC_v.Add(AddDV_v(Total, DateCustomVenue, "Total"));
+            DC_v.Add(AddDV_v(Profit, DateCustomVenue, "Profit"));
             lblOrdered.Text = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(CalendarStatistic.SelectionStart).ToString();
             lblProfit.Text = DoanhThuNgay.Profit.ToString();
             lblTotal.Text = DoanhThuNgay.Total.ToString();
@@ -165,5 +169,14 @@ namespace GUI.frmGUIUserControl
             }
 
         }
+
+        private void SalaryCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            SalaryCalendar.MaxSelectionCount = 1;
+            DateCustomSalary = SalaryCalendar.SelectionStart;
+            lblNumberEmployee.Text = BLL.ThongKeBLL.Instance.GetAllEmployeeHasTimeSheetByDateMonth(DateCustomSalary).Count.ToString();
+            lblSalaryEmployee.Text = BLL.ThongKeBLL.Instance.GetTotalSalaryByDateMonth(BLL.ThongKeBLL.Instance.GetAllEmployeeHasTimeSheetByDateMonth(DateCustomSalary)).ToString();
+        }
+        #endregion
     }
 }

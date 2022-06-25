@@ -81,6 +81,13 @@
             this.lblProfitDateTimeCustom = new System.Windows.Forms.Label();
             this.dtpDayStart = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
             this.dtpDayEnd = new PBL3_Remake.GUI.CustomItem.CustomDateTimePicker();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lblNumberEmployee = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.lblSalaryEmployee = new System.Windows.Forms.Label();
+            this.SalaryCalendar = new System.Windows.Forms.MonthCalendar();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -100,6 +107,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // CalendarStatistic
@@ -131,12 +141,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(118)))));
             this.label4.Location = new System.Drawing.Point(124, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 23);
+            this.label4.Size = new System.Drawing.Size(44, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Profit";
             // 
@@ -179,12 +189,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(69)))), ((int)(((byte)(36)))));
             this.label3.Location = new System.Drawing.Point(89, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 23);
+            this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Comsuming";
             // 
@@ -217,7 +227,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.btnDetailInvoice);
-            this.panel4.Location = new System.Drawing.Point(627, 187);
+            this.panel4.Location = new System.Drawing.Point(296, 174);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(132, 60);
@@ -231,7 +241,7 @@
             this.label5.Location = new System.Drawing.Point(59, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 23);
+            this.label5.Size = new System.Drawing.Size(53, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "Invoice";
             // 
@@ -264,12 +274,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
             this.label2.Location = new System.Drawing.Point(104, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
+            this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ordered";
             // 
@@ -430,12 +440,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(128, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 23);
+            this.label1.Size = new System.Drawing.Size(41, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Total";
             // 
@@ -464,7 +474,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightPink;
             this.label6.Location = new System.Drawing.Point(4, 172);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -476,7 +486,7 @@
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.LightPink;
             this.label7.Location = new System.Drawing.Point(154, 172);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -496,18 +506,18 @@
             this.panel6.Location = new System.Drawing.Point(8, 11);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 143);
+            this.panel6.Size = new System.Drawing.Size(173, 74);
             this.panel6.TabIndex = 21;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.label8.Location = new System.Drawing.Point(4, 53);
+            this.label8.Location = new System.Drawing.Point(96, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 23);
+            this.label8.Size = new System.Drawing.Size(76, 21);
             this.label8.TabIndex = 4;
             this.label8.Text = "Ordered";
             // 
@@ -527,7 +537,7 @@
             this.lblOrderDateTimeCustom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblOrderDateTimeCustom.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderDateTimeCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(77)))));
-            this.lblOrderDateTimeCustom.Location = new System.Drawing.Point(10, 114);
+            this.lblOrderDateTimeCustom.Location = new System.Drawing.Point(12, 47);
             this.lblOrderDateTimeCustom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrderDateTimeCustom.Name = "lblOrderDateTimeCustom";
             this.lblOrderDateTimeCustom.Size = new System.Drawing.Size(160, 25);
@@ -542,21 +552,21 @@
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.lblTotalDateTimeCustom);
-            this.panel7.Location = new System.Drawing.Point(202, 10);
+            this.panel7.Location = new System.Drawing.Point(8, 95);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(173, 144);
+            this.panel7.Size = new System.Drawing.Size(173, 75);
             this.panel7.TabIndex = 24;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(9, 54);
+            this.label10.Location = new System.Drawing.Point(118, -1);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 23);
+            this.label10.Size = new System.Drawing.Size(52, 21);
             this.label10.TabIndex = 5;
             this.label10.Text = "Total";
             // 
@@ -575,7 +585,7 @@
             // 
             this.lblTotalDateTimeCustom.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalDateTimeCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.lblTotalDateTimeCustom.Location = new System.Drawing.Point(8, 115);
+            this.lblTotalDateTimeCustom.Location = new System.Drawing.Point(13, 48);
             this.lblTotalDateTimeCustom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalDateTimeCustom.Name = "lblTotalDateTimeCustom";
             this.lblTotalDateTimeCustom.Size = new System.Drawing.Size(159, 25);
@@ -590,21 +600,21 @@
             this.panel8.Controls.Add(this.label12);
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Controls.Add(this.lblConsumingDateTimeCustom);
-            this.panel8.Location = new System.Drawing.Point(394, 11);
+            this.panel8.Location = new System.Drawing.Point(185, 11);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(173, 143);
+            this.panel8.Size = new System.Drawing.Size(173, 74);
             this.panel8.TabIndex = 23;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(69)))), ((int)(((byte)(36)))));
-            this.label12.Location = new System.Drawing.Point(4, 54);
+            this.label12.Location = new System.Drawing.Point(69, 1);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 23);
+            this.label12.Size = new System.Drawing.Size(103, 21);
             this.label12.TabIndex = 5;
             this.label12.Text = "Comsuming";
             // 
@@ -623,7 +633,7 @@
             // 
             this.lblConsumingDateTimeCustom.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsumingDateTimeCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(69)))), ((int)(((byte)(36)))));
-            this.lblConsumingDateTimeCustom.Location = new System.Drawing.Point(13, 114);
+            this.lblConsumingDateTimeCustom.Location = new System.Drawing.Point(13, 47);
             this.lblConsumingDateTimeCustom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConsumingDateTimeCustom.Name = "lblConsumingDateTimeCustom";
             this.lblConsumingDateTimeCustom.Size = new System.Drawing.Size(159, 25);
@@ -638,21 +648,21 @@
             this.panel9.Controls.Add(this.label14);
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.lblProfitDateTimeCustom);
-            this.panel9.Location = new System.Drawing.Point(587, 11);
+            this.panel9.Location = new System.Drawing.Point(185, 95);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(173, 144);
+            this.panel9.Size = new System.Drawing.Size(173, 74);
             this.panel9.TabIndex = 22;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(118)))));
-            this.label14.Location = new System.Drawing.Point(6, 54);
+            this.label14.Location = new System.Drawing.Point(114, 2);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 23);
+            this.label14.Size = new System.Drawing.Size(55, 21);
             this.label14.TabIndex = 6;
             this.label14.Text = "Profit";
             // 
@@ -671,7 +681,7 @@
             // 
             this.lblProfitDateTimeCustom.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfitDateTimeCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(118)))));
-            this.lblProfitDateTimeCustom.Location = new System.Drawing.Point(16, 115);
+            this.lblProfitDateTimeCustom.Location = new System.Drawing.Point(16, 47);
             this.lblProfitDateTimeCustom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfitDateTimeCustom.Name = "lblProfitDateTimeCustom";
             this.lblProfitDateTimeCustom.Size = new System.Drawing.Size(156, 25);
@@ -709,10 +719,98 @@
             this.dtpDayEnd.TextColor = System.Drawing.Color.White;
             this.dtpDayEnd.ValueChanged += new System.EventHandler(this.dtpDayEnd_ValueChanged);
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.lblNumberEmployee);
+            this.panel10.Controls.Add(this.pictureBox10);
+            this.panel10.Controls.Add(this.label9);
+            this.panel10.Controls.Add(this.pictureBox9);
+            this.panel10.Controls.Add(this.lblSalaryEmployee);
+            this.panel10.Location = new System.Drawing.Point(362, 11);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(173, 157);
+            this.panel10.TabIndex = 24;
+            // 
+            // lblNumberEmployee
+            // 
+            this.lblNumberEmployee.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(185)))), ((int)(((byte)(154)))));
+            this.lblNumberEmployee.Location = new System.Drawing.Point(118, 73);
+            this.lblNumberEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumberEmployee.Name = "lblNumberEmployee";
+            this.lblNumberEmployee.Size = new System.Drawing.Size(49, 25);
+            this.lblNumberEmployee.TabIndex = 7;
+            this.lblNumberEmployee.Text = "E";
+            this.lblNumberEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::PBL3_Remake.Properties.Resources.officer_32;
+            this.pictureBox10.Location = new System.Drawing.Point(78, 70);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox10.TabIndex = 6;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(185)))), ((int)(((byte)(154)))));
+            this.label9.Location = new System.Drawing.Point(112, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 21);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Salary";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::PBL3_Remake.Properties.Resources.calendar_1_48;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // lblSalaryEmployee
+            // 
+            this.lblSalaryEmployee.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(185)))), ((int)(((byte)(154)))));
+            this.lblSalaryEmployee.Location = new System.Drawing.Point(8, 123);
+            this.lblSalaryEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSalaryEmployee.Name = "lblSalaryEmployee";
+            this.lblSalaryEmployee.Size = new System.Drawing.Size(159, 25);
+            this.lblSalaryEmployee.TabIndex = 4;
+            this.lblSalaryEmployee.Text = "E";
+            this.lblSalaryEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SalaryCalendar
+            // 
+            this.SalaryCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.SalaryCalendar.ForeColor = System.Drawing.Color.Black;
+            this.SalaryCalendar.Location = new System.Drawing.Point(539, 11);
+            this.SalaryCalendar.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.SalaryCalendar.Name = "SalaryCalendar";
+            this.SalaryCalendar.TabIndex = 33;
+            this.SalaryCalendar.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SalaryCalendar.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.SalaryCalendar.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SalaryCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.SalaryCalendar_DateChanged);
+            // 
             // StatisticUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.Controls.Add(this.SalaryCalendar);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -760,6 +858,10 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -808,5 +910,12 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblProfitDateTimeCustom;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label lblSalaryEmployee;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.MonthCalendar SalaryCalendar;
+        private System.Windows.Forms.Label lblNumberEmployee;
     }
 }

@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.radManager = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radEmployee = new System.Windows.Forms.RadioButton();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnConnectToDataBase = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(167, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 50);
+            this.label1.Size = new System.Drawing.Size(70, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
@@ -62,32 +62,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(41, 214);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 36);
+            this.label2.Size = new System.Drawing.Size(69, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Account";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtUsername.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Location = new System.Drawing.Point(46, 242);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 3, 3, 7);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(310, 22);
-            this.txtUsername.TabIndex = 3;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Location = new System.Drawing.Point(46, 302);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 3, 3, 7);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(310, 22);
-            this.txtPassword.TabIndex = 4;
             // 
             // label3
             // 
@@ -96,7 +73,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(41, 274);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 36);
+            this.label3.Size = new System.Drawing.Size(80, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             // 
@@ -107,7 +84,7 @@
             this.radManager.ForeColor = System.Drawing.Color.White;
             this.radManager.Location = new System.Drawing.Point(3, 9);
             this.radManager.Name = "radManager";
-            this.radManager.Size = new System.Drawing.Size(84, 27);
+            this.radManager.Size = new System.Drawing.Size(73, 24);
             this.radManager.TabIndex = 6;
             this.radManager.TabStop = true;
             this.radManager.Text = "Manager";
@@ -129,11 +106,57 @@
             this.radEmployee.ForeColor = System.Drawing.Color.White;
             this.radEmployee.Location = new System.Drawing.Point(3, 34);
             this.radEmployee.Name = "radEmployee";
-            this.radEmployee.Size = new System.Drawing.Size(88, 27);
+            this.radEmployee.Size = new System.Drawing.Size(76, 24);
             this.radEmployee.TabIndex = 7;
             this.radEmployee.TabStop = true;
             this.radEmployee.Text = "Employee";
             this.radEmployee.UseVisualStyleBackColor = true;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.AutoRoundedCorners = true;
+            this.txtUsername.BorderRadius = 9;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.IconLeft = global::PBL3_Remake.Properties.Resources.account_24;
+            this.txtUsername.Location = new System.Drawing.Point(46, 237);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(310, 21);
+            this.txtUsername.TabIndex = 18;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AutoRoundedCorners = true;
+            this.txtPassword.BorderRadius = 9;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.IconLeft = global::PBL3_Remake.Properties.Resources.key_24;
+            this.txtPassword.Location = new System.Drawing.Point(46, 303);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(310, 21);
+            this.txtPassword.TabIndex = 19;
             // 
             // btnLogin
             // 
@@ -190,13 +213,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(782, 600);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnConnectToDataBase);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pBLogin);
@@ -217,8 +240,6 @@
         private System.Windows.Forms.PictureBox pBLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radManager;
         private System.Windows.Forms.Panel panel1;
@@ -226,5 +247,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnConnectToDataBase;
         private System.Windows.Forms.Button btnLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
 }

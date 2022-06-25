@@ -103,6 +103,8 @@ namespace GUI.frmGUISeller
             LoadBanByTinhTrangBanVaTang(-1, 1);
             if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).ID_ChucVu == 3) btnAttend.Visible = true;
             else btnAttend.Visible = false;
+            lblTitleWelcome.Text = NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).TenUser;
+            Real_time.Start();
         }
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -139,6 +141,10 @@ namespace GUI.frmGUISeller
         {
             frmGUISeller.frmAttendance form = new frmAttendance();
             form.ShowDialog();
+        }
+        private void Real_time_Tick(object sender, EventArgs e)
+        {
+            lblTimeWork.Text = DateTime.Now.ToShortTimeString();
         }
         #endregion
 

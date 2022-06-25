@@ -108,5 +108,26 @@ namespace BLL
             }
             return liststatistic;
         }
+        public List<BangChamCong> GetAllEmployeeHasTimeSheetByDateMonth(DateTime month)
+        {
+            List<BangChamCong> listuser = new List<BangChamCong>();
+            foreach (BangChamCong i in dALQLNH.BangChamCongs)
+            {
+                if (i.NgayDauTienTinhCong.Month == month.Month)
+                {
+                    listuser.Add(i);
+                }
+            }
+            return listuser;
+        }
+        public int GetTotalSalaryByDateMonth(List<BangChamCong> ListTimeSheet)
+        {
+            int TotalSalary = 0;
+            foreach (BangChamCong i in ListTimeSheet)
+            {
+                TotalSalary += i.TinhLuong;
+            }
+            return TotalSalary;
+        }
     }
 }

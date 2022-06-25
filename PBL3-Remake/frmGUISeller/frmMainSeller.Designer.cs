@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAttend = new System.Windows.Forms.Button();
             this.btnDetailTable = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitleWelcome = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFloor2 = new System.Windows.Forms.Button();
             this.btnFloor1 = new System.Windows.Forms.Button();
             this.cbbStatusTable = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnTable = new System.Windows.Forms.Panel();
+            this.lblTimeWork = new System.Windows.Forms.Label();
+            this.Real_time = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,10 +51,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblTimeWork);
             this.panel1.Controls.Add(this.btnAttend);
             this.panel1.Controls.Add(this.btnDetailTable);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblTitleWelcome);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnFloor2);
             this.panel1.Controls.Add(this.btnFloor1);
@@ -90,7 +96,7 @@
             this.btnDetailTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDetailTable.Image = global::PBL3_Remake.Properties.Resources.detail_table_icons;
             this.btnDetailTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetailTable.Location = new System.Drawing.Point(269, 26);
+            this.btnDetailTable.Location = new System.Drawing.Point(288, 26);
             this.btnDetailTable.Name = "btnDetailTable";
             this.btnDetailTable.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnDetailTable.Size = new System.Drawing.Size(165, 50);
@@ -112,17 +118,17 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Status table";
             // 
-            // label1
+            // lblTitleWelcome
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(109, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Employee";
+            this.lblTitleWelcome.AutoSize = true;
+            this.lblTitleWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.lblTitleWelcome.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleWelcome.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTitleWelcome.Location = new System.Drawing.Point(64, 49);
+            this.lblTitleWelcome.Name = "lblTitleWelcome";
+            this.lblTitleWelcome.Size = new System.Drawing.Size(74, 18);
+            this.lblTitleWelcome.TabIndex = 23;
+            this.lblTitleWelcome.Text = "Employee";
             // 
             // btnExit
             // 
@@ -132,7 +138,7 @@
             this.btnExit.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnExit.Image = global::PBL3_Remake.Properties.Resources.exit_32;
-            this.btnExit.Location = new System.Drawing.Point(23, 34);
+            this.btnExit.Location = new System.Drawing.Point(12, 55);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnExit.Size = new System.Drawing.Size(33, 33);
@@ -193,7 +199,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.pictureBox1.Image = global::PBL3_Remake.Properties.Resources.icon_32;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -207,6 +213,34 @@
             this.pnTable.Name = "pnTable";
             this.pnTable.Size = new System.Drawing.Size(1300, 600);
             this.pnTable.TabIndex = 1;
+            // 
+            // lblTimeWork
+            // 
+            this.lblTimeWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.lblTimeWork.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeWork.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTimeWork.Location = new System.Drawing.Point(64, 74);
+            this.lblTimeWork.Name = "lblTimeWork";
+            this.lblTimeWork.Size = new System.Drawing.Size(120, 20);
+            this.lblTimeWork.TabIndex = 29;
+            this.lblTimeWork.Text = "Time";
+            this.lblTimeWork.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Real_time
+            // 
+            this.Real_time.Tick += new System.EventHandler(this.Real_time_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(67, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Welcome";
             // 
             // frmMainSeller
             // 
@@ -232,7 +266,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitleWelcome;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnFloor2;
         private System.Windows.Forms.Button btnFloor1;
@@ -241,5 +275,8 @@
         private System.Windows.Forms.Panel pnTable;
         private System.Windows.Forms.Button btnDetailTable;
         private System.Windows.Forms.Button btnAttend;
+        private System.Windows.Forms.Label lblTimeWork;
+        private System.Windows.Forms.Timer Real_time;
+        private System.Windows.Forms.Label label1;
     }
 }

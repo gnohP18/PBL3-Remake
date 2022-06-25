@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -75,9 +76,26 @@ namespace GUI.frmGUIUserControl
             SetUIForButton(sender);
             int index = dgvManageEmployee.CurrentCell.RowIndex;
             int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
-            EmployeeTimeSheet frm = new EmployeeTimeSheet(ID_User);
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            User _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
+            if (_User.ID_ChucVu != 1 || _User.ID_ChucVu != 2)
+            {
+                EmployeeTimeSheet frm = new EmployeeTimeSheet(ID_User);
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+            }
+            else
+            {
+                if (_User.ID_ChucVu == 1)
+                {
+                    NoticeBox box = new NoticeBox("This is Admin-Can't have TimeSheet");
+                    box.Show();
+                }
+                else if (_User.ID_ChucVu == 2)
+                {
+                    NoticeBox box = new NoticeBox("This is Manager-Can't have TimeSheet");
+                    box.Show();
+                }
+            }
         }
         private void btnSalaryManage_Click(object sender, EventArgs e)
         {

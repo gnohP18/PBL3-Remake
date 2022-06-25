@@ -43,7 +43,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.OverViewCalendar = new System.Windows.Forms.MonthCalendar();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbbStatusTable = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -69,6 +68,7 @@
             this.RealTime = new System.Windows.Forms.Timer(this.components);
             this.lblRealTime = new System.Windows.Forms.Label();
             this.dgvTable = new System.Windows.Forms.DataGridView();
+            this.cbbStatusTable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -88,7 +88,7 @@
             this.OverViewCalendar.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverViewCalendar.ForeColor = System.Drawing.Color.Black;
             this.OverViewCalendar.Location = new System.Drawing.Point(5, 5);
-            this.OverViewCalendar.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.OverViewCalendar.Margin = new System.Windows.Forms.Padding(7);
             this.OverViewCalendar.Name = "OverViewCalendar";
             this.OverViewCalendar.TabIndex = 0;
             // 
@@ -106,20 +106,10 @@
             this.panel2.Controls.Add(this.btnFloor1);
             this.panel2.Controls.Add(this.Overviewchart);
             this.panel2.Location = new System.Drawing.Point(241, 5);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(955, 301);
             this.panel2.TabIndex = 2;
-            // 
-            // cbbStatusTable
-            // 
-            this.cbbStatusTable.FormattingEnabled = true;
-            this.cbbStatusTable.Location = new System.Drawing.Point(560, 271);
-            this.cbbStatusTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbbStatusTable.Name = "cbbStatusTable";
-            this.cbbStatusTable.Size = new System.Drawing.Size(160, 21);
-            this.cbbStatusTable.TabIndex = 40;
-            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatusTable_SelectedIndexChanged_1);
             // 
             // panel3
             // 
@@ -150,7 +140,7 @@
             // 
             this.pictureBox4.Image = global::PBL3_Remake.Properties.Resources.money_2_48;
             this.pictureBox4.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(48, 48);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -198,7 +188,7 @@
             // 
             this.pictureBox2.Image = global::PBL3_Remake.Properties.Resources.money_48;
             this.pictureBox2.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -246,7 +236,7 @@
             // 
             this.pictureBox1.Image = global::PBL3_Remake.Properties.Resources.spending_32;
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -294,7 +284,7 @@
             // 
             this.pictureBox3.Image = global::PBL3_Remake.Properties.Resources.Ordered_48;
             this.pictureBox3.Location = new System.Drawing.Point(4, 1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -318,7 +308,7 @@
             // 
             this.lblNumberofTableFl2.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.lblNumberofTableFl2.ForeColor = System.Drawing.Color.White;
-            this.lblNumberofTableFl2.Location = new System.Drawing.Point(891, 231);
+            this.lblNumberofTableFl2.Location = new System.Drawing.Point(891, 206);
             this.lblNumberofTableFl2.Name = "lblNumberofTableFl2";
             this.lblNumberofTableFl2.Size = new System.Drawing.Size(60, 18);
             this.lblNumberofTableFl2.TabIndex = 35;
@@ -329,7 +319,7 @@
             // 
             this.lblNumberofTableFl1.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.lblNumberofTableFl1.ForeColor = System.Drawing.Color.White;
-            this.lblNumberofTableFl1.Location = new System.Drawing.Point(684, 231);
+            this.lblNumberofTableFl1.Location = new System.Drawing.Point(684, 206);
             this.lblNumberofTableFl1.Name = "lblNumberofTableFl1";
             this.lblNumberofTableFl1.Size = new System.Drawing.Size(63, 23);
             this.lblNumberofTableFl1.TabIndex = 34;
@@ -345,7 +335,7 @@
             this.btnFloor2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFloor2.Image = ((System.Drawing.Image)(resources.GetObject("btnFloor2.Image")));
             this.btnFloor2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFloor2.Location = new System.Drawing.Point(778, 216);
+            this.btnFloor2.Location = new System.Drawing.Point(778, 191);
             this.btnFloor2.Name = "btnFloor2";
             this.btnFloor2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnFloor2.Size = new System.Drawing.Size(120, 50);
@@ -364,7 +354,7 @@
             this.btnFloor1.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFloor1.Image = ((System.Drawing.Image)(resources.GetObject("btnFloor1.Image")));
             this.btnFloor1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFloor1.Location = new System.Drawing.Point(566, 214);
+            this.btnFloor1.Location = new System.Drawing.Point(566, 189);
             this.btnFloor1.Name = "btnFloor1";
             this.btnFloor1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnFloor1.Size = new System.Drawing.Size(120, 50);
@@ -449,7 +439,7 @@
             this.dgvDanhSachHoaDon.EnableHeadersVisualStyles = false;
             this.dgvDanhSachHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.dgvDanhSachHoaDon.Location = new System.Drawing.Point(8, 310);
-            this.dgvDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDanhSachHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDanhSachHoaDon.Name = "dgvDanhSachHoaDon";
             this.dgvDanhSachHoaDon.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -510,7 +500,7 @@
             this.dgvTable.EnableHeadersVisualStyles = false;
             this.dgvTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.dgvTable.Location = new System.Drawing.Point(744, 311);
-            this.dgvTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTable.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTable.Name = "dgvTable";
             this.dgvTable.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -533,6 +523,25 @@
             this.dgvTable.TabIndex = 32;
             this.dgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTable_CellContentClick);
             // 
+            // cbbStatusTable
+            // 
+            this.cbbStatusTable.BackColor = System.Drawing.Color.Transparent;
+            this.cbbStatusTable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbStatusTable.BorderRadius = 15;
+            this.cbbStatusTable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbStatusTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatusTable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbStatusTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbStatusTable.ItemHeight = 30;
+            this.cbbStatusTable.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbStatusTable.Location = new System.Drawing.Point(566, 245);
+            this.cbbStatusTable.Name = "cbbStatusTable";
+            this.cbbStatusTable.Size = new System.Drawing.Size(187, 36);
+            this.cbbStatusTable.TabIndex = 41;
+            // 
             // OverViewUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,7 +552,7 @@
             this.Controls.Add(this.dgvDanhSachHoaDon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.OverViewCalendar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OverViewUC";
             this.Size = new System.Drawing.Size(1200, 700);
             this.Load += new System.EventHandler(this.OverViewUC_Load);
@@ -596,6 +605,6 @@
         private System.Windows.Forms.Timer RealTime;
         private System.Windows.Forms.Label lblRealTime;
         private System.Windows.Forms.DataGridView dgvTable;
-        private System.Windows.Forms.ComboBox cbbStatusTable;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbStatusTable;
     }
 }

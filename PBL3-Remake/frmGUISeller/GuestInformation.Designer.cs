@@ -28,36 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtGuestName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblIDGuest = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtGuestPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtGuestAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.radMale = new System.Windows.Forms.RadioButton();
             this.radFemale = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvHistoryReceipt = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtGuestPoint = new System.Windows.Forms.TextBox();
             this.btClose = new System.Windows.Forms.Button();
             this.lblRegistDay = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.txtGuestName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtGuestPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtGuestAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtGuestPoint = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoryReceipt)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtGuestName
-            // 
-            this.txtGuestName.Location = new System.Drawing.Point(134, 72);
-            this.txtGuestName.Name = "txtGuestName";
-            this.txtGuestName.Size = new System.Drawing.Size(265, 20);
-            this.txtGuestName.TabIndex = 54;
             // 
             // label1
             // 
@@ -119,13 +112,6 @@
             this.label4.TabIndex = 58;
             this.label4.Text = "Phone";
             // 
-            // txtGuestPhone
-            // 
-            this.txtGuestPhone.Location = new System.Drawing.Point(134, 104);
-            this.txtGuestPhone.Name = "txtGuestPhone";
-            this.txtGuestPhone.Size = new System.Drawing.Size(265, 20);
-            this.txtGuestPhone.TabIndex = 59;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -137,13 +123,6 @@
             this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 60;
             this.label5.Text = "Address";
-            // 
-            // txtGuestAddress
-            // 
-            this.txtGuestAddress.Location = new System.Drawing.Point(134, 133);
-            this.txtGuestAddress.Name = "txtGuestAddress";
-            this.txtGuestAddress.Size = new System.Drawing.Size(265, 20);
-            this.txtGuestAddress.TabIndex = 61;
             // 
             // label6
             // 
@@ -211,14 +190,6 @@
             this.label8.Size = new System.Drawing.Size(44, 19);
             this.label8.TabIndex = 68;
             this.label8.Text = "Point";
-            // 
-            // txtGuestPoint
-            // 
-            this.txtGuestPoint.Location = new System.Drawing.Point(134, 223);
-            this.txtGuestPoint.Name = "txtGuestPoint";
-            this.txtGuestPoint.ReadOnly = true;
-            this.txtGuestPoint.Size = new System.Drawing.Size(265, 20);
-            this.txtGuestPoint.TabIndex = 69;
             // 
             // btClose
             // 
@@ -288,31 +259,123 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // txtGuestName
+            // 
+            this.txtGuestName.AutoRoundedCorners = true;
+            this.txtGuestName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtGuestName.BorderRadius = 9;
+            this.txtGuestName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGuestName.DefaultText = "";
+            this.txtGuestName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGuestName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGuestName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGuestName.ForeColor = System.Drawing.Color.Black;
+            this.txtGuestName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestName.Location = new System.Drawing.Point(134, 68);
+            this.txtGuestName.Name = "txtGuestName";
+            this.txtGuestName.PasswordChar = '\0';
+            this.txtGuestName.PlaceholderText = "";
+            this.txtGuestName.SelectedText = "";
+            this.txtGuestName.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestName.TabIndex = 75;
+            // 
+            // txtGuestPhone
+            // 
+            this.txtGuestPhone.AutoRoundedCorners = true;
+            this.txtGuestPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtGuestPhone.BorderRadius = 9;
+            this.txtGuestPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGuestPhone.DefaultText = "";
+            this.txtGuestPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGuestPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGuestPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGuestPhone.ForeColor = System.Drawing.Color.Black;
+            this.txtGuestPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestPhone.Location = new System.Drawing.Point(134, 103);
+            this.txtGuestPhone.Name = "txtGuestPhone";
+            this.txtGuestPhone.PasswordChar = '\0';
+            this.txtGuestPhone.PlaceholderText = "";
+            this.txtGuestPhone.SelectedText = "";
+            this.txtGuestPhone.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestPhone.TabIndex = 76;
+            // 
+            // txtGuestAddress
+            // 
+            this.txtGuestAddress.AutoRoundedCorners = true;
+            this.txtGuestAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtGuestAddress.BorderRadius = 9;
+            this.txtGuestAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGuestAddress.DefaultText = "";
+            this.txtGuestAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGuestAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGuestAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGuestAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtGuestAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestAddress.Location = new System.Drawing.Point(134, 136);
+            this.txtGuestAddress.Name = "txtGuestAddress";
+            this.txtGuestAddress.PasswordChar = '\0';
+            this.txtGuestAddress.PlaceholderText = "";
+            this.txtGuestAddress.SelectedText = "";
+            this.txtGuestAddress.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestAddress.TabIndex = 77;
+            // 
+            // txtGuestPoint
+            // 
+            this.txtGuestPoint.AutoRoundedCorners = true;
+            this.txtGuestPoint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtGuestPoint.BorderRadius = 9;
+            this.txtGuestPoint.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGuestPoint.DefaultText = "";
+            this.txtGuestPoint.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGuestPoint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGuestPoint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestPoint.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGuestPoint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestPoint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGuestPoint.ForeColor = System.Drawing.Color.Black;
+            this.txtGuestPoint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGuestPoint.Location = new System.Drawing.Point(134, 217);
+            this.txtGuestPoint.Name = "txtGuestPoint";
+            this.txtGuestPoint.PasswordChar = '\0';
+            this.txtGuestPoint.PlaceholderText = "";
+            this.txtGuestPoint.SelectedText = "";
+            this.txtGuestPoint.Size = new System.Drawing.Size(265, 21);
+            this.txtGuestPoint.TabIndex = 78;
+            // 
             // GuestInformation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(411, 467);
+            this.Controls.Add(this.txtGuestPoint);
+            this.Controls.Add(this.txtGuestAddress);
+            this.Controls.Add(this.txtGuestPhone);
+            this.Controls.Add(this.txtGuestName);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblRegistDay);
             this.Controls.Add(this.btClose);
-            this.Controls.Add(this.txtGuestPoint);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvHistoryReceipt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.radFemale);
             this.Controls.Add(this.radMale);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtGuestAddress);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtGuestPhone);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblIDGuest);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtGuestName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GuestInformation";
@@ -325,27 +388,26 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtGuestName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblIDGuest;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtGuestPhone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtGuestAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton radMale;
         private System.Windows.Forms.RadioButton radFemale;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvHistoryReceipt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtGuestPoint;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Label lblRegistDay;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private Guna.UI2.WinForms.Guna2TextBox txtGuestName;
+        private Guna.UI2.WinForms.Guna2TextBox txtGuestPhone;
+        private Guna.UI2.WinForms.Guna2TextBox txtGuestAddress;
+        private Guna.UI2.WinForms.Guna2TextBox txtGuestPoint;
     }
 }

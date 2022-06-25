@@ -101,7 +101,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
-            this.ClientSize = new System.Drawing.Size(799, 437);
+            this.ClientSize = new System.Drawing.Size(799, 426);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.dgvDanhSachHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -10,6 +10,7 @@ namespace GUI.frmGUILogin
         public frmLogin()
         {
             InitializeComponent();
+            BLL.BangChamCongBLL.Instance.UpdateBangChamCongDauCa();
 
         }
 

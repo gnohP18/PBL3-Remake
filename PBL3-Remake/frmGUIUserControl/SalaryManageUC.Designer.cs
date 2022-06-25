@@ -52,12 +52,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DayWorkChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.cbbPosition = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblPercentWorkHard = new System.Windows.Forms.Label();
             this.pBCondition = new System.Windows.Forms.PictureBox();
+            this.lblPercentWorkHard = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbbPosition = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBUserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DayWorkChart)).BeginInit();
@@ -286,21 +286,6 @@
             title1.Text = "Day work";
             this.DayWorkChart.Titles.Add(title1);
             // 
-            // cbbPosition
-            // 
-            this.cbbPosition.BackColor = System.Drawing.Color.Transparent;
-            this.cbbPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPosition.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbPosition.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbPosition.ItemHeight = 30;
-            this.cbbPosition.Location = new System.Drawing.Point(814, 429);
-            this.cbbPosition.Name = "cbbPosition";
-            this.cbbPosition.Size = new System.Drawing.Size(218, 36);
-            this.cbbPosition.TabIndex = 31;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -337,16 +322,13 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(401, 265);
             this.guna2GradientPanel1.TabIndex = 33;
             // 
-            // label9
+            // pBCondition
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(4, 205);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(163, 21);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Percent Work hard";
+            this.pBCondition.Location = new System.Drawing.Point(297, 232);
+            this.pBCondition.Name = "pBCondition";
+            this.pBCondition.Size = new System.Drawing.Size(32, 32);
+            this.pBCondition.TabIndex = 35;
+            this.pBCondition.TabStop = false;
             // 
             // lblPercentWorkHard
             // 
@@ -358,20 +340,42 @@
             this.lblPercentWorkHard.TabIndex = 34;
             this.lblPercentWorkHard.Text = "G";
             // 
-            // pBCondition
+            // label9
             // 
-            this.pBCondition.Location = new System.Drawing.Point(297, 232);
-            this.pBCondition.Name = "pBCondition";
-            this.pBCondition.Size = new System.Drawing.Size(32, 32);
-            this.pBCondition.TabIndex = 35;
-            this.pBCondition.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(4, 205);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(163, 21);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Percent Work hard";
+            // 
+            // cbbPosition
+            // 
+            this.cbbPosition.BackColor = System.Drawing.Color.Transparent;
+            this.cbbPosition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cbbPosition.BorderRadius = 15;
+            this.cbbPosition.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPosition.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbPosition.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbPosition.ItemHeight = 30;
+            this.cbbPosition.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbPosition.Location = new System.Drawing.Point(828, 429);
+            this.cbbPosition.Name = "cbbPosition";
+            this.cbbPosition.Size = new System.Drawing.Size(187, 36);
+            this.cbbPosition.TabIndex = 42;
             // 
             // SalaryManageUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.cbbPosition);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.DayWorkChart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pBUserPicture);
@@ -407,11 +411,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataVisualization.Charting.Chart DayWorkChart;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbPosition;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label lblPercentWorkHard;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pBCondition;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbPosition;
     }
 }

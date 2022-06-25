@@ -43,13 +43,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMoreInfor = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnMaterialInformation = new System.Windows.Forms.Button();
+            this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
+            this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.btnAllMaterial = new System.Windows.Forms.Button();
             this.btnVegetable = new System.Windows.Forms.Button();
             this.btnDriedFood = new System.Windows.Forms.Button();
             this.btnFreshFood = new System.Windows.Forms.Button();
-            this.btnMaterialInformation = new System.Windows.Forms.Button();
-            this.btnViewExpiredMaterial = new System.Windows.Forms.Button();
-            this.btnAddMaterialToWareHouse = new System.Windows.Forms.Button();
             this.btnDrinking = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieuKho)).BeginInit();
@@ -62,29 +62,29 @@
             this.txtAmountFood.Enabled = false;
             this.txtAmountFood.Location = new System.Drawing.Point(88, 94);
             this.txtAmountFood.Name = "txtAmountFood";
-            this.txtAmountFood.Size = new System.Drawing.Size(100, 22);
+            this.txtAmountFood.Size = new System.Drawing.Size(100, 20);
             this.txtAmountFood.TabIndex = 19;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.label14.Location = new System.Drawing.Point(2, 32);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 23);
+            this.label14.Size = new System.Drawing.Size(49, 18);
             this.label14.TabIndex = 17;
             this.label14.Text = "Name";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.label13.Location = new System.Drawing.Point(71, 5);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(224, 27);
+            this.label13.Size = new System.Drawing.Size(188, 23);
             this.label13.TabIndex = 16;
             this.label13.Text = "Material Information";
             // 
@@ -150,11 +150,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.label15.Location = new System.Drawing.Point(3, 94);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 23);
+            this.label15.Size = new System.Drawing.Size(61, 18);
             this.label15.TabIndex = 18;
             this.label15.Text = "Amount";
             // 
@@ -163,7 +163,7 @@
             this.txtNameFood.Enabled = false;
             this.txtNameFood.Location = new System.Drawing.Point(10, 60);
             this.txtNameFood.Name = "txtNameFood";
-            this.txtNameFood.Size = new System.Drawing.Size(178, 22);
+            this.txtNameFood.Size = new System.Drawing.Size(178, 20);
             this.txtNameFood.TabIndex = 21;
             // 
             // panel6
@@ -212,79 +212,6 @@
             this.panel7.Size = new System.Drawing.Size(176, 489);
             this.panel7.TabIndex = 24;
             // 
-            // btnAllMaterial
-            // 
-            this.btnAllMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAllMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnAllMaterial.FlatAppearance.BorderSize = 2;
-            this.btnAllMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllMaterial.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
-            this.btnAllMaterial.Location = new System.Drawing.Point(677, 47);
-            this.btnAllMaterial.Name = "btnAllMaterial";
-            this.btnAllMaterial.Size = new System.Drawing.Size(169, 125);
-            this.btnAllMaterial.TabIndex = 29;
-            this.btnAllMaterial.Text = "All Material";
-            this.btnAllMaterial.UseVisualStyleBackColor = false;
-            this.btnAllMaterial.Click += new System.EventHandler(this.btnAllMaterial_Click);
-            // 
-            // btnVegetable
-            // 
-            this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnVegetable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnVegetable.FlatAppearance.BorderSize = 2;
-            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVegetable.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVegetable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.btnVegetable.Image = ((System.Drawing.Image)(resources.GetObject("btnVegetable.Image")));
-            this.btnVegetable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVegetable.Location = new System.Drawing.Point(344, 47);
-            this.btnVegetable.Name = "btnVegetable";
-            this.btnVegetable.Size = new System.Drawing.Size(170, 125);
-            this.btnVegetable.TabIndex = 27;
-            this.btnVegetable.Text = "Vegetable";
-            this.btnVegetable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVegetable.UseVisualStyleBackColor = false;
-            this.btnVegetable.Click += new System.EventHandler(this.btnVegetable_Click);
-            // 
-            // btnDriedFood
-            // 
-            this.btnDriedFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnDriedFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnDriedFood.FlatAppearance.BorderSize = 2;
-            this.btnDriedFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDriedFood.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDriedFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
-            this.btnDriedFood.Image = ((System.Drawing.Image)(resources.GetObject("btnDriedFood.Image")));
-            this.btnDriedFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDriedFood.Location = new System.Drawing.Point(4, 47);
-            this.btnDriedFood.Name = "btnDriedFood";
-            this.btnDriedFood.Size = new System.Drawing.Size(170, 125);
-            this.btnDriedFood.TabIndex = 25;
-            this.btnDriedFood.Text = "Dried Food";
-            this.btnDriedFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDriedFood.UseVisualStyleBackColor = false;
-            this.btnDriedFood.Click += new System.EventHandler(this.btnDriedFood_Click);
-            // 
-            // btnFreshFood
-            // 
-            this.btnFreshFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnFreshFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.btnFreshFood.FlatAppearance.BorderSize = 2;
-            this.btnFreshFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFreshFood.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFreshFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(82)))), ((int)(((byte)(0)))));
-            this.btnFreshFood.Image = ((System.Drawing.Image)(resources.GetObject("btnFreshFood.Image")));
-            this.btnFreshFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFreshFood.Location = new System.Drawing.Point(174, 47);
-            this.btnFreshFood.Name = "btnFreshFood";
-            this.btnFreshFood.Size = new System.Drawing.Size(170, 125);
-            this.btnFreshFood.TabIndex = 26;
-            this.btnFreshFood.Text = "Fresh Food";
-            this.btnFreshFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFreshFood.UseVisualStyleBackColor = false;
-            this.btnFreshFood.Click += new System.EventHandler(this.btnFreshFood_Click);
-            // 
             // btnMaterialInformation
             // 
             this.btnMaterialInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -292,7 +219,7 @@
             this.btnMaterialInformation.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnMaterialInformation.FlatAppearance.BorderSize = 2;
             this.btnMaterialInformation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMaterialInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterialInformation.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterialInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnMaterialInformation.Image = global::PBL3_Remake.Properties.Resources.ingredients_64;
             this.btnMaterialInformation.Location = new System.Drawing.Point(0, 329);
@@ -313,7 +240,7 @@
             this.btnViewExpiredMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnViewExpiredMaterial.FlatAppearance.BorderSize = 2;
             this.btnViewExpiredMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewExpiredMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewExpiredMaterial.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewExpiredMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnViewExpiredMaterial.Image = global::PBL3_Remake.Properties.Resources.expired_food_64;
             this.btnViewExpiredMaterial.Location = new System.Drawing.Point(0, 163);
@@ -334,7 +261,7 @@
             this.btnAddMaterialToWareHouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnAddMaterialToWareHouse.FlatAppearance.BorderSize = 2;
             this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnAddMaterialToWareHouse.Image = global::PBL3_Remake.Properties.Resources.add_to_basket_64;
             this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(0, 0);
@@ -348,13 +275,86 @@
             this.btnAddMaterialToWareHouse.UseVisualStyleBackColor = false;
             this.btnAddMaterialToWareHouse.Click += new System.EventHandler(this.btnAddMaterialToWareHouse_Click);
             // 
+            // btnAllMaterial
+            // 
+            this.btnAllMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAllMaterial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnAllMaterial.FlatAppearance.BorderSize = 2;
+            this.btnAllMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllMaterial.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
+            this.btnAllMaterial.Location = new System.Drawing.Point(677, 47);
+            this.btnAllMaterial.Name = "btnAllMaterial";
+            this.btnAllMaterial.Size = new System.Drawing.Size(169, 125);
+            this.btnAllMaterial.TabIndex = 29;
+            this.btnAllMaterial.Text = "All Material";
+            this.btnAllMaterial.UseVisualStyleBackColor = false;
+            this.btnAllMaterial.Click += new System.EventHandler(this.btnAllMaterial_Click);
+            // 
+            // btnVegetable
+            // 
+            this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnVegetable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnVegetable.FlatAppearance.BorderSize = 2;
+            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVegetable.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVegetable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btnVegetable.Image = ((System.Drawing.Image)(resources.GetObject("btnVegetable.Image")));
+            this.btnVegetable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVegetable.Location = new System.Drawing.Point(344, 47);
+            this.btnVegetable.Name = "btnVegetable";
+            this.btnVegetable.Size = new System.Drawing.Size(170, 125);
+            this.btnVegetable.TabIndex = 27;
+            this.btnVegetable.Text = "Vegetable";
+            this.btnVegetable.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVegetable.UseVisualStyleBackColor = false;
+            this.btnVegetable.Click += new System.EventHandler(this.btnVegetable_Click);
+            // 
+            // btnDriedFood
+            // 
+            this.btnDriedFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnDriedFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnDriedFood.FlatAppearance.BorderSize = 2;
+            this.btnDriedFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriedFood.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDriedFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(130)))));
+            this.btnDriedFood.Image = ((System.Drawing.Image)(resources.GetObject("btnDriedFood.Image")));
+            this.btnDriedFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDriedFood.Location = new System.Drawing.Point(4, 47);
+            this.btnDriedFood.Name = "btnDriedFood";
+            this.btnDriedFood.Size = new System.Drawing.Size(170, 125);
+            this.btnDriedFood.TabIndex = 25;
+            this.btnDriedFood.Text = "Dried Food";
+            this.btnDriedFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDriedFood.UseVisualStyleBackColor = false;
+            this.btnDriedFood.Click += new System.EventHandler(this.btnDriedFood_Click);
+            // 
+            // btnFreshFood
+            // 
+            this.btnFreshFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnFreshFood.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.btnFreshFood.FlatAppearance.BorderSize = 2;
+            this.btnFreshFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFreshFood.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFreshFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(82)))), ((int)(((byte)(0)))));
+            this.btnFreshFood.Image = ((System.Drawing.Image)(resources.GetObject("btnFreshFood.Image")));
+            this.btnFreshFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFreshFood.Location = new System.Drawing.Point(174, 47);
+            this.btnFreshFood.Name = "btnFreshFood";
+            this.btnFreshFood.Size = new System.Drawing.Size(170, 125);
+            this.btnFreshFood.TabIndex = 26;
+            this.btnFreshFood.Text = "Fresh Food";
+            this.btnFreshFood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFreshFood.UseVisualStyleBackColor = false;
+            this.btnFreshFood.Click += new System.EventHandler(this.btnFreshFood_Click);
+            // 
             // btnDrinking
             // 
             this.btnDrinking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnDrinking.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             this.btnDrinking.FlatAppearance.BorderSize = 2;
             this.btnDrinking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDrinking.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDrinking.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDrinking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(233)))), ((int)(((byte)(224)))));
             this.btnDrinking.Image = ((System.Drawing.Image)(resources.GetObject("btnDrinking.Image")));
             this.btnDrinking.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -44,7 +44,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(729, 312);
+            this.btnClose.Location = new System.Drawing.Point(738, 445);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(123, 32);
@@ -61,7 +61,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(22, 312);
+            this.btnDelete.Location = new System.Drawing.Point(22, 445);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(123, 32);
@@ -73,12 +73,12 @@
             // dgvExpiredMaterial
             // 
             this.dgvExpiredMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExpiredMaterial.Location = new System.Drawing.Point(22, 48);
+            this.dgvExpiredMaterial.Location = new System.Drawing.Point(22, 33);
             this.dgvExpiredMaterial.Name = "dgvExpiredMaterial";
             this.dgvExpiredMaterial.RowHeadersWidth = 51;
             this.dgvExpiredMaterial.RowTemplate.Height = 24;
             this.dgvExpiredMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExpiredMaterial.Size = new System.Drawing.Size(830, 257);
+            this.dgvExpiredMaterial.Size = new System.Drawing.Size(830, 405);
             this.dgvExpiredMaterial.TabIndex = 18;
             // 
             // label10
@@ -89,7 +89,7 @@
             this.label10.Location = new System.Drawing.Point(351, 9);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(170, 26);
+            this.label10.Size = new System.Drawing.Size(141, 21);
             this.label10.TabIndex = 17;
             this.label10.Text = "Expired Material";
             // 
@@ -101,7 +101,7 @@
             this.btnDeleteAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAll.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteAll.Location = new System.Drawing.Point(356, 312);
+            this.btnDeleteAll.Location = new System.Drawing.Point(355, 445);
             this.btnDeleteAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteAll.Name = "btnDeleteAll";
             this.btnDeleteAll.Size = new System.Drawing.Size(123, 32);
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
-            this.ClientSize = new System.Drawing.Size(874, 354);
+            this.ClientSize = new System.Drawing.Size(874, 490);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDeleteAll);
             this.Controls.Add(this.btnDelete);

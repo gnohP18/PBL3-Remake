@@ -383,6 +383,26 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hiep {
+            get {
+                object obj = ResourceManager.GetObject("Hiep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hung {
+            get {
+                object obj = ResourceManager.GetObject("Hung", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_32 {
             get {
                 object obj = ResourceManager.GetObject("icon-32", resourceCulture);
@@ -593,6 +613,16 @@ namespace PBL3_Remake.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Phong {
+            get {
+                object obj = ResourceManager.GetObject("Phong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap piece_of_cake_32 {
             get {
                 object obj = ResourceManager.GetObject("piece-of-cake-32", resourceCulture);
@@ -646,6 +676,16 @@ namespace PBL3_Remake.Properties {
         internal static System.Drawing.Bitmap Programmer {
             get {
                 object obj = ResourceManager.GetObject("Programmer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap programmer_32 {
+            get {
+                object obj = ResourceManager.GetObject("programmer-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

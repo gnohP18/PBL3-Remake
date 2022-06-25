@@ -11,32 +11,21 @@ namespace GUI.frmGUISeller
         public DetailTable()
         {
             InitializeComponent();
+            dgvDetailTable.DataSource = BanBLL.Instance.GetAllChiTietBan_ViewByStatus(1);
+            MessageBox.Show(BanBLL.Instance.GetAllChiTietBan_ViewByStatus(1).Count + "");
         }
 
         private void LoadDishByStatusDish(int st)
         {
             Image NotReadyImage = PBL3_Remake.Properties.Resources.uncheckedRed;
             Image ReadyImage = PBL3_Remake.Properties.Resources.checkedGreen;
-
-            dgvStatusDish.DataSource = BanBLL.Instance.GetAllChiTietBan_ViewByStatus(st);
-            foreach (ChiTietBan_View i in BanBLL.Instance.GetAllChiTietBan_ViewByStatus(st))
-            {
-                Console.WriteLine(i.TenBan + " " + i.TenMonAn);
-            }
-            //DataGridViewImageColumn imgcol = new DataGridViewImageColumn();
-            //if (st == 1) imgcol.Image = ReadyImage;
-            //else imgcol.Image = NotReadyImage;
-            //dgvStatusDish.Columns.Add(imgcol);
-            //dgvStatusDish.CellClick += dgvStatusDish_CellsClick;
-            //dgvStatusDish.ReadOnly = true;
-            //dgvStatusDish.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //dgvStatusDish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvDetailTable.DataSource = BanBLL.Instance.GetAllChiTietBan_ViewByStatus(st);
         }
         private void dgvStatusDish_CellsClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex != 0)
             {
-                int idctb = Convert.ToInt32(dgvStatusDish.SelectedRows[0].Cells["ID_ChiTietBan"].Value.ToString());
+                int idctb = Convert.ToInt32(dgvDetailTable.SelectedRows[0].Cells["ID_ChiTietBan"].Value.ToString());
                 frmStatusDish frm = new frmStatusDish(idctb);
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
@@ -45,16 +34,12 @@ namespace GUI.frmGUISeller
 
         private void btnReady_Click(object sender, EventArgs e)
         {
-
-            //LoadDishByStatusDish(1);
-            //dgvStatusDish.DataSource = BanBLL.Instance.GetAllChiTietBan_ViewByStatus(1);
             LoadDishByStatusDish(1);
         }
 
         private void btnNoReady_Click(object sender, EventArgs e)
         {
-            //LoadDishByStatusDish(0);
-            //dgvStatusDish.DataSource = BanBLL.Instance.GetAllChiTietBan_ViewByStatus(0);
+            LoadDishByStatusDish(0);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

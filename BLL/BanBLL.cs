@@ -209,10 +209,6 @@ namespace BLL
                     TinhTrang = i.TinhTrang,
                 });
             }
-            //foreach (ChiTietBan_View b in data)
-            //{
-            //    Console.WriteLine(b.TenBan + " " + b.TenMonAn);
-            //}
             return data;
         }
         public ChiTietBan GetDetailTableByID(int idctb)

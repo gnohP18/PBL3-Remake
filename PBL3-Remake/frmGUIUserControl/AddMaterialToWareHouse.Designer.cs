@@ -41,11 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.dtpImportDay = new System.Windows.Forms.DateTimePicker();
-            this.cbbManufacturer = new System.Windows.Forms.ComboBox();
-            this.cbbMaterialName = new System.Windows.Forms.ComboBox();
-            this.cbbKindOfMaterial = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnClose1 = new System.Windows.Forms.Button();
             this.btnManufacturerManagement = new System.Windows.Forms.Button();
@@ -56,8 +52,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbbKindOfMaterial = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbMaterialName = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbManufacturer = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel7
@@ -85,7 +87,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(37, 159);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(212, 24);
+            this.comboBox2.Size = new System.Drawing.Size(212, 21);
             this.comboBox2.TabIndex = 16;
             // 
             // comboBox1
@@ -93,7 +95,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(37, 106);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 24);
+            this.comboBox1.Size = new System.Drawing.Size(212, 21);
             this.comboBox1.TabIndex = 16;
             // 
             // btnClose
@@ -136,7 +138,7 @@
             this.label10.Location = new System.Drawing.Point(87, 8);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(297, 27);
+            this.label10.Size = new System.Drawing.Size(237, 22);
             this.label10.TabIndex = 2;
             this.label10.Text = "Add Material To Warehouse";
             // 
@@ -148,7 +150,7 @@
             this.label2.Location = new System.Drawing.Point(33, 239);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 23);
+            this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Import day:";
             // 
@@ -157,7 +159,7 @@
             this.txtExpiry.Location = new System.Drawing.Point(37, 266);
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpiry.Name = "txtExpiry";
-            this.txtExpiry.Size = new System.Drawing.Size(212, 22);
+            this.txtExpiry.Size = new System.Drawing.Size(212, 20);
             this.txtExpiry.TabIndex = 1;
             // 
             // label1
@@ -168,7 +170,7 @@
             this.label1.Location = new System.Drawing.Point(33, 186);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 23);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Manufacturer";
             // 
@@ -177,7 +179,7 @@
             this.txtUnit.Location = new System.Drawing.Point(37, 213);
             this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(212, 22);
+            this.txtUnit.Size = new System.Drawing.Size(212, 20);
             this.txtUnit.TabIndex = 1;
             // 
             // label3
@@ -188,7 +190,7 @@
             this.label3.Location = new System.Drawing.Point(33, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 23);
+            this.label3.Size = new System.Drawing.Size(106, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Kind of material";
             // 
@@ -200,75 +202,32 @@
             this.label5.Location = new System.Drawing.Point(33, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 23);
+            this.label5.Size = new System.Drawing.Size(106, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Material\'s name";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
-            this.panel1.Controls.Add(this.txtQuantity);
-            this.panel1.Controls.Add(this.dtpImportDay);
-            this.panel1.Controls.Add(this.cbbManufacturer);
-            this.panel1.Controls.Add(this.cbbMaterialName);
-            this.panel1.Controls.Add(this.cbbKindOfMaterial);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnClose1);
-            this.panel1.Controls.Add(this.btnManufacturerManagement);
             this.panel1.Controls.Add(this.btnAddMaterialToWareHouse);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 380);
+            this.panel1.Size = new System.Drawing.Size(446, 380);
             this.panel1.TabIndex = 0;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Location = new System.Drawing.Point(37, 235);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(212, 22);
-            this.txtQuantity.TabIndex = 3;
             // 
             // dtpImportDay
             // 
             this.dtpImportDay.CustomFormat = "dd/MM/yyyy";
-            this.dtpImportDay.Location = new System.Drawing.Point(37, 287);
+            this.dtpImportDay.Location = new System.Drawing.Point(16, 257);
             this.dtpImportDay.Name = "dtpImportDay";
-            this.dtpImportDay.Size = new System.Drawing.Size(212, 22);
+            this.dtpImportDay.Size = new System.Drawing.Size(212, 20);
             this.dtpImportDay.TabIndex = 4;
-            // 
-            // cbbManufacturer
-            // 
-            this.cbbManufacturer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbManufacturer.FormattingEnabled = true;
-            this.cbbManufacturer.Location = new System.Drawing.Point(37, 172);
-            this.cbbManufacturer.Name = "cbbManufacturer";
-            this.cbbManufacturer.Size = new System.Drawing.Size(212, 24);
-            this.cbbManufacturer.TabIndex = 2;
-            // 
-            // cbbMaterialName
-            // 
-            this.cbbMaterialName.FormattingEnabled = true;
-            this.cbbMaterialName.Location = new System.Drawing.Point(37, 118);
-            this.cbbMaterialName.Name = "cbbMaterialName";
-            this.cbbMaterialName.Size = new System.Drawing.Size(212, 24);
-            this.cbbMaterialName.TabIndex = 1;
-            // 
-            // cbbKindOfMaterial
-            // 
-            this.cbbKindOfMaterial.FormattingEnabled = true;
-            this.cbbKindOfMaterial.Location = new System.Drawing.Point(37, 65);
-            this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
-            this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 24);
-            this.cbbKindOfMaterial.TabIndex = 0;
-            this.cbbKindOfMaterial.SelectedIndexChanged += new System.EventHandler(this.cbbKindOfMaterial_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
@@ -278,7 +237,7 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(173, 331);
+            this.btnRefresh.Location = new System.Drawing.Point(155, 331);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(123, 32);
@@ -295,7 +254,7 @@
             this.btnClose1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose1.ForeColor = System.Drawing.Color.Black;
-            this.btnClose1.Location = new System.Drawing.Point(328, 331);
+            this.btnClose1.Location = new System.Drawing.Point(310, 331);
             this.btnClose1.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose1.Name = "btnClose1";
             this.btnClose1.Size = new System.Drawing.Size(123, 32);
@@ -312,7 +271,7 @@
             this.btnManufacturerManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnManufacturerManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManufacturerManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnManufacturerManagement.Location = new System.Drawing.Point(257, 169);
+            this.btnManufacturerManagement.Location = new System.Drawing.Point(214, 146);
             this.btnManufacturerManagement.Margin = new System.Windows.Forms.Padding(4);
             this.btnManufacturerManagement.Name = "btnManufacturerManagement";
             this.btnManufacturerManagement.Size = new System.Drawing.Size(198, 27);
@@ -329,7 +288,7 @@
             this.btnAddMaterialToWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddMaterialToWareHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMaterialToWareHouse.ForeColor = System.Drawing.Color.Black;
-            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(29, 331);
+            this.btnAddMaterialToWareHouse.Location = new System.Drawing.Point(11, 331);
             this.btnAddMaterialToWareHouse.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMaterialToWareHouse.Name = "btnAddMaterialToWareHouse";
             this.btnAddMaterialToWareHouse.Size = new System.Drawing.Size(123, 32);
@@ -343,77 +302,177 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label4.Location = new System.Drawing.Point(87, 8);
+            this.label4.Location = new System.Drawing.Point(107, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 27);
+            this.label4.Size = new System.Drawing.Size(237, 22);
             this.label4.TabIndex = 12;
             this.label4.Text = "Add Material To Warehouse";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label6.Location = new System.Drawing.Point(33, 260);
+            this.label6.Location = new System.Drawing.Point(11, 235);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 23);
+            this.label6.Size = new System.Drawing.Size(87, 19);
             this.label6.TabIndex = 0;
             this.label6.Text = "Import day:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label11.Location = new System.Drawing.Point(33, 209);
+            this.label11.Location = new System.Drawing.Point(12, 179);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 23);
+            this.label11.Size = new System.Drawing.Size(65, 19);
             this.label11.TabIndex = 4;
             this.label11.Text = "Quantity";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label7.Location = new System.Drawing.Point(33, 145);
+            this.label7.Location = new System.Drawing.Point(12, 115);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 23);
+            this.label7.Size = new System.Drawing.Size(99, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "Manufacturer";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label8.Location = new System.Drawing.Point(33, 39);
+            this.label8.Location = new System.Drawing.Point(12, 6);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 23);
+            this.label8.Size = new System.Drawing.Size(117, 19);
             this.label8.TabIndex = 4;
             this.label8.Text = "Kind of material";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label9.Location = new System.Drawing.Point(33, 92);
+            this.label9.Location = new System.Drawing.Point(12, 62);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 23);
+            this.label9.Size = new System.Drawing.Size(116, 19);
             this.label9.TabIndex = 4;
             this.label9.Text = "Material\'s name";
+            // 
+            // cbbKindOfMaterial
+            // 
+            this.cbbKindOfMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.cbbKindOfMaterial.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbKindOfMaterial.BorderRadius = 15;
+            this.cbbKindOfMaterial.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbKindOfMaterial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbKindOfMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbKindOfMaterial.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbKindOfMaterial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbKindOfMaterial.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbKindOfMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbKindOfMaterial.ItemHeight = 30;
+            this.cbbKindOfMaterial.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbKindOfMaterial.Location = new System.Drawing.Point(16, 28);
+            this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
+            this.cbbKindOfMaterial.Size = new System.Drawing.Size(187, 36);
+            this.cbbKindOfMaterial.TabIndex = 19;
+            // 
+            // cbbMaterialName
+            // 
+            this.cbbMaterialName.BackColor = System.Drawing.Color.Transparent;
+            this.cbbMaterialName.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbMaterialName.BorderRadius = 15;
+            this.cbbMaterialName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbMaterialName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbMaterialName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMaterialName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbMaterialName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbMaterialName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbMaterialName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbMaterialName.ItemHeight = 30;
+            this.cbbMaterialName.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbMaterialName.Location = new System.Drawing.Point(16, 81);
+            this.cbbMaterialName.Name = "cbbMaterialName";
+            this.cbbMaterialName.Size = new System.Drawing.Size(187, 36);
+            this.cbbMaterialName.TabIndex = 20;
+            // 
+            // cbbManufacturer
+            // 
+            this.cbbManufacturer.BackColor = System.Drawing.Color.Transparent;
+            this.cbbManufacturer.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbManufacturer.BorderRadius = 15;
+            this.cbbManufacturer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbManufacturer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbManufacturer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbManufacturer.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbManufacturer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbManufacturer.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbManufacturer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbManufacturer.ItemHeight = 30;
+            this.cbbManufacturer.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbManufacturer.Location = new System.Drawing.Point(15, 137);
+            this.cbbManufacturer.Name = "cbbManufacturer";
+            this.cbbManufacturer.Size = new System.Drawing.Size(187, 36);
+            this.cbbManufacturer.TabIndex = 21;
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.AutoRoundedCorners = true;
+            this.txtQuantity.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtQuantity.BorderRadius = 13;
+            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantity.DefaultText = "";
+            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.Location = new System.Drawing.Point(16, 201);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.PasswordChar = '\0';
+            this.txtQuantity.PlaceholderText = "";
+            this.txtQuantity.SelectedText = "";
+            this.txtQuantity.Size = new System.Drawing.Size(189, 29);
+            this.txtQuantity.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnManufacturerManagement);
+            this.panel2.Controls.Add(this.txtQuantity);
+            this.panel2.Controls.Add(this.cbbKindOfMaterial);
+            this.panel2.Controls.Add(this.cbbManufacturer);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.cbbMaterialName);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.dtpImportDay);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(11, 33);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(422, 282);
+            this.panel2.TabIndex = 23;
             // 
             // AddMaterialToWareHouse
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(459, 380);
+            this.ClientSize = new System.Drawing.Size(446, 380);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -423,6 +482,8 @@
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -442,9 +503,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbbManufacturer;
-        private System.Windows.Forms.ComboBox cbbMaterialName;
-        private System.Windows.Forms.ComboBox cbbKindOfMaterial;
         private System.Windows.Forms.Button btnClose1;
         private System.Windows.Forms.Button btnManufacturerManagement;
         private System.Windows.Forms.Button btnAddMaterialToWareHouse;
@@ -454,8 +512,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpImportDay;
-        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnRefresh;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbManufacturer;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbMaterialName;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbKindOfMaterial;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
     }
 }

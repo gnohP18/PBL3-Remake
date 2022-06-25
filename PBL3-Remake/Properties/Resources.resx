@@ -139,6 +139,9 @@
   <data name="askquestion-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\askquestion-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="officer-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\officer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cloud-database-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud-database-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +183,9 @@
   </data>
   <data name="warehouse-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="remove-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -340,7 +346,7 @@
   <data name="LoginImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="officer-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\officer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="account-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

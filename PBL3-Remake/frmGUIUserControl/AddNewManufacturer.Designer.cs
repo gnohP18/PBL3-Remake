@@ -33,14 +33,14 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPhoneNumberManufacture = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtAddressManufacture = new System.Windows.Forms.TextBox();
-            this.txtNameNewManufacturer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTaxCode = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtNameNewManufacturer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddressManufacture = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTaxCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhoneNumberManufacture = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,16 +48,16 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.btnConfirm);
-            this.panel6.Controls.Add(this.btnClose);
-            this.panel6.Controls.Add(this.btnRefresh);
-            this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.txtPhoneNumberManufacture);
-            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.btnConfirm);
+            this.panel6.Controls.Add(this.txtTaxCode);
+            this.panel6.Controls.Add(this.btnClose);
             this.panel6.Controls.Add(this.txtAddressManufacture);
             this.panel6.Controls.Add(this.txtNameNewManufacturer);
+            this.panel6.Controls.Add(this.btnRefresh);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.txtTaxCode);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Location = new System.Drawing.Point(13, 13);
@@ -120,72 +120,44 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label3.Location = new System.Drawing.Point(260, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 23);
+            this.label3.Size = new System.Drawing.Size(101, 17);
             this.label3.TabIndex = 27;
             this.label3.Text = "Phone number";
-            // 
-            // txtPhoneNumberManufacture
-            // 
-            this.txtPhoneNumberManufacture.Location = new System.Drawing.Point(264, 120);
-            this.txtPhoneNumberManufacture.Name = "txtPhoneNumberManufacture";
-            this.txtPhoneNumberManufacture.Size = new System.Drawing.Size(181, 22);
-            this.txtPhoneNumberManufacture.TabIndex = 26;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label2.Location = new System.Drawing.Point(260, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 25;
             this.label2.Text = "Address";
-            // 
-            // txtAddressManufacture
-            // 
-            this.txtAddressManufacture.Location = new System.Drawing.Point(264, 67);
-            this.txtAddressManufacture.Name = "txtAddressManufacture";
-            this.txtAddressManufacture.Size = new System.Drawing.Size(181, 22);
-            this.txtAddressManufacture.TabIndex = 24;
-            // 
-            // txtNameNewManufacturer
-            // 
-            this.txtNameNewManufacturer.Location = new System.Drawing.Point(7, 69);
-            this.txtNameNewManufacturer.Name = "txtNameNewManufacturer";
-            this.txtNameNewManufacturer.Size = new System.Drawing.Size(178, 22);
-            this.txtNameNewManufacturer.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label1.Location = new System.Drawing.Point(6, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 23);
+            this.label1.Size = new System.Drawing.Size(165, 17);
             this.label1.TabIndex = 22;
             this.label1.Text = "Name new manufacturer";
-            // 
-            // txtTaxCode
-            // 
-            this.txtTaxCode.Location = new System.Drawing.Point(7, 120);
-            this.txtTaxCode.Name = "txtTaxCode";
-            this.txtTaxCode.Size = new System.Drawing.Size(181, 22);
-            this.txtTaxCode.TabIndex = 19;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label15.Location = new System.Drawing.Point(3, 94);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(84, 23);
+            this.label15.Size = new System.Drawing.Size(64, 17);
             this.label15.TabIndex = 18;
             this.label15.Text = "Tax code";
             // 
@@ -197,15 +169,107 @@
             this.label13.Location = new System.Drawing.Point(89, 0);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(276, 27);
+            this.label13.Size = new System.Drawing.Size(220, 22);
             this.label13.TabIndex = 16;
             this.label13.Text = "Manufacturer information";
+            // 
+            // txtNameNewManufacturer
+            // 
+            this.txtNameNewManufacturer.AutoRoundedCorners = true;
+            this.txtNameNewManufacturer.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtNameNewManufacturer.BorderRadius = 17;
+            this.txtNameNewManufacturer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNameNewManufacturer.DefaultText = "";
+            this.txtNameNewManufacturer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNameNewManufacturer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNameNewManufacturer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameNewManufacturer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNameNewManufacturer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameNewManufacturer.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameNewManufacturer.ForeColor = System.Drawing.Color.Black;
+            this.txtNameNewManufacturer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNameNewManufacturer.Location = new System.Drawing.Point(6, 59);
+            this.txtNameNewManufacturer.Name = "txtNameNewManufacturer";
+            this.txtNameNewManufacturer.PasswordChar = '\0';
+            this.txtNameNewManufacturer.PlaceholderText = "";
+            this.txtNameNewManufacturer.SelectedText = "";
+            this.txtNameNewManufacturer.Size = new System.Drawing.Size(214, 36);
+            this.txtNameNewManufacturer.TabIndex = 31;
+            // 
+            // txtAddressManufacture
+            // 
+            this.txtAddressManufacture.AutoRoundedCorners = true;
+            this.txtAddressManufacture.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtAddressManufacture.BorderRadius = 17;
+            this.txtAddressManufacture.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddressManufacture.DefaultText = "";
+            this.txtAddressManufacture.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddressManufacture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddressManufacture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddressManufacture.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddressManufacture.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddressManufacture.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressManufacture.ForeColor = System.Drawing.Color.Black;
+            this.txtAddressManufacture.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddressManufacture.Location = new System.Drawing.Point(263, 61);
+            this.txtAddressManufacture.Name = "txtAddressManufacture";
+            this.txtAddressManufacture.PasswordChar = '\0';
+            this.txtAddressManufacture.PlaceholderText = "";
+            this.txtAddressManufacture.SelectedText = "";
+            this.txtAddressManufacture.Size = new System.Drawing.Size(198, 36);
+            this.txtAddressManufacture.TabIndex = 32;
+            // 
+            // txtTaxCode
+            // 
+            this.txtTaxCode.AutoRoundedCorners = true;
+            this.txtTaxCode.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtTaxCode.BorderRadius = 17;
+            this.txtTaxCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTaxCode.DefaultText = "";
+            this.txtTaxCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTaxCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTaxCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTaxCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTaxCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTaxCode.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaxCode.ForeColor = System.Drawing.Color.Black;
+            this.txtTaxCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTaxCode.Location = new System.Drawing.Point(6, 114);
+            this.txtTaxCode.Name = "txtTaxCode";
+            this.txtTaxCode.PasswordChar = '\0';
+            this.txtTaxCode.PlaceholderText = "";
+            this.txtTaxCode.SelectedText = "";
+            this.txtTaxCode.Size = new System.Drawing.Size(214, 36);
+            this.txtTaxCode.TabIndex = 33;
+            // 
+            // txtPhoneNumberManufacture
+            // 
+            this.txtPhoneNumberManufacture.AutoRoundedCorners = true;
+            this.txtPhoneNumberManufacture.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtPhoneNumberManufacture.BorderRadius = 17;
+            this.txtPhoneNumberManufacture.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumberManufacture.DefaultText = "";
+            this.txtPhoneNumberManufacture.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumberManufacture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumberManufacture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumberManufacture.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumberManufacture.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumberManufacture.Font = new System.Drawing.Font("Berlin Sans FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumberManufacture.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumberManufacture.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumberManufacture.Location = new System.Drawing.Point(263, 114);
+            this.txtPhoneNumberManufacture.Name = "txtPhoneNumberManufacture";
+            this.txtPhoneNumberManufacture.PasswordChar = '\0';
+            this.txtPhoneNumberManufacture.PlaceholderText = "";
+            this.txtPhoneNumberManufacture.SelectedText = "";
+            this.txtPhoneNumberManufacture.Size = new System.Drawing.Size(198, 36);
+            this.txtPhoneNumberManufacture.TabIndex = 34;
             // 
             // AddNewManufacturer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(219)))), ((int)(((byte)(208)))));
-            this.ClientSize = new System.Drawing.Size(505, 250);
+            this.ClientSize = new System.Drawing.Size(505, 252);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddNewManufacturer";
@@ -222,15 +286,15 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPhoneNumberManufacture;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAddressManufacture;
-        private System.Windows.Forms.TextBox txtNameNewManufacturer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTaxCode;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnConfirm;
+        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumberManufacture;
+        private Guna.UI2.WinForms.Guna2TextBox txtTaxCode;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddressManufacture;
+        private Guna.UI2.WinForms.Guna2TextBox txtNameNewManufacturer;
     }
 }

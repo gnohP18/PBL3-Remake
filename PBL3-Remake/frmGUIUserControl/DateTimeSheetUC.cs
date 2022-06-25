@@ -46,7 +46,7 @@ namespace GUI.frmGUIUserControl
         {
             CheckStatus(pnMorning, Morning_State);
             CheckStatus(pnAfternoon, Afternoon_State);
-            lblDate.Text = Text;
+            btnDate.Text = Text;
         }
         #endregion
         #region Event UC

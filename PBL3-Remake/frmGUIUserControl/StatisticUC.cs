@@ -174,6 +174,7 @@ namespace GUI.frmGUIUserControl
         {
             SalaryCalendar.MaxSelectionCount = 1;
             DateCustomSalary = SalaryCalendar.SelectionStart;
+            lblNumberEmployee.Text = BLL.ThongKeBLL.Instance.GetAllEmployeeHasTimeSheetByDateMonth(DateCustomSalary).Count.ToString();
             lblSalaryEmployee.Text = BLL.ThongKeBLL.Instance.GetTotalSalaryByDateMonth(BLL.ThongKeBLL.Instance.GetAllEmployeeHasTimeSheetByDateMonth(DateCustomSalary)).ToString();
         }
         #endregion

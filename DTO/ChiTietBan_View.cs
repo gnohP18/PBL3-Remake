@@ -8,6 +8,7 @@ namespace DTO
 {
     public class ChiTietBan_View
     {
+        public int ID_ChiTietBan { get; set; }
         public int ID_Ban { get; set; }
         public string TenBan { get; set; }
         public string TenMonAn { get; set; }

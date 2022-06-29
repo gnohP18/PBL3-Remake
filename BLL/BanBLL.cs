@@ -156,44 +156,7 @@ namespace BLL
                 SetCollabTable(GetBanByID_Ban(MainBan.TinhTrangBan), IDCollabBan);
             }
         }
-        public string GetAllCollabTable(Ban tb, int ttban, string txt)
-        {
-            if (tb.ID_Ban == tb.TinhTrangBan || tb.TinhTrangBan == 0)
-            {
-                Console.WriteLine(txt);
-                return txt;
-            }
-            else
-            {
-                Console.WriteLine(txt);
-                return GetAllCollabTable(GetBanByID_Ban(tb.TinhTrangBan), ttban, txt);
-            }
-        }
 
-        public int FindMainTable(Ban tb)
-        {
-            if (dALQLNH.Bans.Where(s => s.TinhTrangBan == tb.ID_Ban && s.ID_Ban != s.TinhTrangBan).FirstOrDefault() == null)
-            {
-                return tb.ID_Ban;
-            }
-            else
-            {
-                return FindMainTable(dALQLNH.Bans.Where(s => s.TinhTrangBan == tb.ID_Ban && s.ID_Ban != s.TinhTrangBan).FirstOrDefault());
-            }
-        }
-        public string GetAllMainTable(Ban tb, string txt)
-        {
-            if (dALQLNH.Bans.Where(s => s.TinhTrangBan == tb.ID_Ban && s.ID_Ban != s.TinhTrangBan).FirstOrDefault() == null)
-            {
-                return txt;
-            }
-            else
-            {
-                Ban bn = dALQLNH.Bans.Where(s => s.TinhTrangBan == tb.ID_Ban && s.ID_Ban != s.TinhTrangBan).FirstOrDefault();
-                txt = txt + " " + bn.TenBan.ToString();
-                return GetAllMainTable(bn, txt);
-            }
-        }
 
         public List<ChiTietBan_View> GetAllChiTietBan_ViewByStatus(int st)
         {
@@ -202,6 +165,7 @@ namespace BLL
             {
                 data.Add(new ChiTietBan_View
                 {
+                    ID_ChiTietBan = i.ID_ChiTietBan,
                     ID_Ban = i.ID_Ban,
                     TenBan = i.Ban.TenBan,
                     TenMonAn = i.MonAn.TenMonAn,
@@ -209,7 +173,7 @@ namespace BLL
                     TinhTrang = i.TinhTrang,
                 });
             }
-            return data;
+            return data.OrderBy(s => s.ID_Ban).ToList();
         }
         public ChiTietBan GetDetailTableByID(int idctb)
         {
@@ -257,6 +221,11 @@ namespace BLL
             Ban ban = dALQLNH.Bans.Find(ID_Ban);
             if (ban.TinhTrangBan != ID_Ban) SetEmptyBan(dALQLNH.Bans.Find(ban.TinhTrangBan).ID_Ban);
             dALQLNH.Bans.Find(ID_Ban).TinhTrangBan = 0;
+            dALQLNH.SaveChanges();
+        }
+        public void ExecuteFood(int ID_ChiTietBan)
+        {
+            dALQLNH.ChiTietBans.Find(ID_ChiTietBan).TinhTrang = 1;
             dALQLNH.SaveChanges();
         }
     }

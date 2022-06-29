@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DC12ADF-0430-4341-9B89-DDECA508C370}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Entity.Design.Extensibility, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomItem\DateTimePickerCustom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmGUILogin\frmDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUILogin\frmDataBase.Designer.cs">
+      <DependentUpon>frmDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUILogin\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUILogin\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\frmMainManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\frmMainManager.Designer.cs">
+      <DependentUpon>frmMainManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\frmShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\frmShift.Designer.cs">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\DetailTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\DetailTable.Designer.cs">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForSeller\DishForOrdering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForSeller\DishForOrdering.Designer.cs">
+      <DependentUpon>DishForOrdering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\frmAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\frmCollaborTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmCollaborTable.Designer.cs">
+      <DependentUpon>frmCollaborTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\frmMainSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmMainSeller.Designer.cs">
+      <DependentUpon>frmMainSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\frmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmPay.Designer.cs">
+      <DependentUpon>frmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUISeller\GuestInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\GuestInformation.Designer.cs">
+      <DependentUpon>GuestInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForSeller\TableForOrdering.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForSeller\TableForOrdering.Designer.cs">
+      <DependentUpon>TableForOrdering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\AddMaterialToWareHouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\AddMaterialToWareHouse.Designer.cs">
+      <DependentUpon>AddMaterialToWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailFood.Designer.cs">
+      <DependentUpon>DetailFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\AddNewManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\AddNewManufacturer.Designer.cs">
+      <DependentUpon>AddNewManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\DateTimeSheetUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\DateTimeSheetUC.Designer.cs">
+      <DependentUpon>DateTimeSheetUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailInvoice.Designer.cs">
+      <DependentUpon>DetailInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailManufacturer.Designer.cs">
+      <DependentUpon>DetailManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailMaterial.Designer.cs">
+      <DependentUpon>DetailMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailEmployee.Designer.cs">
+      <DependentUpon>DetailEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\DetailTable.Designer.cs">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\EmployeesUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\EmployeesUC.Designer.cs">
+      <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\EmployeeTimeSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\EmployeeTimeSheet.Designer.cs">
+      <DependentUpon>EmployeeTimeSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\MainMenuUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\MainMenuUC.Designer.cs">
+      <DependentUpon>MainMenuUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\ManufacturerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\ManufacturerManagement.Designer.cs">
+      <DependentUpon>ManufacturerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\MatetialInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\MatetialInformation.Designer.cs">
+      <DependentUpon>MatetialInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\ExpiredMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\ExpiredMaterial.Designer.cs">
+      <DependentUpon>ExpiredMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\CoursesInWareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\CoursesInWareHouse.Designer.cs">
+      <DependentUpon>CoursesInWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\HelpUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\HelpUC.Designer.cs">
+      <DependentUpon>HelpUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\InfoFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\InfoFood.Designer.cs">
+      <DependentUpon>InfoFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\ManagerFoodUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\ManagerFoodUC.Designer.cs">
+      <DependentUpon>ManagerFoodUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIManager\MaterialInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUIManager\MaterialInfo.Designer.cs">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\OverViewUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\OverViewUC.Designer.cs">
+      <DependentUpon>OverViewUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\SalaryManageUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\SalaryManageUC.Designer.cs">
+      <DependentUpon>SalaryManageUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\StatisticUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\StatisticUC.Designer.cs">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\CheckBoxUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\CheckBoxUC.Designer.cs">
+      <DependentUpon>CheckBoxUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\TimeSheetUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\TimeSheetUC.Designer.cs">
+      <DependentUpon>TimeSheetUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\WareHouseUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmGUIUCForManager\WareHouseUC.Designer.cs">
+      <DependentUpon>WareHouseUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeBox.Designer.cs">
+      <DependentUpon>NoticeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGUILogin\frmDataBase.resx">
+      <DependentUpon>frmDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUILogin\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\frmMainManager.resx">
+      <DependentUpon>frmMainManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\frmShift.resx">
+      <DependentUpon>frmShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\DetailTable.resx">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForSeller\DishForOrdering.resx">
+      <DependentUpon>DishForOrdering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmCollaborTable.resx">
+      <DependentUpon>frmCollaborTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmMainSeller.resx">
+      <DependentUpon>frmMainSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmPay.resx">
+      <DependentUpon>frmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\GuestInformation.resx">
+      <DependentUpon>GuestInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForSeller\TableForOrdering.resx">
+      <DependentUpon>TableForOrdering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\AddMaterialToWareHouse.resx">
+      <DependentUpon>AddMaterialToWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\DetailFood.resx">
+      <DependentUpon>DetailFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\AddNewManufacturer.resx">
+      <DependentUpon>AddNewManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\DateTimeSheetUC.resx">
+      <DependentUpon>DateTimeSheetUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\DetailInvoice.resx">
+      <DependentUpon>DetailInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\DetailManufacturer.resx">
+      <DependentUpon>DetailManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\DetailMaterial.resx">
+      <DependentUpon>DetailMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\DetailEmployee.resx">
+      <DependentUpon>DetailEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\DetailTable.resx">
+      <DependentUpon>DetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\EmployeesUC.resx">
+      <DependentUpon>EmployeesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\EmployeeTimeSheet.resx">
+      <DependentUpon>EmployeeTimeSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\MainMenuUC.resx">
+      <DependentUpon>MainMenuUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\ManufacturerManagement.resx">
+      <DependentUpon>ManufacturerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\MatetialInformation.resx">
+      <DependentUpon>MatetialInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\ExpiredMaterial.resx">
+      <DependentUpon>ExpiredMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\CoursesInWareHouse.resx">
+      <DependentUpon>CoursesInWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\HelpUC.resx">
+      <DependentUpon>HelpUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\InfoFood.resx">
+      <DependentUpon>InfoFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\ManagerFoodUC.resx">
+      <DependentUpon>ManagerFoodUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIManager\MaterialInfo.resx">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\OverViewUC.resx">
+      <DependentUpon>OverViewUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\SalaryManageUC.resx">
+      <DependentUpon>SalaryManageUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\StatisticUC.resx">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\CheckBoxUC.resx">
+      <DependentUpon>CheckBoxUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\TimeSheetUC.resx">
+      <DependentUpon>TimeSheetUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGUIUCForManager\WareHouseUC.resx">
+      <DependentUpon>WareHouseUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeBox.resx">
+      <DependentUpon>NoticeBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Overview-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-service-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-database-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clouds-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\askquestion-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Addperson-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Removeperson-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ordered-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bread-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chicken-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vegetables-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plastic-bottle-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkCalendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightCalendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1fd67a94-5cda-4bd6-afae-9c4f90c18732}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{26374b00-b4d8-4b0f-9d2a-f21db65cf956}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{142d7d31-acc3-4bbe-8904-f86694323e3e}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkedGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uncheckedRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mussel-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooking-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piece-of-cake-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poinsettia-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\des-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Programmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\propaganda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tax-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coupon-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageCollaborTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spending-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-basket-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expired-food-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredients-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant -128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\networking-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detail-table-icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+    <None Include="Resources\calendar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-building-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placeholder-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-left-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-1-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\officer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programmer-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hung.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hiep.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -50,41 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ban.cs" />
-    <Compile Include="BangChamCong.cs" />
-    <Compile Include="CaLam.cs" />
-    <Compile Include="ChiTietBan.cs" />
     <Compile Include="ChiTietBan_View.cs" />
-    <Compile Include="ChiTietCaLam.cs" />
-    <Compile Include="ChiTietHoaDon.cs" />
     <Compile Include="ChiTietHoaDon_View.cs" />
-    <Compile Include="ChiTietMonAn.cs" />
+    <Compile Include="ChiTietMonAn_View.cs" />
     <Compile Include="ChiTietNguyenLieu_View.cs" />
-    <Compile Include="ChiTietNhaCungCap.cs" />
     <Compile Include="ChiTietNhaCungCap_View.cs" />
     <Compile Include="ChiTietNhapMonAn_View.cs" />
-    <Compile Include="ChucVu.cs" />
     <Compile Include="DayChart_view.cs" />
     <Compile Include="Employee_view.cs" />
-    <Compile Include="HoaDon.cs" />
     <Compile Include="HoaDon_view.cs" />
-    <Compile Include="KhachHang.cs" />
-    <Compile Include="Kho.cs" />
-    <Compile Include="LoaiMonAn.cs" />
-    <Compile Include="LoaiNguyenLieu.cs" />
-    <Compile Include="MonAn.cs" />
     <Compile Include="MonAn_View.cs" />
-    <Compile Include="NguyenLieu.cs" />
     <Compile Include="NguyenLieu_View.cs" />
-    <Compile Include="NhaCungCap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalaryDay.cs" />
     <Compile Include="SalaryEmployee_view.cs" />
     <Compile Include="Statistic_view.cs" />
     <Compile Include="Table_view.cs" />
-    <Compile Include="ThongTinNhaHang.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="Voucher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -90,10 +90,10 @@ namespace Entity
             });
             context.LoaiMonAns.AddRange(new LoaiMonAn[]
             {
-                new LoaiMonAn{ID_LoaiMonAnh = 1,TenLoaiMonAn = "Khai vi"},
-                new LoaiMonAn{ID_LoaiMonAnh = 2,TenLoaiMonAn = "Mon chinh"},
-                new LoaiMonAn{ID_LoaiMonAnh = 3,TenLoaiMonAn = "Trang mieng"},
-                new LoaiMonAn{ID_LoaiMonAnh = 4,TenLoaiMonAn = "Do uong"},
+                new LoaiMonAn{ID_LoaiMonAnh = 1,TenLoaiMonAn = "Appetizer"},
+                new LoaiMonAn{ID_LoaiMonAnh = 2,TenLoaiMonAn = "MainDish"},
+                new LoaiMonAn{ID_LoaiMonAnh = 3,TenLoaiMonAn = "Dessert"},
+                new LoaiMonAn{ID_LoaiMonAnh = 4,TenLoaiMonAn = "Drink"},
             });
             context.MonAns.AddRange(new MonAn[]
             {
@@ -130,10 +130,10 @@ namespace Entity
             });
             context.LoaiNguyenLieus.AddRange(new LoaiNguyenLieu[]
             {
-                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 1,TenLoaiNguyenLieu = "Thit tuoi song"},
-                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 2,TenLoaiNguyenLieu = "Rau cu "},
-                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 3,TenLoaiNguyenLieu = "Do kho"},
-                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 4,TenLoaiNguyenLieu = "Do uong"},
+                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 1,TenLoaiNguyenLieu = "FreshFood"},
+                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 2,TenLoaiNguyenLieu = "Vegetable"},
+                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 3,TenLoaiNguyenLieu = "DriedFood"},
+                new LoaiNguyenLieu{ID_LoaiNguyenLieu = 4,TenLoaiNguyenLieu = "Drinking"},
             });
             context.NguyenLieus.AddRange(new NguyenLieu[]
             {

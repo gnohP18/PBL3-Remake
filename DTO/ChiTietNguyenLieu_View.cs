@@ -12,6 +12,7 @@ namespace DTO
         public int ID_NguyenLieu { get; set; }
         public string TenNguyenLieu { get; set; }
         public int ID_NhaCungCap { get; set; }
+        public string TenNhaCungCap { get; set; }
         public DateTime NgayNhap { get; set; }
         public DateTime NgayHetHan { get; set; }
         public float LuongNhapVao { get; set; }

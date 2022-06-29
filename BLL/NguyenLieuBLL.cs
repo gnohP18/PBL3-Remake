@@ -31,14 +31,28 @@ namespace BLL
             }
             return list;
         }
-
+        public ChiTietNguyenLieu_View KhoToChiTietNguyenLieuView(Kho i)
+        {
+            return new ChiTietNguyenLieu_View
+            {
+                ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu,
+                ID_NguyenLieu = i.ID_NguyenLieu,
+                TenNhaCungCap = i.NhaCungCap.TenNhaCungCap,
+                TenNguyenLieu = i.NguyenLieu.TenNguyenLieu,
+                LuongTonKho = i.LuongTonKho,
+                LuongNhapVao = i.LuongNhapVao,
+                NgayNhap = i.NgayNhap,
+                NgayHetHan = i.NgayHetHan,
+                ID_NhaCungCap = i.ID_NhaCungCap
+            };
+        }
         public List<ChiTietNguyenLieu_View> GetThongTinNguyenLieuTrongKho(int iD_NguyenLieu)
         {
             List<Kho> listChiTietNguyenLieu = dALQLNH.Khoes.Where(p => p.ID_NguyenLieu == iD_NguyenLieu).ToList();
             List<ChiTietNguyenLieu_View> data = new List<ChiTietNguyenLieu_View>();
             foreach (Kho i in listChiTietNguyenLieu)
             {
-                data.Add(new ChiTietNguyenLieu_View { ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu, ID_NguyenLieu = i.ID_NguyenLieu, TenNguyenLieu = i.NguyenLieu.TenNguyenLieu, LuongTonKho = i.LuongTonKho, LuongNhapVao = i.LuongNhapVao, NgayNhap = i.NgayNhap, NgayHetHan = i.NgayHetHan, ID_NhaCungCap = i.ID_NhaCungCap });
+                data.Add(KhoToChiTietNguyenLieuView(i));
             }
             return data;
         }
@@ -69,7 +83,7 @@ namespace BLL
             List<ChiTietNguyenLieu_View> data = new List<ChiTietNguyenLieu_View>();
             foreach (Kho i in listChiTietNguyenLieu)
             {
-                data.Add(new ChiTietNguyenLieu_View { ID_ChiTietNguyenLieu = i.ID_ChiTietNguyenLieu, ID_NguyenLieu = i.ID_NguyenLieu, TenNguyenLieu = i.NguyenLieu.TenNguyenLieu, LuongTonKho = i.LuongTonKho, LuongNhapVao = i.LuongNhapVao, NgayNhap = i.NgayNhap, NgayHetHan = i.NgayHetHan, ID_NhaCungCap = i.ID_NhaCungCap });
+                data.Add(KhoToChiTietNguyenLieuView(i));
             }
             return data;
         }
@@ -90,12 +104,17 @@ namespace BLL
                         LuongTonKhoConHSD += s.LuongTonKho;
                     }
                 }
-                data.Add(new NguyenLieu_View { ID_NguyenLieu = nl.ID_NguyenLieu, TenNguyenLieu = nl.TenNguyenLieu, DonViTinh = nl.DonViTinh, TenLoaiNguyenLieu = nl.LoaiNguyenLieu.TenLoaiNguyenLieu, LuongTonKho = LuongTonKhoConHSD });
+                if(LuongTonKhoConHSD >0)
+                    data.Add(new NguyenLieu_View { ID_NguyenLieu = nl.ID_NguyenLieu, 
+                        TenNguyenLieu = nl.TenNguyenLieu, 
+                        DonViTinh = nl.DonViTinh, 
+                        TenLoaiNguyenLieu = nl.LoaiNguyenLieu.TenLoaiNguyenLieu, 
+                        LuongTonKho = LuongTonKhoConHSD });
             }
             return data;
         }
 
-        public List<NguyenLieu> GetListNguyenLieuByIdLoaiNguyenLieu(int ID_LoaiNguyenLieu)
+        public List<NguyenLieu> GetAllNguyenLieuByIdLoaiNguyenLieu(int ID_LoaiNguyenLieu)
         {
             List<NguyenLieu> data = new List<NguyenLieu>();
             foreach (NguyenLieu i in dALQLNH.NguyenLieus)
@@ -124,14 +143,11 @@ namespace BLL
         public List<ChiTietNguyenLieu_View> getListNguyenLieuHetHan()
         {
             List<ChiTietNguyenLieu_View> list = new List<ChiTietNguyenLieu_View>();
-            foreach (ChiTietNguyenLieu_View i in GetAllNguyenLieuTrongKho())
+            foreach (Kho i in dALQLNH.Khoes.Where(s => s.NgayHetHan < DateTime.Now).ToList())
             {
-                if (i.NgayHetHan < System.DateTime.Now)
-                {
-                    list.Add(i);
-                }
-            }
+                list.Add(KhoToChiTietNguyenLieuView(i));
 
+            }
             return list;
         }
         public List<LoaiNguyenLieu> GetAllLoaiNguyenLieu()

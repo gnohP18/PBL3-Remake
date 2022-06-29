@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +55,7 @@
     <Compile Include="BLL.cs" />
     <Compile Include="BanBLL.cs" />
     <Compile Include="CaLamBLL.cs" />
+    <Compile Include="ExtensionBLL.cs" />
     <Compile Include="HoaDonBLL.cs" />
     <Compile Include="KhachHangBLL.cs" />
     <Compile Include="KhoBLL.cs" />

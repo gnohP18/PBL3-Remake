@@ -25,6 +25,10 @@ namespace BLL
         {
             return dALQLNH.MonAns.Where(p => p.ID_LoaiMonAn == ID_LoaiMonAn && p.TrangThai == TrangThai && p.TenMonAn.Contains(txt)).ToList();
         }
+        public List<LoaiMonAn> GetAllLoaiMonAn()
+        {
+            return dALQLNH.LoaiMonAns.ToList();
+        }
         public List<MonAn_View> GetListMonAnByIDBan(int ID_Ban)
         {
             List<MonAn_View> data = new List<MonAn_View>();
@@ -50,18 +54,6 @@ namespace BLL
                 }
             }
             return data;
-        }
-        public void ChangeStatusDishByID(int id)
-        {
-            foreach (ChiTietBan i in dALQLNH.ChiTietBans)
-            {
-                if (i.ID_ChiTietBan == id)
-                {
-                    i.TinhTrang = 1;
-                    break;
-                }
-            }
-            dALQLNH.SaveChanges();
         }
         public MonAn GetMonAnByID(int ID_MonAn)
         {
@@ -128,39 +120,56 @@ namespace BLL
             }
             return ID;
         }
-        public void AddNewMonAn(List<ChiTietNhapMonAn_View> lt, string TenMonAn, int ID_LoaiMonAn, int thanhtien, Byte[] img)
+        public void ExecuteMonAn(MonAn mon)
         {
-            MonAn mon = new MonAn();
-            mon.ID_MonAn = GetNewIDMonAn();
-            mon.ID_LoaiMonAn = ID_LoaiMonAn;
-            mon.TenMonAn = TenMonAn;
-            mon.ThanhTien = thanhtien;
-            mon.AnhMonAn = img;
-            mon.TrangThai = 0;
-            dALQLNH.MonAns.Add(mon);
+            MonAn i = dALQLNH.MonAns.Find(mon.ID_MonAn);
+            if(i != null)
+            {
+                i.ID_LoaiMonAn = mon.ID_LoaiMonAn;
+                i.TenMonAn = mon.TenMonAn;
+                i.AnhMonAn = mon.AnhMonAn;
+                i.ThanhTien = mon.ThanhTien;
+            }
+            else
+            {
+                dALQLNH.MonAns.Add(mon);
+                dALQLNH.Entry(mon).Reference(s => s.LoaiMonAn).Load();
+            }
             dALQLNH.SaveChanges();
-            foreach (ChiTietNhapMonAn_View i in lt)
+        }
+
+        public void SetChiTietMonAn(int ID_MonAn,List<ChiTietMonAn_View> list)
+        {
+            foreach(ChiTietMonAn i in dALQLNH.ChiTietMonAns.Where(s=>s.ID_MonAn == ID_MonAn).ToList())
+            {
+                dALQLNH.ChiTietMonAns.Remove(i);
+                dALQLNH.SaveChanges();
+            }
+            foreach(ChiTietMonAn_View i in list)
             {
                 dALQLNH.ChiTietMonAns.Add(new ChiTietMonAn
                 {
-                    ID_MonAn = mon.ID_MonAn,
+                    ID_MonAn = ID_MonAn,
                     ID_NguyenLieu = i.ID_NguyenLieu,
                     Luong = i.Luong,
                 });
                 dALQLNH.SaveChanges();
             }
         }
-        public List<ChiTietMonAn> GetChiTietMonAnByIDMonAn(int ID_MonAn)
+
+        public List<ChiTietMonAn_View> GetChiTietMonAnViewByIDMonAn(int ID_MonAn)
         {
-            List<ChiTietMonAn> list = new List<ChiTietMonAn>();
-            foreach (ChiTietMonAn mon in dALQLNH.ChiTietMonAns)
+            List<ChiTietMonAn_View> data = new List<ChiTietMonAn_View>();
+            foreach (ChiTietMonAn i in dALQLNH.MonAns.Find(ID_MonAn).ChiTietMonAns.ToList())
             {
-                if (ID_MonAn == mon.ID_MonAn)
+                data.Add(new ChiTietMonAn_View
                 {
-                    list.Add(mon);
-                }
+                    ID_NguyenLieu = i.ID_NguyenLieu,
+                    TenNguyenLieu = i.NguyenLieu.TenNguyenLieu,
+                    Luong = i.Luong
+                });
             }
-            return list;
+            return data;
         }
         public List<MonAn_View> GetAllDish_viewByIDDetailTable(int ID_Detail_Table)
         {

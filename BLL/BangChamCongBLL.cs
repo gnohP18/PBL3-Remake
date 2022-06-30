@@ -51,7 +51,7 @@ namespace BLL
             int MinuteLate = TimeLate.Hours * 60 + TimeLate.Minutes;
             StringBuilder temp = new StringBuilder(bangChamCong.LichSuLamViec);
             if (MinuteLate < 15) temp[indexDay * 2 + SangChieu] = '1';
-            else if (MinuteLate / 15 + 64 >= 120)
+            else if (MinuteLate  >= 120)
             {
                 temp[indexDay * 2 + SangChieu] = '2';
                 bangChamCong.TinhLuong = 0;
@@ -114,7 +114,7 @@ namespace BLL
             DateTime dtEndChamCong = TTNH.NgayBatDauChamCongHienTai.AddMonths(1);
             dtEndChamCong = new DateTime(dtEndChamCong.Year, dtEndChamCong.Month, TTNH.NgayPhatLuong);
             string s = "";
-            for (int i = 1; i < (dtEndChamCong - TTNH.NgayBatDauChamCongHienTai).Days * 2 + 2; i++)
+            for (int i = 1; i <= (dtEndChamCong - TTNH.NgayBatDauChamCongHienTai).Days * 2 + 2; i++)
             {
                 s += "0";
             }

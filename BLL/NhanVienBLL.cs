@@ -86,21 +86,8 @@ namespace BLL
                     employee.UserNameLogin = i.Username;
                     employee.PasswordLogin = i.Password;
                     employee.NumberOfDayWork = GetNumberOfDayWorkByID_User(i.ID_User);
-                    foreach (User us in GetAllNhanVienCoLichLamViecByTime())
-                    {
-                        if (us.ID_User == i.ID_User)
-                        {
-                            employee.Status = "Working";
-                        }
-                        else
-                        {
-                            employee.Status = "Offline";
-                        }
-                        if (us.DaXoa == true)
-                        {
-                            employee.Status = "Remove";
-                        }
-                    }
+                    if (NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow().ContainsKey(i)) employee.Status = "Working";
+                    else employee.Status = "Off";
                     list.Add(employee);
                 }
             }
@@ -164,19 +151,6 @@ namespace BLL
         public List<User> GetAllUser()
         {
             return dALQLNH.Users.ToList();
-        }
-        public List<User> GetAllNhanVienCoLichLamViecByTime()
-        {
-            List<User> data = new List<User>();
-            int SangChieu = GetBuoiLamNow();
-            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
-            {
-                if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
-                {
-                    data.Add(i.User);
-                }
-            }
-            return data;
         }
         public Dictionary<User, bool> GetThongTinDiemDanhNhanVienNow()
         {

@@ -68,5 +68,11 @@ namespace GUI.frmGUISeller
                 }
             }
         }
+
+        private void btnInforFoodWareHouse_Click(object sender, EventArgs e)
+        {
+            frmWarehouse frm = new frmWarehouse();
+            frm.ShowDialog();
+        }
     }
 }

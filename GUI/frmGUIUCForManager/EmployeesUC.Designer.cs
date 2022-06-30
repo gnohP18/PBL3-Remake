@@ -195,6 +195,7 @@
             this.dgvManageEmployee.EnableHeadersVisualStyles = false;
             this.dgvManageEmployee.GridColor = System.Drawing.Color.White;
             this.dgvManageEmployee.Location = new System.Drawing.Point(0, 0);
+            this.dgvManageEmployee.MultiSelect = false;
             this.dgvManageEmployee.Name = "dgvManageEmployee";
             this.dgvManageEmployee.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;

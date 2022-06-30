@@ -23,19 +23,6 @@ namespace GUI.frmGUIManager
             GUI();
         }
         #region Function
-        private Image byteArrayToImage(byte[] byteArrayIn)
-        {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
-        }
-        private byte[] ImgToByte(System.Drawing.Image img)
-        {
-            var ms = new MemoryStream();
-            img.Save(ms, img.RawFormat);
-            byte[] imgbyte = ms.ToArray();
-            return imgbyte;
-        }
         private void GUI()
         {
             User user = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
@@ -49,7 +36,7 @@ namespace GUI.frmGUIManager
                 dtpDayStartWork.Value = user.NgayBatDauLam;
                 dtpDayStartWork.Enabled = false;
                 txtPhonenumber.Text = user.SDT;
-                pBUser.Image = byteArrayToImage(user.AnhUser);
+                pBUser.Image = BLL.ExtensionBLL.Instance.byteArrayToImage(user.AnhUser);
                 pBUser.SizeMode = PictureBoxSizeMode.StretchImage;
                 cbbPosition.SelectedIndex = cbbPosition.FindStringExact(user.ChucVu.TenChucVu);
                 txtUserNameLogin.Text = user.Username;
@@ -66,7 +53,7 @@ namespace GUI.frmGUIManager
         #region Event UC function
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (isADD == true && BLL.NhanVienBLL.Instance.checkUsername(txtUserNameLogin.Text))
+            if (isADD == true && !BLL.NhanVienBLL.Instance.checkUsername(txtUserNameLogin.Text))
             {
                 NoticeBox box = new NoticeBox("Username is existed, please input other username!!");
                 box.ShowDialog();
@@ -83,12 +70,12 @@ namespace GUI.frmGUIManager
                 Password = txtPasswordLogin.Text,
                 NgaySinh = dtpDayOfBirth.Value,
                 NgayBatDauLam = DateTime.Now,
-                AnhUser = ImgToByte(pBUser.Image),
+                AnhUser = BLL.ExtensionBLL.Instance.ImgToByte(pBUser.Image),
             };
             BLL.NhanVienBLL.Instance.Execute(user);
             if (isADD == true)
             {
-                frmGUIManager.frmShift frm = new frmGUIManager.frmShift(user.ID_User);
+                frmShift frm = new frmShift(user.ID_User);
                 frm.ShowDialog();
             }
             d();

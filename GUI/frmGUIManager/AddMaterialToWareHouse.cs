@@ -10,22 +10,16 @@ namespace GUI.frmGUIManager
         public AddMaterialToWareHouse()
         {
             InitializeComponent();
-            SetCBB();
-        }
-        void SetCBB()
-        {
             cbbKindOfMaterial.Items.AddRange(NguyenLieuBLL.Instance.GetAllLoaiNguyenLieu().ToArray());
+
         }
-
-
         private void cbbKindOfMaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbKindOfMaterial.SelectedIndex != -1)
             {
                 cbbMaterialName.Items.Clear();
-                cbbMaterialName.Items.AddRange(NguyenLieuBLL.Instance.GetAllNguyenLieuByIdLoaiNguyenLieu(cbbKindOfMaterial.SelectedIndex + 1).ToArray());
-                cbbManufacturer.Items.Clear();
-                cbbManufacturer.Items.AddRange(NhaCungCapBLL.Instance.GetAllNhaCungCap().ToArray());
+                int ID_LoaiNguyenLieu = ((LoaiNguyenLieu)cbbKindOfMaterial.SelectedItem).ID_LoaiNguyenLieu;
+                cbbMaterialName.Items.AddRange(NguyenLieuBLL.Instance.GetAllNguyenLieuByIdLoaiNguyenLieu(ID_LoaiNguyenLieu).ToArray());
             }
         }
 
@@ -91,7 +85,19 @@ namespace GUI.frmGUIManager
         private void btnManufacturerManagement_Click(object sender, EventArgs e)
         {
             frmGUIManager.ManufacturerManagement frm = new ManufacturerManagement();
-            frm.Show();
+            frm.ShowDialog();
+            cbbMaterialName.SelectedIndex = -1;
+            cbbManufacturer.Items.Clear();
+        }
+
+        private void cbbMaterialName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbMaterialName.SelectedIndex != -1)
+            {
+                cbbManufacturer.Items.Clear();
+                int ID_NguyenLieu = ((NguyenLieu)cbbMaterialName.SelectedItem).ID_NguyenLieu;
+                cbbManufacturer.Items.AddRange(NhaCungCapBLL.Instance.GetAllNhaCungCapByIDNguyenLieu(ID_NguyenLieu).ToArray());
+            }
         }
     }
 }

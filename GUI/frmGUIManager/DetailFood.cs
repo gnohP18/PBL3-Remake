@@ -10,6 +10,8 @@ namespace GUI.frmGUIManager
     public partial class DetailFood : Form
     {
         List<ChiTietMonAn_View> ListChiTietMonAnView;
+        public delegate void Mydel(int num);
+        public Mydel d;
         private int ID_MonAn { get; set; }
         public DetailFood(int ID_MonAn)
         {
@@ -120,6 +122,7 @@ namespace GUI.frmGUIManager
                 };
                 MonAnBLL.Instance.ExecuteMonAn(mon);
                 MonAnBLL.Instance.SetChiTietMonAn(mon.ID_MonAn,ListChiTietMonAnView);
+                d(0);
                 this.Close();
             }
             else
@@ -128,6 +131,7 @@ namespace GUI.frmGUIManager
                 box.ShowDialog();
                 return;
             }
+            
         }
 
         private void cbbKindOfIIngredinet_SelectedIndexChanged(object sender, EventArgs e)

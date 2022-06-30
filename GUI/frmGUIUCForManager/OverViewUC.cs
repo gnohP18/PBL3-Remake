@@ -97,7 +97,7 @@ namespace GUI.frmGUIUCForManager
             int ID_HoaDon = Convert.ToInt32(dgvDanhSachHoaDon.Rows[index].Cells[0].Value.ToString());
             Invoice frm = new Invoice(ID_HoaDon);
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnFloor1_Click(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace GUI.frmGUIUCForManager
             int ID_Tabel_view = Convert.ToInt32(dgvTable.Rows[index].Cells[0].Value.ToString());
             DetailTable frm = new DetailTable(ID_Tabel_view);
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void cbbStatusTable_SelectedIndexChanged_1(object sender, EventArgs e)

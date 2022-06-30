@@ -12,9 +12,15 @@ namespace GUI.frmGUIUCForManager
         {
             get { if (_Instance == null) _Instance = new WareHouseUC(); return _Instance; }
         }
-        public WareHouseUC()
+        public WareHouseUC(bool isSeller = false)
         {
             InitializeComponent();
+            if (isSeller)
+            {
+                btnAddMaterialToWareHouse.Visible = false;
+                btnViewExpiredMaterial.Visible = false;
+                btnMaterialInformation.Visible = false;
+            }
         }
         private void btnMoreInfor_Click(object sender, EventArgs e)
         {

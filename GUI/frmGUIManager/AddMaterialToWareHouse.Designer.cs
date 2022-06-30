@@ -87,7 +87,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(37, 159);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(212, 24);
+            this.comboBox2.Size = new System.Drawing.Size(212, 21);
             this.comboBox2.TabIndex = 16;
             // 
             // comboBox1
@@ -95,7 +95,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(37, 106);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 24);
+            this.comboBox1.Size = new System.Drawing.Size(212, 21);
             this.comboBox1.TabIndex = 16;
             // 
             // btnClose
@@ -138,7 +138,7 @@
             this.label10.Location = new System.Drawing.Point(87, 8);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(297, 27);
+            this.label10.Size = new System.Drawing.Size(237, 22);
             this.label10.TabIndex = 2;
             this.label10.Text = "Add Material To Warehouse";
             // 
@@ -150,7 +150,7 @@
             this.label2.Location = new System.Drawing.Point(33, 239);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 23);
+            this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Import day:";
             // 
@@ -159,7 +159,7 @@
             this.txtExpiry.Location = new System.Drawing.Point(37, 266);
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpiry.Name = "txtExpiry";
-            this.txtExpiry.Size = new System.Drawing.Size(212, 22);
+            this.txtExpiry.Size = new System.Drawing.Size(212, 20);
             this.txtExpiry.TabIndex = 1;
             // 
             // label1
@@ -170,7 +170,7 @@
             this.label1.Location = new System.Drawing.Point(33, 186);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 23);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Manufacturer";
             // 
@@ -179,7 +179,7 @@
             this.txtUnit.Location = new System.Drawing.Point(37, 213);
             this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(212, 22);
+            this.txtUnit.Size = new System.Drawing.Size(212, 20);
             this.txtUnit.TabIndex = 1;
             // 
             // label3
@@ -190,7 +190,7 @@
             this.label3.Location = new System.Drawing.Point(33, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 23);
+            this.label3.Size = new System.Drawing.Size(106, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Kind of material";
             // 
@@ -202,7 +202,7 @@
             this.label5.Location = new System.Drawing.Point(33, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 23);
+            this.label5.Size = new System.Drawing.Size(106, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Material\'s name";
             // 
@@ -349,7 +349,7 @@
             this.label9.Location = new System.Drawing.Point(13, 72);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 24);
+            this.label9.Size = new System.Drawing.Size(116, 19);
             this.label9.TabIndex = 4;
             this.label9.Text = "Material\'s name";
             // 
@@ -371,6 +371,7 @@
             this.cbbMaterialName.Name = "cbbMaterialName";
             this.cbbMaterialName.Size = new System.Drawing.Size(190, 36);
             this.cbbMaterialName.TabIndex = 20;
+            this.cbbMaterialName.SelectedIndexChanged += new System.EventHandler(this.cbbMaterialName_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -380,7 +381,7 @@
             this.label8.Location = new System.Drawing.Point(12, 6);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 24);
+            this.label8.Size = new System.Drawing.Size(117, 19);
             this.label8.TabIndex = 4;
             this.label8.Text = "Kind of material";
             // 
@@ -392,7 +393,7 @@
             this.label7.Location = new System.Drawing.Point(12, 150);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 24);
+            this.label7.Size = new System.Drawing.Size(99, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "Manufacturer";
             // 
@@ -404,7 +405,7 @@
             this.label11.Location = new System.Drawing.Point(13, 225);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 24);
+            this.label11.Size = new System.Drawing.Size(65, 19);
             this.label11.TabIndex = 4;
             this.label11.Text = "Quantity";
             // 
@@ -416,7 +417,7 @@
             this.label6.Location = new System.Drawing.Point(12, 313);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 24);
+            this.label6.Size = new System.Drawing.Size(87, 19);
             this.label6.TabIndex = 0;
             this.label6.Text = "Import day:";
             // 
@@ -479,7 +480,7 @@
             this.label4.Location = new System.Drawing.Point(107, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 27);
+            this.label4.Size = new System.Drawing.Size(237, 22);
             this.label4.TabIndex = 12;
             this.label4.Text = "Add Material To Warehouse";
             // 

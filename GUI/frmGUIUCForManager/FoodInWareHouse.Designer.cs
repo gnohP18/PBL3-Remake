@@ -1,6 +1,6 @@
 ﻿namespace GUI.frmGUIUCForManager
 {
-    partial class CoursesInWareHouse
+    partial class FoodInWareHouse
     {
         /// <summary> 
         /// Required designer variable.

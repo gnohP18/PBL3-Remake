@@ -55,12 +55,17 @@ namespace GUI.frmGUIUCForManager
             NoticeBox box;
             if (Morning_State == "0")
             {
-                box = new NoticeBox("Dont work");
+                box = new NoticeBox("Don't have schedule work");
                 box.ShowDialog();
             }
             else if (Morning_State == "1")
             {
                 box = new NoticeBox("Work on time");
+                box.ShowDialog();
+            }
+            else if(Morning_State == "2")
+            {
+                box = new NoticeBox("Don't work");
                 box.ShowDialog();
             }
             else
@@ -78,12 +83,17 @@ namespace GUI.frmGUIUCForManager
             NoticeBox box;
             if (Afternoon_State == "0")
             {
-                box = new NoticeBox("Dont work");
+                box = new NoticeBox("Don't have schedule work");
                 box.ShowDialog();
             }
             else if (Afternoon_State == "1")
             {
                 box = new NoticeBox("Work on time");
+                box.ShowDialog();
+            }
+            else if (Afternoon_State == "2")
+            {
+                box = new NoticeBox("Don't work");
                 box.ShowDialog();
             }
             else

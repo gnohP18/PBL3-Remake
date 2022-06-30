@@ -100,6 +100,12 @@
     <Compile Include="frmGUISeller\DetailTable.Designer.cs">
       <DependentUpon>DetailTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGUISeller\frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGUISeller\frmWarehouse.Designer.cs">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGUIUCForSeller\DishForOrdering.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,11 +250,11 @@
     <Compile Include="frmGUIManager\ExpiredMaterial.Designer.cs">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGUIUCForManager\CoursesInWareHouse.cs">
+    <Compile Include="frmGUIUCForManager\FoodInWareHouse.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmGUIUCForManager\CoursesInWareHouse.Designer.cs">
-      <DependentUpon>CoursesInWareHouse.cs</DependentUpon>
+    <Compile Include="frmGUIUCForManager\FoodInWareHouse.Designer.cs">
+      <DependentUpon>FoodInWareHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGUIUCForManager\HelpUC.cs">
       <SubType>UserControl</SubType>
@@ -333,6 +339,9 @@
     <EmbeddedResource Include="frmGUISeller\DetailTable.resx">
       <DependentUpon>DetailTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGUISeller\frmWarehouse.resx">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUCForSeller\DishForOrdering.resx">
       <DependentUpon>DishForOrdering.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,8 +414,8 @@
     <EmbeddedResource Include="frmGUIManager\ExpiredMaterial.resx">
       <DependentUpon>ExpiredMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGUIUCForManager\CoursesInWareHouse.resx">
-      <DependentUpon>CoursesInWareHouse.cs</DependentUpon>
+    <EmbeddedResource Include="frmGUIUCForManager\FoodInWareHouse.resx">
+      <DependentUpon>FoodInWareHouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGUIUCForManager\HelpUC.resx">
       <DependentUpon>HelpUC.cs</DependentUpon>

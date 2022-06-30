@@ -23,14 +23,10 @@ namespace GUI.frmGUIUCForManager
         {
 
             var btn = (Button)button;
-            //highlight button
             btn.BackColor = Color.FromArgb(66, 134, 244);
             btn.ForeColor = Color.White;
-            //btn.RightToLeft = RightToLeft.Yes;
-            //Unhighlight button
             if (CurrentButton != null && CurrentButton != btn)
             {
-                //btn.RightToLeft = RightToLeft.No;
                 CurrentButton.BackColor = Color.FromArgb(17, 21, 37);
                 CurrentButton.ForeColor = Color.White;
             }
@@ -44,27 +40,30 @@ namespace GUI.frmGUIUCForManager
         {
             pnFood.AutoScroll = true;
         }
-        private void SetFoodView(Panel pn, CoursesInWareHouse food, int x, int y)
+        private void SetFoodView(Panel pn, FoodInWareHouse food, int x, int y)
         {
-            pn.Controls.Add(food);
-            food.Location = new System.Drawing.Point(x, y);
+            food.Location = new Point(x, y);
             food.Width = 200;
             food.Height = 150;
+            pn.Controls.Add(food);
+            
         }
         private void ShowAllFood(int ID_LoaiMonAn)
         {
-            List<MonAn> listMonAn = null;
+            RemoveFood();
+            List<MonAn> listMonAn;
             if (ID_LoaiMonAn == 0)
             {
                 listMonAn = MonAnBLL.Instance.GetAllMonAn();
             }
             else listMonAn = MonAnBLL.Instance.GetAllMonAnByIDLoaiMonAn(ID_LoaiMonAn);
             int somon = listMonAn.Count;
-            CoursesInWareHouse[] food = new CoursesInWareHouse[somon];
+            FoodInWareHouse[] food = new FoodInWareHouse[somon];
             int dem1 = 0;
             foreach (MonAn i in listMonAn)
             {
-                food[dem1] = new CoursesInWareHouse(i);
+                food[dem1] = new FoodInWareHouse(i);
+                food[dem1].d = new DetailFood.Mydel(ShowAllFood);
                 dem1++;
             }
             if (somon != 0)
@@ -98,41 +97,37 @@ namespace GUI.frmGUIUCForManager
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-            RemoveFood();
             SetUIForButton(sender);
             ShowAllFood(0);
         }
 
         private void btnAppetizer_Click(object sender, EventArgs e)
         {
-            RemoveFood();
             SetUIForButton(sender);
             ShowAllFood(1);
         }
 
         private void btnMainDish_Click(object sender, EventArgs e)
         {
-            RemoveFood();
             SetUIForButton(sender);
             ShowAllFood(2);
         }
 
         private void btnDessert_Click(object sender, EventArgs e)
         {
-            RemoveFood();
             SetUIForButton(sender);
             ShowAllFood(3);
         }
 
         private void btnBeverages_Click(object sender, EventArgs e)
         {
-            RemoveFood();
             SetUIForButton(sender);
             ShowAllFood(4);
         }
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             DetailFood frm = new DetailFood(-1);
+            frm.d = new DetailFood.Mydel(ShowAllFood);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
         }

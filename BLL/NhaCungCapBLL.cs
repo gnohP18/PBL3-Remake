@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DTO;
 using System.Linq;
+using System;
 
 namespace BLL
 {
@@ -116,6 +117,19 @@ namespace BLL
             n.MaSoThue = ncc.MaSoThue;
             n.SoDienThoai = ncc.SoDienThoai;
             dALQLNH.SaveChanges();
+        }
+
+        public List<NhaCungCap> GetAllNhaCungCapByIDNguyenLieu(int ID_NguyenLieu)
+        {
+            List<NhaCungCap> data = new List<NhaCungCap>();
+            foreach(NhaCungCap i in dALQLNH.NhaCungCaps.ToList())
+            {
+                if(dALQLNH.ChiTietNhaCungCaps.Find(i.ID_NhaCungCap,ID_NguyenLieu) != null)
+                {
+                    data.Add(i);
+                }
+            }
+            return data;
         }
     }
 }

@@ -48,36 +48,44 @@ namespace GUI.frmGUIManager
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            LoaiNguyenLieu lnl = (LoaiNguyenLieu)(cbbKindOfMaterial.SelectedItem);
-            NguyenLieu nl = new NguyenLieu
+            if(txtInputMaterialName.Text == "" || txtUnit.Text == "" || txtExpiry.Text == "" || cbbKindOfMaterial.SelectedIndex == -1)
             {
-                ID_NguyenLieu = Convert.ToInt32(txtID.Text),
-                TenNguyenLieu = txtInputMaterialName.Text,
-                DonViTinh = txtUnit.Text,
-                HSD = Convert.ToInt32(txtExpiry.Text),
-                ID_LoaiNguyenLieu = lnl.ID_LoaiNguyenLieu
-            };
-            if(NguyenLieuBLL.Instance.checkAddorUpdate(nl.ID_NguyenLieu))
-            {
-                NguyenLieuBLL.Instance.ExcuteUpdate(nl);
-                NoticeBox box = new NoticeBox("Update material performed");
+                NoticeBox box = new NoticeBox("Please fill fully information");
                 box.Show();
             }
             else
             {
-                if(NguyenLieuBLL.Instance.checkTrungTenNL(nl.TenNguyenLieu))
+                LoaiNguyenLieu lnl = (LoaiNguyenLieu)(cbbKindOfMaterial.SelectedItem);
+                NguyenLieu nl = new NguyenLieu
                 {
-                    NoticeBox box = new NoticeBox("Material's name have already exist");
+                    ID_NguyenLieu = Convert.ToInt32(txtID.Text),
+                    TenNguyenLieu = txtInputMaterialName.Text,
+                    DonViTinh = txtUnit.Text,
+                    HSD = Convert.ToInt32(txtExpiry.Text),
+                    ID_LoaiNguyenLieu = lnl.ID_LoaiNguyenLieu
+                };
+                if (NguyenLieuBLL.Instance.checkAddorUpdate(nl.ID_NguyenLieu))
+                {
+                    NguyenLieuBLL.Instance.ExcuteUpdate(nl);
+                    NoticeBox box = new NoticeBox("Update material performed");
                     box.Show();
                 }
                 else
                 {
-                    NguyenLieuBLL.Instance.ExcuteAdd(nl);
-                    NoticeBox box = new NoticeBox("Add material performed");
-                    box.Show();
+                    if (NguyenLieuBLL.Instance.checkTrungTenNL(nl.TenNguyenLieu))
+                    {
+                        NoticeBox box = new NoticeBox("Material's name have already exist");
+                        box.Show();
+                    }
+                    else
+                    {
+                        NguyenLieuBLL.Instance.ExcuteAdd(nl);
+                        NoticeBox box = new NoticeBox("Add material performed");
+                        box.Show();
+                    }
                 }
-            }    
-            d(0);
+                d(0);
+            }
         }
     }
 }

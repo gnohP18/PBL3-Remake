@@ -53,6 +53,8 @@ namespace GUI.frmGUIManager
                 DonGia = Convert.ToInt32(txtPrice.Text),
                 };
                 NhaCungCapBLL.Instance.AddNewChiTietNhaCungCap(ct);
+                NoticeBox box = new NoticeBox("Add successful");
+                box.Show();
                 LoadDgv();
             }
             else

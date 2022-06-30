@@ -20,22 +20,16 @@ namespace GUI.frmGUIManager
         {   
             MA = ma;
             InitializeComponent();
-            SetCBB();
             GUI();
             LoadDgv();
         }
-        private void SetCBB()
-        {
-            cbbIngrendients.Items.Clear();
-            cbbKindOfIngredinet.Items.Clear();
-            cbbKindOfIngredinet.Items.AddRange(NguyenLieuBLL.Instance.GetAllLoaiNguyenLieu().ToArray());
-        }
         void LoadDgv()
         {
-            dgvNguyenLieuCuaNhaCungCap.DataSource =  NhaCungCapBLL.Instance.GetChiTietNhaCungCap_Views(MA);
+            dgvNguyenLieu.DataSource =  NhaCungCapBLL.Instance.GetChiTietNhaCungCap_Views(MA);
         }
         void GUI()
         {
+            cbbKindOfIngredinet.Items.AddRange(NguyenLieuBLL.Instance.GetAllLoaiNguyenLieu().ToArray());
             lbIDNCC.Text = Convert.ToString(MA);
             txtPhone.Text = NhaCungCapBLL.Instance.GetNCCByID(MA).SoDienThoai.ToString();
             txtNameNCC.Text = NhaCungCapBLL.Instance.GetNCCByID(MA).TenNhaCungCap.ToString();
@@ -44,6 +38,7 @@ namespace GUI.frmGUIManager
         }
         private void cbbKindOfIngredinet_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbbIngrendients.Items.Clear();
             cbbIngrendients.Items.AddRange(NguyenLieuBLL.Instance.GetAllNguyenLieuByIdLoaiNguyenLieu(((LoaiNguyenLieu)cbbKindOfIngredinet.SelectedItem).ID_LoaiNguyenLieu).ToArray());
         }
 
@@ -76,13 +71,13 @@ namespace GUI.frmGUIManager
         private void btnDeleteMaterial_Click(object sender, EventArgs e)
         {
             List<int> listDel = new List<int>();
-            if(dgvNguyenLieuCuaNhaCungCap.SelectedRows.Count > 0)
+            if(dgvNguyenLieu.SelectedRows.Count > 0)
             {
-                foreach(DataGridViewRow i in dgvNguyenLieuCuaNhaCungCap.SelectedRows)
+                foreach(DataGridViewRow i in dgvNguyenLieu.SelectedRows)
                 {
-                    listDel.Add(Convert.ToInt32(dgvNguyenLieuCuaNhaCungCap.SelectedRows[0].Cells["ID_ChiTietNhaCungCap"].Value.ToString()));
+                    listDel.Add(Convert.ToInt32(dgvNguyenLieu.SelectedRows[0].Cells["ID_NguyenLieu"].Value.ToString()));
                 }
-                NhaCungCapBLL.Instance.DeteleChiTietNhaCungCap(listDel);
+                NhaCungCapBLL.Instance.DeteleChiTietNhaCungCap(listDel,MA);
                 LoadDgv();
             }
             else

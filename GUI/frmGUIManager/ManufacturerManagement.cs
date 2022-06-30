@@ -16,6 +16,9 @@ namespace GUI.frmGUIManager
         public ManufacturerManagement()
         {
             InitializeComponent();
+            dgvNhaCungCap.DataSource = NhaCungCapBLL.Instance.GetAllNhaCungCap();
+            dgvNhaCungCap.Columns["ChiTietNhaCungCaps"].Visible = false;
+            dgvNhaCungCap.Columns["Khoes"].Visible = false;
             LoadDgv();
         }
         void LoadDgv()

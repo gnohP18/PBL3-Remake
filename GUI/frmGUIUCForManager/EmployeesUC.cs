@@ -16,6 +16,7 @@ namespace GUI.frmGUIUCForManager
         public EmployeesUC()
         {
             InitializeComponent();
+            btnInfo.PerformClick();
         }
         #endregion
         #region Local Variable
@@ -118,7 +119,12 @@ namespace GUI.frmGUIUCForManager
         {
             dgvManageEmployee.BringToFront();
         }
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            if(this.Controls.Contains(SalaryManageUC.Instance))
+                this.Controls.Remove(SalaryManageUC.Instance);
+            SetUIForButton(sender);
+        }
         #endregion
-
     }
 }

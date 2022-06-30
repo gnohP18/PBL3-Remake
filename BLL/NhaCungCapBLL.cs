@@ -70,18 +70,11 @@ namespace BLL
         {
 
             List<ChiTietNhaCungCap_View> data = new List<ChiTietNhaCungCap_View>();
-            List<ChiTietNhaCungCap> list = new List<ChiTietNhaCungCap>();
-            foreach(ChiTietNhaCungCap i in dALQLNH.ChiTietNhaCungCaps)
-            {
-                if(i.ID_NhaCungCap == ID_NhaCungCap)
-                {
-                    list.Add(i);
-                }    
-            }
-            foreach(ChiTietNhaCungCap i in list)
+            foreach(ChiTietNhaCungCap i in dALQLNH.ChiTietNhaCungCaps.Where(s=>s.ID_NhaCungCap == ID_NhaCungCap).ToList())
             {
                 data.Add(new ChiTietNhaCungCap_View
-                {   ID_NguyenLieu = i.ID_NguyenLieu,
+                {   
+                    ID_NguyenLieu = i.ID_NguyenLieu,
                     TenNguyenLieu = i.NguyenLieu.TenNguyenLieu,
                     DonGia = i.DonGia
                     
@@ -102,14 +95,14 @@ namespace BLL
             dALQLNH.NhaCungCaps.Remove(ncc);
             dALQLNH.SaveChanges();
         }
-        public void DeteleChiTietNhaCungCap(List<int> ctncc)
+        public void DeteleChiTietNhaCungCap(List<int> ctncc,int ID_NhaCungCap)
         {
             foreach(int i in ctncc)
             {
-                ChiTietNhaCungCap ct = dALQLNH.ChiTietNhaCungCaps.Find(ctncc);
+                ChiTietNhaCungCap ct = dALQLNH.ChiTietNhaCungCaps.Find(ID_NhaCungCap,i);
                 dALQLNH.ChiTietNhaCungCaps.Remove(ct);
-            }
                 dALQLNH.SaveChanges();
+            }
         }
         public NhaCungCap GetNhaCungCapByID(int ID)
         {

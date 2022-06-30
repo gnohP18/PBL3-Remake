@@ -22,7 +22,7 @@ namespace GUI.frmGUIManager
         {
             if (dgvDanhSachHoaDon.SelectedRows.Count == 1)
             {
-                int id = Convert.ToInt32(dgvDanhSachHoaDon.SelectedRows[0].Cells[0].Value.ToString());
+                int id = Convert.ToInt32(dgvDanhSachHoaDon.SelectedRows[0].Cells["ID_HoaDon"].Value.ToString());
                 Invoice inc = new Invoice(id);
                 inc.Show();
             }

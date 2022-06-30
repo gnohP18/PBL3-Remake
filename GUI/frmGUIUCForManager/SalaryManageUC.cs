@@ -24,34 +24,20 @@ namespace GUI.frmGUIUCForManager
         #endregion
         #region Local Variable
         private int ID_User { get; set; }
-        private List<string> NamePositionCBB = new List<string>();
         private List<DayChart_view> DC_v = new List<DayChart_view>();
         private SalaryEmployee_view salaryEmployee { get; set; }
         #endregion
         #region Function
-        private Image byteArrayToImage(byte[] byteArrayIn)
-        {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
-        }
         private void SetupDataGridView()
         {
-            //dgvSalaryEmployee.DataSource = BLL.NhanVienBLL.Instance.GetAllSalaryEmployee_view();
             dgvSalaryEmployee.DataSource = BLL.NhanVienBLL.Instance.GetAllSalaryEmployee_view();
-            //dgvSalaryEmployee.Columns[0].Width = 50;
         }
         private void SetupComboBox()
         {
-            foreach (ChucVu i in BLL.NhanVienBLL.Instance.GetAllPosition())
-            {
-                NamePositionCBB.Add(i.TenChucVu);
-                cbbPosition.Items.Add(i.TenChucVu);
-            }
+            cbbPosition.Items.AddRange(BLL.NhanVienBLL.Instance.GetAllPosition().ToArray());
         }
         private void SetupInforEmployee(int ID_User)
         {
-
             lblID_User.Text = salaryEmployee.ID_User.ToString();
             lblNameUser.Text = salaryEmployee.Name_User;
             lblPosition.Text = salaryEmployee.Name_Position;
@@ -59,7 +45,8 @@ namespace GUI.frmGUIUCForManager
             lblTotalDayWork.Text = BLL.NhanVienBLL.Instance.GetNumberOfTotalDayWorkByID_User(ID_User).ToString();
             lblCoefficientsSalary.Text = salaryEmployee.CoefficientsSalary.ToString();
             lblPercentWorkHard.Text = salaryEmployee.PerCentDayWorkAndDayAbsent.ToString();
-            pBUserPicture.Image = byteArrayToImage(BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User).AnhUser);
+            pBUserPicture.Image = BLL.ExtensionBLL.Instance.byteArrayToImage(BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User).AnhUser);
+            cbbPosition.SelectedIndex = cbbPosition.FindStringExact(salaryEmployee.Name_Position);
             if (salaryEmployee.PerCentDayWorkAndDayAbsent >= 80)
             {
                 pBCondition.Image = GUI.Properties.Resources.checkedGreen;

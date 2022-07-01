@@ -1,8 +1,6 @@
 ﻿using DTO;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 
 namespace GUI.frmGUIManager
@@ -45,7 +43,7 @@ namespace GUI.frmGUIManager
             else
             {
                 isADD = true;
-                txtIDEmployee.Text = BLL.NhanVienBLL.Instance.GetNewIDUser() +"";
+                txtIDEmployee.Text = BLL.NhanVienBLL.Instance.GetNewIDUser() + "";
                 btnShift.Visible = false;
             }
         }
@@ -53,7 +51,7 @@ namespace GUI.frmGUIManager
         #region Event UC function
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (isADD == true && !BLL.NhanVienBLL.Instance.checkUsername(txtUserNameLogin.Text))
+            if (isADD == true && BLL.NhanVienBLL.Instance.checkExistUsername(txtUserNameLogin.Text) == true)
             {
                 NoticeBox box = new NoticeBox("Username is existed, please input other username!!");
                 box.ShowDialog();
@@ -63,7 +61,7 @@ namespace GUI.frmGUIManager
             {
                 ID_User = this.ID_User,
                 TenUser = txtNameEmployee.Text,
-                ID_ChucVu =((ChucVu)(cbbPosition.SelectedItem)).ID_ChucVu,
+                ID_ChucVu = ((ChucVu)(cbbPosition.SelectedItem)).ID_ChucVu,
                 CMND_CCCD = txtCIEmployee.Text,
                 Username = txtUserNameLogin.Text,
                 SDT = txtPhonenumber.Text,
@@ -84,7 +82,7 @@ namespace GUI.frmGUIManager
 
         private void DetailEmployee_Load(object sender, EventArgs e)
         {
-            
+
         }
         private void btnChangePicUser_Click(object sender, EventArgs e)
         {
@@ -123,7 +121,7 @@ namespace GUI.frmGUIManager
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-             this.Close();
+            this.Close();
         }
     }
 }

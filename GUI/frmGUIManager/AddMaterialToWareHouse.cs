@@ -49,7 +49,8 @@ namespace GUI.frmGUIManager
                     {
                         KhoBLL.Instance.UpdateLuongNhapVaoVaLuongTonKho(i, Convert.ToInt32(txtQuantity.Text.ToString()));
                         GUI.NoticeBox box = new NoticeBox("Add material successfully!");
-                        box.Show();
+                        box.ShowDialog();
+                        this.Close();
                     }
 
                     else
@@ -68,7 +69,8 @@ namespace GUI.frmGUIManager
                         };
                         KhoBLL.Instance.AddMaterialToWareHouse(kho);
                         GUI.NoticeBox box = new NoticeBox("Add material successfully!");
-                        box.Show();
+                        box.ShowDialog();
+                        this.Close();
                         break;
                     }
                 }

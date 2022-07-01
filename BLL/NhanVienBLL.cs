@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 
 namespace BLL
@@ -101,15 +100,15 @@ namespace BLL
         {
             return dALQLNH.ChucVus.ToList();
         }
-        public bool checkUsername(string Username)
+        public bool checkExistUsername(string Username)
         {
-            if (dALQLNH.Users.Where(s => s.Username == Username) != null) return false;
-            else return true;
+            if (dALQLNH.Users.Where(s => s.Username == Username).Count() != 0) return true;
+            return false;
         }
         public void Execute(User user)
         {
             User userDB = dALQLNH.Users.Find(user.ID_User);
-            if(userDB != null)
+            if (userDB != null)
             {
                 userDB.TenUser = user.TenUser;
                 userDB.Username = user.Username;
@@ -129,7 +128,7 @@ namespace BLL
                 dALQLNH.Users.Add(user);
                 dALQLNH.Entry(user).Reference(s => s.ChucVu).Load();
                 dALQLNH.SaveChanges();
-                if(user.ID_ChucVu != 1 && user.ID_ChucVu != 2)
+                if (user.ID_ChucVu != 1 && user.ID_ChucVu != 2)
                 {
                     BangChamCongBLL.Instance.SetUpBangChamCongNowForNhanVien(user.ID_User);
                 }
@@ -152,7 +151,7 @@ namespace BLL
         {
             return dALQLNH.Users.ToList();
         }
-        
+
         public int checkLogin(string username, string password, bool isCustomerLogin)
         {
             User user = (User)(dALQLNH.Users.Where(p => p.Username == username && p.Password == password).FirstOrDefault());
@@ -178,7 +177,7 @@ namespace BLL
             GetNhanVienByID(ID_User).DaXoa = true;
             dALQLNH.SaveChanges();
         }
-        
+
         public ChucVu GetPositionByID_Position(int ID_Position)
         {
             return dALQLNH.ChucVus.Where(p => p.ID_ChucVu == ID_Position).FirstOrDefault();

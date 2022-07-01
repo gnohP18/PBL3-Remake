@@ -178,40 +178,32 @@ namespace GUI.frmGUISeller
                 MaVoucher = MaVoucher,
                 NgayLap = DateTime.Now,
             };
-            BLL.HoaDonBLL.Instance.AddNewInvoice(invoice, listMonAnViewDaDat);
+            HoaDonBLL.Instance.AddNewInvoice(invoice, listMonAnViewDaDat);
             BanBLL.Instance.ClearAllMonOfBan(IDTable);
             BanBLL.Instance.SetEmptyBan(IDTable);
-            this.Close();
             deleFrmMainSeller(0, 1);
             if (d != null) d();
             frmReceipt frm = new frmReceipt(IDTable, invoice.ID_HoaDon);
             frm.ShowDialog();
+            this.Close();
 
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void pBCheckGuest_Click(object sender, EventArgs e)
-        {
-            if (txtGuestPhone.Text == "new")
+            if (txtGuestPhone.Text == "")
             {
                 GuestInformation frm = new GuestInformation(-1);
                 frm.Show();
             }
-            else if (CheckVoucherOrPhoneNumber(PhoneNumber, txtGuestPhone.Text))
+            else
             {
                 GuestInformation frm = new GuestInformation(BLL.KhachHangBLL.Instance.GetGuestByGuestPhoneNumber(txtGuestPhone.Text).ID_KhachHang);
                 frm.Show();
             }
-
         }
+
+
         private void txtGuestPhone_TextChanged(object sender, EventArgs e)
         {
             if (txtGuestPhone.Text == "new")

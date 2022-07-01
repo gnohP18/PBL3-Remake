@@ -43,7 +43,7 @@ namespace BLL
             List<HoaDon_View> list = new List<HoaDon_View>();
             foreach (HoaDon i in dALQLNH.HoaDons)
             {
-                if (i.NgayLap >= date && i.NgayLap <=date.AddDays(1))
+                if (i.NgayLap >= date && i.NgayLap <= date.AddDays(1))
                 {
                     HoaDon_View hdv = new HoaDon_View();
                     hdv.ID_HoaDon = i.ID_HoaDon;
@@ -140,21 +140,24 @@ namespace BLL
         public List<PrintReceipt_View> SetDataSetForReceipt(int ID_Table, int ID_invoice)
         {
             List<PrintReceipt_View> data = new List<PrintReceipt_View>();
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
             foreach (ChiTietHoaDon i in dALQLNH.HoaDons.Find(ID_invoice).ChiTietHoaDons.ToList())
             {
                 data.Add(new PrintReceipt_View
                 {
                     ID_Table = ID_Table.ToString(),
-                    Address = "abc",
+                    Address = TTNH.DiaChi,
                     Dish_Name = i.MonAn.TenMonAn,
                     Name_Cashier = i.HoaDon.User.TenUser,
                     Amount = i.SoLuong.ToString(),
-                    Date_Create = "2022/7/1",
+                    Date_Create = i.HoaDon.NgayLap.ToShortDateString(),
                     ID_Receipt = i.ID_HoaDon.ToString(),
-                    Name_Restaurant = "abc",
+                    Name_Restaurant = TTNH.TenNhaHang,
                     Name_Table = dALQLNH.Bans.Find(ID_Table).TenBan,
-                    Total_Dish = Convert.ToString(30000),
+                    Total_Dish = i.SoLuong * i.MonAn.ThanhTien + "",
                     Total = i.HoaDon.TongTien + "",
+                    MoneyConvertFormPoint = i.HoaDon.TienQuyDoiTuDiemTichLuy + "",
+                    Voucher = i.HoaDon.MaVoucher,
                 });
             }
             return data;

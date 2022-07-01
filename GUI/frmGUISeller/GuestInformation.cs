@@ -1,7 +1,6 @@
 ﻿using DTO;
 using System;
 using System.Windows.Forms;
-using Entity;
 namespace GUI.frmGUISeller
 {
     public partial class GuestInformation : Form
@@ -68,11 +67,19 @@ namespace GUI.frmGUISeller
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            bool gender = false;
-            if (radMale.Checked)
-                gender = true;
-            BLL.KhachHangBLL.Instance.AddNewKhachHang(txtGuestName.Text, txtGuestPhone.Text, txtGuestAddress.Text, gender, 0);
-            this.Close();
+            if (txtGuestAddress.Text == "" || txtGuestName.Text == "" || txtGuestPhone.Text == "")
+            {
+                NoticeBox box = new NoticeBox("Please fill all information");
+                box.Show();
+            }
+            else
+            {
+                bool gender = false;
+                if (radMale.Checked)
+                    gender = true;
+                BLL.KhachHangBLL.Instance.AddNewKhachHang(txtGuestName.Text, txtGuestPhone.Text, txtGuestAddress.Text, gender, 0);
+                this.Close();
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace BLL
             List<HoaDon_View> list = new List<HoaDon_View>();
             foreach (HoaDon i in dALQLNH.HoaDons)
             {
-                if (i.NgayLap == date)
+                if (i.NgayLap >= date && i.NgayLap <=date.AddDays(1))
                 {
                     HoaDon_View hdv = new HoaDon_View();
                     hdv.ID_HoaDon = i.ID_HoaDon;

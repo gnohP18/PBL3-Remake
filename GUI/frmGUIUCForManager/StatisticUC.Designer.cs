@@ -60,7 +60,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTotalRevenue = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -70,7 +70,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lblTotalDateTimeCustom = new System.Windows.Forms.Label();
+            this.lblTotalRevenueDateTimeCustom = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -350,7 +350,7 @@
             series1.Legend = "Legend1";
             series1.MarkerColor = System.Drawing.Color.Orange;
             series1.MarkerSize = 7;
-            series1.Name = "Total";
+            series1.Name = "TotalRevenue";
             series1.YValuesPerPoint = 2;
             series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(103)))), ((int)(((byte)(216)))));
             series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(103)))), ((int)(((byte)(216)))));
@@ -430,7 +430,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.lblTotal);
+            this.panel3.Controls.Add(this.lblTotalRevenue);
             this.panel3.Location = new System.Drawing.Point(1016, 75);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
@@ -442,12 +442,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(128, 2);
+            this.label1.Location = new System.Drawing.Point(69, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 18);
+            this.label1.Size = new System.Drawing.Size(102, 18);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Total";
+            this.label1.Text = "Total Revenue";
             // 
             // pictureBox4
             // 
@@ -460,17 +460,17 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // lblTotal
+            // lblTotalRevenue
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.lblTotal.Location = new System.Drawing.Point(8, 21);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(159, 25);
-            this.lblTotal.TabIndex = 4;
-            this.lblTotal.Text = "B";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalRevenue.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
+            this.lblTotalRevenue.Location = new System.Drawing.Point(8, 21);
+            this.lblTotalRevenue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalRevenue.Name = "lblTotalRevenue";
+            this.lblTotalRevenue.Size = new System.Drawing.Size(159, 25);
+            this.lblTotalRevenue.TabIndex = 4;
+            this.lblTotalRevenue.Text = "B";
+            this.lblTotalRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -551,7 +551,7 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Controls.Add(this.lblTotalDateTimeCustom);
+            this.panel7.Controls.Add(this.lblTotalRevenueDateTimeCustom);
             this.panel7.Location = new System.Drawing.Point(8, 95);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
@@ -563,12 +563,12 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.label10.Location = new System.Drawing.Point(118, -1);
+            this.label10.Location = new System.Drawing.Point(46, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 21);
+            this.label10.Size = new System.Drawing.Size(126, 21);
             this.label10.TabIndex = 5;
-            this.label10.Text = "Total";
+            this.label10.Text = "Total Revenue";
             // 
             // pictureBox6
             // 
@@ -581,17 +581,17 @@
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
-            // lblTotalDateTimeCustom
+            // lblTotalRevenueDateTimeCustom
             // 
-            this.lblTotalDateTimeCustom.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDateTimeCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
-            this.lblTotalDateTimeCustom.Location = new System.Drawing.Point(13, 48);
-            this.lblTotalDateTimeCustom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalDateTimeCustom.Name = "lblTotalDateTimeCustom";
-            this.lblTotalDateTimeCustom.Size = new System.Drawing.Size(159, 25);
-            this.lblTotalDateTimeCustom.TabIndex = 4;
-            this.lblTotalDateTimeCustom.Text = "B";
-            this.lblTotalDateTimeCustom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalRevenueDateTimeCustom.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalRevenueDateTimeCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(128)))));
+            this.lblTotalRevenueDateTimeCustom.Location = new System.Drawing.Point(13, 48);
+            this.lblTotalRevenueDateTimeCustom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalRevenueDateTimeCustom.Name = "lblTotalRevenueDateTimeCustom";
+            this.lblTotalRevenueDateTimeCustom.Size = new System.Drawing.Size(159, 25);
+            this.lblTotalRevenueDateTimeCustom.TabIndex = 4;
+            this.lblTotalRevenueDateTimeCustom.Text = "B";
+            this.lblTotalRevenueDateTimeCustom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel8
             // 
@@ -886,7 +886,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart DayChart;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblTotalRevenue;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnDetailInvoice;
         private System.Windows.Forms.Label label5;
@@ -901,7 +901,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label lblTotalDateTimeCustom;
+        private System.Windows.Forms.Label lblTotalRevenueDateTimeCustom;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox7;

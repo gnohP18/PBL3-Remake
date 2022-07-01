@@ -170,6 +170,7 @@ namespace GUI.frmGUISeller
         {
             int total = Convert.ToInt32(lblTotal.Text);
             BLL.HoaDonBLL.Instance.AddNewInvoice(IDNhanVien, _Guest.ID_KhachHang, total, TienQuyDoiTuDiemTichLuy, MaVoucher, listMonAnViewDaDat);
+            BanBLL.Instance.ClearAllMonOfBan(IDTable);
             BanBLL.Instance.SetEmptyBan(IDTable);
             this.Close();
             deleFrmMainSeller(0, 1);

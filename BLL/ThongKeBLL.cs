@@ -30,19 +30,19 @@ namespace BLL
             int dem = 0;
             foreach (HoaDon i in dALQLNH.HoaDons)
             {
-                if (i.NgayLap == Datecustom)
+                if (i.NgayLap >= Datecustom && i.NgayLap <= Datecustom.AddDays(1))
                 {
                     dem++;
                 }
             }
             return dem;
         }
-        public int GetTotal(DateTime Datecustom)
+        public int GetTotalRevenue(DateTime Datecustom)
         {
             int total = 0;
             foreach (HoaDon i in dALQLNH.HoaDons)
             {
-                if (i.NgayLap == Datecustom)
+                if (i.NgayLap >= Datecustom && i.NgayLap <= Datecustom.AddDays(1))
                 {
                     total += i.TongTien;
                 }
@@ -54,13 +54,13 @@ namespace BLL
             int spend = 0;
             foreach (Kho i in dALQLNH.Khoes)
             {
-                if (i.NgayNhap == Datecustom)
+                if (i.NgayNhap >= Datecustom && i.NgayNhap <= Datecustom.AddDays(1))
                 {
                     if (GetPriceOfInGredientByIDInGredient(i.ID_NguyenLieu) != null)
                         spend = spend + (int)(i.LuongNhapVao * GetPriceOfInGredientByIDInGredient(i.ID_NguyenLieu).DonGia);
                 }
             }
-            return GetTotal(Datecustom) - spend;
+            return GetTotalRevenue(Datecustom) - spend;
         }
         public int GetTotal(string Datecustom)
         {
@@ -100,9 +100,9 @@ namespace BLL
             {
                 Statistic_view st = new Statistic_view();
                 st.ID_money = i;
-                st.Total = GetTotal(date[i]);
+                st.TotalRevenue = GetTotal(date[i]);
                 st.Profit = GetProfit(date[i]);
-                st.Consuming = st.Total - st.Profit;
+                st.Consuming = st.TotalRevenue - st.Profit;
                 st.Date = Convert.ToDateTime(date[i]);
                 liststatistic.Add(st);
             }

@@ -61,6 +61,7 @@
     <Compile Include="HoaDon_view.cs" />
     <Compile Include="MonAn_View.cs" />
     <Compile Include="NguyenLieu_View.cs" />
+    <Compile Include="PrintReceipt_View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalaryDay.cs" />
     <Compile Include="SalaryEmployee_view.cs" />

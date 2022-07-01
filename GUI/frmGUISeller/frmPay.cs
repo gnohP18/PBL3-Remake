@@ -3,7 +3,6 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Entity;
 namespace GUI.frmGUISeller
 {
     public partial class frmPay : Form
@@ -169,11 +168,24 @@ namespace GUI.frmGUISeller
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
             int total = Convert.ToInt32(lblTotal.Text);
-            BLL.HoaDonBLL.Instance.AddNewInvoice(IDNhanVien, _Guest.ID_KhachHang, total, TienQuyDoiTuDiemTichLuy, MaVoucher, listMonAnViewDaDat);
+            HoaDon invoice = new HoaDon()
+            {
+                ID_HoaDon = HoaDonBLL.Instance.GetNewIDHoaDon(),
+                ID_User = IDNhanVien,
+                TongTien = total,
+                ID_KhachHang = _Guest.ID_KhachHang,
+                TienQuyDoiTuDiemTichLuy = this.TienQuyDoiTuDiemTichLuy,
+                MaVoucher = MaVoucher,
+                NgayLap = DateTime.Now,
+            };
+            BLL.HoaDonBLL.Instance.AddNewInvoice(invoice, listMonAnViewDaDat);
             BanBLL.Instance.SetEmptyBan(IDTable);
             this.Close();
             deleFrmMainSeller(0, 1);
             if (d != null) d();
+            frmReceipt frm = new frmReceipt(IDTable, invoice.ID_HoaDon);
+            frm.ShowDialog();
+
         }
 
         private void btnYes_Click(object sender, EventArgs e)

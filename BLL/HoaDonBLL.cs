@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace BLL
@@ -124,23 +125,40 @@ namespace BLL
             }
             return id;
         }
-        public void AddNewInvoice(int ID_User, int ID_Guest, int Total, int MoneyConvertFromPoint, string MaVoucher, List<MonAn_View> list)
+        public void AddNewInvoice(HoaDon invoice, List<MonAn_View> list)
         {
-            HoaDon invoice = dALQLNH.HoaDons.Create();
-            invoice.ID_HoaDon = GetNewIDHoaDon();
-            invoice.ID_User = ID_User;
-            invoice.TongTien = Total;
-            invoice.ID_KhachHang = ID_Guest;
-            invoice.TienQuyDoiTuDiemTichLuy = MoneyConvertFromPoint;
-            invoice.MaVoucher = MaVoucher;
-            invoice.NgayLap = DateTime.Now;
             dALQLNH.HoaDons.Add(invoice);
+            dALQLNH.Entry(invoice).Reference(s => s.Voucher).Load();
+            dALQLNH.Entry(invoice).Reference(s => s.User).Load();
+            dALQLNH.Entry(invoice).Reference(s => s.KhachHang).Load();
             dALQLNH.SaveChanges();
             foreach (MonAn_View i in list)
             {
                 AddNewDetailInvoice(invoice.ID_HoaDon, i.ID_MonAn, i.SoLuong);
             }
-
         }
+        public List<PrintReceipt_View> SetDataSetForReceipt(int ID_Table, int ID_invoice)
+        {
+            List<PrintReceipt_View> data = new List<PrintReceipt_View>();
+            foreach (ChiTietHoaDon i in dALQLNH.HoaDons.Find(ID_invoice).ChiTietHoaDons.ToList())
+            {
+                data.Add(new PrintReceipt_View
+                {
+                    ID_Table = ID_Table.ToString(),
+                    Address = "abc",
+                    Dish_Name = i.MonAn.TenMonAn,
+                    Name_Cashier = i.HoaDon.User.TenUser,
+                    Amount = i.SoLuong.ToString(),
+                    Date_Create = "2022/7/1",
+                    ID_Receipt = i.ID_HoaDon.ToString(),
+                    Name_Restaurant = "abc",
+                    Name_Table = dALQLNH.Bans.Find(ID_Table).TenBan,
+                    Total_Dish = Convert.ToString(30000),
+                    Total = i.HoaDon.TongTien + "",
+                });
+            }
+            return data;
+        }
+
     }
 }

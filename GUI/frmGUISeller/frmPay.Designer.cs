@@ -112,7 +112,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(330, 427);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 43);
+            this.label1.Size = new System.Drawing.Size(56, 34);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bill";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,6 +133,7 @@
             // 
             // dgvPayment
             // 
+            this.dgvPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPayment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(235)))), ((int)(((byte)(248)))));
@@ -185,7 +186,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(11, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.Size = new System.Drawing.Size(68, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "Voucher";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,7 +200,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(354, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 43);
+            this.label3.Size = new System.Drawing.Size(82, 34);
             this.label3.TabIndex = 7;
             this.label3.Text = "Total";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,7 +228,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(11, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 24);
+            this.label5.Size = new System.Drawing.Size(38, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "Tax ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,7 +242,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(61, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.Size = new System.Drawing.Size(37, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "5%=";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -268,7 +269,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(8, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 24);
+            this.label8.Size = new System.Drawing.Size(136, 19);
             this.label8.TabIndex = 20;
             this.label8.Text = "Guest information";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -282,7 +283,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(261, 60);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 24);
+            this.label9.Size = new System.Drawing.Size(48, 19);
             this.label9.TabIndex = 22;
             this.label9.Text = "Point";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -296,7 +297,7 @@
             this.lblPoint.ForeColor = System.Drawing.Color.Black;
             this.lblPoint.Location = new System.Drawing.Point(360, 60);
             this.lblPoint.Name = "lblPoint";
-            this.lblPoint.Size = new System.Drawing.Size(25, 24);
+            this.lblPoint.Size = new System.Drawing.Size(21, 19);
             this.lblPoint.TabIndex = 23;
             this.lblPoint.Text = "D";
             this.lblPoint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -384,7 +385,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(42, 90);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 24);
+            this.label11.Size = new System.Drawing.Size(80, 19);
             this.label11.TabIndex = 25;
             this.label11.Text = "Use points";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -411,7 +412,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(8, 60);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 24);
+            this.label7.Size = new System.Drawing.Size(92, 19);
             this.label7.TabIndex = 27;
             this.label7.Text = "Guest name";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -425,7 +426,7 @@
             this.lblNameGuest.ForeColor = System.Drawing.Color.Black;
             this.lblNameGuest.Location = new System.Drawing.Point(164, 60);
             this.lblNameGuest.Name = "lblNameGuest";
-            this.lblNameGuest.Size = new System.Drawing.Size(23, 24);
+            this.lblNameGuest.Size = new System.Drawing.Size(19, 19);
             this.lblNameGuest.TabIndex = 28;
             this.lblNameGuest.Text = "C";
             this.lblNameGuest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -469,7 +470,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(168, 182);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 24);
+            this.label10.Size = new System.Drawing.Size(115, 19);
             this.label10.TabIndex = 31;
             this.label10.Text = "Change money";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -506,7 +507,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(4, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 24);
+            this.label4.Size = new System.Drawing.Size(100, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "Guest money";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -159,12 +159,12 @@ namespace GUI.frmGUISeller
             RemoveDish();
             frmPay frm = new frmPay(IDTable,ID_NhanVien);
             frm.d = new frmPay.Mydel(CloseOrder);
+            frm.deleFrmMainSeller = d;
             frm.MdiParent = this;
             pnDish.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
             pnDish.AutoScroll = false;
             frm.Show();
-            d(0, 1);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace GUI.frmGUISeller
 
         private void CloseOrder()
         {
-            d(-1, 1);
+            d(0, 1);
             this.Close();
         }
         private void btnExit_Click(object sender, EventArgs e)

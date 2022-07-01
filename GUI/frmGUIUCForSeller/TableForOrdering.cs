@@ -52,6 +52,7 @@ namespace GUI.frmGUIUCForSeller
         private void btnPay_Click(object sender, System.EventArgs e)
         {
             frmPay frm = new frmPay(ban.ID_Ban,ID_NhanVien);
+            frm.deleFrmMainSeller = d;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
             frm.Close();

@@ -14,6 +14,7 @@ namespace GUI.frmGUISeller
             IDTable = idban;
             IDNhanVien = idNhanVien;
         }
+        public frmMainSeller.Mydel deleFrmMainSeller;
         #region Local Variable
         List<MonAn_View> listMonAnViewDaDat;
         public delegate void Mydel();
@@ -171,11 +172,12 @@ namespace GUI.frmGUISeller
             BLL.HoaDonBLL.Instance.AddNewInvoice(IDNhanVien, _Guest.ID_KhachHang, total, TienQuyDoiTuDiemTichLuy, MaVoucher, listMonAnViewDaDat);
             BanBLL.Instance.SetEmptyBan(IDTable);
             this.Close();
+            deleFrmMainSeller(0, 1);
+            if (d != null) d();
         }
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            d();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace GUI.frmGUIUCForManager
         private int CurrentFloor { get; set; }
         private int CurrentStatus { get; set; }
         private int NumberOfOrdered { get; set; }
-        private int Total { get; set; }
+        private int TotalRevenue { get; set; }
         private int Profit { get; set; }
         private int Consuming { get; set; }
         private List<DayChart_view> DC_v = new List<DayChart_view>();
@@ -45,21 +45,16 @@ namespace GUI.frmGUIUCForManager
         private void SetDataForDateCustom()
         {
             NumberOfOrdered = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(CurrentDay);
-            Total = BLL.ThongKeBLL.Instance.GetTotal(CurrentDay);
+            TotalRevenue = BLL.ThongKeBLL.Instance.GetTotalRevenue(CurrentDay);
             Profit = BLL.ThongKeBLL.Instance.GetProfit(CurrentDay);
-            Consuming = Total - Profit;
-            //Console.WriteLine(CurrentDay.ToShortDateString() + " " + NumberOfOrdered + " " + Profit + " " + Consuming + " " + Total);
+            Consuming = TotalRevenue - Profit;
             DC_v.Add(AddDV_v(Consuming, CurrentDay, "Consuming"));
-            DC_v.Add(AddDV_v(Total, CurrentDay, "Total"));
+            DC_v.Add(AddDV_v(TotalRevenue, CurrentDay, "TotalRevenue"));
             DC_v.Add(AddDV_v(Profit, CurrentDay, "Profit"));
-            foreach (DayChart_view dc in DC_v)
-            {
-                Console.WriteLine(dc.Text + " " + dc.Value);
-            }
             Overviewchart.Series[0].Points.Clear();
             lblOrdered.Text = NumberOfOrdered.ToString();
             lblProfit.Text = Profit.ToString();
-            lblTotal.Text = Total.ToString();
+            lblTotalRevenue.Text = TotalRevenue.ToString();
             lblConsuming.Text = Consuming.ToString();
             Overviewchart.DataSource = DC_v;
             Overviewchart.Series[0].YValueMembers = "Value";

@@ -189,6 +189,14 @@ namespace BLL
                 dALQLNH.SaveChanges();
             }
         }
+        public void ClearAllMonOfBan(int ID_Ban)
+        {
+            foreach(ChiTietBan i in dALQLNH.ChiTietBans.Where(s=>s.ID_Ban == ID_Ban).ToList())
+            {
+                dALQLNH.ChiTietBans.Remove(i);
+                dALQLNH.SaveChanges();
+            }
+        }
         public void SetEmptyBan(int ID_Ban)
         {
             Ban ban = dALQLNH.Bans.Find(ID_Ban);

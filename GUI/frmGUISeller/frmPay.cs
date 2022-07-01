@@ -179,6 +179,7 @@ namespace GUI.frmGUISeller
                 NgayLap = DateTime.Now,
             };
             BLL.HoaDonBLL.Instance.AddNewInvoice(invoice, listMonAnViewDaDat);
+            BanBLL.Instance.ClearAllMonOfBan(IDTable);
             BanBLL.Instance.SetEmptyBan(IDTable);
             this.Close();
             deleFrmMainSeller(0, 1);

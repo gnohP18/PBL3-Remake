@@ -419,6 +419,15 @@ namespace Entity
                 new ChiTietBan{ID_ChiTietBan = 50,ID_Ban =37,ID_MonAn = 2,TinhTrang=1,SoLuong = 3},
                 new ChiTietBan{ID_ChiTietBan = 51,ID_Ban =37,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
                 new ChiTietBan{ID_ChiTietBan = 52,ID_Ban =37,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 53,ID_Ban =15,ID_MonAn = 2,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 54,ID_Ban =15,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 55,ID_Ban =15,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 56,ID_Ban =17,ID_MonAn = 2,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 57,ID_Ban =17,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 58,ID_Ban =17,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
+                new ChiTietBan{ID_ChiTietBan = 59,ID_Ban =19,ID_MonAn = 2,TinhTrang=1,SoLuong = 3},
+                new ChiTietBan{ID_ChiTietBan = 60,ID_Ban =19,ID_MonAn = 3,TinhTrang=1,SoLuong = 2},
+                new ChiTietBan{ID_ChiTietBan = 61,ID_Ban =19,ID_MonAn = 4,TinhTrang=1,SoLuong = 1},
             });
 
             context.NhaCungCaps.AddRange(new NhaCungCap[]

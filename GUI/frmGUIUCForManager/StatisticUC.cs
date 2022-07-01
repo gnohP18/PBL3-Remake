@@ -21,7 +21,7 @@ namespace GUI.frmGUIUCForManager
         public DateTime DateCustomVenue { get; set; }
         public DateTime DateCustomSalary { get; set; }
         private int NumberOfOrdered { get; set; }
-        private int Total { get; set; }
+        private int TotalRevenue { get; set; }
         private int Profit { get; set; }
         private int Consuming { get; set; }
         private DateTime DayStart { get; set; }
@@ -42,14 +42,14 @@ namespace GUI.frmGUIUCForManager
         }
         private void SetDataForMainChart(DateTime daystart, DateTime dayend)
         {
-            int SumTotal = 0, SumComsuming = 0, SumProfit = 0;
+            int SumTotalRevenue = 0, SumComsuming = 0, SumProfit = 0;
             MainChart.Series[0].Points.Clear();
             List<Statistic_view> listbydate = new List<Statistic_view>();
             foreach (Statistic_view i in ListDoanhThu)
             {
                 if (i.Date > daystart && i.Date < dayend)
                 {
-                    SumTotal += i.Total;
+                    SumTotalRevenue += i.TotalRevenue;
                     SumProfit += i.Profit;
                     SumComsuming += i.Consuming;
                     listbydate.Add(i);
@@ -58,15 +58,15 @@ namespace GUI.frmGUIUCForManager
             lblOrderDateTimeCustom.Text = listbydate.Count.ToString();
             lblConsumingDateTimeCustom.Text = SumComsuming.ToString();
             lblProfitDateTimeCustom.Text = SumProfit.ToString();
-            lblTotalDateTimeCustom.Text = SumTotal.ToString();
+            lblTotalRevenueDateTimeCustom.Text = SumTotalRevenue.ToString();
             MainChart.ChartAreas[0].AxisY.Maximum = 5000000;
             MainChart.ChartAreas[0].AxisY.Minimum = -5000000;
             MainChart.DataSource = listbydate;
-            MainChart.Series["Total"].YValueMembers = "Total";
-            MainChart.Series["Total"].YValueType = ChartValueType.Int32;
-            MainChart.Series["Total"].XValueMember = "Date";
+            MainChart.Series["TotalRevenue"].YValueMembers = "TotalRevenue";
+            MainChart.Series["TotalRevenue"].YValueType = ChartValueType.Int32;
+            MainChart.Series["TotalRevenue"].XValueMember = "Date";
             MainChart.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Weeks;
-            MainChart.Series["Total"].XValueType = ChartValueType.Date;
+            MainChart.Series["TotalRevenue"].XValueType = ChartValueType.Date;
             MainChart.Series["Profit"].YValueMembers = "Profit";
             MainChart.Series["Profit"].YValueType = ChartValueType.Int32;
             MainChart.Series["Profit"].XValueMember = "Date";
@@ -91,9 +91,9 @@ namespace GUI.frmGUIUCForManager
             }
             lblOrdered.Text = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(date).ToString();
             lblProfit.Text = Profit.ToString();
-            lblTotal.Text = Total.ToString();
+            lblTotalRevenue.Text = TotalRevenue.ToString();
             lblConsuming.Text = Consuming.ToString();
-            //Console.WriteLine(date.ToShortDateString() + " " + NumberOfOrdered + " " + Profit + " " + Consuming + " " + Total);
+            //Console.WriteLine(date.ToShortDateString() + " " + NumberOfOrdered + " " + Profit + " " + Consuming + " " + TotalRevenue);
             DayChart.DataSource = DC_v;
             DayChart.Series[0].YValueMembers = "Value";
             DayChart.Series[0].YValueType = ChartValueType.Int32;
@@ -108,11 +108,11 @@ namespace GUI.frmGUIUCForManager
             DateTime dt = DateTime.Now;
             NumberOfOrdered = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(dt);
             Profit = BLL.ThongKeBLL.Instance.GetProfit(dt);
-            Total = BLL.ThongKeBLL.Instance.GetTotal(dt);
-            Consuming = Total - Profit;
+            TotalRevenue = BLL.ThongKeBLL.Instance.GetTotalRevenue(dt);
+            Consuming = TotalRevenue - Profit;
             DC_v.Clear();
             DC_v.Add(AddDV_v(Consuming, dt, "Consuming"));
-            DC_v.Add(AddDV_v(Total, dt, "Total"));
+            DC_v.Add(AddDV_v(TotalRevenue, dt, "TotalRevenue"));
             DC_v.Add(AddDV_v(Profit, dt, "Profit"));
             SetDataForDateCustom(dt);
         }
@@ -123,15 +123,15 @@ namespace GUI.frmGUIUCForManager
             DateCustomVenue = CalendarStatistic.SelectionStart;
             NumberOfOrdered = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(DateCustomVenue);
             Profit = BLL.ThongKeBLL.Instance.GetProfit(DateCustomVenue);
-            Total = BLL.ThongKeBLL.Instance.GetTotal(DateCustomVenue);
-            Consuming = Total - Profit;
+            TotalRevenue = BLL.ThongKeBLL.Instance.GetTotalRevenue(DateCustomVenue);
+            Consuming = TotalRevenue - Profit;
             DC_v.Clear();
             DC_v.Add(AddDV_v(Consuming, DateCustomVenue, "Consuming"));
-            DC_v.Add(AddDV_v(Total, DateCustomVenue, "Total"));
+            DC_v.Add(AddDV_v(TotalRevenue, DateCustomVenue, "TotalRevenue"));
             DC_v.Add(AddDV_v(Profit, DateCustomVenue, "Profit"));
             lblOrdered.Text = BLL.ThongKeBLL.Instance.GetNumberOfOrdered(CalendarStatistic.SelectionStart).ToString();
             lblProfit.Text = DoanhThuNgay.Profit.ToString();
-            lblTotal.Text = DoanhThuNgay.Total.ToString();
+            lblTotalRevenue.Text = DoanhThuNgay.TotalRevenue.ToString();
             lblConsuming.Text = DoanhThuNgay.Consuming.ToString();
             SetDataForDateCustom(CalendarStatistic.SelectionStart);
         }

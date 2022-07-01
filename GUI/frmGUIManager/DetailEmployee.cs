@@ -47,37 +47,52 @@ namespace GUI.frmGUIManager
                 btnShift.Visible = false;
             }
         }
+        private bool CheckNull()
+        {
+            bool isNull = false;
+            if (txtNameEmployee.Text == "" || txtPhonenumber.Text == "" || txtUserNameLogin.Text == "" ||
+                txtPasswordLogin.Text == "" || txtCIEmployee.Text == "" || cbbPosition.SelectedIndex == -1 || pBUser.Image == null) isNull = true;
+            return isNull;
+        }
         #endregion
         #region Event UC function
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (isADD == true && BLL.NhanVienBLL.Instance.checkExistUsername(txtUserNameLogin.Text) == true)
+            if (!CheckNull())
             {
-                NoticeBox box = new NoticeBox("Username is existed, please input other username!!");
-                box.ShowDialog();
-                return;
+                if (isADD == true && BLL.NhanVienBLL.Instance.checkExistUsername(txtUserNameLogin.Text) == true)
+                {
+                    NoticeBox box = new NoticeBox("Username is existed, please input other username!!");
+                    box.Show();
+                    return;
+                }
+                User user = new User()
+                {
+                    ID_User = this.ID_User,
+                    TenUser = txtNameEmployee.Text,
+                    ID_ChucVu = ((ChucVu)(cbbPosition.SelectedItem)).ID_ChucVu,
+                    CMND_CCCD = txtCIEmployee.Text,
+                    Username = txtUserNameLogin.Text,
+                    SDT = txtPhonenumber.Text,
+                    Password = txtPasswordLogin.Text,
+                    NgaySinh = dtpDayOfBirth.Value,
+                    NgayBatDauLam = DateTime.Now,
+                    AnhUser = BLL.ExtensionBLL.Instance.ImgToByte(pBUser.Image),
+                };
+                BLL.NhanVienBLL.Instance.Execute(user);
+                if (isADD == true)
+                {
+                    frmShift frm = new frmShift(user.ID_User);
+                    frm.ShowDialog();
+                }
+                d();
+                this.Close();
             }
-            User user = new User()
+            else
             {
-                ID_User = this.ID_User,
-                TenUser = txtNameEmployee.Text,
-                ID_ChucVu = ((ChucVu)(cbbPosition.SelectedItem)).ID_ChucVu,
-                CMND_CCCD = txtCIEmployee.Text,
-                Username = txtUserNameLogin.Text,
-                SDT = txtPhonenumber.Text,
-                Password = txtPasswordLogin.Text,
-                NgaySinh = dtpDayOfBirth.Value,
-                NgayBatDauLam = DateTime.Now,
-                AnhUser = BLL.ExtensionBLL.Instance.ImgToByte(pBUser.Image),
-            };
-            BLL.NhanVienBLL.Instance.Execute(user);
-            if (isADD == true)
-            {
-                frmShift frm = new frmShift(user.ID_User);
-                frm.ShowDialog();
+                NoticeBox box = new NoticeBox("Please fill all information!!!");
+                box.Show();
             }
-            d();
-            this.Close();
         }
 
         private void DetailEmployee_Load(object sender, EventArgs e)

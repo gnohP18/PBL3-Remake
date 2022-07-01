@@ -13,8 +13,8 @@ namespace GUI.frmGUISeller
             IDTable = idban;
             IDNhanVien = idNhanVien;
         }
-        public frmMainSeller.Mydel deleFrmMainSeller;
         #region Local Variable
+        public frmMainSeller.Mydel deleFrmMainSeller;
         List<MonAn_View> listMonAnViewDaDat;
         public delegate void Mydel();
         public Mydel d;
@@ -86,13 +86,8 @@ namespace GUI.frmGUISeller
             lblNameGuest.Text = _Guest.TenKhachHang;
             lblPoint.Text = _Guest.DiemTichLuy.ToString();
         }
-        #endregion
-        #region Event Form
-        private void frmPay_Load(object sender, EventArgs e)
+        private void LoadTextBox()
         {
-            listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
-            dgvPayment.DataSource = listMonAnViewDaDat;
-            LoadDataGridView(listMonAnViewDaDat);
             AddVoucher();
             AddPhoneNumber();
             AutoCompleteStringCollection autoVoucher = new AutoCompleteStringCollection();
@@ -111,6 +106,15 @@ namespace GUI.frmGUISeller
             }
             txtVoucher.AutoCompleteCustomSource = autoVoucher;
             txtGuestPhone.AutoCompleteCustomSource = autoPhoneNumberGuest;
+        }
+        #endregion
+        #region Event Form
+        private void frmPay_Load(object sender, EventArgs e)
+        {
+            listMonAnViewDaDat = MonAnBLL.Instance.GetListMonAnByIDBan(IDTable);
+            dgvPayment.DataSource = listMonAnViewDaDat;
+            LoadDataGridView(listMonAnViewDaDat);
+            LoadTextBox();
             lblTotal.Text = (bill + tax).ToString();
         }
         private void txtVoucher_TextChanged(object sender, EventArgs e)
@@ -167,26 +171,33 @@ namespace GUI.frmGUISeller
 
         private void btnPayReceipt_Click(object sender, EventArgs e)
         {
-            int total = Convert.ToInt32(lblTotal.Text);
-            HoaDon invoice = new HoaDon()
+            if (txtGuestMoney.Text != "" && txtGuestPhone.Text != "" && txtVoucher.Text != "")
             {
-                ID_HoaDon = HoaDonBLL.Instance.GetNewIDHoaDon(),
-                ID_User = IDNhanVien,
-                TongTien = total,
-                ID_KhachHang = _Guest.ID_KhachHang,
-                TienQuyDoiTuDiemTichLuy = this.TienQuyDoiTuDiemTichLuy,
-                MaVoucher = MaVoucher,
-                NgayLap = DateTime.Now,
-            };
-            HoaDonBLL.Instance.AddNewInvoice(invoice, listMonAnViewDaDat);
-            BanBLL.Instance.ClearAllMonOfBan(IDTable);
-            BanBLL.Instance.SetEmptyBan(IDTable);
-            deleFrmMainSeller(0, 1);
-            if (d != null) d();
-            frmReceipt frm = new frmReceipt(IDTable, invoice.ID_HoaDon);
-            frm.ShowDialog();
-            this.Close();
-
+                int total = Convert.ToInt32(lblTotal.Text);
+                HoaDon invoice = new HoaDon()
+                {
+                    ID_HoaDon = HoaDonBLL.Instance.GetNewIDHoaDon(),
+                    ID_User = IDNhanVien,
+                    TongTien = total,
+                    ID_KhachHang = _Guest.ID_KhachHang,
+                    TienQuyDoiTuDiemTichLuy = this.TienQuyDoiTuDiemTichLuy,
+                    MaVoucher = MaVoucher,
+                    NgayLap = DateTime.Now,
+                };
+                HoaDonBLL.Instance.AddNewInvoice(invoice, listMonAnViewDaDat);
+                BanBLL.Instance.ClearAllMonOfBan(IDTable);
+                BanBLL.Instance.SetEmptyBan(IDTable);
+                deleFrmMainSeller(0, 1);
+                if (d != null) d();
+                frmReceipt frm = new frmReceipt(IDTable, invoice.ID_HoaDon);
+                frm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                NoticeBox box = new NoticeBox("Please fill all information");
+                box.Show();
+            }
         }
 
         private void btnYes_Click(object sender, EventArgs e)
@@ -194,6 +205,7 @@ namespace GUI.frmGUISeller
             if (txtGuestPhone.Text == "")
             {
                 GuestInformation frm = new GuestInformation(-1);
+                frm.d = new GuestInformation.DeleReLoad(LoadTextBox);
                 frm.Show();
             }
             else
@@ -224,7 +236,12 @@ namespace GUI.frmGUISeller
             tempBill -= TienQuyDoiTuDiemTichLuy;
             lblTotal.Text = (tempBill + tax).ToString();
         }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
+
 
     }
 }

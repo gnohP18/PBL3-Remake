@@ -1,8 +1,8 @@
 ﻿using DTO;
+using GUI.frmGUIManager;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using GUI.frmGUIManager;
 namespace GUI.frmGUIUCForManager
 {
     public partial class EmployeesUC : UserControl
@@ -74,27 +74,36 @@ namespace GUI.frmGUIUCForManager
 
         private void btnTimeSheetEmployee_Click(object sender, EventArgs e)
         {
-            SetUIForButton(sender);
-            int index = dgvManageEmployee.CurrentCell.RowIndex;
-            int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
-            User _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
-            if (_User.ID_ChucVu != 1 || _User.ID_ChucVu != 2)
+            //SetUIForButton(sender);
+            int index = 0;
+            index = dgvManageEmployee.CurrentCell.RowIndex;
+            if (index == 0)
             {
-                EmployeeTimeSheet frm = new EmployeeTimeSheet(ID_User);
-                frm.StartPosition = FormStartPosition.CenterScreen;
-                frm.Show();
+                NoticeBox box = new NoticeBox("Please choose one employee to view detail shift");
+                box.Show();
             }
             else
             {
-                if (_User.ID_ChucVu == 1)
+                int ID_User = Convert.ToInt32(dgvManageEmployee.Rows[index].Cells[0].Value.ToString());
+                User _User = BLL.NhanVienBLL.Instance.GetNhanVienByID(ID_User);
+                if (_User.ID_ChucVu != 1 || _User.ID_ChucVu != 2)
                 {
-                    NoticeBox box = new NoticeBox("This is Admin-Can't have TimeSheet");
-                    box.Show();
+                    EmployeeTimeSheet frm = new EmployeeTimeSheet(ID_User);
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.Show();
                 }
-                else if (_User.ID_ChucVu == 2)
+                else
                 {
-                    NoticeBox box = new NoticeBox("This is Manager-Can't have TimeSheet");
-                    box.Show();
+                    if (_User.ID_ChucVu == 1)
+                    {
+                        NoticeBox box = new NoticeBox("This is Admin-Can't have TimeSheet");
+                        box.Show();
+                    }
+                    else if (_User.ID_ChucVu == 2)
+                    {
+                        NoticeBox box = new NoticeBox("This is Manager-Can't have TimeSheet");
+                        box.Show();
+                    }
                 }
             }
         }
@@ -121,7 +130,7 @@ namespace GUI.frmGUIUCForManager
         }
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            if(this.Controls.Contains(SalaryManageUC.Instance))
+            if (this.Controls.Contains(SalaryManageUC.Instance))
                 this.Controls.Remove(SalaryManageUC.Instance);
             SetUIForButton(sender);
         }

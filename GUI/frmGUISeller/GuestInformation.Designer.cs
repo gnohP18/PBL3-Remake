@@ -63,7 +63,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 22);
+            this.label1.Size = new System.Drawing.Size(64, 19);
             this.label1.TabIndex = 53;
             this.label1.Text = "Guest ID";
             // 
@@ -73,9 +73,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(172, 9);
+            this.label2.Location = new System.Drawing.Point(273, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 35);
+            this.label2.Size = new System.Drawing.Size(65, 27);
             this.label2.TabIndex = 55;
             this.label2.Text = "Guest";
             // 
@@ -87,7 +87,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 22);
+            this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 56;
             this.label3.Text = "Name";
             // 
@@ -99,7 +99,7 @@
             this.lblIDGuest.ForeColor = System.Drawing.Color.Black;
             this.lblIDGuest.Location = new System.Drawing.Point(387, 46);
             this.lblIDGuest.Name = "lblIDGuest";
-            this.lblIDGuest.Size = new System.Drawing.Size(78, 22);
+            this.lblIDGuest.Size = new System.Drawing.Size(64, 19);
             this.lblIDGuest.TabIndex = 57;
             this.lblIDGuest.Text = "Guest ID";
             // 
@@ -111,7 +111,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(12, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 22);
+            this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 58;
             this.label4.Text = "Phone";
             // 
@@ -123,7 +123,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(12, 189);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 22);
+            this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 60;
             this.label5.Text = "Address";
             // 
@@ -135,7 +135,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(12, 237);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 22);
+            this.label6.Size = new System.Drawing.Size(58, 19);
             this.label6.TabIndex = 62;
             this.label6.Text = "Gender";
             // 
@@ -144,7 +144,7 @@
             this.radMale.AutoSize = true;
             this.radMale.Location = new System.Drawing.Point(381, 237);
             this.radMale.Name = "radMale";
-            this.radMale.Size = new System.Drawing.Size(58, 20);
+            this.radMale.Size = new System.Drawing.Size(48, 17);
             this.radMale.TabIndex = 63;
             this.radMale.TabStop = true;
             this.radMale.Text = "Male";
@@ -155,7 +155,7 @@
             this.radFemale.AutoSize = true;
             this.radFemale.Location = new System.Drawing.Point(499, 237);
             this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(74, 20);
+            this.radFemale.Size = new System.Drawing.Size(59, 17);
             this.radFemale.TabIndex = 64;
             this.radFemale.TabStop = true;
             this.radFemale.Text = "Female";
@@ -169,7 +169,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(12, 278);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 22);
+            this.label7.Size = new System.Drawing.Size(124, 19);
             this.label7.TabIndex = 66;
             this.label7.Text = "Registration date";
             // 
@@ -181,7 +181,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(12, 326);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 22);
+            this.label8.Size = new System.Drawing.Size(44, 19);
             this.label8.TabIndex = 68;
             this.label8.Text = "Point";
             // 
@@ -207,7 +207,7 @@
             this.lblRegistDay.ForeColor = System.Drawing.Color.Black;
             this.lblRegistDay.Location = new System.Drawing.Point(377, 276);
             this.lblRegistDay.Name = "lblRegistDay";
-            this.lblRegistDay.Size = new System.Drawing.Size(149, 22);
+            this.lblRegistDay.Size = new System.Drawing.Size(124, 19);
             this.lblRegistDay.TabIndex = 71;
             this.lblRegistDay.Text = "Registration date";
             // 
@@ -352,9 +352,7 @@
             this.dgvHistoryReceipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHistoryReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHistoryReceipt.BackgroundColor = System.Drawing.Color.White;
-            this.dgvHistoryReceipt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvHistoryReceipt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -364,7 +362,7 @@
             this.dgvHistoryReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistoryReceipt.ColumnHeadersHeight = 29;
             this.dgvHistoryReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -375,8 +373,10 @@
             this.dgvHistoryReceipt.EnableHeadersVisualStyles = false;
             this.dgvHistoryReceipt.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHistoryReceipt.Location = new System.Drawing.Point(13, 352);
+            this.dgvHistoryReceipt.MultiSelect = false;
             this.dgvHistoryReceipt.Name = "dgvHistoryReceipt";
             this.dgvHistoryReceipt.ReadOnly = true;
+            this.dgvHistoryReceipt.RowHeadersVisible = false;
             this.dgvHistoryReceipt.RowHeadersWidth = 51;
             this.dgvHistoryReceipt.RowTemplate.Height = 24;
             this.dgvHistoryReceipt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

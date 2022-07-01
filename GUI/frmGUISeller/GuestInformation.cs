@@ -5,8 +5,7 @@ namespace GUI.frmGUISeller
 {
     public partial class GuestInformation : Form
     {
-        public KhachHang khachhang { get; set; }
-        private int ID_KhachHang { get; set; }
+
         public GuestInformation(int ID_KhachHang)
         {
             this.ID_KhachHang = ID_KhachHang;
@@ -17,14 +16,20 @@ namespace GUI.frmGUISeller
             InitializeComponent();
             GUI();
         }
+        #region Local Variable
+        public KhachHang khachhang { get; set; }
+        private int ID_KhachHang { get; set; }
+        public delegate void DeleReLoad();
+        public DeleReLoad d { get; set; }
+        #endregion
+        #region Function
         private void SetupDataGridView()
         {
-            dgvHistoryReceipt.DataSource = BLL.HoaDonBLL.Instance.GetAllHoaDonByIDKhachHang(ID_KhachHang);
-            dgvHistoryReceipt.Columns[7].Visible = false;
-            dgvHistoryReceipt.Columns[8].Visible = false;
-            dgvHistoryReceipt.Columns[10].Visible = false;
+            dgvHistoryReceipt.DataSource = BLL.KhachHangBLL.Instance.GetDetailGuest_ViewByID_Guest(ID_KhachHang);
             dgvHistoryReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
         }
+        #endregion
+
         private void GUI()
         {
             if (ID_KhachHang != -1)
@@ -43,6 +48,7 @@ namespace GUI.frmGUISeller
                 {
                     radFemale.Checked = true;
                 }
+                btnAdd.Visible = false;
                 SetupDataGridView();
             }
             else
@@ -78,7 +84,10 @@ namespace GUI.frmGUISeller
                 if (radMale.Checked)
                     gender = true;
                 BLL.KhachHangBLL.Instance.AddNewKhachHang(txtGuestName.Text, txtGuestPhone.Text, txtGuestAddress.Text, gender, 0);
+                d();
                 this.Close();
+                NoticeBox box = new NoticeBox("Add new guest successfully!!!");
+                box.Show();
             }
         }
 

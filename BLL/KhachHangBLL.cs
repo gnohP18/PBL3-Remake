@@ -1,7 +1,6 @@
-﻿using Entity;
+﻿using DTO;
 using System.Collections.Generic;
 using System.Linq;
-using DTO;
 namespace BLL
 {
     public class KhachHangBLL : BLL
@@ -61,6 +60,25 @@ namespace BLL
             newKhachHang.SDT = SDT;
             newKhachHang.GioiTinh = GioiTinh;
             newKhachHang.DiemTichLuy = DiemTihLuy;
+            dALQLNH.KhachHangs.Add(newKhachHang);
+            dALQLNH.SaveChanges();
+        }
+        public List<ChiTietKhachHang_View> GetDetailGuest_ViewByID_Guest(int ID_Guest)
+        {
+            List<ChiTietKhachHang_View> list = new List<ChiTietKhachHang_View>();
+            KhachHang kh = GetGuestByIDGuest(ID_Guest);
+            foreach (HoaDon i in HoaDonBLL.Instance.GetAllHoaDonByIDKhachHang(ID_Guest))
+            {
+                ChiTietKhachHang_View ctkh_v = new ChiTietKhachHang_View();
+                ctkh_v.ID_Guest = ID_Guest;
+                ctkh_v.Name_Guest = kh.TenKhachHang;
+                ctkh_v.ID_Receipt = i.ID_HoaDon;
+                ctkh_v.MoneyConvertFormPoint = i.TienQuyDoiTuDiemTichLuy;
+                ctkh_v.Total = i.TongTien;
+                ctkh_v.Date_Create = i.NgayLap;
+                list.Add(ctkh_v);
+            }
+            return list;
         }
     }
 }

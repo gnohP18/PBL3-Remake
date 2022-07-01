@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShift));
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
             this.pnCaLam = new System.Windows.Forms.FlowLayoutPanel();
@@ -42,7 +43,7 @@
             this.label1.Location = new System.Drawing.Point(231, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 41);
+            this.label1.Size = new System.Drawing.Size(70, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "Shift";
             // 
@@ -101,6 +102,7 @@
             this.Controls.Add(this.pnCaLam);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmShift";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

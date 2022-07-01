@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbStatusTable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTimeWork = new System.Windows.Forms.Label();
             this.btnAttend = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnTable = new System.Windows.Forms.Panel();
             this.Real_time = new System.Windows.Forms.Timer(this.components);
-            this.cbbStatusTable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // cbbStatusTable
+            // 
+            this.cbbStatusTable.BackColor = System.Drawing.Color.Transparent;
+            this.cbbStatusTable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbStatusTable.BorderRadius = 15;
+            this.cbbStatusTable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbStatusTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatusTable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbStatusTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbStatusTable.ItemHeight = 30;
+            this.cbbStatusTable.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbStatusTable.Location = new System.Drawing.Point(855, 31);
+            this.cbbStatusTable.Name = "cbbStatusTable";
+            this.cbbStatusTable.Size = new System.Drawing.Size(187, 36);
+            this.cbbStatusTable.TabIndex = 42;
+            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -231,26 +251,6 @@
             // 
             this.Real_time.Tick += new System.EventHandler(this.Real_time_Tick);
             // 
-            // cbbStatusTable
-            // 
-            this.cbbStatusTable.BackColor = System.Drawing.Color.Transparent;
-            this.cbbStatusTable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.cbbStatusTable.BorderRadius = 15;
-            this.cbbStatusTable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.cbbStatusTable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbStatusTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbStatusTable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbStatusTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbStatusTable.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbStatusTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbStatusTable.ItemHeight = 30;
-            this.cbbStatusTable.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.cbbStatusTable.Location = new System.Drawing.Point(855, 31);
-            this.cbbStatusTable.Name = "cbbStatusTable";
-            this.cbbStatusTable.Size = new System.Drawing.Size(187, 36);
-            this.cbbStatusTable.TabIndex = 42;
-            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
-            // 
             // frmMainSeller
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -259,6 +259,7 @@
             this.Controls.Add(this.pnTable);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMainSeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

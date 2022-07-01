@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoFood));
             this.btClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
@@ -35,20 +36,20 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgvInforInputFood = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtTenNhaCungCap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFoodID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMaNhaCungCap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtInputDay = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtCurrentQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFoodID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCurrentQuantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtInputDay = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMaNhaCungCap = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFoodName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTenNhaCungCap = new Guna.UI2.WinForms.Guna2TextBox();
-            this.comboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInforInputFood)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -149,6 +150,155 @@
             this.panel1.Size = new System.Drawing.Size(688, 185);
             this.panel1.TabIndex = 37;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox1.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.comboBox1.BorderRadius = 15;
+            this.comboBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox1.ItemHeight = 30;
+            this.comboBox1.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.comboBox1.Location = new System.Drawing.Point(480, 52);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(189, 36);
+            this.comboBox1.TabIndex = 38;
+            // 
+            // txtTenNhaCungCap
+            // 
+            this.txtTenNhaCungCap.AutoRoundedCorners = true;
+            this.txtTenNhaCungCap.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtTenNhaCungCap.BorderRadius = 17;
+            this.txtTenNhaCungCap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenNhaCungCap.DefaultText = "";
+            this.txtTenNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNhaCungCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNhaCungCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNhaCungCap.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTenNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenNhaCungCap.ForeColor = System.Drawing.Color.Black;
+            this.txtTenNhaCungCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNhaCungCap.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtTenNhaCungCap.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTenNhaCungCap.Location = new System.Drawing.Point(480, 94);
+            this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
+            this.txtTenNhaCungCap.PasswordChar = '\0';
+            this.txtTenNhaCungCap.PlaceholderText = "";
+            this.txtTenNhaCungCap.SelectedText = "";
+            this.txtTenNhaCungCap.Size = new System.Drawing.Size(189, 36);
+            this.txtTenNhaCungCap.TabIndex = 70;
+            // 
+            // txtFoodID
+            // 
+            this.txtFoodID.AutoRoundedCorners = true;
+            this.txtFoodID.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtFoodID.BorderRadius = 17;
+            this.txtFoodID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFoodID.DefaultText = "";
+            this.txtFoodID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFoodID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFoodID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFoodID.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtFoodID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFoodID.ForeColor = System.Drawing.Color.Black;
+            this.txtFoodID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFoodID.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtFoodID.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtFoodID.Location = new System.Drawing.Point(154, 10);
+            this.txtFoodID.Name = "txtFoodID";
+            this.txtFoodID.PasswordChar = '\0';
+            this.txtFoodID.PlaceholderText = "";
+            this.txtFoodID.SelectedText = "";
+            this.txtFoodID.Size = new System.Drawing.Size(189, 36);
+            this.txtFoodID.TabIndex = 38;
+            // 
+            // txtFoodName
+            // 
+            this.txtFoodName.AutoRoundedCorners = true;
+            this.txtFoodName.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtFoodName.BorderRadius = 17;
+            this.txtFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFoodName.DefaultText = "";
+            this.txtFoodName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFoodName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFoodName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFoodName.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtFoodName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFoodName.ForeColor = System.Drawing.Color.Black;
+            this.txtFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFoodName.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtFoodName.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtFoodName.Location = new System.Drawing.Point(480, 10);
+            this.txtFoodName.Name = "txtFoodName";
+            this.txtFoodName.PasswordChar = '\0';
+            this.txtFoodName.PlaceholderText = "";
+            this.txtFoodName.SelectedText = "";
+            this.txtFoodName.Size = new System.Drawing.Size(189, 36);
+            this.txtFoodName.TabIndex = 68;
+            // 
+            // txtMaNhaCungCap
+            // 
+            this.txtMaNhaCungCap.AutoRoundedCorners = true;
+            this.txtMaNhaCungCap.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtMaNhaCungCap.BorderRadius = 17;
+            this.txtMaNhaCungCap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNhaCungCap.DefaultText = "";
+            this.txtMaNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNhaCungCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaNhaCungCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNhaCungCap.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtMaNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMaNhaCungCap.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNhaCungCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaNhaCungCap.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNhaCungCap.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtMaNhaCungCap.Location = new System.Drawing.Point(153, 135);
+            this.txtMaNhaCungCap.Name = "txtMaNhaCungCap";
+            this.txtMaNhaCungCap.PasswordChar = '\0';
+            this.txtMaNhaCungCap.PlaceholderText = "";
+            this.txtMaNhaCungCap.SelectedText = "";
+            this.txtMaNhaCungCap.Size = new System.Drawing.Size(189, 36);
+            this.txtMaNhaCungCap.TabIndex = 67;
+            // 
+            // txtInputDay
+            // 
+            this.txtInputDay.AutoRoundedCorners = true;
+            this.txtInputDay.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtInputDay.BorderRadius = 17;
+            this.txtInputDay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtInputDay.DefaultText = "";
+            this.txtInputDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtInputDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtInputDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtInputDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtInputDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtInputDay.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtInputDay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtInputDay.ForeColor = System.Drawing.Color.Black;
+            this.txtInputDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtInputDay.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtInputDay.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtInputDay.Location = new System.Drawing.Point(153, 93);
+            this.txtInputDay.Name = "txtInputDay";
+            this.txtInputDay.PasswordChar = '\0';
+            this.txtInputDay.PlaceholderText = "";
+            this.txtInputDay.SelectedText = "";
+            this.txtInputDay.Size = new System.Drawing.Size(189, 36);
+            this.txtInputDay.TabIndex = 66;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -160,6 +310,32 @@
             this.label7.Size = new System.Drawing.Size(137, 19);
             this.label7.TabIndex = 62;
             this.label7.Text = "Name manufacture";
+            // 
+            // txtCurrentQuantity
+            // 
+            this.txtCurrentQuantity.AutoRoundedCorners = true;
+            this.txtCurrentQuantity.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtCurrentQuantity.BorderRadius = 17;
+            this.txtCurrentQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCurrentQuantity.DefaultText = "";
+            this.txtCurrentQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCurrentQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCurrentQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCurrentQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCurrentQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCurrentQuantity.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtCurrentQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCurrentQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtCurrentQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCurrentQuantity.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.txtCurrentQuantity.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtCurrentQuantity.Location = new System.Drawing.Point(154, 50);
+            this.txtCurrentQuantity.Name = "txtCurrentQuantity";
+            this.txtCurrentQuantity.PasswordChar = '\0';
+            this.txtCurrentQuantity.PlaceholderText = "";
+            this.txtCurrentQuantity.SelectedText = "";
+            this.txtCurrentQuantity.Size = new System.Drawing.Size(189, 36);
+            this.txtCurrentQuantity.TabIndex = 65;
             // 
             // label6
             // 
@@ -233,181 +409,6 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Food ID";
             // 
-            // txtFoodID
-            // 
-            this.txtFoodID.AutoRoundedCorners = true;
-            this.txtFoodID.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtFoodID.BorderRadius = 17;
-            this.txtFoodID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFoodID.DefaultText = "";
-            this.txtFoodID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFoodID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFoodID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFoodID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFoodID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodID.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtFoodID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFoodID.ForeColor = System.Drawing.Color.Black;
-            this.txtFoodID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodID.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtFoodID.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtFoodID.Location = new System.Drawing.Point(154, 10);
-            this.txtFoodID.Name = "txtFoodID";
-            this.txtFoodID.PasswordChar = '\0';
-            this.txtFoodID.PlaceholderText = "";
-            this.txtFoodID.SelectedText = "";
-            this.txtFoodID.Size = new System.Drawing.Size(189, 36);
-            this.txtFoodID.TabIndex = 38;
-            // 
-            // txtCurrentQuantity
-            // 
-            this.txtCurrentQuantity.AutoRoundedCorners = true;
-            this.txtCurrentQuantity.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtCurrentQuantity.BorderRadius = 17;
-            this.txtCurrentQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCurrentQuantity.DefaultText = "";
-            this.txtCurrentQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCurrentQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCurrentQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCurrentQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentQuantity.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCurrentQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCurrentQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txtCurrentQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentQuantity.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtCurrentQuantity.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtCurrentQuantity.Location = new System.Drawing.Point(154, 50);
-            this.txtCurrentQuantity.Name = "txtCurrentQuantity";
-            this.txtCurrentQuantity.PasswordChar = '\0';
-            this.txtCurrentQuantity.PlaceholderText = "";
-            this.txtCurrentQuantity.SelectedText = "";
-            this.txtCurrentQuantity.Size = new System.Drawing.Size(189, 36);
-            this.txtCurrentQuantity.TabIndex = 65;
-            // 
-            // txtInputDay
-            // 
-            this.txtInputDay.AutoRoundedCorners = true;
-            this.txtInputDay.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtInputDay.BorderRadius = 17;
-            this.txtInputDay.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInputDay.DefaultText = "";
-            this.txtInputDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtInputDay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtInputDay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtInputDay.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtInputDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInputDay.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtInputDay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtInputDay.ForeColor = System.Drawing.Color.Black;
-            this.txtInputDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInputDay.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtInputDay.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtInputDay.Location = new System.Drawing.Point(153, 93);
-            this.txtInputDay.Name = "txtInputDay";
-            this.txtInputDay.PasswordChar = '\0';
-            this.txtInputDay.PlaceholderText = "";
-            this.txtInputDay.SelectedText = "";
-            this.txtInputDay.Size = new System.Drawing.Size(189, 36);
-            this.txtInputDay.TabIndex = 66;
-            // 
-            // txtMaNhaCungCap
-            // 
-            this.txtMaNhaCungCap.AutoRoundedCorners = true;
-            this.txtMaNhaCungCap.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtMaNhaCungCap.BorderRadius = 17;
-            this.txtMaNhaCungCap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNhaCungCap.DefaultText = "";
-            this.txtMaNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNhaCungCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaNhaCungCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNhaCungCap.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtMaNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMaNhaCungCap.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNhaCungCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaNhaCungCap.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNhaCungCap.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtMaNhaCungCap.Location = new System.Drawing.Point(153, 135);
-            this.txtMaNhaCungCap.Name = "txtMaNhaCungCap";
-            this.txtMaNhaCungCap.PasswordChar = '\0';
-            this.txtMaNhaCungCap.PlaceholderText = "";
-            this.txtMaNhaCungCap.SelectedText = "";
-            this.txtMaNhaCungCap.Size = new System.Drawing.Size(189, 36);
-            this.txtMaNhaCungCap.TabIndex = 67;
-            // 
-            // txtFoodName
-            // 
-            this.txtFoodName.AutoRoundedCorners = true;
-            this.txtFoodName.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtFoodName.BorderRadius = 17;
-            this.txtFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFoodName.DefaultText = "";
-            this.txtFoodName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFoodName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFoodName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodName.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtFoodName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFoodName.ForeColor = System.Drawing.Color.Black;
-            this.txtFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFoodName.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtFoodName.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtFoodName.Location = new System.Drawing.Point(480, 10);
-            this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.PasswordChar = '\0';
-            this.txtFoodName.PlaceholderText = "";
-            this.txtFoodName.SelectedText = "";
-            this.txtFoodName.Size = new System.Drawing.Size(189, 36);
-            this.txtFoodName.TabIndex = 68;
-            // 
-            // txtTenNhaCungCap
-            // 
-            this.txtTenNhaCungCap.AutoRoundedCorners = true;
-            this.txtTenNhaCungCap.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtTenNhaCungCap.BorderRadius = 17;
-            this.txtTenNhaCungCap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenNhaCungCap.DefaultText = "";
-            this.txtTenNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNhaCungCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNhaCungCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNhaCungCap.FocusedState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtTenNhaCungCap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenNhaCungCap.ForeColor = System.Drawing.Color.Black;
-            this.txtTenNhaCungCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNhaCungCap.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtTenNhaCungCap.HoverState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtTenNhaCungCap.Location = new System.Drawing.Point(480, 94);
-            this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
-            this.txtTenNhaCungCap.PasswordChar = '\0';
-            this.txtTenNhaCungCap.PlaceholderText = "";
-            this.txtTenNhaCungCap.SelectedText = "";
-            this.txtTenNhaCungCap.Size = new System.Drawing.Size(189, 36);
-            this.txtTenNhaCungCap.TabIndex = 70;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.comboBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.comboBox1.BorderRadius = 15;
-            this.comboBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBox1.ItemHeight = 30;
-            this.comboBox1.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.comboBox1.Location = new System.Drawing.Point(480, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 36);
-            this.comboBox1.TabIndex = 38;
-            // 
             // InfoFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -421,6 +422,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvInforInputFood);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InfoFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoFood";

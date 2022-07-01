@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailTable));
             this.btnReady = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnExecute = new Guna.UI2.WinForms.Guna2Button();
@@ -60,10 +61,10 @@
             this.btnReady.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReady.ForeColor = System.Drawing.Color.White;
             this.btnReady.Image = global::GUI.Properties.Resources.checkedGreen;
-            this.btnReady.Location = new System.Drawing.Point(44, 50);
-            this.btnReady.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReady.Location = new System.Drawing.Point(33, 41);
+            this.btnReady.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReady.Name = "btnReady";
-            this.btnReady.Size = new System.Drawing.Size(180, 46);
+            this.btnReady.Size = new System.Drawing.Size(135, 37);
             this.btnReady.TabIndex = 29;
             this.btnReady.Text = "Ready dish";
             this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
@@ -73,10 +74,10 @@
             this.guna2Panel3.Controls.Add(this.btnExecute);
             this.guna2Panel3.Controls.Add(this.btnClose);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 436);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 354);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(781, 96);
+            this.guna2Panel3.Size = new System.Drawing.Size(586, 78);
             this.guna2Panel3.TabIndex = 36;
             // 
             // btnExecute
@@ -90,10 +91,10 @@
             this.btnExecute.FillColor = System.Drawing.Color.SlateBlue;
             this.btnExecute.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExecute.ForeColor = System.Drawing.Color.White;
-            this.btnExecute.Location = new System.Drawing.Point(299, 23);
-            this.btnExecute.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExecute.Location = new System.Drawing.Point(224, 19);
+            this.btnExecute.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(180, 46);
+            this.btnExecute.Size = new System.Drawing.Size(135, 37);
             this.btnExecute.TabIndex = 29;
             this.btnExecute.Text = "Execute Food";
             this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
@@ -106,11 +107,11 @@
             this.btnClose.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClose.Image = global::GUI.Properties.Resources.exit_32;
-            this.btnClose.Location = new System.Drawing.Point(703, 23);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(527, 19);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnClose.Size = new System.Drawing.Size(64, 59);
+            this.btnClose.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnClose.Size = new System.Drawing.Size(48, 48);
             this.btnClose.TabIndex = 28;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -119,10 +120,10 @@
             // 
             this.guna2Panel2.Controls.Add(this.dgvDetailTable);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 107);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 87);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(781, 324);
+            this.guna2Panel2.Size = new System.Drawing.Size(586, 263);
             this.guna2Panel2.TabIndex = 35;
             // 
             // dgvDetailTable
@@ -151,6 +152,7 @@
             this.dgvDetailTable.EnableHeadersVisualStyles = false;
             this.dgvDetailTable.GridColor = System.Drawing.Color.White;
             this.dgvDetailTable.Location = new System.Drawing.Point(0, 0);
+            this.dgvDetailTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDetailTable.Name = "dgvDetailTable";
             this.dgvDetailTable.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -171,7 +173,7 @@
             this.dgvDetailTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetailTable.RowTemplate.Height = 24;
             this.dgvDetailTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetailTable.Size = new System.Drawing.Size(781, 324);
+            this.dgvDetailTable.Size = new System.Drawing.Size(586, 263);
             this.dgvDetailTable.TabIndex = 1;
             // 
             // guna2Panel1
@@ -183,9 +185,9 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(781, 107);
+            this.guna2Panel1.Size = new System.Drawing.Size(586, 87);
             this.guna2Panel1.TabIndex = 34;
             // 
             // btnInforFoodWareHouse
@@ -199,10 +201,10 @@
             this.btnInforFoodWareHouse.FillColor = System.Drawing.Color.SlateBlue;
             this.btnInforFoodWareHouse.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInforFoodWareHouse.ForeColor = System.Drawing.Color.White;
-            this.btnInforFoodWareHouse.Location = new System.Drawing.Point(299, 50);
-            this.btnInforFoodWareHouse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInforFoodWareHouse.Location = new System.Drawing.Point(224, 41);
+            this.btnInforFoodWareHouse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInforFoodWareHouse.Name = "btnInforFoodWareHouse";
-            this.btnInforFoodWareHouse.Size = new System.Drawing.Size(180, 46);
+            this.btnInforFoodWareHouse.Size = new System.Drawing.Size(135, 37);
             this.btnInforFoodWareHouse.TabIndex = 29;
             this.btnInforFoodWareHouse.Text = "WareHouse";
             this.btnInforFoodWareHouse.Click += new System.EventHandler(this.btnInforFoodWareHouse_Click);
@@ -219,10 +221,10 @@
             this.btnNoReady.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNoReady.ForeColor = System.Drawing.Color.White;
             this.btnNoReady.Image = global::GUI.Properties.Resources.uncheckedRed;
-            this.btnNoReady.Location = new System.Drawing.Point(567, 50);
-            this.btnNoReady.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNoReady.Location = new System.Drawing.Point(425, 41);
+            this.btnNoReady.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNoReady.Name = "btnNoReady";
-            this.btnNoReady.Size = new System.Drawing.Size(180, 46);
+            this.btnNoReady.Size = new System.Drawing.Size(135, 37);
             this.btnNoReady.TabIndex = 29;
             this.btnNoReady.Text = "No ready dish";
             this.btnNoReady.Click += new System.EventHandler(this.btnNoReady_Click);
@@ -235,23 +237,25 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(292, 6);
+            this.label2.Location = new System.Drawing.Point(219, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 32);
+            this.label2.Size = new System.Drawing.Size(126, 26);
             this.label2.TabIndex = 25;
             this.label2.Text = "Detail table";
             // 
             // DetailTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(781, 532);
+            this.ClientSize = new System.Drawing.Size(586, 432);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DetailTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetailTable";

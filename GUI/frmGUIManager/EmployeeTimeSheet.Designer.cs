@@ -33,6 +33,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeTimeSheet));
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID_User = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(23, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 23);
+            this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 26;
             this.label3.Text = "Time sheet";
             // 
@@ -81,7 +82,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(133, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 23);
+            this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 27;
             this.label1.Text = "ID";
             // 
@@ -93,7 +94,7 @@
             this.lblID_User.ForeColor = System.Drawing.Color.Black;
             this.lblID_User.Location = new System.Drawing.Point(155, 8);
             this.lblID_User.Name = "lblID_User";
-            this.lblID_User.Size = new System.Drawing.Size(28, 23);
+            this.lblID_User.Size = new System.Drawing.Size(22, 18);
             this.lblID_User.TabIndex = 28;
             this.lblID_User.Text = "ID";
             // 
@@ -105,7 +106,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(25, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 23);
+            this.label2.Size = new System.Drawing.Size(49, 18);
             this.label2.TabIndex = 29;
             this.label2.Text = "Name";
             // 
@@ -117,7 +118,7 @@
             this.lblName_User.ForeColor = System.Drawing.Color.Black;
             this.lblName_User.Location = new System.Drawing.Point(70, 27);
             this.lblName_User.Name = "lblName_User";
-            this.lblName_User.Size = new System.Drawing.Size(23, 23);
+            this.lblName_User.Size = new System.Drawing.Size(19, 18);
             this.lblName_User.TabIndex = 30;
             this.lblName_User.Text = "A";
             // 
@@ -196,7 +197,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 19);
+            this.label5.Size = new System.Drawing.Size(44, 15);
             this.label5.TabIndex = 36;
             this.label5.Text = "Absent";
             // 
@@ -220,7 +221,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(3, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 19);
+            this.label6.Size = new System.Drawing.Size(69, 15);
             this.label6.TabIndex = 38;
             this.label6.Text = "Attendance";
             // 
@@ -244,7 +245,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(3, 38);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 19);
+            this.label8.Size = new System.Drawing.Size(31, 15);
             this.label8.TabIndex = 40;
             this.label8.Text = "Late";
             // 
@@ -268,7 +269,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(193, 393);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 19);
+            this.label7.Size = new System.Drawing.Size(99, 15);
             this.label7.TabIndex = 44;
             this.label7.Text = "Coefficients salary";
             // 
@@ -292,7 +293,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(193, 377);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 19);
+            this.label10.Size = new System.Drawing.Size(48, 15);
             this.label10.TabIndex = 42;
             this.label10.Text = "Position";
             // 
@@ -327,7 +328,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 19);
+            this.label4.Size = new System.Drawing.Size(34, 15);
             this.label4.TabIndex = 47;
             this.label4.Text = "Total";
             // 
@@ -404,6 +405,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeTimeSheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeTimeSheet";

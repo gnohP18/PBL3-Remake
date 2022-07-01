@@ -85,7 +85,7 @@
             this.cboBan.IntegralHeight = false;
             this.cboBan.Location = new System.Drawing.Point(344, 91);
             this.cboBan.Name = "cboBan";
-            this.cboBan.Size = new System.Drawing.Size(157, 46);
+            this.cboBan.Size = new System.Drawing.Size(157, 38);
             this.cboBan.TabIndex = 9;
             // 
             // frmCollaborTable
@@ -98,6 +98,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCollaborTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCollaborTable";

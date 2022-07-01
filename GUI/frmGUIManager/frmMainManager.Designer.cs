@@ -29,8 +29,8 @@ namespace GUI.frmGUIManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainManager));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnUC = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -39,13 +39,14 @@ namespace GUI.frmGUIManager
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnOverView = new System.Windows.Forms.Button();
             this.btnInforRestaurant = new System.Windows.Forms.Button();
+            this.pnUC = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -64,14 +65,6 @@ namespace GUI.frmGUIManager
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 700);
             this.panel2.TabIndex = 1;
-            // 
-            // pnUC
-            // 
-            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnUC.Location = new System.Drawing.Point(200, 100);
-            this.pnUC.Name = "pnUC";
-            this.pnUC.Size = new System.Drawing.Size(1200, 700);
-            this.pnUC.TabIndex = 2;
             // 
             // btnExit
             // 
@@ -215,6 +208,14 @@ namespace GUI.frmGUIManager
             this.btnInforRestaurant.UseVisualStyleBackColor = true;
             this.btnInforRestaurant.Click += new System.EventHandler(this.btnInforRestaurant_Click);
             // 
+            // pnUC
+            // 
+            this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnUC.Location = new System.Drawing.Point(200, 100);
+            this.pnUC.Name = "pnUC";
+            this.pnUC.Size = new System.Drawing.Size(1200, 700);
+            this.pnUC.TabIndex = 2;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -225,17 +226,6 @@ namespace GUI.frmGUIManager
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1400, 100);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Panel;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1400, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -248,6 +238,17 @@ namespace GUI.frmGUIManager
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Panel;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1400, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMainManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -257,6 +258,7 @@ namespace GUI.frmGUIManager
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMainManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainManager";
@@ -264,8 +266,8 @@ namespace GUI.frmGUIManager
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

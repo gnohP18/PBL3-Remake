@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailMaterial));
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -72,7 +73,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(36, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 16);
+            this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "ID";
             // 
@@ -80,7 +81,7 @@
             // 
             this.txtID.Location = new System.Drawing.Point(90, 36);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(141, 22);
+            this.txtID.Size = new System.Drawing.Size(141, 20);
             this.txtID.TabIndex = 1;
             // 
             // cbbKindOfMaterial
@@ -89,7 +90,7 @@
             this.cbbKindOfMaterial.FormattingEnabled = true;
             this.cbbKindOfMaterial.Location = new System.Drawing.Point(35, 243);
             this.cbbKindOfMaterial.Name = "cbbKindOfMaterial";
-            this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 24);
+            this.cbbKindOfMaterial.Size = new System.Drawing.Size(212, 21);
             this.cbbKindOfMaterial.TabIndex = 3;
             // 
             // btnClose
@@ -134,7 +135,7 @@
             this.lbTienDe.Location = new System.Drawing.Point(71, 9);
             this.lbTienDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTienDe.Name = "lbTienDe";
-            this.lbTienDe.Size = new System.Drawing.Size(160, 23);
+            this.lbTienDe.Size = new System.Drawing.Size(129, 18);
             this.lbTienDe.TabIndex = 10;
             this.lbTienDe.Text = "Add new material";
             // 
@@ -146,7 +147,7 @@
             this.label3.Location = new System.Drawing.Point(35, 216);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 23);
+            this.label3.Size = new System.Drawing.Size(114, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Kind of material";
             // 
@@ -158,7 +159,7 @@
             this.label2.Location = new System.Drawing.Point(35, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
+            this.label2.Size = new System.Drawing.Size(49, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Expiry";
             // 
@@ -167,7 +168,7 @@
             this.txtExpiry.Location = new System.Drawing.Point(35, 190);
             this.txtExpiry.Margin = new System.Windows.Forms.Padding(4);
             this.txtExpiry.Name = "txtExpiry";
-            this.txtExpiry.Size = new System.Drawing.Size(212, 22);
+            this.txtExpiry.Size = new System.Drawing.Size(212, 20);
             this.txtExpiry.TabIndex = 2;
             // 
             // label1
@@ -178,7 +179,7 @@
             this.label1.Location = new System.Drawing.Point(35, 110);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 23);
+            this.label1.Size = new System.Drawing.Size(35, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Unit";
             // 
@@ -187,7 +188,7 @@
             this.txtUnit.Location = new System.Drawing.Point(35, 137);
             this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(212, 22);
+            this.txtUnit.Size = new System.Drawing.Size(212, 20);
             this.txtUnit.TabIndex = 1;
             // 
             // label5
@@ -198,7 +199,7 @@
             this.label5.Location = new System.Drawing.Point(35, 57);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 23);
+            this.label5.Size = new System.Drawing.Size(103, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Material name";
             // 
@@ -207,7 +208,7 @@
             this.txtInputMaterialName.Location = new System.Drawing.Point(35, 84);
             this.txtInputMaterialName.Margin = new System.Windows.Forms.Padding(4);
             this.txtInputMaterialName.Name = "txtInputMaterialName";
-            this.txtInputMaterialName.Size = new System.Drawing.Size(212, 22);
+            this.txtInputMaterialName.Size = new System.Drawing.Size(212, 20);
             this.txtInputMaterialName.TabIndex = 0;
             // 
             // DetailMaterial
@@ -216,6 +217,7 @@
             this.ClientSize = new System.Drawing.Size(319, 334);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DetailMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewMaterial";

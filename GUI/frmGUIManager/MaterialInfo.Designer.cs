@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaterialInfo));
             this.btClose = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -78,7 +79,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(296, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(240, 30);
+            this.label8.Size = new System.Drawing.Size(188, 23);
             this.label8.TabIndex = 32;
             this.label8.Text = "Material information";
             // 
@@ -260,7 +261,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(344, 63);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 26);
+            this.label7.Size = new System.Drawing.Size(113, 21);
             this.label7.TabIndex = 62;
             this.label7.Text = "Manufacture";
             // 
@@ -298,7 +299,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(13, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 26);
+            this.label5.Size = new System.Drawing.Size(44, 21);
             this.label5.TabIndex = 57;
             this.label5.Text = "Unit";
             // 
@@ -336,7 +337,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(344, 115);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 26);
+            this.label9.Size = new System.Drawing.Size(134, 21);
             this.label9.TabIndex = 57;
             this.label9.Text = "Expiration date";
             // 
@@ -348,7 +349,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(13, 168);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 26);
+            this.label6.Size = new System.Drawing.Size(138, 21);
             this.label6.TabIndex = 57;
             this.label6.Text = "Import quantity";
             // 
@@ -360,7 +361,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(13, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 26);
+            this.label4.Size = new System.Drawing.Size(107, 21);
             this.label4.TabIndex = 57;
             this.label4.Text = "Import date";
             // 
@@ -372,7 +373,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(344, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 26);
+            this.label3.Size = new System.Drawing.Size(160, 21);
             this.label3.TabIndex = 55;
             this.label3.Text = "Inventory quantity";
             // 
@@ -384,7 +385,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(344, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 26);
+            this.label2.Size = new System.Drawing.Size(128, 21);
             this.label2.TabIndex = 53;
             this.label2.Text = "Material name";
             // 
@@ -396,7 +397,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(13, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 26);
+            this.label1.Size = new System.Drawing.Size(99, 21);
             this.label1.TabIndex = 51;
             this.label1.Text = "Material ID";
             // 
@@ -460,6 +461,7 @@
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MaterialInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InfoFood";

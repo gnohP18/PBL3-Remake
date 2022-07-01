@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewManufacturer));
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtPhoneNumberManufacture = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
@@ -220,7 +221,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label3.Location = new System.Drawing.Point(260, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 21);
+            this.label3.Size = new System.Drawing.Size(101, 17);
             this.label3.TabIndex = 27;
             this.label3.Text = "Phone number";
             // 
@@ -231,7 +232,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label2.Location = new System.Drawing.Point(260, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 21);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 25;
             this.label2.Text = "Address";
             // 
@@ -242,7 +243,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label1.Location = new System.Drawing.Point(6, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 21);
+            this.label1.Size = new System.Drawing.Size(165, 17);
             this.label1.TabIndex = 22;
             this.label1.Text = "Name new manufacturer";
             // 
@@ -253,7 +254,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
             this.label15.Location = new System.Drawing.Point(3, 94);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 21);
+            this.label15.Size = new System.Drawing.Size(64, 17);
             this.label15.TabIndex = 18;
             this.label15.Text = "Tax code";
             // 
@@ -265,7 +266,7 @@
             this.label13.Location = new System.Drawing.Point(89, 0);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(276, 27);
+            this.label13.Size = new System.Drawing.Size(220, 22);
             this.label13.TabIndex = 16;
             this.label13.Text = "Manufacturer information";
             // 
@@ -276,6 +277,7 @@
             this.ClientSize = new System.Drawing.Size(505, 252);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddNewManufacturer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewManufacturer";

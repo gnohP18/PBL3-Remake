@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWarehouse));
             this.pnUC = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.pnUC.SuspendLayout();
@@ -38,7 +39,7 @@
             this.pnUC.Controls.Add(this.btnClose);
             this.pnUC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnUC.Location = new System.Drawing.Point(0, 0);
-            this.pnUC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnUC.Margin = new System.Windows.Forms.Padding(2);
             this.pnUC.Name = "pnUC";
             this.pnUC.Size = new System.Drawing.Size(1200, 700);
             this.pnUC.TabIndex = 3;
@@ -68,7 +69,8 @@
             this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.pnUC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmWarehouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmWarehouse";

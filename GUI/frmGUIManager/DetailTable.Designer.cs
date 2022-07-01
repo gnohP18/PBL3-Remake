@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailTable));
             this.btnOK = new System.Windows.Forms.Button();
             this.lbTienDe = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,7 +69,7 @@
             this.lbTienDe.Location = new System.Drawing.Point(4, 27);
             this.lbTienDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTienDe.Name = "lbTienDe";
-            this.lbTienDe.Size = new System.Drawing.Size(52, 23);
+            this.lbTienDe.Size = new System.Drawing.Size(41, 18);
             this.lbTienDe.TabIndex = 35;
             this.lbTienDe.Text = "Total";
             // 
@@ -80,7 +81,7 @@
             this.label1.Location = new System.Drawing.Point(4, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 23);
+            this.label1.Size = new System.Drawing.Size(121, 18);
             this.label1.TabIndex = 36;
             this.label1.Text = "Number of dishes";
             // 
@@ -179,6 +180,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DetailTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetailTable";

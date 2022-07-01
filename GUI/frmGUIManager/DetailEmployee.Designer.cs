@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailEmployee));
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,9 +64,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(19, 314);
+            this.label10.Location = new System.Drawing.Point(14, 255);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 23);
+            this.label10.Size = new System.Drawing.Size(112, 19);
             this.label10.TabIndex = 29;
             this.label10.Text = "Phone number";
             // 
@@ -75,9 +77,10 @@
             this.label9.BackColor = System.Drawing.Color.LightBlue;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(8, 425);
+            this.label9.Location = new System.Drawing.Point(6, 345);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 23);
+            this.label9.Size = new System.Drawing.Size(76, 19);
             this.label9.TabIndex = 27;
             this.label9.Text = "Password";
             // 
@@ -87,9 +90,10 @@
             this.label8.BackColor = System.Drawing.Color.LightBlue;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(8, 330);
+            this.label8.Location = new System.Drawing.Point(6, 268);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 23);
+            this.label8.Size = new System.Drawing.Size(67, 19);
             this.label8.TabIndex = 26;
             this.label8.Text = "Account";
             // 
@@ -99,9 +103,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(19, 409);
+            this.label7.Location = new System.Drawing.Point(14, 332);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 23);
+            this.label7.Size = new System.Drawing.Size(102, 19);
             this.label7.TabIndex = 22;
             this.label7.Text = "User position";
             // 
@@ -109,10 +114,10 @@
             // 
             this.dtpDayStartWork.CustomFormat = "dd/MM/yyyy";
             this.dtpDayStartWork.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDayStartWork.Location = new System.Drawing.Point(13, 273);
-            this.dtpDayStartWork.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDayStartWork.Location = new System.Drawing.Point(10, 222);
+            this.dtpDayStartWork.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDayStartWork.Name = "dtpDayStartWork";
-            this.dtpDayStartWork.Size = new System.Drawing.Size(213, 22);
+            this.dtpDayStartWork.Size = new System.Drawing.Size(161, 20);
             this.dtpDayStartWork.TabIndex = 18;
             // 
             // label5
@@ -121,9 +126,10 @@
             this.label5.BackColor = System.Drawing.Color.LightBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(8, 254);
+            this.label5.Location = new System.Drawing.Point(6, 206);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 23);
+            this.label5.Size = new System.Drawing.Size(118, 19);
             this.label5.TabIndex = 17;
             this.label5.Text = "Date start work";
             // 
@@ -133,9 +139,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(19, 507);
+            this.label4.Location = new System.Drawing.Point(14, 412);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 23);
+            this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 16;
             this.label4.Text = "Birthday";
             // 
@@ -143,10 +150,10 @@
             // 
             this.dtpDayOfBirth.CustomFormat = "dd/MM/yyyy";
             this.dtpDayOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDayOfBirth.Location = new System.Drawing.Point(21, 539);
-            this.dtpDayOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDayOfBirth.Location = new System.Drawing.Point(16, 438);
+            this.dtpDayOfBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDayOfBirth.Name = "dtpDayOfBirth";
-            this.dtpDayOfBirth.Size = new System.Drawing.Size(127, 22);
+            this.dtpDayOfBirth.Size = new System.Drawing.Size(96, 20);
             this.dtpDayOfBirth.TabIndex = 15;
             // 
             // label3
@@ -155,9 +162,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 219);
+            this.label3.Location = new System.Drawing.Point(14, 178);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 23);
+            this.label3.Size = new System.Drawing.Size(154, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "Citizen Identification";
             // 
@@ -167,9 +175,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 121);
+            this.label2.Location = new System.Drawing.Point(14, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
+            this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Name";
             // 
@@ -179,9 +188,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 21);
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 23);
+            this.label1.Size = new System.Drawing.Size(97, 19);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID Employee";
             // 
@@ -192,10 +202,10 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.Location = new System.Drawing.Point(4, 661);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOK.Location = new System.Drawing.Point(3, 537);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(99, 31);
+            this.btnOK.Size = new System.Drawing.Size(74, 25);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -208,10 +218,10 @@
             this.btnChangePicUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePicUser.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePicUser.ForeColor = System.Drawing.Color.Black;
-            this.btnChangePicUser.Location = new System.Drawing.Point(72, 201);
-            this.btnChangePicUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChangePicUser.Location = new System.Drawing.Point(54, 163);
+            this.btnChangePicUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangePicUser.Name = "btnChangePicUser";
-            this.btnChangePicUser.Size = new System.Drawing.Size(100, 38);
+            this.btnChangePicUser.Size = new System.Drawing.Size(75, 31);
             this.btnChangePicUser.TabIndex = 21;
             this.btnChangePicUser.Text = "Change";
             this.btnChangePicUser.UseVisualStyleBackColor = false;
@@ -224,10 +234,10 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
-            this.btnRefresh.Location = new System.Drawing.Point(137, 661);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Location = new System.Drawing.Point(103, 537);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 31);
+            this.btnRefresh.Size = new System.Drawing.Size(90, 25);
             this.btnRefresh.TabIndex = 23;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -237,11 +247,10 @@
             // pBUser
             // 
             this.pBUser.ImageRotate = 0F;
-            this.pBUser.Location = new System.Drawing.Point(35, 37);
-            this.pBUser.Margin = new System.Windows.Forms.Padding(4);
+            this.pBUser.Location = new System.Drawing.Point(26, 30);
             this.pBUser.Name = "pBUser";
             this.pBUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pBUser.Size = new System.Drawing.Size(171, 158);
+            this.pBUser.Size = new System.Drawing.Size(128, 128);
             this.pBUser.TabIndex = 24;
             this.pBUser.TabStop = false;
             // 
@@ -262,11 +271,10 @@
             this.guna2ShadowPanel1.Controls.Add(this.dtpDayOfBirth);
             this.guna2ShadowPanel1.Controls.Add(this.label4);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(235, 16);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(176, 13);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(351, 639);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(263, 519);
             this.guna2ShadowPanel1.TabIndex = 31;
             // 
             // cbbPosition
@@ -283,10 +291,9 @@
             this.cbbPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbPosition.ItemHeight = 30;
             this.cbbPosition.ItemsAppearance.SelectedBackColor = System.Drawing.Color.LightBlue;
-            this.cbbPosition.Location = new System.Drawing.Point(17, 436);
-            this.cbbPosition.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbPosition.Location = new System.Drawing.Point(13, 354);
             this.cbbPosition.Name = "cbbPosition";
-            this.cbbPosition.Size = new System.Drawing.Size(252, 36);
+            this.cbbPosition.Size = new System.Drawing.Size(190, 36);
             this.cbbPosition.TabIndex = 35;
             // 
             // txtPhonenumber
@@ -294,7 +301,7 @@
             this.txtPhonenumber.AutoRoundedCorners = true;
             this.txtPhonenumber.BackColor = System.Drawing.Color.Transparent;
             this.txtPhonenumber.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtPhonenumber.BorderRadius = 21;
+            this.txtPhonenumber.BorderRadius = 17;
             this.txtPhonenumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhonenumber.DefaultText = "";
             this.txtPhonenumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -305,13 +312,12 @@
             this.txtPhonenumber.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhonenumber.ForeColor = System.Drawing.Color.Black;
             this.txtPhonenumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhonenumber.Location = new System.Drawing.Point(21, 341);
-            this.txtPhonenumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhonenumber.Location = new System.Drawing.Point(16, 277);
             this.txtPhonenumber.Name = "txtPhonenumber";
             this.txtPhonenumber.PasswordChar = '\0';
             this.txtPhonenumber.PlaceholderText = "";
             this.txtPhonenumber.SelectedText = "";
-            this.txtPhonenumber.Size = new System.Drawing.Size(253, 44);
+            this.txtPhonenumber.Size = new System.Drawing.Size(190, 36);
             this.txtPhonenumber.TabIndex = 34;
             // 
             // txtCIEmployee
@@ -319,7 +325,7 @@
             this.txtCIEmployee.AutoRoundedCorners = true;
             this.txtCIEmployee.BackColor = System.Drawing.Color.Transparent;
             this.txtCIEmployee.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtCIEmployee.BorderRadius = 21;
+            this.txtCIEmployee.BorderRadius = 17;
             this.txtCIEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCIEmployee.DefaultText = "";
             this.txtCIEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -330,13 +336,12 @@
             this.txtCIEmployee.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCIEmployee.ForeColor = System.Drawing.Color.Black;
             this.txtCIEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCIEmployee.Location = new System.Drawing.Point(19, 250);
-            this.txtCIEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCIEmployee.Location = new System.Drawing.Point(14, 203);
             this.txtCIEmployee.Name = "txtCIEmployee";
             this.txtCIEmployee.PasswordChar = '\0';
             this.txtCIEmployee.PlaceholderText = "";
             this.txtCIEmployee.SelectedText = "";
-            this.txtCIEmployee.Size = new System.Drawing.Size(253, 44);
+            this.txtCIEmployee.Size = new System.Drawing.Size(190, 36);
             this.txtCIEmployee.TabIndex = 33;
             // 
             // txtNameEmployee
@@ -344,7 +349,7 @@
             this.txtNameEmployee.AutoRoundedCorners = true;
             this.txtNameEmployee.BackColor = System.Drawing.Color.Transparent;
             this.txtNameEmployee.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtNameEmployee.BorderRadius = 21;
+            this.txtNameEmployee.BorderRadius = 17;
             this.txtNameEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNameEmployee.DefaultText = "";
             this.txtNameEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -355,13 +360,12 @@
             this.txtNameEmployee.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameEmployee.ForeColor = System.Drawing.Color.Black;
             this.txtNameEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameEmployee.Location = new System.Drawing.Point(19, 148);
-            this.txtNameEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameEmployee.Location = new System.Drawing.Point(14, 120);
             this.txtNameEmployee.Name = "txtNameEmployee";
             this.txtNameEmployee.PasswordChar = '\0';
             this.txtNameEmployee.PlaceholderText = "";
             this.txtNameEmployee.SelectedText = "";
-            this.txtNameEmployee.Size = new System.Drawing.Size(253, 44);
+            this.txtNameEmployee.Size = new System.Drawing.Size(190, 36);
             this.txtNameEmployee.TabIndex = 32;
             // 
             // txtIDEmployee
@@ -369,7 +373,7 @@
             this.txtIDEmployee.AutoRoundedCorners = true;
             this.txtIDEmployee.BackColor = System.Drawing.Color.Transparent;
             this.txtIDEmployee.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtIDEmployee.BorderRadius = 21;
+            this.txtIDEmployee.BorderRadius = 17;
             this.txtIDEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIDEmployee.DefaultText = "";
             this.txtIDEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -380,13 +384,12 @@
             this.txtIDEmployee.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDEmployee.ForeColor = System.Drawing.Color.Black;
             this.txtIDEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDEmployee.Location = new System.Drawing.Point(19, 48);
-            this.txtIDEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDEmployee.Location = new System.Drawing.Point(14, 39);
             this.txtIDEmployee.Name = "txtIDEmployee";
             this.txtIDEmployee.PasswordChar = '\0';
             this.txtIDEmployee.PlaceholderText = "";
             this.txtIDEmployee.SelectedText = "";
-            this.txtIDEmployee.Size = new System.Drawing.Size(253, 44);
+            this.txtIDEmployee.Size = new System.Drawing.Size(190, 36);
             this.txtIDEmployee.TabIndex = 31;
             // 
             // btnShift
@@ -400,10 +403,10 @@
             this.btnShift.FillColor = System.Drawing.Color.Black;
             this.btnShift.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShift.ForeColor = System.Drawing.Color.White;
-            this.btnShift.Location = new System.Drawing.Point(17, 582);
-            this.btnShift.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShift.Location = new System.Drawing.Point(13, 473);
+            this.btnShift.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShift.Name = "btnShift";
-            this.btnShift.Size = new System.Drawing.Size(127, 37);
+            this.btnShift.Size = new System.Drawing.Size(95, 30);
             this.btnShift.TabIndex = 30;
             this.btnShift.Text = "Shift";
             this.btnShift.Click += new System.EventHandler(this.btnShift_Click);
@@ -415,10 +418,10 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(487, 661);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(365, 537);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 31);
+            this.btnCancel.Size = new System.Drawing.Size(74, 25);
             this.btnCancel.TabIndex = 32;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -429,7 +432,7 @@
             this.txtUserNameLogin.AutoRoundedCorners = true;
             this.txtUserNameLogin.BackColor = System.Drawing.Color.Transparent;
             this.txtUserNameLogin.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtUserNameLogin.BorderRadius = 21;
+            this.txtUserNameLogin.BorderRadius = 17;
             this.txtUserNameLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserNameLogin.DefaultText = "";
             this.txtUserNameLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -440,13 +443,12 @@
             this.txtUserNameLogin.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserNameLogin.ForeColor = System.Drawing.Color.Black;
             this.txtUserNameLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserNameLogin.Location = new System.Drawing.Point(13, 357);
-            this.txtUserNameLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserNameLogin.Location = new System.Drawing.Point(10, 290);
             this.txtUserNameLogin.Name = "txtUserNameLogin";
             this.txtUserNameLogin.PasswordChar = '\0';
             this.txtUserNameLogin.PlaceholderText = "";
             this.txtUserNameLogin.SelectedText = "";
-            this.txtUserNameLogin.Size = new System.Drawing.Size(215, 44);
+            this.txtUserNameLogin.Size = new System.Drawing.Size(161, 36);
             this.txtUserNameLogin.TabIndex = 36;
             // 
             // txtPasswordLogin
@@ -454,7 +456,7 @@
             this.txtPasswordLogin.AutoRoundedCorners = true;
             this.txtPasswordLogin.BackColor = System.Drawing.Color.Transparent;
             this.txtPasswordLogin.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtPasswordLogin.BorderRadius = 21;
+            this.txtPasswordLogin.BorderRadius = 17;
             this.txtPasswordLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPasswordLogin.DefaultText = "";
             this.txtPasswordLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -466,21 +468,20 @@
             this.txtPasswordLogin.ForeColor = System.Drawing.Color.Black;
             this.txtPasswordLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPasswordLogin.IconLeft = global::GUI.Properties.Resources.key_24;
-            this.txtPasswordLogin.Location = new System.Drawing.Point(13, 452);
-            this.txtPasswordLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPasswordLogin.Location = new System.Drawing.Point(10, 367);
             this.txtPasswordLogin.Name = "txtPasswordLogin";
             this.txtPasswordLogin.PasswordChar = '\0';
             this.txtPasswordLogin.PlaceholderText = "";
             this.txtPasswordLogin.SelectedText = "";
-            this.txtPasswordLogin.Size = new System.Drawing.Size(215, 44);
+            this.txtPasswordLogin.Size = new System.Drawing.Size(161, 36);
             this.txtPasswordLogin.TabIndex = 36;
             // 
             // DetailEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(593, 700);
+            this.ClientSize = new System.Drawing.Size(445, 569);
             this.Controls.Add(this.txtPasswordLogin);
             this.Controls.Add(this.txtUserNameLogin);
             this.Controls.Add(this.btnCancel);
@@ -494,7 +495,8 @@
             this.Controls.Add(this.dtpDayStartWork);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DetailEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailEmployee";

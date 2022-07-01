@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManufacturerManagement));
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnAddNewManufacturer = new Guna.UI2.WinForms.Guna2Button();
             this.btnDetailManufacturer = new Guna.UI2.WinForms.Guna2Button();
@@ -46,10 +47,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(279, 14);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(209, 11);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(328, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(246, 25);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Manufacturer Management";
             // 
@@ -62,10 +63,10 @@
             this.btnAddNewManufacturer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAddNewManufacturer.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewManufacturer.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewManufacturer.Location = new System.Drawing.Point(15, 411);
-            this.btnAddNewManufacturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddNewManufacturer.Location = new System.Drawing.Point(11, 334);
+            this.btnAddNewManufacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddNewManufacturer.Name = "btnAddNewManufacturer";
-            this.btnAddNewManufacturer.Size = new System.Drawing.Size(180, 46);
+            this.btnAddNewManufacturer.Size = new System.Drawing.Size(135, 37);
             this.btnAddNewManufacturer.TabIndex = 2;
             this.btnAddNewManufacturer.Text = "Add new manufacturer";
             this.btnAddNewManufacturer.Click += new System.EventHandler(this.btnAddNewManufacturer_Click);
@@ -79,10 +80,10 @@
             this.btnDetailManufacturer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDetailManufacturer.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetailManufacturer.ForeColor = System.Drawing.Color.White;
-            this.btnDetailManufacturer.Location = new System.Drawing.Point(365, 411);
-            this.btnDetailManufacturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDetailManufacturer.Location = new System.Drawing.Point(274, 334);
+            this.btnDetailManufacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDetailManufacturer.Name = "btnDetailManufacturer";
-            this.btnDetailManufacturer.Size = new System.Drawing.Size(180, 46);
+            this.btnDetailManufacturer.Size = new System.Drawing.Size(135, 37);
             this.btnDetailManufacturer.TabIndex = 2;
             this.btnDetailManufacturer.Text = "Detail Manufacturer";
             this.btnDetailManufacturer.Click += new System.EventHandler(this.btnDetailManufacturer_Click);
@@ -96,10 +97,10 @@
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(707, 411);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(530, 334);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(180, 46);
+            this.btnClose.Size = new System.Drawing.Size(135, 37);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -128,7 +129,8 @@
             this.dgvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNhaCungCap.EnableHeadersVisualStyles = false;
             this.dgvNhaCungCap.GridColor = System.Drawing.Color.White;
-            this.dgvNhaCungCap.Location = new System.Drawing.Point(15, 50);
+            this.dgvNhaCungCap.Location = new System.Drawing.Point(11, 41);
+            this.dgvNhaCungCap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
             this.dgvNhaCungCap.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -149,22 +151,23 @@
             this.dgvNhaCungCap.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNhaCungCap.RowTemplate.Height = 24;
             this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(872, 325);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(654, 264);
             this.dgvNhaCungCap.TabIndex = 3;
             // 
             // ManufacturerManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(901, 466);
+            this.ClientSize = new System.Drawing.Size(676, 379);
             this.Controls.Add(this.dgvNhaCungCap);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDetailManufacturer);
             this.Controls.Add(this.btnAddNewManufacturer);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManufacturerManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManufacturerManagement";

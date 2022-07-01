@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrder));
             this.pnDish = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCollabTable = new System.Windows.Forms.Button();
@@ -179,7 +180,7 @@
             this.lblNameTable.ForeColor = System.Drawing.Color.White;
             this.lblNameTable.Location = new System.Drawing.Point(683, 36);
             this.lblNameTable.Name = "lblNameTable";
-            this.lblNameTable.Size = new System.Drawing.Size(31, 31);
+            this.lblNameTable.Size = new System.Drawing.Size(23, 24);
             this.lblNameTable.TabIndex = 27;
             this.lblNameTable.Text = "B";
             // 
@@ -190,7 +191,7 @@
             this.lblIDTable.ForeColor = System.Drawing.Color.White;
             this.lblIDTable.Location = new System.Drawing.Point(684, 10);
             this.lblIDTable.Name = "lblIDTable";
-            this.lblIDTable.Size = new System.Drawing.Size(27, 26);
+            this.lblIDTable.Size = new System.Drawing.Size(23, 21);
             this.lblIDTable.TabIndex = 28;
             this.lblIDTable.Text = "A";
             // 
@@ -201,7 +202,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(616, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 26);
+            this.label1.Size = new System.Drawing.Size(27, 21);
             this.label1.TabIndex = 29;
             this.label1.Text = "ID";
             // 
@@ -212,7 +213,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(616, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 26);
+            this.label2.Size = new System.Drawing.Size(60, 21);
             this.label2.TabIndex = 30;
             this.label2.Text = "Name";
             // 
@@ -334,6 +335,7 @@
             this.Controls.Add(this.btnAppetizer);
             this.Controls.Add(this.pnMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

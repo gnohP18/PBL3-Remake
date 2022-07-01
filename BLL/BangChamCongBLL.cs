@@ -37,7 +37,7 @@ namespace BLL
             ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
             DateTime dtNow = DateTime.Now;
             int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
-            int SangChieu = NhanVienBLL.Instance.GetBuoiLamNow();
+            int SangChieu = CaLamBLL.Instance.GetBuoiLamNow();
             BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
             TimeSpan TimeLate;
             if (SangChieu == 0)

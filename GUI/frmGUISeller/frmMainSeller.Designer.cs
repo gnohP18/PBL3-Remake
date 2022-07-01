@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainSeller));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTimeWork = new System.Windows.Forms.Label();
             this.btnAttend = new System.Windows.Forms.Button();
             this.btnDetailTable = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,12 +40,10 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnFloor2 = new System.Windows.Forms.Button();
             this.btnFloor1 = new System.Windows.Forms.Button();
-            this.cbbStatusTable = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnTable = new System.Windows.Forms.Panel();
-            this.lblTimeWork = new System.Windows.Forms.Label();
             this.Real_time = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.cbbStatusTable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.cbbStatusTable);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblTimeWork);
             this.panel1.Controls.Add(this.btnAttend);
@@ -60,13 +61,36 @@
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnFloor2);
             this.panel1.Controls.Add(this.btnFloor1);
-            this.panel1.Controls.Add(this.cbbStatusTable);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1300, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(67, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Welcome";
+            // 
+            // lblTimeWork
+            // 
+            this.lblTimeWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
+            this.lblTimeWork.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeWork.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTimeWork.Location = new System.Drawing.Point(64, 74);
+            this.lblTimeWork.Name = "lblTimeWork";
+            this.lblTimeWork.Size = new System.Drawing.Size(120, 20);
+            this.lblTimeWork.TabIndex = 29;
+            this.lblTimeWork.Text = "Time";
+            this.lblTimeWork.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnAttend
             // 
@@ -184,17 +208,6 @@
             this.btnFloor1.UseVisualStyleBackColor = false;
             this.btnFloor1.Click += new System.EventHandler(this.btnFloor1_Click);
             // 
-            // cbbStatusTable
-            // 
-            this.cbbStatusTable.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbbStatusTable.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbbStatusTable.FormattingEnabled = true;
-            this.cbbStatusTable.Location = new System.Drawing.Point(875, 41);
-            this.cbbStatusTable.Name = "cbbStatusTable";
-            this.cbbStatusTable.Size = new System.Drawing.Size(167, 21);
-            this.cbbStatusTable.TabIndex = 18;
-            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
@@ -214,33 +227,29 @@
             this.pnTable.Size = new System.Drawing.Size(1300, 600);
             this.pnTable.TabIndex = 1;
             // 
-            // lblTimeWork
-            // 
-            this.lblTimeWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.lblTimeWork.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeWork.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTimeWork.Location = new System.Drawing.Point(64, 74);
-            this.lblTimeWork.Name = "lblTimeWork";
-            this.lblTimeWork.Size = new System.Drawing.Size(120, 20);
-            this.lblTimeWork.TabIndex = 29;
-            this.lblTimeWork.Text = "Time";
-            this.lblTimeWork.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Real_time
             // 
             this.Real_time.Tick += new System.EventHandler(this.Real_time_Tick);
             // 
-            // label1
+            // cbbStatusTable
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(27)))), ((int)(((byte)(46)))));
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(67, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 18);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Welcome";
+            this.cbbStatusTable.BackColor = System.Drawing.Color.Transparent;
+            this.cbbStatusTable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbStatusTable.BorderRadius = 15;
+            this.cbbStatusTable.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbStatusTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatusTable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatusTable.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbStatusTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbStatusTable.ItemHeight = 30;
+            this.cbbStatusTable.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cbbStatusTable.Location = new System.Drawing.Point(855, 31);
+            this.cbbStatusTable.Name = "cbbStatusTable";
+            this.cbbStatusTable.Size = new System.Drawing.Size(187, 36);
+            this.cbbStatusTable.TabIndex = 42;
+            this.cbbStatusTable.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
             // 
             // frmMainSeller
             // 
@@ -270,7 +279,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnFloor2;
         private System.Windows.Forms.Button btnFloor1;
-        private System.Windows.Forms.ComboBox cbbStatusTable;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnTable;
         private System.Windows.Forms.Button btnDetailTable;
@@ -278,5 +286,6 @@
         private System.Windows.Forms.Label lblTimeWork;
         private System.Windows.Forms.Timer Real_time;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbStatusTable;
     }
 }

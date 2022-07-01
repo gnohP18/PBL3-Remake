@@ -31,44 +31,17 @@ namespace BLL
             }
             return bans;
         }
-        public List<Table_view> GetAllTable_viewByFloor(int NumberOfDishes, int Floor)
+        public List<Table_view> GetAllTable_viewByFloorAndStatus(int Status, int Floor)
         {
             List<Table_view> list = new List<Table_view>();
-            if (NumberOfDishes == 0)
-                foreach (Ban ban in GetAllTableByFloor(Floor))
-                {
-                    Table_view tb = new Table_view();
-                    tb.ID_Table = ban.ID_Ban;
-                    tb.Floor = "Floor " + Floor.ToString();
-                    tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
-                    tb.NameTable = ban.TenBan;
-                    list.Add(tb);
-                }
-            else if (NumberOfDishes == 1)
+            foreach (Ban ban in GetMainBanByTinhTrangBanVaTang(Status, Floor))
             {
-                foreach (Ban ban in GetAllTableByFloor(Floor))
-                {
-                    Table_view tb = new Table_view();
-                    tb.ID_Table = ban.ID_Ban;
-                    tb.Floor = "Floor " + Floor.ToString();
-                    tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
-                    tb.NameTable = ban.TenBan;
-                    if (tb.NumberOfDish > 0)
-                        list.Add(tb);
-                }
-            }
-            else if (NumberOfDishes == 2)
-            {
-                foreach (Ban ban in GetAllTableByFloor(Floor))
-                {
-                    Table_view tb = new Table_view();
-                    tb.ID_Table = ban.ID_Ban;
-                    tb.Floor = "Floor " + Floor.ToString();
-                    tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
-                    tb.NameTable = ban.TenBan;
-                    if (tb.NumberOfDish == 0)
-                        list.Add(tb);
-                }
+                Table_view tb = new Table_view();
+                tb.ID_Table = ban.ID_Ban;
+                tb.Floor = "Floor " + Floor.ToString();
+                tb.NumberOfDish = GetAllDetailTableByID_Table(ban.ID_Ban).Count();
+                tb.NameTable = ban.TenBan;
+                list.Add(tb);
             }
             return list;
         }
@@ -86,14 +59,14 @@ namespace BLL
         }
         public List<Ban> GetMainBanByTinhTrangBanVaTang(int st, int fl)
         {
-            if (st == 0)
+            if (st == 1)
             {
                 return dALQLNH.Bans.Where(p => (p.Tang == fl && p.TinhTrangBan == 0)).ToList();
             }
             else
             {
                 List<Ban> list;
-                if (st == -1)
+                if (st == 0)
                     list = new List<Ban>(dALQLNH.Bans.Where(p => p.Tang == fl).ToList());
                 else
                 {

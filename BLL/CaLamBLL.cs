@@ -92,8 +92,52 @@ namespace BLL
             }
 
         }
-        public void AddNewTimeSheetByID_User(int ID_User)
+
+        public int GetBuoiLamNow()
         {
+            DateTime dtNow = DateTime.Now;
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+            if (dtNow.TimeOfDay >= TTNH.ThoiGianBatDauLamViecSang && dtNow.TimeOfDay <= TTNH.ThoiGianKetThucLamViecSang)
+            {
+                return 0;
+            }
+            if (dtNow.TimeOfDay >= TTNH.ThoiGianBatDauLamViecChieu && dtNow.TimeOfDay <= TTNH.ThoiGianKetThucLamViecChieu)
+            {
+                return 1;
+            }
+            return -1;
+        }
+        public Dictionary<User, bool> GetThongTinDiemDanhNhanVienNow()
+        {
+            Dictionary<User, bool> data = new Dictionary<User, bool>();
+            int SangChieu = GetBuoiLamNow();
+            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
+            {
+                if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
+                {
+                    ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+                    DateTime dtNow = DateTime.Now;
+                    int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
+                    BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == i.User.ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
+                    if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0')
+                        data.Add(i.User, true);
+                    else data.Add(i.User, false);
+                }
+            }
+            return data;
+        }
+        public TimeSpan GetThoiGianBatDauCaNow()
+        {
+            int SangChieu = GetBuoiLamNow();
+            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
+            if(SangChieu == 0)
+            {
+                return TTNH.ThoiGianBatDauLamViecSang;
+            }
+            else
+            {
+                return TTNH.ThoiGianBatDauLamViecChieu;
+            }
 
         }
     }

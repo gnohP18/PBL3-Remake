@@ -44,7 +44,6 @@ namespace GUI.frmGUIManager
             //Unhighlight button
             if (CurrentButton != null && CurrentButton != btn)
             {
-                //btn.RightToLeft = RightToLeft.No;
                 CurrentButton.BackColor = Color.FromArgb(17, 21, 37);
                 CurrentButton.ForeColor = Color.White;
             }

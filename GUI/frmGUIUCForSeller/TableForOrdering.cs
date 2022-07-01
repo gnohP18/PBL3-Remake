@@ -45,14 +45,17 @@ namespace GUI.frmGUIUCForSeller
             frmOrder frm = new frmOrder(ban.ID_Ban,ID_NhanVien);
             frm.d = d;
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            frm.ShowDialog();
+            frm.Close();
         }
 
         private void btnPay_Click(object sender, System.EventArgs e)
         {
             frmPay frm = new frmPay(ban.ID_Ban,ID_NhanVien);
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.Show();
+            frm.ShowDialog();
+            frm.Close();
+
         }
     }
 }

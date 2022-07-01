@@ -164,7 +164,7 @@ namespace GUI.frmGUISeller
             frm.Dock = DockStyle.Fill;
             pnDish.AutoScroll = false;
             frm.Show();
-            d(-1, 1);
+            d(0, 1);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace GUI.frmGUISeller
             if (listMonAnViewDangDat.Count > 0 && BanBLL.Instance.GetBanByID_Ban(IDTable).TinhTrangBan == 0)
                 BanBLL.Instance.ChangeStatusTable(IDTable, IDTable);
             this.Close();
-            d(-1, 1);
+            d(0, 1);
         }
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -100,7 +100,7 @@ namespace GUI.frmGUISeller
             this.Height = 700;
             this.StartPosition = FormStartPosition.CenterScreen;
             pnTable.AutoScroll = true;
-            LoadBanByTinhTrangBanVaTang(-1, 1);
+            LoadBanByTinhTrangBanVaTang(0, 1);
             if (NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).ID_ChucVu == 3) btnAttend.Visible = true;
             else btnAttend.Visible = false;
             lblTitleWelcome.Text = NhanVienBLL.Instance.GetNhanVienByID(ID_NhanVien).TenUser;
@@ -108,21 +108,8 @@ namespace GUI.frmGUISeller
         }
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbStatusTable.SelectedIndex == 1)
-            {
-                statustb = 0;
-                LoadBanByTinhTrangBanVaTang(statustb, Floor);
-            }
-            else if (cbbStatusTable.SelectedIndex == 2)
-            {
-                statustb = 1;
-                LoadBanByTinhTrangBanVaTang(statustb, Floor);
-            }
-            else if (cbbStatusTable.SelectedIndex == 0)
-            {
-                statustb = -1;
-                LoadBanByTinhTrangBanVaTang(statustb, Floor);
-            }
+            statustb = cbbStatusTable.SelectedIndex;
+            LoadBanByTinhTrangBanVaTang(statustb, Floor);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -145,9 +132,9 @@ namespace GUI.frmGUISeller
         private void Real_time_Tick(object sender, EventArgs e)
         {
             lblTimeWork.Text = DateTime.Now.ToShortTimeString();
-            if (DateTime.Now.TimeOfDay >= new TimeSpan(2, 0, 0) && btnAttend.Enabled == true)
+            if (DateTime.Now.TimeOfDay - CaLamBLL.Instance.GetThoiGianBatDauCaNow() >= new TimeSpan(2, 0, 0) && btnAttend.Enabled == true)
             {
-                foreach(KeyValuePair<User,bool> i in BLL.NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow())
+                foreach(KeyValuePair<User,bool> i in CaLamBLL.Instance.GetThongTinDiemDanhNhanVienNow())
                 {
                     if (i.Value == false) BangChamCongBLL.Instance.ChamCong(i.Key.ID_User);
                 }

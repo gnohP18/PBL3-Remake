@@ -86,7 +86,7 @@ namespace BLL
                     employee.UserNameLogin = i.Username;
                     employee.PasswordLogin = i.Password;
                     employee.NumberOfDayWork = GetNumberOfDayWorkByID_User(i.ID_User);
-                    if (NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow().ContainsKey(i)) employee.Status = "Working";
+                    if (CaLamBLL.Instance.GetThongTinDiemDanhNhanVienNow().ContainsKey(i)) employee.Status = "Working";
                     else employee.Status = "Off";
                     list.Add(employee);
                 }
@@ -152,33 +152,15 @@ namespace BLL
         {
             return dALQLNH.Users.ToList();
         }
-        public Dictionary<User, bool> GetThongTinDiemDanhNhanVienNow()
-        {
-            Dictionary<User, bool> data = new Dictionary<User, bool>();
-            int SangChieu = GetBuoiLamNow();
-            foreach (ChiTietCaLam i in dALQLNH.ChiTietCaLams)
-            {
-                if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1')
-                {
-                    ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
-                    DateTime dtNow = DateTime.Now;
-                    int indexDay = (dtNow - TTNH.NgayBatDauChamCongHienTai).Days;
-                    BangChamCong bangChamCong = dALQLNH.BangChamCongs.Where(s => s.ID_User == i.User.ID_User && s.NgayDauTienTinhCong == TTNH.NgayBatDauChamCongHienTai).FirstOrDefault();
-                    if (bangChamCong.LichSuLamViec[indexDay * 2 + SangChieu] != '0')
-                        data.Add(i.User, true);
-                    else data.Add(i.User, false);
-                }
-            }
-            return data;
-        }
+        
         public int checkLogin(string username, string password, bool isCustomerLogin)
         {
             User user = (User)(dALQLNH.Users.Where(p => p.Username == username && p.Password == password).FirstOrDefault());
             if (user == null) return -1;
             if (user.ID_ChucVu == 1) return 1;
-            if (isCustomerLogin == true && user.ID_ChucVu != 2 && GetBuoiLamNow() != -1)
+            if (isCustomerLogin == true && user.ID_ChucVu != 2 && CaLamBLL.Instance.GetBuoiLamNow() != -1)
             {
-                int SangChieu = GetBuoiLamNow();
+                int SangChieu = CaLamBLL.Instance.GetBuoiLamNow();
                 foreach (ChiTietCaLam i in user.ChiTietCaLams)
                 {
                     if (i.CaLam.LichCaLam[DateTime.Now.DayOfWeek.GetHashCode() * 2 + SangChieu] == '1') return 1;
@@ -190,20 +172,6 @@ namespace BLL
                 return 1;
             }
             return 0;
-        }
-        public int GetBuoiLamNow()
-        {
-            DateTime dtNow = DateTime.Now;
-            ThongTinNhaHang TTNH = dALQLNH.ThongTinNhaHangs.Find(1);
-            if (dtNow.TimeOfDay >= TTNH.ThoiGianBatDauLamViecSang && dtNow.TimeOfDay <= TTNH.ThoiGianKetThucLamViecSang)
-            {
-                return 0;
-            }
-            if (dtNow.TimeOfDay >= TTNH.ThoiGianBatDauLamViecChieu && dtNow.TimeOfDay <= TTNH.ThoiGianKetThucLamViecChieu)
-            {
-                return 1;
-            }
-            return -1;
         }
         public void DeleteEmployee(int ID_User)
         {

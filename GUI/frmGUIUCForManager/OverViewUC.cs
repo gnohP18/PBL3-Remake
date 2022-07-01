@@ -40,7 +40,7 @@ namespace GUI.frmGUIUCForManager
             dgvDanhSachHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDanhSachHoaDon.DataSource = BLL.HoaDonBLL.Instance.GetAllInvoice_viewByDay(CurrentDay);
             dgvTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(0, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloorAndStatus(0, CurrentFloor);
         }
         private void SetDataForDateCustom()
         {
@@ -74,8 +74,8 @@ namespace GUI.frmGUIUCForManager
             lblNumberofTableFl1.Text = BusyTableFloor1.ToString();
             lblNumberofTableFl2.Text = BusyTableFloor2.ToString();
             cbbStatusTable.Items.Add("All");
-            cbbStatusTable.Items.Add("Busy");
             cbbStatusTable.Items.Add("Emty");
+            cbbStatusTable.Items.Add("Busy");
         }
         private void OverViewUC_Load(object sender, EventArgs e)
         {
@@ -103,13 +103,13 @@ namespace GUI.frmGUIUCForManager
         private void btnFloor1_Click(object sender, EventArgs e)
         {
             CurrentFloor = 1;
-            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloorAndStatus(CurrentStatus, CurrentFloor);
         }
 
         private void btnFloor2_Click(object sender, EventArgs e)
         {
             CurrentFloor = 2;
-            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloorAndStatus(CurrentStatus, CurrentFloor);
         }
 
         private void dgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -124,7 +124,7 @@ namespace GUI.frmGUIUCForManager
         private void cbbStatusTable_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             CurrentStatus = cbbStatusTable.SelectedIndex;
-            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloor(CurrentStatus, CurrentFloor);
+            dgvTable.DataSource = BanBLL.Instance.GetAllTable_viewByFloorAndStatus(CurrentStatus, CurrentFloor);
         }
     }
 }

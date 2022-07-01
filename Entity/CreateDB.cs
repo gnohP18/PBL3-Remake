@@ -811,7 +811,7 @@ namespace Entity
                     DiaChi = "DaNa",
                     ThoiGianBatDauLamViecSang= new TimeSpan(6,30,0),
                     ThoiGianKetThucLamViecSang = new TimeSpan(12,0,0),
-                    ThoiGianBatDauLamViecChieu =  new TimeSpan(14,00,0),
+                    ThoiGianBatDauLamViecChieu =  new TimeSpan(13,00,0),
                     ThoiGianKetThucLamViecChieu =  new TimeSpan(23,59,59),
                     NgayBatDauChamCongHienTai = new DateTime(2022,6,5),
                     SoTienQuyDoiThanhDiemTichLuy = 1000,

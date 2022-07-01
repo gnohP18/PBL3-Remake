@@ -21,7 +21,7 @@ namespace GUI.frmGUISeller
         public frmAttendance()
         {
             InitializeComponent();
-            ListNhanVien = NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow();
+            ListNhanVien = CaLamBLL.Instance.GetThongTinDiemDanhNhanVienNow();
         }
         private void AddIDNhanVien(int IDNhanVien)
         {
@@ -29,7 +29,7 @@ namespace GUI.frmGUISeller
         }
         private void frmAttendence_Load(object sender, EventArgs e)
         {
-            Dictionary<User,bool> listNhanVien = NhanVienBLL.Instance.GetThongTinDiemDanhNhanVienNow();
+            Dictionary<User,bool> listNhanVien = CaLamBLL.Instance.GetThongTinDiemDanhNhanVienNow();
             foreach(KeyValuePair<User,bool> i in listNhanVien)
             {
                 CheckBoxUC uc = new CheckBoxUC(i);
